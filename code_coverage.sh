@@ -26,6 +26,11 @@ POSTGRES_BUILD_DIR=${CURRENT_DIR}/postgres_build
 CURRENT_COMMIT_HASH=""
 CURRENT_COVERAGE_FILE=""
 CURRENT_COMMIT_DATE=""
+PREV_COMMIT_HASH=""
+PREV_COVERAGE_FILE=""
+PREV_COMMIT_DATE=""
+
+UNIVERSAL_DIFF_FILE="${CURRENT_DIR}/universal_diff"
 
 GIT_CLONE_OPTIONS=(
     --depth 1
@@ -74,9 +79,10 @@ install_postgres()
 {
     printf "Cloning Postgres to ${POSTGRES_DIR}.\n"
     git clone ${PG_REPO} ${POSTGRES_DIR}
-    CURRENT_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git log -1 --pretty=format:%h)
-    CURRENT_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${CURRENT_COMMIT_HASH})
     printf "Done.\n\n"
+
+    CURRENT_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse HEAD)
+    CURRENT_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${CURRENT_COMMIT_HASH})
 }
 
 build_postgres_meson()
@@ -87,7 +93,7 @@ build_postgres_meson()
         -Db_coverage=true
         -Dcassert=true
         -Dtap_tests=enabled
-        -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
+        #-DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
         --buildtype=debug
     )
 
@@ -95,14 +101,9 @@ build_postgres_meson()
 
     rm -rf ${POSTGRES_BUILD_DIR}
     printf "Building Postgres to ${POSTGRES_BUILD_DIR} by using meson.\n"
+    $(cd ${POSTGRES_DIR} && git reset -q --hard ${1})
     ${MESON_BINARY} setup "${POSTGRES_BUILD_OPTIONS[@]}" ${POSTGRES_BUILD_DIR} ${POSTGRES_DIR}
     ${MESON_BINARY} compile -C ${POSTGRES_BUILD_DIR}
-    printf "Done.\n\n"
-}
-
-run_tests_meson()
-{
-    printf "Running Postgres tests.\n"
     ${MESON_BINARY} test --quiet -C ${POSTGRES_BUILD_DIR}
     printf "Done.\n\n"
 }
@@ -134,6 +135,10 @@ run_lcov()
 # Takes commit hash argument as $1.
 run_genhtml()
 {
+    printf "Generating universal diff file.\n\n"
+    (cd ${POSTGRES_DIR} && git diff --relative ${PREV_COMMIT_HASH} ${CURRENT_COMMIT_HASH} > ${UNIVERSAL_DIFF_FILE})
+    printf "Done.\n\n"
+
     GENHTML_OPTIONS=(
         --ignore-errors "path,path,package,package,unmapped,empty,inconsistent,inconsistent,corrupt,mismatch,mismatch,child,child,range,range"
         --parallel 16
@@ -144,9 +149,10 @@ run_genhtml()
         --rc branch_coverage=1
         --date-bins 1,7,30,360
         --current-date "${CURRENT_COMMIT_DATE}"
-        --baseline-date "${CURRENT_COMMIT_DATE}"
+        --baseline-date "${PREV_COMMIT_DATE}"
         --annotate-script ${LCOV_DIR}/scripts/gitblame
         --baseline-file ${PREV_COVERAGE_FILE}
+        --diff-file ${UNIVERSAL_DIFF_FILE}
         --output-directory ${LCOV_HTML_OUTPUT_DIR}/lcov-html-${DATE}
         ${CURRENT_COVERAGE_FILE}
         # genhtml: ERROR: unexpected branch TLA UNC for count 0
@@ -163,18 +169,20 @@ run_genhtml()
 
 get_prev_coverage_file()
 {
-    printf "Generating baseline coverage file.\n"
-    build_postgres_meson
+    PREV_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse $(git branch -a --list "*REL_*_STABLE*" | awk '{print $NF}' | sort -t'_' -k2,2Vr | head -n1))
+    PREV_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${PREV_COMMIT_HASH})
+
+    printf "Generating latest release's coverage file.\n"
+    build_postgres_meson ${PREV_COMMIT_HASH}
     PREV_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/lcov-${DATE}-prev"
     run_lcov $PREV_COVERAGE_FILE
-    printf "Baseline coverage file is generated now.\n\n"
+    printf "Latest release's coverage file is generated now.\n\n"
 }
 
 get_current_coverage_file()
 {
     printf "Generating current coverage file.\n"
-    # Postgres is already built.
-    run_tests_meson
+    build_postgres_meson ${CURRENT_COMMIT_HASH}
     CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/lcov-${DATE}-current"
     run_lcov ${CURRENT_COVERAGE_FILE}
     printf "Current coverage file is generated now.\n\n"
