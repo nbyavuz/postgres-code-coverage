@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Code Coverage Reports for Postgres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .top-bar {
+      background-color: #f8f9fa;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 3.5rem;
+    }
+
+    .top-bar h1 {
+      font-size: 1rem;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .calendar-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .calendar-container label {
+      font-weight: bold;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    #calendar {
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      background-color: white;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23888" viewBox="0 0 24 24"><path d="M7 10h5v5H7z" opacity=".3"/><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      background-size: 1rem;
+      width: 180px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 3.5rem);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>Code Coverage Reports for Postgres</h1>
+    <div class="calendar-container">
+      <label for="calendar">Select a report date:</label>
+      <input type="text" id="calendar" placeholder="📅" />
+    </div>
+  </div>
+
+  <iframe id="reportFrame" src=""></iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    async function loadDates() {
+      try {
+        const response = await fetch("dates.json");
+        const dates = await response.json();
+        const sortedDates = dates.sort().reverse();
+
+        flatpickr("#calendar", {
+          enable: dates,
+          dateFormat: "Y-m-d",
+          defaultDate: sortedDates[0],
+          onChange: function (selectedDates, dateStr) {
+            loadIframe(dateStr);
+          },
+          onReady: function () {
+            loadIframe(sortedDates[0]);
+          }
+        });
+      } catch (error) {
+        alert("Failed to load dates.json");
+        console.error(error);
+      }
+    }
+
+    function loadIframe(date) {
+      document.getElementById("reportFrame").src = `${date}/index.html`;
+    }
+
+    loadDates();
+  </script>
+</body>
+</html>

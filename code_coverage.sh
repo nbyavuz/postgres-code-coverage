@@ -2,26 +2,27 @@
 
 set -e
 
-CURRENT_DIR=$(pwd)
+PROJECT_DIR=$(cd "$(dirname "$0")" && pwd)
 # Maybe only +%Y%m%d as this script will run daily.
-DATE=$(date +%Y%m%d-%H%M%S)
+DATE=$(date +%Y-%m-%d)
+MOVE_FILES_TO_APACHE="${1:-false}"
 
 PG_REPO=https://github.com/postgres/postgres.git
 LCOV_REPO=https://github.com/linux-test-project/lcov.git
 MESON_REPO=https://github.com/mesonbuild/meson.git
 
-LCOV_DIR=${CURRENT_DIR}/lcov
-LCOV_INSTALL_PREFIX=${CURRENT_DIR}/lcov_install
+LCOV_DIR=${PROJECT_DIR}/lcov
+LCOV_INSTALL_PREFIX=${PROJECT_DIR}/lcov_install
 LCOV_BIN_DIR=${LCOV_INSTALL_PREFIX}/bin
-LCOV_OUTPUT_DIR=${CURRENT_DIR}/lcov-outputs
-LCOV_HTML_OUTPUT_DIR=${CURRENT_DIR}/lcov-html-outputs
+LCOV_OUTPUT_DIR=${PROJECT_DIR}/lcov-outputs
+LCOV_HTML_OUTPUT_DIR=${PROJECT_DIR}/lcov-html-outputs
 
-MESON_DIR=${CURRENT_DIR}/meson
+MESON_DIR=${PROJECT_DIR}/meson
 MESON_BINARY=${MESON_DIR}/meson.py
 
-OUTDIR=${CURRENT_DIR}/out
-POSTGRES_DIR=${CURRENT_DIR}/postgres
-POSTGRES_BUILD_DIR=${CURRENT_DIR}/postgres_build
+OUTDIR=${PROJECT_DIR}/out
+POSTGRES_DIR=${PROJECT_DIR}/postgres
+POSTGRES_BUILD_DIR=${PROJECT_DIR}/postgres_build
 
 CURRENT_COMMIT_HASH=""
 CURRENT_COVERAGE_FILE=""
@@ -29,8 +30,9 @@ CURRENT_COMMIT_DATE=""
 PREV_COMMIT_HASH=""
 PREV_COVERAGE_FILE=""
 PREV_COMMIT_DATE=""
+PREV_VERSION=""
 
-UNIVERSAL_DIFF_FILE="${CURRENT_DIR}/universal_diff"
+UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
 
 GIT_CLONE_OPTIONS=(
     --depth 1
@@ -39,7 +41,7 @@ GIT_CLONE_OPTIONS=(
 clear_dirs()
 {
     printf "Clearing directories.\n"
-    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${MESON_DIR} ${POSTGRES_DIR} ${POSTGRES_BUILD_DIR} ${OUTDIR} ${UNIVERSAL_DIFF_FILE} ${LCOV_OUTPUT_DIR}
+    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${MESON_DIR} ${POSTGRES_DIR} ${POSTGRES_BUILD_DIR} ${OUTDIR} ${UNIVERSAL_DIFF_FILE} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR}
     printf "Done.\n\n"
 }
 
@@ -93,8 +95,9 @@ build_postgres_meson()
         -Db_coverage=true
         -Dcassert=true
         -Dtap_tests=enabled
-        #-DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
-        --buildtype=debug
+        -Dinjection_points=true
+        --buildtype=debugoptimized
+        -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
     )
 
     install_meson
@@ -108,7 +111,6 @@ build_postgres_meson()
     printf "Done.\n\n"
 }
 
-# Takes commit hash argument as $1.
 run_lcov()
 {
     LCOV_OPTIONS=(
@@ -132,7 +134,6 @@ run_lcov()
     printf "Done.\n\n"
 }
 
-# Takes commit hash argument as $1.
 run_genhtml()
 {
     printf "Generating universal diff file.\n\n"
@@ -145,6 +146,8 @@ run_genhtml()
         --quiet
         --legend
         --num-spaces 4
+        --title "${CURRENT_COMMIT_HASH}"
+        --hierarchical
         --branch-coverage
         --rc branch_coverage=1
         --date-bins 1,7,30,360
@@ -153,7 +156,7 @@ run_genhtml()
         --annotate-script ${LCOV_DIR}/scripts/gitblame
         --baseline-file ${PREV_COVERAGE_FILE}
         --diff-file ${UNIVERSAL_DIFF_FILE}
-        --output-directory ${LCOV_HTML_OUTPUT_DIR}/lcov-html-${DATE}
+        --output-directory ${LCOV_HTML_OUTPUT_DIR}/${DATE}
         ${CURRENT_COVERAGE_FILE}
         # genhtml: ERROR: unexpected branch TLA UNC for count 0
         # --show-navigation
@@ -169,12 +172,14 @@ run_genhtml()
 
 get_prev_coverage_file()
 {
-    PREV_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse $(git branch -a --list "*REL_*_STABLE*" | awk '{print $NF}' | sort -t'_' -k2,2Vr | head -n1))
+    PREV_VERSION_LONG=$(cd ${POSTGRES_DIR} && git branch -a --list "*REL_*_STABLE*" | awk '{print $NF}' | sort -t'_' -k2,2Vr | head -n1)
+    PREV_VERSION=$(echo ${PREV_VERSION_LONG} | awk -F'/' '{print $NF}')
+    PREV_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse ${PREV_VERSION_LONG})
     PREV_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${PREV_COMMIT_HASH})
 
     printf "Generating latest release's coverage file.\n"
     build_postgres_meson ${PREV_COMMIT_HASH}
-    PREV_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/lcov-${DATE}-prev"
+    PREV_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${PREV_COMMIT_HASH}"
     run_lcov $PREV_COVERAGE_FILE
     printf "Latest release's coverage file is generated now.\n\n"
 }
@@ -183,17 +188,28 @@ get_current_coverage_file()
 {
     printf "Generating current coverage file.\n"
     build_postgres_meson ${CURRENT_COMMIT_HASH}
-    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/lcov-${DATE}-current"
+    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${CURRENT_COMMIT_HASH}"
     run_lcov ${CURRENT_COVERAGE_FILE}
     printf "Current coverage file is generated now.\n\n"
 }
 
-# install_packages
+move_files_to_apache()
+{
+    printf "Moving files to the /var/www/html/.\n"
+    sudo sh -c "cp -R \"${LCOV_HTML_OUTPUT_DIR}/${DATE}\" /var/www/html/"
+    (sudo sh -c "cd /var/www/html && ls -d */ | sed 's#/##' | jq -R -s -c 'split(\"\n\")[:-1]' > /var/www/html/dates.json")
+    sudo sh -c "cp \"${PROJECT_DIR}/index.html\" /var/www/html/index.html"
+    printf "Done.\n\n"
+}
+
 clear_dirs
 install_lcov
 install_postgres
 
 get_prev_coverage_file
 get_current_coverage_file
+run_genhtml $PREV_VERSION
 
-run_genhtml
+if [ "$MOVE_FILES_TO_APACHE" = "true" ]; then
+    move_files_to_apache
+fi
