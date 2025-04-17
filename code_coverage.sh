@@ -20,43 +20,32 @@ LCOV_HTML_OUTPUT_DIR=${PROJECT_DIR}/lcov-html-outputs
 MESON_DIR=${PROJECT_DIR}/meson
 MESON_BINARY=${MESON_DIR}/meson.py
 
-OUTDIR=${PROJECT_DIR}/out
-POSTGRES_DIR=${PROJECT_DIR}/postgres
-POSTGRES_BUILD_DIR=${PROJECT_DIR}/postgres_build
-
 CURRENT_COMMIT_HASH=""
 CURRENT_COVERAGE_FILE=""
 CURRENT_COMMIT_DATE=""
-PREV_COMMIT_HASH=""
-PREV_COVERAGE_FILE=""
-PREV_COMMIT_DATE=""
-PREV_VERSION=""
+CURRENT_PG_DIR="${PROJECT_DIR}/postgres_current"
+CURRENT_PG_BUILD_DIR="${PROJECT_DIR}/postgres_current_build"
+
+BASELINE_COMMIT_HASH=""
+BASELINE_COVERAGE_FILE=""
+BASELINE_COMMIT_DATE=""
+BASELINE_VERSION=""
+BASELINE_PG_DIR="${PROJECT_DIR}/postgres_baseline"
+BASELINE_PG_BUILD_DIR="${PROJECT_DIR}/postgres_baseline_build"
 
 UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
-
-GIT_CLONE_OPTIONS=(
-    --depth 1
-)
 
 clear_dirs()
 {
     printf "Clearing directories.\n"
-    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${MESON_DIR} ${POSTGRES_DIR} ${POSTGRES_BUILD_DIR} ${OUTDIR} ${UNIVERSAL_DIFF_FILE} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR}
-    printf "Done.\n\n"
-}
-
-install_packages()
-{
-    printf "Installing required packages like make, gcc...\n"
-    apt update && \
-    apt install build-essential git -y
+    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${CURRENT_PG_DIR} ${CURRENT_PG_BUILD_DIR} ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
     printf "Done.\n\n"
 }
 
 install_lcov()
 {
     printf "Cloning lcov to ${LCOV_DIR}.\n"
-    git clone "${GIT_CLONE_OPTIONS[@]}" ${LCOV_REPO} ${LCOV_DIR}
+    git clone ${LCOV_REPO} --single-branch --branch "v2.3.1" ${LCOV_DIR}
     printf "Done.\n\n"
 
     printf "Installing lcov to ${LCOV_INSTALL_PREFIX}.\n"
@@ -73,46 +62,56 @@ install_meson()
         return
     fi
 
-    git clone "${GIT_CLONE_OPTIONS[@]}" ${MESON_REPO} ${MESON_DIR}
+    git clone ${MESON_REPO} --single-branch --branch "1.7.2" ${MESON_DIR}
     printf "Done.\n\n"
 }
 
 install_postgres()
 {
-    printf "Cloning Postgres to ${POSTGRES_DIR}.\n"
-    git clone ${PG_REPO} ${POSTGRES_DIR}
+    printf "Cloning Postgres to ${CURRENT_PG_DIR}.\n"
+    git clone ${PG_REPO} ${CURRENT_PG_DIR}
     printf "Done.\n\n"
 
-    CURRENT_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse HEAD)
-    CURRENT_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${CURRENT_COMMIT_HASH})
+    printf "Copying Postgres to ${BASELINE_PG_DIR}.\n"
+    cp -r ${CURRENT_PG_DIR} ${BASELINE_PG_DIR}
+    printf "Done.\n\n"
 }
 
 build_postgres_meson()
 {
+    pg_dir=$1
+    build_dir=$2
+    hash=$3
+
     POSTGRES_BUILD_OPTIONS=(
         --wipe
         --clearcache
         -Db_coverage=true
         -Dcassert=true
-        -Dtap_tests=enabled
         -Dinjection_points=true
+        -Dllvm=enabled
+        -Dtap_tests=enabled
+        -Duuid=e2fs
         --buildtype=debugoptimized
         -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
     )
 
     install_meson
 
-    rm -rf ${POSTGRES_BUILD_DIR}
-    printf "Building Postgres to ${POSTGRES_BUILD_DIR} by using meson.\n"
-    $(cd ${POSTGRES_DIR} && git reset -q --hard ${1})
-    ${MESON_BINARY} setup "${POSTGRES_BUILD_OPTIONS[@]}" ${POSTGRES_BUILD_DIR} ${POSTGRES_DIR}
-    ${MESON_BINARY} compile -C ${POSTGRES_BUILD_DIR}
-    ${MESON_BINARY} test --quiet -C ${POSTGRES_BUILD_DIR}
+    printf "Building Postgres to ${build_dir} by using meson.\n"
+    $(cd ${pg_dir} && git reset -q --hard ${hash})
+    ${MESON_BINARY} setup "${POSTGRES_BUILD_OPTIONS[@]}" ${build_dir} ${pg_dir}
+    ${MESON_BINARY} compile -C ${build_dir}
+    ${MESON_BINARY} test --quiet -C ${build_dir}
     printf "Done.\n\n"
 }
 
 run_lcov()
 {
+    pg_dir=$1
+    build_dir=$2
+    out_file=$3
+
     LCOV_OPTIONS=(
         --ignore-errors "empty,empty,negative,negative,inconsistent,inconsistent,gcov,gcov"
         --all
@@ -123,9 +122,9 @@ run_lcov()
         # for some reason this does not suffice, --rc branch_coverage=1 is required
         --branch-coverage
         --rc branch_coverage=1
-        --include "**${POSTGRES_DIR}/**"
-        --directory ${POSTGRES_BUILD_DIR}
-        -o ${1}
+        --include "**${pg_dir}/**"
+        --directory "${build_dir}"
+        -o "${out_file}"
     )
 
     printf "Running lcov.\n"
@@ -134,14 +133,38 @@ run_lcov()
     printf "Done.\n\n"
 }
 
+get_baseline_coverage_file()
+{
+    BASELINE_COMMIT_HASH=$(cd ${BASELINE_PG_DIR} && git rev-parse $(cd ${BASELINE_PG_DIR} && git branch -a --list "*REL_*_STABLE*" | awk '{print $NF}' | sort -t'_' -k2,2Vr | head -n1))
+    BASELINE_COMMIT_DATE=$(cd ${BASELINE_PG_DIR} && git show -s --format=%ci ${BASELINE_COMMIT_HASH})
+
+    printf "Generating baseline coverage file.\n"
+    build_postgres_meson ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${BASELINE_COMMIT_HASH}
+    BASELINE_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${BASELINE_COMMIT_HASH}"
+    run_lcov ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${BASELINE_COVERAGE_FILE}
+    printf "Baseline coverage file is generated now.\n\n"
+}
+
+get_current_coverage_file()
+{
+    CURRENT_COMMIT_HASH=$(cd ${CURRENT_PG_DIR} && git rev-parse HEAD)
+    CURRENT_COMMIT_DATE=$(cd ${CURRENT_PG_DIR} && git show -s --format=%ci ${CURRENT_COMMIT_HASH})
+
+    printf "Generating current coverage file.\n"
+    build_postgres_meson ${CURRENT_PG_DIR} ${CURRENT_PG_BUILD_DIR} ${CURRENT_COMMIT_HASH}
+    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${CURRENT_COMMIT_HASH}"
+    run_lcov ${CURRENT_PG_DIR} ${CURRENT_PG_BUILD_DIR} ${CURRENT_COVERAGE_FILE}
+    printf "Current coverage file is generated now.\n\n"
+}
+
 run_genhtml()
 {
     printf "Generating universal diff file.\n\n"
-    (cd ${POSTGRES_DIR} && git diff --relative ${PREV_COMMIT_HASH} ${CURRENT_COMMIT_HASH} > ${UNIVERSAL_DIFF_FILE})
+    (cd ${CURRENT_PG_DIR} && git diff --relative ${BASELINE_COMMIT_HASH} ${CURRENT_COMMIT_HASH} > ${UNIVERSAL_DIFF_FILE})
     printf "Done.\n\n"
 
     GENHTML_OPTIONS=(
-        --ignore-errors "path,path,package,package,unmapped,empty,inconsistent,inconsistent,corrupt,mismatch,mismatch,child,child,range,range"
+        --ignore-errors "path,path,package,package,unmapped,empty,inconsistent,inconsistent,corrupt,mismatch,mismatch,child,child,range,range,parallel,parallel"
         --parallel 16
         --quiet
         --legend
@@ -152,9 +175,9 @@ run_genhtml()
         --rc branch_coverage=1
         --date-bins 1,7,30,360
         --current-date "${CURRENT_COMMIT_DATE}"
-        --baseline-date "${PREV_COMMIT_DATE}"
+        --baseline-date "${BASELINE_COMMIT_DATE}"
         --annotate-script ${LCOV_DIR}/scripts/gitblame
-        --baseline-file ${PREV_COVERAGE_FILE}
+        --baseline-file ${BASELINE_COVERAGE_FILE}
         --diff-file ${UNIVERSAL_DIFF_FILE}
         --output-directory ${LCOV_HTML_OUTPUT_DIR}/${DATE}
         ${CURRENT_COVERAGE_FILE}
@@ -170,29 +193,6 @@ run_genhtml()
     printf "Done.\n\n"
 }
 
-get_prev_coverage_file()
-{
-    PREV_VERSION_LONG=$(cd ${POSTGRES_DIR} && git branch -a --list "*REL_*_STABLE*" | awk '{print $NF}' | sort -t'_' -k2,2Vr | head -n1)
-    PREV_VERSION=$(echo ${PREV_VERSION_LONG} | awk -F'/' '{print $NF}')
-    PREV_COMMIT_HASH=$(cd ${POSTGRES_DIR} && git rev-parse ${PREV_VERSION_LONG})
-    PREV_COMMIT_DATE=$(cd ${POSTGRES_DIR} && git show -s --format=%ci ${PREV_COMMIT_HASH})
-
-    printf "Generating latest release's coverage file.\n"
-    build_postgres_meson ${PREV_COMMIT_HASH}
-    PREV_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${PREV_COMMIT_HASH}"
-    run_lcov $PREV_COVERAGE_FILE
-    printf "Latest release's coverage file is generated now.\n\n"
-}
-
-get_current_coverage_file()
-{
-    printf "Generating current coverage file.\n"
-    build_postgres_meson ${CURRENT_COMMIT_HASH}
-    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${CURRENT_COMMIT_HASH}"
-    run_lcov ${CURRENT_COVERAGE_FILE}
-    printf "Current coverage file is generated now.\n\n"
-}
-
 move_files_to_apache()
 {
     printf "Moving files to the /var/www/html/.\n"
@@ -205,10 +205,9 @@ move_files_to_apache()
 clear_dirs
 install_lcov
 install_postgres
-
-get_prev_coverage_file
+get_baseline_coverage_file
 get_current_coverage_file
-run_genhtml $PREV_VERSION
+run_genhtml
 
 if [ "$MOVE_FILES_TO_APACHE" = "true" ]; then
     move_files_to_apache
