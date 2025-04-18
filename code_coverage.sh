@@ -34,11 +34,12 @@ BASELINE_PG_DIR="${PROJECT_DIR}/postgres_baseline"
 BASELINE_PG_BUILD_DIR="${PROJECT_DIR}/postgres_baseline_build"
 
 UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
+DEBUG_VARS="${PROJECT_DIR}/debug_vars"
 
 clear_dirs()
 {
     printf "Clearing directories.\n"
-    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${CURRENT_PG_DIR} ${CURRENT_PG_BUILD_DIR} ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
+    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${CURRENT_PG_DIR} ${CURRENT_PG_BUILD_DIR} ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR} ${DEBUG_VARS}
     printf "Done.\n\n"
 }
 
@@ -93,7 +94,7 @@ build_postgres_meson()
         -Dtap_tests=enabled
         -Duuid=e2fs
         --buildtype=debugoptimized
-        -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
+        # -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
     )
 
     install_meson
@@ -102,7 +103,8 @@ build_postgres_meson()
     $(cd ${pg_dir} && git reset -q --hard ${hash})
     ${MESON_BINARY} setup "${POSTGRES_BUILD_OPTIONS[@]}" ${build_dir} ${pg_dir}
     ${MESON_BINARY} compile -C ${build_dir}
-    ${MESON_BINARY} test --quiet -C ${build_dir}
+    # ${MESON_BINARY} test --quiet -C ${build_dir}
+    ${MESON_BINARY} test --quiet --suite setup --suite regress -C ${build_dir}
     printf "Done.\n\n"
 }
 
@@ -122,8 +124,8 @@ run_lcov()
         # for some reason this does not suffice, --rc branch_coverage=1 is required
         --branch-coverage
         --rc branch_coverage=1
-        --include "**${pg_dir}/**"
-        --directory "${build_dir}"
+        --base-directory "${pg_dir}"
+        --directory "${pg_dir}"
         -o "${out_file}"
     )
 
@@ -143,6 +145,11 @@ get_baseline_coverage_file()
     BASELINE_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${BASELINE_COMMIT_HASH}"
     run_lcov ${BASELINE_PG_DIR} ${BASELINE_PG_BUILD_DIR} ${BASELINE_COVERAGE_FILE}
     printf "Baseline coverage file is generated now.\n\n"
+
+    sed -e "s#${BASELINE_PG_DIR}#${CURRENT_PG_DIR}#" \
+        -e "s#${BASELINE_PG_BUILD_DIR}#${CURRENT_PG_BUILD_DIR}#" \
+        < ${BASELINE_COVERAGE_FILE} > ${BASELINE_COVERAGE_FILE}.fudged
+    BASELINE_COVERAGE_FILE=${BASELINE_COVERAGE_FILE}.fudged
 }
 
 get_current_coverage_file()
@@ -157,6 +164,26 @@ get_current_coverage_file()
     printf "Current coverage file is generated now.\n\n"
 }
 
+debug_vars()
+{
+    echo "export BASELINE_COMMIT_HASH=\"${BASELINE_COMMIT_HASH}\"" >> ${DEBUG_VARS}
+    echo "export BASELINE_COMMIT_DATE=\"${BASELINE_COMMIT_DATE}\"" >> ${DEBUG_VARS}
+    echo "export BASELINE_COVERAGE_FILE=\"${BASELINE_COVERAGE_FILE}\"" >> ${DEBUG_VARS}
+
+    echo "export CURRENT_COMMIT_HASH=\"${CURRENT_COMMIT_HASH}\"" >> ${DEBUG_VARS}
+    echo "export CURRENT_COMMIT_DATE=\"${CURRENT_COMMIT_DATE}\"" >> ${DEBUG_VARS}
+    echo "export CURRENT_PG_DIR=\"${CURRENT_PG_DIR}\"" >> ${DEBUG_VARS}
+    echo "export CURRENT_PG_BUILD_DIR=\"${CURRENT_PG_BUILD_DIR}\"" >> ${DEBUG_VARS}
+    echo "export CURRENT_COVERAGE_FILE=\"${CURRENT_COVERAGE_FILE}\"" >> ${DEBUG_VARS}
+
+    echo "export UNIVERSAL_DIFF_FILE=\"${UNIVERSAL_DIFF_FILE}\"" >> ${DEBUG_VARS}
+    echo "export LCOV_HTML_OUTPUT_DIR=\"${LCOV_HTML_OUTPUT_DIR}\"" >> ${DEBUG_VARS}
+    echo "export DATE=\"${DATE}\"" >> ${DEBUG_VARS}
+
+    echo "export LCOV_DIR=\"${LCOV_DIR}\"" >> ${DEBUG_VARS}
+    echo "export LCOV_BIN_DIR=\"${LCOV_BIN_DIR}\"" >> ${DEBUG_VARS}
+}
+
 run_genhtml()
 {
     printf "Generating universal diff file.\n\n"
@@ -166,7 +193,11 @@ run_genhtml()
     GENHTML_OPTIONS=(
         --ignore-errors "path,path,package,package,unmapped,empty,inconsistent,inconsistent,corrupt,mismatch,mismatch,child,child,range,range,parallel,parallel"
         --parallel 16
-        --quiet
+        # --quiet
+        # --include ${CURRENT_PG_DIR}
+        --prefix ${CURRENT_PG_DIR}
+        --prefix ${CURRENT_PG_BUILD_DIR}
+        --keep-going
         --legend
         --num-spaces 4
         --title "${CURRENT_COMMIT_HASH}"
@@ -207,6 +238,7 @@ install_lcov
 install_postgres
 get_baseline_coverage_file
 get_current_coverage_file
+debug_vars
 run_genhtml
 
 if [ "$MOVE_FILES_TO_APACHE" = "true" ]; then
