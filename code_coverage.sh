@@ -20,15 +20,7 @@ LCOV_HTML_OUTPUT_DIR=${PROJECT_DIR}/lcov-html-outputs
 MESON_DIR=${PROJECT_DIR}/meson
 MESON_BINARY=${MESON_DIR}/meson.py
 
-CURRENT_COMMIT_HASH=""
-CURRENT_COVERAGE_FILE=""
-CURRENT_COMMIT_DATE=""
 CURRENT_PG_DIR="${PROJECT_DIR}/postgres_current"
-
-BASELINE_COMMIT_HASH=""
-BASELINE_COVERAGE_FILE=""
-BASELINE_COMMIT_DATE=""
-BASELINE_VERSION=""
 BASELINE_PG_DIR="${PROJECT_DIR}/postgres_baseline"
 
 UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
@@ -36,14 +28,14 @@ UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
 clear_dirs()
 {
     printf "Clearing directories.\n"
-    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${BASELINE_PG_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
+    rm -rf ${CURRENT_PG_DIR} ${BASELINE_PG_DIR} ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
     printf "Done.\n\n"
 }
 
 install_lcov()
 {
     printf "Cloning lcov to ${LCOV_DIR}.\n"
-    git clone ${LCOV_REPO} --single-branch --branch "v2.3.1" ${LCOV_DIR}
+    git clone ${LCOV_REPO} --single-branch --branch "v2.3.2" ${LCOV_DIR}
     printf "Done.\n\n"
 
     printf "Installing lcov to ${LCOV_INSTALL_PREFIX}.\n"
@@ -52,17 +44,9 @@ install_lcov()
 }
 
 install_postgres() {
-    if [ -d "${CURRENT_PG_DIR}/.git" ]; then
-        printf "Postgres already cloned at %s. Updating...\n" "${CURRENT_PG_DIR}"
-        git -C "${CURRENT_PG_DIR}" reset --hard
-        git -C "${CURRENT_PG_DIR}" fetch --all
-        git -C "${CURRENT_PG_DIR}" pull --ff-only
-        printf "Update done.\n\n"
-    else
-        printf "Cloning Postgres to %s.\n" "${CURRENT_PG_DIR}"
-        git clone "${PG_REPO}" "${CURRENT_PG_DIR}"
-        printf "Clone done.\n\n"
-    fi
+    printf "Cloning Postgres to %s.\n" "${CURRENT_PG_DIR}"
+    git clone "${PG_REPO}" "${CURRENT_PG_DIR}"
+    printf "Clone done.\n\n"
 
     printf "Copying Postgres to %s.\n" "${BASELINE_PG_DIR}"
     rm -rf "${BASELINE_PG_DIR}"
@@ -126,7 +110,6 @@ run_lcov()
         --ignore-errors "gcov,gcov,inconsistent,inconsistent,negative,negative,"
         --all
         --capture
-        # --quiet
         --parallel 16
         --exclude "/usr/*"
         --filter range
@@ -150,7 +133,7 @@ get_baseline_coverage_file()
     printf "Generating baseline coverage file.\n"
 
     build_postgres_make ${BASELINE_PG_DIR} ${BASELINE_COMMIT_HASH}
-    BASELINE_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${BASELINE_COMMIT_HASH}"
+    BASELINE_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/baseline_${BASELINE_COMMIT_HASH}"
     run_tests_postgres ${BASELINE_PG_DIR}
     run_lcov ${BASELINE_PG_DIR} ${BASELINE_COVERAGE_FILE}
 
@@ -165,7 +148,7 @@ get_current_coverage_file()
     printf "Generating current coverage file.\n"
 
     build_postgres_make ${CURRENT_PG_DIR} ${CURRENT_COMMIT_HASH}
-    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/${CURRENT_COMMIT_HASH}"
+    CURRENT_COVERAGE_FILE="${LCOV_OUTPUT_DIR}/current_${CURRENT_COMMIT_HASH}"
     run_tests_postgres ${CURRENT_PG_DIR}
     run_lcov ${CURRENT_PG_DIR} ${CURRENT_COVERAGE_FILE}
 
@@ -175,19 +158,18 @@ get_current_coverage_file()
 run_genhtml()
 {
     printf "Generating universal diff file.\n\n"
-    (cd ${CURRENT_PG_DIR} && git diff --relative ${BASELINE_COMMIT_HASH} ${CURRENT_COMMIT_HASH} > ${UNIVERSAL_DIFF_FILE})
+    (cd ${CURRENT_PG_DIR} &&  git diff --relative --src-prefix="${BASELINE_PG_DIR}/" --dst-prefix="${CURRENT_PG_DIR}/"  ${BASELINE_COMMIT_HASH} ${CURRENT_COMMIT_HASH} > ${UNIVERSAL_DIFF_FILE})
     printf "Done.\n\n"
 
     GENHTML_OPTIONS=(
-        --ignore-errors "child,child,path,path,package,package,inconsistent,inconsistent,mismatch,mismatch,range,range"
+        --ignore-errors "range,inconsistent,count,count"
         --parallel 16
-        # --quiet
         --legend
         --num-spaces 4
-        --prefix "${CURRENT_PG_DIR}"
-        --prefix "${BASELINE_PG_DIR}"
         --title "${CURRENT_COMMIT_HASH}"
         --hierarchical
+        --show-navigation
+        --show-proportion
         --branch-coverage
         --rc branch_coverage=1
         --date-bins 1,7,30,360
@@ -199,9 +181,8 @@ run_genhtml()
         --output-directory ${LCOV_HTML_OUTPUT_DIR}/${DATE}
         ${CURRENT_COVERAGE_FILE}
         # genhtml: ERROR: unexpected branch TLA UNC for count 0
-        # --show-navigation
         # --show-details
-        # --show-proportion
+
     )
 
     printf "Running genhtml to generate HTML report at ${LCOV_HTML_OUTPUT_DIR}.\n"
@@ -220,19 +201,11 @@ move_files_to_apache()
     printf "Done.\n\n"
 }
 
-normalize_baseline_lcov()
-{
-    mv ${BASELINE_COVERAGE_FILE} "${BASELINE_COVERAGE_FILE}_default"
-    sed -e "s|${BASELINE_PG_DIR}|${CURRENT_PG_DIR}|g" \
-        < "${BASELINE_COVERAGE_FILE}_default" > ${BASELINE_COVERAGE_FILE}
-}
-
 clear_dirs
 install_lcov
 install_postgres
 get_baseline_coverage_file
 get_current_coverage_file
-normalize_baseline_lcov
 run_genhtml
 
 if [ "$MOVE_FILES_TO_APACHE" = "true" ]; then
