@@ -36,7 +36,7 @@ UNIVERSAL_DIFF_FILE="${PROJECT_DIR}/universal_diff"
 clear_dirs()
 {
     printf "Clearing directories.\n"
-    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${CURRENT_PG_DIR} ${BASELINE_PG_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
+    rm -rf ${LCOV_DIR} ${LCOV_INSTALL_PREFIX} ${LCOV_OUTPUT_DIR} ${LCOV_HTML_OUTPUT_DIR} ${BASELINE_PG_DIR} ${UNIVERSAL_DIFF_FILE} ${MESON_DIR}
     printf "Done.\n\n"
 }
 
@@ -51,15 +51,23 @@ install_lcov()
     printf "Done.\n\n"
 }
 
-install_postgres()
-{
-    printf "Cloning Postgres to ${CURRENT_PG_DIR}.\n"
-    git clone ${PG_REPO} ${CURRENT_PG_DIR}
-    printf "Done.\n\n"
+install_postgres() {
+    if [ -d "${CURRENT_PG_DIR}/.git" ]; then
+        printf "Postgres already cloned at %s. Updating...\n" "${CURRENT_PG_DIR}"
+        git -C "${CURRENT_PG_DIR}" reset --hard
+        git -C "${CURRENT_PG_DIR}" fetch --all
+        git -C "${CURRENT_PG_DIR}" pull --ff-only
+        printf "Update done.\n\n"
+    else
+        printf "Cloning Postgres to %s.\n" "${CURRENT_PG_DIR}"
+        git clone "${PG_REPO}" "${CURRENT_PG_DIR}"
+        printf "Clone done.\n\n"
+    fi
 
-    printf "Copying Postgres to ${BASELINE_PG_DIR}.\n"
-    cp -r ${CURRENT_PG_DIR} ${BASELINE_PG_DIR}
-    printf "Done.\n\n"
+    printf "Copying Postgres to %s.\n" "${BASELINE_PG_DIR}"
+    rm -rf "${BASELINE_PG_DIR}"
+    cp -r "${CURRENT_PG_DIR}" "${BASELINE_PG_DIR}"
+    printf "Copy done.\n\n"
 }
 
 build_postgres_make()
@@ -95,7 +103,7 @@ build_postgres_make()
         --with-tcl --with-tclconfig=/usr/lib/tcl8.6/
     )
 
-    (cd ${pg_dir} && make -s -j8 world-bin)
+    (cd ${pg_dir} && make -s -j16 world-bin)
 
     printf "Done.\n\n"
 }
@@ -104,7 +112,7 @@ run_tests_postgres()
 {
     pg_dir=$1
     printf "Running tests in ${pg_dir}.\n"
-    (cd ${pg_dir} && make -s -j8 check-world)
+    (cd ${pg_dir} && make -s -j16 check-world)
     printf "Done.\n\n"
 }
 
@@ -118,7 +126,7 @@ run_lcov()
         --ignore-errors "gcov,gcov,inconsistent,inconsistent,negative,negative,"
         --all
         --capture
-        --quiet
+        # --quiet
         --parallel 16
         --exclude "/usr/*"
         --filter range
@@ -173,7 +181,7 @@ run_genhtml()
     GENHTML_OPTIONS=(
         --ignore-errors "child,child,path,path,package,package,inconsistent,inconsistent,mismatch,mismatch,range,range"
         --parallel 16
-        --quiet
+        # --quiet
         --legend
         --num-spaces 4
         --prefix "${CURRENT_PG_DIR}"
@@ -197,6 +205,7 @@ run_genhtml()
     )
 
     printf "Running genhtml to generate HTML report at ${LCOV_HTML_OUTPUT_DIR}.\n"
+    echo "Genhtml command is ${LCOV_BIN_DIR}/genhtml ${GENHTML_OPTIONS[@]}"
     mkdir -p ${LCOV_HTML_OUTPUT_DIR}
     ${LCOV_BIN_DIR}/genhtml "${GENHTML_OPTIONS[@]}"
     printf "Done.\n\n"
@@ -211,11 +220,19 @@ move_files_to_apache()
     printf "Done.\n\n"
 }
 
+normalize_baseline_lcov()
+{
+    mv ${BASELINE_COVERAGE_FILE} "${BASELINE_COVERAGE_FILE}_default"
+    sed -e "s|${BASELINE_PG_DIR}|${CURRENT_PG_DIR}|g" \
+        < "${BASELINE_COVERAGE_FILE}_default" > ${BASELINE_COVERAGE_FILE}
+}
+
 clear_dirs
 install_lcov
 install_postgres
 get_baseline_coverage_file
 get_current_coverage_file
+normalize_baseline_lcov
 run_genhtml
 
 if [ "$MOVE_FILES_TO_APACHE" = "true" ]; then
