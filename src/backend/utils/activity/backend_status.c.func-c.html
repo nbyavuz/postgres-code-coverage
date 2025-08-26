@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/activity/backend_status.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory activity">activity</a> - backend_status.c<span style="font-size: 80%;"> (<a href="backend_status.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">96.4&nbsp;%</td>
+            <td class="headerCovTableEntry">386</td>
+            <td class="headerCovTableEntry">372</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">372</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">63.1&nbsp;%</td>
+            <td class="headerCovTableEntry">282</td>
+            <td class="headerCovTableEntry">178</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">102</td>
+            <td class="headerCovTableEntry">178</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">97.6&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">82</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">96.0&nbsp;%</td>
+            <td class="headerCovTableEntry">302</td>
+            <td class="headerCovTableEntry">290</td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">290</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">19</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">67.4&nbsp;%</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">31</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">62.3&nbsp;%</td>
+            <td class="headerCovTableEntry">236</td>
+            <td class="headerCovTableEntry">147</td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry">147</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="backend_status.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="backend_status.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="backend_status.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L994">pgstat_get_backend_current_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerMed>78.9&nbsp;% (15 / 19)</td>
+              <td class=coverPerLo>44.4&nbsp;% (8 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1179">pgstat_get_backend_type_by_proc_number</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1221">pgstat_get_beentry_by_proc_number</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1246">pgstat_get_local_beentry_by_proc_number</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1198">cmp_lbestatus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">260</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1156">pgstat_get_my_plan_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">360</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1136">pgstat_get_my_query_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">496</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L549">pgstat_setup_backend_status_context</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">850</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1297">pgstat_fetch_stat_numbackends</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">865</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1072">pgstat_get_crashed_backend_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">918</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L112">BackendStatusShmemInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (53 / 53)</td>
+              <td class=coverPerLo>51.2&nbsp;% (42 / 82)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L79">BackendStatusShmemSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1941</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1313">pgstat_clip_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8481</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L1277">pgstat_get_local_beentry_by_index</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8831</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L818">pgstat_read_current_status</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9776</td>
+              <td class=coverPerHi>96.3&nbsp;% (52 / 54)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L383">pgstat_bestart_security</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11754</td>
+              <td class=coverPerHi>100.0&nbsp;% (33 / 33)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L465">pgstat_bestart_final</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18482</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L268">pgstat_bestart_initial</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18580</td>
+              <td class=coverPerHi>100.0&nbsp;% (38 / 38)</td>
+              <td class=coverPerLo>68.2&nbsp;% (15 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L243">pgstat_beinit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18630</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L507">pgstat_beshutdown_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18630</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L762">pgstat_report_appname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33154</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L534">pgstat_clear_backend_activity_snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">318286</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L723">pgstat_report_plan_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">569443</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L791">pgstat_report_xact_timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">635908</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L570">pgstat_report_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">711305</td>
+              <td class=coverPerHi>97.7&nbsp;% (43 / 44)</td>
+              <td class=coverPerMed>86.1&nbsp;% (31 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="backend_status.c.gcov.html#L684">pgstat_report_query_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1031796</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

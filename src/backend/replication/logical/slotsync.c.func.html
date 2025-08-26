@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/replication/logical/slotsync.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory replication">replication</a>/<a href="index.html" title="Click to go to directory logical">logical</a> - slotsync.c<span style="font-size: 80%;"> (<a href="slotsync.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">88.3&nbsp;%</td>
+            <td class="headerCovTableEntry">478</td>
+            <td class="headerCovTableEntry">422</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">422</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">27</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">58.1&nbsp;%</td>
+            <td class="headerCovTableEntry">360</td>
+            <td class="headerCovTableEntry">209</td>
+            <td class="headerCovTableEntry">151</td>
+            <td class="headerCovTableEntry">209</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">92.9&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">13</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">88.5&nbsp;%</td>
+            <td class="headerCovTableEntry">462</td>
+            <td class="headerCovTableEntry">409</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry">409</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">71.4&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">10</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">57.8&nbsp;%</td>
+            <td class="headerCovTableEntry">344</td>
+            <td class="headerCovTableEntry">199</td>
+            <td class="headerCovTableEntry">145</td>
+            <td class="headerCovTableEntry">199</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="slotsync.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="slotsync.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="slotsync.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1029">CheckAndGetDbnameFromConninfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1666">IsSyncingReplicationSlots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1172">ProcessSlotSyncInterrupts</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1348">ReplSlotSyncWorkerMain</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerMed>87.5&nbsp;% (42 / 48)</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1578">ShutDownSlotSync</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">849</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              <td class=coverPerLo>50.0&nbsp;% (7 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1684">SlotSyncShmemInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1675">SlotSyncShmemSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2986</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1646">SlotSyncWorkerCanRestart</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1741">SyncReplicationSlots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1056">ValidateSlotSyncParams</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              <td class=coverPerLo>40.0&nbsp;% (8 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1288">check_and_set_sync_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L431">drop_local_obsolete_slots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L347">get_local_synced_slots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L378">local_sync_slot_required</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L488">reserve_wal_for_local_slot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1332">reset_syncing_flag</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1704">slotsync_failure_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1123">slotsync_reread_config</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerMed>86.4&nbsp;% (19 / 22)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1194">slotsync_worker_disconnect</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1207">slotsync_worker_onexit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L623">synchronize_one_slot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerLo>74.5&nbsp;% (41 / 55)</td>
+              <td class=coverPerLo>38.9&nbsp;% (14 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L805">synchronize_slots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerHi>93.1&nbsp;% (54 / 58)</td>
+              <td class=coverPerLo>58.7&nbsp;% (27 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L559">update_and_persist_local_synced_slot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L165">update_local_synced_slot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerMed>89.1&nbsp;% (49 / 55)</td>
+              <td class=coverPerLo>62.1&nbsp;% (36 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1528">update_synced_slots_inactive_since</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">849</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L951">validate_remote_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerMed>89.3&nbsp;% (25 / 28)</td>
+              <td class=coverPerLo>50.0&nbsp;% (12 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="slotsync.c.gcov.html#L1253">wait_for_slot_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

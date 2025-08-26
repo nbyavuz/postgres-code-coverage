@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/executor/nodeAppend.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - nodeAppend.c<span style="font-size: 80%;"> (<a href="nodeAppend.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">94.7&nbsp;%</td>
+            <td class="headerCovTableEntry">380</td>
+            <td class="headerCovTableEntry">360</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">360</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">94.4&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">77.2&nbsp;%</td>
+            <td class="headerCovTableEntry">254</td>
+            <td class="headerCovTableEntry">196</td>
+            <td class="headerCovTableEntry">58</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">195</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">16</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.0&nbsp;%</td>
+            <td class="headerCovTableEntry">362</td>
+            <td class="headerCovTableEntry">344</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">344</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.4&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">62.5&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">77.6&nbsp;%</td>
+            <td class="headerCovTableEntry">246</td>
+            <td class="headerCovTableEntry">191</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">190</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="nodeAppend.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="nodeAppend.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="nodeAppend.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L537">ExecAppendReInitializeDSM</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L1186">classify_matching_subplans</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L1030">ExecAppendAsyncEventWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">135</td>
+              <td class=coverPerHi>91.2&nbsp;% (31 / 34)</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L301">ExecAppend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1320907</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerLo>73.9&nbsp;% (34 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L927">ExecAppendAsyncGetNext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6138</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L875">ExecAppendAsyncBegin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L715">choose_next_subplan_for_worker</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">254</td>
+              <td class=coverPerHi>97.6&nbsp;% (41 / 42)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L841">mark_invalid_subplans_as_finished</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L976">ExecAppendAsyncRequest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6255</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L497">ExecAppendEstimate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L516">ExecAppendInitializeDSM</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L553">ExecAppendInitializeWorker</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">159</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L1140">ExecAsyncAppendResponse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6328</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L399">ExecEndAppend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8502</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L107">ExecInitAppend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8652</td>
+              <td class=coverPerHi>100.0&nbsp;% (75 / 75)</td>
+              <td class=coverPerMed>89.3&nbsp;% (25 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L419">ExecReScanAppend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12112</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L633">choose_next_subplan_for_leader</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">233</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="nodeAppend.c.gcov.html#L567">choose_next_subplan_locally</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53809</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

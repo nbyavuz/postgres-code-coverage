@@ -1,0 +1,671 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/parser/parse_expr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory parser">parser</a> - parse_expr.c<span style="font-size: 80%;"> (<a href="parse_expr.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">87.4&nbsp;%</td>
+            <td class="headerCovTableEntry">1822</td>
+            <td class="headerCovTableEntry">1592</td>
+            <td class="headerCovTableEntry">230</td>
+            <td class="headerCovTableEntry">1592</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">62</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">71.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1244</td>
+            <td class="headerCovTableEntry">890</td>
+            <td class="headerCovTableEntry">354</td>
+            <td class="headerCovTableEntry">890</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">28</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">87.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1794</td>
+            <td class="headerCovTableEntry">1564</td>
+            <td class="headerCovTableEntry">230</td>
+            <td class="headerCovTableEntry">1564</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">62</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">16</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1226</td>
+            <td class="headerCovTableEntry">874</td>
+            <td class="headerCovTableEntry">352</td>
+            <td class="headerCovTableEntry">874</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="parse_expr.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="parse_expr.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="parse_expr.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4845">GetJsonBehaviorConst</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2202</td>
+              <td class=coverPerMed>89.7&nbsp;% (35 / 39)</td>
+              <td class=coverPerLo>55.6&nbsp;% (5 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3131">ParseExprKindName</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerLo>19.3&nbsp;% (16 / 83)</td>
+              <td class=coverPerLo>17.1&nbsp;% (7 / 41)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4673">ValidJsonBehaviorDefaultExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">246</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3460">checkJsonOutputFormat</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">122</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3600">coerceJsonFuncExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">637</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L906">exprIsNullConstant</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1117</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3237">getJsonEncodingConst</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerLo>61.9&nbsp;% (13 / 21)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3276">makeJsonByteaToTextConversion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3664">makeJsonConstructorExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">637</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3072">make_distinct_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">557</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3107">make_nulltest_from_distinct</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2826">make_row_comparison_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3325</td>
+              <td class=coverPerHi>94.0&nbsp;% (63 / 67)</td>
+              <td class=coverPerLo>68.9&nbsp;% (51 / 74)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3028">make_row_distinct_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>68.2&nbsp;% (15 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1282">transformAExprBetween</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">257</td>
+              <td class=coverPerHi>94.1&nbsp;% (32 / 34)</td>
+              <td class=coverPerLo>55.6&nbsp;% (5 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1028">transformAExprDistinct</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">566</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1122">transformAExprIn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10591</td>
+              <td class=coverPerHi>98.1&nbsp;% (51 / 52)</td>
+              <td class=coverPerHi>90.0&nbsp;% (36 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1079">transformAExprNullIf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">240</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L919">transformAExprOp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">294563</td>
+              <td class=coverPerLo>68.4&nbsp;% (26 / 38)</td>
+              <td class=coverPerLo>47.1&nbsp;% (16 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1014">transformAExprOpAll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">150</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1000">transformAExprOpAny</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8282</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2013">transformArrayExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3938</td>
+              <td class=coverPerHi>94.0&nbsp;% (47 / 50)</td>
+              <td class=coverPerMed>75.0&nbsp;% (39 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1401">transformBoolExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">76609</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2528">transformBooleanTest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">460</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              <td class=coverPerLo>66.7&nbsp;% (6 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1630">transformCaseExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19559</td>
+              <td class=coverPerHi>100.0&nbsp;% (54 / 54)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2214">transformCoalesceExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1590</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2786">transformCollateClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4507</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L506">transformColumnRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">892741</td>
+              <td class=coverPerLo>66.7&nbsp;% (80 / 120)</td>
+              <td class=coverPerLo>60.7&nbsp;% (37 / 61)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2568">transformCurrentOfExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">127</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L116">transformExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">899143</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L134">transformExprRecurse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2389235</td>
+              <td class=coverPerHi>96.0&nbsp;% (144 / 150)</td>
+              <td class=coverPerMed>83.6&nbsp;% (46 / 55)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1437">transformFuncCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">182140</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L434">transformIndirection</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11620</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3832">transformJsonAggConstructor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">201</td>
+              <td class=coverPerHi>97.0&nbsp;% (32 / 33)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3982">transformJsonArrayAgg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4020">transformJsonArrayConstructor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">95</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3761">transformJsonArrayQueryConstructor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (39 / 39)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4706">transformJsonBehavior</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2631</td>
+              <td class=coverPerHi>97.6&nbsp;% (40 / 41)</td>
+              <td class=coverPerMed>85.2&nbsp;% (46 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3557">transformJsonConstructorOutput</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">499</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4281">transformJsonFuncExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1543</td>
+              <td class=coverPerHi>92.5&nbsp;% (123 / 133)</td>
+              <td class=coverPerMed>76.0&nbsp;% (111 / 146)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4100">transformJsonIsPredicate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">167</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3918">transformJsonObjectAgg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3724">transformJsonObjectConstructor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">215</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3510">transformJsonOutput</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2035</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4050">transformJsonParseArg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">178</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4163">transformJsonParseExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4647">transformJsonPassingArgs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1513</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4123">transformJsonReturning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerLo>69.2&nbsp;% (9 / 13)</td>
+              <td class=coverPerLo>10.0&nbsp;% (1 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4212">transformJsonScalarExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L4235">transformJsonSerializeExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L3298">transformJsonValueExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2837</td>
+              <td class=coverPerHi>96.3&nbsp;% (52 / 54)</td>
+              <td class=coverPerMed>86.4&nbsp;% (57 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1376">transformMergeSupportFunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2263">transformMinMaxExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">122</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1482">transformMultiAssignRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">187</td>
+              <td class=coverPerHi>93.5&nbsp;% (43 / 46)</td>
+              <td class=coverPerLo>55.9&nbsp;% (19 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L882">transformParamRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20573</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2176">transformRowExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2939</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2302">transformSQLValueFunction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1359</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L1770">transformSubLink</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23765</td>
+              <td class=coverPerLo>66.0&nbsp;% (62 / 94)</td>
+              <td class=coverPerLo>55.7&nbsp;% (34 / 61)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2702">transformTypeCast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">159568</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2620">transformWholeRowRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4476</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2355">transformXmlExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">298</td>
+              <td class=coverPerHi>92.1&nbsp;% (58 / 63)</td>
+              <td class=coverPerMed>87.8&nbsp;% (43 / 49)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L2484">transformXmlSerialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">109</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#L388">unknown_attribute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

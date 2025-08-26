@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/pg_locale_builtin.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - pg_locale_builtin.c<span style="font-size: 80%;"> (source / <a href="pg_locale_builtin.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">86.0&nbsp;%</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry"><a href="#L137" title="goto first UNC line">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L217" title="goto first UBC line">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L113" title="goto first GNC line">18</a></td>
+            <td class="headerCovTableEntry"><a href="#L43" title="goto first CBC line">56</a></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">78.9&nbsp;%</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">47.4&nbsp;%</td>
+            <td class="headerCovTableEntry">38</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"><a href="#L169" title="goto first UNC branch">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L48" title="goto first UBC branch">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L246" title="goto first GNC branch">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L47" title="goto first CBC branch">16</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">86.0&nbsp;%</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="tlaUNC"><a href="#L137" title="goto first UNC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L217" title="goto first UBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L113" title="goto first GNC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgGNC">18</a></td>
+            <td class="headerCovTableEntry"><a href="#L43" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">56</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">78.9&nbsp;%</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">47.4&nbsp;%</td>
+            <td class="headerCovTableEntry">38</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="tlaUNC"><a href="#L169" title="goto first UNC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L48" title="goto first UBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L246" title="goto first GNC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgGNC">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L47" title="goto first CBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">16</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       1</span>                 :                : /*-----------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       3</span>                 :                :  * PostgreSQL locale utilities for builtin provider</span>
+<span id="L4" title="Line 4: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       4</span>                 :                :  *</span>
+<span id="L5" title="Line 5: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :                :  * Portions Copyright (c) 2002-2025, PostgreSQL Global Development Group</span>
+<span id="L6" title="Line 6: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       6</span>                 :                :  *</span>
+<span id="L7" title="Line 7: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       7</span>                 :                :  * src/backend/utils/adt/pg_locale_builtin.c</span>
+<span id="L8" title="Line 8: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       8</span>                 :                :  *</span>
+<span id="L9" title="Line 9: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">       9</span>                 :                :  *-----------------------------------------------------------------------</span>
+<span id="L10" title="Line 10: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      10</span>                 :                :  */</span>
+<span id="L11" title="Line 11: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      11</span>                 :                : </span>
+<span id="L12" title="Line 12: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      12</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L13" title="Line 13: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      13</span>                 :                : </span>
+<span id="L14" title="Line 14: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      14</span>                 :                : #include &quot;catalog/pg_database.h&quot;</span>
+<span id="L15" title="Line 15: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      15</span>                 :                : #include &quot;catalog/pg_collation.h&quot;</span>
+<span id="L16" title="Line 16: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      16</span>                 :                : #include &quot;common/unicode_case.h&quot;</span>
+<span id="L17" title="Line 17: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      17</span>                 :                : #include &quot;common/unicode_category.h&quot;</span>
+<span id="L18" title="Line 18: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      18</span>                 :                : #include &quot;mb/pg_wchar.h&quot;</span>
+<span id="L19" title="Line 19: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      19</span>                 :                : #include &quot;miscadmin.h&quot;</span>
+<span id="L20" title="Line 20: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      20</span>                 :                : #include &quot;utils/builtins.h&quot;</span>
+<span id="L21" title="Line 21: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      21</span>                 :                : #include &quot;utils/pg_locale.h&quot;</span>
+<span id="L22" title="Line 22: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      22</span>                 :                : #include &quot;utils/syscache.h&quot;</span>
+<span id="L23" title="Line 23: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      23</span>                 :                : </span>
+<span id="L24" title="Line 24: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      24</span>                 :                : extern pg_locale_t create_pg_locale_builtin(Oid collid,</span>
+<span id="L25" title="Line 25: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">      25</span>                 :                :                                             MemoryContext context);</span>
+<span id="L26" title="Line 26: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">      26</span>                 :                : extern char *get_collation_actual_version_builtin(const char *collcollate);</span>
+<span id="L27" title="Line 27: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      27</span>                 :                : </span>
+<span id="L28" title="Line 28: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      28</span>                 :                : struct WordBoundaryState</span>
+<span id="L29" title="Line 29: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      29</span>                 :                : {</span>
+<span id="L30" title="Line 30: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      30</span>                 :                :     const char *str;</span>
+<span id="L31" title="Line 31: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      31</span>                 :                :     size_t      len;</span>
+<span id="L32" title="Line 32: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      32</span>                 :                :     size_t      offset;</span>
+<span id="L33" title="Line 33: commit 90260e2ec6bb on 2025-04-21 by jdavis@postgresql.org">                           <span class="lineNum">      33</span>                 :                :     bool        posix;</span>
+<span id="L34" title="Line 34: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      34</span>                 :                :     bool        init;</span>
+<span id="L35" title="Line 35: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      35</span>                 :                :     bool        prev_alnum;</span>
+<span id="L36" title="Line 36: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      36</span>                 :                : };</span>
+<span id="L37" title="Line 37: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      37</span>                 :                : </span>
+<span id="L38" title="Line 38: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      38</span>                 :                : /*</span>
+<span id="L39" title="Line 39: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      39</span>                 :                :  * Simple word boundary iterator that draws boundaries each time the result of</span>
+<span id="L40" title="Line 40: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      40</span>                 :                :  * pg_u_isalnum() changes.</span>
+<span id="L41" title="Line 41: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      41</span>                 :                :  */</span>
+<span id="L42" title="Line 42: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      42</span>                 :                : static size_t</span>
+<span id="L43" title="Line 43: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">  <a href="#L205" title="next CBC in &ldquo;(30,360] days&rdquo; bin">253</a> <a href="#L205" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">      43</span>                 :<a href="#L205" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         412 : initcap_wbnext(void *state)</span></span>
+<span id="L44" title="Line 44: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      44</span>                 :                : {</span>
+<span id="L45" title="Line 45: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      45</span>                 :<span class="tlaCBC">            412 :     struct WordBoundaryState *wbstate = (struct WordBoundaryState *) state;</span></span>
+<span id="L46" title="Line 46: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      46</span>                 :                : </span>
+<span id="L47" title="Line 47: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      47</span>         [<span class="tlaCBC"> <a href="#L48" title="CBC: Branch 0 was taken 753 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L48" title="CBC: Branch 1 was taken 97 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            850 :     while (wbstate-&gt;offset &lt; wbstate-&gt;len &amp;&amp;</span></span>
+<span id="L48" title="Line 48: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      48</span>         [<span class="tlaCBC"> <a href="#L54" title="CBC: Branch 0 was taken 753 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L216" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">            753 :            wbstate-&gt;str[wbstate-&gt;offset] != '\0')</span></span>
+<span id="L49" title="Line 49: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      49</span>                 :                :     {</span>
+<span id="L50" title="Line 50: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      50</span>                 :<span class="tlaCBC">            753 :         pg_wchar    u = utf8_to_unicode((unsigned char *) wbstate-&gt;str +</span></span>
+<span id="L51" title="Line 51: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      51</span>                 :<span class="tlaCBC">            753 :                                         wbstate-&gt;offset);</span></span>
+<span id="L52" title="Line 52: commit 90260e2ec6bb on 2025-04-21 by jdavis@postgresql.org">  127                      <span class="lineNum">      52</span>                 :<span class="tlaCBC">            753 :         bool        curr_alnum = pg_u_isalnum(u, wbstate-&gt;posix);</span></span>
+<span id="L53" title="Line 53: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      53</span>                 :                : </span>
+<span id="L54" title="Line 54: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">  253                      <span class="lineNum">      54</span>   [<span class="tlaCBC"> <a href="#L210" title="CBC: Branch 0 was taken 656 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L210" title="CBC: Branch 1 was taken 97 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L210" title="CBC: Branch 2 was taken 218 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L210" title="CBC: Branch 3 was taken 438 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            753 :         if (!wbstate-&gt;init || curr_alnum != wbstate-&gt;prev_alnum)</span></span>
+<span id="L55" title="Line 55: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      55</span>                 :                :         {</span>
+<span id="L56" title="Line 56: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      56</span>                 :<span class="tlaCBC">            315 :             size_t      prev_offset = wbstate-&gt;offset;</span></span>
+<span id="L57" title="Line 57: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      57</span>                 :                : </span>
+<span id="L58" title="Line 58: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      58</span>                 :<span class="tlaCBC">            315 :             wbstate-&gt;init = true;</span></span>
+<span id="L59" title="Line 59: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      59</span>                 :<span class="tlaCBC">            315 :             wbstate-&gt;offset += unicode_utf8len(u);</span></span>
+<span id="L60" title="Line 60: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      60</span>                 :<span class="tlaCBC">            315 :             wbstate-&gt;prev_alnum = curr_alnum;</span></span>
+<span id="L61" title="Line 61: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      61</span>                 :<span class="tlaCBC">            315 :             return prev_offset;</span></span>
+<span id="L62" title="Line 62: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      62</span>                 :                :         }</span>
+<span id="L63" title="Line 63: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      63</span>                 :                : </span>
+<span id="L64" title="Line 64: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      64</span>                 :<span class="tlaCBC">            438 :         wbstate-&gt;offset += unicode_utf8len(u);</span></span>
+<span id="L65" title="Line 65: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      65</span>                 :                :     }</span>
+<span id="L66" title="Line 66: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      66</span>                 :                : </span>
+<span id="L67" title="Line 67: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      67</span>                 :<span class="tlaCBC">             97 :     return wbstate-&gt;len;</span></span>
+<span id="L68" title="Line 68: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      68</span>                 :                : }</span>
+<span id="L69" title="Line 69: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      69</span>                 :                : </span>
+<span id="L70" title="Line 70: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">      70</span>                 :                : static size_t</span>
+<span id="L71" title="Line 71: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      71</span>                 :<span class="tlaCBC">           6003 : strlower_builtin(char *dest, size_t destsize, const char *src, ssize_t srclen,</span></span>
+<span id="L72" title="Line 72: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      72</span>                 :                :                  pg_locale_t locale)</span>
+<span id="L73" title="Line 73: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      73</span>                 :                : {</span>
+<span id="L74" title="Line 74: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">  221                      <span class="lineNum">      74</span>                 :<span class="tlaCBC">          12006 :     return unicode_strlower(dest, destsize, src, srclen,</span></span>
+<span id="L75" title="Line 75: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">                           <span class="lineNum">      75</span>                 :<span class="tlaCBC">           6003 :                             locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L76" title="Line 76: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      76</span>                 :                : }</span>
+<span id="L77" title="Line 77: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      77</span>                 :                : </span>
+<span id="L78" title="Line 78: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">      78</span>                 :                : static size_t</span>
+<span id="L79" title="Line 79: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">  253                      <span class="lineNum">      79</span>                 :<span class="tlaCBC">             97 : strtitle_builtin(char *dest, size_t destsize, const char *src, ssize_t srclen,</span></span>
+<span id="L80" title="Line 80: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      80</span>                 :                :                  pg_locale_t locale)</span>
+<span id="L81" title="Line 81: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      81</span>                 :                : {</span>
+<span id="L82" title="Line 82: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      82</span>                 :<span class="tlaCBC">             97 :     struct WordBoundaryState wbstate = {</span></span>
+<span id="L83" title="Line 83: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      83</span>                 :                :         .str = src,</span>
+<span id="L84" title="Line 84: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      84</span>                 :                :         .len = srclen,</span>
+<span id="L85" title="Line 85: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      85</span>                 :                :         .offset = 0,</span>
+<span id="L86" title="Line 86: commit 90260e2ec6bb on 2025-04-21 by jdavis@postgresql.org">  127                      <span class="lineNum">      86</span>                 :<span class="tlaCBC">             97 :         .posix = !locale-&gt;info.builtin.casemap_full,</span></span>
+<span id="L87" title="Line 87: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      87</span>                 :                :         .init = false,</span>
+<span id="L88" title="Line 88: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      88</span>                 :                :         .prev_alnum = false,</span>
+<span id="L89" title="Line 89: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      89</span>                 :                :     };</span>
+<span id="L90" title="Line 90: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      90</span>                 :                : </span>
+<span id="L91" title="Line 91: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">  221                      <span class="lineNum">      91</span>                 :<span class="tlaCBC">            194 :     return unicode_strtitle(dest, destsize, src, srclen,</span></span>
+<span id="L92" title="Line 92: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">                           <span class="lineNum">      92</span>                 :<span class="tlaCBC">             97 :                             locale-&gt;info.builtin.casemap_full,</span></span>
+<span id="L93" title="Line 93: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      93</span>                 :                :                             initcap_wbnext, &amp;wbstate);</span>
+<span id="L94" title="Line 94: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      94</span>                 :                : }</span>
+<span id="L95" title="Line 95: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      95</span>                 :                : </span>
+<span id="L96" title="Line 96: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">      96</span>                 :                : static size_t</span>
+<span id="L97" title="Line 97: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">  253                      <span class="lineNum">      97</span>                 :<span class="tlaCBC">         158441 : strupper_builtin(char *dest, size_t destsize, const char *src, ssize_t srclen,</span></span>
+<span id="L98" title="Line 98: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      98</span>                 :                :                  pg_locale_t locale)</span>
+<span id="L99" title="Line 99: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">      99</span>                 :                : {</span>
+<span id="L100" title="Line 100: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">  221                      <span class="lineNum">     100</span>                 :<span class="tlaCBC">         316882 :     return unicode_strupper(dest, destsize, src, srclen,</span></span>
+<span id="L101" title="Line 101: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">                           <span class="lineNum">     101</span>                 :<span class="tlaCBC">         158441 :                             locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L102" title="Line 102: commit 86a5d6006aff on 2024-12-16 by jdavis@postgresql.org">                           <span class="lineNum">     102</span>                 :                : }</span>
+<span id="L103" title="Line 103: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     103</span>                 :                : </span>
+<span id="L104" title="Line 104: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     104</span>                 :                : static size_t</span>
+<span id="L105" title="Line 105: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">  214                      <span class="lineNum">     105</span>                 :<span class="tlaCBC">              6 : strfold_builtin(char *dest, size_t destsize, const char *src, ssize_t srclen,</span></span>
+<span id="L106" title="Line 106: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     106</span>                 :                :                 pg_locale_t locale)</span>
+<span id="L107" title="Line 107: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     107</span>                 :                : {</span>
+<span id="L108" title="Line 108: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     108</span>                 :<span class="tlaCBC">             12 :     return unicode_strfold(dest, destsize, src, srclen,</span></span>
+<span id="L109" title="Line 109: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     109</span>                 :<span class="tlaCBC">              6 :                            locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L110" title="Line 110: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     110</span>                 :                : }</span>
+<span id="L111" title="Line 111: commit bfc5992069cf on 2025-01-24 by jdavis@postgresql.org">                           <span class="lineNum">     111</span>                 :                : </span>
+<span id="L112" title="Line 112: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     112</span>                 :                : static bool</span>
+<span id="L113" title="Line 113: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">   <a href="#L155" title="next GNC in &ldquo;(30,360] days&rdquo; bin">56</a> <a href="#L155" title="next GNC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     113</span>                 :<a href="#L155" class="tlaBgGNC"  title="Next GNC group">GNC</a><span class="tlaGNC tlaBgGNC">       32826 : wc_isdigit_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L114" title="Line 114: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     114</span>                 :                : {</span>
+<span id="L115" title="Line 115: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     115</span>                 :<span class="tlaGNC">          32826 :     return pg_u_isdigit(wc, !locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L116" title="Line 116: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     116</span>                 :                : }</span>
+<span id="L117" title="Line 117: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     117</span>                 :                : </span>
+<span id="L118" title="Line 118: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     118</span>                 :                : static bool</span>
+<span id="L119" title="Line 119: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     119</span>                 :<span class="tlaGNC">           2059 : wc_isalpha_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L120" title="Line 120: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     120</span>                 :                : {</span>
+<span id="L121" title="Line 121: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     121</span>                 :<span class="tlaGNC">           2059 :     return pg_u_isalpha(wc);</span></span>
+<span id="L122" title="Line 122: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     122</span>                 :                : }</span>
+<span id="L123" title="Line 123: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     123</span>                 :                : </span>
+<span id="L124" title="Line 124: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     124</span>                 :                : static bool</span>
+<span id="L125" title="Line 125: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     125</span>                 :<span class="tlaGNC">          18430 : wc_isalnum_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L126" title="Line 126: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     126</span>                 :                : {</span>
+<span id="L127" title="Line 127: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     127</span>                 :<span class="tlaGNC">          18430 :     return pg_u_isalnum(wc, !locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L128" title="Line 128: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     128</span>                 :                : }</span>
+<span id="L129" title="Line 129: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     129</span>                 :                : </span>
+<span id="L130" title="Line 130: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     130</span>                 :                : static bool</span>
+<span id="L131" title="Line 131: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     131</span>                 :<span class="tlaGNC">          12288 : wc_isupper_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L132" title="Line 132: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     132</span>                 :                : {</span>
+<span id="L133" title="Line 133: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     133</span>                 :<span class="tlaGNC">          12288 :     return pg_u_isupper(wc);</span></span>
+<span id="L134" title="Line 134: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     134</span>                 :                : }</span>
+<span id="L135" title="Line 135: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     135</span>                 :                : </span>
+<span id="L136" title="Line 136: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     136</span>                 :                : static bool</span>
+<span id="L137" title="Line 137: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC tlaBgUNC">   <a href="#L167" title="next UNC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">56</a> <a href="#L167" title="next UNC in &ldquo;jdavis@postgresql.org&rdquo; bin" class="tlaBgUNC">jdavis@postgresql.or</a></span> <span class="lineNum">     137</span>                 :<a href="#L167" class="tlaBgUNC"  title="Next UNC group">UNC</a><span class="tlaUNC tlaBgUNC">           0 : wc_islower_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L138" title="Line 138: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     138</span>                 :                : {</span>
+<span id="L139" title="Line 139: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     139</span>                 :<span class="tlaUNC">              0 :     return pg_u_islower(wc);</span></span>
+<span id="L140" title="Line 140: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     140</span>                 :                : }</span>
+<span id="L141" title="Line 141: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     141</span>                 :                : </span>
+<span id="L142" title="Line 142: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     142</span>                 :                : static bool</span>
+<span id="L143" title="Line 143: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     143</span>                 :<span class="tlaUNC">              0 : wc_isgraph_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L144" title="Line 144: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     144</span>                 :                : {</span>
+<span id="L145" title="Line 145: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     145</span>                 :<span class="tlaUNC">              0 :     return pg_u_isgraph(wc);</span></span>
+<span id="L146" title="Line 146: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     146</span>                 :                : }</span>
+<span id="L147" title="Line 147: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     147</span>                 :                : </span>
+<span id="L148" title="Line 148: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     148</span>                 :                : static bool</span>
+<span id="L149" title="Line 149: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     149</span>                 :<span class="tlaUNC">              0 : wc_isprint_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L150" title="Line 150: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     150</span>                 :                : {</span>
+<span id="L151" title="Line 151: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     151</span>                 :<span class="tlaUNC">              0 :     return pg_u_isprint(wc);</span></span>
+<span id="L152" title="Line 152: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     152</span>                 :                : }</span>
+<span id="L153" title="Line 153: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     153</span>                 :                : </span>
+<span id="L154" title="Line 154: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     154</span>                 :                : static bool</span>
+<span id="L155" title="Line 155: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">   <a href="#L174" title="next GNC in &ldquo;(30,360] days&rdquo; bin">56</a> <a href="#L174" title="next GNC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     155</span>                 :<a href="#L174" class="tlaBgGNC"  title="Next GNC group">GNC</a><span class="tlaGNC tlaBgGNC">       12288 : wc_ispunct_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L156" title="Line 156: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     156</span>                 :                : {</span>
+<span id="L157" title="Line 157: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     157</span>                 :<span class="tlaGNC">          12288 :     return pg_u_ispunct(wc, !locale-&gt;info.builtin.casemap_full);</span></span>
+<span id="L158" title="Line 158: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     158</span>                 :                : }</span>
+<span id="L159" title="Line 159: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     159</span>                 :                : </span>
+<span id="L160" title="Line 160: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     160</span>                 :                : static bool</span>
+<span id="L161" title="Line 161: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     161</span>                 :<span class="tlaGNC">           8199 : wc_isspace_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L162" title="Line 162: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     162</span>                 :                : {</span>
+<span id="L163" title="Line 163: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     163</span>                 :<span class="tlaGNC">           8199 :     return pg_u_isspace(wc);</span></span>
+<span id="L164" title="Line 164: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     164</span>                 :                : }</span>
+<span id="L165" title="Line 165: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     165</span>                 :                : </span>
+<span id="L166" title="Line 166: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     166</span>                 :                : static bool</span>
+<span id="L167" title="Line 167: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC tlaBgUNC">   <a href="#top" title="next UNC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">56</a> <a href="#top" title="next UNC in &ldquo;jdavis@postgresql.org&rdquo; bin" class="tlaBgUNC">jdavis@postgresql.or</a></span> <span class="lineNum">     167</span>                 :<a href="#top" class="tlaBgUNC"  title="Next UNC group">UNC</a><span class="tlaUNC tlaBgUNC">           0 : char_is_cased_builtin(char ch, pg_locale_t locale)</span></span>
+<span id="L168" title="Line 168: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     168</span>                 :                : {</span>
+<span id="L169" title="Line 169: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     169</span>         [<span class="tlaUNC"> <a href="#L170" title="UNC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#L170" title="UNC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUNC">              0 :     return IS_HIGHBIT_SET(ch) ||</span></span>
+<span id="L170" title="Line 170: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 56 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     170</span>   [<span class="tlaUNC"> <a href="#top" title="UNC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 1 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 2 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 3 was not executed" class="branchTla">#</a> </span> :<span class="tlaUNC">              0 :         (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z');</span></span>
+                           <span class="lineNum">        </span>    <span class="tlaUNC"> <a href="#top" title="UNC: Branch 4 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 5 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 6 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 7 was not executed" class="branchTla">#</a> </span>]
+<span id="L171" title="Line 171: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     171</span>                 :                : }</span>
+<span id="L172" title="Line 172: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     172</span>                 :                : </span>
+<span id="L173" title="Line 173: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     173</span>                 :                : static pg_wchar</span>
+<span id="L174" title="Line 174: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">   <a href="#L246" title="next GNC in &ldquo;(30,360] days&rdquo; bin">56</a> <a href="#L246" title="next GNC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     174</span>                 :<a href="#L246" class="tlaBgGNC"  title="Next GNC group">GNC</a><span class="tlaGNC tlaBgGNC">         264 : wc_toupper_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L175" title="Line 175: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     175</span>                 :                : {</span>
+<span id="L176" title="Line 176: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     176</span>                 :<span class="tlaGNC">            264 :     return unicode_uppercase_simple(wc);</span></span>
+<span id="L177" title="Line 177: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     177</span>                 :                : }</span>
+<span id="L178" title="Line 178: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     178</span>                 :                : </span>
+<span id="L179" title="Line 179: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     179</span>                 :                : static pg_wchar</span>
+<span id="L180" title="Line 180: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     180</span>                 :<span class="tlaGNC">            264 : wc_tolower_builtin(pg_wchar wc, pg_locale_t locale)</span></span>
+<span id="L181" title="Line 181: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     181</span>                 :                : {</span>
+<span id="L182" title="Line 182: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     182</span>                 :<span class="tlaGNC">            264 :     return unicode_lowercase_simple(wc);</span></span>
+<span id="L183" title="Line 183: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     183</span>                 :                : }</span>
+<span id="L184" title="Line 184: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     184</span>                 :                : </span>
+<span id="L185" title="Line 185: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     185</span>                 :                : static const struct ctype_methods ctype_methods_builtin = {</span>
+<span id="L186" title="Line 186: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     186</span>                 :                :     .strlower = strlower_builtin,</span>
+<span id="L187" title="Line 187: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     187</span>                 :                :     .strtitle = strtitle_builtin,</span>
+<span id="L188" title="Line 188: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     188</span>                 :                :     .strupper = strupper_builtin,</span>
+<span id="L189" title="Line 189: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     189</span>                 :                :     .strfold = strfold_builtin,</span>
+<span id="L190" title="Line 190: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     190</span>                 :                :     .wc_isdigit = wc_isdigit_builtin,</span>
+<span id="L191" title="Line 191: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     191</span>                 :                :     .wc_isalpha = wc_isalpha_builtin,</span>
+<span id="L192" title="Line 192: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     192</span>                 :                :     .wc_isalnum = wc_isalnum_builtin,</span>
+<span id="L193" title="Line 193: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     193</span>                 :                :     .wc_isupper = wc_isupper_builtin,</span>
+<span id="L194" title="Line 194: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     194</span>                 :                :     .wc_islower = wc_islower_builtin,</span>
+<span id="L195" title="Line 195: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     195</span>                 :                :     .wc_isgraph = wc_isgraph_builtin,</span>
+<span id="L196" title="Line 196: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     196</span>                 :                :     .wc_isprint = wc_isprint_builtin,</span>
+<span id="L197" title="Line 197: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     197</span>                 :                :     .wc_ispunct = wc_ispunct_builtin,</span>
+<span id="L198" title="Line 198: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     198</span>                 :                :     .wc_isspace = wc_isspace_builtin,</span>
+<span id="L199" title="Line 199: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     199</span>                 :                :     .char_is_cased = char_is_cased_builtin,</span>
+<span id="L200" title="Line 200: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     200</span>                 :                :     .wc_tolower = wc_tolower_builtin,</span>
+<span id="L201" title="Line 201: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     201</span>                 :                :     .wc_toupper = wc_toupper_builtin,</span>
+<span id="L202" title="Line 202: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     202</span>                 :                : };</span>
+<span id="L203" title="Line 203: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     203</span>                 :                : </span>
+<span id="L204" title="Line 204: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     204</span>                 :                : pg_locale_t</span>
+<span id="L205" title="Line 205: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">  <a href="#L218" title="next CBC in &ldquo;(30,360] days&rdquo; bin">267</a> <a href="#L218" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     205</span>                 :<a href="#L218" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         886 : create_pg_locale_builtin(Oid collid, MemoryContext context)</span></span>
+<span id="L206" title="Line 206: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     206</span>                 :                : {</span>
+<span id="L207" title="Line 207: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     207</span>                 :                :     const char *locstr;</span>
+<span id="L208" title="Line 208: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     208</span>                 :                :     pg_locale_t result;</span>
+<span id="L209" title="Line 209: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     209</span>                 :                : </span>
+<span id="L210" title="Line 210: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     210</span>         [<span class="tlaCBC"> <a href="#L216" title="CBC: Branch 0 was taken 860 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L216" title="CBC: Branch 1 was taken 26 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            886 :     if (collid == DEFAULT_COLLATION_OID)</span></span>
+<span id="L211" title="Line 211: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     211</span>                 :                :     {</span>
+<span id="L212" title="Line 212: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     212</span>                 :                :         HeapTuple   tp;</span>
+<span id="L213" title="Line 213: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     213</span>                 :                :         Datum       datum;</span>
+<span id="L214" title="Line 214: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     214</span>                 :                : </span>
+<span id="L215" title="Line 215: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     215</span>                 :<span class="tlaCBC">            860 :         tp = SearchSysCache1(DATABASEOID, ObjectIdGetDatum(MyDatabaseId));</span></span>
+<span id="L216" title="Line 216: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     216</span>         [<span class="tlaUBC"> <a href="#L217" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L229" title="CBC: Branch 1 was taken 860 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            860 :         if (!HeapTupleIsValid(tp))</span></span>
+<span id="L217" title="Line 217: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 267 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L230" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">267</a> <a href="#L230" title="next UBC in &ldquo;jdavis@postgresql.org&rdquo; bin" class="tlaBgUBC">jdavis@postgresql.or</a></span> <span class="lineNum">     217</span>         [<span class="tlaUBC"> <a href="#L229" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L229" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L230" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             elog(ERROR, &quot;cache lookup failed for database %u&quot;, MyDatabaseId);</span></span>
+<span id="L218" title="Line 218: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">  <a href="#L231" title="next CBC in &ldquo;(30,360] days&rdquo; bin">267</a> <a href="#L231" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     218</span>                 :<a href="#L231" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         860 :         datum = SysCacheGetAttrNotNull(DATABASEOID, tp,</span></span>
+<span id="L219" title="Line 219: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     219</span>                 :                :                                        Anum_pg_database_datlocale);</span>
+<span id="L220" title="Line 220: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     220</span>                 :<span class="tlaCBC">            860 :         locstr = TextDatumGetCString(datum);</span></span>
+<span id="L221" title="Line 221: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     221</span>                 :<span class="tlaCBC">            860 :         ReleaseSysCache(tp);</span></span>
+<span id="L222" title="Line 222: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     222</span>                 :                :     }</span>
+<span id="L223" title="Line 223: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     223</span>                 :                :     else</span>
+<span id="L224" title="Line 224: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     224</span>                 :                :     {</span>
+<span id="L225" title="Line 225: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     225</span>                 :                :         HeapTuple   tp;</span>
+<span id="L226" title="Line 226: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     226</span>                 :                :         Datum       datum;</span>
+<span id="L227" title="Line 227: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     227</span>                 :                : </span>
+<span id="L228" title="Line 228: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     228</span>                 :<span class="tlaCBC">             26 :         tp = SearchSysCache1(COLLOID, ObjectIdGetDatum(collid));</span></span>
+<span id="L229" title="Line 229: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     229</span>         [<span class="tlaUBC"> <a href="#L230" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L262" title="CBC: Branch 1 was taken 26 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             26 :         if (!HeapTupleIsValid(tp))</span></span>
+<span id="L230" title="Line 230: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 267 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L269" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">267</a> <a href="#L269" title="next UBC in &ldquo;jdavis@postgresql.org&rdquo; bin" class="tlaBgUBC">jdavis@postgresql.or</a></span> <span class="lineNum">     230</span>         [<span class="tlaUBC"> <a href="#L266" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L266" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L269" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             elog(ERROR, &quot;cache lookup failed for collation %u&quot;, collid);</span></span>
+<span id="L231" title="Line 231: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">  <a href="#L249" title="next CBC in &ldquo;(30,360] days&rdquo; bin">267</a> <a href="#L249" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     231</span>                 :<a href="#L249" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">          26 :         datum = SysCacheGetAttrNotNull(COLLOID, tp,</span></span>
+<span id="L232" title="Line 232: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     232</span>                 :                :                                        Anum_pg_collation_colllocale);</span>
+<span id="L233" title="Line 233: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     233</span>                 :<span class="tlaCBC">             26 :         locstr = TextDatumGetCString(datum);</span></span>
+<span id="L234" title="Line 234: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     234</span>                 :<span class="tlaCBC">             26 :         ReleaseSysCache(tp);</span></span>
+<span id="L235" title="Line 235: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     235</span>                 :                :     }</span>
+<span id="L236" title="Line 236: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     236</span>                 :                : </span>
+<span id="L237" title="Line 237: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     237</span>                 :<span class="tlaCBC">            886 :     builtin_validate_locale(GetDatabaseEncoding(), locstr);</span></span>
+<span id="L238" title="Line 238: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     238</span>                 :                : </span>
+<span id="L239" title="Line 239: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     239</span>                 :<span class="tlaCBC">            886 :     result = MemoryContextAllocZero(context, sizeof(struct pg_locale_struct));</span></span>
+<span id="L240" title="Line 240: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     240</span>                 :                : </span>
+<span id="L241" title="Line 241: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     241</span>                 :<span class="tlaCBC">            886 :     result-&gt;info.builtin.locale = MemoryContextStrdup(context, locstr);</span></span>
+<span id="L242" title="Line 242: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">  221                      <span class="lineNumWithDelete" title="removed line 161 from baseline version">     242</span>                 :<span class="tlaCBC">            886 :     result-&gt;info.builtin.casemap_full = (strcmp(locstr, &quot;PG_UNICODE_FAST&quot;) == 0);</span></span>
+<span id="L243" title="Line 243: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">  267                      <span class="lineNum">     243</span>                 :<span class="tlaCBC">            886 :     result-&gt;deterministic = true;</span></span>
+<span id="L244" title="Line 244: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     244</span>                 :<span class="tlaCBC">            886 :     result-&gt;collate_is_c = true;</span></span>
+<span id="L245" title="Line 245: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     245</span>                 :<span class="tlaCBC">            886 :     result-&gt;ctype_is_c = (strcmp(locstr, &quot;C&quot;) == 0);</span></span>
+<span id="L246" title="Line 246: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">   <a href="#top" title="next GNC in &ldquo;(30,360] days&rdquo; bin">56</a> <a href="#top" title="next GNC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     246</span>         [<span class="tlaGNC"> <a href="#top" title="GNC: Branch 0 was taken 875 times" class="branchTla">+</a> </span><span class="tlaGNC"> <a href="#top" title="GNC: Branch 1 was taken 11 times" class="branchTla">+</a> </span>]:<a href="#top" class="tlaBgGNC"  title="Next GNC group">GNC</a><span class="tlaGNC tlaBgGNC">         886 :     if (!result-&gt;ctype_is_c)</span></span>
+<span id="L247" title="Line 247: commit 5a38104b3642 on 2025-07-01 by jdavis@postgresql.org">                           <span class="lineNum">     247</span>                 :<span class="tlaGNC">            875 :         result-&gt;ctype = &amp;ctype_methods_builtin;</span></span>
+<span id="L248" title="Line 248: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     248</span>                 :                : </span>
+<span id="L249" title="Line 249: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">267</a> <a href="#top" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     249</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         886 :     return result;</span></span>
+<span id="L250" title="Line 250: commit 1ba0782ce90c on 2024-12-02 by jdavis@postgresql.org">                           <span class="lineNum">     250</span>                 :                : }</span>
+<span id="L251" title="Line 251: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     251</span>                 :                : </span>
+<span id="L252" title="Line 252: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     252</span>                 :                : char *</span>
+<span id="L253" title="Line 253: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">  230                      <span class="lineNum">     253</span>                 :<span class="tlaCBC">            918 : get_collation_actual_version_builtin(const char *collcollate)</span></span>
+<span id="L254" title="Line 254: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     254</span>                 :                : {</span>
+<span id="L255" title="Line 255: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     255</span>                 :                :     /*</span>
+<span id="L256" title="Line 256: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     256</span>                 :                :      * The only two supported locales (C and C.UTF-8) are both based on memcmp</span>
+<span id="L257" title="Line 257: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     257</span>                 :                :      * and are not expected to change, but track the version anyway.</span>
+<span id="L258" title="Line 258: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     258</span>                 :                :      *</span>
+<span id="L259" title="Line 259: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     259</span>                 :                :      * Note that the character semantics may change for some locales, but the</span>
+<span id="L260" title="Line 260: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     260</span>                 :                :      * collation version only tracks changes to sort order.</span>
+<span id="L261" title="Line 261: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     261</span>                 :                :      */</span>
+<span id="L262" title="Line 262: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     262</span>         [<span class="tlaCBC"> <a href="#L264" title="CBC: Branch 0 was taken 24 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L264" title="CBC: Branch 1 was taken 894 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            918 :     if (strcmp(collcollate, &quot;C&quot;) == 0)</span></span>
+<span id="L263" title="Line 263: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     263</span>                 :<span class="tlaCBC">             24 :         return &quot;1&quot;;</span></span>
+<span id="L264" title="Line 264: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     264</span>         [<span class="tlaCBC"> <a href="#L266" title="CBC: Branch 0 was taken 884 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L266" title="CBC: Branch 1 was taken 10 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            894 :     else if (strcmp(collcollate, &quot;C.UTF-8&quot;) == 0)</span></span>
+<span id="L265" title="Line 265: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     265</span>                 :<span class="tlaCBC">            884 :         return &quot;1&quot;;</span></span>
+<span id="L266" title="Line 266: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">  221                      <span class="lineNum">     266</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 10 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L269" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">             10 :     else if (strcmp(collcollate, &quot;PG_UNICODE_FAST&quot;) == 0)</span></span>
+<span id="L267" title="Line 267: commit d3d098316913 on 2025-01-17 by jdavis@postgresql.org">                           <span class="lineNum">     267</span>                 :<span class="tlaCBC">             10 :         return &quot;1&quot;;</span></span>
+<span id="L268" title="Line 268: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     268</span>                 :                :     else</span>
+<span id="L269" title="Line 269: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org"><span title="jdavis@postgresql.org 230 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#top" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">230</a> <a href="#top" title="next UBC in &ldquo;jdavis@postgresql.org&rdquo; bin" class="tlaBgUBC">jdavis@postgresql.or</a></span> <span class="lineNum">     269</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L270" title="Line 270: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     270</span>                 :                :                 (errcode(ERRCODE_WRONG_OBJECT_TYPE),</span>
+<span id="L271" title="Line 271: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     271</span>                 :                :                  errmsg(&quot;invalid locale name \&quot;%s\&quot; for builtin provider&quot;,</span>
+<span id="L272" title="Line 272: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     272</span>                 :                :                         collcollate)));</span>
+<span id="L273" title="Line 273: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     273</span>                 :                : </span>
+<span id="L274" title="Line 274: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     274</span>                 :                :     return NULL;                /* keep compiler quiet */</span>
+<span id="L275" title="Line 275: commit 4f5cef2607c1 on 2025-01-08 by jdavis@postgresql.org">                           <span class="lineNum">     275</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,1444 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/date.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - date.c<span style="font-size: 80%;"> (<a href="date.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">74.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1233</td>
+            <td class="headerCovTableEntry">920</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">299</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">886</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">74.5&nbsp;%</td>
+            <td class="headerCovTableEntry">149</td>
+            <td class="headerCovTableEntry">111</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">38</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">103</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">58.0&nbsp;%</td>
+            <td class="headerCovTableEntry">696</td>
+            <td class="headerCovTableEntry">404</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">284</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">394</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">32.7&nbsp;%</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="tlaUNC">14</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">76.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1178</td>
+            <td class="headerCovTableEntry">902</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">276</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">880</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">42.9&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">76.1&nbsp;%</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntry">108</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">102</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">35.0&nbsp;%</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="tlaUNC">8</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">55.8&nbsp;%</td>
+            <td class="headerCovTableEntry">712</td>
+            <td class="headerCovTableEntry">397</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">279</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">391</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="date.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="date.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="date.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1790">AdjustTimeForTypmod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4234</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L300">EncodeSpecialDate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">112</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L315">GetSQLCurrentDate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L348">GetSQLCurrentTime</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L368">GetSQLLocalTime</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L70">anytime_typmod_check</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">226</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L49">anytime_typmodin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L92">anytime_typmodout</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L671">date2timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2127</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L783">date2timestamp_no_overflow</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L627">date2timestamp_opt_overflow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2377</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L767">date2timestamptz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">109</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L687">date2timestamptz_opt_overflow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L443">date_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20299</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L877">date_cmp_timestamp</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">55</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L806">date_cmp_timestamp_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L961">date_cmp_timestamptz</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L886">date_cmp_timestamptz_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L465">date_decrement</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L389">date_eq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32888</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L823">date_eq_timestamp</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L907">date_eq_timestamptz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L522">date_finite</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L434">date_ge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3230</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L868">date_ge_timestamp</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L952">date_ge_timestamptz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L425">date_gt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4434</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L850">date_gt_timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L934">date_gt_timestamptz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L112">date_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5854</td>
+              <td class=coverPerHi>90.3&nbsp;% (28 / 31)</td>
+              <td class=coverPerMed>79.3&nbsp;% (23 / 29)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L481">date_increment</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L530">date_larger</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L416">date_le</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3438</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L859">date_le_timestamp</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L943">date_le_timestamptz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L407">date_lt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79021</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L841">date_lt_timestamp</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L925">date_lt_timestamptz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L550">date_mi</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">934</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1329">date_mi_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L591">date_mii</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (6 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L398">date_ne</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L832">date_ne_timestamp</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L916">date_ne_timestamptz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L183">date_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7179</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1309">date_pl_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L567">date_pli</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1329</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (6 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L208">date_recv</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L230">date_send</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L497">date_skipsupport</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L539">date_smaller</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L456">date_sortsupport</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">370</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1346">date_timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">729</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1431">date_timestamptz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">109</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2111">datetime_timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3031">datetimetz_timestamptz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerLo>69.2&nbsp;% (9 / 13)</td>
+              <td class=coverPerLo>35.7&nbsp;% (5 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1129">extract_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">339</td>
+              <td class=coverPerHi>95.0&nbsp;% (76 / 80)</td>
+              <td class=coverPerMed>85.7&nbsp;% (48 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2394">extract_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3195">extract_timetz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1596">float_time_overflows</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L510">hashdate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">134</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L516">hashdateextended</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1102">in_range_date_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">669</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2243">in_range_time_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">480</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2795">in_range_timetz_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">519</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2157">interval_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L244">make_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>40.0&nbsp;% (12 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1722">make_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1928">overlaps_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerLo>45.8&nbsp;% (22 / 48)</td>
+              <td class=coverPerLo>33.3&nbsp;% (12 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2840">overlaps_timetz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 48)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1633">time2tm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3707</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1879">time_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18963</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1825">time_eq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19570</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1870">time_ge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3583</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1861">time_gt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6014</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1892">time_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1137</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1898">time_hash_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1519">time_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1261</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2134">time_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1904">time_larger</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1852">time_le</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4882</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1843">time_lt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48061</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2220">time_mi_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">309</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2178">time_mi_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">820</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1834">time_ne</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1646">time_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3386</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1572">time_overflows</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29989</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2388">time_part</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2285">time_part_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (39 / 39)</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2197">time_pl_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1323</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1666">time_recv</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1770">time_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1692">time_send</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1913">time_smaller</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1750">time_support</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2973">time_timetz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1383">timestamp2date_opt_overflow</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">2033</td>
+              <td class=coverPerLo>57.9&nbsp;% (11 / 19)</td>
+              <td class=coverPerLo>50.0&nbsp;% (7 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1024">timestamp_cmp_date</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">78</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1360">timestamp_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">2009</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L970">timestamp_eq_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1015">timestamp_ge_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L997">timestamp_gt_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1006">timestamp_le_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L988">timestamp_lt_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L979">timestamp_ne_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2050">timestamp_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1469">timestamptz2date_opt_overflow</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1986</td>
+              <td class=coverPerLo>57.9&nbsp;% (11 / 19)</td>
+              <td class=coverPerLo>50.0&nbsp;% (7 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1087">timestamptz_cmp_date</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">78</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1446">timestamptz_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1962</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1033">timestamptz_eq_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1078">timestamptz_ge_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1060">timestamptz_gt_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1069">timestamptz_le_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1051">timestamptz_lt_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1042">timestamptz_ne_date</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2080">timestamptz_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2999">timestamptz_timetz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1703">timetypmodin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1711">timetypmodout</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2548">timetz2tm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3793</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3310">timetz_at_local</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">72</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2669">timetz_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7818</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2588">timetz_cmp_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">106574</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2615">timetz_eq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14834</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2660">timetz_ge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4178</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2651">timetz_gt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4717</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2678">timetz_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1137</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2694">timetz_hash_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2418">timetz_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1200</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3267">timetz_izone</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">84</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerLo>62.5&nbsp;% (15 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2710">timetz_larger</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2642">timetz_le</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4226</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2633">timetz_lt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">70432</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2768">timetz_mi_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">369</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2624">timetz_ne</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2459">timetz_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3586</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3189">timetz_part</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3072">timetz_part_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45</td>
+              <td class=coverPerHi>100.0&nbsp;% (48 / 48)</td>
+              <td class=coverPerMed>89.7&nbsp;% (26 / 29)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2741">timetz_pl_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1359</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2480">timetz_recv</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2570">timetz_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2516">timetz_send</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2724">timetz_smaller</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2960">timetz_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L3205">timetz_zone</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">144</td>
+              <td class=coverPerMed>85.7&nbsp;% (18 / 21)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2528">timetztypmodin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2536">timetztypmodout</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L1561">tm2time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1924</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#L2408">tm2timetz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2088</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

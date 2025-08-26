@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/gist/gist.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory gist">gist</a> - gist.c<span style="font-size: 80%;"> (<a href="gist.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">73.9&nbsp;%</td>
+            <td class="headerCovTableEntry">591</td>
+            <td class="headerCovTableEntry">437</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">154</td>
+            <td class="headerCovTableEntry">437</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">76.5&nbsp;%</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">13</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">59.9&nbsp;%</td>
+            <td class="headerCovTableEntry">342</td>
+            <td class="headerCovTableEntry">205</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">134</td>
+            <td class="headerCovTableEntry">205</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">11</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.4&nbsp;%</td>
+            <td class="headerCovTableEntry">580</td>
+            <td class="headerCovTableEntry">426</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">154</td>
+            <td class="headerCovTableEntry">426</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">76.5&nbsp;%</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">13</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">60.4&nbsp;%</td>
+            <td class="headerCovTableEntry">336</td>
+            <td class="headerCovTableEntry">203</td>
+            <td class="tlaLBC">3</td>
+            <td class="headerCovTableEntry">130</td>
+            <td class="headerCovTableEntry">203</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="gist.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="gist.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="gist.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L912">gistFindPath</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 42)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L637">gistdoinsert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">427323</td>
+              <td class=coverPerMed>75.0&nbsp;% (75 / 100)</td>
+              <td class=coverPerLo>64.5&nbsp;% (40 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1673">gistprunepage</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 25)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1138">gistformdownlink</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 21)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1198">gistfixsplit</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1025">gistFindCorrectParent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12067</td>
+              <td class=coverPerLo>67.5&nbsp;% (27 / 40)</td>
+              <td class=coverPerLo>50.0&nbsp;% (11 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L228">gistplacetopage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">815903</td>
+              <td class=coverPerHi>95.7&nbsp;% (132 / 138)</td>
+              <td class=coverPerMed>81.8&nbsp;% (108 / 132)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1448">gistSplit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13351</td>
+              <td class=coverPerHi>97.1&nbsp;% (33 / 34)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1535">initGISTstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4563</td>
+              <td class=coverPerHi>98.1&nbsp;% (53 / 54)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L126">createTempGistContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4759</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1662">freeGISTstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3501</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L137">gistbuildempty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1352">gistfinishsplit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12002</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L57">gisthandler</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7433</td>
+              <td class=coverPerHi>100.0&nbsp;% (53 / 53)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L163">gistinsert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">152165</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1258">gistinserttuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">751270</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="gist.c.gcov.html#L1292">gistinserttuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">763337</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

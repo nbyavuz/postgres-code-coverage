@@ -1,0 +1,521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/commands/async.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory commands">commands</a> - async.c<span style="font-size: 80%;"> (<a href="async.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">86.1&nbsp;%</td>
+            <td class="headerCovTableEntry">577</td>
+            <td class="headerCovTableEntry">497</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry">497</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">95.6&nbsp;%</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">43</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">61.7&nbsp;%</td>
+            <td class="headerCovTableEntry">412</td>
+            <td class="headerCovTableEntry">254</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">154</td>
+            <td class="headerCovTableEntry">254</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">86.1&nbsp;%</td>
+            <td class="headerCovTableEntry">577</td>
+            <td class="headerCovTableEntry">497</td>
+            <td class="tlaLBC">4</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry">497</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.6&nbsp;%</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">43</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">61.7&nbsp;%</td>
+            <td class="headerCovTableEntry">412</td>
+            <td class="headerCovTableEntry">254</td>
+            <td class="tlaLBC">4</td>
+            <td class="headerCovTableEntry">154</td>
+            <td class="headerCovTableEntry">254</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="async.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="async.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="async.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2287">AddEventToPendingNotifies</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1034</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2246">AsyncExistsPendingNotify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1048</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L500">AsyncShmemInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L483">AsyncShmemSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1941</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L736">Async_Listen</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L589">Async_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1103</td>
+              <td class=coverPerHi>91.9&nbsp;% (34 / 37)</td>
+              <td class=coverPerLo>62.5&nbsp;% (20 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L750">Async_Unlisten</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L768">Async_UnlistenAll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L821">Async_UnlistenOnExit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1669">AtAbort_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24677</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L966">AtCommit_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291366</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L834">AtPrepare_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">300</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1759">AtSubAbort_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4660</td>
+              <td class=coverPerLo>69.2&nbsp;% (9 / 13)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1689">AtSubCommit_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4437</td>
+              <td class=coverPerLo>59.3&nbsp;% (16 / 27)</td>
+              <td class=coverPerLo>57.7&nbsp;% (15 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2376">ClearPendingActionsAndNotifies</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24774</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1134">Exec_ListenCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1039">Exec_ListenPreCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerHi>96.6&nbsp;% (28 / 29)</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1192">Exec_UnlistenAllCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1161">Exec_UnlistenCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1802">HandleNotifyInterrupt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1210">IsListeningOn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1196</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2222">NotifyMyFrontEnd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L859">PreCommit_Notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291521</td>
+              <td class=coverPerHi>92.6&nbsp;% (25 / 27)</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2181">ProcessIncomingNotify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1832">ProcessNotifyInterrupt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">101</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1579">SignalBackends</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerMed>85.7&nbsp;% (24 / 28)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1354">asyncQueueAddEntries</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83</td>
+              <td class=coverPerHi>91.4&nbsp;% (32 / 35)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1285">asyncQueueAdvance</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2301</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2106">asyncQueueAdvanceTail</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerMed>78.9&nbsp;% (15 / 19)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1525">asyncQueueFillWarning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83</td>
+              <td class=coverPerLo>26.7&nbsp;% (4 / 15)</td>
+              <td class=coverPerLo>4.2&nbsp;% (1 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1270">asyncQueueIsFull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1318">asyncQueueNotificationToEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1109</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L464">asyncQueuePageDiff</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L474">asyncQueuePagePrecedes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2014">asyncQueueProcessPageEntries</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">85</td>
+              <td class=coverPerMed>85.7&nbsp;% (18 / 21)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1849">asyncQueueReadAllNotifications</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerMed>89.7&nbsp;% (26 / 29)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1229">asyncQueueUnregister</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1504">asyncQueueUsage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2392">check_notify_buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2346">notification_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1983</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L2360">notification_match</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L788">pg_listening_channels</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L1479">pg_notification_queue_usage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L555">pg_notify</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1054</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="async.c.gcov.html#L688">queue_listen</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

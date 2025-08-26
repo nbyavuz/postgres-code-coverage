@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/spgist</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/spgist</td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">91.7&nbsp;%</td>
+            <td class="headerCovTableEntry">3471</td>
+            <td class="headerCovTableEntry">3183</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">280</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">3181</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">99.2&nbsp;%</td>
+            <td class="headerCovTableEntry">121</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">117</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">69.3&nbsp;%</td>
+            <td class="headerCovTableEntry">2193</td>
+            <td class="headerCovTableEntry">1519</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">670</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1510</td>
+            <td class="headerCovTableEntry">146</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12"><a href="index-date.html" title="Click to include date bin details in file table below">Line coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Rating:
+            <span class="coverLegendCovLo" title="Coverage rates below 75 % are classified as low">low: &lt; 75 %</span>
+            <span class="coverLegendCovMed" title="Coverage rates between 75 % and 90 % are classified as medium">medium: &gt;= 75 %</span>
+            <span class="coverLegendCovHi" title="Coverage rates of 90 % and more are classified as high">high: &gt;= 90 %</span>
+</td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryHi">96.7&nbsp;%</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryHi">91.6&nbsp;%</td>
+            <td class="headerCovTableEntry">3408</td>
+            <td class="headerCovTableEntry">3122</td>
+            <td class="tlaLBC">8</td>
+            <td class="headerCovTableEntry">278</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3122</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12"><a href="index-date.html" title="Click to include date bin details in file table below">Function coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryHi">99.2&nbsp;%</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntry">119</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12"><a href="index-date.html" title="Click to include date bin details in file table below">Branch coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryMed">87.5&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryLo">63.5&nbsp;%</td>
+            <td class="headerCovTableEntry">2379</td>
+            <td class="headerCovTableEntry">1510</td>
+            <td class="tlaLBC">4</td>
+            <td class="headerCovTableEntry">669</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1503</td>
+            <td class="headerCovTableEntry">146</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table width="80%" cellpadding=1 cellspacing=1 border=0>
+
+            <tr>
+              <td width="40%"><br></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            </tr>
+
+            <tr>
+              <td class="tableHead" rowspan=2>File <span  title="Click to sort table by file name" class="tableHeadSort"><a href="index.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by file name" title="Click to sort table by file name" border=0></a></span></td>
+        <td class="tableHead" colspan=10>Line Coverage <span  title="Click to sort table by line coverage" class="tableHeadSort"><a href="index-sort-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by line coverage" title="Click to sort table by line coverage" border=0></a></span></td>
+        <td class="tableHead" colspan=10>Branch Coverage <span  title="Click to sort table by branch coverage" class="tableHeadSort"><a href="index-sort-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by branch coverage" title="Click to sort table by branch coverage" border=0></a></span></td>
+        <td class="tableHead" colspan=6>Function Coverage <span  title="Click to sort table by function coverage" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function coverage" title="Click to sort table by function coverage" border=0></span></td>
+            </tr>
+            <tr>
+                    <td class="tableHead" colspan=2> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested"> LBC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now"> ECB</td>
+                    <td class="tableHead" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted"> DCB</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested"> LBC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now"> GBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now"> EUB</td>
+                    <td class="tableHead" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now"> ECB</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgxlog.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgxlog.c">spgxlog.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../amber.png" width=87 height=10 alt="87.1%"><img src="../../../../snow.png" width=13 height=10 alt="87.1%"></td></tr></table>
+              </td>
+              <td class="coverPerMed">87.1&nbsp;%</td>
+              <td class="coverNumDflt">459</td>
+              <td class="coverNumDflt">400</td>
+              <td class="tlaLBC tlaBgLBC"><a href="spgxlog.c.gcov.html#L433" class="tlaBgLBC" title="Go to first LBC line in spgxlog.c">7</a></td>
+              <td class="coverNumDflt"><a href="spgxlog.c.gcov.html#L58" title="Go to first UBC line in spgxlog.c">52</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgxlog.c.gcov.html#L35" title="Go to first CBC line in spgxlog.c">400</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">59.3&nbsp;%</td>
+              <td class="coverNumDflt">221</td>
+              <td class="coverNumDflt">131</td>
+              <td class="tlaLBC tlaBgLBC"><a href="spgxlog.c.gcov.html#L429" class="tlaBgLBC" title="Go to first LBC branch in spgxlog.c">2</a></td>
+              <td class="coverNumDflt"><a href="spgxlog.c.gcov.html#L57" title="Go to first UBC branch in spgxlog.c">88</a></td>
+              <td class="coverNumDflt"><a href="spgxlog.c.gcov.html#L216" title="Go to first GBC branch in spgxlog.c">2</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgxlog.c.gcov.html#L52" title="Go to first CBC branch in spgxlog.c">129</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">92.9&nbsp;%</td>
+              <td class="coverNumDflt">14</td>
+              <td class="coverNumDflt">13</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">13</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgvalidate.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgvalidate.c">spgvalidate.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../amber.png" width=79 height=10 alt="79.1%"><img src="../../../../snow.png" width=21 height=10 alt="79.1%"></td></tr></table>
+              </td>
+              <td class="coverPerMed">79.1&nbsp;%</td>
+              <td class="coverNumDflt">129</td>
+              <td class="coverNumDflt">102</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvalidate.c.gcov.html#L63" title="Go to first UBC line in spgvalidate.c">27</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvalidate.c.gcov.html#L38" title="Go to first CBC line in spgvalidate.c">102</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">57.8&nbsp;%</td>
+              <td class="coverNumDflt">109</td>
+              <td class="coverNumDflt">63</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvalidate.c.gcov.html#L62" title="Go to first UBC branch in spgvalidate.c">46</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvalidate.c.gcov.html#L62" title="Go to first CBC branch in spgvalidate.c">63</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgproc.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgproc.c">spgproc.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=96 height=10 alt="96.3%"><img src="../../../../snow.png" width=4 height=10 alt="96.3%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">96.3&nbsp;%</td>
+              <td class="coverNumDflt">27</td>
+              <td class="coverNumDflt">26</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgproc.c.gcov.html#L38" title="Go to first UBC line in spgproc.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgproc.c.gcov.html#L31" title="Go to first CBC line in spgproc.c">26</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerMed">80.0&nbsp;%</td>
+              <td class="coverNumDflt">20</td>
+              <td class="coverNumDflt">16</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgproc.c.gcov.html#L36" title="Go to first UBC branch in spgproc.c">4</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgproc.c.gcov.html#L36" title="Go to first CBC branch in spgproc.c">16</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">3</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spginsert.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spginsert.c">spginsert.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=97 height=10 alt="97.0%"><img src="../../../../snow.png" width=3 height=10 alt="97.0%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">97.0&nbsp;%</td>
+              <td class="coverNumDflt">66</td>
+              <td class="coverNumDflt">64</td>
+              <td class="tlaLBC tlaBgLBC"><a href="spginsert.c.gcov.html#L59" class="tlaBgLBC" title="Go to first LBC line in spginsert.c">1</a></td>
+              <td class="coverNumDflt"><a href="spginsert.c.gcov.html#L83" title="Go to first UBC line in spginsert.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spginsert.c.gcov.html#L41" title="Go to first CBC line in spginsert.c">64</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">62.5&nbsp;%</td>
+              <td class="coverNumDflt">24</td>
+              <td class="coverNumDflt">15</td>
+              <td class="tlaLBC tlaBgLBC"><a href="spginsert.c.gcov.html#L56" class="tlaBgLBC" title="Go to first LBC branch in spginsert.c">1</a></td>
+              <td class="coverNumDflt"><a href="spginsert.c.gcov.html#L82" title="Go to first UBC branch in spginsert.c">8</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spginsert.c.gcov.html#L56" title="Go to first CBC branch in spginsert.c">15</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">4</td>
+              <td class="coverNumDflt">4</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">4</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgkdtreeproc.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgkdtreeproc.c">spgkdtreeproc.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=94 height=10 alt="94.3%"><img src="../../../../snow.png" width=6 height=10 alt="94.3%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">94.3&nbsp;%</td>
+              <td class="coverNumDflt">157</td>
+              <td class="coverNumDflt">148</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgkdtreeproc.c.gcov.html#L62" title="Go to first UBC line in spgkdtreeproc.c">9</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgkdtreeproc.c.gcov.html#L28" title="Go to first CBC line in spgkdtreeproc.c">148</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerMed">79.6&nbsp;%</td>
+              <td class="coverNumDflt">103</td>
+              <td class="coverNumDflt">82</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgkdtreeproc.c.gcov.html#L61" title="Go to first UBC branch in spgkdtreeproc.c">21</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgkdtreeproc.c.gcov.html#L43" title="Go to first CBC branch in spgkdtreeproc.c">82</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">7</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgquadtreeproc.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgquadtreeproc.c">spgquadtreeproc.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=97 height=10 alt="97.1%"><img src="../../../../snow.png" width=3 height=10 alt="97.1%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">97.1&nbsp;%</td>
+              <td class="coverNumDflt">210</td>
+              <td class="coverNumDflt">204</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgquadtreeproc.c.gcov.html#L77" title="Go to first UBC line in spgquadtreeproc.c">6</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgquadtreeproc.c.gcov.html#L27" title="Go to first CBC line in spgquadtreeproc.c">204</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerMed">81.0&nbsp;%</td>
+              <td class="coverNumDflt">105</td>
+              <td class="coverNumDflt">85</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgquadtreeproc.c.gcov.html#L64" title="Go to first UBC branch in spgquadtreeproc.c">20</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgquadtreeproc.c.gcov.html#L57" title="Go to first CBC branch in spgquadtreeproc.c">85</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">7</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgtextproc.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgtextproc.c">spgtextproc.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=98 height=10 alt="97.6%"><img src="../../../../snow.png" width=2 height=10 alt="97.6%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">97.6&nbsp;%</td>
+              <td class="coverNumDflt">290</td>
+              <td class="coverNumDflt">283</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L127" title="Go to first UBC line in spgtextproc.c">7</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L96" title="Go to first CBC line in spgtextproc.c">283</a></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L615" title="Go to first ECB line in spgtextproc.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerMed">89.7&nbsp;%</td>
+              <td class="coverNumDflt">145</td>
+              <td class="coverNumDflt">130</td>
+              <td class="tlaLBC tlaBgLBC"><a href="spgtextproc.c.gcov.html#L613" class="tlaBgLBC" title="Go to first LBC branch in spgtextproc.c">1</a></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L119" title="Go to first UBC branch in spgtextproc.c">14</a></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L380" title="Go to first GBC branch in spgtextproc.c">5</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L119" title="Go to first CBC branch in spgtextproc.c">125</a></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L189" title="Go to first EUB branch in spgtextproc.c">146</a></td>
+              <td class="coverNumDflt"><a href="spgtextproc.c.gcov.html#L189" title="Go to first ECB branch in spgtextproc.c">50</a></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">9</td>
+              <td class="coverNumDflt">9</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">8</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgvacuum.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgvacuum.c">spgvacuum.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=92 height=10 alt="91.7%"><img src="../../../../snow.png" width=8 height=10 alt="91.7%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">91.7&nbsp;%</td>
+              <td class="coverNumDflt">337</td>
+              <td class="coverNumDflt">309</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvacuum.c.gcov.html#L177" title="Go to first UBC line in spgvacuum.c">28</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvacuum.c.gcov.html#L64" title="Go to first CBC line in spgvacuum.c">309</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">66.1&nbsp;%</td>
+              <td class="coverNumDflt">248</td>
+              <td class="coverNumDflt">164</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvacuum.c.gcov.html#L99" title="Go to first UBC branch in spgvacuum.c">84</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgvacuum.c.gcov.html#L71" title="Go to first CBC branch in spgvacuum.c">164</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">11</td>
+              <td class="coverNumDflt">11</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">11</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgdoinsert.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgdoinsert.c">spgdoinsert.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=91 height=10 alt="91.5%"><img src="../../../../snow.png" width=9 height=10 alt="91.5%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">91.5&nbsp;%</td>
+              <td class="coverNumDflt">868</td>
+              <td class="coverNumDflt">794</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgdoinsert.c.gcov.html#L67" title="Go to first UBC line in spgdoinsert.c">74</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgdoinsert.c.gcov.html#L52" title="Go to first CBC line in spgdoinsert.c">794</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">67.1&nbsp;%</td>
+              <td class="coverNumDflt">638</td>
+              <td class="coverNumDflt">428</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgdoinsert.c.gcov.html#L58" title="Go to first UBC branch in spgdoinsert.c">210</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgdoinsert.c.gcov.html#L58" title="Go to first CBC branch in spgdoinsert.c">428</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">15</td>
+              <td class="coverNumDflt">15</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">15</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgscan.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgscan.c">spgscan.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=93 height=10 alt="92.8%"><img src="../../../../snow.png" width=7 height=10 alt="92.8%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">92.8&nbsp;%</td>
+              <td class="coverNumDflt">446</td>
+              <td class="coverNumDflt">414</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgscan.c.gcov.html#L64" title="Go to first UBC line in spgscan.c">32</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgscan.c.gcov.html#L41" title="Go to first CBC line in spgscan.c">414</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerMed">76.1&nbsp;%</td>
+              <td class="coverNumDflt">280</td>
+              <td class="coverNumDflt">213</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgscan.c.gcov.html#L63" title="Go to first UBC branch in spgscan.c">67</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgscan.c.gcov.html#L49" title="Go to first CBC branch in spgscan.c">213</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">23</td>
+              <td class="coverNumDflt">23</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">23</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="spgutils.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/access/spgist/spgutils.c">spgutils.c</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../emerald.png" width=91 height=10 alt="91.1%"><img src="../../../../snow.png" width=9 height=10 alt="91.1%"></td></tr></table>
+              </td>
+              <td class="coverPerHi">91.1&nbsp;%</td>
+              <td class="coverNumDflt">482</td>
+              <td class="coverNumDflt">439</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L144" title="Go to first UBC line in spgutils.c">43</a></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L788" title="Go to first GNC line in spgutils.c">2</a></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L44" title="Go to first CBC line in spgutils.c">437</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverPerLo">64.0&nbsp;%</td>
+              <td class="coverNumDflt">300</td>
+              <td class="coverNumDflt">192</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L128" title="Go to first UBC branch in spgutils.c">108</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L807" title="Go to first GNC branch in spgutils.c">2</a></td>
+              <td class="coverNumDflt"><a href="spgutils.c.gcov.html#L128" title="Go to first CBC branch in spgutils.c">190</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">26</td>
+              <td class="coverNumDflt">26</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">24</td>
+            </tr>
+          </table>
+          </center>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/error</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index-date.html" title="Click to go to top-level">top level</a> - <a href="../../../index-date.html" title="Click to go to directory src">src</a>/<a href="../../index-date.html" title="Click to go to directory backend">backend</a>/<a href="../index-date.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to default view of this directory.">error</a></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUIC" title="Uncovered Included Code (# => 0):
+Previously unused code is untested">UIC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">69.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1483</td>
+            <td class="headerCovTableEntry">1023</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">454</td>
+            <td class="headerCovTableEntry">1023</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">91.8&nbsp;%</td>
+            <td class="headerCovTableEntry">85</td>
+            <td class="headerCovTableEntry">78</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">78</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">49.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1043</td>
+            <td class="headerCovTableEntry">516</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">523</td>
+            <td class="headerCovTableEntry">516</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9"><a href="index-date.html" title="Click to include date bin details in file table below">Line coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Group by:</td>
+            <td class="headerValue">Date bin</td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryLo">22.2&nbsp;%</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="tlaUNC">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Rating:
+            <span class="coverLegendCovLo" title="Coverage rates below 75 % are classified as low">low: &lt; 75 %</span>
+            <span class="coverLegendCovMed" title="Coverage rates between 75 % and 90 % are classified as medium">medium: &gt;= 75 %</span>
+            <span class="coverLegendCovHi" title="Coverage rates of 90 % and more are classified as high">high: &gt;= 90 %</span>
+</td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryLo">42.4&nbsp;%</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryLo">69.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1441</td>
+            <td class="headerCovTableEntry">1007</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaUIC">1</td>
+            <td class="headerCovTableEntry">433</td>
+            <td class="headerCovTableEntry">1007</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9"><a href="index-date.html" title="Click to include date bin details in file table below">Function coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryHi">91.7&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9"><a href="index-date.html" title="Click to include date bin details in file table below">Branch coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryLo">22.2&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryLo">50.1&nbsp;%</td>
+            <td class="headerCovTableEntry">1021</td>
+            <td class="headerCovTableEntry">512</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">509</td>
+            <td class="headerCovTableEntry">512</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table width="80%" cellpadding=1 cellspacing=1 border=0>
+
+            <tr>
+              <td width="40%"><br></td>
+              <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            </tr>
+
+            <tr>
+              <td class="tableHead" colspan=2>File <span  title="Click to sort table by file name" class="tableHeadSort"><a href="index-date.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by file name" title="Click to sort table by file name" border=0></a></span></td>
+        <td class="tableHead" colspan=9>Line Coverage <span  title="Click to sort table by line coverage" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by line coverage" title="Click to sort table by line coverage" border=0></span></td>
+        <td class="tableHead" colspan=6>Branch Coverage <span  title="Click to sort table by branch coverage" class="tableHeadSort"><a href="index-date-sort-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by branch coverage" title="Click to sort table by branch coverage" border=0></a></span></td>
+        <td class="tableHead" colspan=6>Function Coverage <span  title="Click to sort table by function coverage" class="tableHeadSort"><a href="index-date-sort-f.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function coverage" title="Click to sort table by function coverage" border=0></a></span></td>
+            </tr>
+            <tr>
+              <td class="tableHead">Name</td>
+              <td class="tableHead">Date</td>
+                    <td class="tableHead" colspan=2> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Included Code (# => 0):
+Previously unused code is untested"> UIC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted"> DUB</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="assert.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/assert.c source detail">assert.c.gcov.html</a></td>
+              <td class="ownerName"><a href="index-bin_date.html#B4" title="go to coverage summary for the period '(360..) days'">(360..) days</a><sup>&lowast;&lowast;</sup></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerLo">0.0&nbsp;%</td>
+              <td class="coverNumDflt">11</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="assert.c.gcov.html#L30" title="Go to first UBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/assert.c">11</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerLo">0.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="coverFile" rowspan=4><a href="elog.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">elog.c</a></td>
+              <td class="overallOwner">Total</td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../ruby.png" width=67 height=10 alt="66.7%"><img src="../../../../snow.png" width=33 height=10 alt="66.7%"></td></tr></table>
+              </td>
+              <td class="coverPerLo">66.7&nbsp;%</td>
+              <td class="coverNumDflt">1260</td>
+              <td class="coverNumDflt">840</td>
+              <td class="tlaUNC tlaBgUNC"><a href="elog.c.gcov.html#L1131" class="tlaBgUNC" title="Go to first UNC line in elog.c">5</a></td>
+              <td class="tlaUIC tlaBgUIC"><a href="elog.c.gcov.html#L1147" class="tlaBgUIC" title="Go to first UIC line in elog.c">1</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L212" title="Go to first UBC line in elog.c">414</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L202" title="Go to first CBC line in elog.c">840</a></td>
+              <td class="coverNumDflt">5</td>
+              <td class="coverPerLo">47.6&nbsp;%</td>
+              <td class="coverNumDflt">901</td>
+              <td class="coverNumDflt">429</td>
+              <td class="tlaUNC tlaBgUNC"><a href="elog.c.gcov.html#L1131" class="tlaBgUNC" title="Go to first UNC branch in elog.c">4</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L206" title="Go to first UBC branch in elog.c">468</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L204" title="Go to first CBC branch in elog.c">429</a></td>
+              <td class="coverPerHi">92.4&nbsp;%</td>
+              <td class="coverNumDflt">79</td>
+              <td class="coverNumDflt">73</td>
+              <td class="tlaUNC tlaBgUNC">1</td>
+              <td class="coverNumDflt">5</td>
+              <td class="coverNumDflt">73</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B4" title="go to coverage summary for the period '(360..) days'">(360..) days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerLo">67.8&nbsp;%</td>
+              <td class="coverNumDflt">1222</td>
+              <td class="coverNumDflt">828</td>
+              <td class="coverNumDflt"></td>
+              <td class="tlaUIC tlaBgUIC"><a href="elog.c.gcov.html#L1147" class="tlaBgUIC" title="Go to first UIC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">1</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L212" title="Go to first UBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">393</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L202" title="Go to first CBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">828</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">92.3&nbsp;%</td>
+              <td class="coverNumDflt">78</td>
+              <td class="coverNumDflt">72</td>
+              <td class="tlaUNC tlaBgUNC">1</td>
+              <td class="coverNumDflt">5</td>
+              <td class="coverNumDflt">72</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B3" title="go to coverage summary for the period '(30,360] days'">(30,360] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerLo">38.7&nbsp;%</td>
+              <td class="coverNumDflt">31</td>
+              <td class="coverNumDflt">12</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L2194" title="Go to first UBC line in '(30,360] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">19</a></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L1343" title="Go to first CBC line in '(30,360] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">12</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">1</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B2" title="go to coverage summary for the period '(7,30] days'">(7,30] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerLo">0.0&nbsp;%</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverNumDflt"></td>
+              <td class="tlaUNC tlaBgUNC"><a href="elog.c.gcov.html#L1131" class="tlaBgUNC" title="Go to first UNC line in '(7,30] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">5</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="elog.c.gcov.html#L2962" title="Go to first UBC line in '(7,30] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/elog.c">2</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="coverFile" rowspan=4><a href="jsonlog.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/jsonlog.c">jsonlog.c</a></td>
+              <td class="overallOwner">Total</td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../amber.png" width=85 height=10 alt="84.6%"><img src="../../../../snow.png" width=15 height=10 alt="84.6%"></td></tr></table>
+              </td>
+              <td class="coverPerMed">84.6&nbsp;%</td>
+              <td class="coverNumDflt">104</td>
+              <td class="coverNumDflt">88</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L78" title="Go to first UBC line in jsonlog.c">16</a></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L43" title="Go to first CBC line in jsonlog.c">88</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">62.9&nbsp;%</td>
+              <td class="coverNumDflt">70</td>
+              <td class="coverNumDflt">44</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L46" title="Go to first UBC branch in jsonlog.c">26</a></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L46" title="Go to first CBC branch in jsonlog.c">44</a></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">3</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B4" title="go to coverage summary for the period '(360..) days'">(360..) days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerMed">84.3&nbsp;%</td>
+              <td class="coverNumDflt">102</td>
+              <td class="coverNumDflt">86</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L78" title="Go to first UBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/jsonlog.c">16</a></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L43" title="Go to first CBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/jsonlog.c">86</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">3</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B2" title="go to coverage summary for the period '(7,30] days'">(7,30] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L171" title="Go to first CBC line in '(7,30] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/jsonlog.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B3" title="go to coverage summary for the period '(30,360] days'">(30,360] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="jsonlog.c.gcov.html#L287" title="Go to first CBC line in '(30,360] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/jsonlog.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="coverFile" rowspan=4><a href="csvlog.c.gcov.html" title="Click to go to file /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/csvlog.c">csvlog.c</a></td>
+              <td class="overallOwner">Total</td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../amber.png" width=88 height=10 alt="88.0%"><img src="../../../../snow.png" width=12 height=10 alt="88.0%"></td></tr></table>
+              </td>
+              <td class="coverPerMed">88.0&nbsp;%</td>
+              <td class="coverNumDflt">108</td>
+              <td class="coverNumDflt">95</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L115" title="Go to first UBC line in csvlog.c">13</a></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L37" title="Go to first CBC line in csvlog.c">95</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">63.2&nbsp;%</td>
+              <td class="coverNumDflt">68</td>
+              <td class="coverNumDflt">43</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L46" title="Go to first UBC branch in csvlog.c">25</a></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L43" title="Go to first CBC branch in csvlog.c">43</a></td>
+              <td class="coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B4" title="go to coverage summary for the period '(360..) days'">(360..) days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerMed">87.7&nbsp;%</td>
+              <td class="coverNumDflt">106</td>
+              <td class="coverNumDflt">93</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L115" title="Go to first UBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/csvlog.c">13</a></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L37" title="Go to first CBC line in '(360..) days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/csvlog.c">93</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B2" title="go to coverage summary for the period '(7,30] days'">(7,30] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L123" title="Go to first CBC line in '(7,30] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/csvlog.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a href="index-bin_date.html#B3" title="go to coverage summary for the period '(30,360] days'">(30,360] days</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="csvlog.c.gcov.html#L251" title="Go to first CBC line in '(30,360] days' bin in /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/error/csvlog.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+        <tr>
+          <td class="footnote" colspan=23><sup>&lowast;&lowast;</sup> Bin 'Total' header elided when bin contains only one entry.</td>
+         </tr>
+          </table>
+          </center>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

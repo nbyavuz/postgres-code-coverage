@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/interfaces/ecpg/test/preproc/strings.pgc</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../../index.html" title="Click to go to directory src">src</a>/<a href="../../../index.html" title="Click to go to directory interfaces">interfaces</a>/<a href="../../index.html" title="Click to go to directory ecpg">ecpg</a>/<a href="../index.html" title="Click to go to directory test">test</a>/<a href="index.html" title="Click to go to directory preproc">preproc</a> - strings.pgc<span style="font-size: 80%;"> (source / <a href="strings.pgc.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"><a href="#L7" title="goto first CBC line">10</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"><a href="#L7" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">10</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit ecac5e6bfc3b on 2010-03-22 by meskes@postgresql.org">                           <span class="lineNum">       1</span>                 : #include &lt;../regression.h&gt;</span>
+<span id="L2" title="Line 2: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       2</span>                 : </span>
+<span id="L3" title="Line 3: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       3</span>                 : exec sql begin declare section;</span>
+<span id="L4" title="Line 4: commit ecac5e6bfc3b on 2010-03-22 by meskes@postgresql.org">                           <span class="lineNum">       4</span>                 : #include &lt;strings.h&gt;</span>
+<span id="L5" title="Line 5: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       5</span>                 : exec sql end declare section;</span>
+<span id="L6" title="Line 6: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       6</span>                 : </span>
+<span id="L7" title="Line 7: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">6145</a> <a href="#L23" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">       7</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           1 : int main(void)</span></span>
+<span id="L8" title="Line 8: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       8</span>                 : {</span>
+<span id="L9" title="Line 9: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">       9</span> <span class="tlaCBC">              1 :   ECPGdebug(1, stderr);</span></span>
+<span id="L10" title="Line 10: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      10</span>                 : </span>
+<span id="L11" title="Line 11: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      11</span> <span class="tlaCBC">              1 :   exec sql connect to REGRESSDB1;</span></span>
+<span id="L12" title="Line 12: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      12</span>                 : </span>
+<span id="L13" title="Line 13: commit ab4e386a8069 on 2009-05-06 by tgl@sss.pgh.pa.us"> 5956 <a href="#L25" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      13</span> <span class="tlaCBC">              1 :   exec sql set standard_conforming_strings to on;</span></span>
+<span id="L14" title="Line 14: commit ab4e386a8069 on 2009-05-06 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 : </span>
+<span id="L15" title="Line 15: commit 3dfb1942d9b8 on 2020-10-22 by tgl@sss.pgh.pa.us"> 1769                      <span class="lineNum">      15</span> <span class="tlaCBC">              1 :   exec sql select 'abc''d\ef',</span></span>
+<span id="L16" title="Line 16: commit 3dfb1942d9b8 on 2020-10-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      16</span>                 :                   N'abc''d\ef' AS foo,</span>
+<span id="L17" title="Line 17: commit 3dfb1942d9b8 on 2020-10-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :                   E'abc''d\\ef' AS &quot;foo&quot;&quot;bar&quot;,</span>
+<span id="L18" title="Line 18: commit 3dfb1942d9b8 on 2020-10-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 :                   U&amp;'d\0061t\0061' AS U&amp;&quot;foo&quot;&quot;bar&quot;,</span>
+<span id="L19" title="Line 19: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      19</span>                 :                   U&amp;'d!+000061t!+000061' uescape '!',</span>
+<span id="L20" title="Line 20: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      20</span>                 :                   $foo$abc$def$foo$</span>
+<span id="L21" title="Line 21: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      21</span>                 :                   into :s1, :s2, :s3, :s4, :s5, :s6;</span>
+<span id="L22" title="Line 22: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      22</span>                 : </span>
+<span id="L23" title="Line 23: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net"> 6145 <a href="#L30" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">      23</span> <span class="tlaCBC">              1 :   printf(&quot;%s %s %s %s %s %s\n&quot;, s1, s2, s3, s4, s5, s6);</span></span>
+<span id="L24" title="Line 24: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      24</span>                 : </span>
+<span id="L25" title="Line 25: commit 1e3868ab3bef on 2020-11-07 by tgl@sss.pgh.pa.us"> 1753 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      25</span> <span class="tlaCBC">              1 :   exec sql select b'0010', X'019ABcd'</span></span>
+<span id="L26" title="Line 26: commit eed4356fad84 on 2020-11-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :                   into :s7, :s8;</span>
+<span id="L27" title="Line 27: commit 1e3868ab3bef on 2020-11-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 : </span>
+<span id="L28" title="Line 28: commit eed4356fad84 on 2020-11-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span> <span class="tlaCBC">              1 :   printf(&quot;%s %s\n&quot;, s7, s8);</span></span>
+<span id="L29" title="Line 29: commit 1e3868ab3bef on 2020-11-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 : </span>
+<span id="L30" title="Line 30: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net"> 6145 <a href="#top" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">      30</span> <span class="tlaCBC">              1 :   exec sql disconnect;</span></span>
+<span id="L31" title="Line 31: commit 17273d059cd3 on 2017-08-17 by peter_e@gmx.net"> 2931                      <span class="lineNum">      31</span> <span class="tlaCBC">              1 :   return 0;</span></span>
+<span id="L32" title="Line 32: commit 06735e32566c on 2008-10-29 by peter_e@gmx.net">                           <span class="lineNum">      32</span>                 : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

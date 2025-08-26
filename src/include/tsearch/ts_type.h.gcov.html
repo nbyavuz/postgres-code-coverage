@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/tsearch/ts_type.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory tsearch">tsearch</a> - ts_type.h<span style="font-size: 80%;"> (source / <a href="ts_type.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"><a href="#L118" title="goto first CBC line">12</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"><a href="#L118" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">12</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       3</span>                 :  * ts_type.h</span>
+<span id="L4" title="Line 4: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *    Definitions for the tsvector and tsquery types</span>
+<span id="L5" title="Line 5: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :  * Copyright (c) 1998-2025, PostgreSQL Global Development Group</span>
+<span id="L7" title="Line 7: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       7</span>                 :  *</span>
+<span id="L8" title="Line 8: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">       8</span>                 :  * src/include/tsearch/ts_type.h</span>
+<span id="L9" title="Line 9: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      10</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L11" title="Line 11: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      11</span>                 :  */</span>
+<span id="L12" title="Line 12: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 : #ifndef _PG_TSTYPE_H_</span>
+<span id="L13" title="Line 13: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      13</span>                 : #define _PG_TSTYPE_H_</span>
+<span id="L14" title="Line 14: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 : </span>
+<span id="L15" title="Line 15: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      15</span>                 : #include &quot;fmgr.h&quot;</span>
+<span id="L16" title="Line 16: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      16</span>                 : #include &quot;utils/memutils.h&quot;</span>
+<span id="L17" title="Line 17: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">      17</span>                 : </span>
+<span id="L18" title="Line 18: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 : </span>
+<span id="L19" title="Line 19: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 : /*</span>
+<span id="L20" title="Line 20: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 :  * TSVector type.</span>
+<span id="L21" title="Line 21: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      21</span>                 :  *</span>
+<span id="L22" title="Line 22: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 :  * Structure of tsvector datatype:</span>
+<span id="L23" title="Line 23: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 :  * 1) standard varlena header</span>
+<span id="L24" title="Line 24: commit b8b2e3b2deea on 2012-06-25 by peter_e@gmx.net">                           <span class="lineNum">      24</span>                 :  * 2) int32     size - number of lexemes (WordEntry array entries)</span>
+<span id="L25" title="Line 25: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span>                 :  * 3) Array of WordEntry - one per lexeme; must be sorted according to</span>
+<span id="L26" title="Line 26: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :  *              tsCompareString() (ie, memcmp of lexeme strings).</span>
+<span id="L27" title="Line 27: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 :  *              WordEntry-&gt;pos gives the number of bytes from end of WordEntry</span>
+<span id="L28" title="Line 28: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :  *              array to start of lexeme's string, which is of length len.</span>
+<span id="L29" title="Line 29: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 :  * 4) Per-lexeme data storage:</span>
+<span id="L30" title="Line 30: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      30</span>                 :  *    lexeme string (not null-terminated)</span>
+<span id="L31" title="Line 31: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 :  *    if haspos is true:</span>
+<span id="L32" title="Line 32: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 :  *      padding byte if necessary to make the position data 2-byte aligned</span>
+<span id="L33" title="Line 33: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 :  *      uint16          number of positions that follow</span>
+<span id="L34" title="Line 34: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 :  *      WordEntryPos[]  positions</span>
+<span id="L35" title="Line 35: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :  *</span>
+<span id="L36" title="Line 36: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 :  * The positions for each lexeme must be sorted.</span>
+<span id="L37" title="Line 37: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 :  *</span>
+<span id="L38" title="Line 38: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :  * Note, tsvectorsend/recv believe that sizeof(WordEntry) == 4</span>
+<span id="L39" title="Line 39: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :  */</span>
+<span id="L40" title="Line 40: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 : </span>
+<span id="L41" title="Line 41: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 : typedef struct</span>
+<span id="L42" title="Line 42: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 : {</span>
+<span id="L43" title="Line 43: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :     uint32</span>
+<span id="L44" title="Line 44: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :                 haspos:1,</span>
+<span id="L45" title="Line 45: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      45</span>                 :                 len:11,         /* MAX 2Kb */</span>
+<span id="L46" title="Line 46: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 :                 pos:20;         /* MAX 1Mb */</span>
+<span id="L47" title="Line 47: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      47</span>                 : } WordEntry;</span>
+<span id="L48" title="Line 48: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 : </span>
+<span id="L49" title="Line 49: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">      49</span>                 : #define MAXSTRLEN ( (1&lt;&lt;11) - 1)</span>
+<span id="L50" title="Line 50: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">      50</span>                 : #define MAXSTRPOS ( (1&lt;&lt;20) - 1)</span>
+<span id="L51" title="Line 51: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>                 : </span>
+<span id="L52" title="Line 52: commit 4bc424b96805 on 2016-06-09 by rhaas@postgresql.org">                           <span class="lineNum">      52</span>                 : extern int  compareWordEntryPos(const void *a, const void *b);</span>
+<span id="L53" title="Line 53: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">      53</span>                 : </span>
+<span id="L54" title="Line 54: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      54</span>                 : /*</span>
+<span id="L55" title="Line 55: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :  * Equivalent to</span>
+<span id="L56" title="Line 56: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :  * typedef struct {</span>
+<span id="L57" title="Line 57: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :  *      uint16</span>
+<span id="L58" title="Line 58: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :  *          weight:2,</span>
+<span id="L59" title="Line 59: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 :  *          pos:14;</span>
+<span id="L60" title="Line 60: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :  * }</span>
+<span id="L61" title="Line 61: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 :  */</span>
+<span id="L62" title="Line 62: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      62</span>                 : </span>
+<span id="L63" title="Line 63: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 : typedef uint16 WordEntryPos;</span>
+<span id="L64" title="Line 64: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 : </span>
+<span id="L65" title="Line 65: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">      65</span>                 : typedef struct</span>
+<span id="L66" title="Line 66: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">      66</span>                 : {</span>
+<span id="L67" title="Line 67: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      67</span>                 :     uint16      npos;</span>
+<span id="L68" title="Line 68: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      68</span>                 :     WordEntryPos pos[FLEXIBLE_ARRAY_MEMBER];</span>
+<span id="L69" title="Line 69: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      69</span>                 : } WordEntryPosVector;</span>
+<span id="L70" title="Line 70: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">      70</span>                 : </span>
+<span id="L71" title="Line 71: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 : /* WordEntryPosVector with exactly 1 entry */</span>
+<span id="L72" title="Line 72: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 : typedef struct</span>
+<span id="L73" title="Line 73: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 : {</span>
+<span id="L74" title="Line 74: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 :     uint16      npos;</span>
+<span id="L75" title="Line 75: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :     WordEntryPos pos[1];</span>
+<span id="L76" title="Line 76: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 : } WordEntryPosVector1;</span>
+<span id="L77" title="Line 77: commit 33b2a2c97f3d on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 : </span>
+<span id="L78" title="Line 78: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">      78</span>                 : </span>
+<span id="L79" title="Line 79: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 : #define WEP_GETWEIGHT(x)    ( (x) &gt;&gt; 14 )</span>
+<span id="L80" title="Line 80: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 : #define WEP_GETPOS(x)       ( (x) &amp; 0x3fff )</span>
+<span id="L81" title="Line 81: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 : </span>
+<span id="L82" title="Line 82: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      82</span>                 : #define WEP_SETWEIGHT(x,v)  ( (x) = ( (v) &lt;&lt; 14 ) | ( (x) &amp; 0x3fff ) )</span>
+<span id="L83" title="Line 83: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 : #define WEP_SETPOS(x,v)     ( (x) = ( (x) &amp; 0xc000 ) | ( (v) &amp; 0x3fff ) )</span>
+<span id="L84" title="Line 84: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 : </span>
+<span id="L85" title="Line 85: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 : #define MAXENTRYPOS (1&lt;&lt;14)</span>
+<span id="L86" title="Line 86: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 : #define MAXNUMPOS   (256)</span>
+<span id="L87" title="Line 87: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 : #define LIMITPOS(x) ( ( (x) &gt;= MAXENTRYPOS ) ? (MAXENTRYPOS-1) : (x) )</span>
+<span id="L88" title="Line 88: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 : </span>
+<span id="L89" title="Line 89: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 : /* This struct represents a complete tsvector datum */</span>
+<span id="L90" title="Line 90: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 : typedef struct</span>
+<span id="L91" title="Line 91: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 : {</span>
+<span id="L92" title="Line 92: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :     int32       vl_len_;        /* varlena header (do not touch directly!) */</span>
+<span id="L93" title="Line 93: commit 978de9d06d54 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">      93</span>                 :     int32       size;</span>
+<span id="L94" title="Line 94: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 :     WordEntry   entries[FLEXIBLE_ARRAY_MEMBER];</span>
+<span id="L95" title="Line 95: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :     /* lexemes follow the entries[] array */</span>
+<span id="L96" title="Line 96: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      96</span>                 : } TSVectorData;</span>
+<span id="L97" title="Line 97: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 : </span>
+<span id="L98" title="Line 98: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      98</span>                 : typedef TSVectorData *TSVector;</span>
+<span id="L99" title="Line 99: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 : </span>
+<span id="L100" title="Line 100: commit 978de9d06d54 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     100</span>                 : #define DATAHDRSIZE (offsetof(TSVectorData, entries))</span>
+<span id="L101" title="Line 101: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 : #define CALCDATASIZE(nentries, lenstr) (DATAHDRSIZE + (nentries) * sizeof(WordEntry) + (lenstr) )</span>
+<span id="L102" title="Line 102: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     102</span>                 : </span>
+<span id="L103" title="Line 103: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 : /* pointer to start of a tsvector's WordEntry array */</span>
+<span id="L104" title="Line 104: commit 978de9d06d54 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     104</span>                 : #define ARRPTR(x)   ( (x)-&gt;entries )</span>
+<span id="L105" title="Line 105: commit 978de9d06d54 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     105</span>                 : </span>
+<span id="L106" title="Line 106: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     106</span>                 : /* pointer to start of a tsvector's lexeme storage */</span>
+<span id="L107" title="Line 107: commit 40271811cb9c on 2011-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     107</span>                 : #define STRPTR(x)   ( (char *) &amp;(x)-&gt;entries[(x)-&gt;size] )</span>
+<span id="L108" title="Line 108: commit 978de9d06d54 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     108</span>                 : </span>
+<span id="L109" title="Line 109: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     109</span>                 : #define _POSVECPTR(x, e)    ((WordEntryPosVector *)(STRPTR(x) + SHORTALIGN((e)-&gt;pos + (e)-&gt;len)))</span>
+<span id="L110" title="Line 110: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">     110</span>                 : #define POSDATALEN(x,e) ( ( (e)-&gt;haspos ) ? (_POSVECPTR(x,e)-&gt;npos) : 0 )</span>
+<span id="L111" title="Line 111: commit 57cafe79823d on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">     111</span>                 : #define POSDATAPTR(x,e) (_POSVECPTR(x,e)-&gt;pos)</span>
+<span id="L112" title="Line 112: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     112</span>                 : </span>
+<span id="L113" title="Line 113: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     113</span>                 : /*</span>
+<span id="L114" title="Line 114: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     114</span>                 :  * fmgr interface functions</span>
+<span id="L115" title="Line 115: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 :  */</span>
+<span id="L116" title="Line 116: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 : </span>
+<span id="L117" title="Line 117: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     117</span>                 : static inline TSVector</span>
+<span id="L118" title="Line 118: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1064</a> <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     118</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      123357 : DatumGetTSVector(Datum X)</span></span>
+<span id="L119" title="Line 119: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     119</span>                 : {</span>
+<span id="L120" title="Line 120: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     120</span> <span class="tlaCBC">         123357 :     return (TSVector) PG_DETOAST_DATUM(X);</span></span>
+<span id="L121" title="Line 121: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     121</span>                 : }</span>
+<span id="L122" title="Line 122: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     122</span>                 : </span>
+<span id="L123" title="Line 123: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     123</span>                 : static inline TSVector</span>
+<span id="L124" title="Line 124: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     124</span> <span class="tlaCBC">             15 : DatumGetTSVectorCopy(Datum X)</span></span>
+<span id="L125" title="Line 125: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     125</span>                 : {</span>
+<span id="L126" title="Line 126: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     126</span> <span class="tlaCBC">             15 :     return (TSVector) PG_DETOAST_DATUM_COPY(X);</span></span>
+<span id="L127" title="Line 127: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     127</span>                 : }</span>
+<span id="L128" title="Line 128: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     128</span>                 : </span>
+<span id="L129" title="Line 129: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     129</span>                 : static inline Datum</span>
+<span id="L130" title="Line 130: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     130</span> <span class="tlaCBC">           3799 : TSVectorGetDatum(const TSVectorData *X)</span></span>
+<span id="L131" title="Line 131: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     131</span>                 : {</span>
+<span id="L132" title="Line 132: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     132</span> <span class="tlaCBC">           3799 :     return PointerGetDatum(X);</span></span>
+<span id="L133" title="Line 133: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     133</span>                 : }</span>
+<span id="L134" title="Line 134: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     134</span>                 : </span>
+<span id="L135" title="Line 135: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     135</span>                 : #define PG_GETARG_TSVECTOR(n)       DatumGetTSVector(PG_GETARG_DATUM(n))</span>
+<span id="L136" title="Line 136: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 : #define PG_GETARG_TSVECTOR_COPY(n)  DatumGetTSVectorCopy(PG_GETARG_DATUM(n))</span>
+<span id="L137" title="Line 137: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 : #define PG_RETURN_TSVECTOR(x)       return TSVectorGetDatum(x)</span>
+<span id="L138" title="Line 138: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 : </span>
+<span id="L139" title="Line 139: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 : </span>
+<span id="L140" title="Line 140: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 : /*</span>
+<span id="L141" title="Line 141: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :  * TSQuery</span>
+<span id="L142" title="Line 142: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     142</span>                 :  *</span>
+<span id="L143" title="Line 143: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     143</span>                 :  *</span>
+<span id="L144" title="Line 144: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :  */</span>
+<span id="L145" title="Line 145: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 : </span>
+<span id="L146" title="Line 146: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     146</span>                 : typedef int8 QueryItemType;</span>
+<span id="L147" title="Line 147: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     147</span>                 : </span>
+<span id="L148" title="Line 148: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     148</span>                 : /* Valid values for QueryItemType: */</span>
+<span id="L149" title="Line 149: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     149</span>                 : #define QI_VAL 1</span>
+<span id="L150" title="Line 150: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     150</span>                 : #define QI_OPR 2</span>
+<span id="L151" title="Line 151: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     151</span>                 : #define QI_VALSTOP 3            /* This is only used in an intermediate stack</span>
+<span id="L152" title="Line 152: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     152</span>                 :                                  * representation in parse_tsquery. It's not a</span>
+<span id="L153" title="Line 153: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     153</span>                 :                                  * legal type elsewhere. */</span>
+<span id="L154" title="Line 154: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     154</span>                 : </span>
+<span id="L155" title="Line 155: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     155</span>                 : /*</span>
+<span id="L156" title="Line 156: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     156</span>                 :  * QueryItem is one node in tsquery - operator or operand.</span>
+<span id="L157" title="Line 157: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     157</span>                 :  */</span>
+<span id="L158" title="Line 158: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     158</span>                 : typedef struct</span>
+<span id="L159" title="Line 159: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     159</span>                 : {</span>
+<span id="L160" title="Line 160: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     160</span>                 :     QueryItemType type;         /* operand or kind of operator (ts_tokentype) */</span>
+<span id="L161" title="Line 161: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     161</span>                 :     uint8       weight;         /* weights of operand to search. It's a</span>
+<span id="L162" title="Line 162: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     162</span>                 :                                  * bitmask of allowed weights. if it =0 then</span>
+<span id="L163" title="Line 163: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     163</span>                 :                                  * any weight are allowed. Weights and bit</span>
+<span id="L164" title="Line 164: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     164</span>                 :                                  * map: A: 1&lt;&lt;3 B: 1&lt;&lt;2 C: 1&lt;&lt;1 D: 1&lt;&lt;0 */</span>
+<span id="L165" title="Line 165: commit e6dbcb72fafa on 2008-05-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     165</span>                 :     bool        prefix;         /* true if it's a prefix search */</span>
+<span id="L166" title="Line 166: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     166</span>                 :     int32       valcrc;         /* XXX: pg_crc32 would be a more appropriate</span>
+<span id="L167" title="Line 167: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     167</span>                 :                                  * data type, but we use comparisons to signed</span>
+<span id="L168" title="Line 168: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     168</span>                 :                                  * integers in the code. They would need to be</span>
+<span id="L169" title="Line 169: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     169</span>                 :                                  * changed as well. */</span>
+<span id="L170" title="Line 170: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     170</span>                 : </span>
+<span id="L171" title="Line 171: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     171</span>                 :     /* pointer to text value of operand, must correlate with WordEntry */</span>
+<span id="L172" title="Line 172: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :     uint32</span>
+<span id="L173" title="Line 173: commit 476045a21be8 on 2007-09-11 by teodor@sigaev.ru">                           <span class="lineNum">     173</span>                 :                 length:12,</span>
+<span id="L174" title="Line 174: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     174</span>                 :                 distance:20;</span>
+<span id="L175" title="Line 175: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     175</span>                 : } QueryOperand;</span>
+<span id="L176" title="Line 176: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     176</span>                 : </span>
+<span id="L177" title="Line 177: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     177</span>                 : </span>
+<span id="L178" title="Line 178: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     178</span>                 : /*</span>
+<span id="L179" title="Line 179: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     179</span>                 :  * Legal values for QueryOperator.operator.</span>
+<span id="L180" title="Line 180: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     180</span>                 :  */</span>
+<span id="L181" title="Line 181: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     181</span>                 : #define OP_NOT          1</span>
+<span id="L182" title="Line 182: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     182</span>                 : #define OP_AND          2</span>
+<span id="L183" title="Line 183: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     183</span>                 : #define OP_OR           3</span>
+<span id="L184" title="Line 184: commit b5bce6c1ec60 on 2016-08-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     184</span>                 : #define OP_PHRASE       4       /* highest code, tsquery_cleanup.c */</span>
+<span id="L185" title="Line 185: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     185</span>                 : #define OP_COUNT        4</span>
+<span id="L186" title="Line 186: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     186</span>                 : </span>
+<span id="L187" title="Line 187: commit 8ec569479fc2 on 2022-04-08 by rhaas@postgresql.org">                           <span class="lineNum">     187</span>                 : extern PGDLLIMPORT const int tsearch_op_priority[OP_COUNT];</span>
+<span id="L188" title="Line 188: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     188</span>                 : </span>
+<span id="L189" title="Line 189: commit a00fd066b1b6 on 2022-04-14 by drowley@postgresql.org">                           <span class="lineNum">     189</span>                 : /* get operation priority by its code */</span>
+<span id="L190" title="Line 190: commit 4bc424b96805 on 2016-06-09 by rhaas@postgresql.org">                           <span class="lineNum">     190</span>                 : #define OP_PRIORITY(x)  ( tsearch_op_priority[(x) - 1] )</span>
+<span id="L191" title="Line 191: commit 1ec4c7c055ca on 2016-04-08 by teodor@sigaev.ru">                           <span class="lineNum">     191</span>                 : /* get QueryOperator priority */</span>
+<span id="L192" title="Line 192: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     192</span>                 : #define QO_PRIORITY(x)  OP_PRIORITY(((QueryOperator *) (x))-&gt;oper)</span>
+<span id="L193" title="Line 193: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     193</span>                 : </span>
+<span id="L194" title="Line 194: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     194</span>                 : typedef struct</span>
+<span id="L195" title="Line 195: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     195</span>                 : {</span>
+<span id="L196" title="Line 196: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     196</span>                 :     QueryItemType type;</span>
+<span id="L197" title="Line 197: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     197</span>                 :     int8        oper;           /* see above */</span>
+<span id="L198" title="Line 198: commit bb140506df60 on 2016-04-07 by teodor@sigaev.ru">                           <span class="lineNum">     198</span>                 :     int16       distance;       /* distance between agrs for OP_PHRASE */</span>
+<span id="L199" title="Line 199: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     199</span>                 :     uint32      left;           /* pointer to left operand. Right operand is</span>
+<span id="L200" title="Line 200: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     200</span>                 :                                  * item + 1, left operand is placed</span>
+<span id="L201" title="Line 201: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     201</span>                 :                                  * item+item-&gt;left */</span>
+<span id="L202" title="Line 202: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     202</span>                 : } QueryOperator;</span>
+<span id="L203" title="Line 203: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     203</span>                 : </span>
+<span id="L204" title="Line 204: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     204</span>                 : /*</span>
+<span id="L205" title="Line 205: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     205</span>                 :  * Note: TSQuery is 4-bytes aligned, so make sure there's no fields</span>
+<span id="L206" title="Line 206: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     206</span>                 :  * inside QueryItem requiring 8-byte alignment, like int64.</span>
+<span id="L207" title="Line 207: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     207</span>                 :  */</span>
+<span id="L208" title="Line 208: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     208</span>                 : typedef union</span>
+<span id="L209" title="Line 209: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     209</span>                 : {</span>
+<span id="L210" title="Line 210: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     210</span>                 :     QueryItemType type;</span>
+<span id="L211" title="Line 211: commit de160e2c001f on 2009-07-16 by peter_e@gmx.net">                           <span class="lineNum">     211</span>                 :     QueryOperator qoperator;</span>
+<span id="L212" title="Line 212: commit de160e2c001f on 2009-07-16 by peter_e@gmx.net">                           <span class="lineNum">     212</span>                 :     QueryOperand qoperand;</span>
+<span id="L213" title="Line 213: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     213</span>                 : } QueryItem;</span>
+<span id="L214" title="Line 214: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     214</span>                 : </span>
+<span id="L215" title="Line 215: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     215</span>                 : /*</span>
+<span id="L216" title="Line 216: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     216</span>                 :  * Storage:</span>
+<span id="L217" title="Line 217: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     217</span>                 :  *  (len)(size)(array of QueryItem)(operands as '\0'-terminated c-strings)</span>
+<span id="L218" title="Line 218: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     218</span>                 :  */</span>
+<span id="L219" title="Line 219: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>                 : </span>
+<span id="L220" title="Line 220: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     220</span>                 : typedef struct</span>
+<span id="L221" title="Line 221: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     221</span>                 : {</span>
+<span id="L222" title="Line 222: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     222</span>                 :     int32       vl_len_;        /* varlena header (do not touch directly!) */</span>
+<span id="L223" title="Line 223: commit b8b2e3b2deea on 2012-06-25 by peter_e@gmx.net">                           <span class="lineNum">     223</span>                 :     int32       size;           /* number of QueryItems */</span>
+<span id="L224" title="Line 224: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     224</span>                 :     char        data[FLEXIBLE_ARRAY_MEMBER];    /* data starts here */</span>
+<span id="L225" title="Line 225: commit f6e8730d11dd on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     225</span>                 : } TSQueryData;</span>
+<span id="L226" title="Line 226: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     226</span>                 : </span>
+<span id="L227" title="Line 227: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     227</span>                 : typedef TSQueryData *TSQuery;</span>
+<span id="L228" title="Line 228: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     228</span>                 : </span>
+<span id="L229" title="Line 229: commit b8b2e3b2deea on 2012-06-25 by peter_e@gmx.net">                           <span class="lineNum">     229</span>                 : #define HDRSIZETQ   ( VARHDRSZ + sizeof(int32) )</span>
+<span id="L230" title="Line 230: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     230</span>                 : </span>
+<span id="L231" title="Line 231: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     231</span>                 : /* Computes the size of header and all QueryItems. size is the number of</span>
+<span id="L232" title="Line 232: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     232</span>                 :  * QueryItems, and lenofoperand is the total length of all operands</span>
+<span id="L233" title="Line 233: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     233</span>                 :  */</span>
+<span id="L234" title="Line 234: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     234</span>                 : #define COMPUTESIZE(size, lenofoperand) ( HDRSIZETQ + (size) * sizeof(QueryItem) + (lenofoperand) )</span>
+<span id="L235" title="Line 235: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">     235</span>                 : #define TSQUERY_TOO_BIG(size, lenofoperand) \</span>
+<span id="L236" title="Line 236: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">     236</span>                 :     ((size) &gt; (MaxAllocSize - HDRSIZETQ - (lenofoperand)) / sizeof(QueryItem))</span>
+<span id="L237" title="Line 237: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     237</span>                 : </span>
+<span id="L238" title="Line 238: commit 0f5c606f4197 on 2008-06-10 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     238</span>                 : /* Returns a pointer to the first QueryItem in a TSQuery */</span>
+<span id="L239" title="Line 239: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     239</span>                 : #define GETQUERY(x)  ((QueryItem*)( (char*)(x)+HDRSIZETQ ))</span>
+<span id="L240" title="Line 240: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     240</span>                 : </span>
+<span id="L241" title="Line 241: commit 0f5c606f4197 on 2008-06-10 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     241</span>                 : /* Returns a pointer to the beginning of operands in a TSQuery */</span>
+<span id="L242" title="Line 242: commit e5be89981fc7 on 2007-09-07 by teodor@sigaev.ru">                           <span class="lineNum">     242</span>                 : #define GETOPERAND(x)   ( (char*)GETQUERY(x) + ((TSQuery)(x))-&gt;size * sizeof(QueryItem) )</span>
+<span id="L243" title="Line 243: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     243</span>                 : </span>
+<span id="L244" title="Line 244: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     244</span>                 : /*</span>
+<span id="L245" title="Line 245: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     245</span>                 :  * fmgr interface functions</span>
+<span id="L246" title="Line 246: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     246</span>                 :  * Note, TSQuery type marked as plain storage, so it can't be toasted</span>
+<span id="L247" title="Line 247: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     247</span>                 :  * but PG_DETOAST_DATUM_COPY is used for simplicity</span>
+<span id="L248" title="Line 248: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     248</span>                 :  */</span>
+<span id="L249" title="Line 249: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     249</span>                 : </span>
+<span id="L250" title="Line 250: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     250</span>                 : static inline TSQuery</span>
+<span id="L251" title="Line 251: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     251</span> <span class="tlaCBC">         283728 : DatumGetTSQuery(Datum X)</span></span>
+<span id="L252" title="Line 252: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     252</span>                 : {</span>
+<span id="L253" title="Line 253: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     253</span> <span class="tlaCBC">         283728 :     return (TSQuery) DatumGetPointer(X);</span></span>
+<span id="L254" title="Line 254: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     254</span>                 : }</span>
+<span id="L255" title="Line 255: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     255</span>                 : </span>
+<span id="L256" title="Line 256: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     256</span>                 : static inline TSQuery</span>
+<span id="L257" title="Line 257: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     257</span> <span class="tlaCBC">            656 : DatumGetTSQueryCopy(Datum X)</span></span>
+<span id="L258" title="Line 258: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     258</span>                 : {</span>
+<span id="L259" title="Line 259: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     259</span> <span class="tlaCBC">            656 :     return (TSQuery) PG_DETOAST_DATUM_COPY(X);</span></span>
+<span id="L260" title="Line 260: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     260</span>                 : }</span>
+<span id="L261" title="Line 261: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     261</span>                 : </span>
+<span id="L262" title="Line 262: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     262</span>                 : static inline Datum</span>
+<span id="L263" title="Line 263: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     263</span> <span class="tlaCBC">           1957 : TSQueryGetDatum(const TSQueryData *X)</span></span>
+<span id="L264" title="Line 264: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     264</span>                 : {</span>
+<span id="L265" title="Line 265: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     265</span> <span class="tlaCBC">           1957 :     return PointerGetDatum(X);</span></span>
+<span id="L266" title="Line 266: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     266</span>                 : }</span>
+<span id="L267" title="Line 267: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     267</span>                 : </span>
+<span id="L268" title="Line 268: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     268</span>                 : #define PG_GETARG_TSQUERY(n)        DatumGetTSQuery(PG_GETARG_DATUM(n))</span>
+<span id="L269" title="Line 269: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     269</span>                 : #define PG_GETARG_TSQUERY_COPY(n)   DatumGetTSQueryCopy(PG_GETARG_DATUM(n))</span>
+<span id="L270" title="Line 270: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     270</span>                 : #define PG_RETURN_TSQUERY(x)        return TSQueryGetDatum(x)</span>
+<span id="L271" title="Line 271: commit 140d4ebcb46e on 2007-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     271</span>                 : </span>
+<span id="L272" title="Line 272: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     272</span>                 : #endif                          /* _PG_TSTYPE_H_ */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

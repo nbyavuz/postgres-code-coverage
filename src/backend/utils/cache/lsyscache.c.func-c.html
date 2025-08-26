@@ -1,0 +1,1176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/cache/lsyscache.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory cache">cache</a> - lsyscache.c<span style="font-size: 80%;"> (<a href="lsyscache.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1193</td>
+            <td class="headerCovTableEntry">1060</td>
+            <td class="headerCovTableEntry">133</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1059</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">98.3&nbsp;%</td>
+            <td class="headerCovTableEntry">121</td>
+            <td class="headerCovTableEntry">119</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">118</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">56.2&nbsp;%</td>
+            <td class="headerCovTableEntry">600</td>
+            <td class="headerCovTableEntry">337</td>
+            <td class="headerCovTableEntry">263</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">336</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">91.0&nbsp;%</td>
+            <td class="headerCovTableEntry">67</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">61</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">88.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1126</td>
+            <td class="headerCovTableEntry">999</td>
+            <td class="headerCovTableEntry">127</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">998</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">98.3&nbsp;%</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry">114</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">113</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">64.4&nbsp;%</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">28</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">55.5&nbsp;%</td>
+            <td class="headerCovTableEntry">555</td>
+            <td class="headerCovTableEntry">308</td>
+            <td class="headerCovTableEntry">247</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">308</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="lsyscache.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="lsyscache.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="lsyscache.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1812">get_func_nargs</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3144">get_typmodin</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3833">get_subscription_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1448">get_opname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3813">get_subscription_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1097">get_cast_oid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3650">get_index_column_opclass</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">94</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L777">equality_ops_are_compatible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">95</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1770">get_func_namespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1251">get_language_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">136</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1861">get_func_variadictype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">138</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3596">get_range_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">144</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2311">get_typisdefined</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">155</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1125">get_collation_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">169</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3693">get_index_isreplident</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L107">get_op_opfamily_sortfamily</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">237</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3783">get_publication_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">338</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3739">get_index_isclustered</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">378</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1171">get_constraint_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">389</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1746">get_func_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">400</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1233">get_constraint_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">420</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1203">get_constraint_index</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">514</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1391">get_opfamily_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">632</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1834">get_func_signature</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">754</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1144">get_collation_isdeterministic</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">813</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1350">get_opclass_method</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">917</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3571">get_range_collation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">949</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2258">get_transform_fromsql</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">955</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2280">get_transform_tosql</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1029</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3111">getTypeBinaryOutputInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1160</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>56.2&nbsp;% (9 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L978">get_attgenerated</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1235</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3763">get_publication_oid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1545</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1003">get_atttype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1621</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1325">get_opclass_opfamily_and_input_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1713</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L670">get_op_index_interpretation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2646</td>
+              <td class=coverPerHi>94.9&nbsp;% (37 / 39)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3716">get_index_isvalid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2980</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L366">get_ordering_op_for_equality_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3082</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L479">get_compatible_hash_operators</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3696</td>
+              <td class=coverPerLo>69.4&nbsp;% (25 / 36)</td>
+              <td class=coverPerLo>46.4&nbsp;% (13 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2238">get_rel_relam</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3903</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L328">get_equality_op_for_ordering_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3959</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2192">get_rel_tablespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4210</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2117">get_rel_type_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4505</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1975">get_func_leakproof</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4981</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2165">get_rel_relispartition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5362</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2869">get_typ_typrelid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7556</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1033">get_atttypetypmodcoll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7774</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2949">get_promoted_array_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9143</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3621">get_multirange_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9604</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3545">get_range_subtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10348</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1631">op_volatile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10531</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1793">get_func_rettype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12254</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2826">type_is_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13203</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1471">get_op_rettype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14748</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L948">get_attnum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17190</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1996">get_func_support</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17495</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2586">get_typdefault</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18752</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3528">get_namespace_name_or_temp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19529</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3268">getSubscriptingRoutines</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20255</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3235">get_typsubscript</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20256</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1956">get_func_prokind</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22329</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2836">type_is_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29396</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2360">get_typbyval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32086</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1615">op_strict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32650</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L579">get_op_hash_functions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34335</td>
+              <td class=coverPerMed>81.8&nbsp;% (27 / 33)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1671">get_negator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34894</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L917">get_attname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42466</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2557">get_typstorage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42861</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2066">get_rel_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47892</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2816">type_is_enum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51061</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2463">get_type_io_data</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">59255</td>
+              <td class=coverPerMed>83.3&nbsp;% (30 / 36)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2925">get_array_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88587</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2141">get_rel_relkind</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93948</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1280">get_opclass_family</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98016</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1302">get_opclass_input_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98495</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L833">comparison_ops_are_compatible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">107952</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2793">type_is_rowtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">110247</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1719">get_oprjoin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">113975</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2970">get_base_element_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">118702</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1899">func_strict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">136393</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3078">getTypeBinaryInputInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156568</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2090">get_rel_namespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">161430</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L135">get_op_opfamily_properties</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">183762</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2216">get_rel_persistence</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190667</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2848">get_type_category_preferred</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">193847</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1496">op_input_types</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">209827</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1575">op_hashjoinable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">213497</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3219">type_is_collatable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">249187</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L263">get_ordering_op_properties</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">262082</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L65">op_in_opfamily</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">273703</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1524">op_mergejoinable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">276157</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3012">getTypeInputInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">311141</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1880">get_func_retset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">317829</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L82">get_op_opfamily_strategy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">327349</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1647">get_commutator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">336225</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3504">get_namespace_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">348178</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L886">get_opfamily_proc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">375937</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2389">get_typlenbyval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">400882</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1060">get_attoptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">439766</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2767">get_typtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">462749</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1918">func_volatile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">485230</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1695">get_oprrest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">571620</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2897">get_element_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">691420</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1937">func_parallel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">698841</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3296">get_attavgwidth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">739423</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1423">get_opcode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">749035</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2023">get_relname_relid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">770454</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3045">getTypeOutputInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">843253</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2716">get_typavgwidth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">853262</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2441">getTypeIOParam</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">878310</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2409">get_typlenbyvalalign</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">918624</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3482">free_attstatsslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">976392</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3372">get_attstatsslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1114164</td>
+              <td class=coverPerHi>95.0&nbsp;% (38 / 40)</td>
+              <td class=coverPerLo>65.6&nbsp;% (21 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L432">get_mergejoin_opfamilies</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1162359</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L194">get_opfamily_member_for_cmptype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1218602</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L1374">get_opfamily_method</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1280115</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L3194">get_typcollation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1306439</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2335">get_typlen</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1324991</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L165">get_opfamily_member</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1752472</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2659">getBaseType</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2761819</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L2676">getBaseTypeAndTypmod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3811706</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#L218">get_opmethod_canorder</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6089301</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

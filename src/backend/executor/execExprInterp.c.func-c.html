@@ -1,0 +1,921 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/executor/execExprInterp.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - execExprInterp.c<span style="font-size: 80%;"> (<a href="execExprInterp.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">93.5&nbsp;%</td>
+            <td class="headerCovTableEntry">2154</td>
+            <td class="headerCovTableEntry">2014</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">140</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2010</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">97.6&nbsp;%</td>
+            <td class="headerCovTableEntry">83</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">72.1&nbsp;%</td>
+            <td class="headerCovTableEntry">1163</td>
+            <td class="headerCovTableEntry">838</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">323</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">838</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">97.5&nbsp;%</td>
+            <td class="headerCovTableEntry">281</td>
+            <td class="headerCovTableEntry">274</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">274</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">92.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1869</td>
+            <td class="headerCovTableEntry">1736</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">133</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1736</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">97.3&nbsp;%</td>
+            <td class="headerCovTableEntry">75</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">75.5&nbsp;%</td>
+            <td class="headerCovTableEntry">143</td>
+            <td class="headerCovTableEntry">108</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">108</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">69.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1046</td>
+            <td class="headerCovTableEntry">730</td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry">288</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">730</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="execExprInterp.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="execExprInterp.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="execExprInterp.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3133">ExecEvalCoerceViaIOSafe</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 23)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2713">ExecJustScanVarVirt</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3260">ExecEvalCurrentOfExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3009">ExecEvalFuncExprStrictFusage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5162">GetJsonBehaviorValueString</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2988">ExecEvalFuncExprFusage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">104</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5820">ExecEvalAggOrderedTransTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4406">ExecEvalConstraintNotNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">189</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5270">ExecEvalMergeSupportFunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerMed>78.3&nbsp;% (18 / 23)</td>
+              <td class=coverPerLo>30.8&nbsp;% (4 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3852">ExecEvalFieldStoreDeForm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">260</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3902">ExecEvalFieldStoreForm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">260</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3306">ExecEvalRowNotNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">283</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4655">ExecEvalJsonConstructor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">336</td>
+              <td class=coverPerMed>86.0&nbsp;% (37 / 43)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3297">ExecEvalRowNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">348</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5759">ExecEvalPreOrderedDistinctMulti</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">360</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3271">ExecEvalNextValueExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">454</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3313">ExecEvalRowNullInt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">631</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5035">ExecGetJsonValueItemString</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">767</td>
+              <td class=coverPerLo>72.7&nbsp;% (24 / 33)</td>
+              <td class=coverPerLo>52.9&nbsp;% (9 / 17)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5190">ExecEvalJsonCoercionFinish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">849</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5110">ExecEvalJsonCoercion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">903</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5243">ExecEvalGroupingFunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">964</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2575">ExecJustScanVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1016</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4733">ExecEvalJsonIsPredicate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1367</td>
+              <td class=coverPerHi>91.3&nbsp;% (42 / 46)</td>
+              <td class=coverPerHi>94.1&nbsp;% (32 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4833">ExecEvalJsonExprPath</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2639</td>
+              <td class=coverPerHi>90.9&nbsp;% (80 / 88)</td>
+              <td class=coverPerLo>73.0&nbsp;% (54 / 74)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4193">saop_hash_element_match</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4912</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3926">ExecEvalConvertRowtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6130</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4420">ExecEvalConstraintCheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6927</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3193">ExecEvalSQLValueFunction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9725</td>
+              <td class=coverPerHi>100.0&nbsp;% (41 / 41)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3674">ExecEvalMinMax</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11638</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerMed>85.0&nbsp;% (17 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4440">ExecEvalXmlExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22643</td>
+              <td class=coverPerHi>94.2&nbsp;% (98 / 104)</td>
+              <td class=coverPerLo>73.0&nbsp;% (46 / 63)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5324">ExecEvalWholeRowVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23181</td>
+              <td class=coverPerMed>78.4&nbsp;% (69 / 88)</td>
+              <td class=coverPerLo>44.1&nbsp;% (26 / 59)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4224">ExecEvalHashedScalarArrayOp</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">28124</td>
+              <td class=coverPerHi>100.0&nbsp;% (61 / 61)</td>
+              <td class=coverPerMed>80.4&nbsp;% (37 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3654">ExecEvalRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29010</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5614">ExecAggInitGroup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30146</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5667">ExecAggCopyTransValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31242</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4174">saop_element_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31649</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2608">ExecJustAssignInnerVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33005</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2756">ExecJustAssignScanVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44497</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3613">ExecEvalArrayCoerce</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54631</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2742">ExecJustAssignInnerVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60612</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5716">ExecEvalPreOrderedDistinctSingle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">182861</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3068">ExecEvalParamExtern</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">203041</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>45.0&nbsp;% (9 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3727">ExecEvalFieldSelect</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">206685</td>
+              <td class=coverPerLo>73.0&nbsp;% (27 / 37)</td>
+              <td class=coverPerLo>38.2&nbsp;% (13 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2629">ExecJustApplyFuncToCase</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">210823</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2478">get_cached_rowtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">219421</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerMed>75.0&nbsp;% (27 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2699">ExecJustInnerVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">319768</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2376">CheckVarSlotCompatibility</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">343729</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (9 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3399">ExecEvalArrayExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">407565</td>
+              <td class=coverPerMed>87.9&nbsp;% (87 / 99)</td>
+              <td class=coverPerLo>58.9&nbsp;% (33 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5806">ExecEvalAggOrderedTransDatum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">422259</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2615">ExecJustAssignOuterVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">555551</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2706">ExecJustOuterVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">622599</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2823">ExecJustHashOuterVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">657550</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2857">ExecJustHashInnerVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">680631</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2765">ExecJustHashInnerVarWithIV</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">737214</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2749">ExecJustAssignOuterVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">802821</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3111">ExecEvalParamSet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">855351</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2305">CheckExprStillValid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">900503</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2285">ExecInterpExprStillValid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">900503</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2720">ExecJustAssignVarVirtImpl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">907930</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2677">ExecJustVarVirtImpl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">942367</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L240">ExecReadyInterpretedExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1175165</td>
+              <td class=coverPerHi>96.8&nbsp;% (92 / 95)</td>
+              <td class=coverPerMed>89.0&nbsp;% (89 / 100)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2926">ExecInitInterpreter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1175168</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2667">ExecJustConst</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1181713</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2568">ExecJustOuterVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1227463</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2830">ExecJustHashInnerVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1424244</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5866">ExecAggPlainTransByRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1489447</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5307">ExecEvalSubPlan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1775341</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2799">ExecJustHashVarImpl</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">2081794</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2865">ExecJustHashOuterVarVirt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2141240</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L4021">ExecEvalScalarArrayOp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2278127</td>
+              <td class=coverPerHi>100.0&nbsp;% (58 / 58)</td>
+              <td class=coverPerHi>92.0&nbsp;% (46 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2561">ExecJustInnerVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2382172</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2837">ExecJustHashVarVirtImpl</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">2821871</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2544">ExecJustVarImpl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3610651</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5583">ExecEvalSysVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3751119</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L3046">ExecEvalParamExec</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4131906</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2958">ExecEvalStepOp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4167784</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2875">ExecJustHashOuterVarStrict</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">4421991</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2622">ExecJustAssignScanVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6356803</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2582">ExecJustAssignVarImpl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6945359</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L5834">ExecAggPlainTransByVal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16061488</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2909">dispatch_compare_ptr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27727792</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L2431">CheckOpSlotCompatibility</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">95073097</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#L458">ExecInterpExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">636949467</td>
+              <td class=coverPerHi>97.9&nbsp;% (664 / 678)</td>
+              <td class=coverPerMed>75.9&nbsp;% (192 / 253)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/hash</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index-bin_date.html" title="Click to go to top-level">top level</a> - <a href="../../../index-bin_date.html" title="Click to go to directory src">src</a>/<a href="../../index-bin_date.html" title="Click to go to directory backend">backend</a>/<a href="../index-bin_date.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to default view of this directory.">hash</a></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">82.2&nbsp;%</td>
+            <td class="headerCovTableEntry">545</td>
+            <td class="headerCovTableEntry">448</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">422</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">22</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">57.8&nbsp;%</td>
+            <td class="headerCovTableEntry">384</td>
+            <td class="headerCovTableEntry">222</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">159</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">212</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="13"><a href="index-date.html" title="Click to include date bin details in file table below">Line coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Summarize by:</td>
+            <td class="headerValue">Date bin</td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B1" title="Click to go to coverage summary for the period '(1,7] days'">(1,7] days</a>:</td>
+            <td class="headerCovTableEntryHi">94.4&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Rating:
+            <span class="coverLegendCovLo" title="Coverage rates below 75 % are classified as low">low: &lt; 75 %</span>
+            <span class="coverLegendCovMed" title="Coverage rates between 75 % and 90 % are classified as medium">medium: &gt;= 75 %</span>
+            <span class="coverLegendCovHi" title="Coverage rates of 90 % and more are classified as high">high: &gt;= 90 %</span>
+</td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryMed">83.8&nbsp;%</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryMed">81.5&nbsp;%</td>
+            <td class="headerCovTableEntry">486</td>
+            <td class="headerCovTableEntry">396</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">394</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13"><a href="index-date.html" title="Click to include date bin details in file table below">Function coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B1" title="Click to go to coverage summary for the period '(1,7] days'">(1,7] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryMed">89.7&nbsp;%</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13"><a href="index-date.html" title="Click to include date bin details in file table below">Branch coverage date bins:</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B1" title="Click to go to coverage summary for the period '(1,7] days'">(1,7] days</a>:</td>
+            <td class="headerCovTableEntryMed">83.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B2" title="Click to go to coverage summary for the period '(7,30] days'">(7,30] days</a>:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B3" title="Click to go to coverage summary for the period '(30,360] days'">(30,360] days</a>:</td>
+            <td class="headerCovTableEntryLo">44.4&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem"><a href="index-bin_date.html#B4" title="Click to go to coverage summary for the period '(360..) days'">(360..) days</a>:</td>
+            <td class="headerCovTableEntryLo">54.5&nbsp;%</td>
+            <td class="headerCovTableEntry">382</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">150</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">205</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table width="80%" cellpadding=1 cellspacing=1 border=0>
+
+            <tr>
+              <td width="40%"><br></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            <td width="2%"></td>
+            </tr>
+
+            <tr>
+              <td class="tableHead" rowspan=2>Date</td>
+              <td class="tableHead" rowspan=2>File <span  title="Click to sort table by file name" class="tableHeadSort"><a href="index-bin_date.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by file name" title="Click to sort table by file name" border=0></a></span></td>
+        <td class="tableHead" colspan=11>Line Coverage <span  title="Click to sort table by line coverage" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by line coverage" title="Click to sort table by line coverage" border=0></span></td>
+        <td class="tableHead" colspan=10>Branch Coverage <span  title="Click to sort table by branch coverage" class="tableHeadSort"><a href="index-bin_date-sort-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by branch coverage" title="Click to sort table by branch coverage" border=0></a></span></td>
+        <td class="tableHead" colspan=8>Function Coverage <span  title="Click to sort table by function coverage" class="tableHeadSort"><a href="index-bin_date-sort-f.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function coverage" title="Click to sort table by function coverage" border=0></a></span></td>
+            </tr>
+            <tr>
+                    <td class="tableHead" colspan=2> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now"> GBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted"> DUB</td>
+                    <td class="tableHead" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted"> DCB</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now"> GBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now"> EUB</td>
+                    <td class="tableHead" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now"> ECB</td>
+                    <td class="tableHead"> Rate</td>
+                    <td class="tableHead"> Total</td>
+                    <td class="tableHead"> Hit</td>
+                    <td class="tableHead" title="Uncovered New Code (+ => 0):
+Newly added code is not tested"> UNC</td>
+                    <td class="tableHead" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now"> UBC</td>
+                    <td class="tableHead" title="Gained New Coverage (+ => 1):
+Newly added code is tested"> GNC</td>
+                    <td class="tableHead" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested"> CBC</td>
+                    <td class="tableHead" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted"> DCB</td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a id="B1">(1,7] days</a></td>
+              <td class="coverFile"><a href="dynahash.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/hash/dynahash.c source detail">dynahash.c</a><sup>&lowast;&lowast;</sup></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">94.4&nbsp;%</td>
+              <td class="coverNumDflt">18</td>
+              <td class="coverNumDflt">17</td>
+              <td class="tlaUNC tlaBgUNC"><a href="dynahash.c.gcov.html#L1824" class="tlaBgUNC" title="Go to first UNC line in '(1,7] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L358" title="Go to first GNC line in '(1,7] days' bin in dynahash.c">17</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerMed">83.3&nbsp;%</td>
+              <td class="coverNumDflt">6</td>
+              <td class="coverNumDflt">5</td>
+              <td class="tlaUNC tlaBgUNC"><a href="dynahash.c.gcov.html#L1823" class="tlaBgUNC" title="Go to first UNC branch in '(1,7] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L996" title="Go to first GNC branch in '(1,7] days' bin in dynahash.c">5</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">8</td>
+              <td class="coverNumDflt">8</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">8</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a id="B2">(7,30] days</a></td>
+              <td class="coverFile"><a href="dynahash.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/hash/dynahash.c source detail">dynahash.c</a><sup>&lowast;&lowast;</sup></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">4</td>
+              <td class="coverNumDflt">4</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L1718" title="Go to first GNC line in '(7,30] days' bin in dynahash.c">4</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerLo">50.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">1</td>
+              <td class="tlaUNC tlaBgUNC"><a href="dynahash.c.gcov.html#L1730" class="tlaBgUNC" title="Go to first UNC branch in '(7,30] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L1730" title="Go to first GNC branch in '(7,30] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">-</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="ownerName"><a id="B3">(30,360] days</a></td>
+              <td class="coverFile"><a href="dynahash.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/hash/dynahash.c source detail">dynahash.c</a><sup>&lowast;&lowast;</sup></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerMed">83.8&nbsp;%</td>
+              <td class="coverNumDflt">37</td>
+              <td class="coverNumDflt">31</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L621" title="Go to first UBC line in '(30,360] days' bin in dynahash.c">6</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L629" title="Go to first GNC line in '(30,360] days' bin in dynahash.c">3</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L399" title="Go to first CBC line in '(30,360] days' bin in dynahash.c">28</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerLo">44.4&nbsp;%</td>
+              <td class="coverNumDflt">18</td>
+              <td class="coverNumDflt">8</td>
+              <td class="tlaUNC tlaBgUNC"><a href="dynahash.c.gcov.html#L1712" class="tlaBgUNC" title="Go to first UNC branch in '(30,360] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L620" title="Go to first UBC branch in '(30,360] days' bin in dynahash.c">9</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L1712" title="Go to first GNC branch in '(30,360] days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L620" title="Go to first CBC branch in '(30,360] days' bin in dynahash.c">7</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="ownerName" rowspan=3>(360..) days</td>
+              <td class="overallOwner"><a id="B4">Total</a></td>
+              <td class="coverBar" align="center">
+                                <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../../amber.png" width=81 height=10 alt="81.5%"><img src="../../../../snow.png" width=19 height=10 alt="81.5%"></td></tr></table>
+              </td>
+              <td class="coverPerMed">81.5&nbsp;%</td>
+              <td class="coverNumDflt">486</td>
+              <td class="coverNumDflt">396</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">90</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">1</td>
+              <td class="coverNumDflt">394</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverPerLo">54.5&nbsp;%</td>
+              <td class="coverNumDflt">382</td>
+              <td class="coverNumDflt">208</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">150</td>
+              <td class="coverNumDflt">3</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">205</td>
+              <td class="coverNumDflt">17</td>
+              <td class="coverNumDflt">7</td>
+              <td class="coverPerMed">89.7&nbsp;%</td>
+              <td class="coverNumDflt">29</td>
+              <td class="coverNumDflt">26</td>
+              <td class="tlaUNC">1</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">5</td>
+              <td class="coverNumDflt">21</td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="dynahash.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/hash/dynahash.c source detail">dynahash.c</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerMed">81.0&nbsp;%</td>
+              <td class="coverNumDflt">474</td>
+              <td class="coverNumDflt">384</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L463" title="Go to first UBC line in '(360..) days' bin in dynahash.c">90</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L1924" title="Go to first GBC line in '(360..) days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L1727" title="Go to first GNC line in '(360..) days' bin in dynahash.c">1</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L297" title="Go to first CBC line in '(360..) days' bin in dynahash.c">382</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerLo">57.9&nbsp;%</td>
+              <td class="coverNumDflt">356</td>
+              <td class="coverNumDflt">206</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L299" title="Go to first UBC branch in '(360..) days' bin in dynahash.c">150</a></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L998" title="Go to first GBC branch in '(360..) days' bin in dynahash.c">2</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="dynahash.c.gcov.html#L299" title="Go to first CBC branch in '(360..) days' bin in dynahash.c">204</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerMed">88.9&nbsp;%</td>
+              <td class="coverNumDflt">27</td>
+              <td class="coverNumDflt">24</td>
+              <td class="tlaUNC tlaBgUNC">1</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">5</td>
+              <td class="coverNumDflt">19</td>
+              <td class="coverNumDflt"></td>
+            </tr>
+            <tr>
+              <td class="coverFile"><a href="pg_crc.c.gcov.html" title="Click to go to /home/nbyavuz/Desktop/projects/postgres-code-coverage/postgres_current/src/backend/utils/hash/pg_crc.c source detail">pg_crc.c</a></td>
+              <td class="coverFile" align="center">
+                
+              </td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">12</td>
+              <td class="coverNumDflt">12</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="pg_crc.c.gcov.html#L107" title="Go to first CBC line in '(360..) days' bin in pg_crc.c">12</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="owner_coverPerLo">7.7&nbsp;%</td>
+              <td class="coverNumDflt">26</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="pg_crc.c.gcov.html#L113" title="Go to first GBC branch in '(360..) days' bin in pg_crc.c">1</a></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"><a href="pg_crc.c.gcov.html#L113" title="Go to first CBC branch in '(360..) days' bin in pg_crc.c">1</a></td>
+              <td class="coverNumDflt"><a href="pg_crc.c.gcov.html#L113" title="Go to first EUB branch in '(360..) days' bin in pg_crc.c">17</a></td>
+              <td class="coverNumDflt"><a href="pg_crc.c.gcov.html#L113" title="Go to first ECB branch in '(360..) days' bin in pg_crc.c">7</a></td>
+              <td class="owner_coverPerHi">100.0&nbsp;%</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt"></td>
+              <td class="coverNumDflt">2</td>
+              <td class="coverNumDflt"></td>
+            </tr>
+        <tr>
+          <td class="footnote" colspan=31><sup>&lowast;&lowast;</sup> Bin 'Total' header elided when bin contains only one entry.</td>
+         </tr>
+          </table>
+          </center>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/transam/xact.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory transam">transam</a> - xact.c<span style="font-size: 80%;"> (<a href="xact.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">87.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1900</td>
+            <td class="headerCovTableEntry">1656</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">244</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">1639</td>
+            <td class="headerCovTableEntry">9</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">93.6&nbsp;%</td>
+            <td class="headerCovTableEntry">109</td>
+            <td class="headerCovTableEntry">102</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">98</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">62.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1070</td>
+            <td class="headerCovTableEntry">666</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">402</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">662</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">86.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1849</td>
+            <td class="headerCovTableEntry">1605</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">244</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1600</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">93.6&nbsp;%</td>
+            <td class="headerCovTableEntry">109</td>
+            <td class="headerCovTableEntry">102</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">98</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="tlaUNC">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">62.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1066</td>
+            <td class="headerCovTableEntry">664</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">402</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">662</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="xact.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="xact.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="xact.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3461">AbortCurrentTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24168</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3479">AbortCurrentTransactionInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24168</td>
+              <td class=coverPerLo>56.1&nbsp;% (32 / 57)</td>
+              <td class=coverPerLo>47.1&nbsp;% (8 / 17)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4872">AbortOutOfAnyTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14924</td>
+              <td class=coverPerLo>55.3&nbsp;% (21 / 38)</td>
+              <td class=coverPerLo>37.5&nbsp;% (6 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5229">AbortSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4654</td>
+              <td class=coverPerHi>98.3&nbsp;% (59 / 60)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L2819">AbortTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24670</td>
+              <td class=coverPerHi>97.1&nbsp;% (68 / 70)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L633">AssignTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">131279</td>
+              <td class=coverPerHi>97.8&nbsp;% (45 / 46)</td>
+              <td class=coverPerMed>83.3&nbsp;% (35 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1894">AtAbort_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39594</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1926">AtAbort_ResourceOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24670</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1589">AtCCI_LocalCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">593128</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1984">AtCleanup_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24670</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1608">AtCommit_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291629</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1165">AtStart_Cache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316299</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1174">AtStart_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316299</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1224">AtStart_ResourceOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316299</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1914">AtSubAbort_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4654</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1939">AtSubAbort_ResourceOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4654</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1952">AtSubAbort_childXids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">647</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L2032">AtSubCleanup_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4654</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1645">AtSubCommit_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4437</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1674">AtSubCommit_childXids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2776</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1252">AtSubStart_Memory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9091</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1281">AtSubStart_ResourceOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9091</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4336">BeginImplicitTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43181</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4704">BeginInternalSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7739</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>42.9&nbsp;% (3 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3934">BeginTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8066</td>
+              <td class=coverPerLo>66.7&nbsp;% (10 / 15)</td>
+              <td class=coverPerLo>22.2&nbsp;% (2 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5717">BlockStateAsString</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 43)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 21)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3908">CallSubXactCallbacks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22619</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3848">CallXactCallbacks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">608135</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3735">CheckTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5318</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5393">CleanupSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4654</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3019">CleanupTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24670</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1098">CommandCounterIncrement</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1075365</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5114">CommitSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4437</td>
+              <td class=coverPerHi>94.6&nbsp;% (53 / 56)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L2238">CommitTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291566</td>
+              <td class=coverPerHi>95.1&nbsp;% (78 / 82)</td>
+              <td class=coverPerLo>60.0&nbsp;% (18 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3167">CommitTransactionCommand</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">376287</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3185">CommitTransactionCommandInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">376505</td>
+              <td class=coverPerHi>97.4&nbsp;% (111 / 114)</td>
+              <td class=coverPerMed>75.5&nbsp;% (37 / 49)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4383">DefineSavepoint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1358</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4361">EndImplicitTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16116</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5646">EndParallelWorkerTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1365</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4054">EndTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6479</td>
+              <td class=coverPerMed>80.4&nbsp;% (45 / 56)</td>
+              <td class=coverPerLo>52.6&nbsp;% (30 / 57)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1049">EnterParallelMode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3180</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5522">EstimateTransactionStateSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">456</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1062">ExitParallelMode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1803</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1150">ForceSyncCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">500</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L827">GetCurrentCommandId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5354162</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L510">GetCurrentFullTransactionId</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">347</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L528">GetCurrentFullTransactionIdIfAny</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L877">GetCurrentStatementStartTimestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1071843</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L789">GetCurrentSubTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1548881</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L452">GetCurrentTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10741635</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L469">GetCurrentTransactionIdIfAny</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13879073</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L927">GetCurrentTransactionNestLevel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16831746</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L868">GetCurrentTransactionStartTimestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43170</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L889">GetCurrentTransactionStopTimestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">974308</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L605">GetStableLatestTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">119</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L481">GetTopFullTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3181</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L497">GetTopFullTransactionIdIfAny</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L424">GetTopTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26269</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L439">GetTopTransactionIdIfAny</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54589072</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L405">IsAbortedTransactionBlockState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">732875</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1087">IsInParallelMode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4130263</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3779">IsInTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2484</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5054">IsSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">546356</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L557">IsSubxactTopXidLogPending</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13847584</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4981">IsTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190689</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4999">IsTransactionOrTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">647303</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L385">IsTransactionState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">141195708</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L539">MarkCurrentTransactionIdLoggedIfAny</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13840561</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L589">MarkSubxactTopXidLogged</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">219</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5488">PopTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9091</td>
+              <td class=coverPerMed>86.7&nbsp;% (13 / 15)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L2525">PrepareTransaction</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">347</td>
+              <td class=coverPerHi>96.4&nbsp;% (81 / 84)</td>
+              <td class=coverPerLo>50.0&nbsp;% (11 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4002">PrepareTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">349</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3658">PreventInTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7337</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5426">PushTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9091</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1764">RecordTransactionAbort</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29318</td>
+              <td class=coverPerHi>97.2&nbsp;% (35 / 36)</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1313">RecordTransactionCommit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">289966</td>
+              <td class=coverPerHi>98.4&nbsp;% (61 / 62)</td>
+              <td class=coverPerMed>82.8&nbsp;% (48 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3874">RegisterSubXactCallback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1760</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3814">RegisterXactCallback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1760</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4778">ReleaseCurrentSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3665</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4468">ReleaseSavepoint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">141</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              <td class=coverPerLo>40.5&nbsp;% (15 / 37)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3726">RequireTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4300</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3154">RestoreTransactionCharacteristics</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4806">RollbackAndReleaseCurrentSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4074</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>64.7&nbsp;% (11 / 17)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4577">RollbackToSavepoint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">368</td>
+              <td class=coverPerMed>75.0&nbsp;% (27 / 36)</td>
+              <td class=coverPerLo>42.6&nbsp;% (20 / 47)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3146">SaveTransactionCharacteristics</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">376509</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5550">SerializeTransactionState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">456</td>
+              <td class=coverPerMed>83.9&nbsp;% (26 / 31)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L912">SetCurrentStatementStartTimestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">523930</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L857">SetParallelStartTimestamps</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1371</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5658">ShowTransactionState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">631048</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5670">ShowTransactionStateRec</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 13)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5621">StartParallelWorkerTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1371</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5077">StartSubTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9091</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L2074">StartTransaction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316299</td>
+              <td class=coverPerHi>94.4&nbsp;% (51 / 54)</td>
+              <td class=coverPerLo>54.2&nbsp;% (13 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3069">StartTransactionCommand</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">399430</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              <td class=coverPerLo>44.4&nbsp;% (4 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L803">SubTransactionIsActive</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5770">TransStateAsString</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 15)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5013">TransactionBlockStatusCode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">313682</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L939">TransactionIdIsCurrentTransactionId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54811139</td>
+              <td class=coverPerHi>97.1&nbsp;% (34 / 35)</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L1040">TransactionStartedDuringRecovery</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6695720</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3887">UnregisterSubXactCallback</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3827">UnregisterXactCallback</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L4214">UserAbortTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1422</td>
+              <td class=coverPerMed>77.8&nbsp;% (28 / 36)</td>
+              <td class=coverPerLo>48.6&nbsp;% (17 / 35)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L3720">WarnNoTransactionBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1018</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5996">XactLogAbortRecord</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5922</td>
+              <td class=coverPerHi>100.0&nbsp;% (58 / 58)</td>
+              <td class=coverPerHi>95.2&nbsp;% (40 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5824">XactLogCommitRecord</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">122586</td>
+              <td class=coverPerHi>100.0&nbsp;% (70 / 70)</td>
+              <td class=coverPerHi>96.2&nbsp;% (50 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L5800">xactGetCommittedChildren</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">296158</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L6373">xact_redo</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">23634</td>
+              <td class=coverPerHi>97.7&nbsp;% (42 / 43)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L6294">xact_redo_abort</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1795</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#L6140">xact_redo_commit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21651</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

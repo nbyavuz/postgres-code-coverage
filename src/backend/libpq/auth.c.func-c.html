@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/libpq/auth.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory libpq">libpq</a> - auth.c<span style="font-size: 80%;"> (<a href="auth.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">39.8&nbsp;%</td>
+            <td class="headerCovTableEntry">901</td>
+            <td class="headerCovTableEntry">359</td>
+            <td class="headerCovTableEntry">542</td>
+            <td class="headerCovTableEntry">359</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">16</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">28.1&nbsp;%</td>
+            <td class="headerCovTableEntry">745</td>
+            <td class="headerCovTableEntry">209</td>
+            <td class="headerCovTableEntry">536</td>
+            <td class="headerCovTableEntry">209</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">40.0&nbsp;%</td>
+            <td class="headerCovTableEntry">880</td>
+            <td class="headerCovTableEntry">352</td>
+            <td class="headerCovTableEntry">528</td>
+            <td class="headerCovTableEntry">352</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">68.2&nbsp;%</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">15</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">8</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">27.4&nbsp;%</td>
+            <td class="headerCovTableEntry">733</td>
+            <td class="headerCovTableEntry">201</td>
+            <td class="headerCovTableEntry">532</td>
+            <td class="headerCovTableEntry">201</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="auth.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="auth.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="auth.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2027">CheckPAMAuth</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 55)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2843">CheckRADIUSAuth</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 37)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2938">PerformRadiusTransaction</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 141)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 102)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2401">dummy_ldap_password_mutator</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L1669">ident_inet</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 80)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L1588">interpret_ident_response</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 36)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L1926">pam_passwd_conv_proc</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 39)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2817">radius_add_attribute</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L881">CheckMD5Auth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2411">FormatSearchFilter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2661">errdetail_for_ldap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L919">pg_GSS_recvauth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerMed>81.6&nbsp;% (40 / 49)</td>
+              <td class=coverPerLo>47.8&nbsp;% (22 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L786">CheckPasswordAuth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2685">CheckCertAuth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerMed>75.9&nbsp;% (22 / 29)</td>
+              <td class=coverPerLo>50.0&nbsp;% (15 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L1854">auth_peer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerLo>47.1&nbsp;% (8 / 17)</td>
+              <td class=coverPerLo>18.8&nbsp;% (3 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2215">InitializeLDAPConnection</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28</td>
+              <td class=coverPerLo>60.0&nbsp;% (30 / 50)</td>
+              <td class=coverPerLo>44.7&nbsp;% (17 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L2434">CheckLDAPAuth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29</td>
+              <td class=coverPerLo>71.3&nbsp;% (67 / 94)</td>
+              <td class=coverPerLo>50.0&nbsp;% (39 / 78)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L1072">pg_GSS_checkauth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerMed>77.4&nbsp;% (24 / 31)</td>
+              <td class=coverPerLo>45.5&nbsp;% (10 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L705">recv_password_packet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51</td>
+              <td class=coverPerLo>70.6&nbsp;% (12 / 17)</td>
+              <td class=coverPerLo>38.9&nbsp;% (7 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L237">auth_failed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerLo>56.4&nbsp;% (31 / 55)</td>
+              <td class=coverPerLo>54.5&nbsp;% (12 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L821">CheckPWChallengeAuth</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">72</td>
+              <td class=coverPerMed>86.7&nbsp;% (13 / 15)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L339">set_authn_id</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">172</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L377">ClientAuthentication</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11790</td>
+              <td class=coverPerLo>66.3&nbsp;% (55 / 83)</td>
+              <td class=coverPerLo>43.6&nbsp;% (44 / 101)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="auth.c.gcov.html#L675">sendAuthRequest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11970</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

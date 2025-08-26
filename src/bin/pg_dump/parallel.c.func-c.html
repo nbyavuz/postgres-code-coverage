@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/bin/pg_dump/parallel.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory bin">bin</a>/<a href="index.html" title="Click to go to directory pg_dump">pg_dump</a> - parallel.c<span style="font-size: 80%;"> (<a href="parallel.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUIC" title="Uncovered Included Code (# => 0):
+Previously unused code is untested">UIC</td>
+            <td width="5%" class="headerCovTableHeadGIC" title="Gained Included Coverage (# => 1):
+Previously unused code is tested now">GIC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">82.3&nbsp;%</td>
+            <td class="headerCovTableEntry">339</td>
+            <td class="headerCovTableEntry">279</td>
+            <td class="headerCovTableEntry">60</td>
+            <td class="headerCovTableEntry">279</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">90.6&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">29</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">61.4&nbsp;%</td>
+            <td class="headerCovTableEntry">189</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry">116</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.3&nbsp;%</td>
+            <td class="headerCovTableEntry">339</td>
+            <td class="headerCovTableEntry">279</td>
+            <td class="tlaUIC">60</td>
+            <td class="headerCovTableEntry">279</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.6&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="tlaUIC">3</td>
+            <td class="headerCovTableEntry">29</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">61.4&nbsp;%</td>
+            <td class="headerCovTableEntry">189</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="tlaUIC">73</td>
+            <td class="headerCovTableEntry">116</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="parallel.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="parallel.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="parallel.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L264">GetMyPSlot</a></td>
+              <td class="tlaUIC">UIC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L395">ShutdownWorkersHard</a></td>
+              <td class="tlaUIC">UIC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L545">sigTermHandler</a></td>
+              <td class="tlaUIC">UIC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 17)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L446">WaitForTerminatingWorkers</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1059">ParallelBackupEnd</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L897">ParallelBackupStart</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>95.5&nbsp;% (42 / 44)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L789">set_cancel_pstate</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">26</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L829">RunWorker</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">28</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1336">WaitForCommands</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">28</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1252">HasEveryWorkerTerminated</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L809">set_cancel_slot_archive</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1268">IsEveryWorkerIdle</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">74</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1301">lockTableForWorker</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">182</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L339">archive_close_connection</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">202</td>
+              <td class=coverPerLo>46.2&nbsp;% (6 / 13)</td>
+              <td class=coverPerLo>20.0&nbsp;% (2 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1540">select_loop</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">206</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1205">DispatchJobForTocEntry</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1108">buildWorkerCommand</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1156">buildWorkerResponse</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1123">parseWorkerCommand</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1171">parseWorkerResponse</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1527">sendMessageToLeader</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1644">sendMessageToWorker</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1451">WaitForWorkers</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              <td class=coverPerMed>76.5&nbsp;% (13 / 17)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1516">getMessageFromLeader</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">256</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L328">on_exit_close_archive</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">263</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L236">init_parallel_dump_utils</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">386</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1398">ListenToWorkers</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">426</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1579">getMessageFromWorker</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">426</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1662">readMessageFromPipe</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">484</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L1236">GetIdleWorker</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">583</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L730">set_archive_cancel_info</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">613</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#L608">set_cancel_handler</a></td>
+              <td class="tlaGIC">GIC</td>
+              <td class="coverFnHi">613</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

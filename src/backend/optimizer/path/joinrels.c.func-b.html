@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/optimizer/path/joinrels.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory optimizer">optimizer</a>/<a href="index.html" title="Click to go to directory path">path</a> - joinrels.c<span style="font-size: 80%;"> (<a href="joinrels.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">94.5&nbsp;%</td>
+            <td class="headerCovTableEntry">568</td>
+            <td class="headerCovTableEntry">537</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">532</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">80.2&nbsp;%</td>
+            <td class="headerCovTableEntry">626</td>
+            <td class="headerCovTableEntry">502</td>
+            <td class="headerCovTableEntry">124</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">502</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.3&nbsp;%</td>
+            <td class="headerCovTableEntry">546</td>
+            <td class="headerCovTableEntry">515</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">515</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">60.0&nbsp;%</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">80.9&nbsp;%</td>
+            <td class="headerCovTableEntry">606</td>
+            <td class="headerCovTableEntry">490</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">490</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="joinrels.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="joinrels.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="joinrels.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1420">try_partitionwise_join</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">159147</td>
+              <td class=coverPerMed>85.5&nbsp;% (65 / 76)</td>
+              <td class=coverPerLo>65.1&nbsp;% (82 / 126)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L882">populate_joinrel_with_paths</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">159147</td>
+              <td class=coverPerMed>85.9&nbsp;% (55 / 64)</td>
+              <td class=coverPerLo>66.7&nbsp;% (40 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1829">get_matching_part_pairs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>80.0&nbsp;% (24 / 30)</td>
+              <td class=coverPerLo>50.0&nbsp;% (12 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L349">join_is_legal</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">162314</td>
+              <td class=coverPerHi>97.2&nbsp;% (103 / 106)</td>
+              <td class=coverPerHi>90.8&nbsp;% (109 / 120)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1738">compute_partition_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1111</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerLo>70.0&nbsp;% (21 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L72">join_search_one_level</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">65144</td>
+              <td class=coverPerHi>95.5&nbsp;% (42 / 44)</td>
+              <td class=coverPerMed>85.0&nbsp;% (51 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1696">free_child_join_sjinfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2773</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L790">add_outer_joins_to_relids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">160379</td>
+              <td class=coverPerHi>100.0&nbsp;% (27 / 27)</td>
+              <td class=coverPerMed>88.2&nbsp;% (30 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1366">restriction_is_constant_false</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">213011</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1642">build_child_join_sjinfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2773</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1233">has_legal_joinclause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1385</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L693">make_join_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">162110</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L279">make_rels_by_clause_joins</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">159549</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L313">make_rels_by_clauseless_joins</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5340</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1177">has_join_restriction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15593</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (30 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1064">have_join_order_restriction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38911</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerHi>100.0&nbsp;% (44 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1274">is_dummy_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1267252</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L1323">mark_dummy_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="joinrels.c.gcov.html#L658">init_dummy_sjinfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">443303</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

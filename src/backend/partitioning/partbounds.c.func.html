@@ -1,0 +1,621 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/partitioning/partbounds.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory partitioning">partitioning</a> - partbounds.c<span style="font-size: 80%;"> (<a href="partbounds.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGIC" title="Gained Included Coverage (# => 1):
+Previously unused code is tested now">GIC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">95.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1574</td>
+            <td class="headerCovTableEntry">1503</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">1486</td>
+            <td class="headerCovTableEntry">15</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">98.1&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">73.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1378</td>
+            <td class="headerCovTableEntry">1019</td>
+            <td class="headerCovTableEntry">359</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">1001</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.4&nbsp;%</td>
+            <td class="headerCovTableEntry">1558</td>
+            <td class="headerCovTableEntry">1487</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1486</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">98.1&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1360</td>
+            <td class="headerCovTableEntry">1001</td>
+            <td class="headerCovTableEntry">359</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1001</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="partbounds.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="partbounds.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="partbounds.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2774">add_merged_range_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">408</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2517">build_merged_partition_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">366</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3250">check_default_partition_contents</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">174</td>
+              <td class=coverPerHi>96.1&nbsp;% (49 / 51)</td>
+              <td class=coverPerMed>78.6&nbsp;% (33 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2895">check_new_partition_bound</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4981</td>
+              <td class=coverPerHi>100.0&nbsp;% (90 / 90)</td>
+              <td class=coverPerMed>79.4&nbsp;% (81 / 102)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2661">compare_range_partitions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">432</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4721">compute_partition_hash_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">106527</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L345">create_hash_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">419</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L460">create_list_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4121</td>
+              <td class=coverPerHi>97.2&nbsp;% (70 / 72)</td>
+              <td class=coverPerMed>77.8&nbsp;% (42 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L675">create_range_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3622</td>
+              <td class=coverPerHi>98.8&nbsp;% (82 / 83)</td>
+              <td class=coverPerMed>79.2&nbsp;% (38 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2384">fix_merged_indexes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>80.8&nbsp;% (21 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1831">free_partition_map</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">846</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2438">generate_matching_part_pairs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">366</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerMed>80.6&nbsp;% (29 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3413">get_hash_partition_greatest_modulus</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2710">get_merged_range_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">414</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L434">get_non_null_list_datum_count</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4121</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3831">get_partition_operator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6945</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>60.0&nbsp;% (18 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3982">get_qual_for_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4065">get_qual_for_list</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1414</td>
+              <td class=coverPerHi>100.0&nbsp;% (60 / 60)</td>
+              <td class=coverPerMed>88.2&nbsp;% (30 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4274">get_qual_for_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1726</td>
+              <td class=coverPerHi>95.5&nbsp;% (128 / 134)</td>
+              <td class=coverPerMed>77.3&nbsp;% (99 / 128)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L247">get_qual_from_partbound</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2835</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4631">get_range_key_properties</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3862</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4675">get_range_nulltest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1482</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2580">get_range_partition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1266</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2601">get_range_partition_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1290</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1810">init_partition_map</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">846</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1842">is_dummy_partition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4572</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3427">make_one_partition_rbound</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17970</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3867">make_partition_op_expr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6945</td>
+              <td class=coverPerHi>96.2&nbsp;% (50 / 52)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2256">merge_default_partitions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78</td>
+              <td class=coverPerLo>62.5&nbsp;% (20 / 32)</td>
+              <td class=coverPerLo>41.4&nbsp;% (24 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1197">merge_list_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">243</td>
+              <td class=coverPerHi>94.7&nbsp;% (108 / 114)</td>
+              <td class=coverPerLo>72.1&nbsp;% (88 / 122)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1861">merge_matching_partitions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1359</td>
+              <td class=coverPerMed>88.7&nbsp;% (47 / 53)</td>
+              <td class=coverPerLo>59.6&nbsp;% (31 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2146">merge_null_partitions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>96.8&nbsp;% (30 / 31)</td>
+              <td class=coverPerLo>70.7&nbsp;% (41 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2366">merge_partition_with_dummy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">264</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1505">merge_range_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">180</td>
+              <td class=coverPerHi>98.0&nbsp;% (99 / 101)</td>
+              <td class=coverPerLo>72.0&nbsp;% (85 / 118)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1000">partition_bounds_copy</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">8162</td>
+              <td class=coverPerHi>100.0&nbsp;% (38 / 38)</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L297">partition_bounds_create</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8162</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L894">partition_bounds_equal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">858</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              <td class=coverPerMed>79.4&nbsp;% (27 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1117">partition_bounds_merge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">423</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3737">partition_hash_bsearch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">218</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3586">partition_hbound_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">847</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3606">partition_list_bsearch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78863</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3652">partition_range_bsearch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1095</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3694">partition_range_datum_bsearch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">250723</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3487">partition_rbound_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18508</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3555">partition_rbound_datum_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">796995</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2851">partitions_are_ordered</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36929</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L2061">process_inner_partition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">159</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L1979">process_outer_partition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              <td class=coverPerLo>45.5&nbsp;% (10 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3777">qsort_partition_hbound_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">499</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3792">qsort_partition_list_value_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13581</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L3809">qsort_partition_rbound_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11234</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="partbounds.c.gcov.html#L4770">satisfies_hash_partition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2114</td>
+              <td class=coverPerHi>97.4&nbsp;% (74 / 76)</td>
+              <td class=coverPerMed>77.4&nbsp;% (48 / 62)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

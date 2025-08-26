@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/brin/brin.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory brin">brin</a> - brin.c<span style="font-size: 80%;"> (<a href="brin.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">92.1&nbsp;%</td>
+            <td class="headerCovTableEntry">856</td>
+            <td class="headerCovTableEntry">788</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">786</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">68.2&nbsp;%</td>
+            <td class="headerCovTableEntry">406</td>
+            <td class="headerCovTableEntry">277</td>
+            <td class="headerCovTableEntry">129</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">277</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.9&nbsp;%</td>
+            <td class="headerCovTableEntry">838</td>
+            <td class="headerCovTableEntry">770</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">770</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">68.2&nbsp;%</td>
+            <td class="headerCovTableEntry">402</td>
+            <td class="headerCovTableEntry">274</td>
+            <td class="headerCovTableEntry">128</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">274</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="brin.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="brin.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="brin.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2361">_brin_begin_parallel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>90.7&nbsp;% (68 / 75)</td>
+              <td class=coverPerLo>45.0&nbsp;% (9 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2546">_brin_end_parallel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2776">_brin_leader_participate_as_worker</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2861">_brin_parallel_build_main</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>92.6&nbsp;% (25 / 27)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2765">_brin_parallel_estimate_shared</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2577">_brin_parallel_heapscan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2618">_brin_parallel_merge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (30 / 30)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2804">_brin_parallel_scan_and_build</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2203">add_values_to_range</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">392114</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1646">brinGetStats</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5365</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1579">brin_build_desc</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">2293</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2954">brin_build_empty_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1489">brin_desummarize_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">52</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              <td class=coverPerLo>40.6&nbsp;% (13 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2991">brin_fill_empty_ranges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">203</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1634">brin_free_desc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1726</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1364">brin_summarize_new_values</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1379">brin_summarize_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerMed>86.5&nbsp;% (32 / 37)</td>
+              <td class=coverPerLo>53.1&nbsp;% (17 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2170">brin_vacuum_scan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">65</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L537">brinbeginscan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1473</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1103">brinbuild</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">183</td>
+              <td class=coverPerHi>97.6&nbsp;% (40 / 41)</td>
+              <td class=coverPerLo>73.3&nbsp;% (22 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L993">brinbuildCallback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">364174</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1044">brinbuildCallbackParallel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3981</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1272">brinbuildempty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1301">brinbulkdelete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L976">brinendscan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1473</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L565">bringetbitmap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1473</td>
+              <td class=coverPerHi>97.5&nbsp;% (116 / 119)</td>
+              <td class=coverPerMed>75.7&nbsp;% (53 / 70)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L248">brinhandler</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2245</td>
+              <td class=coverPerHi>100.0&nbsp;% (53 / 53)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L342">brininsert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63019</td>
+              <td class=coverPerHi>92.6&nbsp;% (50 / 54)</td>
+              <td class=coverPerMed>75.0&nbsp;% (27 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L510">brininsertcleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">577</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1346">brinoptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">655</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L957">brinrescan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1473</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1885">brinsummarize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">131</td>
+              <td class=coverPerHi>94.6&nbsp;% (35 / 37)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1316">brinvacuumcleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2297">check_null_keys</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">94968</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1983">form_and_insert_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1327</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2004">form_and_spill_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">58</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1667">initialize_brin_buildstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">234</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L313">initialize_brin_insertstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">560</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1759">summarize_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1473</td>
+              <td class=coverPerLo>74.1&nbsp;% (20 / 27)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L1714">terminate_brin_buildstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#L2029">union_tuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29</td>
+              <td class=coverPerLo>44.9&nbsp;% (22 / 49)</td>
+              <td class=coverPerLo>57.1&nbsp;% (16 / 28)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

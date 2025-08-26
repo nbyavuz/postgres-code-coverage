@@ -1,0 +1,1169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/storage/buffer/bufmgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory storage">storage</a>/<a href="index.html" title="Click to go to directory buffer">buffer</a> - bufmgr.c<span style="font-size: 80%;"> (<a href="bufmgr.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">91.4&nbsp;%</td>
+            <td class="headerCovTableEntry">2046</td>
+            <td class="headerCovTableEntry">1870</td>
+            <td class="headerCovTableEntry">176</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">1859</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">96.6&nbsp;%</td>
+            <td class="headerCovTableEntry">117</td>
+            <td class="headerCovTableEntry">113</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">109</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">71.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1498</td>
+            <td class="headerCovTableEntry">1071</td>
+            <td class="headerCovTableEntry">427</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1068</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">93.5&nbsp;%</td>
+            <td class="headerCovTableEntry">525</td>
+            <td class="headerCovTableEntry">491</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">490</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1519</td>
+            <td class="headerCovTableEntry">1377</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1369</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.7&nbsp;%</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry">88</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">71.3&nbsp;%</td>
+            <td class="headerCovTableEntry">404</td>
+            <td class="headerCovTableEntry">288</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">288</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1094</td>
+            <td class="headerCovTableEntry">783</td>
+            <td class="headerCovTableEntry">311</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">780</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="bufmgr.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="bufmgr.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="bufmgr.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6147">AbortBufferIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerLo>69.2&nbsp;% (9 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4116">AssertBufferLocksPermitCatalogRead</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">101183747</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4122">AssertNotCatalogBufferLock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">129103</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1762">AsyncReadBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1259689</td>
+              <td class=coverPerHi>97.0&nbsp;% (64 / 66)</td>
+              <td class=coverPerMed>75.0&nbsp;% (30 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3986">AtEOXact_Buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">317933</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4037">AtProcExit_Buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18629</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3615">BgBufferSync</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8401</td>
+              <td class=coverPerHi>100.0&nbsp;% (65 / 65)</td>
+              <td class=coverPerHi>95.2&nbsp;% (40 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1998">BufferAlloc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55363165</td>
+              <td class=coverPerHi>100.0&nbsp;% (42 / 42)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4219">BufferGetBlockNumber</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">139327786</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4481">BufferGetLSNAtomic</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5962887</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4240">BufferGetTag</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14741620</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2909">BufferIsDirty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14526947</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2881">BufferIsExclusiveLocked</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14526947</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4451">BufferIsPermanent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9521982</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3339">BufferSync</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1692</td>
+              <td class=coverPerHi>97.4&nbsp;% (74 / 76)</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5640">CheckBufferIsPinnedOnce</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3889395</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4055">CheckForBufferLeaks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">336562</td>
+              <td class=coverPerLo>44.4&nbsp;% (8 / 18)</td>
+              <td class=coverPerLo>35.7&nbsp;% (5 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4205">CheckPointBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1692</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1525">CheckReadBuffersOperation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">58932512</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5619">ConditionalLockBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1060781</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5841">ConditionalLockBufferForCleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">111880</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5233">CreateAndCopyRelationData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53558</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4162">DebugPrintBufferRefcount</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4881">DropDatabaseBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4528">DropRelationBuffers</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">626</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerHi>92.9&nbsp;% (26 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4649">DropRelationsAllBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13307</td>
+              <td class=coverPerHi>96.7&nbsp;% (58 / 60)</td>
+              <td class=coverPerHi>93.5&nbsp;% (43 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6666">EvictAllUnpinnedBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6714">EvictRelUnpinnedBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerLo>50.0&nbsp;% (12 / 24)</td>
+              <td class=coverPerLo>37.5&nbsp;% (6 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6637">EvictUnpinnedBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">145</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6573">EvictUnpinnedBufferInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2182</td>
+              <td class=coverPerMed>78.9&nbsp;% (15 / 19)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L856">ExtendBufferedRel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44470</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L888">ExtendBufferedRelBy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">157073</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2559">ExtendBufferedRelCommon</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">208863</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2603">ExtendBufferedRelShared</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">196437</td>
+              <td class=coverPerLo>72.9&nbsp;% (62 / 85)</td>
+              <td class=coverPerLo>60.3&nbsp;% (41 / 68)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L920">ExtendBufferedRelTo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49713</td>
+              <td class=coverPerHi>94.6&nbsp;% (35 / 37)</td>
+              <td class=coverPerLo>70.5&nbsp;% (31 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4820">FindAndDropRelationBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">832</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4279">FlushBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">540631</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5297">FlushDatabaseBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5339">FlushOneBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4929">FlushRelationBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">138</td>
+              <td class=coverPerHi>100.0&nbsp;% (33 / 33)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5019">FlushRelationsAllBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerMed>88.6&nbsp;% (31 / 35)</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L446">ForgetPrivateRefCountEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53836962</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2515">GetAdditionalPinLimit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2907464</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2503">GetPinLimit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">507049</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L423">GetPrivateRefCount</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">406031705</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L349">GetPrivateRefCountEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">538073615</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2343">GetVictimBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1896330</td>
+              <td class=coverPerHi>94.9&nbsp;% (37 / 39)</td>
+              <td class=coverPerMed>78.6&nbsp;% (22 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5815">HoldingBufferPinThatDelaysRecovery</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5391">IncrBufferRefCount</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10491732</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4003">InitBufferManagerAccess</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18629</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2176">InvalidateBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">106954</td>
+              <td class=coverPerHi>96.6&nbsp;% (28 / 29)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2275">InvalidateVictimBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1191209</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerLo>59.1&nbsp;% (13 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5899">IsBufferCleanupOK</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2030</td>
+              <td class=coverPerLo>64.7&nbsp;% (11 / 17)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6449">IssuePendingWritebacks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1048</td>
+              <td class=coverPerLo>10.7&nbsp;% (3 / 28)</td>
+              <td class=coverPerLo>5.6&nbsp;% (1 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2541">LimitAdditionalPins</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">196437</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6245">LockBufHdr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34455128</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5593">LockBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">161815062</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5673">LockBufferForCleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21128</td>
+              <td class=coverPerHi>94.2&nbsp;% (49 / 52)</td>
+              <td class=coverPerMed>77.5&nbsp;% (31 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L2942">MarkBufferDirty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21274612</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5423">MarkBufferDirtyHint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9980946</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerMed>77.8&nbsp;% (28 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L323">NewPrivateRefCountEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53836962</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3062">PinBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53686742</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1108">PinBufferForBlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56898392</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerHi>91.7&nbsp;% (33 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3173">PinBuffer_Locked</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2198511</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L649">PrefetchBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21233</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L559">PrefetchSharedBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30847</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1591">ProcessReadBuffersResult</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1251566</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L756">ReadBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39557249</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L803">ReadBufferExtended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47826151</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L840">ReadBufferWithoutRelcache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5662067</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1191">ReadBuffer_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53488218</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1562">ReadBuffersCanStartIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1419458</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1549">ReadBuffersCanStartIOOnce</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1419458</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L680">ReadRecentBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4085</td>
+              <td class=coverPerHi>92.6&nbsp;% (25 / 27)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5119">RelationCopyStorageUsingBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">71249</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerLo>65.0&nbsp;% (13 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L4419">RelationGetNumberOfBlocksInFork</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1716347</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3004">ReleaseAndReadBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26356549</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5359">ReleaseBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57108038</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6540">ResOwnerPrintBufferIO</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6563">ResOwnerPrintBufferPin</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6532">ResOwnerReleaseBufferIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6548">ResOwnerReleaseBufferPin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7391</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L257">ReservePrivateRefCountEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">59326975</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6399">ScheduleBufferTagForWriteback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">535081</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6031">StartBufferIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2442654</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1506">StartReadBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54968756</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1487">StartReadBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1459611</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1260">StartReadBuffersImpl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56428367</td>
+              <td class=coverPerHi>96.0&nbsp;% (48 / 50)</td>
+              <td class=coverPerMed>77.8&nbsp;% (28 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3913">SyncOneBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1818351</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6088">TerminateBufferIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2298737</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5565">UnlockBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48001</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5376">UnlockReleaseBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17945724</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3254">UnpinBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66016554</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3263">UnpinBufferNoOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66020955</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6275">WaitBufHdrUnlocked</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2001</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L5952">WaitIO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7496</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1630">WaitReadBuffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1251566</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L3219">WakePinCountWaiter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6387">WritebackContextInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2597</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L1029">ZeroAndLockBuffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">310253</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7163">buffer_readv_complete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1148626</td>
+              <td class=coverPerHi>100.0&nbsp;% (41 / 41)</td>
+              <td class=coverPerMed>81.8&nbsp;% (36 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7019">buffer_readv_complete_one</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1275726</td>
+              <td class=coverPerHi>100.0&nbsp;% (42 / 42)</td>
+              <td class=coverPerMed>84.4&nbsp;% (27 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6882">buffer_readv_decode_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">765</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6924">buffer_readv_encode_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">282</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerMed>75.0&nbsp;% (18 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7266">buffer_readv_report</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">399</td>
+              <td class=coverPerHi>97.2&nbsp;% (35 / 36)</td>
+              <td class=coverPerLo>71.1&nbsp;% (27 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6773">buffer_stage_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1251972</td>
+              <td class=coverPerMed>86.5&nbsp;% (32 / 37)</td>
+              <td class=coverPerLo>57.5&nbsp;% (23 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6299">buffertag_comparator</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 15)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6333">ckpt_buforder_comparator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2921671</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7416">local_buffer_readv_complete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1824</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7410">local_buffer_readv_stage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1824</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6202">local_buffer_write_error_callback</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6218">rlocator_comparator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9215269</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7365">shared_buffer_readv_complete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1146802</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7379">shared_buffer_readv_complete_local</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1250148</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L7359">shared_buffer_readv_stage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1250148</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6186">shared_buffer_write_error_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#L6364">ts_ckpt_progress_comparator</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">236771</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

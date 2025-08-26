@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/postmaster/pmchild.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory postmaster">postmaster</a> - pmchild.c<span style="font-size: 80%;"> (source / <a href="pmchild.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">94.3&nbsp;%</td>
+            <td class="headerCovTableEntry">88</td>
+            <td class="headerCovTableEntry">83</td>
+            <td class="headerCovTableEntry"><a href="#L84" title="goto first UBC line">5</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L81" title="goto first CBC line">83</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">64.0&nbsp;%</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first UBC branch">18</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first CBC branch">32</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">94.3&nbsp;%</td>
+            <td class="headerCovTableEntry">88</td>
+            <td class="headerCovTableEntry">83</td>
+            <td class="headerCovTableEntry"><a href="#L84" title="goto first UBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">5</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L81" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">83</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">64.0&nbsp;%</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first UBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">18</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first CBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">32</a></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       3</span>                 :                :  * pmchild.c</span>
+<span id="L4" title="Line 4: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       4</span>                 :                :  *    Functions for keeping track of postmaster child processes.</span>
+<span id="L5" title="Line 5: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       6</span>                 :                :  * Postmaster keeps track of all child processes so that when a process exits,</span>
+<span id="L7" title="Line 7: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       7</span>                 :                :  * it knows what kind of a process it was and can clean up accordingly.  Every</span>
+<span id="L8" title="Line 8: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       8</span>                 :                :  * child process is allocated a PMChild struct from a fixed pool of structs.</span>
+<span id="L9" title="Line 9: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">       9</span>                 :                :  * The size of the pool is determined by various settings that configure how</span>
+<span id="L10" title="Line 10: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      10</span>                 :                :  * many worker processes and backend connections are allowed, i.e.</span>
+<span id="L11" title="Line 11: commit c758119e5bfb on 2025-01-06 by nathan@postgresql.org">                           <span class="lineNum">      11</span>                 :                :  * autovacuum_worker_slots, max_worker_processes, max_wal_senders, and</span>
+<span id="L12" title="Line 12: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      12</span>                 :                :  * max_connections.</span>
+<span id="L13" title="Line 13: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      13</span>                 :                :  *</span>
+<span id="L14" title="Line 14: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      14</span>                 :                :  * Dead-end backends are handled slightly differently.  There is no limit</span>
+<span id="L15" title="Line 15: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      15</span>                 :                :  * on the number of dead-end backends, and they do not need unique IDs, so</span>
+<span id="L16" title="Line 16: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      16</span>                 :                :  * their PMChild structs are allocated dynamically, not from a pool.</span>
+<span id="L17" title="Line 17: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      17</span>                 :                :  *</span>
+<span id="L18" title="Line 18: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      18</span>                 :                :  * The structures and functions in this file are private to the postmaster</span>
+<span id="L19" title="Line 19: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      19</span>                 :                :  * process.  But note that there is an array in shared memory, managed by</span>
+<span id="L20" title="Line 20: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      20</span>                 :                :  * pmsignal.c, that mirrors this.</span>
+<span id="L21" title="Line 21: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      21</span>                 :                :  *</span>
+<span id="L22" title="Line 22: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      22</span>                 :                :  *</span>
+<span id="L23" title="Line 23: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">      23</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L24" title="Line 24: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      24</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L25" title="Line 25: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      25</span>                 :                :  *</span>
+<span id="L26" title="Line 26: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      26</span>                 :                :  * IDENTIFICATION</span>
+<span id="L27" title="Line 27: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      27</span>                 :                :  *    src/backend/postmaster/pmchild.c</span>
+<span id="L28" title="Line 28: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      28</span>                 :                :  *</span>
+<span id="L29" title="Line 29: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      29</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L30" title="Line 30: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      30</span>                 :                :  */</span>
+<span id="L31" title="Line 31: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      31</span>                 :                : </span>
+<span id="L32" title="Line 32: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      32</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L33" title="Line 33: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      33</span>                 :                : </span>
+<span id="L34" title="Line 34: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      34</span>                 :                : #include &quot;miscadmin.h&quot;</span>
+<span id="L35" title="Line 35: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      35</span>                 :                : #include &quot;postmaster/autovacuum.h&quot;</span>
+<span id="L36" title="Line 36: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      36</span>                 :                : #include &quot;postmaster/postmaster.h&quot;</span>
+<span id="L37" title="Line 37: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      37</span>                 :                : #include &quot;replication/walsender.h&quot;</span>
+<span id="L38" title="Line 38: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      38</span>                 :                : #include &quot;storage/pmsignal.h&quot;</span>
+<span id="L39" title="Line 39: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      39</span>                 :                : #include &quot;storage/proc.h&quot;</span>
+<span id="L40" title="Line 40: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      40</span>                 :                : </span>
+<span id="L41" title="Line 41: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      41</span>                 :                : /*</span>
+<span id="L42" title="Line 42: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      42</span>                 :                :  * Freelists for different kinds of child processes.  We maintain separate</span>
+<span id="L43" title="Line 43: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      43</span>                 :                :  * pools for each, so that for example launching a lot of regular backends</span>
+<span id="L44" title="Line 44: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      44</span>                 :                :  * cannot prevent autovacuum or an aux process from launching.</span>
+<span id="L45" title="Line 45: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      45</span>                 :                :  */</span>
+<span id="L46" title="Line 46: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      46</span>                 :                : typedef struct PMChildPool</span>
+<span id="L47" title="Line 47: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      47</span>                 :                : {</span>
+<span id="L48" title="Line 48: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      48</span>                 :                :     int         size;           /* number of PMChild slots reserved for this</span>
+<span id="L49" title="Line 49: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      49</span>                 :                :                                  * kind of processes */</span>
+<span id="L50" title="Line 50: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      50</span>                 :                :     int         first_slotno;   /* first slot belonging to this pool */</span>
+<span id="L51" title="Line 51: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      51</span>                 :                :     dlist_head  freelist;       /* currently unused PMChild entries */</span>
+<span id="L52" title="Line 52: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      52</span>                 :                : } PMChildPool;</span>
+<span id="L53" title="Line 53: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      53</span>                 :                : </span>
+<span id="L54" title="Line 54: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      54</span>                 :                : static PMChildPool pmchild_pools[BACKEND_NUM_TYPES];</span>
+<span id="L55" title="Line 55: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      55</span>                 :                : NON_EXEC_STATIC int num_pmchild_slots = 0;</span>
+<span id="L56" title="Line 56: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      56</span>                 :                : </span>
+<span id="L57" title="Line 57: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      57</span>                 :                : /*</span>
+<span id="L58" title="Line 58: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      58</span>                 :                :  * List of active child processes.  This includes dead-end children.</span>
+<span id="L59" title="Line 59: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      59</span>                 :                :  */</span>
+<span id="L60" title="Line 60: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      60</span>                 :                : dlist_head  ActiveChildList;</span>
+<span id="L61" title="Line 61: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      61</span>                 :                : </span>
+<span id="L62" title="Line 62: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      62</span>                 :                : /*</span>
+<span id="L63" title="Line 63: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 :                :  * Dummy pointer to persuade Valgrind that we've not leaked the array of</span>
+<span id="L64" title="Line 64: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 :                :  * PMChild structs.  Make it global to ensure the compiler doesn't</span>
+<span id="L65" title="Line 65: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      65</span>                 :                :  * optimize it away.</span>
+<span id="L66" title="Line 66: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 :                :  */</span>
+<span id="L67" title="Line 67: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      67</span>                 :                : #ifdef USE_VALGRIND</span>
+<span id="L68" title="Line 68: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      68</span>                 :                : extern PMChild *pmchild_array;</span>
+<span id="L69" title="Line 69: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 :                : PMChild    *pmchild_array;</span>
+<span id="L70" title="Line 70: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :                : #endif</span>
+<span id="L71" title="Line 71: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 :                : </span>
+<span id="L72" title="Line 72: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :                : </span>
+<span id="L73" title="Line 73: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      73</span>                 :                : /*</span>
+<span id="L74" title="Line 74: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      74</span>                 :                :  * MaxLivePostmasterChildren</span>
+<span id="L75" title="Line 75: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      75</span>                 :                :  *</span>
+<span id="L76" title="Line 76: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      76</span>                 :                :  * This reports the number of postmaster child processes that can be active.</span>
+<span id="L77" title="Line 77: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      77</span>                 :                :  * It includes all children except for dead-end children.  This allows the</span>
+<span id="L78" title="Line 78: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      78</span>                 :                :  * array in shared memory (PMChildFlags) to have a fixed maximum size.</span>
+<span id="L79" title="Line 79: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      79</span>                 :                :  */</span>
+<span id="L80" title="Line 80: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      80</span>                 :                : int</span>
+<span id="L81" title="Line 81: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  <a href="#L85" title="next CBC in &ldquo;(30,360] days&rdquo; bin">285</a> <a href="#L85" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">      81</span>                 :<a href="#L85" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        5076 : MaxLivePostmasterChildren(void)</span></span>
+<span id="L82" title="Line 82: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      82</span>                 :                : {</span>
+<span id="L83" title="Line 83: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      83</span>         [<span class="tlaUBC"> <a href="#L84" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L136" title="CBC: Branch 1 was taken 5076 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           5076 :     if (num_pmchild_slots == 0)</span></span>
+<span id="L84" title="Line 84: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 285 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L184" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">285</a> <a href="#L184" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">      84</span>         [<span class="tlaUBC"> <a href="#L163" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L163" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L184" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         elog(ERROR, &quot;PM child array not initialized yet&quot;);</span></span>
+<span id="L85" title="Line 85: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  <a href="#L186" title="next CBC in &ldquo;(30,360] days&rdquo; bin">285</a> <a href="#L114" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">      85</span>                 :<a href="#L186" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        5076 :     return num_pmchild_slots;</span></span>
+<span id="L86" title="Line 86: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      86</span>                 :                : }</span>
+<span id="L87" title="Line 87: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      87</span>                 :                : </span>
+<span id="L88" title="Line 88: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      88</span>                 :                : /*</span>
+<span id="L89" title="Line 89: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      89</span>                 :                :  * Initialize at postmaster startup</span>
+<span id="L90" title="Line 90: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      90</span>                 :                :  *</span>
+<span id="L91" title="Line 91: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      91</span>                 :                :  * Note: This is not called on crash restart.  We rely on PMChild entries to</span>
+<span id="L92" title="Line 92: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      92</span>                 :                :  * remain valid through the restart process.  This is important because the</span>
+<span id="L93" title="Line 93: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      93</span>                 :                :  * syslogger survives through the crash restart process, so we must not</span>
+<span id="L94" title="Line 94: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      94</span>                 :                :  * invalidate its PMChild slot.</span>
+<span id="L95" title="Line 95: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      95</span>                 :                :  */</span>
+<span id="L96" title="Line 96: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      96</span>                 :                : void</span>
+<span id="L97" title="Line 97: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      97</span>                 :<span class="tlaCBC">           1044 : InitPostmasterChildSlots(void)</span></span>
+<span id="L98" title="Line 98: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      98</span>                 :                : {</span>
+<span id="L99" title="Line 99: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      99</span>                 :                :     int         slotno;</span>
+<span id="L100" title="Line 100: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     100</span>                 :                :     PMChild    *slots;</span>
+<span id="L101" title="Line 101: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     101</span>                 :                : </span>
+<span id="L102" title="Line 102: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     102</span>                 :                :     /*</span>
+<span id="L103" title="Line 103: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     103</span>                 :                :      * We allow more connections here than we can have backends because some</span>
+<span id="L104" title="Line 104: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     104</span>                 :                :      * might still be authenticating; they might fail auth, or some existing</span>
+<span id="L105" title="Line 105: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     105</span>                 :                :      * backend might exit before the auth cycle is completed.  The exact</span>
+<span id="L106" title="Line 106: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     106</span>                 :                :      * MaxConnections limit is enforced when a new backend tries to join the</span>
+<span id="L107" title="Line 107: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     107</span>                 :                :      * PGPROC array.</span>
+<span id="L108" title="Line 108: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     108</span>                 :                :      *</span>
+<span id="L109" title="Line 109: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     109</span>                 :                :      * WAL senders start out as regular backends, so they share the same pool.</span>
+<span id="L110" title="Line 110: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     110</span>                 :                :      */</span>
+<span id="L111" title="Line 111: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     111</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_BACKEND].size = 2 * (MaxConnections + max_wal_senders);</span></span>
+<span id="L112" title="Line 112: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     112</span>                 :                : </span>
+<span id="L113" title="Line 113: commit c758119e5bfb on 2025-01-06 by nathan@postgresql.org">  232 <a href="#top" title="next CBC in &ldquo;nathan@postgresql.org&rdquo; bin">nathan@postgresql.or</a> <span class="lineNum">     113</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_AUTOVAC_WORKER].size = autovacuum_worker_slots;</span></span>
+<span id="L114" title="Line 114: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  285 <a href="#L121" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     114</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_BG_WORKER].size = max_worker_processes;</span></span>
+<span id="L115" title="Line 115: commit 55b454d0e140 on 2025-03-18 by andres@anarazel.de">  161 <a href="#top" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     115</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_IO_WORKER].size = MAX_IO_WORKERS;</span></span>
+<span id="L116" title="Line 116: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     116</span>                 :                : </span>
+<span id="L117" title="Line 117: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     117</span>                 :                :     /*</span>
+<span id="L118" title="Line 118: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     118</span>                 :                :      * There can be only one of each of these running at a time.  They each</span>
+<span id="L119" title="Line 119: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     119</span>                 :                :      * get their own pool of just one entry.</span>
+<span id="L120" title="Line 120: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     120</span>                 :                :      */</span>
+<span id="L121" title="Line 121: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  285 <a href="#L186" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     121</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_AUTOVAC_LAUNCHER].size = 1;</span></span>
+<span id="L122" title="Line 122: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     122</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_SLOTSYNC_WORKER].size = 1;</span></span>
+<span id="L123" title="Line 123: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     123</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_ARCHIVER].size = 1;</span></span>
+<span id="L124" title="Line 124: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     124</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_BG_WRITER].size = 1;</span></span>
+<span id="L125" title="Line 125: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     125</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_CHECKPOINTER].size = 1;</span></span>
+<span id="L126" title="Line 126: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     126</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_STARTUP].size = 1;</span></span>
+<span id="L127" title="Line 127: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     127</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_WAL_RECEIVER].size = 1;</span></span>
+<span id="L128" title="Line 128: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     128</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_WAL_SUMMARIZER].size = 1;</span></span>
+<span id="L129" title="Line 129: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     129</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_WAL_WRITER].size = 1;</span></span>
+<span id="L130" title="Line 130: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     130</span>                 :<span class="tlaCBC">           1044 :     pmchild_pools[B_LOGGER].size = 1;</span></span>
+<span id="L131" title="Line 131: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     131</span>                 :                : </span>
+<span id="L132" title="Line 132: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     132</span>                 :                :     /* The rest of the pmchild_pools are left at zero size */</span>
+<span id="L133" title="Line 133: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     133</span>                 :                : </span>
+<span id="L134" title="Line 134: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     134</span>                 :                :     /* Count the total number of slots */</span>
+<span id="L135" title="Line 135: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     135</span>                 :<span class="tlaCBC">           1044 :     num_pmchild_slots = 0;</span></span>
+<span id="L136" title="Line 136: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     136</span>         [<span class="tlaCBC"> <a href="#L147" title="CBC: Branch 0 was taken 18792 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L147" title="CBC: Branch 1 was taken 1044 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          19836 :     for (int i = 0; i &lt; BACKEND_NUM_TYPES; i++)</span></span>
+<span id="L137" title="Line 137: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     137</span>                 :<span class="tlaCBC">          18792 :         num_pmchild_slots += pmchild_pools[i].size;</span></span>
+<span id="L138" title="Line 138: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     138</span>                 :                : </span>
+<span id="L139" title="Line 139: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 :                :     /* Allocate enough slots, and make sure Valgrind doesn't complain */</span>
+<span id="L140" title="Line 140: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     140</span>                 :<span class="tlaCBC">           1044 :     slots = palloc(num_pmchild_slots * sizeof(PMChild));</span></span>
+<span id="L141" title="Line 141: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :                : #ifdef USE_VALGRIND</span>
+<span id="L142" title="Line 142: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 :                :     pmchild_array = slots;</span>
+<span id="L143" title="Line 143: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 :                : #endif</span>
+<span id="L144" title="Line 144: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :                : </span>
+<span id="L145" title="Line 145: commit db01c90b2f02 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 :                :     /* Initialize them */</span>
+<span id="L146" title="Line 146: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     146</span>                 :<span class="tlaCBC">           1044 :     slotno = 0;</span></span>
+<span id="L147" title="Line 147: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     147</span>         [<span class="tlaCBC"> <a href="#L152" title="CBC: Branch 0 was taken 18792 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L152" title="CBC: Branch 1 was taken 1044 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          19836 :     for (int btype = 0; btype &lt; BACKEND_NUM_TYPES; btype++)</span></span>
+<span id="L148" title="Line 148: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     148</span>                 :                :     {</span>
+<span id="L149" title="Line 149: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     149</span>                 :<span class="tlaCBC">          18792 :         pmchild_pools[btype].first_slotno = slotno + 1;</span></span>
+<span id="L150" title="Line 150: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     150</span>                 :<span class="tlaCBC">          18792 :         dlist_init(&amp;pmchild_pools[btype].freelist);</span></span>
+<span id="L151" title="Line 151: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     151</span>                 :                : </span>
+<span id="L152" title="Line 152: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     152</span>         [<span class="tlaCBC"> <a href="#L163" title="CBC: Branch 0 was taken 212577 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L163" title="CBC: Branch 1 was taken 18792 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         231369 :         for (int j = 0; j &lt; pmchild_pools[btype].size; j++)</span></span>
+<span id="L153" title="Line 153: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     153</span>                 :                :         {</span>
+<span id="L154" title="Line 154: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     154</span>                 :<span class="tlaCBC">         212577 :             slots[slotno].pid = 0;</span></span>
+<span id="L155" title="Line 155: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     155</span>                 :<span class="tlaCBC">         212577 :             slots[slotno].child_slot = slotno + 1;</span></span>
+<span id="L156" title="Line 156: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     156</span>                 :<span class="tlaCBC">         212577 :             slots[slotno].bkend_type = B_INVALID;</span></span>
+<span id="L157" title="Line 157: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     157</span>                 :<span class="tlaCBC">         212577 :             slots[slotno].rw = NULL;</span></span>
+<span id="L158" title="Line 158: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     158</span>                 :<span class="tlaCBC">         212577 :             slots[slotno].bgworker_notify = false;</span></span>
+<span id="L159" title="Line 159: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     159</span>                 :<span class="tlaCBC">         212577 :             dlist_push_tail(&amp;pmchild_pools[btype].freelist, &amp;slots[slotno].elem);</span></span>
+<span id="L160" title="Line 160: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     160</span>                 :<span class="tlaCBC">         212577 :             slotno++;</span></span>
+<span id="L161" title="Line 161: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     161</span>                 :                :         }</span>
+<span id="L162" title="Line 162: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     162</span>                 :                :     }</span>
+<span id="L163" title="Line 163: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     163</span>         [<span class="tlaUBC"> <a href="#L183" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L183" title="CBC: Branch 1 was taken 1044 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           1044 :     Assert(slotno == num_pmchild_slots);</span></span>
+<span id="L164" title="Line 164: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     164</span>                 :                : </span>
+<span id="L165" title="Line 165: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     165</span>                 :                :     /* Initialize other structures */</span>
+<span id="L166" title="Line 166: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     166</span>                 :<span class="tlaCBC">           1044 :     dlist_init(&amp;ActiveChildList);</span></span>
+<span id="L167" title="Line 167: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     167</span>                 :<span class="tlaCBC">           1044 : }</span></span>
+<span id="L168" title="Line 168: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     168</span>                 :                : </span>
+<span id="L169" title="Line 169: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     169</span>                 :                : /*</span>
+<span id="L170" title="Line 170: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     170</span>                 :                :  * Allocate a PMChild entry for a postmaster child process of given type.</span>
+<span id="L171" title="Line 171: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     171</span>                 :                :  *</span>
+<span id="L172" title="Line 172: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     172</span>                 :                :  * The entry is taken from the right pool for the type.</span>
+<span id="L173" title="Line 173: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     173</span>                 :                :  *</span>
+<span id="L174" title="Line 174: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     174</span>                 :                :  * pmchild-&gt;child_slot in the returned struct is unique among all active child</span>
+<span id="L175" title="Line 175: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     175</span>                 :                :  * processes.</span>
+<span id="L176" title="Line 176: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     176</span>                 :                :  */</span>
+<span id="L177" title="Line 177: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     177</span>                 :                : PMChild *</span>
+<span id="L178" title="Line 178: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     178</span>                 :<span class="tlaCBC">          21320 : AssignPostmasterChildSlot(BackendType btype)</span></span>
+<span id="L179" title="Line 179: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     179</span>                 :                : {</span>
+<span id="L180" title="Line 180: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     180</span>                 :                :     dlist_head *freelist;</span>
+<span id="L181" title="Line 181: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     181</span>                 :                :     PMChild    *pmchild;</span>
+<span id="L182" title="Line 182: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     182</span>                 :                : </span>
+<span id="L183" title="Line 183: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     183</span>         [<span class="tlaUBC"> <a href="#L184" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L187" title="CBC: Branch 1 was taken 21320 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21320 :     if (pmchild_pools[btype].size == 0)</span></span>
+<span id="L184" title="Line 184: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 285 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L203" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">285</a> <a href="#L203" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     184</span>         [<span class="tlaUBC"> <a href="#L200" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L200" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L203" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         elog(ERROR, &quot;cannot allocate a PMChild slot for backend type %d&quot;, btype);</span></span>
+<span id="L185" title="Line 185: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     185</span>                 :                : </span>
+<span id="L186" title="Line 186: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  <a href="#L207" title="next CBC in &ldquo;(30,360] days&rdquo; bin">285</a> <a href="#L207" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     186</span>                 :<a href="#L207" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       21320 :     freelist = &amp;pmchild_pools[btype].freelist;</span></span>
+<span id="L187" title="Line 187: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     187</span>         [<span class="tlaCBC"> <a href="#L200" title="CBC: Branch 0 was taken 28 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L200" title="CBC: Branch 1 was taken 21292 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21320 :     if (dlist_is_empty(freelist))</span></span>
+<span id="L188" title="Line 188: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     188</span>                 :<span class="tlaCBC">             28 :         return NULL;</span></span>
+<span id="L189" title="Line 189: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     189</span>                 :                : </span>
+<span id="L190" title="Line 190: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     190</span>                 :<span class="tlaCBC">          21292 :     pmchild = dlist_container(PMChild, elem, dlist_pop_head_node(freelist));</span></span>
+<span id="L191" title="Line 191: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     191</span>                 :<span class="tlaCBC">          21292 :     pmchild-&gt;pid = 0;</span></span>
+<span id="L192" title="Line 192: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     192</span>                 :<span class="tlaCBC">          21292 :     pmchild-&gt;bkend_type = btype;</span></span>
+<span id="L193" title="Line 193: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     193</span>                 :<span class="tlaCBC">          21292 :     pmchild-&gt;rw = NULL;</span></span>
+<span id="L194" title="Line 194: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     194</span>                 :<span class="tlaCBC">          21292 :     pmchild-&gt;bgworker_notify = true;</span></span>
+<span id="L195" title="Line 195: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     195</span>                 :                : </span>
+<span id="L196" title="Line 196: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     196</span>                 :                :     /*</span>
+<span id="L197" title="Line 197: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     197</span>                 :                :      * pmchild-&gt;child_slot for each entry was initialized when the array of</span>
+<span id="L198" title="Line 198: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     198</span>                 :                :      * slots was allocated.  Sanity check it.</span>
+<span id="L199" title="Line 199: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     199</span>                 :                :      */</span>
+<span id="L200" title="Line 200: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     200</span>         [<span class="tlaCBC"> <a href="#L201" title="CBC: Branch 0 was taken 21292 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L201" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">          21292 :     if (!(pmchild-&gt;child_slot &gt;= pmchild_pools[btype].first_slotno &amp;&amp;</span></span>
+<span id="L201" title="Line 201: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     201</span>         [<span class="tlaUBC"> <a href="#L203" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L212" title="CBC: Branch 1 was taken 21292 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21292 :           pmchild-&gt;child_slot &lt; pmchild_pools[btype].first_slotno + pmchild_pools[btype].size))</span></span>
+<span id="L202" title="Line 202: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     202</span>                 :                :     {</span>
+<span id="L203" title="Line 203: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 285 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L277" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">285</a> <a href="#L277" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     203</span>         [<span class="tlaUBC"> <a href="#L231" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L231" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L277" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         elog(ERROR, &quot;pmchild freelist for backend type %d is corrupt&quot;,</span></span>
+<span id="L204" title="Line 204: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     204</span>                 :                :              pmchild-&gt;bkend_type);</span>
+<span id="L205" title="Line 205: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     205</span>                 :                :     }</span>
+<span id="L206" title="Line 206: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     206</span>                 :                : </span>
+<span id="L207" title="Line 207: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  <a href="#L281" title="next CBC in &ldquo;(30,360] days&rdquo; bin">285</a> <a href="#L281" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     207</span>                 :<a href="#L281" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       21292 :     dlist_push_head(&amp;ActiveChildList, &amp;pmchild-&gt;elem);</span></span>
+<span id="L208" title="Line 208: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     208</span>                 :                : </span>
+<span id="L209" title="Line 209: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     209</span>                 :                :     /* Update the status in the shared memory array */</span>
+<span id="L210" title="Line 210: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     210</span>                 :<span class="tlaCBC">          21292 :     MarkPostmasterChildSlotAssigned(pmchild-&gt;child_slot);</span></span>
+<span id="L211" title="Line 211: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     211</span>                 :                : </span>
+<span id="L212" title="Line 212: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     212</span>         [<span class="tlaCBC"> <a href="#L228" title="CBC: Branch 0 was taken 1110 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L228" title="CBC: Branch 1 was taken 20182 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21292 :     elog(DEBUG2, &quot;assigned pm child slot %d for %s&quot;,</span></span>
+<span id="L213" title="Line 213: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     213</span>                 :                :          pmchild-&gt;child_slot, PostmasterChildName(btype));</span>
+<span id="L214" title="Line 214: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     214</span>                 :                : </span>
+<span id="L215" title="Line 215: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     215</span>                 :<span class="tlaCBC">          21292 :     return pmchild;</span></span>
+<span id="L216" title="Line 216: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     216</span>                 :                : }</span>
+<span id="L217" title="Line 217: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     217</span>                 :                : </span>
+<span id="L218" title="Line 218: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     218</span>                 :                : /*</span>
+<span id="L219" title="Line 219: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     219</span>                 :                :  * Allocate a PMChild struct for a dead-end backend.  Dead-end children are</span>
+<span id="L220" title="Line 220: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     220</span>                 :                :  * not assigned a child_slot number.  The struct is palloc'd; returns NULL if</span>
+<span id="L221" title="Line 221: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     221</span>                 :                :  * out of memory.</span>
+<span id="L222" title="Line 222: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     222</span>                 :                :  */</span>
+<span id="L223" title="Line 223: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     223</span>                 :                : PMChild *</span>
+<span id="L224" title="Line 224: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     224</span>                 :<span class="tlaCBC">            172 : AllocDeadEndChild(void)</span></span>
+<span id="L225" title="Line 225: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     225</span>                 :                : {</span>
+<span id="L226" title="Line 226: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     226</span>                 :                :     PMChild    *pmchild;</span>
+<span id="L227" title="Line 227: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     227</span>                 :                : </span>
+<span id="L228" title="Line 228: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     228</span>         [<span class="tlaCBC"> <a href="#L231" title="CBC: Branch 0 was taken 30 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L231" title="CBC: Branch 1 was taken 142 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            172 :     elog(DEBUG2, &quot;allocating dead-end child&quot;);</span></span>
+<span id="L229" title="Line 229: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     229</span>                 :                : </span>
+<span id="L230" title="Line 230: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     230</span>                 :<span class="tlaCBC">            172 :     pmchild = (PMChild *) palloc_extended(sizeof(PMChild), MCXT_ALLOC_NO_OOM);</span></span>
+<span id="L231" title="Line 231: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     231</span>         [<span class="tlaCBC"> <a href="#L255" title="CBC: Branch 0 was taken 172 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L274" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">            172 :     if (pmchild)</span></span>
+<span id="L232" title="Line 232: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     232</span>                 :                :     {</span>
+<span id="L233" title="Line 233: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     233</span>                 :<span class="tlaCBC">            172 :         pmchild-&gt;pid = 0;</span></span>
+<span id="L234" title="Line 234: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     234</span>                 :<span class="tlaCBC">            172 :         pmchild-&gt;child_slot = 0;</span></span>
+<span id="L235" title="Line 235: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     235</span>                 :<span class="tlaCBC">            172 :         pmchild-&gt;bkend_type = B_DEAD_END_BACKEND;</span></span>
+<span id="L236" title="Line 236: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     236</span>                 :<span class="tlaCBC">            172 :         pmchild-&gt;rw = NULL;</span></span>
+<span id="L237" title="Line 237: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     237</span>                 :<span class="tlaCBC">            172 :         pmchild-&gt;bgworker_notify = false;</span></span>
+<span id="L238" title="Line 238: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     238</span>                 :                : </span>
+<span id="L239" title="Line 239: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     239</span>                 :<span class="tlaCBC">            172 :         dlist_push_head(&amp;ActiveChildList, &amp;pmchild-&gt;elem);</span></span>
+<span id="L240" title="Line 240: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     240</span>                 :                :     }</span>
+<span id="L241" title="Line 241: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     241</span>                 :                : </span>
+<span id="L242" title="Line 242: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     242</span>                 :<span class="tlaCBC">            172 :     return pmchild;</span></span>
+<span id="L243" title="Line 243: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     243</span>                 :                : }</span>
+<span id="L244" title="Line 244: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     244</span>                 :                : </span>
+<span id="L245" title="Line 245: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     245</span>                 :                : /*</span>
+<span id="L246" title="Line 246: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     246</span>                 :                :  * Release a PMChild slot, after the child process has exited.</span>
+<span id="L247" title="Line 247: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     247</span>                 :                :  *</span>
+<span id="L248" title="Line 248: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     248</span>                 :                :  * Returns true if the child detached cleanly from shared memory, false</span>
+<span id="L249" title="Line 249: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     249</span>                 :                :  * otherwise (see MarkPostmasterChildSlotUnassigned).</span>
+<span id="L250" title="Line 250: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     250</span>                 :                :  */</span>
+<span id="L251" title="Line 251: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     251</span>                 :                : bool</span>
+<span id="L252" title="Line 252: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     252</span>                 :<span class="tlaCBC">          21463 : ReleasePostmasterChildSlot(PMChild *pmchild)</span></span>
+<span id="L253" title="Line 253: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     253</span>                 :                : {</span>
+<span id="L254" title="Line 254: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     254</span>                 :<span class="tlaCBC">          21463 :     dlist_delete(&amp;pmchild-&gt;elem);</span></span>
+<span id="L255" title="Line 255: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     255</span>         [<span class="tlaCBC"> <a href="#L257" title="CBC: Branch 0 was taken 172 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L257" title="CBC: Branch 1 was taken 21291 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21463 :     if (pmchild-&gt;bkend_type == B_DEAD_END_BACKEND)</span></span>
+<span id="L256" title="Line 256: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     256</span>                 :                :     {</span>
+<span id="L257" title="Line 257: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     257</span>         [<span class="tlaCBC"> <a href="#L265" title="CBC: Branch 0 was taken 30 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L265" title="CBC: Branch 1 was taken 142 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            172 :         elog(DEBUG2, &quot;releasing dead-end backend&quot;);</span></span>
+<span id="L258" title="Line 258: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     258</span>                 :<span class="tlaCBC">            172 :         pfree(pmchild);</span></span>
+<span id="L259" title="Line 259: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     259</span>                 :<span class="tlaCBC">            172 :         return true;</span></span>
+<span id="L260" title="Line 260: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     260</span>                 :                :     }</span>
+<span id="L261" title="Line 261: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     261</span>                 :                :     else</span>
+<span id="L262" title="Line 262: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     262</span>                 :                :     {</span>
+<span id="L263" title="Line 263: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     263</span>                 :                :         PMChildPool *pool;</span>
+<span id="L264" title="Line 264: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     264</span>                 :                : </span>
+<span id="L265" title="Line 265: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     265</span>         [<span class="tlaCBC"> <a href="#L268" title="CBC: Branch 0 was taken 1100 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L268" title="CBC: Branch 1 was taken 20191 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21291 :         elog(DEBUG2, &quot;releasing pm child slot %d&quot;, pmchild-&gt;child_slot);</span></span>
+<span id="L266" title="Line 266: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     266</span>                 :                : </span>
+<span id="L267" title="Line 267: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     267</span>                 :                :         /* WAL senders start out as regular backends, and share the pool */</span>
+<span id="L268" title="Line 268: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     268</span>         [<span class="tlaCBC"> <a href="#L274" title="CBC: Branch 0 was taken 32 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L274" title="CBC: Branch 1 was taken 21259 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21291 :         if (pmchild-&gt;bkend_type == B_WAL_SENDER)</span></span>
+<span id="L269" title="Line 269: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     269</span>                 :<span class="tlaCBC">             32 :             pool = &amp;pmchild_pools[B_BACKEND];</span></span>
+<span id="L270" title="Line 270: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     270</span>                 :                :         else</span>
+<span id="L271" title="Line 271: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     271</span>                 :<span class="tlaCBC">          21259 :             pool = &amp;pmchild_pools[pmchild-&gt;bkend_type];</span></span>
+<span id="L272" title="Line 272: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     272</span>                 :                : </span>
+<span id="L273" title="Line 273: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     273</span>                 :                :         /* sanity check that we return the entry to the right pool */</span>
+<span id="L274" title="Line 274: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     274</span>         [<span class="tlaCBC"> <a href="#L275" title="CBC: Branch 0 was taken 21291 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L275" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">          21291 :         if (!(pmchild-&gt;child_slot &gt;= pool-&gt;first_slotno &amp;&amp;</span></span>
+<span id="L275" title="Line 275: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     275</span>         [<span class="tlaUBC"> <a href="#L277" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L294" title="CBC: Branch 1 was taken 21291 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          21291 :               pmchild-&gt;child_slot &lt; pool-&gt;first_slotno + pool-&gt;size))</span></span>
+<span id="L276" title="Line 276: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     276</span>                 :                :         {</span>
+<span id="L277" title="Line 277: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 285 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#L301" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">285</a> <a href="#L301" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     277</span>         [<span class="tlaUBC"> <a href="#L294" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L294" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L301" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             elog(ERROR, &quot;pmchild freelist for backend type %d is corrupt&quot;,</span></span>
+<span id="L278" title="Line 278: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     278</span>                 :                :                  pmchild-&gt;bkend_type);</span>
+<span id="L279" title="Line 279: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     279</span>                 :                :         }</span>
+<span id="L280" title="Line 280: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     280</span>                 :                : </span>
+<span id="L281" title="Line 281: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">285</a> <a href="#top" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     281</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       21291 :         dlist_push_head(&amp;pool-&gt;freelist, &amp;pmchild-&gt;elem);</span></span>
+<span id="L282" title="Line 282: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     282</span>                 :<span class="tlaCBC">          21291 :         return MarkPostmasterChildSlotUnassigned(pmchild-&gt;child_slot);</span></span>
+<span id="L283" title="Line 283: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     283</span>                 :                :     }</span>
+<span id="L284" title="Line 284: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     284</span>                 :                : }</span>
+<span id="L285" title="Line 285: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     285</span>                 :                : </span>
+<span id="L286" title="Line 286: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     286</span>                 :                : /*</span>
+<span id="L287" title="Line 287: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     287</span>                 :                :  * Find the PMChild entry of a running child process by PID.</span>
+<span id="L288" title="Line 288: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     288</span>                 :                :  */</span>
+<span id="L289" title="Line 289: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     289</span>                 :                : PMChild *</span>
+<span id="L290" title="Line 290: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     290</span>                 :<span class="tlaCBC">          14867 : FindPostmasterChildByPid(int pid)</span></span>
+<span id="L291" title="Line 291: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     291</span>                 :                : {</span>
+<span id="L292" title="Line 292: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     292</span>                 :                :     dlist_iter  iter;</span>
+<span id="L293" title="Line 293: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     293</span>                 :                : </span>
+<span id="L294" title="Line 294: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     294</span>   [<span class="tlaCBC"> <a href="#L298" title="CBC: Branch 0 was taken 14867 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L298" title="CBC: Branch 2 was taken 37445 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">          37445 :     dlist_foreach(iter, &amp;ActiveChildList)</span></span>
+<span id="L295" title="Line 295: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     295</span>                 :                :     {</span>
+<span id="L296" title="Line 296: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     296</span>                 :<span class="tlaCBC">          37445 :         PMChild    *bp = dlist_container(PMChild, elem, iter.cur);</span></span>
+<span id="L297" title="Line 297: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     297</span>                 :                : </span>
+<span id="L298" title="Line 298: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     298</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 14867 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 22578 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          37445 :         if (bp-&gt;pid == pid)</span></span>
+<span id="L299" title="Line 299: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     299</span>                 :<span class="tlaCBC">          14867 :             return bp;</span></span>
+<span id="L300" title="Line 300: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     300</span>                 :                :     }</span>
+<span id="L301" title="Line 301: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 285 days ago (bin 3: (30,360] days)" class="tlaUBC tlaBgUBC">  <a href="#top" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">285</a> <a href="#top" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     301</span>                 :<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :     return NULL;</span></span>
+<span id="L302" title="Line 302: commit a78af0427015 on 2024-11-14 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     302</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

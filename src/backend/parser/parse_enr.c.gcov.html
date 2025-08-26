@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/parser/parse_enr.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory parser">parser</a> - parse_enr.c<span style="font-size: 80%;"> (source / <a href="parse_enr.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L20" title="goto first CBC line">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L20" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       3</span>                 :  * parse_enr.c</span>
+<span id="L4" title="Line 4: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       4</span>                 :  *    parser support routines dealing with ephemeral named relations</span>
+<span id="L5" title="Line 5: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L7" title="Line 7: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       7</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L8" title="Line 8: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       8</span>                 :  *</span>
+<span id="L9" title="Line 9: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      10</span>                 :  * IDENTIFICATION</span>
+<span id="L11" title="Line 11: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      11</span>                 :  *    src/backend/parser/parse_enr.c</span>
+<span id="L12" title="Line 12: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      12</span>                 :  *</span>
+<span id="L13" title="Line 13: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      13</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L14" title="Line 14: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      14</span>                 :  */</span>
+<span id="L15" title="Line 15: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      15</span>                 : #include &quot;postgres.h&quot;</span>
+<span id="L16" title="Line 16: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      16</span>                 : </span>
+<span id="L17" title="Line 17: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      17</span>                 : #include &quot;parser/parse_enr.h&quot;</span>
+<span id="L18" title="Line 18: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      18</span>                 : </span>
+<span id="L19" title="Line 19: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      19</span>                 : bool</span>
+<span id="L20" title="Line 20: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">3070</a> <a href="#top" title="next CBC in &ldquo;kgrittn@postgresql.org&rdquo; bin">kgrittn@postgresql.o</a> <span class="lineNum">      20</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      134479 : name_matches_visible_ENR(ParseState *pstate, const char *refname)</span></span>
+<span id="L21" title="Line 21: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      21</span>                 : {</span>
+<span id="L22" title="Line 22: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      22</span> <span class="tlaCBC">         134479 :     return (get_visible_ENR_metadata(pstate-&gt;p_queryEnv, refname) != NULL);</span></span>
+<span id="L23" title="Line 23: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      23</span>                 : }</span>
+<span id="L24" title="Line 24: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      24</span>                 : </span>
+<span id="L25" title="Line 25: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      25</span>                 : EphemeralNamedRelationMetadata</span>
+<span id="L26" title="Line 26: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      26</span> <span class="tlaCBC">            247 : get_visible_ENR(ParseState *pstate, const char *refname)</span></span>
+<span id="L27" title="Line 27: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      27</span>                 : {</span>
+<span id="L28" title="Line 28: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      28</span> <span class="tlaCBC">            247 :     return get_visible_ENR_metadata(pstate-&gt;p_queryEnv, refname);</span></span>
+<span id="L29" title="Line 29: commit 18ce3a4ab22d on 2017-03-31 by kgrittn@postgresql.org">                           <span class="lineNum">      29</span>                 : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

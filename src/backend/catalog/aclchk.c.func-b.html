@@ -1,0 +1,647 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/catalog/aclchk.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory catalog">catalog</a> - aclchk.c<span style="font-size: 80%;"> (<a href="aclchk.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">82.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1857</td>
+            <td class="headerCovTableEntry">1534</td>
+            <td class="headerCovTableEntry">323</td>
+            <td class="headerCovTableEntry">1534</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">94.9&nbsp;%</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">56</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">63.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1116</td>
+            <td class="headerCovTableEntry">713</td>
+            <td class="headerCovTableEntry">403</td>
+            <td class="headerCovTableEntry">713</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">36</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.4&nbsp;%</td>
+            <td class="headerCovTableEntry">1818</td>
+            <td class="headerCovTableEntry">1498</td>
+            <td class="headerCovTableEntry">320</td>
+            <td class="headerCovTableEntry">1498</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.9&nbsp;%</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">56</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">43.8&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">64.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1100</td>
+            <td class="headerCovTableEntry">706</td>
+            <td class="headerCovTableEntry">394</td>
+            <td class="headerCovTableEntry">706</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="aclchk.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="aclchk.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="aclchk.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2637">aclcheck_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1356</td>
+              <td class=coverPerLo>55.8&nbsp;% (121 / 217)</td>
+              <td class=coverPerLo>48.8&nbsp;% (41 / 84)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L239">restrict_and_check_grant</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38658</td>
+              <td class=coverPerMed>84.3&nbsp;% (59 / 70)</td>
+              <td class=coverPerLo>50.7&nbsp;% (37 / 73)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1767">ExecGrant_Relation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9269</td>
+              <td class=coverPerMed>89.7&nbsp;% (96 / 107)</td>
+              <td class=coverPerLo>63.8&nbsp;% (51 / 80)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L901">ExecAlterDefaultPrivilegesStmt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">103</td>
+              <td class=coverPerMed>82.3&nbsp;% (79 / 96)</td>
+              <td class=coverPerLo>64.8&nbsp;% (46 / 71)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3693">pg_type_aclmask_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">172778</td>
+              <td class=coverPerLo>70.7&nbsp;% (29 / 41)</td>
+              <td class=coverPerLo>46.9&nbsp;% (15 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4337">recordExtObjInitPriv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerLo>70.9&nbsp;% (39 / 55)</td>
+              <td class=coverPerLo>57.5&nbsp;% (23 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L390">ExecuteGrantStmt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14322</td>
+              <td class=coverPerHi>94.7&nbsp;% (108 / 114)</td>
+              <td class=coverPerLo>72.9&nbsp;% (43 / 59)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2968">pg_aclmask</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerLo>36.4&nbsp;% (12 / 33)</td>
+              <td class=coverPerLo>23.8&nbsp;% (5 / 21)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2590">privilege_to_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerLo>17.6&nbsp;% (6 / 34)</td>
+              <td class=coverPerLo>11.1&nbsp;% (2 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1132">SetDefaultACL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">124</td>
+              <td class=coverPerHi>97.1&nbsp;% (102 / 105)</td>
+              <td class=coverPerMed>77.6&nbsp;% (52 / 67)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3141">pg_attribute_aclmask_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4117</td>
+              <td class=coverPerMed>79.4&nbsp;% (27 / 34)</td>
+              <td class=coverPerLo>45.8&nbsp;% (11 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3459">pg_parameter_acl_aclmask</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1405">RemoveRoleFromObjectACL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">131</td>
+              <td class=coverPerMed>87.4&nbsp;% (76 / 87)</td>
+              <td class=coverPerLo>62.1&nbsp;% (18 / 29)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3040">object_aclmask_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1571514</td>
+              <td class=coverPerMed>86.2&nbsp;% (25 / 29)</td>
+              <td class=coverPerLo>57.1&nbsp;% (12 / 21)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4850">RemoveRoleFromInitPriv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerMed>85.0&nbsp;% (34 / 40)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2926">aclcheck_error_col</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1543">expand_col_privileges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">221</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3591">pg_namespace_aclmask_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">481434</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4501">removeExtObjInitPriv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177</td>
+              <td class=coverPerMed>81.0&nbsp;% (17 / 21)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4073">object_ownercheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132409</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              <td class=coverPerLo>56.2&nbsp;% (9 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3904">pg_attribute_aclcheck_all_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88</td>
+              <td class=coverPerMed>88.6&nbsp;% (31 / 35)</td>
+              <td class=coverPerLo>68.2&nbsp;% (15 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L662">objectNamesToOids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14304</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerMed>84.2&nbsp;% (32 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3265">pg_class_aclmask_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1372543</td>
+              <td class=coverPerHi>97.7&nbsp;% (43 / 44)</td>
+              <td class=coverPerMed>85.7&nbsp;% (36 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2250">ExecGrant_Largeobject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerHi>97.6&nbsp;% (40 / 41)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2098">ExecGrant_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5046</td>
+              <td class=coverPerHi>97.8&nbsp;% (45 / 46)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L774">objectsInSchemaToOids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerMed>85.0&nbsp;% (34 / 40)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3518">pg_largeobject_aclmask_snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">393</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2406">ExecGrant_Parameter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>97.6&nbsp;% (40 / 41)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4741">ReplaceRoleInInitPriv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerMed>86.7&nbsp;% (26 / 30)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1576">expand_all_col_privileges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3122</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L180">merge_acl_with_grant</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38772</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerMed>83.3&nbsp;% (20 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L600">ExecGrantStmt_oids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14400</td>
+              <td class=coverPerHi>95.0&nbsp;% (38 / 40)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1622">ExecGrant_Attribute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24352</td>
+              <td class=coverPerHi>97.4&nbsp;% (37 / 38)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2386">ExecGrant_Type_check</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3395">pg_parameter_aclmask</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4613">recordExtensionInitPrivWorker</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1730</td>
+              <td class=coverPerHi>100.0&nbsp;% (41 / 41)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2549">string_to_privilege</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13269</td>
+              <td class=coverPerHi>97.1&nbsp;% (33 / 34)</td>
+              <td class=coverPerHi>91.2&nbsp;% (31 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4230">get_user_default_acl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39073</td>
+              <td class=coverPerHi>91.9&nbsp;% (34 / 37)</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2234">ExecGrant_Language_check</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L1090">SetDefaultACLsInSchemas</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">103</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4195">get_default_acl_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78146</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4171">has_bypassrls_privilege</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2526</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4152">has_createrole_privilege</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1229</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4584">recordExtensionInitPriv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15519</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L2956">aclcheck_error_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L863">getRelationsInNamespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3829">object_aclcheck_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1571487</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3863">pg_attribute_aclcheck_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4117</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4032">pg_class_aclcheck_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1088497</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4059">pg_largeobject_aclcheck_snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">393</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4047">pg_parameter_aclcheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4310">recordDependencyOnNewAcl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40728</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3819">object_aclcheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1571275</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3029">object_aclmask</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3851">pg_attribute_aclcheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2045</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3893">pg_attribute_aclcheck_all</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3130">pg_attribute_aclmask</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L4022">pg_class_aclcheck</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1086367</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="aclchk.c.gcov.html#L3255">pg_class_aclmask</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">284046</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

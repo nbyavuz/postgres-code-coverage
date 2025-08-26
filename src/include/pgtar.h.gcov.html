@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/pgtar.h</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory src">src</a>/<a href="index.html" title="Click to go to directory include">include</a> - pgtar.h<span style="font-size: 80%;"> (source / <a href="pgtar.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"><a href="#L79" title="goto first CBC line">2</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"><a href="#L79" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">2</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       3</span>                 :  * pgtar.h</span>
+<span id="L4" title="Line 4: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       4</span>                 :  *    Functions for manipulating tarfile datastructures (src/port/tar.c)</span>
+<span id="L5" title="Line 5: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       6</span>                 :  *</span>
+<span id="L7" title="Line 7: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L8" title="Line 8: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       8</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L9" title="Line 9: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :  * src/include/pgtar.h</span>
+<span id="L11" title="Line 11: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">      11</span>                 :  *</span>
+<span id="L12" title="Line 12: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">      12</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L13" title="Line 13: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">      13</span>                 :  */</span>
+<span id="L14" title="Line 14: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      14</span>                 : #ifndef PG_TAR_H</span>
+<span id="L15" title="Line 15: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      15</span>                 : #define PG_TAR_H</span>
+<span id="L16" title="Line 16: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      16</span>                 : </span>
+<span id="L17" title="Line 17: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      17</span>                 : #define     TAR_BLOCK_SIZE  512</span>
+<span id="L18" title="Line 18: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      18</span>                 : </span>
+<span id="L19" title="Line 19: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      19</span>                 : enum tarError</span>
+<span id="L20" title="Line 20: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      20</span>                 : {</span>
+<span id="L21" title="Line 21: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      21</span>                 :     TAR_OK = 0,</span>
+<span id="L22" title="Line 22: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      22</span>                 :     TAR_NAME_TOO_LONG,</span>
+<span id="L23" title="Line 23: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">      23</span>                 :     TAR_SYMLINK_TOO_LONG,</span>
+<span id="L24" title="Line 24: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      24</span>                 : };</span>
+<span id="L25" title="Line 25: commit 23a78352c0a0 on 2015-02-24 by peter_e@gmx.net">                           <span class="lineNum">      25</span>                 : </span>
+<span id="L26" title="Line 26: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      26</span>                 : /*</span>
+<span id="L27" title="Line 27: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      27</span>                 :  * Offsets of fields within a 512-byte tar header.</span>
+<span id="L28" title="Line 28: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      28</span>                 :  *</span>
+<span id="L29" title="Line 29: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      29</span>                 :  * &quot;tar number&quot; values should be generated using print_tar_number() and can be</span>
+<span id="L30" title="Line 30: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      30</span>                 :  * read using read_tar_number(). Fields that contain strings are generally</span>
+<span id="L31" title="Line 31: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      31</span>                 :  * both filled and read using strlcpy().</span>
+<span id="L32" title="Line 32: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      32</span>                 :  *</span>
+<span id="L33" title="Line 33: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      33</span>                 :  * The value for the checksum field can be computed using tarChecksum().</span>
+<span id="L34" title="Line 34: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      34</span>                 :  *</span>
+<span id="L35" title="Line 35: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      35</span>                 :  * Some fields are not used by PostgreSQL; see tarCreateHeader().</span>
+<span id="L36" title="Line 36: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      36</span>                 :  */</span>
+<span id="L37" title="Line 37: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      37</span>                 : enum tarHeaderOffset</span>
+<span id="L38" title="Line 38: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      38</span>                 : {</span>
+<span id="L39" title="Line 39: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      39</span>                 :     TAR_OFFSET_NAME = 0,        /* 100 byte string */</span>
+<span id="L40" title="Line 40: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      40</span>                 :     TAR_OFFSET_MODE = 100,      /* 8 byte tar number, excludes S_IFMT */</span>
+<span id="L41" title="Line 41: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      41</span>                 :     TAR_OFFSET_UID = 108,       /* 8 byte tar number */</span>
+<span id="L42" title="Line 42: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      42</span>                 :     TAR_OFFSET_GID = 116,       /* 8 byte tar number */</span>
+<span id="L43" title="Line 43: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      43</span>                 :     TAR_OFFSET_SIZE = 124,      /* 8 byte tar number */</span>
+<span id="L44" title="Line 44: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      44</span>                 :     TAR_OFFSET_MTIME = 136,     /* 12 byte tar number */</span>
+<span id="L45" title="Line 45: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      45</span>                 :     TAR_OFFSET_CHECKSUM = 148,  /* 8 byte tar number */</span>
+<span id="L46" title="Line 46: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      46</span>                 :     TAR_OFFSET_TYPEFLAG = 156,  /* 1 byte file type, see TAR_FILETYPE_* */</span>
+<span id="L47" title="Line 47: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      47</span>                 :     TAR_OFFSET_LINKNAME = 157,  /* 100 byte string */</span>
+<span id="L48" title="Line 48: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      48</span>                 :     TAR_OFFSET_MAGIC = 257,     /* &quot;ustar&quot; with terminating zero byte */</span>
+<span id="L49" title="Line 49: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      49</span>                 :     TAR_OFFSET_VERSION = 263,   /* &quot;00&quot; */</span>
+<span id="L50" title="Line 50: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      50</span>                 :     TAR_OFFSET_UNAME = 265,     /* 32 byte string */</span>
+<span id="L51" title="Line 51: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      51</span>                 :     TAR_OFFSET_GNAME = 297,     /* 32 byte string */</span>
+<span id="L52" title="Line 52: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      52</span>                 :     TAR_OFFSET_DEVMAJOR = 329,  /* 8 byte tar number */</span>
+<span id="L53" title="Line 53: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      53</span>                 :     TAR_OFFSET_DEVMINOR = 337,  /* 8 byte tar number */</span>
+<span id="L54" title="Line 54: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">      54</span>                 :     TAR_OFFSET_PREFIX = 345,    /* 155 byte string */</span>
+<span id="L55" title="Line 55: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      55</span>                 :     /* last 12 bytes of the 512-byte block are unassigned */</span>
+<span id="L56" title="Line 56: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      56</span>                 : };</span>
+<span id="L57" title="Line 57: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      57</span>                 : </span>
+<span id="L58" title="Line 58: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      58</span>                 : enum tarFileType</span>
+<span id="L59" title="Line 59: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      59</span>                 : {</span>
+<span id="L60" title="Line 60: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      60</span>                 :     TAR_FILETYPE_PLAIN = '0',</span>
+<span id="L61" title="Line 61: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      61</span>                 :     TAR_FILETYPE_SYMLINK = '2',</span>
+<span id="L62" title="Line 62: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">      62</span>                 :     TAR_FILETYPE_DIRECTORY = '5',</span>
+<span id="L63" title="Line 63: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      63</span>                 : };</span>
+<span id="L64" title="Line 64: commit 6050b6a92d1e on 2023-08-01 by rhaas@postgresql.org">                           <span class="lineNum">      64</span>                 : </span>
+<span id="L65" title="Line 65: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      65</span>                 : extern enum tarError tarCreateHeader(char *h, const char *filename,</span>
+<span id="L66" title="Line 66: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      66</span>                 :                                      const char *linktarget, pgoff_t size,</span>
+<span id="L67" title="Line 67: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      67</span>                 :                                      mode_t mode, uid_t uid, gid_t gid,</span>
+<span id="L68" title="Line 68: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      68</span>                 :                                      time_t mtime);</span>
+<span id="L69" title="Line 69: commit 00cdd83521cf on 2015-11-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 : extern uint64 read_tar_number(const char *s, int len);</span>
+<span id="L70" title="Line 70: commit 56c7d8d45521 on 2016-10-23 by magnus@hagander.net">                           <span class="lineNum">      70</span>                 : extern void print_tar_number(char *s, int len, uint64 val);</span>
+<span id="L71" title="Line 71: commit 794397ae1d1c on 2013-01-02 by magnus@hagander.net">                           <span class="lineNum">      71</span>                 : extern int  tarChecksum(char *header);</span>
+<span id="L72" title="Line 72: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      72</span>                 : </span>
+<span id="L73" title="Line 73: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      73</span>                 : /*</span>
+<span id="L74" title="Line 74: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      74</span>                 :  * Compute the number of padding bytes required for an entry in a tar</span>
+<span id="L75" title="Line 75: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      75</span>                 :  * archive. We must pad out to a multiple of TAR_BLOCK_SIZE. Since that's</span>
+<span id="L76" title="Line 76: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      76</span>                 :  * a power of 2, we can use TYPEALIGN().</span>
+<span id="L77" title="Line 77: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      77</span>                 :  */</span>
+<span id="L78" title="Line 78: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      78</span>                 : static inline size_t</span>
+<span id="L79" title="Line 79: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1950</a> <a href="#top" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">      79</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      639333 : tarPaddingBytesRequired(size_t len)</span></span>
+<span id="L80" title="Line 80: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      80</span>                 : {</span>
+<span id="L81" title="Line 81: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      81</span> <span class="tlaCBC">         639333 :     return TYPEALIGN(TAR_BLOCK_SIZE, len) - len;</span></span>
+<span id="L82" title="Line 82: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      82</span>                 : }</span>
+<span id="L83" title="Line 83: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      83</span>                 : </span>
+<span id="L84" title="Line 84: commit 2961c9711c17 on 2020-04-24 by rhaas@postgresql.org">                           <span class="lineNum">      84</span>                 : #endif</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

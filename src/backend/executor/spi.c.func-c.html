@@ -1,0 +1,905 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/executor/spi.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - spi.c<span style="font-size: 80%;"> (<a href="spi.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">72.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1258</td>
+            <td class="headerCovTableEntry">915</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">342</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">915</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">83.3&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">70</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">55.3&nbsp;%</td>
+            <td class="headerCovTableEntry">805</td>
+            <td class="headerCovTableEntry">445</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">360</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">445</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">72.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1248</td>
+            <td class="headerCovTableEntry">907</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">341</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">907</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">83.1&nbsp;%</td>
+            <td class="headerCovTableEntry">83</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">80.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">55.0&nbsp;%</td>
+            <td class="headerCovTableEntry">795</td>
+            <td class="headerCovTableEntry">437</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">358</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">437</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="spi.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="spi.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="spi.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1819">SPI_cursor_move</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1470">SPI_cursor_open_with_args</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 21)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L810">SPI_execute_with_args</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 25)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1377">SPI_freetuple</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1888">SPI_getargcount</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1873">SPI_getargtypeid</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1104">SPI_modifytuple</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 28)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1352">SPI_pfree</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L936">SPI_prepare_params</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 19)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1345">SPI_repalloc</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1001">SPI_saveplan</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L220">SPI_start_transaction</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3329">SPI_unregister_relation</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 13)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3207">_SPI_save_plan</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 27)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L324">SPI_commit_and_chain</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L417">SPI_rollback_and_chain</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1266">SPI_gettype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerLo>66.7&nbsp;% (10 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1336">SPI_palloc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1848">SPI_scroll_cursor_move</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L702">SPI_execp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1970">SPI_result_code_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerLo>15.2&nbsp;% (10 / 66)</td>
+              <td class=coverPerLo>12.5&nbsp;% (4 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L411">SPI_rollback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">82</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L330">_SPI_rollback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">84</td>
+              <td class=coverPerHi>93.5&nbsp;% (29 / 31)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1443">SPI_cursor_open</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">107</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1330">SPI_getnspname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">141</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1833">SPI_scroll_cursor_fetch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">151</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1324">SPI_getrelname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">183</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L628">SPI_exec</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">265</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1792">SPI_cursor_find</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">281</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3295">SPI_register_relation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">357</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3278">_SPI_find_ENR_by_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">357</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1196">SPI_fname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">486</td>
+              <td class=coverPerLo>66.7&nbsp;% (6 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1306">SPI_gettypeid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">602</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L594">SPI_execute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">744</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1045">SPI_copytuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1092</td>
+              <td class=coverPerLo>63.6&nbsp;% (7 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L709">SPI_execute_plan_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1271</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1523">SPI_cursor_open_with_paramlist</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1312</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1946">SPI_plan_is_valid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1814</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L318">SPI_commit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2142</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L225">_SPI_commit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2144</td>
+              <td class=coverPerHi>96.8&nbsp;% (30 / 31)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L670">SPI_execute_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2295</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L858">SPI_prepare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2621</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L864">SPI_prepare_cursor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2621</td>
+              <td class=coverPerMed>84.2&nbsp;% (16 / 19)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1359">SPI_datumTransfer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2917</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1072">SPI_returntuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3076</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2959">_SPI_error_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3258</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1023">SPI_freeplan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3733</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L771">SPI_execute_snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3881</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1531">SPI_cursor_parse_open</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4707</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1218">SPI_getvalue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4872</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1860">SPI_cursor_close</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6071</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1575">SPI_cursor_open_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6126</td>
+              <td class=coverPerMed>85.3&nbsp;% (58 / 68)</td>
+              <td class=coverPerLo>56.7&nbsp;% (34 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1908">SPI_is_cursor_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6126</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2847">_SPI_convert_params</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6283</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L635">SPI_execute_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7262</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3362">SPI_register_trigger_data</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7730</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2327">_SPI_prepare_oneshot_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8006</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L92">SPI_connect</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8617</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L480">AtEOSubXact_SPI</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9103</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              <td class=coverPerMed>83.3&nbsp;% (30 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1173">SPI_fnumber</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11232</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L900">SPI_prepare_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13693</td>
+              <td class=coverPerMed>84.2&nbsp;% (16 / 19)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2074">SPI_plan_get_cached_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14080</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L974">SPI_keepplan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15506</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3139">_SPI_make_plan_non_temp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16265</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2219">_SPI_prepare_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21021</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1804">SPI_cursor_fetch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22002</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3005">_SPI_cursor_operation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22174</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              <td class=coverPerLo>35.7&nbsp;% (5 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1250">SPI_getbinval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">28721</td>
+              <td class=coverPerLo>57.1&nbsp;% (4 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2055">SPI_plan_get_plan_sources</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29002</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L731">SPI_execute_plan_with_paramlist</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36093</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2872">_SPI_pquery</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39211</td>
+              <td class=coverPerMed>88.4&nbsp;% (38 / 43)</td>
+              <td class=coverPerMed>78.6&nbsp;% (22 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3115">_SPI_checktuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44037</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2121">spi_dest_startup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47656</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L180">SPI_finish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49978</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L98">SPI_connect_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51390</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2397">_SPI_execute_plan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51540</td>
+              <td class=coverPerHi>91.6&nbsp;% (131 / 143)</td>
+              <td class=coverPerMed>79.5&nbsp;% (97 / 122)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L2169">spi_printtup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">58854</td>
+              <td class=coverPerMed>86.7&nbsp;% (13 / 15)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L1384">SPI_freetuptable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88774</td>
+              <td class=coverPerMed>84.2&nbsp;% (16 / 19)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3099">_SPI_end_call</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98313</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3056">_SPI_execmem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100867</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3062">_SPI_procmem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">145612</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L3075">_SPI_begin_call</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">151202</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L579">SPI_inside_nonatomic_context</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">312642</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="spi.c.gcov.html#L426">AtEOXact_SPI</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316755</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

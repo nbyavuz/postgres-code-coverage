@@ -1,0 +1,621 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/access/gin_private.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory access">access</a> - gin_private.h<span style="font-size: 80%;"> (source / <a href="gin_private.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L496" title="goto first CBC line">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L496" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       1</span>                 : /*--------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       2</span>                 :  * gin_private.h</span>
+<span id="L3" title="Line 3: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       3</span>                 :  *    header file for postgres inverted index access method implementation.</span>
+<span id="L4" title="Line 4: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *</span>
+<span id="L5" title="Line 5: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :  *  Copyright (c) 2006-2025, PostgreSQL Global Development Group</span>
+<span id="L6" title="Line 6: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       6</span>                 :  *</span>
+<span id="L7" title="Line 7: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       7</span>                 :  *  src/include/access/gin_private.h</span>
+<span id="L8" title="Line 8: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       8</span>                 :  *--------------------------------------------------------------------------</span>
+<span id="L9" title="Line 9: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       9</span>                 :  */</span>
+<span id="L10" title="Line 10: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      10</span>                 : #ifndef GIN_PRIVATE_H</span>
+<span id="L11" title="Line 11: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      11</span>                 : #define GIN_PRIVATE_H</span>
+<span id="L12" title="Line 12: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 : </span>
+<span id="L13" title="Line 13: commit 7854e07f25be on 2019-12-27 by michael@paquier.xyz">                           <span class="lineNum">      13</span>                 : #include &quot;access/amapi.h&quot;</span>
+<span id="L14" title="Line 14: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 : #include &quot;access/gin.h&quot;</span>
+<span id="L15" title="Line 15: commit 8da9a226369e on 2017-02-14 by rhaas@postgresql.org">                           <span class="lineNum">      15</span>                 : #include &quot;access/ginblock.h&quot;</span>
+<span id="L16" title="Line 16: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      16</span>                 : #include &quot;access/itup.h&quot;</span>
+<span id="L17" title="Line 17: commit 3b42bdb47169 on 2024-02-16 by nathan@postgresql.org">                           <span class="lineNum">      17</span>                 : #include &quot;common/int.h&quot;</span>
+<span id="L18" title="Line 18: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      18</span>                 : #include &quot;catalog/pg_am_d.h&quot;</span>
+<span id="L19" title="Line 19: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 : #include &quot;fmgr.h&quot;</span>
+<span id="L20" title="Line 20: commit 955557ddccb4 on 2014-12-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      20</span>                 : #include &quot;lib/rbtree.h&quot;</span>
+<span id="L21" title="Line 21: commit e0487223ecac on 2019-11-25 by akapila@postgresql.org">                           <span class="lineNum">      21</span>                 : #include &quot;storage/bufmgr.h&quot;</span>
+<span id="L22" title="Line 22: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 : </span>
+<span id="L23" title="Line 23: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 : /*</span>
+<span id="L24" title="Line 24: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 :  * Storage type for GIN's reloptions</span>
+<span id="L25" title="Line 25: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span>                 :  */</span>
+<span id="L26" title="Line 26: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 : typedef struct GinOptions</span>
+<span id="L27" title="Line 27: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 : {</span>
+<span id="L28" title="Line 28: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :     int32       vl_len_;        /* varlena header (do not touch directly!) */</span>
+<span id="L29" title="Line 29: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 :     bool        useFastUpdate;  /* use fast updates? */</span>
+<span id="L30" title="Line 30: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      30</span>                 :     int         pendingListCleanupSize; /* maximum size of pending list */</span>
+<span id="L31" title="Line 31: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 : } GinOptions;</span>
+<span id="L32" title="Line 32: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 : </span>
+<span id="L33" title="Line 33: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 : #define GIN_DEFAULT_USE_FASTUPDATE  true</span>
+<span id="L34" title="Line 34: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 : #define GinGetUseFastUpdate(relation) \</span>
+<span id="L35" title="Line 35: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      35</span>                 :     (AssertMacro(relation-&gt;rd_rel-&gt;relkind == RELKIND_INDEX &amp;&amp; \</span>
+<span id="L36" title="Line 36: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      36</span>                 :                  relation-&gt;rd_rel-&gt;relam == GIN_AM_OID), \</span>
+<span id="L37" title="Line 37: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      37</span>                 :      (relation)-&gt;rd_options ? \</span>
+<span id="L38" title="Line 38: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :      ((GinOptions *) (relation)-&gt;rd_options)-&gt;useFastUpdate : GIN_DEFAULT_USE_FASTUPDATE)</span>
+<span id="L39" title="Line 39: commit a1b395b6a26a on 2014-11-11 by fujii@postgresql.org">                           <span class="lineNum">      39</span>                 : #define GinGetPendingListCleanupSize(relation) \</span>
+<span id="L40" title="Line 40: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      40</span>                 :     (AssertMacro(relation-&gt;rd_rel-&gt;relkind == RELKIND_INDEX &amp;&amp; \</span>
+<span id="L41" title="Line 41: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      41</span>                 :                  relation-&gt;rd_rel-&gt;relam == GIN_AM_OID), \</span>
+<span id="L42" title="Line 42: commit 4cb658af7002 on 2019-11-25 by michael@paquier.xyz">                           <span class="lineNum">      42</span>                 :      (relation)-&gt;rd_options &amp;&amp; \</span>
+<span id="L43" title="Line 43: commit a1b395b6a26a on 2014-11-11 by fujii@postgresql.org">                           <span class="lineNum">      43</span>                 :      ((GinOptions *) (relation)-&gt;rd_options)-&gt;pendingListCleanupSize != -1 ? \</span>
+<span id="L44" title="Line 44: commit a1b395b6a26a on 2014-11-11 by fujii@postgresql.org">                           <span class="lineNum">      44</span>                 :      ((GinOptions *) (relation)-&gt;rd_options)-&gt;pendingListCleanupSize : \</span>
+<span id="L45" title="Line 45: commit c291503b1c82 on 2014-11-13 by fujii@postgresql.org">                           <span class="lineNum">      45</span>                 :      gin_pending_list_limit)</span>
+<span id="L46" title="Line 46: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 : </span>
+<span id="L47" title="Line 47: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 : </span>
+<span id="L48" title="Line 48: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 : /* Macros for buffer lock/unlock operations */</span>
+<span id="L49" title="Line 49: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 : #define GIN_UNLOCK  BUFFER_LOCK_UNLOCK</span>
+<span id="L50" title="Line 50: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 : #define GIN_SHARE   BUFFER_LOCK_SHARE</span>
+<span id="L51" title="Line 51: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>                 : #define GIN_EXCLUSIVE  BUFFER_LOCK_EXCLUSIVE</span>
+<span id="L52" title="Line 52: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      52</span>                 : </span>
+<span id="L53" title="Line 53: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      53</span>                 : </span>
+<span id="L54" title="Line 54: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      54</span>                 : /*</span>
+<span id="L55" title="Line 55: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :  * GinState: working data structure describing the index being worked on</span>
+<span id="L56" title="Line 56: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :  */</span>
+<span id="L57" title="Line 57: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 : typedef struct GinState</span>
+<span id="L58" title="Line 58: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 : {</span>
+<span id="L59" title="Line 59: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 :     Relation    index;</span>
+<span id="L60" title="Line 60: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :     bool        oneCol;         /* true if single-column index */</span>
+<span id="L61" title="Line 61: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 : </span>
+<span id="L62" title="Line 62: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      62</span>                 :     /*</span>
+<span id="L63" title="Line 63: commit 8548ddc61b58 on 2019-08-05 by michael@paquier.xyz">                           <span class="lineNum">      63</span>                 :      * origTupdesc is the nominal tuple descriptor of the index, ie, the i'th</span>
+<span id="L64" title="Line 64: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 :      * attribute shows the key type (not the input data type!) of the i'th</span>
+<span id="L65" title="Line 65: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      65</span>                 :      * index column.  In a single-column index this describes the actual leaf</span>
+<span id="L66" title="Line 66: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 :      * index tuples.  In a multi-column index, the actual leaf tuples contain</span>
+<span id="L67" title="Line 67: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      67</span>                 :      * a smallint column number followed by a key datum of the appropriate</span>
+<span id="L68" title="Line 68: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      68</span>                 :      * type for that column.  We set up tupdesc[i] to describe the actual</span>
+<span id="L69" title="Line 69: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 :      * rowtype of the index tuples for the i'th column, ie, (int2, keytype).</span>
+<span id="L70" title="Line 70: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :      * Note that in any case, leaf tuples contain more data than is known to</span>
+<span id="L71" title="Line 71: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 :      * the TupleDesc; see access/gin/README for details.</span>
+<span id="L72" title="Line 72: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :      */</span>
+<span id="L73" title="Line 73: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 :     TupleDesc   origTupdesc;</span>
+<span id="L74" title="Line 74: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 :     TupleDesc   tupdesc[INDEX_MAX_KEYS];</span>
+<span id="L75" title="Line 75: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 : </span>
+<span id="L76" title="Line 76: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :     /*</span>
+<span id="L77" title="Line 77: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 :      * Per-index-column opclass support functions</span>
+<span id="L78" title="Line 78: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :      */</span>
+<span id="L79" title="Line 79: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :     FmgrInfo    compareFn[INDEX_MAX_KEYS];</span>
+<span id="L80" title="Line 80: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 :     FmgrInfo    extractValueFn[INDEX_MAX_KEYS];</span>
+<span id="L81" title="Line 81: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 :     FmgrInfo    extractQueryFn[INDEX_MAX_KEYS];</span>
+<span id="L82" title="Line 82: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 :     FmgrInfo    consistentFn[INDEX_MAX_KEYS];</span>
+<span id="L83" title="Line 83: commit c5608ea26a1f on 2014-03-12 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      83</span>                 :     FmgrInfo    triConsistentFn[INDEX_MAX_KEYS];</span>
+<span id="L84" title="Line 84: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :     FmgrInfo    comparePartialFn[INDEX_MAX_KEYS];   /* optional method */</span>
+<span id="L85" title="Line 85: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :     /* canPartialMatch[i] is true if comparePartialFn[i] is valid */</span>
+<span id="L86" title="Line 86: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :     bool        canPartialMatch[INDEX_MAX_KEYS];</span>
+<span id="L87" title="Line 87: commit ae20bf1740c5 on 2011-04-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :     /* Collations to pass to the support functions */</span>
+<span id="L88" title="Line 88: commit ae20bf1740c5 on 2011-04-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :     Oid         supportCollation[INDEX_MAX_KEYS];</span>
+<span id="L89" title="Line 89: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 : } GinState;</span>
+<span id="L90" title="Line 90: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 : </span>
+<span id="L91" title="Line 91: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      91</span>                 : </span>
+<span id="L92" title="Line 92: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 : /* ginutil.c */</span>
+<span id="L93" title="Line 93: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>                 : extern bytea *ginoptions(Datum reloptions, bool validate);</span>
+<span id="L94" title="Line 94: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 : extern void initGinState(GinState *state, Relation index);</span>
+<span id="L95" title="Line 95: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 : extern Buffer GinNewBuffer(Relation index);</span>
+<span id="L96" title="Line 96: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      96</span>                 : extern void GinInitBuffer(Buffer b, uint32 f);</span>
+<span id="L97" title="Line 97: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 : extern void GinInitPage(Page page, uint32 f, Size pageSize);</span>
+<span id="L98" title="Line 98: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      98</span>                 : extern void GinInitMetabuffer(Buffer b);</span>
+<span id="L99" title="Line 99: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 : extern int  ginCompareEntries(GinState *ginstate, OffsetNumber attnum,</span>
+<span id="L100" title="Line 100: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     100</span>                 :                               Datum a, GinNullCategory categorya,</span>
+<span id="L101" title="Line 101: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                               Datum b, GinNullCategory categoryb);</span>
+<span id="L102" title="Line 102: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     102</span>                 : extern int  ginCompareAttEntries(GinState *ginstate,</span>
+<span id="L103" title="Line 103: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                                  OffsetNumber attnuma, Datum a, GinNullCategory categorya,</span>
+<span id="L104" title="Line 104: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     104</span>                 :                                  OffsetNumber attnumb, Datum b, GinNullCategory categoryb);</span>
+<span id="L105" title="Line 105: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     105</span>                 : extern Datum *ginExtractEntries(GinState *ginstate, OffsetNumber attnum,</span>
+<span id="L106" title="Line 106: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     106</span>                 :                                 Datum value, bool isNull,</span>
+<span id="L107" title="Line 107: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     107</span>                 :                                 int32 *nentries, GinNullCategory **categories);</span>
+<span id="L108" title="Line 108: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     108</span>                 : </span>
+<span id="L109" title="Line 109: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     109</span>                 : extern OffsetNumber gintuple_get_attrnum(GinState *ginstate, IndexTuple tuple);</span>
+<span id="L110" title="Line 110: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     110</span>                 : extern Datum gintuple_get_key(GinState *ginstate, IndexTuple tuple,</span>
+<span id="L111" title="Line 111: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 :                               GinNullCategory *category);</span>
+<span id="L112" title="Line 112: commit 8492feb98f6d on 2025-03-03 by tomas.vondra@postgresql.org">                           <span class="lineNum">     112</span>                 : extern char *ginbuildphasename(int64 phasenum);</span>
+<span id="L113" title="Line 113: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     113</span>                 : </span>
+<span id="L114" title="Line 114: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 : /* gininsert.c */</span>
+<span id="L115" title="Line 115: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 : extern IndexBuildResult *ginbuild(Relation heap, Relation index,</span>
+<span id="L116" title="Line 116: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 :                                   struct IndexInfo *indexInfo);</span>
+<span id="L117" title="Line 117: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     117</span>                 : extern void ginbuildempty(Relation index);</span>
+<span id="L118" title="Line 118: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 : extern bool gininsert(Relation index, Datum *values, bool *isnull,</span>
+<span id="L119" title="Line 119: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     119</span>                 :                       ItemPointer ht_ctid, Relation heapRel,</span>
+<span id="L120" title="Line 120: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :                       IndexUniqueCheck checkUnique,</span>
+<span id="L121" title="Line 121: commit 9dc718bdf2b1 on 2021-01-13 by pg@bowt.ie">                           <span class="lineNum">     121</span>                 :                       bool indexUnchanged,</span>
+<span id="L122" title="Line 122: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 :                       struct IndexInfo *indexInfo);</span>
+<span id="L123" title="Line 123: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 : extern void ginEntryInsert(GinState *ginstate,</span>
+<span id="L124" title="Line 124: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     124</span>                 :                            OffsetNumber attnum, Datum key, GinNullCategory category,</span>
+<span id="L125" title="Line 125: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 :                            ItemPointerData *items, uint32 nitem,</span>
+<span id="L126" title="Line 126: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 :                            GinStatsData *buildStats);</span>
+<span id="L127" title="Line 127: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     127</span>                 : </span>
+<span id="L128" title="Line 128: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 : /* ginbtree.c */</span>
+<span id="L129" title="Line 129: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span>                 : </span>
+<span id="L130" title="Line 130: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     130</span>                 : typedef struct GinBtreeStack</span>
+<span id="L131" title="Line 131: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     131</span>                 : {</span>
+<span id="L132" title="Line 132: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>                 :     BlockNumber blkno;</span>
+<span id="L133" title="Line 133: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     133</span>                 :     Buffer      buffer;</span>
+<span id="L134" title="Line 134: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     134</span>                 :     OffsetNumber off;</span>
+<span id="L135" title="Line 135: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     135</span>                 :     ItemPointerData iptr;</span>
+<span id="L136" title="Line 136: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 :     /* predictNumber contains predicted number of pages on current level */</span>
+<span id="L137" title="Line 137: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :     uint32      predictNumber;</span>
+<span id="L138" title="Line 138: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 :     struct GinBtreeStack *parent;</span>
+<span id="L139" title="Line 139: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 : } GinBtreeStack;</span>
+<span id="L140" title="Line 140: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 : </span>
+<span id="L141" title="Line 141: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 : typedef struct GinBtreeData *GinBtree;</span>
+<span id="L142" title="Line 142: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 : </span>
+<span id="L143" title="Line 143: commit bde361fef5ea on 2016-04-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 : /* Return codes for GinBtreeData.beginPlaceToPage method */</span>
+<span id="L144" title="Line 144: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     144</span>                 : typedef enum</span>
+<span id="L145" title="Line 145: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     145</span>                 : {</span>
+<span id="L146" title="Line 146: commit bde361fef5ea on 2016-04-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     146</span>                 :     GPTP_NO_WORK,</span>
+<span id="L147" title="Line 147: commit bde361fef5ea on 2016-04-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     147</span>                 :     GPTP_INSERT,</span>
+<span id="L148" title="Line 148: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">     148</span>                 :     GPTP_SPLIT,</span>
+<span id="L149" title="Line 149: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     149</span>                 : } GinPlaceToPageRC;</span>
+<span id="L150" title="Line 150: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     150</span>                 : </span>
+<span id="L151" title="Line 151: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 : typedef struct GinBtreeData</span>
+<span id="L152" title="Line 152: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     152</span>                 : {</span>
+<span id="L153" title="Line 153: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     153</span>                 :     /* search methods */</span>
+<span id="L154" title="Line 154: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     154</span>                 :     BlockNumber (*findChildPage) (GinBtree, GinBtreeStack *);</span>
+<span id="L155" title="Line 155: commit 04965ad40e10 on 2013-11-20 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     155</span>                 :     BlockNumber (*getLeftMostChild) (GinBtree, Page);</span>
+<span id="L156" title="Line 156: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     156</span>                 :     bool        (*isMoveRight) (GinBtree, Page);</span>
+<span id="L157" title="Line 157: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     157</span>                 :     bool        (*findItem) (GinBtree, GinBtreeStack *);</span>
+<span id="L158" title="Line 158: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     158</span>                 : </span>
+<span id="L159" title="Line 159: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     159</span>                 :     /* insert methods */</span>
+<span id="L160" title="Line 160: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     160</span>                 :     OffsetNumber (*findChildPtr) (GinBtree, Page, BlockNumber, OffsetNumber);</span>
+<span id="L161" title="Line 161: commit bde361fef5ea on 2016-04-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     161</span>                 :     GinPlaceToPageRC (*beginPlaceToPage) (GinBtree, Buffer, GinBtreeStack *, void *, BlockNumber, void **, Page *, Page *);</span>
+<span id="L162" title="Line 162: commit bde361fef5ea on 2016-04-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     162</span>                 :     void        (*execPlaceToPage) (GinBtree, Buffer, GinBtreeStack *, void *, BlockNumber, void *);</span>
+<span id="L163" title="Line 163: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     163</span>                 :     void       *(*prepareDownlink) (GinBtree, Buffer);</span>
+<span id="L164" title="Line 164: commit 631118fe1e8f on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     164</span>                 :     void        (*fillRoot) (GinBtree, Page, BlockNumber, Page, BlockNumber, Page);</span>
+<span id="L165" title="Line 165: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     165</span>                 : </span>
+<span id="L166" title="Line 166: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     166</span>                 :     bool        isData;</span>
+<span id="L167" title="Line 167: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 : </span>
+<span id="L168" title="Line 168: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>                 :     Relation    index;</span>
+<span id="L169" title="Line 169: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     169</span>                 :     BlockNumber rootBlkno;</span>
+<span id="L170" title="Line 170: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     170</span>                 :     GinState   *ginstate;       /* not valid in a data scan */</span>
+<span id="L171" title="Line 171: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     171</span>                 :     bool        fullScan;</span>
+<span id="L172" title="Line 172: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :     bool        isBuild;</span>
+<span id="L173" title="Line 173: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     173</span>                 : </span>
+<span id="L174" title="Line 174: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     174</span>                 :     /* Search key for Entry tree */</span>
+<span id="L175" title="Line 175: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :     OffsetNumber entryAttnum;</span>
+<span id="L176" title="Line 176: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     176</span>                 :     Datum       entryKey;</span>
+<span id="L177" title="Line 177: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     177</span>                 :     GinNullCategory entryCategory;</span>
+<span id="L178" title="Line 178: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     178</span>                 : </span>
+<span id="L179" title="Line 179: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     179</span>                 :     /* Search key for data tree (posting tree) */</span>
+<span id="L180" title="Line 180: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     180</span>                 :     ItemPointerData itemptr;</span>
+<span id="L181" title="Line 181: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     181</span>                 : } GinBtreeData;</span>
+<span id="L182" title="Line 182: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     182</span>                 : </span>
+<span id="L183" title="Line 183: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     183</span>                 : /* This represents a tuple to be inserted to entry tree. */</span>
+<span id="L184" title="Line 184: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     184</span>                 : typedef struct</span>
+<span id="L185" title="Line 185: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     185</span>                 : {</span>
+<span id="L186" title="Line 186: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     186</span>                 :     IndexTuple  entry;          /* tuple to insert */</span>
+<span id="L187" title="Line 187: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     187</span>                 :     bool        isDelete;       /* delete old tuple at same offset? */</span>
+<span id="L188" title="Line 188: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     188</span>                 : } GinBtreeEntryInsertData;</span>
+<span id="L189" title="Line 189: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     189</span>                 : </span>
+<span id="L190" title="Line 190: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     190</span>                 : /*</span>
+<span id="L191" title="Line 191: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     191</span>                 :  * This represents an itempointer, or many itempointers, to be inserted to</span>
+<span id="L192" title="Line 192: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     192</span>                 :  * a data (posting tree) leaf page</span>
+<span id="L193" title="Line 193: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     193</span>                 :  */</span>
+<span id="L194" title="Line 194: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     194</span>                 : typedef struct</span>
+<span id="L195" title="Line 195: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     195</span>                 : {</span>
+<span id="L196" title="Line 196: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     196</span>                 :     ItemPointerData *items;</span>
+<span id="L197" title="Line 197: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     197</span>                 :     uint32      nitem;</span>
+<span id="L198" title="Line 198: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     198</span>                 :     uint32      curitem;</span>
+<span id="L199" title="Line 199: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     199</span>                 : } GinBtreeDataLeafInsertData;</span>
+<span id="L200" title="Line 200: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     200</span>                 : </span>
+<span id="L201" title="Line 201: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     201</span>                 : /*</span>
+<span id="L202" title="Line 202: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     202</span>                 :  * For internal data (posting tree) pages, the insertion payload is a</span>
+<span id="L203" title="Line 203: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     203</span>                 :  * PostingItem</span>
+<span id="L204" title="Line 204: commit ce5326eed386 on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     204</span>                 :  */</span>
+<span id="L205" title="Line 205: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     205</span>                 : </span>
+<span id="L206" title="Line 206: commit b450abd2551e on 2018-12-27 by akorotkov@postgresql.org">                           <span class="lineNum">     206</span>                 : extern GinBtreeStack *ginFindLeafPage(GinBtree btree, bool searchMode,</span>
+<span id="L207" title="Line 207: commit 9f0602539db4 on 2023-09-08 by tmunro@postgresql.org">                           <span class="lineNum">     207</span>                 :                                       bool rootConflictCheck);</span>
+<span id="L208" title="Line 208: commit ac4ab97ec05e on 2013-11-08 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     208</span>                 : extern Buffer ginStepRight(Buffer buffer, Relation index, int lockmode);</span>
+<span id="L209" title="Line 209: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     209</span>                 : extern void freeGinBtreeStack(GinBtreeStack *stack);</span>
+<span id="L210" title="Line 210: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     210</span>                 : extern void ginInsertValue(GinBtree btree, GinBtreeStack *stack,</span>
+<span id="L211" title="Line 211: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     211</span>                 :                            void *insertdata, GinStatsData *buildStats);</span>
+<span id="L212" title="Line 212: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     212</span>                 : </span>
+<span id="L213" title="Line 213: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     213</span>                 : /* ginentrypage.c */</span>
+<span id="L214" title="Line 214: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     214</span>                 : extern IndexTuple GinFormTuple(GinState *ginstate,</span>
+<span id="L215" title="Line 215: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     215</span>                 :                                OffsetNumber attnum, Datum key, GinNullCategory category,</span>
+<span id="L216" title="Line 216: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     216</span>                 :                                Pointer data, Size dataSize, int nipd, bool errorTooBig);</span>
+<span id="L217" title="Line 217: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     217</span>                 : extern void ginPrepareEntryScan(GinBtree btree, OffsetNumber attnum,</span>
+<span id="L218" title="Line 218: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     218</span>                 :                                 Datum key, GinNullCategory category,</span>
+<span id="L219" title="Line 219: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>                 :                                 GinState *ginstate);</span>
+<span id="L220" title="Line 220: commit 631118fe1e8f on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     220</span>                 : extern void ginEntryFillRoot(GinBtree btree, Page root, BlockNumber lblkno, Page lpage, BlockNumber rblkno, Page rpage);</span>
+<span id="L221" title="Line 221: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     221</span>                 : extern ItemPointer ginReadTuple(GinState *ginstate, OffsetNumber attnum,</span>
+<span id="L222" title="Line 222: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     222</span>                 :                                 IndexTuple itup, int *nitems);</span>
+<span id="L223" title="Line 223: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     223</span>                 : </span>
+<span id="L224" title="Line 224: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     224</span>                 : /* gindatapage.c */</span>
+<span id="L225" title="Line 225: commit 25b1dafab63f on 2014-01-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     225</span>                 : extern ItemPointer GinDataLeafPageGetItems(Page page, int *nitems, ItemPointerData advancePast);</span>
+<span id="L226" title="Line 226: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     226</span>                 : extern int  GinDataLeafPageGetItemsToTbm(Page page, TIDBitmap *tbm);</span>
+<span id="L227" title="Line 227: commit 0ea53256a856 on 2013-11-06 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     227</span>                 : extern BlockNumber createPostingTree(Relation index,</span>
+<span id="L228" title="Line 228: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     228</span>                 :                                      ItemPointerData *items, uint32 nitems,</span>
+<span id="L229" title="Line 229: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     229</span>                 :                                      GinStatsData *buildStats, Buffer entrybuffer);</span>
+<span id="L230" title="Line 230: commit c2b175b94851 on 2013-10-03 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     230</span>                 : extern void GinDataPageAddPostingItem(Page page, PostingItem *data, OffsetNumber offset);</span>
+<span id="L231" title="Line 231: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     231</span>                 : extern void GinPageDeletePostingItem(Page page, OffsetNumber offset);</span>
+<span id="L232" title="Line 232: commit 04965ad40e10 on 2013-11-20 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     232</span>                 : extern void ginInsertItemPointers(Relation index, BlockNumber rootBlkno,</span>
+<span id="L233" title="Line 233: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     233</span>                 :                                   ItemPointerData *items, uint32 nitem,</span>
+<span id="L234" title="Line 234: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     234</span>                 :                                   GinStatsData *buildStats);</span>
+<span id="L235" title="Line 235: commit 9f0602539db4 on 2023-09-08 by tmunro@postgresql.org">                           <span class="lineNum">     235</span>                 : extern GinBtreeStack *ginScanBeginPostingTree(GinBtree btree, Relation index, BlockNumber rootBlkno);</span>
+<span id="L236" title="Line 236: commit 631118fe1e8f on 2013-11-27 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     236</span>                 : extern void ginDataFillRoot(GinBtree btree, Page root, BlockNumber lblkno, Page lpage, BlockNumber rblkno, Page rpage);</span>
+<span id="L237" title="Line 237: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     237</span>                 : </span>
+<span id="L238" title="Line 238: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     238</span>                 : /*</span>
+<span id="L239" title="Line 239: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     239</span>                 :  * This is declared in ginvacuum.c, but is passed between ginVacuumItemPointers</span>
+<span id="L240" title="Line 240: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     240</span>                 :  * and ginVacuumPostingTreeLeaf and as an opaque struct, so we need a forward</span>
+<span id="L241" title="Line 241: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     241</span>                 :  * declaration for it.</span>
+<span id="L242" title="Line 242: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     242</span>                 :  */</span>
+<span id="L243" title="Line 243: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     243</span>                 : typedef struct GinVacuumState GinVacuumState;</span>
+<span id="L244" title="Line 244: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     244</span>                 : </span>
+<span id="L245" title="Line 245: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     245</span>                 : extern void ginVacuumPostingTreeLeaf(Relation indexrel, Buffer buffer,</span>
+<span id="L246" title="Line 246: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     246</span>                 :                                      GinVacuumState *gvs);</span>
+<span id="L247" title="Line 247: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     247</span>                 : </span>
+<span id="L248" title="Line 248: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     248</span>                 : /* ginscan.c */</span>
+<span id="L249" title="Line 249: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     249</span>                 : </span>
+<span id="L250" title="Line 250: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     250</span>                 : /*</span>
+<span id="L251" title="Line 251: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     251</span>                 :  * GinScanKeyData describes a single GIN index qualifier expression.</span>
+<span id="L252" title="Line 252: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     252</span>                 :  *</span>
+<span id="L253" title="Line 253: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     253</span>                 :  * From each qual expression, we extract one or more specific index search</span>
+<span id="L254" title="Line 254: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     254</span>                 :  * conditions, which are represented by GinScanEntryData.  It's quite</span>
+<span id="L255" title="Line 255: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     255</span>                 :  * possible for identical search conditions to be requested by more than</span>
+<span id="L256" title="Line 256: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     256</span>                 :  * one qual expression, in which case we merge such conditions to have just</span>
+<span id="L257" title="Line 257: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     257</span>                 :  * one unique GinScanEntry --- this is particularly important for efficiency</span>
+<span id="L258" title="Line 258: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     258</span>                 :  * when dealing with full-index-scan entries.  So there can be multiple</span>
+<span id="L259" title="Line 259: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     259</span>                 :  * GinScanKeyData.scanEntry pointers to the same GinScanEntryData.</span>
+<span id="L260" title="Line 260: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     260</span>                 :  *</span>
+<span id="L261" title="Line 261: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     261</span>                 :  * In each GinScanKeyData, nentries is the true number of entries, while</span>
+<span id="L262" title="Line 262: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     262</span>                 :  * nuserentries is the number that extractQueryFn returned (which is what</span>
+<span id="L263" title="Line 263: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     263</span>                 :  * we report to consistentFn).  The &quot;user&quot; entries must come first.</span>
+<span id="L264" title="Line 264: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     264</span>                 :  */</span>
+<span id="L265" title="Line 265: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     265</span>                 : typedef struct GinScanKeyData *GinScanKey;</span>
+<span id="L266" title="Line 266: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     266</span>                 : </span>
+<span id="L267" title="Line 267: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     267</span>                 : typedef struct GinScanEntryData *GinScanEntry;</span>
+<span id="L268" title="Line 268: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     268</span>                 : </span>
+<span id="L269" title="Line 269: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     269</span>                 : typedef struct GinScanKeyData</span>
+<span id="L270" title="Line 270: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     270</span>                 : {</span>
+<span id="L271" title="Line 271: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     271</span>                 :     /* Real number of entries in scanEntry[] (always &gt; 0) */</span>
+<span id="L272" title="Line 272: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     272</span>                 :     uint32      nentries;</span>
+<span id="L273" title="Line 273: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     273</span>                 :     /* Number of entries that extractQueryFn and consistentFn know about */</span>
+<span id="L274" title="Line 274: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     274</span>                 :     uint32      nuserentries;</span>
+<span id="L275" title="Line 275: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     275</span>                 : </span>
+<span id="L276" title="Line 276: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     276</span>                 :     /* array of GinScanEntry pointers, one per extracted search condition */</span>
+<span id="L277" title="Line 277: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     277</span>                 :     GinScanEntry *scanEntry;</span>
+<span id="L278" title="Line 278: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     278</span>                 : </span>
+<span id="L279" title="Line 279: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     279</span>                 :     /*</span>
+<span id="L280" title="Line 280: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     280</span>                 :      * At least one of the entries in requiredEntries must be present for a</span>
+<span id="L281" title="Line 281: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     281</span>                 :      * tuple to match the overall qual.</span>
+<span id="L282" title="Line 282: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     282</span>                 :      *</span>
+<span id="L283" title="Line 283: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     283</span>                 :      * additionalEntries contains entries that are needed by the consistent</span>
+<span id="L284" title="Line 284: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     284</span>                 :      * function to decide if an item matches, but are not sufficient to</span>
+<span id="L285" title="Line 285: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     285</span>                 :      * satisfy the qual without entries from requiredEntries.</span>
+<span id="L286" title="Line 286: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     286</span>                 :      */</span>
+<span id="L287" title="Line 287: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     287</span>                 :     GinScanEntry *requiredEntries;</span>
+<span id="L288" title="Line 288: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     288</span>                 :     int         nrequired;</span>
+<span id="L289" title="Line 289: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     289</span>                 :     GinScanEntry *additionalEntries;</span>
+<span id="L290" title="Line 290: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     290</span>                 :     int         nadditional;</span>
+<span id="L291" title="Line 291: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     291</span>                 : </span>
+<span id="L292" title="Line 292: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     292</span>                 :     /* array of check flags, reported to consistentFn */</span>
+<span id="L293" title="Line 293: commit e6c9a5a9bcc9 on 2016-08-30 by peter_e@gmx.net">                           <span class="lineNum">     293</span>                 :     GinTernaryValue *entryRes;</span>
+<span id="L294" title="Line 294: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     294</span>                 :     bool        (*boolConsistentFn) (GinScanKey key);</span>
+<span id="L295" title="Line 295: commit 0cfa34c25a7c on 2014-03-31 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     295</span>                 :     GinTernaryValue (*triConsistentFn) (GinScanKey key);</span>
+<span id="L296" title="Line 296: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     296</span>                 :     FmgrInfo   *consistentFmgrInfo;</span>
+<span id="L297" title="Line 297: commit c5608ea26a1f on 2014-03-12 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     297</span>                 :     FmgrInfo   *triConsistentFmgrInfo;</span>
+<span id="L298" title="Line 298: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     298</span>                 :     Oid         collation;</span>
+<span id="L299" title="Line 299: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     299</span>                 : </span>
+<span id="L300" title="Line 300: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     300</span>                 :     /* other data needed for calling consistentFn */</span>
+<span id="L301" title="Line 301: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     301</span>                 :     Datum       query;</span>
+<span id="L302" title="Line 302: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     302</span>                 :     /* NB: these three arrays have only nuserentries elements! */</span>
+<span id="L303" title="Line 303: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     303</span>                 :     Datum      *queryValues;</span>
+<span id="L304" title="Line 304: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     304</span>                 :     GinNullCategory *queryCategories;</span>
+<span id="L305" title="Line 305: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     305</span>                 :     Pointer    *extra_data;</span>
+<span id="L306" title="Line 306: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     306</span>                 :     StrategyNumber strategy;</span>
+<span id="L307" title="Line 307: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     307</span>                 :     int32       searchMode;</span>
+<span id="L308" title="Line 308: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     308</span>                 :     OffsetNumber attnum;</span>
+<span id="L309" title="Line 309: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     309</span>                 : </span>
+<span id="L310" title="Line 310: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     310</span>                 :     /*</span>
+<span id="L311" title="Line 311: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     311</span>                 :      * An excludeOnly scan key is not able to enumerate all matching tuples.</span>
+<span id="L312" title="Line 312: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     312</span>                 :      * That is, to be semantically correct on its own, it would need to have a</span>
+<span id="L313" title="Line 313: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     313</span>                 :      * GIN_CAT_EMPTY_QUERY scanEntry, but it doesn't.  Such a key can still be</span>
+<span id="L314" title="Line 314: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     314</span>                 :      * used to filter tuples returned by other scan keys, so we will get the</span>
+<span id="L315" title="Line 315: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     315</span>                 :      * right answers as long as there's at least one non-excludeOnly scan key</span>
+<span id="L316" title="Line 316: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     316</span>                 :      * for each index attribute considered by the search.  For efficiency</span>
+<span id="L317" title="Line 317: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     317</span>                 :      * reasons we don't want to have unnecessary GIN_CAT_EMPTY_QUERY entries,</span>
+<span id="L318" title="Line 318: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     318</span>                 :      * so we will convert an excludeOnly scan key to non-excludeOnly (by</span>
+<span id="L319" title="Line 319: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     319</span>                 :      * adding a GIN_CAT_EMPTY_QUERY scanEntry) only if there are no other</span>
+<span id="L320" title="Line 320: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     320</span>                 :      * non-excludeOnly scan keys.</span>
+<span id="L321" title="Line 321: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     321</span>                 :      */</span>
+<span id="L322" title="Line 322: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     322</span>                 :     bool        excludeOnly;</span>
+<span id="L323" title="Line 323: commit 4b754d6c16e1 on 2020-01-18 by akorotkov@postgresql.org">                           <span class="lineNum">     323</span>                 : </span>
+<span id="L324" title="Line 324: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     324</span>                 :     /*</span>
+<span id="L325" title="Line 325: commit bf50caf105a9 on 2011-04-10 by bruce@momjian.us">                           <span class="lineNum">     325</span>                 :      * Match status data.  curItem is the TID most recently tested (could be a</span>
+<span id="L326" title="Line 326: commit 2eb4a831e5fb on 2017-08-16 by peter_e@gmx.net">                           <span class="lineNum">     326</span>                 :      * lossy-page pointer).  curItemMatches is true if it passes the</span>
+<span id="L327" title="Line 327: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     327</span>                 :      * consistentFn test; if so, recheckCurItem is the recheck flag.</span>
+<span id="L328" title="Line 328: commit bf50caf105a9 on 2011-04-10 by bruce@momjian.us">                           <span class="lineNum">     328</span>                 :      * isFinished means that all the input entry streams are finished, so this</span>
+<span id="L329" title="Line 329: commit bf50caf105a9 on 2011-04-10 by bruce@momjian.us">                           <span class="lineNum">     329</span>                 :      * key cannot succeed for any later TIDs.</span>
+<span id="L330" title="Line 330: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     330</span>                 :      */</span>
+<span id="L331" title="Line 331: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     331</span>                 :     ItemPointerData curItem;</span>
+<span id="L332" title="Line 332: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     332</span>                 :     bool        curItemMatches;</span>
+<span id="L333" title="Line 333: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     333</span>                 :     bool        recheckCurItem;</span>
+<span id="L334" title="Line 334: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     334</span>                 :     bool        isFinished;</span>
+<span id="L335" title="Line 335: commit e3860ffa4dd0 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     335</span>                 : }           GinScanKeyData;</span>
+<span id="L336" title="Line 336: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     336</span>                 : </span>
+<span id="L337" title="Line 337: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     337</span>                 : typedef struct GinScanEntryData</span>
+<span id="L338" title="Line 338: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     338</span>                 : {</span>
+<span id="L339" title="Line 339: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     339</span>                 :     /* query key and other information from extractQueryFn */</span>
+<span id="L340" title="Line 340: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     340</span>                 :     Datum       queryKey;</span>
+<span id="L341" title="Line 341: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     341</span>                 :     GinNullCategory queryCategory;</span>
+<span id="L342" title="Line 342: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     342</span>                 :     bool        isPartialMatch;</span>
+<span id="L343" title="Line 343: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     343</span>                 :     Pointer     extra_data;</span>
+<span id="L344" title="Line 344: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     344</span>                 :     StrategyNumber strategy;</span>
+<span id="L345" title="Line 345: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     345</span>                 :     int32       searchMode;</span>
+<span id="L346" title="Line 346: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     346</span>                 :     OffsetNumber attnum;</span>
+<span id="L347" title="Line 347: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     347</span>                 : </span>
+<span id="L348" title="Line 348: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     348</span>                 :     /* Current page in posting tree */</span>
+<span id="L349" title="Line 349: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     349</span>                 :     Buffer      buffer;</span>
+<span id="L350" title="Line 350: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     350</span>                 : </span>
+<span id="L351" title="Line 351: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     351</span>                 :     /* current ItemPointer to heap */</span>
+<span id="L352" title="Line 352: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     352</span>                 :     ItemPointerData curItem;</span>
+<span id="L353" title="Line 353: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     353</span>                 : </span>
+<span id="L354" title="Line 354: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     354</span>                 :     /* for a partial-match or full-scan query, we accumulate all TIDs here */</span>
+<span id="L355" title="Line 355: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     355</span>                 :     TIDBitmap  *matchBitmap;</span>
+<span id="L356" title="Line 356: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     356</span>                 :     TBMPrivateIterator *matchIterator;</span>
+<span id="L357" title="Line 357: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     357</span>                 : </span>
+<span id="L358" title="Line 358: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     358</span>                 :     /*</span>
+<span id="L359" title="Line 359: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     359</span>                 :      * If blockno is InvalidBlockNumber, all of the other fields in the</span>
+<span id="L360" title="Line 360: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     360</span>                 :      * matchResult are meaningless.</span>
+<span id="L361" title="Line 361: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     361</span>                 :      */</span>
+<span id="L362" title="Line 362: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     362</span>                 :     TBMIterateResult matchResult;</span>
+<span id="L363" title="Line 363: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">     363</span>                 :     OffsetNumber matchOffsets[TBM_MAX_TUPLES_PER_PAGE];</span>
+<span id="L364" title="Line 364: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">     364</span>                 :     int         matchNtuples;</span>
+<span id="L365" title="Line 365: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     365</span>                 : </span>
+<span id="L366" title="Line 366: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     366</span>                 :     /* used for Posting list and one page in Posting tree */</span>
+<span id="L367" title="Line 367: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     367</span>                 :     ItemPointerData *list;</span>
+<span id="L368" title="Line 368: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     368</span>                 :     int         nlist;</span>
+<span id="L369" title="Line 369: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     369</span>                 :     OffsetNumber offset;</span>
+<span id="L370" title="Line 370: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     370</span>                 : </span>
+<span id="L371" title="Line 371: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     371</span>                 :     bool        isFinished;</span>
+<span id="L372" title="Line 372: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     372</span>                 :     bool        reduceResult;</span>
+<span id="L373" title="Line 373: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     373</span>                 :     uint32      predictNumberResult;</span>
+<span id="L374" title="Line 374: commit 626a120656a7 on 2014-01-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     374</span>                 :     GinBtreeData btree;</span>
+<span id="L375" title="Line 375: commit e3860ffa4dd0 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     375</span>                 : }           GinScanEntryData;</span>
+<span id="L376" title="Line 376: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     376</span>                 : </span>
+<span id="L377" title="Line 377: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     377</span>                 : typedef struct GinScanOpaqueData</span>
+<span id="L378" title="Line 378: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     378</span>                 : {</span>
+<span id="L379" title="Line 379: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     379</span>                 :     MemoryContext tempCtx;</span>
+<span id="L380" title="Line 380: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     380</span>                 :     GinState    ginstate;</span>
+<span id="L381" title="Line 381: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     381</span>                 : </span>
+<span id="L382" title="Line 382: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     382</span>                 :     GinScanKey  keys;           /* one per scan qualifier expr */</span>
+<span id="L383" title="Line 383: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     383</span>                 :     uint32      nkeys;</span>
+<span id="L384" title="Line 384: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     384</span>                 : </span>
+<span id="L385" title="Line 385: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     385</span>                 :     GinScanEntry *entries;      /* one per index search condition */</span>
+<span id="L386" title="Line 386: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     386</span>                 :     uint32      totalentries;</span>
+<span id="L387" title="Line 387: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     387</span>                 :     uint32      allocentries;   /* allocated length of entries[] */</span>
+<span id="L388" title="Line 388: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     388</span>                 : </span>
+<span id="L389" title="Line 389: commit d88976cfa130 on 2015-02-04 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     389</span>                 :     MemoryContext keyCtx;       /* used to hold key and entry data */</span>
+<span id="L390" title="Line 390: commit d88976cfa130 on 2015-02-04 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     390</span>                 : </span>
+<span id="L391" title="Line 391: commit 56a57473a999 on 2011-01-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     391</span>                 :     bool        isVoidRes;      /* true if query is unsatisfiable */</span>
+<span id="L392" title="Line 392: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     392</span>                 : } GinScanOpaqueData;</span>
+<span id="L393" title="Line 393: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     393</span>                 : </span>
+<span id="L394" title="Line 394: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     394</span>                 : typedef GinScanOpaqueData *GinScanOpaque;</span>
+<span id="L395" title="Line 395: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     395</span>                 : </span>
+<span id="L396" title="Line 396: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     396</span>                 : extern IndexScanDesc ginbeginscan(Relation rel, int nkeys, int norderbys);</span>
+<span id="L397" title="Line 397: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     397</span>                 : extern void ginendscan(IndexScanDesc scan);</span>
+<span id="L398" title="Line 398: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     398</span>                 : extern void ginrescan(IndexScanDesc scan, ScanKey scankey, int nscankeys,</span>
+<span id="L399" title="Line 399: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     399</span>                 :                       ScanKey orderbys, int norderbys);</span>
+<span id="L400" title="Line 400: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     400</span>                 : extern void ginNewScanKey(IndexScanDesc scan);</span>
+<span id="L401" title="Line 401: commit 68fa75f3188c on 2015-01-30 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     401</span>                 : extern void ginFreeScanKeys(GinScanOpaque so);</span>
+<span id="L402" title="Line 402: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     402</span>                 : </span>
+<span id="L403" title="Line 403: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     403</span>                 : /* ginget.c */</span>
+<span id="L404" title="Line 404: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     404</span>                 : extern int64 gingetbitmap(IndexScanDesc scan, TIDBitmap *tbm);</span>
+<span id="L405" title="Line 405: commit 7f46eaf03544 on 2016-01-28 by fujii@postgresql.org">                           <span class="lineNum">     405</span>                 : </span>
+<span id="L406" title="Line 406: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     406</span>                 : /* ginlogic.c */</span>
+<span id="L407" title="Line 407: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     407</span>                 : extern void ginInitConsistentFunction(GinState *ginstate, GinScanKey key);</span>
+<span id="L408" title="Line 408: commit dbc649fd773e on 2014-02-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     408</span>                 : </span>
+<span id="L409" title="Line 409: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     409</span>                 : /* ginvacuum.c */</span>
+<span id="L410" title="Line 410: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     410</span>                 : extern IndexBulkDeleteResult *ginbulkdelete(IndexVacuumInfo *info,</span>
+<span id="L411" title="Line 411: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     411</span>                 :                                             IndexBulkDeleteResult *stats,</span>
+<span id="L412" title="Line 412: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     412</span>                 :                                             IndexBulkDeleteCallback callback,</span>
+<span id="L413" title="Line 413: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     413</span>                 :                                             void *callback_state);</span>
+<span id="L414" title="Line 414: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     414</span>                 : extern IndexBulkDeleteResult *ginvacuumcleanup(IndexVacuumInfo *info,</span>
+<span id="L415" title="Line 415: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     415</span>                 :                                                IndexBulkDeleteResult *stats);</span>
+<span id="L416" title="Line 416: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     416</span>                 : extern ItemPointer ginVacuumItemPointers(GinVacuumState *gvs,</span>
+<span id="L417" title="Line 417: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     417</span>                 :                                          ItemPointerData *items, int nitem, int *nremaining);</span>
+<span id="L418" title="Line 418: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     418</span>                 : </span>
+<span id="L419" title="Line 419: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     419</span>                 : /* ginvalidate.c */</span>
+<span id="L420" title="Line 420: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     420</span>                 : extern bool ginvalidate(Oid opclassoid);</span>
+<span id="L421" title="Line 421: commit 9f9682783bea on 2020-08-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     421</span>                 : extern void ginadjustmembers(Oid opfamilyoid,</span>
+<span id="L422" title="Line 422: commit 9f9682783bea on 2020-08-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     422</span>                 :                              Oid opclassoid,</span>
+<span id="L423" title="Line 423: commit 9f9682783bea on 2020-08-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     423</span>                 :                              List *operators,</span>
+<span id="L424" title="Line 424: commit 9f9682783bea on 2020-08-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     424</span>                 :                              List *functions);</span>
+<span id="L425" title="Line 425: commit 65c5fcd353a8 on 2016-01-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     425</span>                 : </span>
+<span id="L426" title="Line 426: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     426</span>                 : /* ginbulk.c */</span>
+<span id="L427" title="Line 427: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     427</span>                 : typedef struct GinEntryAccumulator</span>
+<span id="L428" title="Line 428: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     428</span>                 : {</span>
+<span id="L429" title="Line 429: commit 003c68a3b45d on 2018-11-06 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     429</span>                 :     RBTNode     rbtnode;</span>
+<span id="L430" title="Line 430: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     430</span>                 :     Datum       key;</span>
+<span id="L431" title="Line 431: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     431</span>                 :     GinNullCategory category;</span>
+<span id="L432" title="Line 432: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     432</span>                 :     OffsetNumber attnum;</span>
+<span id="L433" title="Line 433: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     433</span>                 :     bool        shouldSort;</span>
+<span id="L434" title="Line 434: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     434</span>                 :     ItemPointerData *list;</span>
+<span id="L435" title="Line 435: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     435</span>                 :     uint32      maxcount;       /* allocated size of list[] */</span>
+<span id="L436" title="Line 436: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     436</span>                 :     uint32      count;          /* current number of list[] entries */</span>
+<span id="L437" title="Line 437: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     437</span>                 : } GinEntryAccumulator;</span>
+<span id="L438" title="Line 438: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     438</span>                 : </span>
+<span id="L439" title="Line 439: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     439</span>                 : typedef struct</span>
+<span id="L440" title="Line 440: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     440</span>                 : {</span>
+<span id="L441" title="Line 441: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     441</span>                 :     GinState   *ginstate;</span>
+<span id="L442" title="Line 442: commit 30bb26b5e04c on 2015-09-02 by teodor@sigaev.ru">                           <span class="lineNum">     442</span>                 :     Size        allocatedMemory;</span>
+<span id="L443" title="Line 443: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     443</span>                 :     GinEntryAccumulator *entryallocator;</span>
+<span id="L444" title="Line 444: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     444</span>                 :     uint32      eas_used;</span>
+<span id="L445" title="Line 445: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     445</span>                 :     RBTree     *tree;</span>
+<span id="L446" title="Line 446: commit 9f85784cae4d on 2016-09-02 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     446</span>                 :     RBTreeIterator tree_walk;</span>
+<span id="L447" title="Line 447: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     447</span>                 : } BuildAccumulator;</span>
+<span id="L448" title="Line 448: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     448</span>                 : </span>
+<span id="L449" title="Line 449: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     449</span>                 : extern void ginInitBA(BuildAccumulator *accum);</span>
+<span id="L450" title="Line 450: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     450</span>                 : extern void ginInsertBAEntries(BuildAccumulator *accum,</span>
+<span id="L451" title="Line 451: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     451</span>                 :                                ItemPointer heapptr, OffsetNumber attnum,</span>
+<span id="L452" title="Line 452: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     452</span>                 :                                Datum *entries, GinNullCategory *categories,</span>
+<span id="L453" title="Line 453: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     453</span>                 :                                int32 nentries);</span>
+<span id="L454" title="Line 454: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     454</span>                 : extern void ginBeginBAScan(BuildAccumulator *accum);</span>
+<span id="L455" title="Line 455: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     455</span>                 : extern ItemPointerData *ginGetBAEntry(BuildAccumulator *accum,</span>
+<span id="L456" title="Line 456: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     456</span>                 :                                       OffsetNumber *attnum, Datum *key, GinNullCategory *category,</span>
+<span id="L457" title="Line 457: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     457</span>                 :                                       uint32 *n);</span>
+<span id="L458" title="Line 458: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     458</span>                 : </span>
+<span id="L459" title="Line 459: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     459</span>                 : /* ginfast.c */</span>
+<span id="L460" title="Line 460: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     460</span>                 : </span>
+<span id="L461" title="Line 461: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     461</span>                 : typedef struct GinTupleCollector</span>
+<span id="L462" title="Line 462: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     462</span>                 : {</span>
+<span id="L463" title="Line 463: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     463</span>                 :     IndexTuple *tuples;</span>
+<span id="L464" title="Line 464: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     464</span>                 :     uint32      ntuples;</span>
+<span id="L465" title="Line 465: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     465</span>                 :     uint32      lentuples;</span>
+<span id="L466" title="Line 466: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     466</span>                 :     uint32      sumsize;</span>
+<span id="L467" title="Line 467: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     467</span>                 : } GinTupleCollector;</span>
+<span id="L468" title="Line 468: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     468</span>                 : </span>
+<span id="L469" title="Line 469: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     469</span>                 : extern void ginHeapTupleFastInsert(GinState *ginstate,</span>
+<span id="L470" title="Line 470: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     470</span>                 :                                    GinTupleCollector *collector);</span>
+<span id="L471" title="Line 471: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     471</span>                 : extern void ginHeapTupleFastCollect(GinState *ginstate,</span>
+<span id="L472" title="Line 472: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     472</span>                 :                                     GinTupleCollector *collector,</span>
+<span id="L473" title="Line 473: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     473</span>                 :                                     OffsetNumber attnum, Datum value, bool isNull,</span>
+<span id="L474" title="Line 474: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     474</span>                 :                                     ItemPointer ht_ctid);</span>
+<span id="L475" title="Line 475: commit e2c79e14d998 on 2016-04-28 by teodor@sigaev.ru">                           <span class="lineNum">     475</span>                 : extern void ginInsertCleanup(GinState *ginstate, bool full_clean,</span>
+<span id="L476" title="Line 476: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     476</span>                 :                              bool fill_fsm, bool forceCleanup, IndexBulkDeleteResult *stats);</span>
+<span id="L477" title="Line 477: commit 73912e7fbd1b on 2011-01-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     477</span>                 : </span>
+<span id="L478" title="Line 478: commit 0ea53256a856 on 2013-11-06 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     478</span>                 : /* ginpostinglist.c */</span>
+<span id="L479" title="Line 479: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     479</span>                 : </span>
+<span id="L480" title="Line 480: commit 8548ddc61b58 on 2019-08-05 by michael@paquier.xyz">                           <span class="lineNum">     480</span>                 : extern GinPostingList *ginCompressPostingList(const ItemPointer ipd, int nipd,</span>
+<span id="L481" title="Line 481: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     481</span>                 :                                               int maxsize, int *nwritten);</span>
+<span id="L482" title="Line 482: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     482</span>                 : extern int  ginPostingListDecodeAllSegmentsToTbm(GinPostingList *ptr, int len, TIDBitmap *tbm);</span>
+<span id="L483" title="Line 483: commit 36a35c550ac1 on 2014-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     483</span>                 : </span>
+<span id="L484" title="Line 484: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     484</span>                 : extern ItemPointer ginPostingListDecodeAllSegments(GinPostingList *segment, int len,</span>
+<span id="L485" title="Line 485: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     485</span>                 :                                                    int *ndecoded_out);</span>
+<span id="L486" title="Line 486: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     486</span>                 : extern ItemPointer ginPostingListDecode(GinPostingList *plist, int *ndecoded_out);</span>
+<span id="L487" title="Line 487: commit bb42e21be274 on 2014-03-24 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     487</span>                 : extern ItemPointer ginMergeItemPointers(ItemPointerData *a, uint32 na,</span>
+<span id="L488" title="Line 488: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     488</span>                 :                                         ItemPointerData *b, uint32 nb,</span>
+<span id="L489" title="Line 489: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     489</span>                 :                                         int *nmerged);</span>
+<span id="L490" title="Line 490: commit 0ea53256a856 on 2013-11-06 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     490</span>                 : </span>
+<span id="L491" title="Line 491: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     491</span>                 : /*</span>
+<span id="L492" title="Line 492: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     492</span>                 :  * Merging the results of several gin scans compares item pointers a lot,</span>
+<span id="L493" title="Line 493: commit de6fd1c898f6 on 2015-08-05 by andres@anarazel.de">                           <span class="lineNum">     493</span>                 :  * so we want this to be inlined.</span>
+<span id="L494" title="Line 494: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     494</span>                 :  */</span>
+<span id="L495" title="Line 495: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     495</span>                 : static inline int</span>
+<span id="L496" title="Line 496: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">4441</a> <a href="#top" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     496</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">     6830967 : ginCompareItemPointers(ItemPointer a, ItemPointer b)</span></span>
+<span id="L497" title="Line 497: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     497</span>                 : {</span>
+<span id="L498" title="Line 498: commit ce96ce60ca22 on 2017-03-28 by alvherre@alvh.no-ip.org"> 3073 <a href="#top" title="next CBC in &ldquo;alvherre@alvh.no-ip.org&rdquo; bin">alvherre@alvh.no-ip.</a> <span class="lineNum">     498</span> <span class="tlaCBC">        6830967 :     uint64      ia = (uint64) GinItemPointerGetBlockNumber(a) &lt;&lt; 32 | GinItemPointerGetOffsetNumber(a);</span></span>
+<span id="L499" title="Line 499: commit ce96ce60ca22 on 2017-03-28 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     499</span> <span class="tlaCBC">        6830967 :     uint64      ib = (uint64) GinItemPointerGetBlockNumber(b) &lt;&lt; 32 | GinItemPointerGetOffsetNumber(b);</span></span>
+<span id="L500" title="Line 500: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     500</span>                 : </span>
+<span id="L501" title="Line 501: commit 3b42bdb47169 on 2024-02-16 by nathan@postgresql.org">  557 <a href="#top" title="next CBC in &ldquo;nathan@postgresql.org&rdquo; bin">nathan@postgresql.or</a> <span class="lineNum">     501</span> <span class="tlaCBC">        6830967 :     return pg_cmp_u64(ia, ib);</span></span>
+<span id="L502" title="Line 502: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     502</span>                 : }</span>
+<span id="L503" title="Line 503: commit ee6556555b23 on 2013-06-29 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     503</span>                 : </span>
+<span id="L504" title="Line 504: commit ce96ce60ca22 on 2017-03-28 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     504</span>                 : extern int  ginTraverseLock(Buffer buffer, bool searchMode);</span>
+<span id="L505" title="Line 505: commit 218f51584d5a on 2017-03-23 by teodor@sigaev.ru">                           <span class="lineNum">     505</span>                 : </span>
+<span id="L506" title="Line 506: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     506</span>                 : #endif                          /* GIN_PRIVATE_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

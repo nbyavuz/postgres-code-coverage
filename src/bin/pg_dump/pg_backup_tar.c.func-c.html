@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/bin/pg_dump/pg_backup_tar.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory bin">bin</a>/<a href="index.html" title="Click to go to directory pg_dump">pg_dump</a> - pg_backup_tar.c<span style="font-size: 80%;"> (<a href="pg_backup_tar.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">83.6&nbsp;%</td>
+            <td class="headerCovTableEntry">432</td>
+            <td class="headerCovTableEntry">361</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry">361</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">32</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">54.8&nbsp;%</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry">114</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">114</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">83.4&nbsp;%</td>
+            <td class="headerCovTableEntry">427</td>
+            <td class="headerCovTableEntry">356</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry">356</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">32</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">54.8&nbsp;%</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry">114</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">114</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="pg_backup_tar.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="pg_backup_tar.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="pg_backup_tar.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L986">isValidTarHeader</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerLo>53.8&nbsp;% (7 / 13)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L920">_EndLO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L934">_EndLOs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L641">_LoadLOs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>96.4&nbsp;% (27 / 28)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L894">_StartLO</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L877">_StartLOs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L767">_CloseArchive</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L952">tarPrintf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L119">InitArchiveFmt_Tar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerMed>88.7&nbsp;% (47 / 53)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L547">_EndData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L560">_PrintFileData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L292">_StartData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L1138">_tarGetHeader</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerLo>73.1&nbsp;% (19 / 26)</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L1064">_tarPositionTo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerLo>50.0&nbsp;% (15 / 30)</td>
+              <td class=coverPerLo>41.7&nbsp;% (10 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L1012">_tarAddFile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              <td class=coverPerLo>54.5&nbsp;% (12 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L1210">_tarWriteHeader</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L587">_PrintTocData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">86</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L396">tarClose</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L300">tarOpen</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerMed>76.0&nbsp;% (19 / 25)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L538">_WriteData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">174</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L232">_ArchiveEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">405</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L263">_ReadExtraToc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">405</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L252">_WriteExtraToc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">405</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L283">_PrintExtraToc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">794</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L855">_scriptOut</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2309</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L755">_ReadBuf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4484</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L744">_WriteBuf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4484</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L729">_ReadByte</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39984</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L716">_WriteByte</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39984</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L509">tarRead</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44556</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L527">tarWrite</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46955</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#L460">_tarReadRaw</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">65175</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              <td class=coverPerLo>38.5&nbsp;% (10 / 26)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

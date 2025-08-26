@@ -1,0 +1,555 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/jsonb.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - jsonb.h<span style="font-size: 80%;"> (source / <a href="jsonb.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L374" title="goto first CBC line">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L374" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       3</span>                 :  * jsonb.h</span>
+<span id="L4" title="Line 4: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       4</span>                 :  *    Declarations for jsonb data type support.</span>
+<span id="L5" title="Line 5: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :  * Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L7" title="Line 7: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       7</span>                 :  *</span>
+<span id="L8" title="Line 8: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       8</span>                 :  * src/include/utils/jsonb.h</span>
+<span id="L9" title="Line 9: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      10</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L11" title="Line 11: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      11</span>                 :  */</span>
+<span id="L12" title="Line 12: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      12</span>                 : #ifndef __JSONB_H__</span>
+<span id="L13" title="Line 13: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      13</span>                 : #define __JSONB_H__</span>
+<span id="L14" title="Line 14: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      14</span>                 : </span>
+<span id="L15" title="Line 15: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      15</span>                 : #include &quot;lib/stringinfo.h&quot;</span>
+<span id="L16" title="Line 16: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      16</span>                 : #include &quot;utils/array.h&quot;</span>
+<span id="L17" title="Line 17: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      17</span>                 : #include &quot;utils/numeric.h&quot;</span>
+<span id="L18" title="Line 18: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      18</span>                 : </span>
+<span id="L19" title="Line 19: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      19</span>                 : /* Tokens used when sequentially processing a jsonb value */</span>
+<span id="L20" title="Line 20: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      20</span>                 : typedef enum</span>
+<span id="L21" title="Line 21: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      21</span>                 : {</span>
+<span id="L22" title="Line 22: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      22</span>                 :     WJB_DONE,</span>
+<span id="L23" title="Line 23: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      23</span>                 :     WJB_KEY,</span>
+<span id="L24" title="Line 24: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      24</span>                 :     WJB_VALUE,</span>
+<span id="L25" title="Line 25: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      25</span>                 :     WJB_ELEM,</span>
+<span id="L26" title="Line 26: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      26</span>                 :     WJB_BEGIN_ARRAY,</span>
+<span id="L27" title="Line 27: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      27</span>                 :     WJB_END_ARRAY,</span>
+<span id="L28" title="Line 28: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      28</span>                 :     WJB_BEGIN_OBJECT,</span>
+<span id="L29" title="Line 29: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">      29</span>                 :     WJB_END_OBJECT,</span>
+<span id="L30" title="Line 30: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      30</span>                 : } JsonbIteratorToken;</span>
+<span id="L31" title="Line 31: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      31</span>                 : </span>
+<span id="L32" title="Line 32: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 : /* Strategy numbers for GIN index opclasses */</span>
+<span id="L33" title="Line 33: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      33</span>                 : #define JsonbContainsStrategyNumber     7</span>
+<span id="L34" title="Line 34: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      34</span>                 : #define JsonbExistsStrategyNumber       9</span>
+<span id="L35" title="Line 35: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      35</span>                 : #define JsonbExistsAnyStrategyNumber    10</span>
+<span id="L36" title="Line 36: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      36</span>                 : #define JsonbExistsAllStrategyNumber    11</span>
+<span id="L37" title="Line 37: commit 0a02e2ae0236 on 2019-04-01 by akorotkov@postgresql.org">                           <span class="lineNum">      37</span>                 : #define JsonbJsonpathExistsStrategyNumber       15</span>
+<span id="L38" title="Line 38: commit 0a02e2ae0236 on 2019-04-01 by akorotkov@postgresql.org">                           <span class="lineNum">      38</span>                 : #define JsonbJsonpathPredicateStrategyNumber    16</span>
+<span id="L39" title="Line 39: commit 0a02e2ae0236 on 2019-04-01 by akorotkov@postgresql.org">                           <span class="lineNum">      39</span>                 : </span>
+<span id="L40" title="Line 40: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      40</span>                 : </span>
+<span id="L41" title="Line 41: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 : /*</span>
+<span id="L42" title="Line 42: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 :  * In the standard jsonb_ops GIN opclass for jsonb, we choose to index both</span>
+<span id="L43" title="Line 43: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :  * keys and values.  The storage format is text.  The first byte of the text</span>
+<span id="L44" title="Line 44: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :  * string distinguishes whether this is a key (always a string), null value,</span>
+<span id="L45" title="Line 45: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      45</span>                 :  * boolean value, numeric value, or string value.  However, array elements</span>
+<span id="L46" title="Line 46: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 :  * that are strings are marked as though they were keys; this imprecision</span>
+<span id="L47" title="Line 47: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 :  * supports the definition of the &quot;exists&quot; operator, which treats array</span>
+<span id="L48" title="Line 48: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 :  * elements like keys.  The remainder of the text string is empty for a null</span>
+<span id="L49" title="Line 49: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :  * value, &quot;t&quot; or &quot;f&quot; for a boolean value, a normalized print representation of</span>
+<span id="L50" title="Line 50: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 :  * a numeric value, or the text of a string value.  However, if the length of</span>
+<span id="L51" title="Line 51: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>                 :  * this text representation would exceed JGIN_MAXLENGTH bytes, we instead hash</span>
+<span id="L52" title="Line 52: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      52</span>                 :  * the text representation and store an 8-hex-digit representation of the</span>
+<span id="L53" title="Line 53: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      53</span>                 :  * uint32 hash value, marking the prefix byte with an additional bit to</span>
+<span id="L54" title="Line 54: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      54</span>                 :  * distinguish that this has happened.  Hashing long strings saves space and</span>
+<span id="L55" title="Line 55: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :  * ensures that we won't overrun the maximum entry length for a GIN index.</span>
+<span id="L56" title="Line 56: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :  * (But JGIN_MAXLENGTH is quite a bit shorter than GIN's limit.  It's chosen</span>
+<span id="L57" title="Line 57: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :  * to ensure that the on-disk text datum will have a short varlena header.)</span>
+<span id="L58" title="Line 58: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :  * Note that when any hashed item appears in a query, we must recheck index</span>
+<span id="L59" title="Line 59: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 :  * matches against the heap tuple; currently, this costs nothing because we</span>
+<span id="L60" title="Line 60: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :  * must always recheck for other reasons.</span>
+<span id="L61" title="Line 61: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 :  */</span>
+<span id="L62" title="Line 62: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      62</span>                 : #define JGINFLAG_KEY    0x01    /* key (or string array element) */</span>
+<span id="L63" title="Line 63: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 : #define JGINFLAG_NULL   0x02    /* null value */</span>
+<span id="L64" title="Line 64: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 : #define JGINFLAG_BOOL   0x03    /* boolean value */</span>
+<span id="L65" title="Line 65: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      65</span>                 : #define JGINFLAG_NUM    0x04    /* numeric value */</span>
+<span id="L66" title="Line 66: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 : #define JGINFLAG_STR    0x05    /* string value (if not an array element) */</span>
+<span id="L67" title="Line 67: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      67</span>                 : #define JGINFLAG_HASHED 0x10    /* OR'd into flag if value was hashed */</span>
+<span id="L68" title="Line 68: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      68</span>                 : #define JGIN_MAXLENGTH  125     /* max length of text part before hashing */</span>
+<span id="L69" title="Line 69: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 : </span>
+<span id="L70" title="Line 70: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      70</span>                 : typedef struct JsonbPair JsonbPair;</span>
+<span id="L71" title="Line 71: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      71</span>                 : typedef struct JsonbValue JsonbValue;</span>
+<span id="L72" title="Line 72: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      72</span>                 : </span>
+<span id="L73" title="Line 73: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      73</span>                 : /*</span>
+<span id="L74" title="Line 74: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      74</span>                 :  * Jsonbs are varlena objects, so must meet the varlena convention that the</span>
+<span id="L75" title="Line 75: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      75</span>                 :  * first int32 of the object contains the total object size in bytes.  Be sure</span>
+<span id="L76" title="Line 76: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      76</span>                 :  * to use VARSIZE() and SET_VARSIZE() to access it, though!</span>
+<span id="L77" title="Line 77: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      77</span>                 :  *</span>
+<span id="L78" title="Line 78: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      78</span>                 :  * Jsonb is the on-disk representation, in contrast to the in-memory JsonbValue</span>
+<span id="L79" title="Line 79: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      79</span>                 :  * representation.  Often, JsonbValues are just shims through which a Jsonb</span>
+<span id="L80" title="Line 80: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      80</span>                 :  * buffer is accessed, but they can also be deep copied and passed around.</span>
+<span id="L81" title="Line 81: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      81</span>                 :  *</span>
+<span id="L82" title="Line 82: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      82</span>                 :  * Jsonb is a tree structure. Each node in the tree consists of a JEntry</span>
+<span id="L83" title="Line 83: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 :  * header and a variable-length content (possibly of zero size).  The JEntry</span>
+<span id="L84" title="Line 84: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :  * header indicates what kind of a node it is, e.g. a string or an array,</span>
+<span id="L85" title="Line 85: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :  * and provides the length of its variable-length portion.</span>
+<span id="L86" title="Line 86: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      86</span>                 :  *</span>
+<span id="L87" title="Line 87: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      87</span>                 :  * The JEntry and the content of a node are not stored physically together.</span>
+<span id="L88" title="Line 88: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      88</span>                 :  * Instead, the container array or object has an array that holds the JEntrys</span>
+<span id="L89" title="Line 89: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      89</span>                 :  * of all the child nodes, followed by their variable-length portions.</span>
+<span id="L90" title="Line 90: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      90</span>                 :  *</span>
+<span id="L91" title="Line 91: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      91</span>                 :  * The root node is an exception; it has no parent array or object that could</span>
+<span id="L92" title="Line 92: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      92</span>                 :  * hold its JEntry. Hence, no JEntry header is stored for the root node.  It</span>
+<span id="L93" title="Line 93: commit 06db9cce22ef on 2014-05-22 by fujii@postgresql.org">                           <span class="lineNum">      93</span>                 :  * is implicitly known that the root node must be an array or an object,</span>
+<span id="L94" title="Line 94: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      94</span>                 :  * so we can get away without the type indicator as long as we can distinguish</span>
+<span id="L95" title="Line 95: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :  * the two.  For that purpose, both an array and an object begin with a uint32</span>
+<span id="L96" title="Line 96: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      96</span>                 :  * header field, which contains an JB_FOBJECT or JB_FARRAY flag.  When a naked</span>
+<span id="L97" title="Line 97: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      97</span>                 :  * scalar value needs to be stored as a Jsonb value, what we actually store is</span>
+<span id="L98" title="Line 98: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      98</span>                 :  * an array with one element, with the flags in the array's header field set</span>
+<span id="L99" title="Line 99: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      99</span>                 :  * to JB_FSCALAR | JB_FARRAY.</span>
+<span id="L100" title="Line 100: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     100</span>                 :  *</span>
+<span id="L101" title="Line 101: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     101</span>                 :  * Overall, the Jsonb struct requires 4-bytes alignment. Within the struct,</span>
+<span id="L102" title="Line 102: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     102</span>                 :  * the variable-length portion of some node types is aligned to a 4-byte</span>
+<span id="L103" title="Line 103: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     103</span>                 :  * boundary, while others are not. When alignment is needed, the padding is</span>
+<span id="L104" title="Line 104: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     104</span>                 :  * in the beginning of the node that requires it. For example, if a numeric</span>
+<span id="L105" title="Line 105: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     105</span>                 :  * node is stored after a string node, so that the numeric node begins at</span>
+<span id="L106" title="Line 106: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     106</span>                 :  * offset 3, the variable-length portion of the numeric node will begin with</span>
+<span id="L107" title="Line 107: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     107</span>                 :  * one padding byte so that the actual numeric data is 4-byte aligned.</span>
+<span id="L108" title="Line 108: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     108</span>                 :  */</span>
+<span id="L109" title="Line 109: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     109</span>                 : </span>
+<span id="L110" title="Line 110: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     110</span>                 : /*</span>
+<span id="L111" title="Line 111: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 :  * JEntry format.</span>
+<span id="L112" title="Line 112: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     112</span>                 :  *</span>
+<span id="L113" title="Line 113: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     113</span>                 :  * The least significant 28 bits store either the data length of the entry,</span>
+<span id="L114" title="Line 114: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 :  * or its end+1 offset from the start of the variable-length portion of the</span>
+<span id="L115" title="Line 115: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 :  * containing object.  The next three bits store the type of the entry, and</span>
+<span id="L116" title="Line 116: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 :  * the high-order bit tells whether the least significant bits store a length</span>
+<span id="L117" title="Line 117: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     117</span>                 :  * or an offset.</span>
+<span id="L118" title="Line 118: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 :  *</span>
+<span id="L119" title="Line 119: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     119</span>                 :  * The reason for the offset-or-length complication is to compromise between</span>
+<span id="L120" title="Line 120: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :  * access speed and data compressibility.  In the initial design each JEntry</span>
+<span id="L121" title="Line 121: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     121</span>                 :  * always stored an offset, but this resulted in JEntry arrays with horrible</span>
+<span id="L122" title="Line 122: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 :  * compressibility properties, so that TOAST compression of a JSONB did not</span>
+<span id="L123" title="Line 123: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 :  * work well.  Storing only lengths would greatly improve compressibility,</span>
+<span id="L124" title="Line 124: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     124</span>                 :  * but it makes random access into large arrays expensive (O(N) not O(1)).</span>
+<span id="L125" title="Line 125: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 :  * So what we do is store an offset in every JB_OFFSET_STRIDE'th JEntry and</span>
+<span id="L126" title="Line 126: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 :  * a length in the rest.  This results in reasonably compressible data (as</span>
+<span id="L127" title="Line 127: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     127</span>                 :  * long as the stride isn't too small).  We may have to examine as many as</span>
+<span id="L128" title="Line 128: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 :  * JB_OFFSET_STRIDE JEntrys in order to find out the offset or length of any</span>
+<span id="L129" title="Line 129: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span>                 :  * given item, but that's still O(1) no matter how large the container is.</span>
+<span id="L130" title="Line 130: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     130</span>                 :  *</span>
+<span id="L131" title="Line 131: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     131</span>                 :  * We could avoid eating a flag bit for this purpose if we were to store</span>
+<span id="L132" title="Line 132: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>                 :  * the stride in the container header, or if we were willing to treat the</span>
+<span id="L133" title="Line 133: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     133</span>                 :  * stride as an unchangeable constant.  Neither of those options is very</span>
+<span id="L134" title="Line 134: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     134</span>                 :  * attractive though.</span>
+<span id="L135" title="Line 135: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     135</span>                 :  */</span>
+<span id="L136" title="Line 136: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     136</span>                 : typedef uint32 JEntry;</span>
+<span id="L137" title="Line 137: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     137</span>                 : </span>
+<span id="L138" title="Line 138: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 : #define JENTRY_OFFLENMASK       0x0FFFFFFF</span>
+<span id="L139" title="Line 139: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     139</span>                 : #define JENTRY_TYPEMASK         0x70000000</span>
+<span id="L140" title="Line 140: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 : #define JENTRY_HAS_OFF          0x80000000</span>
+<span id="L141" title="Line 141: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     141</span>                 : </span>
+<span id="L142" title="Line 142: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     142</span>                 : /* values stored in the type bits */</span>
+<span id="L143" title="Line 143: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     143</span>                 : #define JENTRY_ISSTRING         0x00000000</span>
+<span id="L144" title="Line 144: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     144</span>                 : #define JENTRY_ISNUMERIC        0x10000000</span>
+<span id="L145" title="Line 145: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     145</span>                 : #define JENTRY_ISBOOL_FALSE     0x20000000</span>
+<span id="L146" title="Line 146: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     146</span>                 : #define JENTRY_ISBOOL_TRUE      0x30000000</span>
+<span id="L147" title="Line 147: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     147</span>                 : #define JENTRY_ISNULL           0x40000000</span>
+<span id="L148" title="Line 148: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     148</span>                 : #define JENTRY_ISCONTAINER      0x50000000  /* array or object */</span>
+<span id="L149" title="Line 149: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     149</span>                 : </span>
+<span id="L150" title="Line 150: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     150</span>                 : /* Access macros.  Note possible multiple evaluations */</span>
+<span id="L151" title="Line 151: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 : #define JBE_OFFLENFLD(je_)      ((je_) &amp; JENTRY_OFFLENMASK)</span>
+<span id="L152" title="Line 152: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     152</span>                 : #define JBE_HAS_OFF(je_)        (((je_) &amp; JENTRY_HAS_OFF) != 0)</span>
+<span id="L153" title="Line 153: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     153</span>                 : #define JBE_ISSTRING(je_)       (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISSTRING)</span>
+<span id="L154" title="Line 154: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     154</span>                 : #define JBE_ISNUMERIC(je_)      (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISNUMERIC)</span>
+<span id="L155" title="Line 155: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     155</span>                 : #define JBE_ISCONTAINER(je_)    (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISCONTAINER)</span>
+<span id="L156" title="Line 156: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     156</span>                 : #define JBE_ISNULL(je_)         (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISNULL)</span>
+<span id="L157" title="Line 157: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     157</span>                 : #define JBE_ISBOOL_TRUE(je_)    (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISBOOL_TRUE)</span>
+<span id="L158" title="Line 158: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     158</span>                 : #define JBE_ISBOOL_FALSE(je_)   (((je_) &amp; JENTRY_TYPEMASK) == JENTRY_ISBOOL_FALSE)</span>
+<span id="L159" title="Line 159: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     159</span>                 : #define JBE_ISBOOL(je_)         (JBE_ISBOOL_TRUE(je_) || JBE_ISBOOL_FALSE(je_))</span>
+<span id="L160" title="Line 160: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     160</span>                 : </span>
+<span id="L161" title="Line 161: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     161</span>                 : /* Macro for advancing an offset variable to the next JEntry */</span>
+<span id="L162" title="Line 162: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     162</span>                 : #define JBE_ADVANCE_OFFSET(offset, je) \</span>
+<span id="L163" title="Line 163: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     163</span>                 :     do { \</span>
+<span id="L164" title="Line 164: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     164</span>                 :         JEntry  je_ = (je); \</span>
+<span id="L165" title="Line 165: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     165</span>                 :         if (JBE_HAS_OFF(je_)) \</span>
+<span id="L166" title="Line 166: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     166</span>                 :             (offset) = JBE_OFFLENFLD(je_); \</span>
+<span id="L167" title="Line 167: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 :         else \</span>
+<span id="L168" title="Line 168: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>                 :             (offset) += JBE_OFFLENFLD(je_); \</span>
+<span id="L169" title="Line 169: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     169</span>                 :     } while(0)</span>
+<span id="L170" title="Line 170: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     170</span>                 : </span>
+<span id="L171" title="Line 171: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     171</span>                 : /*</span>
+<span id="L172" title="Line 172: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :  * We store an offset, not a length, every JB_OFFSET_STRIDE children.</span>
+<span id="L173" title="Line 173: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     173</span>                 :  * Caution: this macro should only be referenced when creating a JSONB</span>
+<span id="L174" title="Line 174: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     174</span>                 :  * value.  When examining an existing value, pay attention to the HAS_OFF</span>
+<span id="L175" title="Line 175: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :  * bits instead.  This allows changes in the offset-placement heuristic</span>
+<span id="L176" title="Line 176: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     176</span>                 :  * without breaking on-disk compatibility.</span>
+<span id="L177" title="Line 177: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     177</span>                 :  */</span>
+<span id="L178" title="Line 178: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     178</span>                 : #define JB_OFFSET_STRIDE        32</span>
+<span id="L179" title="Line 179: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     179</span>                 : </span>
+<span id="L180" title="Line 180: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     180</span>                 : /*</span>
+<span id="L181" title="Line 181: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     181</span>                 :  * A jsonb array or object node, within a Jsonb Datum.</span>
+<span id="L182" title="Line 182: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     182</span>                 :  *</span>
+<span id="L183" title="Line 183: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     183</span>                 :  * An array has one child for each element, stored in array order.</span>
+<span id="L184" title="Line 184: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     184</span>                 :  *</span>
+<span id="L185" title="Line 185: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     185</span>                 :  * An object has two children for each key/value pair.  The keys all appear</span>
+<span id="L186" title="Line 186: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     186</span>                 :  * first, in key sort order; then the values appear, in an order matching the</span>
+<span id="L187" title="Line 187: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     187</span>                 :  * key order.  This arrangement keeps the keys compact in memory, making a</span>
+<span id="L188" title="Line 188: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     188</span>                 :  * search for a particular key more cache-friendly.</span>
+<span id="L189" title="Line 189: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     189</span>                 :  */</span>
+<span id="L190" title="Line 190: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     190</span>                 : typedef struct JsonbContainer</span>
+<span id="L191" title="Line 191: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     191</span>                 : {</span>
+<span id="L192" title="Line 192: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     192</span>                 :     uint32      header;         /* number of elements or key/value pairs, and</span>
+<span id="L193" title="Line 193: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     193</span>                 :                                  * flags */</span>
+<span id="L194" title="Line 194: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     194</span>                 :     JEntry      children[FLEXIBLE_ARRAY_MEMBER];</span>
+<span id="L195" title="Line 195: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     195</span>                 : </span>
+<span id="L196" title="Line 196: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     196</span>                 :     /* the data for each child node follows. */</span>
+<span id="L197" title="Line 197: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     197</span>                 : } JsonbContainer;</span>
+<span id="L198" title="Line 198: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     198</span>                 : </span>
+<span id="L199" title="Line 199: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     199</span>                 : /* flags for the header-field in JsonbContainer */</span>
+<span id="L200" title="Line 200: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     200</span>                 : #define JB_CMASK                0x0FFFFFFF  /* mask for count field */</span>
+<span id="L201" title="Line 201: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     201</span>                 : #define JB_FSCALAR              0x10000000  /* flag bits */</span>
+<span id="L202" title="Line 202: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     202</span>                 : #define JB_FOBJECT              0x20000000</span>
+<span id="L203" title="Line 203: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     203</span>                 : #define JB_FARRAY               0x40000000</span>
+<span id="L204" title="Line 204: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     204</span>                 : </span>
+<span id="L205" title="Line 205: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     205</span>                 : /* convenience macros for accessing a JsonbContainer struct */</span>
+<span id="L206" title="Line 206: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     206</span>                 : #define JsonContainerSize(jc)       ((jc)-&gt;header &amp; JB_CMASK)</span>
+<span id="L207" title="Line 207: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     207</span>                 : #define JsonContainerIsScalar(jc)   (((jc)-&gt;header &amp; JB_FSCALAR) != 0)</span>
+<span id="L208" title="Line 208: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     208</span>                 : #define JsonContainerIsObject(jc)   (((jc)-&gt;header &amp; JB_FOBJECT) != 0)</span>
+<span id="L209" title="Line 209: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     209</span>                 : #define JsonContainerIsArray(jc)    (((jc)-&gt;header &amp; JB_FARRAY) != 0)</span>
+<span id="L210" title="Line 210: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     210</span>                 : </span>
+<span id="L211" title="Line 211: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     211</span>                 : /* The top-level on-disk format for a jsonb datum. */</span>
+<span id="L212" title="Line 212: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     212</span>                 : typedef struct</span>
+<span id="L213" title="Line 213: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     213</span>                 : {</span>
+<span id="L214" title="Line 214: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     214</span>                 :     int32       vl_len_;        /* varlena header (do not touch directly!) */</span>
+<span id="L215" title="Line 215: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     215</span>                 :     JsonbContainer root;</span>
+<span id="L216" title="Line 216: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     216</span>                 : } Jsonb;</span>
+<span id="L217" title="Line 217: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     217</span>                 : </span>
+<span id="L218" title="Line 218: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     218</span>                 : /* convenience macros for accessing the root container in a Jsonb datum */</span>
+<span id="L219" title="Line 219: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>                 : #define JB_ROOT_COUNT(jbp_)     (*(uint32 *) VARDATA(jbp_) &amp; JB_CMASK)</span>
+<span id="L220" title="Line 220: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     220</span>                 : #define JB_ROOT_IS_SCALAR(jbp_) ((*(uint32 *) VARDATA(jbp_) &amp; JB_FSCALAR) != 0)</span>
+<span id="L221" title="Line 221: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     221</span>                 : #define JB_ROOT_IS_OBJECT(jbp_) ((*(uint32 *) VARDATA(jbp_) &amp; JB_FOBJECT) != 0)</span>
+<span id="L222" title="Line 222: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     222</span>                 : #define JB_ROOT_IS_ARRAY(jbp_)  ((*(uint32 *) VARDATA(jbp_) &amp; JB_FARRAY) != 0)</span>
+<span id="L223" title="Line 223: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     223</span>                 : </span>
+<span id="L224" title="Line 224: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     224</span>                 : </span>
+<span id="L225" title="Line 225: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     225</span>                 : enum jbvType</span>
+<span id="L226" title="Line 226: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     226</span>                 : {</span>
+<span id="L227" title="Line 227: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     227</span>                 :     /* Scalar types */</span>
+<span id="L228" title="Line 228: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     228</span>                 :     jbvNull = 0x0,</span>
+<span id="L229" title="Line 229: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     229</span>                 :     jbvString,</span>
+<span id="L230" title="Line 230: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     230</span>                 :     jbvNumeric,</span>
+<span id="L231" title="Line 231: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     231</span>                 :     jbvBool,</span>
+<span id="L232" title="Line 232: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     232</span>                 :     /* Composite types */</span>
+<span id="L233" title="Line 233: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     233</span>                 :     jbvArray = 0x10,</span>
+<span id="L234" title="Line 234: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     234</span>                 :     jbvObject,</span>
+<span id="L235" title="Line 235: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     235</span>                 :     /* Binary (i.e. struct Jsonb) jbvArray/jbvObject */</span>
+<span id="L236" title="Line 236: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     236</span>                 :     jbvBinary,</span>
+<span id="L237" title="Line 237: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     237</span>                 : </span>
+<span id="L238" title="Line 238: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     238</span>                 :     /*</span>
+<span id="L239" title="Line 239: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     239</span>                 :      * Virtual types.</span>
+<span id="L240" title="Line 240: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     240</span>                 :      *</span>
+<span id="L241" title="Line 241: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     241</span>                 :      * These types are used only for in-memory JSON processing and serialized</span>
+<span id="L242" title="Line 242: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     242</span>                 :      * into JSON strings when outputted to json/jsonb.</span>
+<span id="L243" title="Line 243: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     243</span>                 :      */</span>
+<span id="L244" title="Line 244: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     244</span>                 :     jbvDatetime = 0x20,</span>
+<span id="L245" title="Line 245: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     245</span>                 : };</span>
+<span id="L246" title="Line 246: commit 330b48b94b53 on 2016-09-30 by peter_e@gmx.net">                           <span class="lineNum">     246</span>                 : </span>
+<span id="L247" title="Line 247: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     247</span>                 : /*</span>
+<span id="L248" title="Line 248: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     248</span>                 :  * JsonbValue:  In-memory representation of Jsonb.  This is a convenient</span>
+<span id="L249" title="Line 249: commit f33a71a7865a on 2014-04-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     249</span>                 :  * deserialized representation, that can easily support using the &quot;val&quot;</span>
+<span id="L250" title="Line 250: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     250</span>                 :  * union across underlying types during manipulation.  The Jsonb on-disk</span>
+<span id="L251" title="Line 251: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     251</span>                 :  * representation has various alignment considerations.</span>
+<span id="L252" title="Line 252: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     252</span>                 :  */</span>
+<span id="L253" title="Line 253: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     253</span>                 : struct JsonbValue</span>
+<span id="L254" title="Line 254: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     254</span>                 : {</span>
+<span id="L255" title="Line 255: commit f7c624624029 on 2017-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     255</span>                 :     enum jbvType type;          /* Influences sort order */</span>
+<span id="L256" title="Line 256: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     256</span>                 : </span>
+<span id="L257" title="Line 257: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     257</span>                 :     union</span>
+<span id="L258" title="Line 258: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     258</span>                 :     {</span>
+<span id="L259" title="Line 259: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     259</span>                 :         Numeric numeric;</span>
+<span id="L260" title="Line 260: commit 4bc424b96805 on 2016-06-09 by rhaas@postgresql.org">                           <span class="lineNum">     260</span>                 :         bool        boolean;</span>
+<span id="L261" title="Line 261: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     261</span>                 :         struct</span>
+<span id="L262" title="Line 262: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     262</span>                 :         {</span>
+<span id="L263" title="Line 263: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     263</span>                 :             int         len;</span>
+<span id="L264" title="Line 264: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     264</span>                 :             char       *val;    /* Not necessarily null-terminated */</span>
+<span id="L265" title="Line 265: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     265</span>                 :         }           string;     /* String primitive type */</span>
+<span id="L266" title="Line 266: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     266</span>                 : </span>
+<span id="L267" title="Line 267: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     267</span>                 :         struct</span>
+<span id="L268" title="Line 268: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     268</span>                 :         {</span>
+<span id="L269" title="Line 269: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     269</span>                 :             int         nElems;</span>
+<span id="L270" title="Line 270: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     270</span>                 :             JsonbValue *elems;</span>
+<span id="L271" title="Line 271: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     271</span>                 :             bool        rawScalar;  /* Top-level &quot;raw scalar&quot; array? */</span>
+<span id="L272" title="Line 272: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     272</span>                 :         }           array;      /* Array container type */</span>
+<span id="L273" title="Line 273: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     273</span>                 : </span>
+<span id="L274" title="Line 274: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     274</span>                 :         struct</span>
+<span id="L275" title="Line 275: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     275</span>                 :         {</span>
+<span id="L276" title="Line 276: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     276</span>                 :             int         nPairs; /* 1 pair, 2 elements */</span>
+<span id="L277" title="Line 277: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     277</span>                 :             JsonbPair  *pairs;</span>
+<span id="L278" title="Line 278: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     278</span>                 :         }           object;     /* Associative container type */</span>
+<span id="L279" title="Line 279: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     279</span>                 : </span>
+<span id="L280" title="Line 280: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     280</span>                 :         struct</span>
+<span id="L281" title="Line 281: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     281</span>                 :         {</span>
+<span id="L282" title="Line 282: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     282</span>                 :             int         len;</span>
+<span id="L283" title="Line 283: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     283</span>                 :             JsonbContainer *data;</span>
+<span id="L284" title="Line 284: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     284</span>                 :         }           binary;     /* Array or object, in on-disk format */</span>
+<span id="L285" title="Line 285: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     285</span>                 : </span>
+<span id="L286" title="Line 286: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     286</span>                 :         struct</span>
+<span id="L287" title="Line 287: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     287</span>                 :         {</span>
+<span id="L288" title="Line 288: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     288</span>                 :             Datum       value;</span>
+<span id="L289" title="Line 289: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     289</span>                 :             Oid         typid;</span>
+<span id="L290" title="Line 290: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     290</span>                 :             int32       typmod;</span>
+<span id="L291" title="Line 291: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     291</span>                 :             int         tz;     /* Numeric time zone, in seconds, for</span>
+<span id="L292" title="Line 292: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     292</span>                 :                                  * TimestampTz data type */</span>
+<span id="L293" title="Line 293: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     293</span>                 :         }           datetime;</span>
+<span id="L294" title="Line 294: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     294</span>                 :     }           val;</span>
+<span id="L295" title="Line 295: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     295</span>                 : };</span>
+<span id="L296" title="Line 296: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     296</span>                 : </span>
+<span id="L297" title="Line 297: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     297</span>                 : #define IsAJsonbScalar(jsonbval)    (((jsonbval)-&gt;type &gt;= jbvNull &amp;&amp; \</span>
+<span id="L298" title="Line 298: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     298</span>                 :                                       (jsonbval)-&gt;type &lt;= jbvBool) || \</span>
+<span id="L299" title="Line 299: commit 6dda292d4df8 on 2019-09-25 by akorotkov@postgresql.org">                           <span class="lineNum">     299</span>                 :                                       (jsonbval)-&gt;type == jbvDatetime)</span>
+<span id="L300" title="Line 300: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     300</span>                 : </span>
+<span id="L301" title="Line 301: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     301</span>                 : /*</span>
+<span id="L302" title="Line 302: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     302</span>                 :  * Key/value pair within an Object.</span>
+<span id="L303" title="Line 303: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     303</span>                 :  *</span>
+<span id="L304" title="Line 304: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     304</span>                 :  * This struct type is only used briefly while constructing a Jsonb; it is</span>
+<span id="L305" title="Line 305: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     305</span>                 :  * *not* the on-disk representation.</span>
+<span id="L306" title="Line 306: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     306</span>                 :  *</span>
+<span id="L307" title="Line 307: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     307</span>                 :  * Pairs with duplicate keys are de-duplicated.  We store the originally</span>
+<span id="L308" title="Line 308: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     308</span>                 :  * observed pair ordering for the purpose of removing duplicates in a</span>
+<span id="L309" title="Line 309: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     309</span>                 :  * well-defined way (which is &quot;last observed wins&quot;).</span>
+<span id="L310" title="Line 310: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     310</span>                 :  */</span>
+<span id="L311" title="Line 311: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     311</span>                 : struct JsonbPair</span>
+<span id="L312" title="Line 312: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     312</span>                 : {</span>
+<span id="L313" title="Line 313: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     313</span>                 :     JsonbValue  key;            /* Must be a jbvString */</span>
+<span id="L314" title="Line 314: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     314</span>                 :     JsonbValue  value;          /* May be of any type */</span>
+<span id="L315" title="Line 315: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     315</span>                 :     uint32      order;          /* Pair's index in original sequence */</span>
+<span id="L316" title="Line 316: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     316</span>                 : };</span>
+<span id="L317" title="Line 317: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     317</span>                 : </span>
+<span id="L318" title="Line 318: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     318</span>                 : /* Conversion state used when parsing Jsonb from text, or for type coercion */</span>
+<span id="L319" title="Line 319: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     319</span>                 : typedef struct JsonbParseState</span>
+<span id="L320" title="Line 320: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     320</span>                 : {</span>
+<span id="L321" title="Line 321: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     321</span>                 :     JsonbValue  contVal;</span>
+<span id="L322" title="Line 322: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     322</span>                 :     Size        size;</span>
+<span id="L323" title="Line 323: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     323</span>                 :     struct JsonbParseState *next;</span>
+<span id="L324" title="Line 324: commit 7081ac46ace8 on 2023-03-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     324</span>                 :     bool        unique_keys;    /* Check object key uniqueness */</span>
+<span id="L325" title="Line 325: commit 7081ac46ace8 on 2023-03-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     325</span>                 :     bool        skip_nulls;     /* Skip null object fields */</span>
+<span id="L326" title="Line 326: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     326</span>                 : } JsonbParseState;</span>
+<span id="L327" title="Line 327: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     327</span>                 : </span>
+<span id="L328" title="Line 328: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     328</span>                 : /*</span>
+<span id="L329" title="Line 329: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     329</span>                 :  * JsonbIterator holds details of the type for each iteration. It also stores a</span>
+<span id="L330" title="Line 330: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     330</span>                 :  * Jsonb varlena buffer, which can be directly accessed in some contexts.</span>
+<span id="L331" title="Line 331: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     331</span>                 :  */</span>
+<span id="L332" title="Line 332: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     332</span>                 : typedef enum</span>
+<span id="L333" title="Line 333: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     333</span>                 : {</span>
+<span id="L334" title="Line 334: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     334</span>                 :     JBI_ARRAY_START,</span>
+<span id="L335" title="Line 335: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     335</span>                 :     JBI_ARRAY_ELEM,</span>
+<span id="L336" title="Line 336: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     336</span>                 :     JBI_OBJECT_START,</span>
+<span id="L337" title="Line 337: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     337</span>                 :     JBI_OBJECT_KEY,</span>
+<span id="L338" title="Line 338: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">     338</span>                 :     JBI_OBJECT_VALUE,</span>
+<span id="L339" title="Line 339: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     339</span>                 : } JsonbIterState;</span>
+<span id="L340" title="Line 340: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     340</span>                 : </span>
+<span id="L341" title="Line 341: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     341</span>                 : typedef struct JsonbIterator</span>
+<span id="L342" title="Line 342: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     342</span>                 : {</span>
+<span id="L343" title="Line 343: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     343</span>                 :     /* Container being iterated */</span>
+<span id="L344" title="Line 344: commit d9daff0e0cb1 on 2014-05-09 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     344</span>                 :     JsonbContainer *container;</span>
+<span id="L345" title="Line 345: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     345</span>                 :     uint32      nElems;         /* Number of elements in children array (will</span>
+<span id="L346" title="Line 346: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     346</span>                 :                                  * be nPairs for objects) */</span>
+<span id="L347" title="Line 347: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     347</span>                 :     bool        isScalar;       /* Pseudo-array scalar value? */</span>
+<span id="L348" title="Line 348: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     348</span>                 :     JEntry     *children;       /* JEntrys for child nodes */</span>
+<span id="L349" title="Line 349: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     349</span>                 :     /* Data proper.  This points to the beginning of the variable-length data */</span>
+<span id="L350" title="Line 350: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     350</span>                 :     char       *dataProper;</span>
+<span id="L351" title="Line 351: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     351</span>                 : </span>
+<span id="L352" title="Line 352: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     352</span>                 :     /* Current item in buffer (up to nElems) */</span>
+<span id="L353" title="Line 353: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     353</span>                 :     int         curIndex;</span>
+<span id="L354" title="Line 354: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     354</span>                 : </span>
+<span id="L355" title="Line 355: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     355</span>                 :     /* Data offset corresponding to current item */</span>
+<span id="L356" title="Line 356: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     356</span>                 :     uint32      curDataOffset;</span>
+<span id="L357" title="Line 357: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     357</span>                 : </span>
+<span id="L358" title="Line 358: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     358</span>                 :     /*</span>
+<span id="L359" title="Line 359: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     359</span>                 :      * If the container is an object, we want to return keys and values</span>
+<span id="L360" title="Line 360: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     360</span>                 :      * alternately; so curDataOffset points to the current key, and</span>
+<span id="L361" title="Line 361: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     361</span>                 :      * curValueOffset points to the current value.</span>
+<span id="L362" title="Line 362: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     362</span>                 :      */</span>
+<span id="L363" title="Line 363: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     363</span>                 :     uint32      curValueOffset;</span>
+<span id="L364" title="Line 364: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     364</span>                 : </span>
+<span id="L365" title="Line 365: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     365</span>                 :     /* Private state */</span>
+<span id="L366" title="Line 366: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     366</span>                 :     JsonbIterState state;</span>
+<span id="L367" title="Line 367: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     367</span>                 : </span>
+<span id="L368" title="Line 368: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     368</span>                 :     struct JsonbIterator *parent;</span>
+<span id="L369" title="Line 369: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     369</span>                 : } JsonbIterator;</span>
+<span id="L370" title="Line 370: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     370</span>                 : </span>
+<span id="L371" title="Line 371: commit 0b62fd036e1a on 2016-04-06 by teodor@sigaev.ru">                           <span class="lineNum">     371</span>                 : </span>
+<span id="L372" title="Line 372: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     372</span>                 : /* Convenience macros */</span>
+<span id="L373" title="Line 373: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     373</span>                 : static inline Jsonb *</span>
+<span id="L374" title="Line 374: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1064</a> <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     374</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      481979 : DatumGetJsonbP(Datum d)</span></span>
+<span id="L375" title="Line 375: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     375</span>                 : {</span>
+<span id="L376" title="Line 376: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     376</span> <span class="tlaCBC">         481979 :     return (Jsonb *) PG_DETOAST_DATUM(d);</span></span>
+<span id="L377" title="Line 377: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     377</span>                 : }</span>
+<span id="L378" title="Line 378: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     378</span>                 : </span>
+<span id="L379" title="Line 379: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     379</span>                 : static inline Jsonb *</span>
+<span id="L380" title="Line 380: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     380</span> <span class="tlaCBC">           4068 : DatumGetJsonbPCopy(Datum d)</span></span>
+<span id="L381" title="Line 381: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     381</span>                 : {</span>
+<span id="L382" title="Line 382: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     382</span> <span class="tlaCBC">           4068 :     return (Jsonb *) PG_DETOAST_DATUM_COPY(d);</span></span>
+<span id="L383" title="Line 383: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     383</span>                 : }</span>
+<span id="L384" title="Line 384: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     384</span>                 : </span>
+<span id="L385" title="Line 385: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     385</span>                 : static inline Datum</span>
+<span id="L386" title="Line 386: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     386</span> <span class="tlaCBC">           3909 : JsonbPGetDatum(const Jsonb *p)</span></span>
+<span id="L387" title="Line 387: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     387</span>                 : {</span>
+<span id="L388" title="Line 388: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     388</span> <span class="tlaCBC">           3909 :     return PointerGetDatum(p);</span></span>
+<span id="L389" title="Line 389: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     389</span>                 : }</span>
+<span id="L390" title="Line 390: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     390</span>                 : </span>
+<span id="L391" title="Line 391: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     391</span>                 : #define PG_GETARG_JSONB_P(x)    DatumGetJsonbP(PG_GETARG_DATUM(x))</span>
+<span id="L392" title="Line 392: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     392</span>                 : #define PG_GETARG_JSONB_P_COPY(x)   DatumGetJsonbPCopy(PG_GETARG_DATUM(x))</span>
+<span id="L393" title="Line 393: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     393</span>                 : #define PG_RETURN_JSONB_P(x)    PG_RETURN_POINTER(x)</span>
+<span id="L394" title="Line 394: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">     394</span>                 : </span>
+<span id="L395" title="Line 395: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     395</span>                 : /* Support functions */</span>
+<span id="L396" title="Line 396: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     396</span>                 : extern uint32 getJsonbOffset(const JsonbContainer *jc, int index);</span>
+<span id="L397" title="Line 397: commit def4c28cf914 on 2014-09-29 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     397</span>                 : extern uint32 getJsonbLength(const JsonbContainer *jc, int index);</span>
+<span id="L398" title="Line 398: commit 46dddf7673c5 on 2014-05-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     398</span>                 : extern int  compareJsonbContainers(JsonbContainer *a, JsonbContainer *b);</span>
+<span id="L399" title="Line 399: commit a601366a460f on 2022-09-20 by pg@bowt.ie">                           <span class="lineNum">     399</span>                 : extern JsonbValue *findJsonbValueFromContainer(JsonbContainer *container,</span>
+<span id="L400" title="Line 400: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     400</span>                 :                                                uint32 flags,</span>
+<span id="L401" title="Line 401: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     401</span>                 :                                                JsonbValue *key);</span>
+<span id="L402" title="Line 402: commit 1a2983231d90 on 2019-09-20 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     402</span>                 : extern JsonbValue *getKeyJsonValueFromContainer(JsonbContainer *container,</span>
+<span id="L403" title="Line 403: commit 1a2983231d90 on 2019-09-20 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     403</span>                 :                                                 const char *keyVal, int keyLen,</span>
+<span id="L404" title="Line 404: commit 1a2983231d90 on 2019-09-20 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     404</span>                 :                                                 JsonbValue *res);</span>
+<span id="L405" title="Line 405: commit a601366a460f on 2022-09-20 by pg@bowt.ie">                           <span class="lineNum">     405</span>                 : extern JsonbValue *getIthJsonbValueFromContainer(JsonbContainer *container,</span>
+<span id="L406" title="Line 406: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     406</span>                 :                                                  uint32 i);</span>
+<span id="L407" title="Line 407: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     407</span>                 : extern JsonbValue *pushJsonbValue(JsonbParseState **pstate,</span>
+<span id="L408" title="Line 408: commit 23bccc823d43 on 2019-07-22 by michael@paquier.xyz">                           <span class="lineNum">     408</span>                 :                                   JsonbIteratorToken seq, JsonbValue *jbval);</span>
+<span id="L409" title="Line 409: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     409</span>                 : extern JsonbIterator *JsonbIteratorInit(JsonbContainer *container);</span>
+<span id="L410" title="Line 410: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     410</span>                 : extern JsonbIteratorToken JsonbIteratorNext(JsonbIterator **it, JsonbValue *val,</span>
+<span id="L411" title="Line 411: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     411</span>                 :                                             bool skipNested);</span>
+<span id="L412" title="Line 412: commit 676887a3b0b8 on 2021-01-31 by akorotkov@postgresql.org">                           <span class="lineNum">     412</span>                 : extern void JsonbToJsonbValue(Jsonb *jsonb, JsonbValue *val);</span>
+<span id="L413" title="Line 413: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     413</span>                 : extern Jsonb *JsonbValueToJsonb(JsonbValue *val);</span>
+<span id="L414" title="Line 414: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     414</span>                 : extern bool JsonbDeepContains(JsonbIterator **val,</span>
+<span id="L415" title="Line 415: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     415</span>                 :                               JsonbIterator **mContained);</span>
+<span id="L416" title="Line 416: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     416</span>                 : extern void JsonbHashScalarValue(const JsonbValue *scalarVal, uint32 *hash);</span>
+<span id="L417" title="Line 417: commit 81c5e46c490e on 2017-08-31 by rhaas@postgresql.org">                           <span class="lineNum">     417</span>                 : extern void JsonbHashScalarValueExtended(const JsonbValue *scalarVal,</span>
+<span id="L418" title="Line 418: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     418</span>                 :                                          uint64 *hash, uint64 seed);</span>
+<span id="L419" title="Line 419: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">     419</span>                 : </span>
+<span id="L420" title="Line 420: commit c6947010ceb4 on 2015-05-12 by andrew@dunslane.net">                           <span class="lineNum">     420</span>                 : /* jsonb.c support functions */</span>
+<span id="L421" title="Line 421: commit 364ddc3e5cbd on 2014-05-07 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     421</span>                 : extern char *JsonbToCString(StringInfo out, JsonbContainer *in,</span>
+<span id="L422" title="Line 422: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     422</span>                 :                             int estimated_len);</span>
+<span id="L423" title="Line 423: commit c6947010ceb4 on 2015-05-12 by andrew@dunslane.net">                           <span class="lineNum">     423</span>                 : extern char *JsonbToCStringIndent(StringInfo out, JsonbContainer *in,</span>
+<span id="L424" title="Line 424: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     424</span>                 :                                   int estimated_len);</span>
+<span id="L425" title="Line 425: commit 6185c9737cf4 on 2024-03-21 by amitlan@postgresql.org">                           <span class="lineNum">     425</span>                 : extern char *JsonbUnquote(Jsonb *jb);</span>
+<span id="L426" title="Line 426: commit 72b6460336e8 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">     426</span>                 : extern bool JsonbExtractScalar(JsonbContainer *jbc, JsonbValue *res);</span>
+<span id="L427" title="Line 427: commit a601366a460f on 2022-09-20 by pg@bowt.ie">                           <span class="lineNum">     427</span>                 : extern const char *JsonbTypeName(JsonbValue *val);</span>
+<span id="L428" title="Line 428: commit c6947010ceb4 on 2015-05-12 by andrew@dunslane.net">                           <span class="lineNum">     428</span>                 : </span>
+<span id="L429" title="Line 429: commit 676887a3b0b8 on 2021-01-31 by akorotkov@postgresql.org">                           <span class="lineNum">     429</span>                 : extern Datum jsonb_set_element(Jsonb *jb, Datum *path, int path_len,</span>
+<span id="L430" title="Line 430: commit 676887a3b0b8 on 2021-01-31 by akorotkov@postgresql.org">                           <span class="lineNum">     430</span>                 :                                JsonbValue *newval);</span>
+<span id="L431" title="Line 431: commit 676887a3b0b8 on 2021-01-31 by akorotkov@postgresql.org">                           <span class="lineNum">     431</span>                 : extern Datum jsonb_get_element(Jsonb *jb, Datum *path, int npath,</span>
+<span id="L432" title="Line 432: commit 676887a3b0b8 on 2021-01-31 by akorotkov@postgresql.org">                           <span class="lineNum">     432</span>                 :                                bool *isnull, bool as_text);</span>
+<span id="L433" title="Line 433: commit 7081ac46ace8 on 2023-03-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     433</span>                 : extern bool to_jsonb_is_immutable(Oid typoid);</span>
+<span id="L434" title="Line 434: commit 1d91d24d9a83 on 2023-10-10 by peter@eisentraut.org">                           <span class="lineNum">     434</span>                 : extern Datum jsonb_build_object_worker(int nargs, const Datum *args, const bool *nulls,</span>
+<span id="L435" title="Line 435: commit 1d91d24d9a83 on 2023-10-10 by peter@eisentraut.org">                           <span class="lineNum">     435</span>                 :                                        const Oid *types, bool absent_on_null,</span>
+<span id="L436" title="Line 436: commit 7081ac46ace8 on 2023-03-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     436</span>                 :                                        bool unique_keys);</span>
+<span id="L437" title="Line 437: commit 1d91d24d9a83 on 2023-10-10 by peter@eisentraut.org">                           <span class="lineNum">     437</span>                 : extern Datum jsonb_build_array_worker(int nargs, const Datum *args, const bool *nulls,</span>
+<span id="L438" title="Line 438: commit 1d91d24d9a83 on 2023-10-10 by peter@eisentraut.org">                           <span class="lineNum">     438</span>                 :                                       const Oid *types, bool absent_on_null);</span>
+<span id="L439" title="Line 439: commit 7081ac46ace8 on 2023-03-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     439</span>                 : </span>
+<span id="L440" title="Line 440: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     440</span>                 : #endif                          /* __JSONB_H__ */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/nodes/tidbitmap.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory nodes">nodes</a> - tidbitmap.h<span style="font-size: 80%;"> (source / <a href="tidbitmap.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"><a href="#L119" title="goto first CBC line">2</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"><a href="#L119" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">2</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       3</span>                 :  * tidbitmap.h</span>
+<span id="L4" title="Line 4: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *    PostgreSQL tuple-id (TID) bitmap package</span>
+<span id="L5" title="Line 5: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       6</span>                 :  * This module provides bitmap data structures that are spiritually</span>
+<span id="L7" title="Line 7: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       7</span>                 :  * similar to Bitmapsets, but are specially adapted to store sets of</span>
+<span id="L8" title="Line 8: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       8</span>                 :  * tuple identifiers (TIDs), or ItemPointers.  In particular, the division</span>
+<span id="L9" title="Line 9: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       9</span>                 :  * of an ItemPointer into BlockNumber and OffsetNumber is catered for.</span>
+<span id="L10" title="Line 10: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      10</span>                 :  * Also, since we wish to be able to store very large tuple sets in</span>
+<span id="L11" title="Line 11: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      11</span>                 :  * memory with this data structure, we support &quot;lossy&quot; storage, in which</span>
+<span id="L12" title="Line 12: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 :  * we no longer remember individual tuple offsets on a page but only the</span>
+<span id="L13" title="Line 13: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      13</span>                 :  * fact that a particular page needs to be visited.</span>
+<span id="L14" title="Line 14: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 :  *</span>
+<span id="L15" title="Line 15: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      15</span>                 :  *</span>
+<span id="L16" title="Line 16: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">      16</span>                 :  * Copyright (c) 2003-2025, PostgreSQL Global Development Group</span>
+<span id="L17" title="Line 17: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :  *</span>
+<span id="L18" title="Line 18: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      18</span>                 :  * src/include/nodes/tidbitmap.h</span>
+<span id="L19" title="Line 19: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 :  *</span>
+<span id="L20" title="Line 20: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L21" title="Line 21: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      21</span>                 :  */</span>
+<span id="L22" title="Line 22: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 : #ifndef TIDBITMAP_H</span>
+<span id="L23" title="Line 23: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 : #define TIDBITMAP_H</span>
+<span id="L24" title="Line 24: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 : </span>
+<span id="L25" title="Line 25: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      25</span>                 : #include &quot;access/htup_details.h&quot;</span>
+<span id="L26" title="Line 26: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 : #include &quot;storage/itemptr.h&quot;</span>
+<span id="L27" title="Line 27: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">      27</span>                 : #include &quot;utils/dsa.h&quot;</span>
+<span id="L28" title="Line 28: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 : </span>
+<span id="L29" title="Line 29: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      29</span>                 : /*</span>
+<span id="L30" title="Line 30: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      30</span>                 :  * The maximum number of tuples per page is not large (typically 256 with</span>
+<span id="L31" title="Line 31: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      31</span>                 :  * 8K pages, or 1024 with 32K pages).  So there's not much point in making</span>
+<span id="L32" title="Line 32: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      32</span>                 :  * the per-page bitmaps variable size.  We just legislate that the size</span>
+<span id="L33" title="Line 33: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      33</span>                 :  * is this:</span>
+<span id="L34" title="Line 34: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      34</span>                 :  */</span>
+<span id="L35" title="Line 35: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      35</span>                 : #define TBM_MAX_TUPLES_PER_PAGE  MaxHeapTuplesPerPage</span>
+<span id="L36" title="Line 36: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 : </span>
+<span id="L37" title="Line 37: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 : /*</span>
+<span id="L38" title="Line 38: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      38</span>                 :  * Actual bitmap representation is private to tidbitmap.c.  Callers can</span>
+<span id="L39" title="Line 39: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :  * do IsA(x, TIDBitmap) on it, but nothing else.</span>
+<span id="L40" title="Line 40: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :  */</span>
+<span id="L41" title="Line 41: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 : typedef struct TIDBitmap TIDBitmap;</span>
+<span id="L42" title="Line 42: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 : </span>
+<span id="L43" title="Line 43: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      43</span>                 : /* Likewise, TBMPrivateIterator is private */</span>
+<span id="L44" title="Line 44: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      44</span>                 : typedef struct TBMPrivateIterator TBMPrivateIterator;</span>
+<span id="L45" title="Line 45: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">      45</span>                 : typedef struct TBMSharedIterator TBMSharedIterator;</span>
+<span id="L46" title="Line 46: commit 43a57cf3657f on 2009-01-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 : </span>
+<span id="L47" title="Line 47: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      47</span>                 : /*</span>
+<span id="L48" title="Line 48: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      48</span>                 :  * Callers with both private and shared implementations can use this unified</span>
+<span id="L49" title="Line 49: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      49</span>                 :  * API.</span>
+<span id="L50" title="Line 50: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      50</span>                 :  */</span>
+<span id="L51" title="Line 51: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      51</span>                 : typedef struct TBMIterator</span>
+<span id="L52" title="Line 52: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      52</span>                 : {</span>
+<span id="L53" title="Line 53: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      53</span>                 :     bool        shared;</span>
+<span id="L54" title="Line 54: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      54</span>                 :     union</span>
+<span id="L55" title="Line 55: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      55</span>                 :     {</span>
+<span id="L56" title="Line 56: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      56</span>                 :         TBMPrivateIterator *private_iterator;</span>
+<span id="L57" title="Line 57: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      57</span>                 :         TBMSharedIterator *shared_iterator;</span>
+<span id="L58" title="Line 58: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      58</span>                 :     }           i;</span>
+<span id="L59" title="Line 59: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      59</span>                 : } TBMIterator;</span>
+<span id="L60" title="Line 60: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">      60</span>                 : </span>
+<span id="L61" title="Line 61: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 : /* Result structure for tbm_iterate */</span>
+<span id="L62" title="Line 62: commit bfbcad478f05 on 2019-03-31 by andres@anarazel.de">                           <span class="lineNum">      62</span>                 : typedef struct TBMIterateResult</span>
+<span id="L63" title="Line 63: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 : {</span>
+<span id="L64" title="Line 64: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      64</span>                 :     BlockNumber blockno;        /* block number containing tuples */</span>
+<span id="L65" title="Line 65: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      65</span>                 : </span>
+<span id="L66" title="Line 66: commit b8778c4cd8bc on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      66</span>                 :     bool        lossy;</span>
+<span id="L67" title="Line 67: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      67</span>                 : </span>
+<span id="L68" title="Line 68: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      68</span>                 :     /*</span>
+<span id="L69" title="Line 69: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      69</span>                 :      * Whether or not the tuples should be rechecked. This is always true if</span>
+<span id="L70" title="Line 70: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      70</span>                 :      * the page is lossy but may also be true if the query requires recheck.</span>
+<span id="L71" title="Line 71: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      71</span>                 :      */</span>
+<span id="L72" title="Line 72: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      72</span>                 :     bool        recheck;</span>
+<span id="L73" title="Line 73: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      73</span>                 : </span>
+<span id="L74" title="Line 74: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      74</span>                 :     /*</span>
+<span id="L75" title="Line 75: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      75</span>                 :      * Pointer to the page containing the bitmap for this block. It is a void *</span>
+<span id="L76" title="Line 76: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      76</span>                 :      * to avoid exposing the details of the tidbitmap PagetableEntry to API</span>
+<span id="L77" title="Line 77: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      77</span>                 :      * users.</span>
+<span id="L78" title="Line 78: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      78</span>                 :      */</span>
+<span id="L79" title="Line 79: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      79</span>                 :     void       *internal_page;</span>
+<span id="L80" title="Line 80: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 : } TBMIterateResult;</span>
+<span id="L81" title="Line 81: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 : </span>
+<span id="L82" title="Line 82: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 : /* function prototypes in nodes/tidbitmap.c */</span>
+<span id="L83" title="Line 83: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 : </span>
+<span id="L84" title="Line 84: commit 041e8b95b8cd on 2025-01-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 : extern TIDBitmap *tbm_create(Size maxbytes, dsa_area *dsa);</span>
+<span id="L85" title="Line 85: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 : extern void tbm_free(TIDBitmap *tbm);</span>
+<span id="L86" title="Line 86: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">      86</span>                 : extern void tbm_free_shared_area(dsa_area *dsa, dsa_pointer dp);</span>
+<span id="L87" title="Line 87: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 : </span>
+<span id="L88" title="Line 88: commit 4e82a954764a on 2008-04-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 : extern void tbm_add_tuples(TIDBitmap *tbm,</span>
+<span id="L89" title="Line 89: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 :                            const ItemPointer tids, int ntids,</span>
+<span id="L90" title="Line 90: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 :                            bool recheck);</span>
+<span id="L91" title="Line 91: commit ff301d6e690b on 2009-03-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 : extern void tbm_add_page(TIDBitmap *tbm, BlockNumber pageno);</span>
+<span id="L92" title="Line 92: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 : </span>
+<span id="L93" title="Line 93: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>                 : extern void tbm_union(TIDBitmap *a, const TIDBitmap *b);</span>
+<span id="L94" title="Line 94: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 : extern void tbm_intersect(TIDBitmap *a, const TIDBitmap *b);</span>
+<span id="L95" title="Line 95: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 : </span>
+<span id="L96" title="Line 96: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      96</span>                 : extern int  tbm_extract_page_tuple(TBMIterateResult *iteritem,</span>
+<span id="L97" title="Line 97: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      97</span>                 :                                    OffsetNumber *offsets,</span>
+<span id="L98" title="Line 98: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      98</span>                 :                                    uint32 max_offsets);</span>
+<span id="L99" title="Line 99: commit bfe56cdf9a4e on 2025-02-24 by melanieplageman@gmail.com">                           <span class="lineNum">      99</span>                 : </span>
+<span id="L100" title="Line 100: commit 46a0eee3006b on 2005-08-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     100</span>                 : extern bool tbm_is_empty(const TIDBitmap *tbm);</span>
+<span id="L101" title="Line 101: commit 46a0eee3006b on 2005-08-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 : </span>
+<span id="L102" title="Line 102: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     102</span>                 : extern TBMPrivateIterator *tbm_begin_private_iterate(TIDBitmap *tbm);</span>
+<span id="L103" title="Line 103: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">     103</span>                 : extern dsa_pointer tbm_prepare_shared_iterate(TIDBitmap *tbm);</span>
+<span id="L104" title="Line 104: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     104</span>                 : extern bool tbm_private_iterate(TBMPrivateIterator *iterator, TBMIterateResult *tbmres);</span>
+<span id="L105" title="Line 105: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     105</span>                 : extern bool tbm_shared_iterate(TBMSharedIterator *iterator, TBMIterateResult *tbmres);</span>
+<span id="L106" title="Line 106: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     106</span>                 : extern void tbm_end_private_iterate(TBMPrivateIterator *iterator);</span>
+<span id="L107" title="Line 107: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">     107</span>                 : extern void tbm_end_shared_iterate(TBMSharedIterator *iterator);</span>
+<span id="L108" title="Line 108: commit 98e6e89040a0 on 2017-03-08 by rhaas@postgresql.org">                           <span class="lineNum">     108</span>                 : extern TBMSharedIterator *tbm_attach_shared_iterate(dsa_area *dsa,</span>
+<span id="L109" title="Line 109: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     109</span>                 :                                                     dsa_pointer dp);</span>
+<span id="L110" title="Line 110: commit 041e8b95b8cd on 2025-01-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     110</span>                 : extern int  tbm_calculate_entries(Size maxbytes);</span>
+<span id="L111" title="Line 111: commit db306521351a on 2005-04-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 : </span>
+<span id="L112" title="Line 112: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     112</span>                 : extern TBMIterator tbm_begin_iterate(TIDBitmap *tbm,</span>
+<span id="L113" title="Line 113: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     113</span>                 :                                      dsa_area *dsa, dsa_pointer dsp);</span>
+<span id="L114" title="Line 114: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     114</span>                 : extern void tbm_end_iterate(TBMIterator *iterator);</span>
+<span id="L115" title="Line 115: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     115</span>                 : </span>
+<span id="L116" title="Line 116: commit 944e81bf99db on 2025-03-15 by melanieplageman@gmail.com">                           <span class="lineNum">     116</span>                 : extern bool tbm_iterate(TBMIterator *iterator, TBMIterateResult *tbmres);</span>
+<span id="L117" title="Line 117: commit 7f9d4187e7ba on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     117</span>                 : </span>
+<span id="L118" title="Line 118: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     118</span>                 : static inline bool</span>
+<span id="L119" title="Line 119: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">251</a> <a href="#top" title="next CBC in &ldquo;melanieplageman@gmail.com&rdquo; bin">melanieplageman@gmai</a> <span class="lineNum">     119</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       19927 : tbm_exhausted(TBMIterator *iterator)</span></span>
+<span id="L120" title="Line 120: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     120</span>                 : {</span>
+<span id="L121" title="Line 121: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     121</span>                 :     /*</span>
+<span id="L122" title="Line 122: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     122</span>                 :      * It doesn't matter if we check the private or shared iterator here. If</span>
+<span id="L123" title="Line 123: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     123</span>                 :      * tbm_end_iterate() was called, they will be NULL</span>
+<span id="L124" title="Line 124: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     124</span>                 :      */</span>
+<span id="L125" title="Line 125: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     125</span> <span class="tlaCBC">          19927 :     return !iterator-&gt;i.private_iterator;</span></span>
+<span id="L126" title="Line 126: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     126</span>                 : }</span>
+<span id="L127" title="Line 127: commit 1a0da347a7ac on 2024-12-18 by melanieplageman@gmail.com">                           <span class="lineNum">     127</span>                 : </span>
+<span id="L128" title="Line 128: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 : #endif                          /* TIDBITMAP_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

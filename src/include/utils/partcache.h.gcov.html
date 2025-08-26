@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/partcache.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - partcache.h<span style="font-size: 80%;"> (source / <a href="partcache.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"><a href="#L59" title="goto first CBC line">14</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"><a href="#L59" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">14</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       3</span>                 :  * partcache.h</span>
+<span id="L4" title="Line 4: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       4</span>                 :  *</span>
+<span id="L5" title="Line 5: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :  * Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L6" title="Line 6: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       6</span>                 :  *</span>
+<span id="L7" title="Line 7: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       7</span>                 :  * src/include/utils/partcache.h</span>
+<span id="L8" title="Line 8: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       8</span>                 :  *</span>
+<span id="L9" title="Line 9: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       9</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L10" title="Line 10: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      10</span>                 :  */</span>
+<span id="L11" title="Line 11: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      11</span>                 : #ifndef PARTCACHE_H</span>
+<span id="L12" title="Line 12: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      12</span>                 : #define PARTCACHE_H</span>
+<span id="L13" title="Line 13: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      13</span>                 : </span>
+<span id="L14" title="Line 14: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      14</span>                 : #include &quot;access/attnum.h&quot;</span>
+<span id="L15" title="Line 15: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      15</span>                 : #include &quot;fmgr.h&quot;</span>
+<span id="L16" title="Line 16: commit 5fca91025e05 on 2022-11-03 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      16</span>                 : #include &quot;nodes/parsenodes.h&quot;</span>
+<span id="L17" title="Line 17: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      17</span>                 : #include &quot;nodes/pg_list.h&quot;</span>
+<span id="L18" title="Line 18: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      18</span>                 : #include &quot;nodes/primnodes.h&quot;</span>
+<span id="L19" title="Line 19: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      19</span>                 : #include &quot;partitioning/partdefs.h&quot;</span>
+<span id="L20" title="Line 20: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      20</span>                 : #include &quot;utils/relcache.h&quot;</span>
+<span id="L21" title="Line 21: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      21</span>                 : </span>
+<span id="L22" title="Line 22: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      22</span>                 : /*</span>
+<span id="L23" title="Line 23: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      23</span>                 :  * Information about the partition key of a relation</span>
+<span id="L24" title="Line 24: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      24</span>                 :  */</span>
+<span id="L25" title="Line 25: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      25</span>                 : typedef struct PartitionKeyData</span>
+<span id="L26" title="Line 26: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      26</span>                 : {</span>
+<span id="L27" title="Line 27: commit 5fca91025e05 on 2022-11-03 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      27</span>                 :     PartitionStrategy strategy; /* partitioning strategy */</span>
+<span id="L28" title="Line 28: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      28</span>                 :     int16       partnatts;      /* number of columns in the partition key */</span>
+<span id="L29" title="Line 29: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      29</span>                 :     AttrNumber *partattrs;      /* attribute numbers of columns in the</span>
+<span id="L30" title="Line 30: commit 7ac0069fb880 on 2018-11-15 by peter_e@gmx.net">                           <span class="lineNum">      30</span>                 :                                  * partition key or 0 if it's an expr */</span>
+<span id="L31" title="Line 31: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      31</span>                 :     List       *partexprs;      /* list of expressions in the partitioning</span>
+<span id="L32" title="Line 32: commit 7ac0069fb880 on 2018-11-15 by peter_e@gmx.net">                           <span class="lineNum">      32</span>                 :                                  * key, one for each zero-valued partattrs */</span>
+<span id="L33" title="Line 33: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      33</span>                 : </span>
+<span id="L34" title="Line 34: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      34</span>                 :     Oid        *partopfamily;   /* OIDs of operator families */</span>
+<span id="L35" title="Line 35: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      35</span>                 :     Oid        *partopcintype;  /* OIDs of opclass declared input data types */</span>
+<span id="L36" title="Line 36: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      36</span>                 :     FmgrInfo   *partsupfunc;    /* lookup info for support funcs */</span>
+<span id="L37" title="Line 37: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      37</span>                 : </span>
+<span id="L38" title="Line 38: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      38</span>                 :     /* Partitioning collation per attribute */</span>
+<span id="L39" title="Line 39: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      39</span>                 :     Oid        *partcollation;</span>
+<span id="L40" title="Line 40: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      40</span>                 : </span>
+<span id="L41" title="Line 41: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      41</span>                 :     /* Type information per attribute */</span>
+<span id="L42" title="Line 42: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      42</span>                 :     Oid        *parttypid;</span>
+<span id="L43" title="Line 43: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      43</span>                 :     int32      *parttypmod;</span>
+<span id="L44" title="Line 44: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      44</span>                 :     int16      *parttyplen;</span>
+<span id="L45" title="Line 45: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      45</span>                 :     bool       *parttypbyval;</span>
+<span id="L46" title="Line 46: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      46</span>                 :     char       *parttypalign;</span>
+<span id="L47" title="Line 47: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      47</span>                 :     Oid        *parttypcoll;</span>
+<span id="L48" title="Line 48: commit bdf46af748d0 on 2018-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 : }           PartitionKeyData;</span>
+<span id="L49" title="Line 49: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      49</span>                 : </span>
+<span id="L50" title="Line 50: commit 5b9312378e2f on 2019-12-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 : </span>
+<span id="L51" title="Line 51: commit 5b9312378e2f on 2019-12-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>                 : extern PartitionKey RelationGetPartitionKey(Relation rel);</span>
+<span id="L52" title="Line 52: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      52</span>                 : extern List *RelationGetPartitionQual(Relation rel);</span>
+<span id="L53" title="Line 53: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      53</span>                 : extern Expr *get_partition_qual_relid(Oid relid);</span>
+<span id="L54" title="Line 54: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      54</span>                 : </span>
+<span id="L55" title="Line 55: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      55</span>                 : /*</span>
+<span id="L56" title="Line 56: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      56</span>                 :  * PartitionKey inquiry functions</span>
+<span id="L57" title="Line 57: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      57</span>                 :  */</span>
+<span id="L58" title="Line 58: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      58</span>                 : static inline int</span>
+<span id="L59" title="Line 59: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">2691</a> <a href="#top" title="next CBC in &ldquo;alvherre@alvh.no-ip.org&rdquo; bin">alvherre@alvh.no-ip.</a> <span class="lineNum">      59</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        5152 : get_partition_strategy(PartitionKey key)</span></span>
+<span id="L60" title="Line 60: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      60</span>                 : {</span>
+<span id="L61" title="Line 61: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      61</span> <span class="tlaCBC">           5152 :     return key-&gt;strategy;</span></span>
+<span id="L62" title="Line 62: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      62</span>                 : }</span>
+<span id="L63" title="Line 63: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      63</span>                 : </span>
+<span id="L64" title="Line 64: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      64</span>                 : static inline int</span>
+<span id="L65" title="Line 65: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      65</span> <span class="tlaCBC">           6385 : get_partition_natts(PartitionKey key)</span></span>
+<span id="L66" title="Line 66: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      66</span>                 : {</span>
+<span id="L67" title="Line 67: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      67</span> <span class="tlaCBC">           6385 :     return key-&gt;partnatts;</span></span>
+<span id="L68" title="Line 68: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      68</span>                 : }</span>
+<span id="L69" title="Line 69: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      69</span>                 : </span>
+<span id="L70" title="Line 70: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      70</span>                 : static inline List *</span>
+<span id="L71" title="Line 71: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      71</span> <span class="tlaCBC">          10363 : get_partition_exprs(PartitionKey key)</span></span>
+<span id="L72" title="Line 72: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      72</span>                 : {</span>
+<span id="L73" title="Line 73: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      73</span> <span class="tlaCBC">          10363 :     return key-&gt;partexprs;</span></span>
+<span id="L74" title="Line 74: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      74</span>                 : }</span>
+<span id="L75" title="Line 75: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      75</span>                 : </span>
+<span id="L76" title="Line 76: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      76</span>                 : /*</span>
+<span id="L77" title="Line 77: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      77</span>                 :  * PartitionKey inquiry functions - one column</span>
+<span id="L78" title="Line 78: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      78</span>                 :  */</span>
+<span id="L79" title="Line 79: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      79</span>                 : static inline int16</span>
+<span id="L80" title="Line 80: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      80</span> <span class="tlaCBC">           1244 : get_partition_col_attnum(PartitionKey key, int col)</span></span>
+<span id="L81" title="Line 81: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      81</span>                 : {</span>
+<span id="L82" title="Line 82: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      82</span> <span class="tlaCBC">           1244 :     return key-&gt;partattrs[col];</span></span>
+<span id="L83" title="Line 83: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      83</span>                 : }</span>
+<span id="L84" title="Line 84: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      84</span>                 : </span>
+<span id="L85" title="Line 85: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      85</span>                 : static inline Oid</span>
+<span id="L86" title="Line 86: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      86</span> <span class="tlaCBC">           7217 : get_partition_col_typid(PartitionKey key, int col)</span></span>
+<span id="L87" title="Line 87: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      87</span>                 : {</span>
+<span id="L88" title="Line 88: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      88</span> <span class="tlaCBC">           7217 :     return key-&gt;parttypid[col];</span></span>
+<span id="L89" title="Line 89: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      89</span>                 : }</span>
+<span id="L90" title="Line 90: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      90</span>                 : </span>
+<span id="L91" title="Line 91: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      91</span>                 : static inline int32</span>
+<span id="L92" title="Line 92: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      92</span> <span class="tlaCBC">           7134 : get_partition_col_typmod(PartitionKey key, int col)</span></span>
+<span id="L93" title="Line 93: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      93</span>                 : {</span>
+<span id="L94" title="Line 94: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      94</span> <span class="tlaCBC">           7134 :     return key-&gt;parttypmod[col];</span></span>
+<span id="L95" title="Line 95: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      95</span>                 : }</span>
+<span id="L96" title="Line 96: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      96</span>                 : </span>
+<span id="L97" title="Line 97: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org">                           <span class="lineNum">      97</span>                 : static inline Oid</span>
+<span id="L98" title="Line 98: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org"> 2405 <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">      98</span> <span class="tlaCBC">           7134 : get_partition_col_collation(PartitionKey key, int col)</span></span>
+<span id="L99" title="Line 99: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org">                           <span class="lineNum">      99</span>                 : {</span>
+<span id="L100" title="Line 100: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org">                           <span class="lineNum">     100</span> <span class="tlaCBC">           7134 :     return key-&gt;partcollation[col];</span></span>
+<span id="L101" title="Line 101: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org">                           <span class="lineNum">     101</span>                 : }</span>
+<span id="L102" title="Line 102: commit 7c079d7417a8 on 2019-01-25 by peter@eisentraut.org">                           <span class="lineNum">     102</span>                 : </span>
+<span id="L103" title="Line 103: commit da6f3e45ddb6 on 2018-04-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     103</span>                 : #endif                          /* PARTCACHE_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

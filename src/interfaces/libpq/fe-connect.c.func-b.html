@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/interfaces/libpq/fe-connect.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory interfaces">interfaces</a>/<a href="index.html" title="Click to go to directory libpq">libpq</a> - fe-connect.c<span style="font-size: 80%;"> (<a href="fe-connect.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">68.5&nbsp;%</td>
+            <td class="headerCovTableEntry">2796</td>
+            <td class="headerCovTableEntry">1915</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">875</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">1821</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">90.9&nbsp;%</td>
+            <td class="headerCovTableEntry">110</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">61.2&nbsp;%</td>
+            <td class="headerCovTableEntry">2059</td>
+            <td class="headerCovTableEntry">1260</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">795</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">1191</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">72.5&nbsp;%</td>
+            <td class="headerCovTableEntry">244</td>
+            <td class="headerCovTableEntry">177</td>
+            <td class="tlaUNC">2</td>
+            <td class="headerCovTableEntry">65</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">159</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">68.2&nbsp;%</td>
+            <td class="headerCovTableEntry">2546</td>
+            <td class="headerCovTableEntry">1736</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">810</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1662</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.5&nbsp;%</td>
+            <td class="headerCovTableEntry">105</td>
+            <td class="headerCovTableEntry">95</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">91</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">63.5&nbsp;%</td>
+            <td class="headerCovTableEntry">156</td>
+            <td class="headerCovTableEntry">99</td>
+            <td class="tlaUNC">3</td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">61.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1901</td>
+            <td class="headerCovTableEntry">1160</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">741</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1107</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="fe-connect.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="fe-connect.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="fe-connect.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2909">PQconnectPoll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38439</td>
+              <td class=coverPerLo>53.3&nbsp;% (297 / 557)</td>
+              <td class=coverPerLo>49.9&nbsp;% (210 / 421)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1248">pqConnectOptions2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12642</td>
+              <td class=coverPerLo>73.9&nbsp;% (263 / 356)</td>
+              <td class=coverPerLo>70.5&nbsp;% (217 / 308)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5463">ldapServiceLookup</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerLo>49.1&nbsp;% (114 / 232)</td>
+              <td class=coverPerLo>49.4&nbsp;% (80 / 162)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2232">PQsetdbLogin</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 48)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7945">passwordFromFile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12558</td>
+              <td class=coverPerLo>72.6&nbsp;% (45 / 62)</td>
+              <td class=coverPerLo>68.8&nbsp;% (44 / 64)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6663">conninfo_add_defaults</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12771</td>
+              <td class=coverPerLo>68.1&nbsp;% (32 / 47)</td>
+              <td class=coverPerLo>62.5&nbsp;% (30 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6851">conninfo_uri_parse_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68</td>
+              <td class=coverPerMed>86.5&nbsp;% (90 / 104)</td>
+              <td class=coverPerMed>84.3&nbsp;% (86 / 102)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4941">pqMakeEmptyPGconn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12657</td>
+              <td class=coverPerHi>92.3&nbsp;% (36 / 39)</td>
+              <td class=coverPerLo>46.2&nbsp;% (12 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5999">parseServiceFile</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerMed>77.1&nbsp;% (64 / 83)</td>
+              <td class=coverPerMed>79.0&nbsp;% (49 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6329">conninfo_parse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10424</td>
+              <td class=coverPerMed>77.3&nbsp;% (58 / 75)</td>
+              <td class=coverPerMed>75.0&nbsp;% (36 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7908">pwdfMatchesString</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7544">PQhost</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8477</td>
+              <td class=coverPerLo>54.5&nbsp;% (6 / 11)</td>
+              <td class=coverPerLo>33.3&nbsp;% (4 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5317">PQreset</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6505">conninfo_array_parse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11484</td>
+              <td class=coverPerMed>75.0&nbsp;% (45 / 60)</td>
+              <td class=coverPerMed>82.6&nbsp;% (38 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2406">emitHostIdentityInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12652</td>
+              <td class=coverPerLo>68.4&nbsp;% (13 / 19)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8235">pqParseIntParam</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12641</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7775">PQsetClientEncoding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">94</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              <td class=coverPerLo>50.0&nbsp;% (7 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5927">parseServiceInfo</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12771</td>
+              <td class=coverPerMed>81.8&nbsp;% (27 / 33)</td>
+              <td class=coverPerLo>70.8&nbsp;% (17 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8092">pgpassfileWarning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2783">pqConnectDBComplete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11120</td>
+              <td class=coverPerMed>80.0&nbsp;% (36 / 45)</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2569">setKeepalivesCount</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>12.5&nbsp;% (1 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2500">setKeepalivesIdle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>12.5&nbsp;% (1 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2534">setKeepalivesInterval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>12.5&nbsp;% (1 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2666">setTCPUserTimeout</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>12.5&nbsp;% (1 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8141">sslVerifyProtocolRange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12629</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7567">PQhostaddr</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5369">PQresetPoll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7092">conninfo_uri_parse_params</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerMed>87.5&nbsp;% (42 / 48)</td>
+              <td class=coverPerMed>80.0&nbsp;% (24 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8194">pqGetHomeDirectory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12240</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4802">select_next_encryption_method</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">269</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6236">conninfo_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38954</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4762">encryption_negotiation_failed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7454">PQconninfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16855</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7580">PQport</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8425</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7647">PQprotocolVersion</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7372">conninfo_storeval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">370140</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6798">conninfo_uri_parse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2373">getHostaddr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12652</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4877">internal_ping</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">296</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2705">pqConnectDBStart</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12628</td>
+              <td class=coverPerMed>78.3&nbsp;% (18 / 23)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5411">pqPacketSend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12747</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2194">PQconndefaults</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L949">PQconnectStart</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1166</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7677">PQerrorMessage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">736</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7632">PQparameterStatus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">342555</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1033">pqCopyPGconn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8115">sslVerifyProtocolVersion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50519</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2482">useKeepalives</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7713">PQbackendPID</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">772</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7767">PQclientEncoding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">191702</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L868">PQconnectStartParams</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11484</td>
+              <td class=coverPerMed>82.4&nbsp;% (14 / 17)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L821">PQconnectdb</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">873</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7730">PQconnectionNeedsPassword</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">163</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6214">PQconninfoParse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1216</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7657">PQfullProtocolVersion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7606">PQoptions</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8335">PQregisterThreadLock</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5350">PQresetStart</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7667">PQserverVersion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24121</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7858">PQsetNoticeProcessor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9103</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7841">PQsetNoticeReceiver</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">998</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7703">PQsocket</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">310913</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7622">PQtransactionStatus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">184846</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7598">PQtty</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8318">default_threadlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L995">fillPGconn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12635</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4697">init_allowed_encryption_methods</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12652</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1170">libpq_prng_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L766">PQconnectdbParams</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10080</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7756">PQconnectionUsedGSSAPI</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7745">PQconnectionUsedPassword</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">366</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5303">PQfinish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12455</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7527">PQpass</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">163</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7721">PQpipelineStatus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">688724</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7829">PQsetErrorContextVisibility</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8295</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7817">PQsetErrorVerbosity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8358</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7614">PQstatus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">228929</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7519">PQuser</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8280</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2462">connectFailureMessage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">157</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L2347">connectNoDelay</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">173</td>
+              <td class=coverPerLo>57.1&nbsp;% (4 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1074">connectOptions1</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1166</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L4787">connection_failed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">82</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7346">conninfo_getval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">669927</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7225">conninfo_uri_decode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">153</td>
+              <td class=coverPerHi>94.3&nbsp;% (33 / 35)</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7881">defaultNoticeReceiver</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11788</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5041">freePGconn</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12455</td>
+              <td class=coverPerHi>94.8&nbsp;% (73 / 77)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1135">parse_comma_separated_list</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25812</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L528">pqDropConnection</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25517</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L654">pqDropServerData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25257</td>
+              <td class=coverPerHi>92.1&nbsp;% (35 / 38)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5169">store_conn_addrinfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12634</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7498">PQconninfoFree</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51649</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7511">PQdb</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17003</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1217">clear_allowed_sasl_mechs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">64</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7436">conninfo_find</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1040067</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1111">count_comma_separated_elems</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12642</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1193">fill_allowed_sasl_mechs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7325">get_hexdigit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L1228">index_of_allowed_sasl_mech</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6275">parse_connection_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10492</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5256">pqClosePGconn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12457</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L628">pqFreeCommandQueue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51034</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L8280">pqParseProtocolVersion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5139">pqReleaseConnHosts</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12462</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6318">recognized_connection_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11065</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5208">release_conn_addrinfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49728</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L5222">sendTerminateConn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12472</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L6295">uri_prefix_length</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21625</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L837">PQping</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L784">PQpingParams</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">296</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#L7896">defaultNoticeProcessor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">65</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/parser/parse_clause.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory parser">parser</a> - parse_clause.c<span style="font-size: 80%;"> (<a href="parse_clause.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">93.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1061</td>
+            <td class="headerCovTableEntry">994</td>
+            <td class="headerCovTableEntry">67</td>
+            <td class="headerCovTableEntry">994</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">41</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">73.5&nbsp;%</td>
+            <td class="headerCovTableEntry">944</td>
+            <td class="headerCovTableEntry">694</td>
+            <td class="headerCovTableEntry">250</td>
+            <td class="headerCovTableEntry">694</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">93.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1056</td>
+            <td class="headerCovTableEntry">989</td>
+            <td class="headerCovTableEntry">67</td>
+            <td class="headerCovTableEntry">989</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">41</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.5&nbsp;%</td>
+            <td class="headerCovTableEntry">944</td>
+            <td class="headerCovTableEntry">694</td>
+            <td class="headerCovTableEntry">250</td>
+            <td class="headerCovTableEntry">694</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="parse_clause.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="parse_clause.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="parse_clause.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1052">transformFromClauseItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">272288</td>
+              <td class=coverPerHi>96.2&nbsp;% (202 / 210)</td>
+              <td class=coverPerMed>76.4&nbsp;% (120 / 157)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L461">transformRangeFunction</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23758</td>
+              <td class=coverPerHi>90.0&nbsp;% (54 / 60)</td>
+              <td class=coverPerLo>60.8&nbsp;% (45 / 74)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L684">transformRangeTableFunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">110</td>
+              <td class=coverPerMed>88.6&nbsp;% (70 / 79)</td>
+              <td class=coverPerLo>57.4&nbsp;% (39 / 68)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2763">transformWindowDefinitions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">225644</td>
+              <td class=coverPerMed>86.9&nbsp;% (53 / 61)</td>
+              <td class=coverPerLo>60.6&nbsp;% (40 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3391">addTargetToSortList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53630</td>
+              <td class=coverPerHi>90.0&nbsp;% (45 / 50)</td>
+              <td class=coverPerLo>54.2&nbsp;% (13 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2004">findTargetlistEntrySQL92</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55283</td>
+              <td class=coverPerHi>94.4&nbsp;% (34 / 36)</td>
+              <td class=coverPerMed>77.1&nbsp;% (37 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L906">transformRangeTableSample</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">124</td>
+              <td class=coverPerHi>93.3&nbsp;% (28 / 30)</td>
+              <td class=coverPerLo>65.6&nbsp;% (21 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3174">get_matching_location</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (9 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3067">transformDistinctOnClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">130</td>
+              <td class=coverPerHi>96.3&nbsp;% (26 / 27)</td>
+              <td class=coverPerMed>77.5&nbsp;% (31 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2983">transformDistinctClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1976</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3295">transformOnConflictArbiter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">927</td>
+              <td class=coverPerHi>91.3&nbsp;% (21 / 23)</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1948">checkTargetlistEntrySQL92</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35646</td>
+              <td class=coverPerMed>82.4&nbsp;% (14 / 17)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3199">resolve_unique_index_expr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">714</td>
+              <td class=coverPerHi>92.0&nbsp;% (23 / 25)</td>
+              <td class=coverPerLo>65.0&nbsp;% (13 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1664">buildMergedJoinVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">853</td>
+              <td class=coverPerMed>87.5&nbsp;% (35 / 40)</td>
+              <td class=coverPerLo>68.4&nbsp;% (13 / 19)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3687">transformFrameOffset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2754</td>
+              <td class=coverPerHi>95.7&nbsp;% (45 / 47)</td>
+              <td class=coverPerMed>81.2&nbsp;% (26 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L403">transformRangeSubselect</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7974</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3633">targetIsInSortList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">65413</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2526">transformGroupingSet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">579</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1772">markRelsAsNulledBy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23951</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2630">transformGroupClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">227063</td>
+              <td class=coverPerHi>93.9&nbsp;% (31 / 33)</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L304">transformJoinUsingClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">753</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2256">flatten_grouping_sets</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232701</td>
+              <td class=coverPerHi>97.4&nbsp;% (38 / 39)</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L176">setTargetTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45768</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3592">assignSortGroupRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">87152</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1637">buildVarFromNSColumn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1612102</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1923">checkExprIsVarFree</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3636</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L251">extractRemainingColumns</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83342</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3660">findWindowClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">297</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1813">setNamespaceColumnVisibility</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41581</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2473">transformGroupClauseList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">153</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1879">transformLimitClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">472180</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L3535">addTargetToGroupList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9204</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2170">findTargetlistEntrySQL99</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22661</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1009">getNSItemForSpecialRelationTypes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">198358</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1830">setNamespaceLateralState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">509103</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L110">transformFromClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">238629</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2365">transformGroupClauseExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4650</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L2730">transformSortClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">258341</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L1852">transformWhereClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">505662</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L363">transformJoinOnClause</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40680</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#L393">transformTableEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">194619</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/executor/execTuples.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - execTuples.c<span style="font-size: 80%;"> (<a href="execTuples.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUIC" title="Uncovered Included Code (# => 0):
+Previously unused code is untested">UIC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGIC" title="Gained Included Coverage (# => 1):
+Previously unused code is tested now">GIC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">91.1&nbsp;%</td>
+            <td class="headerCovTableEntry">800</td>
+            <td class="headerCovTableEntry">729</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">729</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">92.0&nbsp;%</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">67.1&nbsp;%</td>
+            <td class="headerCovTableEntry">456</td>
+            <td class="headerCovTableEntry">306</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">304</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">22</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">96.4&nbsp;%</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.7&nbsp;%</td>
+            <td class="headerCovTableEntry">745</td>
+            <td class="headerCovTableEntry">676</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">676</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.4&nbsp;%</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">61.5&nbsp;%</td>
+            <td class="headerCovTableEntry">452</td>
+            <td class="headerCovTableEntry">278</td>
+            <td class="tlaLBC">4</td>
+            <td class="tlaUIC">2</td>
+            <td class="headerCovTableEntry">140</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">276</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">16</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="execTuples.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="execTuples.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="execTuples.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1793">ExecStoreHeapTupleDatum</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L354">tts_heap_getsysattr</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L374">tts_heap_is_current_xact_tuple</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L556">tts_minimal_getsysattr</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L573">tts_minimal_is_current_xact_tuple</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L128">tts_virtual_getsomeattrs</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L155">tts_virtual_is_current_xact_tuple</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L139">tts_virtual_getsysattr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L462">tts_heap_copy_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">344</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L779">tts_buffer_is_current_xact_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">462</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L437">tts_heap_copyslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">899</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2217">ExecTypeSetColNames</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2019</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L474">tts_heap_copy_minimal_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2700</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2273">TupleDescGetAttInMetadata</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3875</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2055">slot_getmissingattrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3907</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2184">ExecTypeFromExprList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7025</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2490">do_text_output_multiline</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11795</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2442">begin_tup_output_tupdesc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14587</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2520">end_tup_output</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14587</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2034">ExecInitNullTupleSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20217</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1763">ExecStoreAllNullTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20853</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1476">ExecSetSlotDescriptor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29925</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1910">ExecFetchSlotHeapTupleDatum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30484</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2258">BlessTupleDesc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38363</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2137">ExecCleanTypeFromTL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57534</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L267">tts_virtual_copyslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68559</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L759">tts_buffer_heap_getsysattr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">72464</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2462">do_tup_output</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81477</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L519">tts_minimal_release</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">166179</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L507">tts_minimal_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">191518</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2018">ExecInitExtraTupleSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">223766</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1605">ExecStorePinnedBufferHeapTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">261787</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1986">ExecInitResultTupleSlotTL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">309527</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1998">ExecInitScanTupleSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">329160</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L658">tts_minimal_copy_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">385390</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1378">ExecResetTupleTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">419345</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1966">ExecInitResultSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">431291</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L634">tts_minimal_copyslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">564757</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L101">tts_virtual_release</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">632525</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1942">ExecInitResultTypeTL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">632721</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2125">ExecTypeFromTL</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">645806</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L96">tts_virtual_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">647175</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2322">BuildTupleFromCStrings</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">692062</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2143">ExecTypeFromTLInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">703340</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L585">tts_minimal_materialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">816534</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1656">ExecForceStoreHeapTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">866080</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2411">HeapTupleHeaderGetDatum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">900932</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1358">ExecAllocTableSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">995118</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L669">tts_minimal_copy_minimal_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1402713</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L929">tts_buffer_heap_copy_minimal_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1423228</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L450">tts_heap_get_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1711709</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L397">tts_heap_materialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1712713</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L320">tts_heap_release</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2093233</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L315">tts_heap_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2093765</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1539">ExecStoreHeapTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2178968</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L485">tts_heap_store_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2178968</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L174">tts_virtual_materialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2193663</td>
+              <td class=coverPerMed>78.0&nbsp;% (32 / 41)</td>
+              <td class=coverPerMed>77.8&nbsp;% (28 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L647">tts_minimal_get_minimal_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2543296</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1699">ExecForceStoreMinimalTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3552099</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L344">tts_heap_getsomeattrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5037082</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L325">tts_heap_clear</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5129728</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L916">tts_buffer_heap_copy_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5511631</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L861">tts_buffer_heap_copyslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5855756</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L289">tts_virtual_copy_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7347095</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1879">ExecFetchSlotMinimalTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10981251</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1739">ExecStoreVirtualTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12931049</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L714">tts_buffer_heap_release</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12977792</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L709">tts_buffer_heap_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12984754</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L802">tts_buffer_heap_materialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14066893</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L299">tts_virtual_copy_minimal_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14239428</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1441">ExecDropSingleTupleTableSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14764524</td>
+              <td class=coverPerLo>69.2&nbsp;% (9 / 13)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1425">MakeSingleTupleTableSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14922003</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1299">MakeTupleTableSlot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15917212</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L903">tts_buffer_heap_get_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17894808</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1831">ExecFetchSlotHeapTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21144266</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L719">tts_buffer_heap_clear</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24468402</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L542">tts_minimal_getsomeattrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27153617</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1633">ExecStoreMinimalTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28869920</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L680">tts_minimal_store_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31125491</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L524">tts_minimal_clear</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36985848</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L106">tts_virtual_clear</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43005039</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L749">tts_buffer_heap_getsomeattrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66286626</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1579">ExecStoreBufferHeapTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">75236412</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L942">tts_buffer_heap_store_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">75501471</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1120">slot_deform_heap_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98477325</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L2089">slot_getsomeattrs_int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98477325</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#L1017">slot_deform_heap_tuple_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">107195936</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerHi>91.7&nbsp;% (33 / 36)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - contrib/pageinspect/rawpage.c</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory contrib">contrib</a>/<a href="index.html" title="Click to go to directory pageinspect">pageinspect</a> - rawpage.c<span style="font-size: 80%;"> (source / <a href="rawpage.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">91.6&nbsp;%</td>
+            <td class="headerCovTableEntry">119</td>
+            <td class="headerCovTableEntry">109</td>
+            <td class="headerCovTableEntry"><a href="#L285" title="goto first UNC line">1</a></td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first UBC line">9</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L32" title="goto first CBC line">109</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">55.2&nbsp;%</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L55" title="goto first UBC branch">39</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L55" title="goto first CBC branch">48</a></td>
+            <td class="headerCovTableEntry"><a href="#L223" title="goto first EUB branch">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L223" title="goto first ECB branch">3</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="tlaUNC"><a href="#L285" title="goto first UNC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">1</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L32" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">2</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">92.2&nbsp;%</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntry">107</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L83" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">9</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L46" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">107</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">48.5&nbsp;%</td>
+            <td class="headerCovTableEntry">99</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L55" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">39</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L55" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">48</a></td>
+            <td class="headerCovTableEntry"><a href="#L223" title="goto first EUB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgEUB">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L223" title="goto first ECB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgECB">3</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :                :  * rawpage.c</span>
+<span id="L4" title="Line 4: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       4</span>                 :                :  *    Functions to extract a raw page as bytea and inspect it</span>
+<span id="L5" title="Line 5: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :                :  * Access-method specific inspection functions are in separate files.</span>
+<span id="L7" title="Line 7: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :                :  *</span>
+<span id="L8" title="Line 8: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :                :  * Copyright (c) 2007-2025, PostgreSQL Global Development Group</span>
+<span id="L9" title="Line 9: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">       9</span>                 :                :  *</span>
+<span id="L10" title="Line 10: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      10</span>                 :                :  * IDENTIFICATION</span>
+<span id="L11" title="Line 11: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      11</span>                 :                :  *    contrib/pageinspect/rawpage.c</span>
+<span id="L12" title="Line 12: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      12</span>                 :                :  *</span>
+<span id="L13" title="Line 13: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      13</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L14" title="Line 14: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      14</span>                 :                :  */</span>
+<span id="L15" title="Line 15: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      15</span>                 :                : </span>
+<span id="L16" title="Line 16: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      16</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L17" title="Line 17: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      17</span>                 :                : </span>
+<span id="L18" title="Line 18: commit c219d9b0a55b on 2012-08-30 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      18</span>                 :                : #include &quot;access/htup_details.h&quot;</span>
+<span id="L19" title="Line 19: commit 111944c5ee56 on 2019-01-21 by andres@anarazel.de">                           <span class="lineNum">      19</span>                 :                : #include &quot;access/relation.h&quot;</span>
+<span id="L20" title="Line 20: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      20</span>                 :                : #include &quot;catalog/namespace.h&quot;</span>
+<span id="L21" title="Line 21: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">      21</span>                 :                : #include &quot;catalog/pg_type.h&quot;</span>
+<span id="L22" title="Line 22: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      22</span>                 :                : #include &quot;funcapi.h&quot;</span>
+<span id="L23" title="Line 23: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      23</span>                 :                : #include &quot;miscadmin.h&quot;</span>
+<span id="L24" title="Line 24: commit 7e735035f208 on 2019-10-23 by akapila@postgresql.org">                           <span class="lineNum">      24</span>                 :                : #include &quot;pageinspect.h&quot;</span>
+<span id="L25" title="Line 25: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      25</span>                 :                : #include &quot;storage/bufmgr.h&quot;</span>
+<span id="L26" title="Line 26: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">      26</span>                 :                : #include &quot;storage/checksum.h&quot;</span>
+<span id="L27" title="Line 27: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      27</span>                 :                : #include &quot;utils/builtins.h&quot;</span>
+<span id="L28" title="Line 28: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">      28</span>                 :                : #include &quot;utils/pg_lsn.h&quot;</span>
+<span id="L29" title="Line 29: commit b93f5a5673b4 on 2011-02-23 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      29</span>                 :                : #include &quot;utils/rel.h&quot;</span>
+<span id="L30" title="Line 30: commit f21a563d25db on 2017-01-20 by peter_e@gmx.net">                           <span class="lineNum">      30</span>                 :                : #include &quot;utils/varlena.h&quot;</span>
+<span id="L31" title="Line 31: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      31</span>                 :                : </span>
+<span id="L32" title="Line 32: commit 55527368bd07 on 2025-03-26 by tgl@sss.pgh.pa.us">  <a href="#L363" title="next CBC in &ldquo;(30,360] days&rdquo; bin">153</a> <a href="#L74" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      32</span>                 :<a href="#L87" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">          27 : PG_MODULE_MAGIC_EXT(</span></span>
+<span id="L33" title="Line 33: commit 55527368bd07 on 2025-03-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 :                :                     .name = &quot;pageinspect&quot;,</span>
+<span id="L34" title="Line 34: commit 55527368bd07 on 2025-03-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 :                :                     .version = PG_VERSION</span>
+<span id="L35" title="Line 35: commit 55527368bd07 on 2025-03-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :                : );</span>
+<span id="L36" title="Line 36: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      36</span>                 :                : </span>
+<span id="L37" title="Line 37: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 :                : static bytea *get_raw_page_internal(text *relname, ForkNumber forknum,</span>
+<span id="L38" title="Line 38: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :                :                                     BlockNumber blkno);</span>
+<span id="L39" title="Line 39: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :                : </span>
+<span id="L40" title="Line 40: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :                : </span>
+<span id="L41" title="Line 41: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      41</span>                 :                : /*</span>
+<span id="L42" title="Line 42: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      42</span>                 :                :  * get_raw_page</span>
+<span id="L43" title="Line 43: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      43</span>                 :                :  *</span>
+<span id="L44" title="Line 44: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      44</span>                 :                :  * Returns a copy of a page from shared buffers as a bytea</span>
+<span id="L45" title="Line 45: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      45</span>                 :                :  */</span>
+<span id="L46" title="Line 46: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> <a href="#L87" title="next CBC in &ldquo;(360..) days&rdquo; bin">1680</a> <a href="#L97" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">      46</span>                 :<span class="tlaCBC">             25 : PG_FUNCTION_INFO_V1(get_raw_page_1_9);</span></span>
+<span id="L47" title="Line 47: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      47</span>                 :                : </span>
+<span id="L48" title="Line 48: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      48</span>                 :                : Datum</span>
+<span id="L49" title="Line 49: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      49</span>                 :<span class="tlaCBC">            123 : get_raw_page_1_9(PG_FUNCTION_ARGS)</span></span>
+<span id="L50" title="Line 50: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      50</span>                 :                : {</span>
+<span id="L51" title="Line 51: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      51</span>                 :<span class="tlaCBC">            123 :     text       *relname = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L52" title="Line 52: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      52</span>                 :<span class="tlaCBC">            123 :     int64       blkno = PG_GETARG_INT64(1);</span></span>
+<span id="L53" title="Line 53: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      53</span>                 :                :     bytea      *raw_page;</span>
+<span id="L54" title="Line 54: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      54</span>                 :                : </span>
+<span id="L55" title="Line 55: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      55</span>   [<span class="tlaCBC"> <a href="#L56" title="CBC: Branch 0 was taken 122 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L56" title="CBC: Branch 1 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L56" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L56" title="CBC: Branch 3 was taken 122 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            123 :     if (blkno &lt; 0 || blkno &gt; MaxBlockNumber)</span></span>
+<span id="L56" title="Line 56: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      56</span>         [<span class="tlaCBC"> <a href="#L82" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L82" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              1 :         ereport(ERROR,</span></span>
+<span id="L57" title="Line 57: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      57</span>                 :                :                 (errcode(ERRCODE_INVALID_PARAMETER_VALUE),</span>
+<span id="L58" title="Line 58: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      58</span>                 :                :                  errmsg(&quot;invalid block number&quot;)));</span>
+<span id="L59" title="Line 59: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      59</span>                 :                : </span>
+<span id="L60" title="Line 60: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      60</span>                 :<span class="tlaCBC">            122 :     raw_page = get_raw_page_internal(relname, MAIN_FORKNUM, blkno);</span></span>
+<span id="L61" title="Line 61: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      61</span>                 :                : </span>
+<span id="L62" title="Line 62: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      62</span>                 :<span class="tlaCBC">            117 :     PG_RETURN_BYTEA_P(raw_page);</span></span>
+<span id="L63" title="Line 63: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      63</span>                 :                : }</span>
+<span id="L64" title="Line 64: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      64</span>                 :                : </span>
+<span id="L65" title="Line 65: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      65</span>                 :                : /*</span>
+<span id="L66" title="Line 66: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      66</span>                 :                :  * entry point for old extension version</span>
+<span id="L67" title="Line 67: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      67</span>                 :                :  */</span>
+<span id="L68" title="Line 68: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L153" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      68</span>                 :<span class="tlaCBC">              7 : PG_FUNCTION_INFO_V1(get_raw_page);</span></span>
+<span id="L69" title="Line 69: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      69</span>                 :                : </span>
+<span id="L70" title="Line 70: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      70</span>                 :                : Datum</span>
+<span id="L71" title="Line 71: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">      71</span>                 :<span class="tlaCBC">              2 : get_raw_page(PG_FUNCTION_ARGS)</span></span>
+<span id="L72" title="Line 72: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :                : {</span>
+<span id="L73" title="Line 73: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#L128" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      73</span>                 :<span class="tlaCBC">              2 :     text       *relname = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L74" title="Line 74: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"> 5923 <a href="#L87" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      74</span>                 :<span class="tlaCBC">              2 :     uint32      blkno = PG_GETARG_UINT32(1);</span></span>
+<span id="L75" title="Line 75: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :                :     bytea      *raw_page;</span>
+<span id="L76" title="Line 76: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :                : </span>
+<span id="L77" title="Line 77: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 :                :     /*</span>
+<span id="L78" title="Line 78: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                :      * We don't normally bother to check the number of arguments to a C</span>
+<span id="L79" title="Line 79: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :                :      * function, but here it's needed for safety because early 8.4 beta</span>
+<span id="L80" title="Line 80: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 :                :      * releases mistakenly redefined get_raw_page() as taking three arguments.</span>
+<span id="L81" title="Line 81: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 :                :      */</span>
+<span id="L82" title="Line 82: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>         [<span class="tlaUBC"> <a href="#L83" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L110" title="CBC: Branch 1 was taken 2 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              2 :     if (PG_NARGS() != 2)</span></span>
+<span id="L83" title="Line 83: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5923 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L154" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5923</a> </span><a href="#L174" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5923 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">      83</span>         [<span class="tlaUBC"> <a href="#L110" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L110" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L154" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L84" title="Line 84: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :                :                 (errmsg(&quot;wrong number of arguments to get_raw_page()&quot;),</span>
+<span id="L85" title="Line 85: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :                :                  errhint(&quot;Run the updated pageinspect.sql script.&quot;)));</span>
+<span id="L86" title="Line 86: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :                : </span>
+<span id="L87" title="Line 87: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"> <a href="#L158" title="next CBC in &ldquo;(360..) days&rdquo; bin">5923</a> <a href="#L123" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      87</span>                 :<a href="#L158" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           2 :     raw_page = get_raw_page_internal(relname, MAIN_FORKNUM, blkno);</span></span>
+<span id="L88" title="Line 88: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                : </span>
+<span id="L89" title="Line 89: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 :<span class="tlaCBC">              2 :     PG_RETURN_BYTEA_P(raw_page);</span></span>
+<span id="L90" title="Line 90: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 :                : }</span>
+<span id="L91" title="Line 91: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 :                : </span>
+<span id="L92" title="Line 92: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :                : /*</span>
+<span id="L93" title="Line 93: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>                 :                :  * get_raw_page_fork</span>
+<span id="L94" title="Line 94: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 :                :  *</span>
+<span id="L95" title="Line 95: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                :  * Same, for any fork</span>
+<span id="L96" title="Line 96: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      96</span>                 :                :  */</span>
+<span id="L97" title="Line 97: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> 1680 <a href="#L161" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">      97</span>                 :<span class="tlaCBC">              8 : PG_FUNCTION_INFO_V1(get_raw_page_fork_1_9);</span></span>
+<span id="L98" title="Line 98: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      98</span>                 :                : </span>
+<span id="L99" title="Line 99: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">      99</span>                 :                : Datum</span>
+<span id="L100" title="Line 100: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     100</span>                 :<span class="tlaCBC">             12 : get_raw_page_fork_1_9(PG_FUNCTION_ARGS)</span></span>
+<span id="L101" title="Line 101: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     101</span>                 :                : {</span>
+<span id="L102" title="Line 102: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     102</span>                 :<span class="tlaCBC">             12 :     text       *relname = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L103" title="Line 103: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     103</span>                 :<span class="tlaCBC">             12 :     text       *forkname = PG_GETARG_TEXT_PP(1);</span></span>
+<span id="L104" title="Line 104: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     104</span>                 :<span class="tlaCBC">             12 :     int64       blkno = PG_GETARG_INT64(2);</span></span>
+<span id="L105" title="Line 105: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     105</span>                 :                :     bytea      *raw_page;</span>
+<span id="L106" title="Line 106: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     106</span>                 :                :     ForkNumber  forknum;</span>
+<span id="L107" title="Line 107: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     107</span>                 :                : </span>
+<span id="L108" title="Line 108: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     108</span>                 :<span class="tlaCBC">             12 :     forknum = forkname_to_number(text_to_cstring(forkname));</span></span>
+<span id="L109" title="Line 109: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     109</span>                 :                : </span>
+<span id="L110" title="Line 110: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     110</span>   [<span class="tlaCBC"> <a href="#L111" title="CBC: Branch 0 was taken 10 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L111" title="CBC: Branch 1 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L111" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L111" title="CBC: Branch 3 was taken 10 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             11 :     if (blkno &lt; 0 || blkno &gt; MaxBlockNumber)</span></span>
+<span id="L111" title="Line 111: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     111</span>         [<span class="tlaCBC"> <a href="#L153" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L153" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              1 :         ereport(ERROR,</span></span>
+<span id="L112" title="Line 112: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     112</span>                 :                :                 (errcode(ERRCODE_INVALID_PARAMETER_VALUE),</span>
+<span id="L113" title="Line 113: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     113</span>                 :                :                  errmsg(&quot;invalid block number&quot;)));</span>
+<span id="L114" title="Line 114: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     114</span>                 :                : </span>
+<span id="L115" title="Line 115: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     115</span>                 :<span class="tlaCBC">             10 :     raw_page = get_raw_page_internal(relname, forknum, blkno);</span></span>
+<span id="L116" title="Line 116: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     116</span>                 :                : </span>
+<span id="L117" title="Line 117: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     117</span>                 :<span class="tlaCBC">              7 :     PG_RETURN_BYTEA_P(raw_page);</span></span>
+<span id="L118" title="Line 118: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     118</span>                 :                : }</span>
+<span id="L119" title="Line 119: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     119</span>                 :                : </span>
+<span id="L120" title="Line 120: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     120</span>                 :                : /*</span>
+<span id="L121" title="Line 121: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     121</span>                 :                :  * Entry point for old extension version</span>
+<span id="L122" title="Line 122: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     122</span>                 :                :  */</span>
+<span id="L123" title="Line 123: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"> 5923 <a href="#L134" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     123</span>                 :<span class="tlaCBC">              7 : PG_FUNCTION_INFO_V1(get_raw_page_fork);</span></span>
+<span id="L124" title="Line 124: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     124</span>                 :                : </span>
+<span id="L125" title="Line 125: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 :                : Datum</span>
+<span id="L126" title="Line 126: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 :<span class="tlaCBC">              1 : get_raw_page_fork(PG_FUNCTION_ARGS)</span></span>
+<span id="L127" title="Line 127: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     127</span>                 :                : {</span>
+<span id="L128" title="Line 128: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#L223" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">     128</span>                 :<span class="tlaCBC">              1 :     text       *relname = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L129" title="Line 129: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com">                           <span class="lineNum">     129</span>                 :<span class="tlaCBC">              1 :     text       *forkname = PG_GETARG_TEXT_PP(1);</span></span>
+<span id="L130" title="Line 130: commit 15c121b3ed7e on 2008-09-30 by heikki.linnakangas@iki.fi"> 6174 <a href="#L191" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     130</span>                 :<span class="tlaCBC">              1 :     uint32      blkno = PG_GETARG_UINT32(2);</span></span>
+<span id="L131" title="Line 131: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     131</span>                 :                :     bytea      *raw_page;</span>
+<span id="L132" title="Line 132: commit 5f853c655663 on 2008-10-06 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     132</span>                 :                :     ForkNumber  forknum;</span>
+<span id="L133" title="Line 133: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     133</span>                 :                : </span>
+<span id="L134" title="Line 134: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"> 5923 <a href="#L173" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     134</span>                 :<span class="tlaCBC">              1 :     forknum = forkname_to_number(text_to_cstring(forkname));</span></span>
+<span id="L135" title="Line 135: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     135</span>                 :                : </span>
+<span id="L136" title="Line 136: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 :<span class="tlaCBC">              1 :     raw_page = get_raw_page_internal(relname, forknum, blkno);</span></span>
+<span id="L137" title="Line 137: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :                : </span>
+<span id="L138" title="Line 138: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 :<span class="tlaCBC">              1 :     PG_RETURN_BYTEA_P(raw_page);</span></span>
+<span id="L139" title="Line 139: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 :                : }</span>
+<span id="L140" title="Line 140: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 :                : </span>
+<span id="L141" title="Line 141: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :                : /*</span>
+<span id="L142" title="Line 142: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 :                :  * workhorse</span>
+<span id="L143" title="Line 143: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 :                :  */</span>
+<span id="L144" title="Line 144: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :                : static bytea *</span>
+<span id="L145" title="Line 145: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 :<span class="tlaCBC">            135 : get_raw_page_internal(text *relname, ForkNumber forknum, BlockNumber blkno)</span></span>
+<span id="L146" title="Line 146: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     146</span>                 :                : {</span>
+<span id="L147" title="Line 147: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     147</span>                 :                :     bytea      *raw_page;</span>
+<span id="L148" title="Line 148: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     148</span>                 :                :     RangeVar   *relrv;</span>
+<span id="L149" title="Line 149: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     149</span>                 :                :     Relation    rel;</span>
+<span id="L150" title="Line 150: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     150</span>                 :                :     char       *raw_page_data;</span>
+<span id="L151" title="Line 151: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     151</span>                 :                :     Buffer      buf;</span>
+<span id="L152" title="Line 152: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     152</span>                 :                : </span>
+<span id="L153" title="Line 153: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L158" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     153</span>         [<span class="tlaUBC"> <a href="#L154" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L161" title="CBC: Branch 1 was taken 135 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            135 :     if (!superuser())</span></span>
+<span id="L154" title="Line 154: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L174" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">6676</a> </span><a href="#L265" title="next UBC in &ldquo;bruce@momjian.us&rdquo; bin" class="tlaBgUBC">bruce@momjian.us</a><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">    </span> <span class="lineNum">     154</span>         [<span class="tlaUBC"> <a href="#L161" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L161" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L174" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L155" title="Line 155: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     155</span>                 :                :                 (errcode(ERRCODE_INSUFFICIENT_PRIVILEGE),</span>
+<span id="L156" title="Line 156: commit 4e89c79a52f8 on 2020-01-30 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     156</span>                 :                :                  errmsg(&quot;must be superuser to use raw page functions&quot;)));</span>
+<span id="L157" title="Line 157: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     157</span>                 :                : </span>
+<span id="L158" title="Line 158: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> <a href="#L178" title="next CBC in &ldquo;(360..) days&rdquo; bin">6676</a> <a href="#L162" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     158</span>                 :<a href="#L178" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         135 :     relrv = makeRangeVarFromNameList(textToQualifiedNameList(relname));</span></span>
+<span id="L159" title="Line 159: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     159</span>                 :<span class="tlaCBC">            135 :     rel = relation_openrv(relrv, AccessShareLock);</span></span>
+<span id="L160" title="Line 160: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     160</span>                 :                : </span>
+<span id="L161" title="Line 161: commit 2ed532ee8c47 on 2021-07-08 by peter@eisentraut.org"> 1510 <a href="#L269" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     161</span>   [<span class="tlaCBC"> <a href="#L162" title="CBC: Branch 0 was taken 95 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 1 was taken 39 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 2 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 3 was taken 92 times" class="branchTla">+</a> </span> :<span class="tlaCBC">            134 :     if (!RELKIND_HAS_STORAGE(rel-&gt;rd_rel-&gt;relkind))</span></span>
+                           <span class="lineNum">        </span> <span class="tlaCBC"> <a href="#L162" title="CBC: Branch 4 was taken 2 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 5 was taken 1 time" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 6 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L162" title="UBC: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L162" title="CBC: Branch 8 was taken 2 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>             <span class="tlaUBC"> <a href="#L162" title="UBC: Branch 9 was not taken" class="branchTla">-</a> </span>]
+<span id="L162" title="Line 162: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L185" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     162</span>         [<span class="tlaCBC"> <a href="#L173" title="CBC: Branch 0 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L173" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              2 :         ereport(ERROR,</span></span>
+<span id="L163" title="Line 163: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     163</span>                 :                :                 (errcode(ERRCODE_WRONG_OBJECT_TYPE),</span>
+<span id="L164" title="Line 164: commit 2ed532ee8c47 on 2021-07-08 by peter@eisentraut.org">                           <span class="lineNum">     164</span>                 :                :                  errmsg(&quot;cannot get raw page from relation \&quot;%s\&quot;&quot;,</span>
+<span id="L165" title="Line 165: commit 2ed532ee8c47 on 2021-07-08 by peter@eisentraut.org">                           <span class="lineNum">     165</span>                 :                :                         RelationGetRelationName(rel)),</span>
+<span id="L166" title="Line 166: commit 2ed532ee8c47 on 2021-07-08 by peter@eisentraut.org">                           <span class="lineNum">     166</span>                 :                :                  errdetail_relkind_not_supported(rel-&gt;rd_rel-&gt;relkind)));</span>
+<span id="L167" title="Line 167: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     167</span>                 :                : </span>
+<span id="L168" title="Line 168: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>                 :                :     /*</span>
+<span id="L169" title="Line 169: commit d74714027942 on 2009-06-11 by bruce@momjian.us">                           <span class="lineNum">     169</span>                 :                :      * Reject attempts to read non-local temporary relations; we would be</span>
+<span id="L170" title="Line 170: commit d74714027942 on 2009-06-11 by bruce@momjian.us">                           <span class="lineNum">     170</span>                 :                :      * likely to get wrong data since we have no visibility into the owning</span>
+<span id="L171" title="Line 171: commit d74714027942 on 2009-06-11 by bruce@momjian.us">                           <span class="lineNum">     171</span>                 :                :      * session's local buffers.</span>
+<span id="L172" title="Line 172: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :                :      */</span>
+<span id="L173" title="Line 173: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us"> 5992 <a href="#L178" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     173</span>   [<span class="tlaCBC"> <a href="#L178" title="CBC: Branch 0 was taken 14 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L178" title="CBC: Branch 1 was taken 118 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L174" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L178" title="CBC: Branch 3 was taken 14 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            132 :     if (RELATION_IS_OTHER_TEMP(rel))</span></span>
+<span id="L174" title="Line 174: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5992 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L265" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5992</a> </span><a href="#top" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5992 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">     174</span>         [<span class="tlaUBC"> <a href="#L179" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L179" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L265" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L175" title="Line 175: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :                :                 (errcode(ERRCODE_FEATURE_NOT_SUPPORTED),</span>
+<span id="L176" title="Line 176: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     176</span>                 :                :                  errmsg(&quot;cannot access temporary tables of other sessions&quot;)));</span>
+<span id="L177" title="Line 177: commit c029a6a49e37 on 2009-03-31 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     177</span>                 :                : </span>
+<span id="L178" title="Line 178: commit 27cef0a56111 on 2014-07-22 by tgl@sss.pgh.pa.us"> <a href="#L269" title="next CBC in &ldquo;(360..) days&rdquo; bin">4053</a> <a href="#L201" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     178</span>         [<span class="tlaCBC"> <a href="#L179" title="CBC: Branch 0 was taken 5 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L179" title="CBC: Branch 1 was taken 127 times" class="branchTla">+</a> </span>]:<a href="#L269" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         132 :     if (blkno &gt;= RelationGetNumberOfBlocksInFork(rel, forknum))</span></span>
+<span id="L179" title="Line 179: commit 27cef0a56111 on 2014-07-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     179</span>         [<span class="tlaCBC"> <a href="#L225" title="CBC: Branch 0 was taken 5 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L226" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              5 :         ereport(ERROR,</span></span>
+<span id="L180" title="Line 180: commit 27cef0a56111 on 2014-07-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     180</span>                 :                :                 (errcode(ERRCODE_INVALID_PARAMETER_VALUE),</span>
+<span id="L181" title="Line 181: commit 27cef0a56111 on 2014-07-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     181</span>                 :                :                  errmsg(&quot;block number %u is out of range for relation \&quot;%s\&quot;&quot;,</span>
+<span id="L182" title="Line 182: commit 27cef0a56111 on 2014-07-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     182</span>                 :                :                         blkno, RelationGetRelationName(rel))));</span>
+<span id="L183" title="Line 183: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     183</span>                 :                : </span>
+<span id="L184" title="Line 184: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     184</span>                 :                :     /* Initialize buffer to copy to */</span>
+<span id="L185" title="Line 185: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L192" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     185</span>                 :<span class="tlaCBC">            127 :     raw_page = (bytea *) palloc(BLCKSZ + VARHDRSZ);</span></span>
+<span id="L186" title="Line 186: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     186</span>                 :<span class="tlaCBC">            127 :     SET_VARSIZE(raw_page, BLCKSZ + VARHDRSZ);</span></span>
+<span id="L187" title="Line 187: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     187</span>                 :<span class="tlaCBC">            127 :     raw_page_data = VARDATA(raw_page);</span></span>
+<span id="L188" title="Line 188: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     188</span>                 :                : </span>
+<span id="L189" title="Line 189: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     189</span>                 :                :     /* Take a verbatim copy of the page */</span>
+<span id="L190" title="Line 190: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     190</span>                 :                : </span>
+<span id="L191" title="Line 191: commit 19c8dc839b64 on 2008-10-31 by heikki.linnakangas@iki.fi"> 6143 <a href="#top" title="next CBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin">heikki.linnakangas@i</a> <span class="lineNum">     191</span>                 :<span class="tlaCBC">            127 :     buf = ReadBufferExtended(rel, forknum, blkno, RBM_NORMAL, NULL);</span></span>
+<span id="L192" title="Line 192: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L196" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     192</span>                 :<span class="tlaCBC">            127 :     LockBuffer(buf, BUFFER_LOCK_SHARE);</span></span>
+<span id="L193" title="Line 193: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     193</span>                 :                : </span>
+<span id="L194" title="Line 194: commit a343e223a5c3 on 2016-04-20 by kgrittn@postgresql.org"> 3415 <a href="#top" title="next CBC in &ldquo;kgrittn@postgresql.org&rdquo; bin">kgrittn@postgresql.o</a> <span class="lineNum">     194</span>                 :<span class="tlaCBC">            127 :     memcpy(raw_page_data, BufferGetPage(buf), BLCKSZ);</span></span>
+<span id="L195" title="Line 195: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     195</span>                 :                : </span>
+<span id="L196" title="Line 196: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L246" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     196</span>                 :<span class="tlaCBC">            127 :     LockBuffer(buf, BUFFER_LOCK_UNLOCK);</span></span>
+<span id="L197" title="Line 197: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     197</span>                 :<span class="tlaCBC">            127 :     ReleaseBuffer(buf);</span></span>
+<span id="L198" title="Line 198: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     198</span>                 :                : </span>
+<span id="L199" title="Line 199: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     199</span>                 :<span class="tlaCBC">            127 :     relation_close(rel, AccessShareLock);</span></span>
+<span id="L200" title="Line 200: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     200</span>                 :                : </span>
+<span id="L201" title="Line 201: commit a1fd650d2be7 on 2009-06-08 by tgl@sss.pgh.pa.us"> 5923 <a href="#L225" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     201</span>                 :<span class="tlaCBC">            127 :     return raw_page;</span></span>
+<span id="L202" title="Line 202: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     202</span>                 :                : }</span>
+<span id="L203" title="Line 203: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     203</span>                 :                : </span>
+<span id="L204" title="Line 204: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     204</span>                 :                : </span>
+<span id="L205" title="Line 205: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     205</span>                 :                : /*</span>
+<span id="L206" title="Line 206: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     206</span>                 :                :  * get_page_from_raw</span>
+<span id="L207" title="Line 207: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     207</span>                 :                :  *</span>
+<span id="L208" title="Line 208: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     208</span>                 :                :  * Get a palloc'd, maxalign'ed page image from the result of get_raw_page()</span>
+<span id="L209" title="Line 209: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     209</span>                 :                :  *</span>
+<span id="L210" title="Line 210: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     210</span>                 :                :  * On machines with MAXALIGN = 8, the payload of a bytea is not maxaligned,</span>
+<span id="L211" title="Line 211: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     211</span>                 :                :  * since it will start 4 bytes into a palloc'd value.  On alignment-picky</span>
+<span id="L212" title="Line 212: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     212</span>                 :                :  * machines, this will cause failures in accesses to 8-byte-wide values</span>
+<span id="L213" title="Line 213: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     213</span>                 :                :  * within the page.  We don't need to worry if accessing only 4-byte or</span>
+<span id="L214" title="Line 214: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     214</span>                 :                :  * smaller fields, but when examining a struct that contains 8-byte fields,</span>
+<span id="L215" title="Line 215: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     215</span>                 :                :  * use this function for safety.</span>
+<span id="L216" title="Line 216: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     216</span>                 :                :  */</span>
+<span id="L217" title="Line 217: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     217</span>                 :                : Page</span>
+<span id="L218" title="Line 218: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us"> 3126                      <span class="lineNum">     218</span>                 :<span class="tlaCBC">            155 : get_page_from_raw(bytea *raw_page)</span></span>
+<span id="L219" title="Line 219: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>                 :                : {</span>
+<span id="L220" title="Line 220: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     220</span>                 :                :     Page        page;</span>
+<span id="L221" title="Line 221: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     221</span>                 :                :     int         raw_page_size;</span>
+<span id="L222" title="Line 222: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     222</span>                 :                : </span>
+<span id="L223" title="Line 223: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#L234" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">     223</span>   [<span class="tlaEUB"> <a href="#L234" title="EUB: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#L234" title="ECB: Branch 1 was taken 155 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">            155 :     raw_page_size = VARSIZE_ANY_EXHDR(raw_page);</span></span>
+                           <span class="lineNum">        </span> <span class="tlaEUB"> <a href="#L234" title="EUB: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 6 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L234" title="EUB: Branch 8 was not taken" class="branchTla">-</a> </span> 
+                           <span class="lineNum">        </span>             <span class="tlaECB"> <a href="#L234" title="ECB: Branch 9 was taken 155 times" class="branchTla">+</a> </span>]
+<span id="L224" title="Line 224: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     224</span>                 :                : </span>
+<span id="L225" title="Line 225: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us"> 3126 <a href="#L236" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     225</span>         [<span class="tlaCBC"> <a href="#L226" title="CBC: Branch 0 was taken 14 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L226" title="CBC: Branch 1 was taken 141 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            155 :     if (raw_page_size != BLCKSZ)</span></span>
+<span id="L226" title="Line 226: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     226</span>         [<span class="tlaCBC"> <a href="#L264" title="CBC: Branch 0 was taken 14 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L264" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">             14 :         ereport(ERROR,</span></span>
+<span id="L227" title="Line 227: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     227</span>                 :                :                 (errcode(ERRCODE_INVALID_PARAMETER_VALUE),</span>
+<span id="L228" title="Line 228: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     228</span>                 :                :                  errmsg(&quot;invalid page size&quot;),</span>
+<span id="L229" title="Line 229: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     229</span>                 :                :                  errdetail(&quot;Expected %d bytes, got %d.&quot;,</span>
+<span id="L230" title="Line 230: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     230</span>                 :                :                            BLCKSZ, raw_page_size)));</span>
+<span id="L231" title="Line 231: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     231</span>                 :                : </span>
+<span id="L232" title="Line 232: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     232</span>                 :<span class="tlaCBC">            141 :     page = palloc(raw_page_size);</span></span>
+<span id="L233" title="Line 233: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     233</span>                 :                : </span>
+<span id="L234" title="Line 234: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#top" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">     234</span>         [<span class="tlaEUB"> <a href="#top" title="EUB: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 1 was taken 141 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            141 :     memcpy(page, VARDATA_ANY(raw_page), raw_page_size);</span></span>
+<span id="L235" title="Line 235: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     235</span>                 :                : </span>
+<span id="L236" title="Line 236: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us"> 3126 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     236</span>                 :<span class="tlaCBC">            141 :     return page;</span></span>
+<span id="L237" title="Line 237: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     237</span>                 :                : }</span>
+<span id="L238" title="Line 238: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     238</span>                 :                : </span>
+<span id="L239" title="Line 239: commit 14e9b18fed28 on 2017-02-03 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     239</span>                 :                : </span>
+<span id="L240" title="Line 240: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     240</span>                 :                : /*</span>
+<span id="L241" title="Line 241: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     241</span>                 :                :  * page_header</span>
+<span id="L242" title="Line 242: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     242</span>                 :                :  *</span>
+<span id="L243" title="Line 243: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     243</span>                 :                :  * Allows inspection of page header fields of a raw page</span>
+<span id="L244" title="Line 244: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     244</span>                 :                :  */</span>
+<span id="L245" title="Line 245: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     245</span>                 :                : </span>
+<span id="L246" title="Line 246: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L273" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     246</span>                 :<span class="tlaCBC">             14 : PG_FUNCTION_INFO_V1(page_header);</span></span>
+<span id="L247" title="Line 247: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     247</span>                 :                : </span>
+<span id="L248" title="Line 248: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     248</span>                 :                : Datum</span>
+<span id="L249" title="Line 249: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     249</span>                 :<span class="tlaCBC">              4 : page_header(PG_FUNCTION_ARGS)</span></span>
+<span id="L250" title="Line 250: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     250</span>                 :                : {</span>
+<span id="L251" title="Line 251: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     251</span>                 :<span class="tlaCBC">              4 :     bytea      *raw_page = PG_GETARG_BYTEA_P(0);</span></span>
+<span id="L252" title="Line 252: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     252</span>                 :                : </span>
+<span id="L253" title="Line 253: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     253</span>                 :                :     TupleDesc   tupdesc;</span>
+<span id="L254" title="Line 254: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     254</span>                 :                : </span>
+<span id="L255" title="Line 255: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     255</span>                 :                :     Datum       result;</span>
+<span id="L256" title="Line 256: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     256</span>                 :                :     HeapTuple   tuple;</span>
+<span id="L257" title="Line 257: commit cc59049daf78 on 2007-09-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     257</span>                 :                :     Datum       values[9];</span>
+<span id="L258" title="Line 258: commit cc59049daf78 on 2007-09-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     258</span>                 :                :     bool        nulls[9];</span>
+<span id="L259" title="Line 259: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     259</span>                 :                : </span>
+<span id="L260" title="Line 260: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     260</span>                 :                :     Page        page;</span>
+<span id="L261" title="Line 261: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     261</span>                 :                :     PageHeader  pageheader;</span>
+<span id="L262" title="Line 262: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     262</span>                 :                :     XLogRecPtr  lsn;</span>
+<span id="L263" title="Line 263: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     263</span>                 :                : </span>
+<span id="L264" title="Line 264: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     264</span>         [<span class="tlaUBC"> <a href="#L265" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L273" title="CBC: Branch 1 was taken 4 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              4 :     if (!superuser())</span></span>
+<span id="L265" title="Line 265: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L274" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">6676</a> </span><a href="#L274" title="next UBC in &ldquo;bruce@momjian.us&rdquo; bin" class="tlaBgUBC">bruce@momjian.us</a><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">    </span> <span class="lineNum">     265</span>         [<span class="tlaUBC"> <a href="#L273" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L273" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L274" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L266" title="Line 266: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     266</span>                 :                :                 (errcode(ERRCODE_INSUFFICIENT_PRIVILEGE),</span>
+<span id="L267" title="Line 267: commit 4e89c79a52f8 on 2020-01-30 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     267</span>                 :                :                  errmsg(&quot;must be superuser to use raw page functions&quot;)));</span>
+<span id="L268" title="Line 268: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     268</span>                 :                : </span>
+<span id="L269" title="Line 269: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org"> <a href="#L278" title="next CBC in &ldquo;(360..) days&rdquo; bin">1142</a> <a href="#L290" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     269</span>                 :<a href="#L278" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           4 :     page = get_page_from_raw(raw_page);</span></span>
+<span id="L270" title="Line 270: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     270</span>                 :<span class="tlaCBC">              3 :     pageheader = (PageHeader) page;</span></span>
+<span id="L271" title="Line 271: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     271</span>                 :                : </span>
+<span id="L272" title="Line 272: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     272</span>                 :                :     /* Build a tuple descriptor for our result type */</span>
+<span id="L273" title="Line 273: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#L278" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     273</span>         [<span class="tlaUBC"> <a href="#L274" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L281" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              3 :     if (get_call_result_type(fcinfo, NULL, &amp;tupdesc) != TYPEFUNC_COMPOSITE)</span></span>
+<span id="L274" title="Line 274: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L286" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">6676</a> </span><a href="#top" title="next UBC in &ldquo;bruce@momjian.us&rdquo; bin" class="tlaBgUBC">bruce@momjian.us</a><span title="bruce@momjian.us 6676 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">    </span> <span class="lineNum">     274</span>         [<span class="tlaUBC"> <a href="#L281" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L281" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L286" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         elog(ERROR, &quot;return type must be a row type&quot;);</span></span>
+<span id="L275" title="Line 275: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     275</span>                 :                : </span>
+<span id="L276" title="Line 276: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     276</span>                 :                :     /* Extract information from the page header */</span>
+<span id="L277" title="Line 277: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     277</span>                 :                : </span>
+<span id="L278" title="Line 278: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> <a href="#L289" title="next CBC in &ldquo;(360..) days&rdquo; bin">6676</a> <a href="#L319" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     278</span>                 :<a href="#L289" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           3 :     lsn = PageGetLSN(page);</span></span>
+<span id="L279" title="Line 279: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     279</span>                 :                : </span>
+<span id="L280" title="Line 280: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">     280</span>                 :                :     /* pageinspect &gt;= 1.2 uses pg_lsn instead of text for the LSN field. */</span>
+<span id="L281" title="Line 281: commit 2cd708452400 on 2017-08-20 by andres@anarazel.de"> 2928 <a href="#top" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     281</span>         [<span class="tlaUBC"> <a href="#L294" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L294" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              3 :     if (TupleDescAttr(tupdesc, 0)-&gt;atttypid == TEXTOID)</span></span>
+<span id="L282" title="Line 282: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">     282</span>                 :                :     {</span>
+<span id="L283" title="Line 283: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     283</span>                 :                :         char        lsnchar[64];</span>
+<span id="L284" title="Line 284: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNumWithDelete" title="removed line 285 from baseline version">     284</span>                 :                : </span>
+<span id="L285" title="Line 285: commit 2633dae2e487 on 2025-07-07 by alvherre@kurilemu.de"><span title="alvherre@kurilemu.de 50 days ago (bin 3: (30,360] days)" class="tlaUNC tlaBgUNC">   <a href="#top" title="next UNC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">50</a> <a href="#top" title="next UNC in &ldquo;alvherre@kurilemu.de&rdquo; bin" class="tlaBgUNC">alvherre@kurilemu.de</a></span> <span class="lineNum">     285</span>                 :<a href="#top" class="tlaBgUNC"  title="Next UNC group">UNC</a><span class="tlaUNC tlaBgUNC">           0 :         snprintf(lsnchar, sizeof(lsnchar), &quot;%X/%08X&quot;, LSN_FORMAT_ARGS(lsn));</span></span>
+<span id="L286" title="Line 286: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org"><span title="rhaas@postgresql.org 4194 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L314" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">4194</a> <a href="#top" title="next UBC in &ldquo;rhaas@postgresql.org&rdquo; bin" class="tlaBgUBC">rhaas@postgresql.org</a></span> <span class="lineNum">     286</span>                 :<a href="#L314" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         values[0] = CStringGetTextDatum(lsnchar);</span></span>
+<span id="L287" title="Line 287: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">     287</span>                 :                :     }</span>
+<span id="L288" title="Line 288: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org">                           <span class="lineNum">     288</span>                 :                :     else</span>
+<span id="L289" title="Line 289: commit 45ffeb7e0057 on 2014-03-03 by rhaas@postgresql.org"> <a href="#L319" title="next CBC in &ldquo;(360..) days&rdquo; bin">4194</a> <a href="#top" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">     289</span>                 :<a href="#L319" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           3 :         values[0] = LSNGetDatum(lsn);</span></span>
+<span id="L290" title="Line 290: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org"> 1142 <a href="#L300" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     290</span>                 :<span class="tlaCBC">              3 :     values[1] = UInt16GetDatum(pageheader-&gt;pd_checksum);</span></span>
+<span id="L291" title="Line 291: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     291</span>                 :<span class="tlaCBC">              3 :     values[2] = UInt16GetDatum(pageheader-&gt;pd_flags);</span></span>
+<span id="L292" title="Line 292: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     292</span>                 :                : </span>
+<span id="L293" title="Line 293: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     293</span>                 :                :     /* pageinspect &gt;= 1.10 uses int4 instead of int2 for those fields */</span>
+<span id="L294" title="Line 294: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz"> 1506 <a href="#L303" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     294</span>      [<span class="tlaCBC"> <a href="#L297" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L297" title="CBC: Branch 1 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L297" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              3 :     switch (TupleDescAttr(tupdesc, 3)-&gt;atttypid)</span></span>
+<span id="L295" title="Line 295: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     295</span>                 :                :     {</span>
+<span id="L296" title="Line 296: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     296</span>                 :<span class="tlaCBC">              1 :         case INT2OID:</span></span>
+<span id="L297" title="Line 297: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     297</span>   [<span class="tlaCBC"> <a href="#L306" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L306" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L306" title="CBC: Branch 2 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L306" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">              1 :             Assert(TupleDescAttr(tupdesc, 4)-&gt;atttypid == INT2OID &amp;&amp;</span></span>
+                           <span class="lineNum">        </span>          <span class="tlaUBC"> <a href="#L306" title="UBC: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L306" title="CBC: Branch 5 was taken 1 time" class="branchTla">+</a> </span>]
+<span id="L298" title="Line 298: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     298</span>                 :                :                    TupleDescAttr(tupdesc, 5)-&gt;atttypid == INT2OID &amp;&amp;</span>
+<span id="L299" title="Line 299: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     299</span>                 :                :                    TupleDescAttr(tupdesc, 6)-&gt;atttypid == INT2OID);</span>
+<span id="L300" title="Line 300: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org"> 1142 <a href="#L309" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     300</span>                 :<span class="tlaCBC">              1 :             values[3] = UInt16GetDatum(pageheader-&gt;pd_lower);</span></span>
+<span id="L301" title="Line 301: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     301</span>                 :<span class="tlaCBC">              1 :             values[4] = UInt16GetDatum(pageheader-&gt;pd_upper);</span></span>
+<span id="L302" title="Line 302: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     302</span>                 :<span class="tlaCBC">              1 :             values[5] = UInt16GetDatum(pageheader-&gt;pd_special);</span></span>
+<span id="L303" title="Line 303: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz"> 1506 <a href="#L312" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     303</span>                 :<span class="tlaCBC">              1 :             values[6] = UInt16GetDatum(PageGetPageSize(page));</span></span>
+<span id="L304" title="Line 304: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     304</span>                 :<span class="tlaCBC">              1 :             break;</span></span>
+<span id="L305" title="Line 305: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     305</span>                 :<span class="tlaCBC">              2 :         case INT4OID:</span></span>
+<span id="L306" title="Line 306: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     306</span>   [<span class="tlaCBC"> <a href="#L345" title="CBC: Branch 0 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L315" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L345" title="CBC: Branch 2 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L315" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">              2 :             Assert(TupleDescAttr(tupdesc, 4)-&gt;atttypid == INT4OID &amp;&amp;</span></span>
+                           <span class="lineNum">        </span>          <span class="tlaUBC"> <a href="#L315" title="UBC: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L345" title="CBC: Branch 5 was taken 2 times" class="branchTla">+</a> </span>]
+<span id="L307" title="Line 307: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     307</span>                 :                :                    TupleDescAttr(tupdesc, 5)-&gt;atttypid == INT4OID &amp;&amp;</span>
+<span id="L308" title="Line 308: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     308</span>                 :                :                    TupleDescAttr(tupdesc, 6)-&gt;atttypid == INT4OID);</span>
+<span id="L309" title="Line 309: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org"> 1142 <a href="#L320" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     309</span>                 :<span class="tlaCBC">              2 :             values[3] = Int32GetDatum(pageheader-&gt;pd_lower);</span></span>
+<span id="L310" title="Line 310: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     310</span>                 :<span class="tlaCBC">              2 :             values[4] = Int32GetDatum(pageheader-&gt;pd_upper);</span></span>
+<span id="L311" title="Line 311: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org">                           <span class="lineNum">     311</span>                 :<span class="tlaCBC">              2 :             values[5] = Int32GetDatum(pageheader-&gt;pd_special);</span></span>
+<span id="L312" title="Line 312: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz"> 1506 <a href="#L358" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     312</span>                 :<span class="tlaCBC">              2 :             values[6] = Int32GetDatum(PageGetPageSize(page));</span></span>
+<span id="L313" title="Line 313: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     313</span>                 :<span class="tlaCBC">              2 :             break;</span></span>
+<span id="L314" title="Line 314: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz"><span title="michael@paquier.xyz 1506 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L349" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">1506</a> </span><a href="#top" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 1506 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> </span> <span class="lineNum">     314</span>                 :<a href="#L349" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         default:</span></span>
+<span id="L315" title="Line 315: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz"><span title="michael@paquier.xyz 1506 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     315</span>         [<span class="tlaUBC"> <a href="#L348" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L348" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :             elog(ERROR, &quot;incorrect output types&quot;);</span></span>
+<span id="L316" title="Line 316: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     316</span>                 :                :             break;</span>
+<span id="L317" title="Line 317: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     317</span>                 :                :     }</span>
+<span id="L318" title="Line 318: commit 127404fbe284 on 2021-07-12 by michael@paquier.xyz">                           <span class="lineNum">     318</span>                 :                : </span>
+<span id="L319" title="Line 319: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> <a href="#L353" title="next CBC in &ldquo;(360..) days&rdquo; bin">6676</a> <a href="#L324" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     319</span>                 :<a href="#L353" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           3 :     values[7] = UInt16GetDatum(PageGetPageLayoutVersion(page));</span></span>
+<span id="L320" title="Line 320: commit 2cd2569c72b8 on 2022-07-11 by peter@eisentraut.org"> 1142 <a href="#L338" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     320</span>                 :<span class="tlaCBC">              3 :     values[8] = TransactionIdGetDatum(pageheader-&gt;pd_prune_xid);</span></span>
+<span id="L321" title="Line 321: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     321</span>                 :                : </span>
+<span id="L322" title="Line 322: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     322</span>                 :                :     /* Build and return the tuple. */</span>
+<span id="L323" title="Line 323: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     323</span>                 :                : </span>
+<span id="L324" title="Line 324: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676 <a href="#top" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     324</span>                 :<span class="tlaCBC">              3 :     memset(nulls, 0, sizeof(nulls));</span></span>
+<span id="L325" title="Line 325: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     325</span>                 :                : </span>
+<span id="L326" title="Line 326: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494                      <span class="lineNum">     326</span>                 :<span class="tlaCBC">              3 :     tuple = heap_form_tuple(tupdesc, values, nulls);</span></span>
+<span id="L327" title="Line 327: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     327</span>                 :<span class="tlaCBC">              3 :     result = HeapTupleGetDatum(tuple);</span></span>
+<span id="L328" title="Line 328: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     328</span>                 :                : </span>
+<span id="L329" title="Line 329: commit 64058429c54a on 2007-05-17 by bruce@momjian.us"> 6676                      <span class="lineNum">     329</span>                 :<span class="tlaCBC">              3 :     PG_RETURN_DATUM(result);</span></span>
+<span id="L330" title="Line 330: commit 64058429c54a on 2007-05-17 by bruce@momjian.us">                           <span class="lineNum">     330</span>                 :                : }</span>
+<span id="L331" title="Line 331: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     331</span>                 :                : </span>
+<span id="L332" title="Line 332: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     332</span>                 :                : /*</span>
+<span id="L333" title="Line 333: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     333</span>                 :                :  * page_checksum</span>
+<span id="L334" title="Line 334: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     334</span>                 :                :  *</span>
+<span id="L335" title="Line 335: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     335</span>                 :                :  * Compute checksum of a raw page</span>
+<span id="L336" title="Line 336: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     336</span>                 :                :  */</span>
+<span id="L337" title="Line 337: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     337</span>                 :                : </span>
+<span id="L338" title="Line 338: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> 1680 <a href="#L342" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     338</span>                 :<span class="tlaCBC">              8 : PG_FUNCTION_INFO_V1(page_checksum_1_9);</span></span>
+<span id="L339" title="Line 339: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net"> 3084 <a href="#L344" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">     339</span>                 :<span class="tlaCBC">              7 : PG_FUNCTION_INFO_V1(page_checksum);</span></span>
+<span id="L340" title="Line 340: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     340</span>                 :                : </span>
+<span id="L341" title="Line 341: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     341</span>                 :                : static Datum</span>
+<span id="L342" title="Line 342: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> 1680 <a href="#L345" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     342</span>                 :<span class="tlaCBC">             23 : page_checksum_internal(PG_FUNCTION_ARGS, enum pageinspect_version ext_version)</span></span>
+<span id="L343" title="Line 343: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     343</span>                 :                : {</span>
+<span id="L344" title="Line 344: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net"> 3084 <a href="#L348" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">     344</span>                 :<span class="tlaCBC">             23 :     bytea      *raw_page = PG_GETARG_BYTEA_P(0);</span></span>
+<span id="L345" title="Line 345: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> 1680 <a href="#L353" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     345</span>         [<span class="tlaCBC"> <a href="#L348" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L348" title="CBC: Branch 1 was taken 22 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             23 :     int64       blkno = (ext_version == PAGEINSPECT_V1_8 ? PG_GETARG_UINT32(1) : PG_GETARG_INT64(1));</span></span>
+<span id="L346" title="Line 346: commit 076f4d9539e9 on 2022-03-16 by michael@paquier.xyz">                           <span class="lineNum">     346</span>                 :                :     Page        page;</span>
+<span id="L347" title="Line 347: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     347</span>                 :                : </span>
+<span id="L348" title="Line 348: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net"> 3084 <a href="#top" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">     348</span>         [<span class="tlaUBC"> <a href="#L349" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L353" title="CBC: Branch 1 was taken 23 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             23 :     if (!superuser())</span></span>
+<span id="L349" title="Line 349: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net"><span title="peter_e@gmx.net 3084 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">3084</a> </span><a href="#top" title="next UBC in &ldquo;peter_e@gmx.net&rdquo; bin" class="tlaBgUBC">peter_e@gmx.net</a><span title="peter_e@gmx.net 3084 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">     </span> <span class="lineNum">     349</span>         [<span class="tlaUBC"> <a href="#L353" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L353" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         ereport(ERROR,</span></span>
+<span id="L350" title="Line 350: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     350</span>                 :                :                 (errcode(ERRCODE_INSUFFICIENT_PRIVILEGE),</span>
+<span id="L351" title="Line 351: commit 4e89c79a52f8 on 2020-01-30 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     351</span>                 :                :                  errmsg(&quot;must be superuser to use raw page functions&quot;)));</span>
+<span id="L352" title="Line 352: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     352</span>                 :                : </span>
+<span id="L353" title="Line 353: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> <a href="#L367" title="next CBC in &ldquo;(360..) days&rdquo; bin">1680</a> <a href="#L363" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     353</span>   [<span class="tlaCBC"> <a href="#L354" title="CBC: Branch 0 was taken 22 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L354" title="CBC: Branch 1 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L354" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L354" title="CBC: Branch 3 was taken 22 times" class="branchTla">+</a> </span>]:<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">          23 :     if (blkno &lt; 0 || blkno &gt; MaxBlockNumber)</span></span>
+<span id="L354" title="Line 354: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     354</span>         [<span class="tlaCBC"> <a href="#L360" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              1 :         ereport(ERROR,</span></span>
+<span id="L355" title="Line 355: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     355</span>                 :                :                 (errcode(ERRCODE_INVALID_PARAMETER_VALUE),</span>
+<span id="L356" title="Line 356: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     356</span>                 :                :                  errmsg(&quot;invalid block number&quot;)));</span>
+<span id="L357" title="Line 357: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     357</span>                 :                : </span>
+<span id="L358" title="Line 358: commit 076f4d9539e9 on 2022-03-16 by michael@paquier.xyz"> 1259 <a href="#top" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     358</span>                 :<span class="tlaCBC">             22 :     page = get_page_from_raw(raw_page);</span></span>
+<span id="L359" title="Line 359: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     359</span>                 :                : </span>
+<span id="L360" title="Line 360: commit cd4868a5700f on 2022-04-14 by michael@paquier.xyz"> 1230                      <span class="lineNum">     360</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 1 time" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 20 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             21 :     if (PageIsNew(page))</span></span>
+<span id="L361" title="Line 361: commit cd4868a5700f on 2022-04-14 by michael@paquier.xyz">                           <span class="lineNum">     361</span>                 :<span class="tlaCBC">              1 :         PG_RETURN_NULL();</span></span>
+<span id="L362" title="Line 362: commit cd4868a5700f on 2022-04-14 by michael@paquier.xyz">                           <span class="lineNum">     362</span>                 :                : </span>
+<span id="L363" title="Line 363: commit 1b5841d46150 on 2025-02-12 by peter@eisentraut.org">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">195</a> <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     363</span>                 :<span class="tlaCBC">             20 :     PG_RETURN_INT16(pg_checksum_page(page, blkno));</span></span>
+<span id="L364" title="Line 364: commit fef2bcdcba08 on 2017-03-17 by peter_e@gmx.net">                           <span class="lineNum">     364</span>                 :                : }</span>
+<span id="L365" title="Line 365: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     365</span>                 :                : </span>
+<span id="L366" title="Line 366: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     366</span>                 :                : Datum</span>
+<span id="L367" title="Line 367: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1680</a>                      <span class="lineNum">     367</span>                 :<span class="tlaCBC">             22 : page_checksum_1_9(PG_FUNCTION_ARGS)</span></span>
+<span id="L368" title="Line 368: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     368</span>                 :                : {</span>
+<span id="L369" title="Line 369: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     369</span>                 :<span class="tlaCBC">             22 :     return page_checksum_internal(fcinfo, PAGEINSPECT_V1_9);</span></span>
+<span id="L370" title="Line 370: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     370</span>                 :                : }</span>
+<span id="L371" title="Line 371: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     371</span>                 :                : </span>
+<span id="L372" title="Line 372: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     372</span>                 :                : /*</span>
+<span id="L373" title="Line 373: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     373</span>                 :                :  * Entry point for old extension version</span>
+<span id="L374" title="Line 374: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     374</span>                 :                :  */</span>
+<span id="L375" title="Line 375: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     375</span>                 :                : Datum</span>
+<span id="L376" title="Line 376: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     376</span>                 :<span class="tlaCBC">              1 : page_checksum(PG_FUNCTION_ARGS)</span></span>
+<span id="L377" title="Line 377: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     377</span>                 :                : {</span>
+<span id="L378" title="Line 378: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     378</span>                 :<span class="tlaCBC">              1 :     return page_checksum_internal(fcinfo, PAGEINSPECT_V1_8);</span></span>
+<span id="L379" title="Line 379: commit f18aa1b20393 on 2021-01-19 by peter@eisentraut.org">                           <span class="lineNum">     379</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

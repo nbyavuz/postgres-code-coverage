@@ -1,0 +1,417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/storage/ipc/dsm.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory storage">storage</a>/<a href="index.html" title="Click to go to directory ipc">ipc</a> - dsm.c<span style="font-size: 80%;"> (<a href="dsm.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">73.2&nbsp;%</td>
+            <td class="headerCovTableEntry">399</td>
+            <td class="headerCovTableEntry">292</td>
+            <td class="headerCovTableEntry">107</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">291</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">81.2&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">53.3&nbsp;%</td>
+            <td class="headerCovTableEntry">246</td>
+            <td class="headerCovTableEntry">131</td>
+            <td class="headerCovTableEntry">115</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">130</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.2&nbsp;%</td>
+            <td class="headerCovTableEntry">399</td>
+            <td class="headerCovTableEntry">292</td>
+            <td class="headerCovTableEntry">107</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">291</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">81.2&nbsp;%</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">53.3&nbsp;%</td>
+            <td class="headerCovTableEntry">246</td>
+            <td class="headerCovTableEntry">131</td>
+            <td class="headerCovTableEntry">115</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">130</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="dsm.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="dsm.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="dsm.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L514">dsm_create</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1626</td>
+              <td class=coverPerLo>58.0&nbsp;% (40 / 69)</td>
+              <td class=coverPerLo>43.5&nbsp;% (20 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L986">dsm_unpin_segment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">154</td>
+              <td class=coverPerMed>86.8&nbsp;% (33 / 38)</td>
+              <td class=coverPerLo>56.2&nbsp;% (18 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L801">dsm_detach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20766</td>
+              <td class=coverPerHi>92.9&nbsp;% (39 / 42)</td>
+              <td class=coverPerLo>60.0&nbsp;% (18 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L318">dsm_cleanup_for_mmap</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L663">dsm_attach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19140</td>
+              <td class=coverPerMed>80.6&nbsp;% (25 / 31)</td>
+              <td class=coverPerLo>62.5&nbsp;% (15 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L236">dsm_cleanup_using_control_segment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerMed>80.0&nbsp;% (20 / 25)</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L175">dsm_postmaster_startup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>91.7&nbsp;% (22 / 24)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L477">dsm_shmem_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerLo>30.8&nbsp;% (4 / 13)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1235">dsm_control_segment_sane</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1047</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L953">dsm_pin_segment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1084</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L356">dsm_postmaster_shutdown</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerMed>86.4&nbsp;% (19 / 22)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1168">reset_on_dsm_detach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18708</td>
+              <td class=coverPerLo>33.3&nbsp;% (3 / 9)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1145">cancel_on_dsm_detach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3956</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L773">dsm_detach_all</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1103">dsm_segment_map_length</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L932">dsm_unpin_mapping</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1074">dsm_find_mapping</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1093">dsm_segment_address</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21054</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L755">dsm_backend_shutdown</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39552</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1199">dsm_create_descriptor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20766</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L913">dsm_pin_mapping</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1637</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1295">ResOwnerPrintDSM</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1287">ResOwnerReleaseDSM</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L163">ResourceOwnerForgetDSM</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2592</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L158">ResourceOwnerRememberDSM</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2592</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L421">dsm_backend_startup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16373</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1253">dsm_control_bytes_needed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2092</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L468">dsm_estimate_size</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2986</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1121">dsm_segment_handle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2142</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1279">is_main_region_dsm_handle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63339</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1260">make_main_region_dsm_handle</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="dsm.c.gcov.html#L1130">on_dsm_detach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12041</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

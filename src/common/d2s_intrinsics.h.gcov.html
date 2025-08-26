@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/common/d2s_intrinsics.h</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory src">src</a>/<a href="index.html" title="Click to go to directory common">common</a> - d2s_intrinsics.h<span style="font-size: 80%;"> (source / <a href="d2s_intrinsics.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"><a href="#L177" title="goto first CBC line">8</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"><a href="#L177" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">8</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       1</span>                 : /*---------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       3</span>                 :  * Ryu floating-point output for double precision.</span>
+<span id="L4" title="Line 4: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       4</span>                 :  *</span>
+<span id="L5" title="Line 5: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :  * Portions Copyright (c) 2018-2025, PostgreSQL Global Development Group</span>
+<span id="L6" title="Line 6: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       6</span>                 :  *</span>
+<span id="L7" title="Line 7: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       7</span>                 :  * IDENTIFICATION</span>
+<span id="L8" title="Line 8: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       8</span>                 :  *    src/common/d2s_intrinsics.h</span>
+<span id="L9" title="Line 9: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      10</span>                 :  * This is a modification of code taken from github.com/ulfjack/ryu under the</span>
+<span id="L11" title="Line 11: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      11</span>                 :  * terms of the Boost license (not the Apache license). The original copyright</span>
+<span id="L12" title="Line 12: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      12</span>                 :  * notice follows:</span>
+<span id="L13" title="Line 13: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      13</span>                 :  *</span>
+<span id="L14" title="Line 14: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      14</span>                 :  * Copyright 2018 Ulf Adams</span>
+<span id="L15" title="Line 15: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      15</span>                 :  *</span>
+<span id="L16" title="Line 16: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      16</span>                 :  * The contents of this file may be used under the terms of the Apache</span>
+<span id="L17" title="Line 17: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      17</span>                 :  * License, Version 2.0.</span>
+<span id="L18" title="Line 18: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      18</span>                 :  *</span>
+<span id="L19" title="Line 19: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      19</span>                 :  *     (See accompanying file LICENSE-Apache or copy at</span>
+<span id="L20" title="Line 20: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      20</span>                 :  *      http://www.apache.org/licenses/LICENSE-2.0)</span>
+<span id="L21" title="Line 21: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      21</span>                 :  *</span>
+<span id="L22" title="Line 22: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      22</span>                 :  * Alternatively, the contents of this file may be used under the terms of the</span>
+<span id="L23" title="Line 23: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      23</span>                 :  * Boost Software License, Version 1.0.</span>
+<span id="L24" title="Line 24: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      24</span>                 :  *</span>
+<span id="L25" title="Line 25: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      25</span>                 :  *     (See accompanying file LICENSE-Boost or copy at</span>
+<span id="L26" title="Line 26: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      26</span>                 :  *      https://www.boost.org/LICENSE_1_0.txt)</span>
+<span id="L27" title="Line 27: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      27</span>                 :  *</span>
+<span id="L28" title="Line 28: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      28</span>                 :  * Unless required by applicable law or agreed to in writing, this software is</span>
+<span id="L29" title="Line 29: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      29</span>                 :  * distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</span>
+<span id="L30" title="Line 30: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      30</span>                 :  * KIND, either express or implied.</span>
+<span id="L31" title="Line 31: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      31</span>                 :  *</span>
+<span id="L32" title="Line 32: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      32</span>                 :  *---------------------------------------------------------------------------</span>
+<span id="L33" title="Line 33: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      33</span>                 :  */</span>
+<span id="L34" title="Line 34: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      34</span>                 : #ifndef RYU_D2S_INTRINSICS_H</span>
+<span id="L35" title="Line 35: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      35</span>                 : #define RYU_D2S_INTRINSICS_H</span>
+<span id="L36" title="Line 36: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      36</span>                 : </span>
+<span id="L37" title="Line 37: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      37</span>                 : #if defined(HAS_64_BIT_INTRINSICS)</span>
+<span id="L38" title="Line 38: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      38</span>                 : </span>
+<span id="L39" title="Line 39: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      39</span>                 : #include &lt;intrin.h&gt;</span>
+<span id="L40" title="Line 40: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      40</span>                 : </span>
+<span id="L41" title="Line 41: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      41</span>                 : static inline uint64</span>
+<span id="L42" title="Line 42: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      42</span>                 : umul128(const uint64 a, const uint64 b, uint64 *const productHi)</span>
+<span id="L43" title="Line 43: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      43</span>                 : {</span>
+<span id="L44" title="Line 44: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      44</span>                 :     return _umul128(a, b, productHi);</span>
+<span id="L45" title="Line 45: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      45</span>                 : }</span>
+<span id="L46" title="Line 46: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      46</span>                 : </span>
+<span id="L47" title="Line 47: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      47</span>                 : static inline uint64</span>
+<span id="L48" title="Line 48: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      48</span>                 : shiftright128(const uint64 lo, const uint64 hi, const uint32 dist)</span>
+<span id="L49" title="Line 49: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      49</span>                 : {</span>
+<span id="L50" title="Line 50: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      50</span>                 :     /*</span>
+<span id="L51" title="Line 51: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      51</span>                 :      * For the __shiftright128 intrinsic, the shift value is always modulo 64.</span>
+<span id="L52" title="Line 52: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      52</span>                 :      * In the current implementation of the double-precision version of Ryu,</span>
+<span id="L53" title="Line 53: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      53</span>                 :      * the shift value is always &lt; 64. (In the case RYU_OPTIMIZE_SIZE == 0,</span>
+<span id="L54" title="Line 54: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      54</span>                 :      * the shift value is in the range [49, 58]. Otherwise in the range [2,</span>
+<span id="L55" title="Line 55: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      55</span>                 :      * 59].) Check this here in case a future change requires larger shift</span>
+<span id="L56" title="Line 56: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      56</span>                 :      * values. In this case this function needs to be adjusted.</span>
+<span id="L57" title="Line 57: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      57</span>                 :      */</span>
+<span id="L58" title="Line 58: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      58</span>                 :     Assert(dist &lt; 64);</span>
+<span id="L59" title="Line 59: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      59</span>                 :     return __shiftright128(lo, hi, (unsigned char) dist);</span>
+<span id="L60" title="Line 60: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      60</span>                 : }</span>
+<span id="L61" title="Line 61: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      61</span>                 : </span>
+<span id="L62" title="Line 62: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      62</span>                 : #else                           /* defined(HAS_64_BIT_INTRINSICS) */</span>
+<span id="L63" title="Line 63: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      63</span>                 : </span>
+<span id="L64" title="Line 64: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      64</span>                 : static inline uint64</span>
+<span id="L65" title="Line 65: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      65</span>                 : umul128(const uint64 a, const uint64 b, uint64 *const productHi)</span>
+<span id="L66" title="Line 66: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      66</span>                 : {</span>
+<span id="L67" title="Line 67: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      67</span>                 :     /*</span>
+<span id="L68" title="Line 68: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      68</span>                 :      * The casts here help MSVC to avoid calls to the __allmul library</span>
+<span id="L69" title="Line 69: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      69</span>                 :      * function.</span>
+<span id="L70" title="Line 70: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      70</span>                 :      */</span>
+<span id="L71" title="Line 71: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      71</span>                 :     const uint32 aLo = (uint32) a;</span>
+<span id="L72" title="Line 72: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      72</span>                 :     const uint32 aHi = (uint32) (a &gt;&gt; 32);</span>
+<span id="L73" title="Line 73: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      73</span>                 :     const uint32 bLo = (uint32) b;</span>
+<span id="L74" title="Line 74: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      74</span>                 :     const uint32 bHi = (uint32) (b &gt;&gt; 32);</span>
+<span id="L75" title="Line 75: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      75</span>                 : </span>
+<span id="L76" title="Line 76: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      76</span>                 :     const uint64 b00 = (uint64) aLo * bLo;</span>
+<span id="L77" title="Line 77: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      77</span>                 :     const uint64 b01 = (uint64) aLo * bHi;</span>
+<span id="L78" title="Line 78: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      78</span>                 :     const uint64 b10 = (uint64) aHi * bLo;</span>
+<span id="L79" title="Line 79: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      79</span>                 :     const uint64 b11 = (uint64) aHi * bHi;</span>
+<span id="L80" title="Line 80: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      80</span>                 : </span>
+<span id="L81" title="Line 81: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      81</span>                 :     const uint32 b00Lo = (uint32) b00;</span>
+<span id="L82" title="Line 82: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      82</span>                 :     const uint32 b00Hi = (uint32) (b00 &gt;&gt; 32);</span>
+<span id="L83" title="Line 83: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      83</span>                 : </span>
+<span id="L84" title="Line 84: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      84</span>                 :     const uint64 mid1 = b10 + b00Hi;</span>
+<span id="L85" title="Line 85: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      85</span>                 :     const uint32 mid1Lo = (uint32) (mid1);</span>
+<span id="L86" title="Line 86: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      86</span>                 :     const uint32 mid1Hi = (uint32) (mid1 &gt;&gt; 32);</span>
+<span id="L87" title="Line 87: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      87</span>                 : </span>
+<span id="L88" title="Line 88: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      88</span>                 :     const uint64 mid2 = b01 + mid1Lo;</span>
+<span id="L89" title="Line 89: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      89</span>                 :     const uint32 mid2Lo = (uint32) (mid2);</span>
+<span id="L90" title="Line 90: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      90</span>                 :     const uint32 mid2Hi = (uint32) (mid2 &gt;&gt; 32);</span>
+<span id="L91" title="Line 91: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      91</span>                 : </span>
+<span id="L92" title="Line 92: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      92</span>                 :     const uint64 pHi = b11 + mid1Hi + mid2Hi;</span>
+<span id="L93" title="Line 93: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      93</span>                 :     const uint64 pLo = ((uint64) mid2Lo &lt;&lt; 32) + b00Lo;</span>
+<span id="L94" title="Line 94: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      94</span>                 : </span>
+<span id="L95" title="Line 95: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      95</span>                 :     *productHi = pHi;</span>
+<span id="L96" title="Line 96: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      96</span>                 :     return pLo;</span>
+<span id="L97" title="Line 97: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      97</span>                 : }</span>
+<span id="L98" title="Line 98: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      98</span>                 : </span>
+<span id="L99" title="Line 99: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">      99</span>                 : static inline uint64</span>
+<span id="L100" title="Line 100: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     100</span>                 : shiftright128(const uint64 lo, const uint64 hi, const uint32 dist)</span>
+<span id="L101" title="Line 101: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     101</span>                 : {</span>
+<span id="L102" title="Line 102: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     102</span>                 :     /* We don't need to handle the case dist &gt;= 64 here (see above). */</span>
+<span id="L103" title="Line 103: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     103</span>                 :     Assert(dist &lt; 64);</span>
+<span id="L104" title="Line 104: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     104</span>                 : #if !defined(RYU_32_BIT_PLATFORM)</span>
+<span id="L105" title="Line 105: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     105</span>                 :     Assert(dist &gt; 0);</span>
+<span id="L106" title="Line 106: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     106</span>                 :     return (hi &lt;&lt; (64 - dist)) | (lo &gt;&gt; dist);</span>
+<span id="L107" title="Line 107: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     107</span>                 : #else</span>
+<span id="L108" title="Line 108: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     108</span>                 :     /* Avoid a 64-bit shift by taking advantage of the range of shift values. */</span>
+<span id="L109" title="Line 109: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     109</span>                 :     Assert(dist &gt;= 32);</span>
+<span id="L110" title="Line 110: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     110</span>                 :     return (hi &lt;&lt; (64 - dist)) | ((uint32) (lo &gt;&gt; 32) &gt;&gt; (dist - 32));</span>
+<span id="L111" title="Line 111: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     111</span>                 : #endif</span>
+<span id="L112" title="Line 112: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     112</span>                 : }</span>
+<span id="L113" title="Line 113: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     113</span>                 : </span>
+<span id="L114" title="Line 114: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     114</span>                 : #endif                          /* // defined(HAS_64_BIT_INTRINSICS) */</span>
+<span id="L115" title="Line 115: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     115</span>                 : </span>
+<span id="L116" title="Line 116: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     116</span>                 : #ifdef RYU_32_BIT_PLATFORM</span>
+<span id="L117" title="Line 117: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     117</span>                 : </span>
+<span id="L118" title="Line 118: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     118</span>                 : /*  Returns the high 64 bits of the 128-bit product of a and b. */</span>
+<span id="L119" title="Line 119: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     119</span>                 : static inline uint64</span>
+<span id="L120" title="Line 120: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     120</span>                 : umulh(const uint64 a, const uint64 b)</span>
+<span id="L121" title="Line 121: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     121</span>                 : {</span>
+<span id="L122" title="Line 122: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     122</span>                 :     /*</span>
+<span id="L123" title="Line 123: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     123</span>                 :      * Reuse the umul128 implementation. Optimizers will likely eliminate the</span>
+<span id="L124" title="Line 124: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     124</span>                 :      * instructions used to compute the low part of the product.</span>
+<span id="L125" title="Line 125: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     125</span>                 :      */</span>
+<span id="L126" title="Line 126: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     126</span>                 :     uint64      hi;</span>
+<span id="L127" title="Line 127: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     127</span>                 : </span>
+<span id="L128" title="Line 128: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     128</span>                 :     umul128(a, b, &amp;hi);</span>
+<span id="L129" title="Line 129: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     129</span>                 :     return hi;</span>
+<span id="L130" title="Line 130: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     130</span>                 : }</span>
+<span id="L131" title="Line 131: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     131</span>                 : </span>
+<span id="L132" title="Line 132: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     132</span>                 : /*----</span>
+<span id="L133" title="Line 133: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     133</span>                 :  *  On 32-bit platforms, compilers typically generate calls to library</span>
+<span id="L134" title="Line 134: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     134</span>                 :  *  functions for 64-bit divisions, even if the divisor is a constant.</span>
+<span id="L135" title="Line 135: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     135</span>                 :  *</span>
+<span id="L136" title="Line 136: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     136</span>                 :  *  E.g.:</span>
+<span id="L137" title="Line 137: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     137</span>                 :  *  https://bugs.llvm.org/show_bug.cgi?id=37932</span>
+<span id="L138" title="Line 138: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     138</span>                 :  *  https://gcc.gnu.org/bugzilla/show_bug.cgi?id=17958</span>
+<span id="L139" title="Line 139: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     139</span>                 :  *  https://gcc.gnu.org/bugzilla/show_bug.cgi?id=37443</span>
+<span id="L140" title="Line 140: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     140</span>                 :  *</span>
+<span id="L141" title="Line 141: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     141</span>                 :  *  The functions here perform division-by-constant using multiplications</span>
+<span id="L142" title="Line 142: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     142</span>                 :  *  in the same way as 64-bit compilers would do.</span>
+<span id="L143" title="Line 143: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     143</span>                 :  *</span>
+<span id="L144" title="Line 144: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     144</span>                 :  *  NB:</span>
+<span id="L145" title="Line 145: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     145</span>                 :  *  The multipliers and shift values are the ones generated by clang x64</span>
+<span id="L146" title="Line 146: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     146</span>                 :  *  for expressions like x/5, x/10, etc.</span>
+<span id="L147" title="Line 147: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     147</span>                 :  *----</span>
+<span id="L148" title="Line 148: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     148</span>                 :  */</span>
+<span id="L149" title="Line 149: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     149</span>                 : </span>
+<span id="L150" title="Line 150: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     150</span>                 : static inline uint64</span>
+<span id="L151" title="Line 151: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     151</span>                 : div5(const uint64 x)</span>
+<span id="L152" title="Line 152: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     152</span>                 : {</span>
+<span id="L153" title="Line 153: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     153</span>                 :     return umulh(x, UINT64CONST(0xCCCCCCCCCCCCCCCD)) &gt;&gt; 2;</span>
+<span id="L154" title="Line 154: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     154</span>                 : }</span>
+<span id="L155" title="Line 155: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     155</span>                 : </span>
+<span id="L156" title="Line 156: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     156</span>                 : static inline uint64</span>
+<span id="L157" title="Line 157: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     157</span>                 : div10(const uint64 x)</span>
+<span id="L158" title="Line 158: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     158</span>                 : {</span>
+<span id="L159" title="Line 159: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     159</span>                 :     return umulh(x, UINT64CONST(0xCCCCCCCCCCCCCCCD)) &gt;&gt; 3;</span>
+<span id="L160" title="Line 160: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     160</span>                 : }</span>
+<span id="L161" title="Line 161: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     161</span>                 : </span>
+<span id="L162" title="Line 162: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     162</span>                 : static inline uint64</span>
+<span id="L163" title="Line 163: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     163</span>                 : div100(const uint64 x)</span>
+<span id="L164" title="Line 164: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     164</span>                 : {</span>
+<span id="L165" title="Line 165: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     165</span>                 :     return umulh(x &gt;&gt; 2, UINT64CONST(0x28F5C28F5C28F5C3)) &gt;&gt; 2;</span>
+<span id="L166" title="Line 166: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     166</span>                 : }</span>
+<span id="L167" title="Line 167: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     167</span>                 : </span>
+<span id="L168" title="Line 168: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     168</span>                 : static inline uint64</span>
+<span id="L169" title="Line 169: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     169</span>                 : div1e8(const uint64 x)</span>
+<span id="L170" title="Line 170: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     170</span>                 : {</span>
+<span id="L171" title="Line 171: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     171</span>                 :     return umulh(x, UINT64CONST(0xABCC77118461CEFD)) &gt;&gt; 26;</span>
+<span id="L172" title="Line 172: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     172</span>                 : }</span>
+<span id="L173" title="Line 173: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     173</span>                 : </span>
+<span id="L174" title="Line 174: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     174</span>                 : #else                           /* RYU_32_BIT_PLATFORM */</span>
+<span id="L175" title="Line 175: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     175</span>                 : </span>
+<span id="L176" title="Line 176: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     176</span>                 : static inline uint64</span>
+<span id="L177" title="Line 177: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">2386</a> <a href="#top" title="next CBC in &ldquo;rhodiumtoad@postgresql.org&rdquo; bin">rhodiumtoad@postgres</a> <span class="lineNum">     177</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        3661 : div5(const uint64 x)</span></span>
+<span id="L178" title="Line 178: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     178</span>                 : {</span>
+<span id="L179" title="Line 179: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     179</span> <span class="tlaCBC">           3661 :     return x / 5;</span></span>
+<span id="L180" title="Line 180: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     180</span>                 : }</span>
+<span id="L181" title="Line 181: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     181</span>                 : </span>
+<span id="L182" title="Line 182: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     182</span>                 : static inline uint64</span>
+<span id="L183" title="Line 183: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     183</span> <span class="tlaCBC">       12862431 : div10(const uint64 x)</span></span>
+<span id="L184" title="Line 184: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     184</span>                 : {</span>
+<span id="L185" title="Line 185: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     185</span> <span class="tlaCBC">       12862431 :     return x / 10;</span></span>
+<span id="L186" title="Line 186: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     186</span>                 : }</span>
+<span id="L187" title="Line 187: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     187</span>                 : </span>
+<span id="L188" title="Line 188: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     188</span>                 : static inline uint64</span>
+<span id="L189" title="Line 189: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     189</span> <span class="tlaCBC">        1854790 : div100(const uint64 x)</span></span>
+<span id="L190" title="Line 190: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     190</span>                 : {</span>
+<span id="L191" title="Line 191: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     191</span> <span class="tlaCBC">        1854790 :     return x / 100;</span></span>
+<span id="L192" title="Line 192: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     192</span>                 : }</span>
+<span id="L193" title="Line 193: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     193</span>                 : </span>
+<span id="L194" title="Line 194: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     194</span>                 : static inline uint64</span>
+<span id="L195" title="Line 195: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     195</span> <span class="tlaCBC">         513395 : div1e8(const uint64 x)</span></span>
+<span id="L196" title="Line 196: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     196</span>                 : {</span>
+<span id="L197" title="Line 197: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     197</span> <span class="tlaCBC">         513395 :     return x / 100000000;</span></span>
+<span id="L198" title="Line 198: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     198</span>                 : }</span>
+<span id="L199" title="Line 199: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     199</span>                 : </span>
+<span id="L200" title="Line 200: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     200</span>                 : #endif                          /* RYU_32_BIT_PLATFORM */</span>
+<span id="L201" title="Line 201: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     201</span>                 : </span>
+<span id="L202" title="Line 202: commit 02ddd499322a on 2019-02-13 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     202</span>                 : #endif                          /* RYU_D2S_INTRINSICS_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

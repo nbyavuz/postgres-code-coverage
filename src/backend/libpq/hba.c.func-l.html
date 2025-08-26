@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/libpq/hba.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory libpq">libpq</a> - hba.c<span style="font-size: 80%;"> (<a href="hba.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">61.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1079</td>
+            <td class="headerCovTableEntry">661</td>
+            <td class="headerCovTableEntry">418</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">649</td>
+            <td class="headerCovTableEntry">7</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">82.4&nbsp;%</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">47.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1076</td>
+            <td class="headerCovTableEntry">508</td>
+            <td class="headerCovTableEntry">568</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">504</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">37.8&nbsp;%</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">62.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1034</td>
+            <td class="headerCovTableEntry">644</td>
+            <td class="headerCovTableEntry">390</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">644</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.4&nbsp;%</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">10.7&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">49.2&nbsp;%</td>
+            <td class="headerCovTableEntry">1020</td>
+            <td class="headerCovTableEntry">502</td>
+            <td class="headerCovTableEntry">518</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">502</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="hba.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="hba.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="hba.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1326">parse_hba_line</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5416</td>
+              <td class=coverPerLo>48.5&nbsp;% (144 / 297)</td>
+              <td class=coverPerLo>40.0&nbsp;% (120 / 300)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2085">parse_hba_auth_opt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">277</td>
+              <td class=coverPerLo>42.2&nbsp;% (87 / 206)</td>
+              <td class=coverPerLo>26.8&nbsp;% (80 / 298)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1076">check_hostname</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 38)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2529">check_hba</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11792</td>
+              <td class=coverPerLo>72.9&nbsp;% (35 / 48)</td>
+              <td class=coverPerLo>71.7&nbsp;% (33 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L689">tokenize_auth_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1915</td>
+              <td class=coverPerMed>86.0&nbsp;% (80 / 93)</td>
+              <td class=coverPerLo>69.6&nbsp;% (39 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1208">check_same_host_or_net</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2643">load_hba</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">944</td>
+              <td class=coverPerLo>72.7&nbsp;% (24 / 33)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1181">check_network_callback</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1056">hostname_match</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L3037">load_ident</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">944</td>
+              <td class=coverPerMed>76.7&nbsp;% (23 / 30)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2817">check_ident_usermap</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">58</td>
+              <td class=coverPerMed>88.2&nbsp;% (45 / 51)</td>
+              <td class=coverPerMed>76.5&nbsp;% (26 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1041">ipv6eq</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L595">open_auth_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1918</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L301">regcomp_auth_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11028</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L493">tokenize_expand_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerMed>82.6&nbsp;% (19 / 23)</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L991">check_db</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12432</td>
+              <td class=coverPerMed>87.0&nbsp;% (20 / 23)</td>
+              <td class=coverPerMed>75.0&nbsp;% (33 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L438">tokenize_include_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L952">check_role</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11886</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2982">check_usermap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">95</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerMed>80.0&nbsp;% (24 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1035">ipv4eq</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L923">is_member</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L2749">parse_ident_line</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerLo>30.8&nbsp;% (8 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L1167">check_ip</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">328</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L278">free_auth_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L288">copy_auth_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11028</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L570">free_auth_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1915</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L3139">hba_authname</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">450</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L3126">hba_getauthmethod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11792</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L257">make_auth_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36944</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L379">next_field_expand</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">188784</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L185">next_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">188792</td>
+              <td class=coverPerHi>100.0&nbsp;% (29 / 29)</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L144">pg_isblank</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">751014</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L346">regexec_auth_token</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="hba.c.gcov.html#L660">tokenize_error_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

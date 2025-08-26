@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/quote.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - quote.c<span style="font-size: 80%;"> (source / <a href="quote.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry"><a href="#L25" title="goto first CBC line">37</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"><a href="#L52" title="goto first CBC branch">12</a></td>
+            <td class="headerCovTableEntry"><a href="#L86" title="goto first EUB branch">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L86" title="goto first ECB branch">5</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"><a href="#L111" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">2</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry"><a href="#L25" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">35</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"><a href="#L52" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">12</a></td>
+            <td class="headerCovTableEntry"><a href="#L86" title="goto first EUB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgEUB">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L86" title="goto first ECB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgECB">5</a></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       3</span>                 :                :  * quote.c</span>
+<span id="L4" title="Line 4: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       4</span>                 :                :  *    Functions for quoting identifiers and literals</span>
+<span id="L5" title="Line 5: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :                :  * Portions Copyright (c) 2000-2025, PostgreSQL Global Development Group</span>
+<span id="L7" title="Line 7: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       7</span>                 :                :  *</span>
+<span id="L8" title="Line 8: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       8</span>                 :                :  *</span>
+<span id="L9" title="Line 9: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">       9</span>                 :                :  * IDENTIFICATION</span>
+<span id="L10" title="Line 10: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :                :  *    src/backend/utils/adt/quote.c</span>
+<span id="L11" title="Line 11: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      11</span>                 :                :  *</span>
+<span id="L12" title="Line 12: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      12</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L13" title="Line 13: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      13</span>                 :                :  */</span>
+<span id="L14" title="Line 14: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      14</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L15" title="Line 15: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      15</span>                 :                : </span>
+<span id="L16" title="Line 16: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      16</span>                 :                : #include &quot;utils/builtins.h&quot;</span>
+<span id="L17" title="Line 17: commit d952373a987b on 2023-01-10 by peter@eisentraut.org">                           <span class="lineNum">      17</span>                 :                : #include &quot;varatt.h&quot;</span>
+<span id="L18" title="Line 18: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      18</span>                 :                : </span>
+<span id="L19" title="Line 19: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      19</span>                 :                : </span>
+<span id="L20" title="Line 20: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      20</span>                 :                : /*</span>
+<span id="L21" title="Line 21: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      21</span>                 :                :  * quote_ident -</span>
+<span id="L22" title="Line 22: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      22</span>                 :                :  *    returns a properly quoted identifier</span>
+<span id="L23" title="Line 23: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      23</span>                 :                :  */</span>
+<span id="L24" title="Line 24: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      24</span>                 :                : Datum</span>
+<span id="L25" title="Line 25: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com"> <a href="#L118" title="next CBC in &ldquo;(360..) days&rdquo; bin">9121</a> <a href="#L78" title="next CBC in &ldquo;JanWieck@Yahoo.com&rdquo; bin">JanWieck@Yahoo.com</a>   <span class="lineNum">      25</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        4363 : quote_ident(PG_FUNCTION_ARGS)</span></span>
+<span id="L26" title="Line 26: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      26</span>                 :                : {</span>
+<span id="L27" title="Line 27: commit 220db7ccd8c8 on 2008-03-25 by tgl@sss.pgh.pa.us"> 6363 <a href="#L130" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      27</span>                 :<span class="tlaCBC">           4363 :     text       *t = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L28" title="Line 28: commit 775d28302cda on 2005-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :                :     const char *qstr;</span>
+<span id="L29" title="Line 29: commit 775d28302cda on 2005-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 :                :     char       *str;</span>
+<span id="L30" title="Line 30: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      30</span>                 :                : </span>
+<span id="L31" title="Line 31: commit 220db7ccd8c8 on 2008-03-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 :<span class="tlaCBC">           4363 :     str = text_to_cstring(t);</span></span>
+<span id="L32" title="Line 32: commit 775d28302cda on 2005-03-21 by tgl@sss.pgh.pa.us"> 7463                      <span class="lineNum">      32</span>                 :<span class="tlaCBC">           4363 :     qstr = quote_identifier(str);</span></span>
+<span id="L33" title="Line 33: commit 220db7ccd8c8 on 2008-03-25 by tgl@sss.pgh.pa.us"> 6363                      <span class="lineNum">      33</span>                 :<span class="tlaCBC">           4363 :     PG_RETURN_TEXT_P(cstring_to_text(qstr));</span></span>
+<span id="L34" title="Line 34: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      34</span>                 :                : }</span>
+<span id="L35" title="Line 35: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      35</span>                 :                : </span>
+<span id="L36" title="Line 36: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      36</span>                 :                : /*</span>
+<span id="L37" title="Line 37: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      37</span>                 :                :  * quote_literal_internal -</span>
+<span id="L38" title="Line 38: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      38</span>                 :                :  *    helper function for quote_literal and quote_literal_cstr</span>
+<span id="L39" title="Line 39: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :                :  *</span>
+<span id="L40" title="Line 40: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :                :  * NOTE: think not to make this function's behavior change with</span>
+<span id="L41" title="Line 41: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 :                :  * standard_conforming_strings.  We don't know where the result</span>
+<span id="L42" title="Line 42: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 :                :  * literal will be used, and so we must generate a result that</span>
+<span id="L43" title="Line 43: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :                :  * will work with either setting.  Take a look at what dblink</span>
+<span id="L44" title="Line 44: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :                :  * uses this for before thinking you know better.</span>
+<span id="L45" title="Line 45: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      45</span>                 :                :  */</span>
+<span id="L46" title="Line 46: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      46</span>                 :                : static size_t</span>
+<span id="L47" title="Line 47: commit 1c51c7d5ffd4 on 2011-02-22 by peter_e@gmx.net"> 5299 <a href="#L103" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">      47</span>                 :<span class="tlaCBC">           4715 : quote_literal_internal(char *dst, const char *src, size_t len)</span></span>
+<span id="L48" title="Line 48: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      48</span>                 :                : {</span>
+<span id="L49" title="Line 49: commit 1c51c7d5ffd4 on 2011-02-22 by peter_e@gmx.net">                           <span class="lineNum">      49</span>                 :                :     const char *s;</span>
+<span id="L50" title="Line 50: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org"> 5393 <a href="#L93" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">      50</span>                 :<span class="tlaCBC">           4715 :     char       *savedst = dst;</span></span>
+<span id="L51" title="Line 51: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      51</span>                 :                : </span>
+<span id="L52" title="Line 52: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      52</span>         [<span class="tlaCBC"> <a href="#L54" title="CBC: Branch 0 was taken 344708 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L54" title="CBC: Branch 1 was taken 4710 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         349418 :     for (s = src; s &lt; src + len; s++)</span></span>
+<span id="L53" title="Line 53: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      53</span>                 :                :     {</span>
+<span id="L54" title="Line 54: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      54</span>         [<span class="tlaCBC"> <a href="#L62" title="CBC: Branch 0 was taken 5 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L62" title="CBC: Branch 1 was taken 344703 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         344708 :         if (*s == '\\')</span></span>
+<span id="L55" title="Line 55: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      55</span>                 :                :         {</span>
+<span id="L56" title="Line 56: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      56</span>                 :<span class="tlaCBC">              5 :             *dst++ = ESCAPE_STRING_SYNTAX;</span></span>
+<span id="L57" title="Line 57: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      57</span>                 :<span class="tlaCBC">              5 :             break;</span></span>
+<span id="L58" title="Line 58: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      58</span>                 :                :         }</span>
+<span id="L59" title="Line 59: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      59</span>                 :                :     }</span>
+<span id="L60" title="Line 60: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      60</span>                 :                : </span>
+<span id="L61" title="Line 61: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      61</span>                 :<span class="tlaCBC">           4715 :     *dst++ = '\'';</span></span>
+<span id="L62" title="Line 62: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      62</span>         [<span class="tlaCBC"> <a href="#L64" title="CBC: Branch 0 was taken 344710 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L64" title="CBC: Branch 1 was taken 4715 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         349425 :     while (len-- &gt; 0)</span></span>
+<span id="L63" title="Line 63: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      63</span>                 :                :     {</span>
+<span id="L64" title="Line 64: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      64</span>   [<span class="tlaCBC"> <a href="#L132" title="CBC: Branch 0 was taken 344693 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L132" title="CBC: Branch 1 was taken 17 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L132" title="CBC: Branch 2 was taken 5 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L132" title="CBC: Branch 3 was taken 344688 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         344710 :         if (SQL_STR_DOUBLE(*src, true))</span></span>
+<span id="L65" title="Line 65: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      65</span>                 :<span class="tlaCBC">             22 :             *dst++ = *src;</span></span>
+<span id="L66" title="Line 66: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      66</span>                 :<span class="tlaCBC">         344710 :         *dst++ = *src++;</span></span>
+<span id="L67" title="Line 67: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      67</span>                 :                :     }</span>
+<span id="L68" title="Line 68: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      68</span>                 :<span class="tlaCBC">           4715 :     *dst++ = '\'';</span></span>
+<span id="L69" title="Line 69: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      69</span>                 :                : </span>
+<span id="L70" title="Line 70: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      70</span>                 :<span class="tlaCBC">           4715 :     return dst - savedst;</span></span>
+<span id="L71" title="Line 71: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      71</span>                 :                : }</span>
+<span id="L72" title="Line 72: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      72</span>                 :                : </span>
+<span id="L73" title="Line 73: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      73</span>                 :                : /*</span>
+<span id="L74" title="Line 74: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      74</span>                 :                :  * quote_literal -</span>
+<span id="L75" title="Line 75: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      75</span>                 :                :  *    returns a properly quoted literal</span>
+<span id="L76" title="Line 76: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      76</span>                 :                :  */</span>
+<span id="L77" title="Line 77: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      77</span>                 :                : Datum</span>
+<span id="L78" title="Line 78: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com"> 9121 <a href="#L91" title="next CBC in &ldquo;JanWieck@Yahoo.com&rdquo; bin">JanWieck@Yahoo.com</a>   <span class="lineNum">      78</span>                 :<span class="tlaCBC">           1778 : quote_literal(PG_FUNCTION_ARGS)</span></span>
+<span id="L79" title="Line 79: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      79</span>                 :                : {</span>
+<span id="L80" title="Line 80: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#L90" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      80</span>                 :<span class="tlaCBC">           1778 :     text       *t = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L81" title="Line 81: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      81</span>                 :                :     text       *result;</span>
+<span id="L82" title="Line 82: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      82</span>                 :                :     char       *cp1;</span>
+<span id="L83" title="Line 83: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      83</span>                 :                :     char       *cp2;</span>
+<span id="L84" title="Line 84: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      84</span>                 :                :     int         len;</span>
+<span id="L85" title="Line 85: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      85</span>                 :                : </span>
+<span id="L86" title="Line 86: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com">                           <span class="lineNum">      86</span>   [<span class="tlaEUB"> <a href="#top" title="EUB: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#L90" title="ECB: Branch 1 was taken 1778 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">           1778 :     len = VARSIZE_ANY_EXHDR(t);</span></span>
+                           <span class="lineNum">        </span> <span class="tlaEUB"> <a href="#top" title="EUB: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 6 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#L90" title="ECB: Branch 8 was taken 1079 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>             <span class="tlaECB"> <a href="#L90" title="ECB: Branch 9 was taken 699 times" class="branchTla">+</a> </span>]
+<span id="L87" title="Line 87: commit 775d28302cda on 2005-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                :     /* We make a worst-case result area; wasting a little space is OK */</span>
+<span id="L88" title="Line 88: commit 74b49a81294b on 2005-07-02 by bruce@momjian.us"> 7360 <a href="#top" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      88</span>                 :<span class="tlaCBC">           1778 :     result = (text *) palloc(len * 2 + 3 + VARHDRSZ);</span></span>
+<span id="L89" title="Line 89: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      89</span>                 :                : </span>
+<span id="L90" title="Line 90: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#top" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      90</span>         [<span class="tlaECB"> <a href="#top" title="ECB: Branch 0 was taken 1079 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 1 was taken 699 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           1778 :     cp1 = VARDATA_ANY(t);</span></span>
+<span id="L91" title="Line 91: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com"> 9121 <a href="#top" title="next CBC in &ldquo;JanWieck@Yahoo.com&rdquo; bin">JanWieck@Yahoo.com</a>   <span class="lineNum">      91</span>                 :<span class="tlaCBC">           1778 :     cp2 = VARDATA(result);</span></span>
+<span id="L92" title="Line 92: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      92</span>                 :                : </span>
+<span id="L93" title="Line 93: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org"> 5393 <a href="#L109" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">      93</span>                 :<span class="tlaCBC">           1778 :     SET_VARSIZE(result, VARHDRSZ + quote_literal_internal(cp2, cp1, len));</span></span>
+<span id="L94" title="Line 94: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      94</span>                 :                : </span>
+<span id="L95" title="Line 95: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      95</span>                 :<span class="tlaCBC">           1778 :     PG_RETURN_TEXT_P(result);</span></span>
+<span id="L96" title="Line 96: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      96</span>                 :                : }</span>
+<span id="L97" title="Line 97: commit 134b463f027d on 2006-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 :                : </span>
+<span id="L98" title="Line 98: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      98</span>                 :                : /*</span>
+<span id="L99" title="Line 99: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">      99</span>                 :                :  * quote_literal_cstr -</span>
+<span id="L100" title="Line 100: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     100</span>                 :                :  *    returns a properly quoted literal</span>
+<span id="L101" title="Line 101: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     101</span>                 :                :  */</span>
+<span id="L102" title="Line 102: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     102</span>                 :                : char *</span>
+<span id="L103" title="Line 103: commit 1c51c7d5ffd4 on 2011-02-22 by peter_e@gmx.net"> 5299 <a href="#top" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">     103</span>                 :<span class="tlaCBC">           2937 : quote_literal_cstr(const char *rawstr)</span></span>
+<span id="L104" title="Line 104: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     104</span>                 :                : {</span>
+<span id="L105" title="Line 105: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     105</span>                 :                :     char       *result;</span>
+<span id="L106" title="Line 106: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     106</span>                 :                :     int         len;</span>
+<span id="L107" title="Line 107: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     107</span>                 :                :     int         newlen;</span>
+<span id="L108" title="Line 108: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">     108</span>                 :                : </span>
+<span id="L109" title="Line 109: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org"> 5393 <a href="#L118" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">     109</span>                 :<span class="tlaCBC">           2937 :     len = strlen(rawstr);</span></span>
+<span id="L110" title="Line 110: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     110</span>                 :                :     /* We make a worst-case result area; wasting a little space is OK */</span>
+<span id="L111" title="Line 111: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">141</a> <a href="#top" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     111</span>                 :<span class="tlaCBC">           2937 :     result = palloc(</span></span>
+<span id="L112" title="Line 112: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">                           <span class="lineNum">     112</span>                 :                :                     (len * 2)   /* doubling for every character if each one is</span>
+<span id="L113" title="Line 113: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">                           <span class="lineNum">     113</span>                 :                :                                  * a quote */</span>
+<span id="L114" title="Line 114: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">                           <span class="lineNum">     114</span>                 :                :                     + 3         /* two outer quotes + possibly 'E' if needed */</span>
+<span id="L115" title="Line 115: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">                           <span class="lineNum">     115</span>                 :<span class="tlaCBC">           2937 :                     + 1         /* null terminator */</span></span>
+<span id="L116" title="Line 116: commit c36eda259130 on 2025-04-07 by michael@paquier.xyz">                           <span class="lineNum">     116</span>                 :                :         );</span>
+<span id="L117" title="Line 117: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">     117</span>                 :                : </span>
+<span id="L118" title="Line 118: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">5393</a> <a href="#top" title="next CBC in &ldquo;rhaas@postgresql.org&rdquo; bin">rhaas@postgresql.org</a> <span class="lineNum">     118</span>                 :<span class="tlaCBC">           2937 :     newlen = quote_literal_internal(result, rawstr, len);</span></span>
+<span id="L119" title="Line 119: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     119</span>                 :<span class="tlaCBC">           2937 :     result[newlen] = '\0';</span></span>
+<span id="L120" title="Line 120: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     120</span>                 :                : </span>
+<span id="L121" title="Line 121: commit 4343c0e546b2 on 2010-11-20 by rhaas@postgresql.org">                           <span class="lineNum">     121</span>                 :<span class="tlaCBC">           2937 :     return result;</span></span>
+<span id="L122" title="Line 122: commit daf1e3a7026e on 2000-09-05 by JanWieck@Yahoo.com">                           <span class="lineNum">     122</span>                 :                : }</span>
+<span id="L123" title="Line 123: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 :                : </span>
+<span id="L124" title="Line 124: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     124</span>                 :                : /*</span>
+<span id="L125" title="Line 125: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 :                :  * quote_nullable -</span>
+<span id="L126" title="Line 126: commit d74714027942 on 2009-06-11 by bruce@momjian.us">                           <span class="lineNum">     126</span>                 :                :  *    Returns a properly quoted literal, with null values returned</span>
+<span id="L127" title="Line 127: commit d74714027942 on 2009-06-11 by bruce@momjian.us">                           <span class="lineNum">     127</span>                 :                :  *    as the text string 'NULL'.</span>
+<span id="L128" title="Line 128: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 :                :  */</span>
+<span id="L129" title="Line 129: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span>                 :                : Datum</span>
+<span id="L130" title="Line 130: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us"> 6365 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     130</span>                 :<span class="tlaCBC">            790 : quote_nullable(PG_FUNCTION_ARGS)</span></span>
+<span id="L131" title="Line 131: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     131</span>                 :                : {</span>
+<span id="L132" title="Line 132: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 42 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 748 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            790 :     if (PG_ARGISNULL(0))</span></span>
+<span id="L133" title="Line 133: commit 220db7ccd8c8 on 2008-03-25 by tgl@sss.pgh.pa.us"> 6363                      <span class="lineNum">     133</span>                 :<span class="tlaCBC">             42 :         PG_RETURN_TEXT_P(cstring_to_text(&quot;NULL&quot;));</span></span>
+<span id="L134" title="Line 134: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     134</span>                 :                :     else</span>
+<span id="L135" title="Line 135: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us"> 6365                      <span class="lineNum">     135</span>                 :<span class="tlaCBC">            748 :         PG_RETURN_DATUM(DirectFunctionCall1(quote_literal,</span></span>
+<span id="L136" title="Line 136: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 :                :                                             PG_GETARG_DATUM(0)));</span>
+<span id="L137" title="Line 137: commit 7de81124d524 on 2008-03-23 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

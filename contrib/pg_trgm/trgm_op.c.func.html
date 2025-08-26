@@ -1,0 +1,648 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - contrib/pg_trgm/trgm_op.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory contrib">contrib</a>/<a href="index.html" title="Click to go to directory pg_trgm">pg_trgm</a> - trgm_op.c<span style="font-size: 80%;"> (<a href="trgm_op.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">90.8&nbsp;%</td>
+            <td class="headerCovTableEntry">502</td>
+            <td class="headerCovTableEntry">456</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">456</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">94.5&nbsp;%</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">74.7&nbsp;%</td>
+            <td class="headerCovTableEntry">296</td>
+            <td class="headerCovTableEntry">221</td>
+            <td class="headerCovTableEntry">75</td>
+            <td class="headerCovTableEntry">221</td>
+            <td class="headerCovTableEntry">217</td>
+            <td class="headerCovTableEntry">59</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">68.8&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.6&nbsp;%</td>
+            <td class="headerCovTableEntry">486</td>
+            <td class="headerCovTableEntry">445</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">445</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">96.1&nbsp;%</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">38.1&nbsp;%</td>
+            <td class="headerCovTableEntry">546</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry">217</td>
+            <td class="headerCovTableEntry">59</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="trgm_op.c.func-c.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="trgm_op.c.func-l.html"><img src="../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="trgm_op.c.func-b.html"><img src="../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L145">CMPTRGM_CHOOSE</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L121">CMPTRGM_SIGNED</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7458251</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L131">CMPTRGM_UNSIGNED</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L19">Pg_magic_func</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L71">_PG_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L671">calc_word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12126</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1041">cnt_sml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68991</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L474">comp_ptrgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1307738</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L211">comp_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3187220</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L248">compact_trigram</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1459</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L221">find_word</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">241410</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L406">generate_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">89829</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L325">generate_trgm_only</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">114081</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L916">generate_wildcard_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L771">get_wildcard_part</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">119</td>
+              <td class=coverPerHi>90.9&nbsp;% (50 / 55)</td>
+              <td class=coverPerMed>82.4&nbsp;% (28 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L182">index_strategy_get_limit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43401</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L503">iterate_word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12126</td>
+              <td class=coverPerHi>100.0&nbsp;% (56 / 56)</td>
+              <td class=coverPerHi>96.2&nbsp;% (50 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L447">make_positional_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12126</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L273">make_trigrams</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">127394</td>
+              <td class=coverPerLo>52.4&nbsp;% (11 / 21)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L29">pg_finfo_set_limit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L30">pg_finfo_show_limit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L31">pg_finfo_show_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L32">pg_finfo_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L35">pg_finfo_similarity_dist</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L36">pg_finfo_similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L34">pg_finfo_strict_word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L42">pg_finfo_strict_word_similarity_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L44">pg_finfo_strict_word_similarity_dist_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L43">pg_finfo_strict_word_similarity_dist_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L41">pg_finfo_strict_word_similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L33">pg_finfo_word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L38">pg_finfo_word_similarity_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L40">pg_finfo_word_similarity_dist_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L39">pg_finfo_word_similarity_dist_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L37">pg_finfo_word_similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L389">protect_out_of_mem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102010</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L160">set_limit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L205">show_limit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20000</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L999">show_trgm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>67.9&nbsp;% (19 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1167">similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31452</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1221">similarity_dist</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1004</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1231">similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6000</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1205">strict_word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">882</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1321">strict_word_similarity_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2530</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1353">strict_word_similarity_dist_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">720</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1337">strict_word_similarity_dist_op</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1305">strict_word_similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2530</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L985">trgm2int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34773</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1089">trgm_contained_by</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1128">trgm_presence_map</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2150</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1189">word_similarity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">902</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1257">word_similarity_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1924</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1289">word_similarity_dist_commutator_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">714</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1273">word_similarity_dist_op</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="trgm_op.c.gcov.html#L1241">word_similarity_op</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1924</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

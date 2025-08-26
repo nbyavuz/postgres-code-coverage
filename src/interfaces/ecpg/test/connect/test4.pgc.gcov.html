@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/interfaces/ecpg/test/connect/test4.pgc</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../../index.html" title="Click to go to directory src">src</a>/<a href="../../../index.html" title="Click to go to directory interfaces">interfaces</a>/<a href="../../index.html" title="Click to go to directory ecpg">ecpg</a>/<a href="../index.html" title="Click to go to directory test">test</a>/<a href="index.html" title="Click to go to directory connect">connect</a> - test4.pgc<span style="font-size: 80%;"> (source / <a href="test4.pgc.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L9" title="goto first CBC line">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L9" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       1</span>                 : #include &lt;stdlib.h&gt;</span>
+<span id="L2" title="Line 2: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       2</span>                 : #include &lt;string.h&gt;</span>
+<span id="L3" title="Line 3: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       3</span>                 : #include &lt;stdlib.h&gt;</span>
+<span id="L4" title="Line 4: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       4</span>                 : #include &lt;stdio.h&gt;</span>
+<span id="L5" title="Line 5: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       5</span>                 : </span>
+<span id="L6" title="Line 6: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       6</span>                 : exec sql include ../regression;</span>
+<span id="L7" title="Line 7: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       7</span>                 : </span>
+<span id="L8" title="Line 8: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">       8</span>                 : int</span>
+<span id="L9" title="Line 9: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">6964</a> <a href="#top" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">       9</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           1 : main(void)</span></span>
+<span id="L10" title="Line 10: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      10</span>                 : {</span>
+<span id="L11" title="Line 11: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      11</span> <span class="tlaCBC">              1 :     ECPGdebug(1, stderr);</span></span>
+<span id="L12" title="Line 12: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      12</span>                 : </span>
+<span id="L13" title="Line 13: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      13</span> <span class="tlaCBC">              1 :     exec sql connect to REGRESSDB1 as main;</span></span>
+<span id="L14" title="Line 14: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      14</span>                 : </span>
+<span id="L15" title="Line 15: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      15</span> <span class="tlaCBC">              1 :     exec sql set connection to main;</span></span>
+<span id="L16" title="Line 16: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      16</span>                 : </span>
+<span id="L17" title="Line 17: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      17</span> <span class="tlaCBC">              1 :     exec sql disconnect DEFAULT;</span></span>
+<span id="L18" title="Line 18: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      18</span>                 : </span>
+<span id="L19" title="Line 19: commit 17273d059cd3 on 2017-08-17 by peter_e@gmx.net"> 2931 <a href="#top" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">      19</span> <span class="tlaCBC">              1 :     return 0;</span></span>
+<span id="L20" title="Line 20: commit 1f0a6cd60caa on 2006-08-02 by meskes@postgresql.org">                           <span class="lineNum">      20</span>                 : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/regexp.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - regexp.c<span style="font-size: 80%;"> (<a href="regexp.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">90.5&nbsp;%</td>
+            <td class="headerCovTableEntry">656</td>
+            <td class="headerCovTableEntry">594</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">594</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">98.0&nbsp;%</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">78.1&nbsp;%</td>
+            <td class="headerCovTableEntry">375</td>
+            <td class="headerCovTableEntry">293</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">292</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry">48</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.3&nbsp;%</td>
+            <td class="headerCovTableEntry">641</td>
+            <td class="headerCovTableEntry">579</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">579</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">98.0&nbsp;%</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">92.9&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">55.4&nbsp;%</td>
+            <td class="headerCovTableEntry">505</td>
+            <td class="headerCovTableEntry">280</td>
+            <td class="tlaLBC">1</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">279</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry">48</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="regexp.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="regexp.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="regexp.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L765">similar_escape_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerMed>85.4&nbsp;% (88 / 103)</td>
+              <td class=coverPerMed>76.5&nbsp;% (52 / 68)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1815">build_regexp_split_result</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">546058</td>
+              <td class=coverPerMed>80.0&nbsp;% (12 / 15)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1440">setup_regexp_matches</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102640</td>
+              <td class=coverPerHi>93.7&nbsp;% (74 / 79)</td>
+              <td class=coverPerMed>86.2&nbsp;% (50 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L383">parse_re_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">104820</td>
+              <td class=coverPerLo>56.9&nbsp;% (29 / 51)</td>
+              <td class=coverPerLo>63.2&nbsp;% (12 / 19)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1150">regexp_instr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78</td>
+              <td class=coverPerHi>100.0&nbsp;% (42 / 42)</td>
+              <td class=coverPerMed>88.1&nbsp;% (37 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1856">regexp_substr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1090">regexp_count</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1977">regexp_fixed_prefix</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8242</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1064">similar_escape</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L280">RE_wchar_execute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4014069</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1644">build_regexp_match_result</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1525</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L656">textregexreplace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2116</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L697">textregexreplace_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L139">RE_compile_and_cache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3585532</td>
+              <td class=coverPerHi>100.0&nbsp;% (43 / 43)</td>
+              <td class=coverPerHi>91.7&nbsp;% (22 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1319">regexp_match</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1264</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L356">RE_compile_and_execute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3464493</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1281">regexp_like</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1764">regexp_split_to_array</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100274</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1700">regexp_split_to_table</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">311</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L581">textregexsubstr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">819</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1365">regexp_matches</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1305</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L322">RE_execute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3465300</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L520">nameicregexeq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3724</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L534">nameicregexne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L457">nameregexeq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3234327</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L471">nameregexne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13969</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1140">regexp_count_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1133">regexp_count_no_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1257">regexp_instr_no_endoption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1264">regexp_instr_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1250">regexp_instr_no_n</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1243">regexp_instr_no_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1271">regexp_instr_no_subexpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1309">regexp_like_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1355">regexp_match_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1249</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1414">regexp_matches_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1143</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1803">regexp_split_to_array_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100253</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1753">regexp_split_to_table_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">276</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1958">regexp_substr_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1951">regexp_substr_no_n</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1944">regexp_substr_no_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1965">regexp_substr_no_subexpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1046">similar_to_escape_1</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L1030">similar_to_escape_2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L548">texticregexeq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">110</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L562">texticregexne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L485">textregexeq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">195117</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L499">textregexne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17079</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L749">textregexreplace_extended_no_flags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L742">textregexreplace_extended_no_n</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="regexp.c.gcov.html#L640">textregexreplace_noopt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7201</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

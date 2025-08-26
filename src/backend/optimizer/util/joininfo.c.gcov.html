@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/optimizer/util/joininfo.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory optimizer">optimizer</a>/<a href="index.html" title="Click to go to directory util">util</a> - joininfo.c<span style="font-size: 80%;"> (source / <a href="joininfo.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry"><a href="#L106" title="goto first LBC line">11</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L39" title="goto first CBC line">33</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryHi">90.0&nbsp;%</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry"><a href="#L105" title="goto first LBC branch">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L180" title="goto first UBC branch">1</a></td>
+            <td class="headerCovTableEntry"><a href="#L51" title="goto first CBC branch">27</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaLBC"><a href="#L121" title="goto first LBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgLBC">2</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">78.6&nbsp;%</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="tlaLBC"><a href="#L106" title="goto first LBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgLBC">9</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L39" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">33</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">90.0&nbsp;%</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="tlaLBC"><a href="#L105" title="goto first LBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgLBC">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L180" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">1</a></td>
+            <td class="headerCovTableEntry"><a href="#L51" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">27</a></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :                :  * joininfo.c</span>
+<span id="L4" title="Line 4: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :                :  *    joininfo list manipulation routines</span>
+<span id="L5" title="Line 5: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L7" title="Line 7: commit 5c25d60244d3 on 2000-01-26 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L8" title="Line 8: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       8</span>                 :                :  *</span>
+<span id="L9" title="Line 9: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       9</span>                 :                :  *</span>
+<span id="L10" title="Line 10: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      10</span>                 :                :  * IDENTIFICATION</span>
+<span id="L11" title="Line 11: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      11</span>                 :                :  *    src/backend/optimizer/util/joininfo.c</span>
+<span id="L12" title="Line 12: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      12</span>                 :                :  *</span>
+<span id="L13" title="Line 13: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      13</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L14" title="Line 14: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      14</span>                 :                :  */</span>
+<span id="L15" title="Line 15: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      15</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L16" title="Line 16: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      16</span>                 :                : </span>
+<span id="L17" title="Line 17: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">      17</span>                 :                : #include &quot;nodes/makefuncs.h&quot;</span>
+<span id="L18" title="Line 18: commit a71802e12ec0 on 1999-07-16 by bruce@momjian.us">                           <span class="lineNum">      18</span>                 :                : #include &quot;optimizer/joininfo.h&quot;</span>
+<span id="L19" title="Line 19: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 :                : #include &quot;optimizer/pathnode.h&quot;</span>
+<span id="L20" title="Line 20: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 :                : #include &quot;optimizer/paths.h&quot;</span>
+<span id="L21" title="Line 21: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">      21</span>                 :                : #include &quot;optimizer/planmain.h&quot;</span>
+<span id="L22" title="Line 22: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">      22</span>                 :                : #include &quot;optimizer/restrictinfo.h&quot;</span>
+<span id="L23" title="Line 23: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      23</span>                 :                : </span>
+<span id="L24" title="Line 24: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      24</span>                 :                : </span>
+<span id="L25" title="Line 25: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      25</span>                 :                : /*</span>
+<span id="L26" title="Line 26: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :                :  * have_relevant_joinclause</span>
+<span id="L27" title="Line 27: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 :                :  *      Detect whether there is a joinclause that involves</span>
+<span id="L28" title="Line 28: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :                :  *      the two given relations.</span>
+<span id="L29" title="Line 29: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 :                :  *</span>
+<span id="L30" title="Line 30: commit 181bdb90ba1f on 2017-02-06 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      30</span>                 :                :  * Note: the joinclause does not have to be evaluable with only these two</span>
+<span id="L31" title="Line 31: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 :                :  * relations.  This is intentional.  For example consider</span>
+<span id="L32" title="Line 32: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 :                :  *      SELECT * FROM a, b, c WHERE a.x = (b.y + c.z)</span>
+<span id="L33" title="Line 33: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 :                :  * If a is much larger than the other tables, it may be worthwhile to</span>
+<span id="L34" title="Line 34: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 :                :  * cross-join b and c and then use an inner indexscan on a.x.  Therefore</span>
+<span id="L35" title="Line 35: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :                :  * we should consider this joinclause as reason to join b to c, even though</span>
+<span id="L36" title="Line 36: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 :                :  * it can't be applied at that join step.</span>
+<span id="L37" title="Line 37: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      37</span>                 :                :  */</span>
+<span id="L38" title="Line 38: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :                : bool</span>
+<span id="L39" title="Line 39: commit f18c57fdf1dd on 2006-12-12 by tgl@sss.pgh.pa.us"> <a href="#L118" title="next CBC in &ldquo;(360..) days&rdquo; bin">6832</a> <a href="#L137" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      39</span>                 :<a href="#L118" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      191462 : have_relevant_joinclause(PlannerInfo *root,</span></span>
+<span id="L40" title="Line 40: commit f18c57fdf1dd on 2006-12-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :                :                          RelOptInfo *rel1, RelOptInfo *rel2)</span>
+<span id="L41" title="Line 41: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      41</span>                 :                : {</span>
+<span id="L42" title="Line 42: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">      42</span>                 :<span class="tlaCBC">         191462 :     bool        result = false;</span></span>
+<span id="L43" title="Line 43: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :                :     List       *joininfo;</span>
+<span id="L44" title="Line 44: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :                :     Relids      other_relids;</span>
+<span id="L45" title="Line 45: commit d0b4399d81f3 on 2004-05-26 by neilc@samurai.com">                           <span class="lineNum">      45</span>                 :                :     ListCell   *l;</span>
+<span id="L46" title="Line 46: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      46</span>                 :                : </span>
+<span id="L47" title="Line 47: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 :                :     /*</span>
+<span id="L48" title="Line 48: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 :                :      * We could scan either relation's joininfo list; may as well use the</span>
+<span id="L49" title="Line 49: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :                :      * shorter one.</span>
+<span id="L50" title="Line 50: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 :                :      */</span>
+<span id="L51" title="Line 51: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>         [<span class="tlaCBC"> <a href="#L62" title="CBC: Branch 0 was taken 143264 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L62" title="CBC: Branch 1 was taken 48198 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         191462 :     if (list_length(rel1-&gt;joininfo) &lt;= list_length(rel2-&gt;joininfo))</span></span>
+<span id="L52" title="Line 52: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      52</span>                 :                :     {</span>
+<span id="L53" title="Line 53: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      53</span>                 :<span class="tlaCBC">         143264 :         joininfo = rel1-&gt;joininfo;</span></span>
+<span id="L54" title="Line 54: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us"> 4883                      <span class="lineNum">      54</span>                 :<span class="tlaCBC">         143264 :         other_relids = rel2-&gt;relids;</span></span>
+<span id="L55" title="Line 55: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :                :     }</span>
+<span id="L56" title="Line 56: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :                :     else</span>
+<span id="L57" title="Line 57: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :                :     {</span>
+<span id="L58" title="Line 58: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">      58</span>                 :<span class="tlaCBC">          48198 :         joininfo = rel2-&gt;joininfo;</span></span>
+<span id="L59" title="Line 59: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us"> 4883                      <span class="lineNum">      59</span>                 :<span class="tlaCBC">          48198 :         other_relids = rel1-&gt;relids;</span></span>
+<span id="L60" title="Line 60: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :                :     }</span>
+<span id="L61" title="Line 61: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 :                : </span>
+<span id="L62" title="Line 62: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">      62</span>   [<span class="tlaCBC"> <a href="#L66" title="CBC: Branch 0 was taken 105495 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L66" title="CBC: Branch 1 was taken 102500 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L66" title="CBC: Branch 2 was taken 93874 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L66" title="CBC: Branch 3 was taken 11621 times" class="branchTla">+</a> </span> :<span class="tlaCBC">         207995 :     foreach(l, joininfo)</span></span>
+                           <span class="lineNum">        </span>          <span class="tlaCBC"> <a href="#L66" title="CBC: Branch 4 was taken 93874 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L66" title="CBC: Branch 5 was taken 114121 times" class="branchTla">+</a> </span>]
+<span id="L63" title="Line 63: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      63</span>                 :                :     {</span>
+<span id="L64" title="Line 64: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 :<span class="tlaCBC">          93874 :         RestrictInfo *rinfo = (RestrictInfo *) lfirst(l);</span></span>
+<span id="L65" title="Line 65: commit 31cce21fb089 on 1999-02-18 by bruce@momjian.us">                           <span class="lineNum">      65</span>                 :                : </span>
+<span id="L66" title="Line 66: commit e3ffd05b0246 on 2012-04-13 by tgl@sss.pgh.pa.us"> 4883                      <span class="lineNum">      66</span>         [<span class="tlaCBC"> <a href="#L77" title="CBC: Branch 0 was taken 77341 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L77" title="CBC: Branch 1 was taken 16533 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          93874 :         if (bms_overlap(other_relids, rinfo-&gt;required_relids))</span></span>
+<span id="L67" title="Line 67: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      67</span>                 :                :         {</span>
+<span id="L68" title="Line 68: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">      68</span>                 :<span class="tlaCBC">          77341 :             result = true;</span></span>
+<span id="L69" title="Line 69: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 :<span class="tlaCBC">          77341 :             break;</span></span>
+<span id="L70" title="Line 70: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :                :         }</span>
+<span id="L71" title="Line 71: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      71</span>                 :                :     }</span>
+<span id="L72" title="Line 72: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      72</span>                 :                : </span>
+<span id="L73" title="Line 73: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 :                :     /*</span>
+<span id="L74" title="Line 74: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      74</span>                 :                :      * We also need to check the EquivalenceClass data structure, which might</span>
+<span id="L75" title="Line 75: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      75</span>                 :                :      * contain relationships not emitted into the joininfo lists.</span>
+<span id="L76" title="Line 76: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :                :      */</span>
+<span id="L77" title="Line 77: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us"> 6793                      <span class="lineNum">      77</span>   [<span class="tlaCBC"> <a href="#L105" title="CBC: Branch 0 was taken 114121 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L105" title="CBC: Branch 1 was taken 77341 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L105" title="CBC: Branch 2 was taken 96687 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L105" title="CBC: Branch 3 was taken 17434 times" class="branchTla">+</a> </span> :<span class="tlaCBC">         191462 :     if (!result &amp;&amp; rel1-&gt;has_eclass_joins &amp;&amp; rel2-&gt;has_eclass_joins)</span></span>
+                           <span class="lineNum">        </span>          <span class="tlaCBC"> <a href="#L105" title="CBC: Branch 4 was taken 86654 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L105" title="CBC: Branch 5 was taken 10033 times" class="branchTla">+</a> </span>]
+<span id="L78" title="Line 78: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :<span class="tlaCBC">          86654 :         result = have_relevant_eclass_joinclause(root, rel1, rel2);</span></span>
+<span id="L79" title="Line 79: commit f41803bb39bc on 2007-01-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :                : </span>
+<span id="L80" title="Line 80: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">      80</span>                 :<span class="tlaCBC">         191462 :     return result;</span></span>
+<span id="L81" title="Line 81: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      81</span>                 :                : }</span>
+<span id="L82" title="Line 82: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 :                : </span>
+<span id="L83" title="Line 83: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 :                : </span>
+<span id="L84" title="Line 84: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :                : /*</span>
+<span id="L85" title="Line 85: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :                :  * add_join_clause_to_rels</span>
+<span id="L86" title="Line 86: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :                :  *    Add 'restrictinfo' to the joininfo list of each relation it requires.</span>
+<span id="L87" title="Line 87: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                :  *</span>
+<span id="L88" title="Line 88: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                :  * Note that the same copy of the restrictinfo node is linked to by all the</span>
+<span id="L89" title="Line 89: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      89</span>                 :                :  * lists it is in.  This allows us to exploit caching of information about</span>
+<span id="L90" title="Line 90: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 :                :  * the restriction clause (but we must be careful that the information does</span>
+<span id="L91" title="Line 91: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 :                :  * not depend on context).</span>
+<span id="L92" title="Line 92: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :                :  *</span>
+<span id="L93" title="Line 93: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>                 :                :  * 'restrictinfo' describes the join clause</span>
+<span id="L94" title="Line 94: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 :                :  * 'join_relids' is the set of relations participating in the join clause</span>
+<span id="L95" title="Line 95: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                :  *               (some of these could be outer joins)</span>
+<span id="L96" title="Line 96: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      96</span>                 :                :  */</span>
+<span id="L97" title="Line 97: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 :                : void</span>
+<span id="L98" title="Line 98: commit 9ab4d9816840 on 2005-06-05 by tgl@sss.pgh.pa.us"> 7387                      <span class="lineNum">      98</span>                 :<span class="tlaCBC">          34659 : add_join_clause_to_rels(PlannerInfo *root,</span></span>
+<span id="L99" title="Line 99: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 :                :                         RestrictInfo *restrictinfo,</span>
+<span id="L100" title="Line 100: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     100</span>                 :                :                         Relids join_relids)</span>
+<span id="L101" title="Line 101: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                : {</span>
+<span id="L102" title="Line 102: commit c15a4c2aef3c on 2003-02-08 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     102</span>                 :                :     int         cur_relid;</span>
+<span id="L103" title="Line 103: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                : </span>
+<span id="L104" title="Line 104: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     104</span>                 :                :     /* Don't add the clause if it is always true */</span>
+<span id="L105" title="Line 105: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">  581 <a href="#L118" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     105</span>         [<span class="tlaLBC"> <a href="#L118" title="LBC: Branch 0 was not taken (previously taken 6 times)" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L118" title="CBC: Branch 1 was taken 34659 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          34659 :     if (restriction_is_always_true(root, restrictinfo))</span></span>
+<span id="L106" title="Line 106: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC tlaBgLBC">  <a href="#L120" title="next LBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgLBC">581</a> <a href="#L120" title="next LBC in &ldquo;drowley@postgresql.org&rdquo; bin" class="tlaBgLBC">drowley@postgresql.o</a></span> <span class="lineNum">     106</span>                 :<a href="#L120" class="tlaBgLBC"  title="Next LBC group">LBC</a><span class="tlaLBC tlaBgLBC">         (6) :         return;</span></span>
+<span id="L107" title="Line 107: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     107</span>                 :                : </span>
+<span id="L108" title="Line 108: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     108</span>                 :                :     /*</span>
+<span id="L109" title="Line 109: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     109</span>                 :                :      * Substitute the origin qual with constant-FALSE if it is provably always</span>
+<span id="L110" title="Line 110: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     110</span>                 :                :      * false.</span>
+<span id="L111" title="Line 111: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     111</span>                 :                :      *</span>
+<span id="L112" title="Line 112: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     112</span>                 :                :      * Note that we need to keep the same rinfo_serial, since it is in</span>
+<span id="L113" title="Line 113: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     113</span>                 :                :      * practice the same condition.  We also need to reset the</span>
+<span id="L114" title="Line 114: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     114</span>                 :                :      * last_rinfo_serial counter, which is essential to ensure that the</span>
+<span id="L115" title="Line 115: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     115</span>                 :                :      * RestrictInfos for the &quot;same&quot; qual condition get identical serial</span>
+<span id="L116" title="Line 116: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org">                           <span class="lineNum">     116</span>                 :                :      * numbers (see deconstruct_distribute_oj_quals).</span>
+<span id="L117" title="Line 117: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     117</span>                 :                :      */</span>
+<span id="L118" title="Line 118: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">  <a href="#L137" title="next CBC in &ldquo;(360..) days&rdquo; bin">581</a> <a href="#top" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     118</span>         [<span class="tlaLBC"> <a href="#top" title="LBC: Branch 0 was not taken (previously taken 6 times)" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L138" title="CBC: Branch 1 was taken 34659 times" class="branchTla">+</a> </span>]:<a href="#L137" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       34659 :     if (restriction_is_always_false(root, restrictinfo))</span></span>
+<span id="L119" title="Line 119: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     119</span>                 :                :     {</span>
+<span id="L120" title="Line 120: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC tlaBgLBC">  <a href="#L123" title="next LBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgLBC">581</a> <a href="#L123" title="next LBC in &ldquo;drowley@postgresql.org&rdquo; bin" class="tlaBgLBC">drowley@postgresql.o</a></span> <span class="lineNum">     120</span>                 :<a href="#top" class="tlaBgLBC"  title="Next LBC group">LBC</a><span class="tlaLBC tlaBgLBC">         (6) :         int         save_rinfo_serial = restrictinfo-&gt;rinfo_serial;</span></span>
+<span id="L121" title="Line 121: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org"><span title="rguo@postgresql.org 291 days ago (bin 3: (30,360] days)" class="tlaLBC">  <a href="#L134" title="next LBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgLBC">291</a> </span><a href="#L134" title="next LBC in &ldquo;rguo@postgresql.org&rdquo; bin" class="tlaBgLBC">rguo@postgresql.org</a><span title="rguo@postgresql.org 291 days ago (bin 3: (30,360] days)" class="tlaLBC"> </span> <span class="lineNum">     121</span>                 :<span class="tlaLBC">            (6) :         int         save_last_rinfo_serial = root-&gt;last_rinfo_serial;</span></span>
+<span id="L122" title="Line 122: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     122</span>                 :                : </span>
+<span id="L123" title="Line 123: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">  <a href="#top" title="next LBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgLBC">581</a> <a href="#top" title="next LBC in &ldquo;drowley@postgresql.org&rdquo; bin" class="tlaBgLBC">drowley@postgresql.o</a></span> <span class="lineNum">     123</span>                 :<span class="tlaLBC">            (6) :         restrictinfo = make_restrictinfo(root,</span></span>
+<span id="L124" title="Line 124: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     124</span>                 :<span class="tlaLBC">            (6) :                                          (Expr *) makeBoolConst(false, false),</span></span>
+<span id="L125" title="Line 125: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     125</span>                 :<span class="tlaLBC">            (6) :                                          restrictinfo-&gt;is_pushed_down,</span></span>
+<span id="L126" title="Line 126: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     126</span>                 :<span class="tlaLBC">            (6) :                                          restrictinfo-&gt;has_clone,</span></span>
+<span id="L127" title="Line 127: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     127</span>                 :<span class="tlaLBC">            (6) :                                          restrictinfo-&gt;is_clone,</span></span>
+<span id="L128" title="Line 128: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     128</span>                 :<span class="tlaLBC">            (6) :                                          restrictinfo-&gt;pseudoconstant,</span></span>
+<span id="L129" title="Line 129: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     129</span>                 :                :                                          0, /* security_level */</span>
+<span id="L130" title="Line 130: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     130</span>                 :                :                                          restrictinfo-&gt;required_relids,</span>
+<span id="L131" title="Line 131: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     131</span>                 :                :                                          restrictinfo-&gt;incompatible_relids,</span>
+<span id="L132" title="Line 132: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     132</span>                 :                :                                          restrictinfo-&gt;outer_relids);</span>
+<span id="L133" title="Line 133: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org"><span title="drowley@postgresql.org 581 days ago (bin 4: (360..) days)" class="tlaLBC">                          </span> <span class="lineNum">     133</span>                 :<span class="tlaLBC">            (6) :         restrictinfo-&gt;rinfo_serial = save_rinfo_serial;</span></span>
+<span id="L134" title="Line 134: commit f00ab1fd156e on 2024-11-08 by rguo@postgresql.org"><span title="rguo@postgresql.org 291 days ago (bin 3: (30,360] days)" class="tlaLBC">  <a href="#top" title="next LBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgLBC">291</a> </span><a href="#top" title="next LBC in &ldquo;rguo@postgresql.org&rdquo; bin" class="tlaBgLBC">rguo@postgresql.org</a><span title="rguo@postgresql.org 291 days ago (bin 3: (30,360] days)" class="tlaLBC"> </span> <span class="lineNum">     134</span>                 :<span class="tlaLBC">            (6) :         root-&gt;last_rinfo_serial = save_last_rinfo_serial;</span></span>
+<span id="L135" title="Line 135: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     135</span>                 :                :     }</span>
+<span id="L136" title="Line 136: commit b262ad440ede on 2024-01-23 by drowley@postgresql.org">                           <span class="lineNum">     136</span>                 :                : </span>
+<span id="L137" title="Line 137: commit f4e031c662a6 on 2014-11-28 by tgl@sss.pgh.pa.us"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">3924</a> <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     137</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       34659 :     cur_relid = -1;</span></span>
+<span id="L138" title="Line 138: commit f4e031c662a6 on 2014-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>         [<span class="tlaCBC"> <a href="#L143" title="CBC: Branch 0 was taken 77072 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L143" title="CBC: Branch 1 was taken 34659 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">         111731 :     while ((cur_relid = bms_next_member(join_relids, cur_relid)) &gt;= 0)</span></span>
+<span id="L139" title="Line 139: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 :                :     {</span>
+<span id="L140" title="Line 140: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">  939                      <span class="lineNum">     140</span>                 :<span class="tlaCBC">          77072 :         RelOptInfo *rel = find_base_rel_ignore_join(root, cur_relid);</span></span>
+<span id="L141" title="Line 141: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :                : </span>
+<span id="L142" title="Line 142: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 :                :         /* We only need to add the clause to baserels */</span>
+<span id="L143" title="Line 143: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>         [<span class="tlaCBC"> <a href="#L168" title="CBC: Branch 0 was taken 4727 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L168" title="CBC: Branch 1 was taken 72345 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          77072 :         if (rel == NULL)</span></span>
+<span id="L144" title="Line 144: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :<span class="tlaCBC">           4727 :             continue;</span></span>
+<span id="L145" title="Line 145: commit a31ad27fc5dc on 2005-06-09 by tgl@sss.pgh.pa.us"> 7383                      <span class="lineNum">     145</span>                 :<span class="tlaCBC">          72345 :         rel-&gt;joininfo = lappend(rel-&gt;joininfo, restrictinfo);</span></span>
+<span id="L146" title="Line 146: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     146</span>                 :                :     }</span>
+<span id="L147" title="Line 147: commit f5e83662d06a on 2003-01-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     147</span>                 :                : }</span>
+<span id="L148" title="Line 148: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     148</span>                 :                : </span>
+<span id="L149" title="Line 149: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     149</span>                 :                : /*</span>
+<span id="L150" title="Line 150: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     150</span>                 :                :  * remove_join_clause_from_rels</span>
+<span id="L151" title="Line 151: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 :                :  *    Delete 'restrictinfo' from all the joininfo lists it is in</span>
+<span id="L152" title="Line 152: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     152</span>                 :                :  *</span>
+<span id="L153" title="Line 153: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     153</span>                 :                :  * This reverses the effect of add_join_clause_to_rels.  It's used when we</span>
+<span id="L154" title="Line 154: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     154</span>                 :                :  * discover that a relation need not be joined at all.</span>
+<span id="L155" title="Line 155: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     155</span>                 :                :  *</span>
+<span id="L156" title="Line 156: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     156</span>                 :                :  * 'restrictinfo' describes the join clause</span>
+<span id="L157" title="Line 157: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     157</span>                 :                :  * 'join_relids' is the set of relations participating in the join clause</span>
+<span id="L158" title="Line 158: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     158</span>                 :                :  *               (some of these could be outer joins)</span>
+<span id="L159" title="Line 159: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     159</span>                 :                :  */</span>
+<span id="L160" title="Line 160: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     160</span>                 :                : void</span>
+<span id="L161" title="Line 161: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us"> 5460                      <span class="lineNum">     161</span>                 :<span class="tlaCBC">           5436 : remove_join_clause_from_rels(PlannerInfo *root,</span></span>
+<span id="L162" title="Line 162: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     162</span>                 :                :                              RestrictInfo *restrictinfo,</span>
+<span id="L163" title="Line 163: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     163</span>                 :                :                              Relids join_relids)</span>
+<span id="L164" title="Line 164: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     164</span>                 :                : {</span>
+<span id="L165" title="Line 165: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     165</span>                 :                :     int         cur_relid;</span>
+<span id="L166" title="Line 166: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     166</span>                 :                : </span>
+<span id="L167" title="Line 167: commit f4e031c662a6 on 2014-11-28 by tgl@sss.pgh.pa.us"> 3924                      <span class="lineNum">     167</span>                 :<span class="tlaCBC">           5436 :     cur_relid = -1;</span></span>
+<span id="L168" title="Line 168: commit f4e031c662a6 on 2014-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>         [<span class="tlaCBC"> <a href="#L173" title="CBC: Branch 0 was taken 11095 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L173" title="CBC: Branch 1 was taken 5436 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          16531 :     while ((cur_relid = bms_next_member(join_relids, cur_relid)) &gt;= 0)</span></span>
+<span id="L169" title="Line 169: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     169</span>                 :                :     {</span>
+<span id="L170" title="Line 170: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">  939                      <span class="lineNum">     170</span>                 :<span class="tlaCBC">          11095 :         RelOptInfo *rel = find_base_rel_ignore_join(root, cur_relid);</span></span>
+<span id="L171" title="Line 171: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     171</span>                 :                : </span>
+<span id="L172" title="Line 172: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :                :         /* We would only have added the clause to baserels */</span>
+<span id="L173" title="Line 173: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     173</span>         [<span class="tlaCBC"> <a href="#L180" title="CBC: Branch 0 was taken 126 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L180" title="CBC: Branch 1 was taken 10969 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          11095 :         if (rel == NULL)</span></span>
+<span id="L174" title="Line 174: commit 2489d76c4906 on 2023-01-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     174</span>                 :<span class="tlaCBC">            126 :             continue;</span></span>
+<span id="L175" title="Line 175: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :                : </span>
+<span id="L176" title="Line 176: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     176</span>                 :                :         /*</span>
+<span id="L177" title="Line 177: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     177</span>                 :                :          * Remove the restrictinfo from the list.  Pointer comparison is</span>
+<span id="L178" title="Line 178: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     178</span>                 :                :          * sufficient.</span>
+<span id="L179" title="Line 179: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     179</span>                 :                :          */</span>
+<span id="L180" title="Line 180: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us"> 5460                      <span class="lineNum">     180</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 10969 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          10969 :         Assert(list_member_ptr(rel-&gt;joininfo, restrictinfo));</span></span>
+<span id="L181" title="Line 181: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     181</span>                 :<span class="tlaCBC">          10969 :         rel-&gt;joininfo = list_delete_ptr(rel-&gt;joininfo, restrictinfo);</span></span>
+<span id="L182" title="Line 182: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     182</span>                 :                :     }</span>
+<span id="L183" title="Line 183: commit 4e97631e6a9d on 2010-09-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     183</span>                 :<span class="tlaCBC">           5436 : }</span></span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

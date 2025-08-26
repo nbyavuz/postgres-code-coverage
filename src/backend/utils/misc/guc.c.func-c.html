@@ -1,0 +1,1086 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/misc/guc.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory misc">misc</a> - guc.c<span style="font-size: 80%;"> (<a href="guc.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">82.4&nbsp;%</td>
+            <td class="headerCovTableEntry">2400</td>
+            <td class="headerCovTableEntry">1978</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">413</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">1959</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">97.0&nbsp;%</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntry">97</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">93</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">64.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1831</td>
+            <td class="headerCovTableEntry">1185</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">643</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1179</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">62.5&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="tlaUNC">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">95.0&nbsp;%</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.5&nbsp;%</td>
+            <td class="headerCovTableEntry">2356</td>
+            <td class="headerCovTableEntry">1944</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">412</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1934</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">97.0&nbsp;%</td>
+            <td class="headerCovTableEntry">99</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">93</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryMed">86.4&nbsp;%</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">76.9&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">64.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1783</td>
+            <td class="headerCovTableEntry">1146</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry">635</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1142</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="guc.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="guc.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="guc.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4408">GetConfigOptionResetString</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L651">guc_realloc</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6191">guc_restore_error_context_callback</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6656">GUCArrayReset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerMed>86.4&nbsp;% (19 / 22)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5351">get_explain_guc_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerLo>50.0&nbsp;% (22 / 44)</td>
+              <td class=coverPerLo>34.6&nbsp;% (9 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2006">ResetAllOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>92.6&nbsp;% (50 / 54)</td>
+              <td class=coverPerMed>78.1&nbsp;% (25 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6586">GUCArrayDelete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16</td>
+              <td class=coverPerHi>95.7&nbsp;% (22 / 23)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4455">GetConfigOptionFlags</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6811">GUC_check_errcode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5208">DefineCustomRealVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1409">check_GUC_name_for_parameter_acl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4287">get_config_handle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5178">DefineCustomIntVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5041">reapply_stacked_values</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51</td>
+              <td class=coverPerLo>41.9&nbsp;% (13 / 31)</td>
+              <td class=coverPerLo>42.1&nbsp;% (8 / 19)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5137">free_placeholder</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">55</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1176">add_placeholder_variable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4540">replace_auto_config_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74</td>
+              <td class=coverPerHi>100.0&nbsp;% (30 / 30)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4472">write_auto_conf_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              <td class=coverPerLo>27.3&nbsp;% (6 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4610">AlterSystemSetConfigFile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerMed>82.4&nbsp;% (61 / 74)</td>
+              <td class=coverPerLo>55.3&nbsp;% (42 / 76)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1120">assignable_custom_variable_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">104</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1075">valid_custom_variable_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2774">convert_real_from_base_unit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">134</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1373">convert_GUC_name_for_parameter_acl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">176</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2732">convert_int_from_base_unit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">379</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5968">EstimateGUCStateSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">456</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6121">SerializeGUCState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">456</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6508">GUCArrayAdd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">639</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerLo>65.0&nbsp;% (13 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6728">validate_option_array_item</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">657</td>
+              <td class=coverPerMed>76.2&nbsp;% (16 / 21)</td>
+              <td class=coverPerMed>75.0&nbsp;% (27 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1783">SelectConfigFiles</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1057</td>
+              <td class=coverPerLo>74.3&nbsp;% (52 / 70)</td>
+              <td class=coverPerLo>68.8&nbsp;% (22 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1529">InitializeGUCOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L902">build_guc_variables</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (63 / 63)</td>
+              <td class=coverPerMed>79.4&nbsp;% (27 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6213">RestoreGUCState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1371</td>
+              <td class=coverPerMed>84.1&nbsp;% (58 / 69)</td>
+              <td class=coverPerLo>52.1&nbsp;% (25 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1995">pg_timezone_abbrev_initialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1659</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L871">get_guc_variables</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1687</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1588">InitializeGUCOptionsFromEnvironment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1690</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5263">DefineCustomEnumVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1810</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5299">MarkGUCPrefixReserved</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1880</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L281">ProcessConfigFileInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2724</td>
+              <td class=coverPerMed>82.0&nbsp;% (91 / 111)</td>
+              <td class=coverPerLo>72.8&nbsp;% (83 / 114)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6476">ProcessGUCArray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3270</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6419">TransformGUCArray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3307</td>
+              <td class=coverPerMed>81.0&nbsp;% (17 / 21)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5238">DefineCustomStringVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3629</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5152">DefineCustomBoolVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3680</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2964">parse_real</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4363</td>
+              <td class=coverPerMed>76.0&nbsp;% (19 / 25)</td>
+              <td class=coverPerLo>62.5&nbsp;% (15 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5452">GetConfigOptionByName</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5920</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2674">convert_to_base_unit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6751</td>
+              <td class=coverPerMed>87.0&nbsp;% (20 / 23)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4358">GetConfigOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6930</td>
+              <td class=coverPerLo>72.0&nbsp;% (18 / 25)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4940">define_custom_variable</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">9192</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4879">init_custom_variable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9192</td>
+              <td class=coverPerMed>85.0&nbsp;% (17 / 20)</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1046">add_guc_variable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9198</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2549">BeginReportingGUCOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11873</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6382">ParseLongOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26179</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L845">discard_stack_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27246</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (2 / 3)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5868">estimate_variable_size</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28454</td>
+              <td class=coverPerHi>97.4&nbsp;% (37 / 38)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6044">serialize_variable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28454</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3049">config_enum_lookup_by_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30325</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6892">call_real_check_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32279</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1760">RemoveGUCFromLists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33378</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5999">do_serialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46785</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3385">set_config_option_ext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49074</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2874">parse_int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50280</td>
+              <td class=coverPerMed>82.4&nbsp;% (28 / 34)</td>
+              <td class=coverPerLo>63.2&nbsp;% (24 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6029">do_serialize_binary</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54506</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4302">set_config_sourcefile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66507</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3075">config_enum_get_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68856</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6976">call_enum_check_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79521</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2249">RestrictSearchPath</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">104894</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2238">NewGUCNestLevel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">124192</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L4335">SetConfigOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">127367</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L811">set_stack_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">127376</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5834">can_skip_gucvar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">128980</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2137">push_old_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">133019</td>
+              <td class=coverPerMed>88.4&nbsp;% (38 / 43)</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6154">read_gucstate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">147033</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6177">read_gucstate_binary</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">170293</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L746">extra_field_used</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">192899</td>
+              <td class=coverPerLo>44.8&nbsp;% (13 / 29)</td>
+              <td class=coverPerLo>45.8&nbsp;% (11 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6824">call_bool_check_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">207133</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6858">call_int_check_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">211497</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3026">config_enum_lookup_by_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">227695</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2637">ReportGUCOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">294420</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3345">set_config_option</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">311744</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2218">AtStart_GUC</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">318609</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L6926">call_string_check_hook</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">323882</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2599">ReportChangedGUCOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">352616</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3132">parse_and_validate_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">372113</td>
+              <td class=coverPerLo>73.8&nbsp;% (48 / 65)</td>
+              <td class=coverPerLo>58.3&nbsp;% (35 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L3408">set_config_with_handle</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">374895</td>
+              <td class=coverPerLo>70.6&nbsp;% (252 / 357)</td>
+              <td class=coverPerLo>62.6&nbsp;% (214 / 342)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2265">AtEOXact_GUC</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">442019</td>
+              <td class=coverPerMed>83.3&nbsp;% (115 / 138)</td>
+              <td class=coverPerLo>74.2&nbsp;% (69 / 93)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1435">check_GUC_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">448890</td>
+              <td class=coverPerLo>69.2&nbsp;% (27 / 39)</td>
+              <td class=coverPerLo>50.0&nbsp;% (22 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2114">set_guc_source</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">466596</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1643">InitializeOneGUCOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">482213</td>
+              <td class=coverPerHi>92.1&nbsp;% (70 / 76)</td>
+              <td class=coverPerLo>52.1&nbsp;% (25 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1353">guc_name_match</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">527924</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1234">find_option</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">528063</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L676">guc_strdup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">594062</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L688">guc_free</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">656244</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L2817">get_config_unit_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">681112</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L730">set_string_field</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">707919</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L707">string_field_used</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">714187</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L637">guc_malloc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">715319</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L5485">ShowGUCOption</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">982253</td>
+              <td class=coverPerHi>90.0&nbsp;% (45 / 50)</td>
+              <td class=coverPerHi>91.2&nbsp;% (31 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1329">guc_name_hash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">986155</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L791">set_extra_field</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1054118</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1287">guc_var_compare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6116895</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#L1299">guc_name_compare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6934800</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

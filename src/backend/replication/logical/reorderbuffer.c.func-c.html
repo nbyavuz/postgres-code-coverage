@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/replication/logical/reorderbuffer.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory replication">replication</a>/<a href="index.html" title="Click to go to directory logical">logical</a> - reorderbuffer.c<span style="font-size: 80%;"> (<a href="reorderbuffer.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">93.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1762</td>
+            <td class="headerCovTableEntry">1649</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">113</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1647</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">69.1&nbsp;%</td>
+            <td class="headerCovTableEntry">1173</td>
+            <td class="headerCovTableEntry">810</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">361</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">806</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">88.8&nbsp;%</td>
+            <td class="headerCovTableEntry">160</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">140</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.1&nbsp;%</td>
+            <td class="headerCovTableEntry">1601</td>
+            <td class="headerCovTableEntry">1506</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">95</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1506</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">78</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">67.3&nbsp;%</td>
+            <td class="headerCovTableEntry">110</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">68.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1069</td>
+            <td class="headerCovTableEntry">736</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">1</td>
+            <td class="headerCovTableEntry">326</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">735</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="reorderbuffer.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="reorderbuffer.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="reorderbuffer.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2162">ReorderBufferResetTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2097">ReorderBufferApplyMessage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5447">UpdateLogicalMappings</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11</td>
+              <td class=coverPerHi>90.9&nbsp;% (30 / 33)</td>
+              <td class=coverPerMed>76.7&nbsp;% (23 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2083">ReorderBufferApplyTruncate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5332">ApplyLogicalMappingFile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerMed>84.8&nbsp;% (28 / 33)</td>
+              <td class=coverPerLo>40.0&nbsp;% (12 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3567">ReorderBufferAddDistributedInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4939">ReorderBufferToastInitHash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5434">file_sort_by_lsn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5599">ReorderBufferGetInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2948">ReorderBufferPrepare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2989">ReorderBufferFinishPrepared</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44</td>
+              <td class=coverPerHi>95.5&nbsp;% (21 / 22)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L638">ReorderBufferFreeRelids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L870">ReorderBufferQueueMessage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerMed>88.9&nbsp;% (24 / 27)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L622">ReorderBufferAllocRelids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1980">ReorderBufferStreamCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3210">ReorderBufferInvalidate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2927">ReorderBufferSkipPrepare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">103</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4508">ReorderBufferRestoreChanges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">105</td>
+              <td class=coverPerHi>90.9&nbsp;% (50 / 55)</td>
+              <td class=coverPerLo>52.0&nbsp;% (26 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3075">ReorderBufferAbort</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">121</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2895">ReorderBufferRememberPrepareInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">146</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4818">ReorderBufferRestoreCleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">230</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1216">ReorderBufferCommitChild</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">267</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3675">ReorderBufferGetCatalogChangesXacts</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">282</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5424">TransactionIdInArray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">348</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1041">ReorderBufferGetOldestTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">388</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1069">ReorderBufferGetOldestXmin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">409</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1084">ReorderBufferSetRestartPoint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">443</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3241">ReorderBufferImmediateInvalidation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">580</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1162">ReorderBufferTransferSnapToParent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">647</td>
+              <td class=coverPerLo>21.1&nbsp;% (4 / 19)</td>
+              <td class=coverPerLo>20.0&nbsp;% (2 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2117">ReorderBufferSaveTXNSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">716</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4306">ReorderBufferStreamTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">716</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerLo>53.8&nbsp;% (14 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5525">ResolveCminCmaxDuringDecoding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">803</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3831">ReorderBufferLargestStreamableTopTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">818</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1096">ReorderBufferAssignChild</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">829</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L414">ReorderBufferFree</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">836</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4905">StartupReorderBuffer</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">904</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2135">ReorderBufferMaybeMarkTXNStreamed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1013</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L322">ReorderBufferAllocate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1035</td>
+              <td class=coverPerHi>100.0&nbsp;% (33 / 33)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1653">ReorderBufferTruncateTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1068</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3290">ReorderBufferAddSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1148</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2872">ReorderBufferCommit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1312</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2811">ReorderBufferReplay</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1355</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3121">ReorderBufferAbortOld</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1362</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1906">ReorderBufferCopySnap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1828</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4959">ReorderBufferToastAppendChunk</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1830</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              <td class=coverPerLo>43.3&nbsp;% (13 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4848">ReorderBufferCleanupSerializedTXNs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1967</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1501">ReorderBufferIterTXNFinish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2000</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1833">ReorderBufferBuildTupleCidHash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2002</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1281">ReorderBufferIterTXNInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2002</td>
+              <td class=coverPerHi>100.0&nbsp;% (43 / 43)</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2208">ReorderBufferProcessTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2002</td>
+              <td class=coverPerMed>88.2&nbsp;% (180 / 204)</td>
+              <td class=coverPerLo>63.6&nbsp;% (119 / 187)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1010">AssertChangeLsnOrder</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2465</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3168">ReorderBufferForget</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2479</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1965">ReorderBufferFreeSnap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2959</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3308">ReorderBufferSetBaseSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2966</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3790">ReorderBufferLargestTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3095</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3961">ReorderBufferSerializeTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3275</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerLo>71.9&nbsp;% (23 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4887">ReorderBufferSerializedPath</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3435</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1532">ReorderBufferCleanupTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3578</td>
+              <td class=coverPerHi>100.0&nbsp;% (33 / 33)</td>
+              <td class=coverPerLo>70.6&nbsp;% (24 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L456">ReorderBufferFreeTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3578</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L432">ReorderBufferAllocTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3637</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1771">ReorderBufferCheckAndTruncateAbortedTXN</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3736</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3710">ReorderBufferXidHasCatalogChanges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4090</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3526">ReorderBufferAddInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4957</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3488">ReorderBufferAccumulateInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4990</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3465">ReorderBufferQueueInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4990</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3625">ReorderBufferExecuteInvalidations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6317</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L939">AssertTXNLsnOrder</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7400</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerLo>68.8&nbsp;% (22 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3339">ReorderBufferAddNewCommandId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23597</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3438">ReorderBufferAddNewTupleCids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23597</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3637">ReorderBufferXidSetCatalogChanges</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28587</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1258">ReorderBufferIterCompare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51568</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2046">SetupCheckXidLive</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177876</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4651">ReorderBufferRestoreChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">178336</td>
+              <td class=coverPerHi>93.0&nbsp;% (66 / 71)</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3774">ReorderBufferTXNSizeCompare</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">285017</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L2069">ReorderBufferApplyChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">337033</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5042">ReorderBufferToastReplace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">337033</td>
+              <td class=coverPerHi>97.3&nbsp;% (73 / 75)</td>
+              <td class=coverPerLo>68.8&nbsp;% (33 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L5233">ReorderBufferToastReset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">340395</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L1409">ReorderBufferIterTXNNext</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">361042</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4280">ReorderBufferCanStartStreaming</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">362918</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4056">ReorderBufferSerializeChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1044799</td>
+              <td class=coverPerHi>93.1&nbsp;% (94 / 101)</td>
+              <td class=coverPerLo>69.0&nbsp;% (20 / 29)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3727">ReorderBufferXidHasBaseSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1259254</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3881">ReorderBufferCheckMemoryLimit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1268681</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerLo>71.1&nbsp;% (27 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L738">ReorderBufferProcessPartialChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1268681</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerMed>81.2&nbsp;% (26 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L807">ReorderBufferQueueChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1278090</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L607">ReorderBufferFreeTupleBuf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1338337</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L589">ReorderBufferAllocTupleBuf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1338393</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L519">ReorderBufferFreeChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1479746</td>
+              <td class=coverPerHi>100.0&nbsp;% (39 / 39)</td>
+              <td class=coverPerLo>73.9&nbsp;% (17 / 23)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L504">ReorderBufferAllocChange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1480023</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4271">ReorderBufferCanStream</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1631599</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3367">ReorderBufferChangeMemoryUpdate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1657248</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L4423">ReorderBufferChangeSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1873047</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3277">ReorderBufferProcessXid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1921895</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L3757">ReorderBufferSerializeReserve</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2429002</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#L650">ReorderBufferTXNByXid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4844970</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerMed>85.7&nbsp;% (24 / 28)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

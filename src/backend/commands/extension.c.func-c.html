@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/commands/extension.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory commands">commands</a> - extension.c<span style="font-size: 80%;"> (<a href="extension.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">81.6&nbsp;%</td>
+            <td class="headerCovTableEntry">1181</td>
+            <td class="headerCovTableEntry">964</td>
+            <td class="headerCovTableEntry">217</td>
+            <td class="headerCovTableEntry">964</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">93.8&nbsp;%</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">45</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">57.0&nbsp;%</td>
+            <td class="headerCovTableEntry">946</td>
+            <td class="headerCovTableEntry">539</td>
+            <td class="headerCovTableEntry">407</td>
+            <td class="headerCovTableEntry">539</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">77.2&nbsp;%</td>
+            <td class="headerCovTableEntry">228</td>
+            <td class="headerCovTableEntry">176</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">176</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.7&nbsp;%</td>
+            <td class="headerCovTableEntry">953</td>
+            <td class="headerCovTableEntry">788</td>
+            <td class="headerCovTableEntry">165</td>
+            <td class="headerCovTableEntry">788</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">85.7&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.1&nbsp;%</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">39</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">48.7&nbsp;%</td>
+            <td class="headerCovTableEntry">152</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry">78</td>
+            <td class="headerCovTableEntry">74</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">58.6&nbsp;%</td>
+            <td class="headerCovTableEntry">794</td>
+            <td class="headerCovTableEntry">465</td>
+            <td class="headerCovTableEntry">329</td>
+            <td class="headerCovTableEntry">465</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="extension.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="extension.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="extension.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2467">extension_file_exists</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2552">pg_extension_update_paths</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 30)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2820">pg_get_loaded_modules</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2289">pg_available_extension_versions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3038">AlterExtensionNamespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerMed>85.5&nbsp;% (53 / 62)</td>
+              <td class=coverPerLo>57.4&nbsp;% (31 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2637">pg_extension_config_dump</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerMed>84.4&nbsp;% (54 / 64)</td>
+              <td class=coverPerLo>41.1&nbsp;% (23 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1043">extension_is_trusted</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L773">script_error_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerMed>87.8&nbsp;% (43 / 49)</td>
+              <td class=coverPerLo>55.3&nbsp;% (21 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3253">ExecAlterExtensionStmt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerLo>71.4&nbsp;% (30 / 42)</td>
+              <td class=coverPerLo>36.8&nbsp;% (14 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1462">identify_update_path</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L209">get_extension_schema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1892">get_required_extension</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>85.0&nbsp;% (17 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2203">pg_available_extensions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34</td>
+              <td class=coverPerMed>89.7&nbsp;% (26 / 29)</td>
+              <td class=coverPerLo>65.0&nbsp;% (13 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2873">extension_config_remove</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerLo>40.6&nbsp;% (26 / 64)</td>
+              <td class=coverPerLo>25.0&nbsp;% (13 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2149">RemoveExtensionById</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">59</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L187">get_extension_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">62</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2526">convert_requires_to_datum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3558">ExecAlterExtensionContentsStmt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">134</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3644">ExecAlterExtensionContentsRecurse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">225</td>
+              <td class=coverPerMed>85.7&nbsp;% (30 / 35)</td>
+              <td class=coverPerLo>58.3&nbsp;% (21 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1963">CreateExtension</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">238</td>
+              <td class=coverPerMed>82.4&nbsp;% (28 / 34)</td>
+              <td class=coverPerLo>59.4&nbsp;% (19 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2061">InsertExtensionTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">248</td>
+              <td class=coverPerHi>94.3&nbsp;% (33 / 35)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3400">ApplyExtensionUpdates</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251</td>
+              <td class=coverPerHi>98.0&nbsp;% (48 / 49)</td>
+              <td class=coverPerMed>83.3&nbsp;% (20 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1653">CreateExtensionInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">256</td>
+              <td class=coverPerHi>93.7&nbsp;% (59 / 63)</td>
+              <td class=coverPerLo>67.4&nbsp;% (31 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L229">check_valid_extension_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">258</td>
+              <td class=coverPerLo>63.6&nbsp;% (7 / 11)</td>
+              <td class=coverPerLo>27.8&nbsp;% (5 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L276">check_valid_version_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">275</td>
+              <td class=coverPerLo>63.6&nbsp;% (7 / 11)</td>
+              <td class=coverPerLo>27.8&nbsp;% (5 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L410">find_extension_control_filename</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">279</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3874">find_in_paths</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">279</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>50.0&nbsp;% (7 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L698">read_extension_control_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">279</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L342">get_extension_control_directories</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">318</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L2353">get_available_versions_for_extension</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">529</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L915">execute_sql_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">534</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L740">read_extension_script_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">536</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3784">read_whole_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">536</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerLo>25.0&nbsp;% (4 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1065">execute_extension_script</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">539</td>
+              <td class=coverPerHi>97.7&nbsp;% (85 / 87)</td>
+              <td class=coverPerMed>82.6&nbsp;% (71 / 86)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1399">get_ext_ver_list</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">619</td>
+              <td class=coverPerHi>96.4&nbsp;% (27 / 28)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1598">find_install_path</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">721</td>
+              <td class=coverPerMed>78.9&nbsp;% (15 / 19)</td>
+              <td class=coverPerLo>55.0&nbsp;% (11 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1505">find_update_path</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">740</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              <td class=coverPerLo>71.4&nbsp;% (30 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L473">get_extension_script_filename</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">792</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L165">get_extension_oid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1457</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L455">get_extension_aux_control_filename</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1466</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L717">read_extension_aux_control_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1466</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L436">get_extension_script_directory</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2877</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1338">get_ext_ver_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3178</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L1371">get_nearest_unprocessed_vertex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3178</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L3849">new_ExtensionControlFile</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4384</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L510">parse_extension_control_file</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5850</td>
+              <td class=coverPerMed>77.8&nbsp;% (49 / 63)</td>
+              <td class=coverPerLo>51.2&nbsp;% (43 / 84)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L323">is_extension_control_filename</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13363</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="extension.c.gcov.html#L331">is_extension_script_filename</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">210346</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

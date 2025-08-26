@@ -1,0 +1,705 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/fmgr/fmgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory fmgr">fmgr</a> - fmgr.c<span style="font-size: 80%;"> (<a href="fmgr.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">71.4&nbsp;%</td>
+            <td class="headerCovTableEntry">826</td>
+            <td class="headerCovTableEntry">590</td>
+            <td class="headerCovTableEntry">236</td>
+            <td class="headerCovTableEntry">590</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">85.5&nbsp;%</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">59</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">47.2&nbsp;%</td>
+            <td class="headerCovTableEntry">396</td>
+            <td class="headerCovTableEntry">187</td>
+            <td class="headerCovTableEntry">209</td>
+            <td class="headerCovTableEntry">187</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.4&nbsp;%</td>
+            <td class="headerCovTableEntry">826</td>
+            <td class="headerCovTableEntry">590</td>
+            <td class="headerCovTableEntry">236</td>
+            <td class="headerCovTableEntry">590</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">85.5&nbsp;%</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">59</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">47.2&nbsp;%</td>
+            <td class="headerCovTableEntry">396</td>
+            <td class="headerCovTableEntry">187</td>
+            <td class="headerCovTableEntry">209</td>
+            <td class="headerCovTableEntry">187</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="fmgr.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="fmgr.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="fmgr.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1063">CallerFInfoFunctionCall1</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L913">DirectFunctionCall6Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 19)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L945">DirectFunctionCall7Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 21)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L979">DirectFunctionCall8Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 23)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1015">DirectFunctionCall9Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 25)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1352">FunctionCall9Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 25)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1475">OidFunctionCall7Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1488">OidFunctionCall8Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1501">OidFunctionCall9Coll</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L279">fmgr_symbol</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 33)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1429">OidFunctionCall3Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L630">fmgr_security_definer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">207</td>
+              <td class=coverPerHi>94.0&nbsp;% (63 / 67)</td>
+              <td class=coverPerMed>75.8&nbsp;% (47 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L857">DirectFunctionCall4Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">584</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1419">OidFunctionCall2Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">602</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1820">pg_detoast_datum_slice</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2211</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L884">DirectFunctionCall5Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2415</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L593">fmgr_internal_function</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2516</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1462">OidFunctionCall6Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3311</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L537">record_C_func</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3415</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1250">FunctionCall6Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3533</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L99">fmgr_lookupByName</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3879</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L453">fetch_finfo_record</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6536</td>
+              <td class=coverPerLo>73.3&nbsp;% (11 / 15)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L2108">CheckFunctionValidatorAccess</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12516</td>
+              <td class=coverPerLo>71.4&nbsp;% (15 / 21)</td>
+              <td class=coverPerLo>31.2&nbsp;% (5 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L416">fmgr_info_other_lang</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16088</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L2007">get_fn_expr_variadic</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18207</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1316">FunctionCall8Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19274</td>
+              <td class=coverPerHi>95.7&nbsp;% (22 / 23)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1957">get_call_expr_arg_stable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21648</td>
+              <td class=coverPerLo>68.0&nbsp;% (17 / 25)</td>
+              <td class=coverPerLo>62.5&nbsp;% (15 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1938">get_fn_expr_arg_stable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21648</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L347">fmgr_info_C_lang</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48175</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L513">lookup_C_func</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48175</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L832">DirectFunctionCall3Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68912</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1851">get_fn_expr_rettype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68922</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1451">OidFunctionCall5Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">113902</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1780">OidSendFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">116129</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1742">SendFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123601</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1770">OidReceiveFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">155402</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1695">ReceiveFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">155574</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              <td class=coverPerLo>35.7&nbsp;% (5 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1083">CallerFInfoFunctionCall2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">210336</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1440">OidFunctionCall4Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">340367</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1409">OidFunctionCall1Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">350689</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1638">DirectInputFunctionCallSafe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">411822</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1282">FunctionCall7Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">485213</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1761">OidOutputFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">526125</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L2033">set_fn_opclass_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">535936</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1194">FunctionCall4Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">923021</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1221">FunctionCall5Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1135161</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L135">fmgr_info_cxt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1227704</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1873">get_fn_expr_argtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1262943</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1892">get_call_expr_argtype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1266754</td>
+              <td class=coverPerLo>45.5&nbsp;% (10 / 22)</td>
+              <td class=coverPerLo>31.8&nbsp;% (7 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L790">DirectFunctionCall1Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1446739</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1110">FunctionCall0Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2422055</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1399">OidFunctionCall0Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2422055</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L2044">has_fn_opclass_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2752660</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L2060">get_fn_opclass_options</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2857141</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1804">pg_detoast_datum_copy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2963463</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1583">InputFunctionCallSafe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3198192</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerLo>65.0&nbsp;% (13 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1752">OidInputFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7011909</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L125">fmgr_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18418938</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1528">InputFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18940819</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L145">fmgr_info_cxt_security</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19662912</td>
+              <td class=coverPerHi>96.3&nbsp;% (52 / 54)</td>
+              <td class=coverPerLo>62.5&nbsp;% (15 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L74">fmgr_isbuiltin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19662912</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L810">DirectFunctionCall2Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19928955</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L578">fmgr_info_copy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21796423</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1169">FunctionCall3Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23874452</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1681">OutputFunctionCall</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25508379</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1127">FunctionCall1Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31924982</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1795">pg_detoast_datum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">61088641</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1827">pg_detoast_datum_packed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">116377332</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="fmgr.c.gcov.html#L1147">FunctionCall2Coll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">381699632</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

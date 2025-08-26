@@ -1,0 +1,829 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/misc/injection_point.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory misc">misc</a> - injection_point.c<span style="font-size: 80%;"> (source / <a href="injection_point.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">22.2&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L594" title="goto first UNC line">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L273" title="goto first UBC line">12</a></td>
+            <td class="headerCovTableEntry"><a href="#L233" title="goto first CBC line">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">22.2&nbsp;%</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry"><a href="#L629" title="goto first UNC branch">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L351" title="goto first UBC branch">12</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC"><a href="#L594" title="goto first UNC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">2</a></td>
+            <td class="headerCovTableEntry"><a href="#L544" title="goto first UBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">2</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">28.6&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L273" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L233" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">4</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="7">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC"><a href="#L629" title="goto first UNC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">2</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L351" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">12</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       3</span>                 :                :  * injection_point.c</span>
+<span id="L4" title="Line 4: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       4</span>                 :                :  *    Routines to control and run injection points in the code.</span>
+<span id="L5" title="Line 5: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       6</span>                 :                :  * Injection points can be used to run arbitrary code by attaching callbacks</span>
+<span id="L7" title="Line 7: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       7</span>                 :                :  * that would be executed in place of the named injection point.</span>
+<span id="L8" title="Line 8: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">       8</span>                 :                :  *</span>
+<span id="L9" title="Line 9: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       9</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L10" title="Line 10: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      10</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L11" title="Line 11: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      11</span>                 :                :  *</span>
+<span id="L12" title="Line 12: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      12</span>                 :                :  *</span>
+<span id="L13" title="Line 13: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      13</span>                 :                :  * IDENTIFICATION</span>
+<span id="L14" title="Line 14: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      14</span>                 :                :  *    src/backend/utils/misc/injection_point.c</span>
+<span id="L15" title="Line 15: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      15</span>                 :                :  *</span>
+<span id="L16" title="Line 16: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      16</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L17" title="Line 17: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      17</span>                 :                :  */</span>
+<span id="L18" title="Line 18: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      18</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L19" title="Line 19: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      19</span>                 :                : </span>
+<span id="L20" title="Line 20: commit e18512c000ee on 2024-10-27 by peter@eisentraut.org">                           <span class="lineNum">      20</span>                 :                : #include &quot;utils/injection_point.h&quot;</span>
+<span id="L21" title="Line 21: commit e18512c000ee on 2024-10-27 by peter@eisentraut.org">                           <span class="lineNum">      21</span>                 :                : </span>
+<span id="L22" title="Line 22: commit e18512c000ee on 2024-10-27 by peter@eisentraut.org">                           <span class="lineNum">      22</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L23" title="Line 23: commit e18512c000ee on 2024-10-27 by peter@eisentraut.org">                           <span class="lineNum">      23</span>                 :                : </span>
+<span id="L24" title="Line 24: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      24</span>                 :                : #include &lt;sys/stat.h&gt;</span>
+<span id="L25" title="Line 25: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      25</span>                 :                : </span>
+<span id="L26" title="Line 26: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      26</span>                 :                : #include &quot;fmgr.h&quot;</span>
+<span id="L27" title="Line 27: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      27</span>                 :                : #include &quot;miscadmin.h&quot;</span>
+<span id="L28" title="Line 28: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      28</span>                 :                : #include &quot;storage/fd.h&quot;</span>
+<span id="L29" title="Line 29: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      29</span>                 :                : #include &quot;storage/lwlock.h&quot;</span>
+<span id="L30" title="Line 30: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      30</span>                 :                : #include &quot;storage/shmem.h&quot;</span>
+<span id="L31" title="Line 31: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      31</span>                 :                : #include &quot;utils/hsearch.h&quot;</span>
+<span id="L32" title="Line 32: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      32</span>                 :                : #include &quot;utils/memutils.h&quot;</span>
+<span id="L33" title="Line 33: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      33</span>                 :                : </span>
+<span id="L34" title="Line 34: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      34</span>                 :                : /* Field sizes */</span>
+<span id="L35" title="Line 35: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      35</span>                 :                : #define INJ_NAME_MAXLEN     64</span>
+<span id="L36" title="Line 36: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      36</span>                 :                : #define INJ_LIB_MAXLEN      128</span>
+<span id="L37" title="Line 37: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      37</span>                 :                : #define INJ_FUNC_MAXLEN     128</span>
+<span id="L38" title="Line 38: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      38</span>                 :                : #define INJ_PRIVATE_MAXLEN  1024</span>
+<span id="L39" title="Line 39: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      39</span>                 :                : </span>
+<span id="L40" title="Line 40: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      40</span>                 :                : /* Single injection point stored in shared memory */</span>
+<span id="L41" title="Line 41: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      41</span>                 :                : typedef struct InjectionPointEntry</span>
+<span id="L42" title="Line 42: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      42</span>                 :                : {</span>
+<span id="L43" title="Line 43: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      43</span>                 :                :     /*</span>
+<span id="L44" title="Line 44: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      44</span>                 :                :      * Because injection points need to be usable without LWLocks, we use a</span>
+<span id="L45" title="Line 45: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      45</span>                 :                :      * generation counter on each entry to allow safe, lock-free reading.</span>
+<span id="L46" title="Line 46: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      46</span>                 :                :      *</span>
+<span id="L47" title="Line 47: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      47</span>                 :                :      * To read an entry, first read the current 'generation' value.  If it's</span>
+<span id="L48" title="Line 48: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      48</span>                 :                :      * even, then the slot is currently unused, and odd means it's in use.</span>
+<span id="L49" title="Line 49: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      49</span>                 :                :      * When reading the other fields, beware that they may change while</span>
+<span id="L50" title="Line 50: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      50</span>                 :                :      * reading them, if the entry is released and reused!  After reading the</span>
+<span id="L51" title="Line 51: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      51</span>                 :                :      * other fields, read 'generation' again: if its value hasn't changed, you</span>
+<span id="L52" title="Line 52: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      52</span>                 :                :      * can be certain that the other fields you read are valid.  Otherwise,</span>
+<span id="L53" title="Line 53: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      53</span>                 :                :      * the slot was concurrently recycled, and you should ignore it.</span>
+<span id="L54" title="Line 54: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      54</span>                 :                :      *</span>
+<span id="L55" title="Line 55: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      55</span>                 :                :      * When adding an entry, you must store all the other fields first, and</span>
+<span id="L56" title="Line 56: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      56</span>                 :                :      * then update the generation number, with an appropriate memory barrier</span>
+<span id="L57" title="Line 57: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      57</span>                 :                :      * in between. In addition to that protocol, you must also hold</span>
+<span id="L58" title="Line 58: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      58</span>                 :                :      * InjectionPointLock, to prevent two backends from modifying the array at</span>
+<span id="L59" title="Line 59: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      59</span>                 :                :      * the same time.</span>
+<span id="L60" title="Line 60: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      60</span>                 :                :      */</span>
+<span id="L61" title="Line 61: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      61</span>                 :                :     pg_atomic_uint64 generation;</span>
+<span id="L62" title="Line 62: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      62</span>                 :                : </span>
+<span id="L63" title="Line 63: commit d74b590983d1 on 2024-11-13 by michael@paquier.xyz">                           <span class="lineNum">      63</span>                 :                :     char        name[INJ_NAME_MAXLEN];  /* point name */</span>
+<span id="L64" title="Line 64: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      64</span>                 :                :     char        library[INJ_LIB_MAXLEN];    /* library */</span>
+<span id="L65" title="Line 65: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      65</span>                 :                :     char        function[INJ_FUNC_MAXLEN];  /* function */</span>
+<span id="L66" title="Line 66: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      66</span>                 :                : </span>
+<span id="L67" title="Line 67: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      67</span>                 :                :     /*</span>
+<span id="L68" title="Line 68: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      68</span>                 :                :      * Opaque data area that modules can use to pass some custom data to</span>
+<span id="L69" title="Line 69: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      69</span>                 :                :      * callbacks, registered when attached.</span>
+<span id="L70" title="Line 70: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      70</span>                 :                :      */</span>
+<span id="L71" title="Line 71: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      71</span>                 :                :     char        private_data[INJ_PRIVATE_MAXLEN];</span>
+<span id="L72" title="Line 72: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      72</span>                 :                : } InjectionPointEntry;</span>
+<span id="L73" title="Line 73: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      73</span>                 :                : </span>
+<span id="L74" title="Line 74: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      74</span>                 :                : #define MAX_INJECTION_POINTS    128</span>
+<span id="L75" title="Line 75: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      75</span>                 :                : </span>
+<span id="L76" title="Line 76: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      76</span>                 :                : /*</span>
+<span id="L77" title="Line 77: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      77</span>                 :                :  * Shared memory array of active injection points.</span>
+<span id="L78" title="Line 78: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      78</span>                 :                :  *</span>
+<span id="L79" title="Line 79: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      79</span>                 :                :  * 'max_inuse' is the highest index currently in use, plus one.  It's just an</span>
+<span id="L80" title="Line 80: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      80</span>                 :                :  * optimization to avoid scanning through the whole entry, in the common case</span>
+<span id="L81" title="Line 81: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      81</span>                 :                :  * that there are no injection points, or only a few.</span>
+<span id="L82" title="Line 82: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      82</span>                 :                :  */</span>
+<span id="L83" title="Line 83: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      83</span>                 :                : typedef struct InjectionPointsCtl</span>
+<span id="L84" title="Line 84: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      84</span>                 :                : {</span>
+<span id="L85" title="Line 85: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      85</span>                 :                :     pg_atomic_uint32 max_inuse;</span>
+<span id="L86" title="Line 86: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      86</span>                 :                :     InjectionPointEntry entries[MAX_INJECTION_POINTS];</span>
+<span id="L87" title="Line 87: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      87</span>                 :                : } InjectionPointsCtl;</span>
+<span id="L88" title="Line 88: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      88</span>                 :                : </span>
+<span id="L89" title="Line 89: commit b9e5249c2935 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">      89</span>                 :                : NON_EXEC_STATIC InjectionPointsCtl *ActiveInjectionPoints;</span>
+<span id="L90" title="Line 90: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      90</span>                 :                : </span>
+<span id="L91" title="Line 91: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      91</span>                 :                : /*</span>
+<span id="L92" title="Line 92: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      92</span>                 :                :  * Backend local cache of injection callbacks already loaded, stored in</span>
+<span id="L93" title="Line 93: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      93</span>                 :                :  * TopMemoryContext.</span>
+<span id="L94" title="Line 94: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      94</span>                 :                :  */</span>
+<span id="L95" title="Line 95: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      95</span>                 :                : typedef struct InjectionPointCacheEntry</span>
+<span id="L96" title="Line 96: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      96</span>                 :                : {</span>
+<span id="L97" title="Line 97: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      97</span>                 :                :     char        name[INJ_NAME_MAXLEN];</span>
+<span id="L98" title="Line 98: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">      98</span>                 :                :     char        private_data[INJ_PRIVATE_MAXLEN];</span>
+<span id="L99" title="Line 99: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">      99</span>                 :                :     InjectionPointCallback callback;</span>
+<span id="L100" title="Line 100: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     100</span>                 :                : </span>
+<span id="L101" title="Line 101: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     101</span>                 :                :     /*</span>
+<span id="L102" title="Line 102: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     102</span>                 :                :      * Shmem slot and copy of its generation number when this cache entry was</span>
+<span id="L103" title="Line 103: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     103</span>                 :                :      * created.  They can be used to validate if the cached entry is still</span>
+<span id="L104" title="Line 104: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     104</span>                 :                :      * valid.</span>
+<span id="L105" title="Line 105: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     105</span>                 :                :      */</span>
+<span id="L106" title="Line 106: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     106</span>                 :                :     int         slot_idx;</span>
+<span id="L107" title="Line 107: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     107</span>                 :                :     uint64      generation;</span>
+<span id="L108" title="Line 108: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     108</span>                 :                : } InjectionPointCacheEntry;</span>
+<span id="L109" title="Line 109: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     109</span>                 :                : </span>
+<span id="L110" title="Line 110: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     110</span>                 :                : static HTAB *InjectionPointCache = NULL;</span>
+<span id="L111" title="Line 111: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     111</span>                 :                : </span>
+<span id="L112" title="Line 112: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     112</span>                 :                : /*</span>
+<span id="L113" title="Line 113: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     113</span>                 :                :  * injection_point_cache_add</span>
+<span id="L114" title="Line 114: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     114</span>                 :                :  *</span>
+<span id="L115" title="Line 115: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     115</span>                 :                :  * Add an injection point to the local cache.</span>
+<span id="L116" title="Line 116: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     116</span>                 :                :  */</span>
+<span id="L117" title="Line 117: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     117</span>                 :                : static InjectionPointCacheEntry *</span>
+<span id="L118" title="Line 118: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     118</span>                 :                : injection_point_cache_add(const char *name,</span>
+<span id="L119" title="Line 119: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     119</span>                 :                :                           int slot_idx,</span>
+<span id="L120" title="Line 120: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     120</span>                 :                :                           uint64 generation,</span>
+<span id="L121" title="Line 121: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     121</span>                 :                :                           InjectionPointCallback callback,</span>
+<span id="L122" title="Line 122: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     122</span>                 :                :                           const void *private_data)</span>
+<span id="L123" title="Line 123: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     123</span>                 :                : {</span>
+<span id="L124" title="Line 124: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     124</span>                 :                :     InjectionPointCacheEntry *entry;</span>
+<span id="L125" title="Line 125: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     125</span>                 :                :     bool        found;</span>
+<span id="L126" title="Line 126: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     126</span>                 :                : </span>
+<span id="L127" title="Line 127: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     127</span>                 :                :     /* If first time, initialize */</span>
+<span id="L128" title="Line 128: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     128</span>                 :                :     if (InjectionPointCache == NULL)</span>
+<span id="L129" title="Line 129: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     129</span>                 :                :     {</span>
+<span id="L130" title="Line 130: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     130</span>                 :                :         HASHCTL     hash_ctl;</span>
+<span id="L131" title="Line 131: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     131</span>                 :                : </span>
+<span id="L132" title="Line 132: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     132</span>                 :                :         hash_ctl.keysize = sizeof(char[INJ_NAME_MAXLEN]);</span>
+<span id="L133" title="Line 133: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     133</span>                 :                :         hash_ctl.entrysize = sizeof(InjectionPointCacheEntry);</span>
+<span id="L134" title="Line 134: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     134</span>                 :                :         hash_ctl.hcxt = TopMemoryContext;</span>
+<span id="L135" title="Line 135: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     135</span>                 :                : </span>
+<span id="L136" title="Line 136: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     136</span>                 :                :         InjectionPointCache = hash_create(&quot;InjectionPoint cache hash&quot;,</span>
+<span id="L137" title="Line 137: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     137</span>                 :                :                                           MAX_INJECTION_POINTS,</span>
+<span id="L138" title="Line 138: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     138</span>                 :                :                                           &amp;hash_ctl,</span>
+<span id="L139" title="Line 139: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     139</span>                 :                :                                           HASH_ELEM | HASH_STRINGS | HASH_CONTEXT);</span>
+<span id="L140" title="Line 140: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     140</span>                 :                :     }</span>
+<span id="L141" title="Line 141: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     141</span>                 :                : </span>
+<span id="L142" title="Line 142: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     142</span>                 :                :     entry = (InjectionPointCacheEntry *)</span>
+<span id="L143" title="Line 143: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     143</span>                 :                :         hash_search(InjectionPointCache, name, HASH_ENTER, &amp;found);</span>
+<span id="L144" title="Line 144: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     144</span>                 :                : </span>
+<span id="L145" title="Line 145: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     145</span>                 :                :     Assert(!found);</span>
+<span id="L146" title="Line 146: commit 0eb23285a257 on 2024-01-22 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     146</span>                 :                :     strlcpy(entry-&gt;name, name, sizeof(entry-&gt;name));</span>
+<span id="L147" title="Line 147: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     147</span>                 :                :     entry-&gt;slot_idx = slot_idx;</span>
+<span id="L148" title="Line 148: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     148</span>                 :                :     entry-&gt;generation = generation;</span>
+<span id="L149" title="Line 149: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     149</span>                 :                :     entry-&gt;callback = callback;</span>
+<span id="L150" title="Line 150: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     150</span>                 :                :     memcpy(entry-&gt;private_data, private_data, INJ_PRIVATE_MAXLEN);</span>
+<span id="L151" title="Line 151: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     151</span>                 :                : </span>
+<span id="L152" title="Line 152: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     152</span>                 :                :     return entry;</span>
+<span id="L153" title="Line 153: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     153</span>                 :                : }</span>
+<span id="L154" title="Line 154: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     154</span>                 :                : </span>
+<span id="L155" title="Line 155: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     155</span>                 :                : /*</span>
+<span id="L156" title="Line 156: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     156</span>                 :                :  * injection_point_cache_remove</span>
+<span id="L157" title="Line 157: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     157</span>                 :                :  *</span>
+<span id="L158" title="Line 158: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     158</span>                 :                :  * Remove entry from the local cache.  Note that this leaks a callback</span>
+<span id="L159" title="Line 159: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     159</span>                 :                :  * loaded but removed later on, which should have no consequence from</span>
+<span id="L160" title="Line 160: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     160</span>                 :                :  * a testing perspective.</span>
+<span id="L161" title="Line 161: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     161</span>                 :                :  */</span>
+<span id="L162" title="Line 162: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     162</span>                 :                : static void</span>
+<span id="L163" title="Line 163: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     163</span>                 :                : injection_point_cache_remove(const char *name)</span>
+<span id="L164" title="Line 164: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     164</span>                 :                : {</span>
+<span id="L165" title="Line 165: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     165</span>                 :                :     bool        found PG_USED_FOR_ASSERTS_ONLY;</span>
+<span id="L166" title="Line 166: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     166</span>                 :                : </span>
+<span id="L167" title="Line 167: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     167</span>                 :                :     (void) hash_search(InjectionPointCache, name, HASH_REMOVE, &amp;found);</span>
+<span id="L168" title="Line 168: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     168</span>                 :                :     Assert(found);</span>
+<span id="L169" title="Line 169: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     169</span>                 :                : }</span>
+<span id="L170" title="Line 170: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     170</span>                 :                : </span>
+<span id="L171" title="Line 171: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     171</span>                 :                : /*</span>
+<span id="L172" title="Line 172: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     172</span>                 :                :  * injection_point_cache_load</span>
+<span id="L173" title="Line 173: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     173</span>                 :                :  *</span>
+<span id="L174" title="Line 174: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     174</span>                 :                :  * Load an injection point into the local cache.</span>
+<span id="L175" title="Line 175: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     175</span>                 :                :  */</span>
+<span id="L176" title="Line 176: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     176</span>                 :                : static InjectionPointCacheEntry *</span>
+<span id="L177" title="Line 177: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     177</span>                 :                : injection_point_cache_load(InjectionPointEntry *entry, int slot_idx, uint64 generation)</span>
+<span id="L178" title="Line 178: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     178</span>                 :                : {</span>
+<span id="L179" title="Line 179: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     179</span>                 :                :     char        path[MAXPGPATH];</span>
+<span id="L180" title="Line 180: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     180</span>                 :                :     void       *injection_callback_local;</span>
+<span id="L181" title="Line 181: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     181</span>                 :                : </span>
+<span id="L182" title="Line 182: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     182</span>                 :                :     snprintf(path, MAXPGPATH, &quot;%s/%s%s&quot;, pkglib_path,</span>
+<span id="L183" title="Line 183: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     183</span>                 :                :              entry-&gt;library, DLSUFFIX);</span>
+<span id="L184" title="Line 184: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     184</span>                 :                : </span>
+<span id="L185" title="Line 185: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     185</span>                 :                :     if (!pg_file_exists(path))</span>
+<span id="L186" title="Line 186: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     186</span>                 :                :         elog(ERROR, &quot;could not find library \&quot;%s\&quot; for injection point \&quot;%s\&quot;&quot;,</span>
+<span id="L187" title="Line 187: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     187</span>                 :                :              path, entry-&gt;name);</span>
+<span id="L188" title="Line 188: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     188</span>                 :                : </span>
+<span id="L189" title="Line 189: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     189</span>                 :                :     injection_callback_local = (void *)</span>
+<span id="L190" title="Line 190: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     190</span>                 :                :         load_external_function(path, entry-&gt;function, false, NULL);</span>
+<span id="L191" title="Line 191: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     191</span>                 :                : </span>
+<span id="L192" title="Line 192: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     192</span>                 :                :     if (injection_callback_local == NULL)</span>
+<span id="L193" title="Line 193: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     193</span>                 :                :         elog(ERROR, &quot;could not find function \&quot;%s\&quot; in library \&quot;%s\&quot; for injection point \&quot;%s\&quot;&quot;,</span>
+<span id="L194" title="Line 194: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     194</span>                 :                :              entry-&gt;function, path, entry-&gt;name);</span>
+<span id="L195" title="Line 195: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     195</span>                 :                : </span>
+<span id="L196" title="Line 196: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     196</span>                 :                :     /* add it to the local cache */</span>
+<span id="L197" title="Line 197: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     197</span>                 :                :     return injection_point_cache_add(entry-&gt;name,</span>
+<span id="L198" title="Line 198: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     198</span>                 :                :                                      slot_idx,</span>
+<span id="L199" title="Line 199: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     199</span>                 :                :                                      generation,</span>
+<span id="L200" title="Line 200: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     200</span>                 :                :                                      injection_callback_local,</span>
+<span id="L201" title="Line 201: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     201</span>                 :                :                                      entry-&gt;private_data);</span>
+<span id="L202" title="Line 202: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     202</span>                 :                : }</span>
+<span id="L203" title="Line 203: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     203</span>                 :                : </span>
+<span id="L204" title="Line 204: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     204</span>                 :                : /*</span>
+<span id="L205" title="Line 205: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     205</span>                 :                :  * injection_point_cache_get</span>
+<span id="L206" title="Line 206: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     206</span>                 :                :  *</span>
+<span id="L207" title="Line 207: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     207</span>                 :                :  * Retrieve an injection point from the local cache, if any.</span>
+<span id="L208" title="Line 208: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     208</span>                 :                :  */</span>
+<span id="L209" title="Line 209: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     209</span>                 :                : static InjectionPointCacheEntry *</span>
+<span id="L210" title="Line 210: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     210</span>                 :                : injection_point_cache_get(const char *name)</span>
+<span id="L211" title="Line 211: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     211</span>                 :                : {</span>
+<span id="L212" title="Line 212: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     212</span>                 :                :     bool        found;</span>
+<span id="L213" title="Line 213: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     213</span>                 :                :     InjectionPointCacheEntry *entry;</span>
+<span id="L214" title="Line 214: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     214</span>                 :                : </span>
+<span id="L215" title="Line 215: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     215</span>                 :                :     /* no callback if no cache yet */</span>
+<span id="L216" title="Line 216: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     216</span>                 :                :     if (InjectionPointCache == NULL)</span>
+<span id="L217" title="Line 217: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     217</span>                 :                :         return NULL;</span>
+<span id="L218" title="Line 218: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     218</span>                 :                : </span>
+<span id="L219" title="Line 219: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     219</span>                 :                :     entry = (InjectionPointCacheEntry *)</span>
+<span id="L220" title="Line 220: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     220</span>                 :                :         hash_search(InjectionPointCache, name, HASH_FIND, &amp;found);</span>
+<span id="L221" title="Line 221: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     221</span>                 :                : </span>
+<span id="L222" title="Line 222: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     222</span>                 :                :     if (found)</span>
+<span id="L223" title="Line 223: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     223</span>                 :                :         return entry;</span>
+<span id="L224" title="Line 224: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     224</span>                 :                : </span>
+<span id="L225" title="Line 225: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     225</span>                 :                :     return NULL;</span>
+<span id="L226" title="Line 226: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     226</span>                 :                : }</span>
+<span id="L227" title="Line 227: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     227</span>                 :                : #endif                          /* USE_INJECTION_POINTS */</span>
+<span id="L228" title="Line 228: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     228</span>                 :                : </span>
+<span id="L229" title="Line 229: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     229</span>                 :                : /*</span>
+<span id="L230" title="Line 230: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     230</span>                 :                :  * Return the space for dynamic shared hash table.</span>
+<span id="L231" title="Line 231: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     231</span>                 :                :  */</span>
+<span id="L232" title="Line 232: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     232</span>                 :                : Size</span>
+<span id="L233" title="Line 233: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">  <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">582</a> <a href="#top" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     233</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        1941 : InjectionPointShmemSize(void)</span></span>
+<span id="L234" title="Line 234: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     234</span>                 :                : {</span>
+<span id="L235" title="Line 235: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     235</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L236" title="Line 236: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     236</span>                 :                :     Size        sz = 0;</span>
+<span id="L237" title="Line 237: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     237</span>                 :                : </span>
+<span id="L238" title="Line 238: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     238</span>                 :                :     sz = add_size(sz, sizeof(InjectionPointsCtl));</span>
+<span id="L239" title="Line 239: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     239</span>                 :                :     return sz;</span>
+<span id="L240" title="Line 240: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     240</span>                 :                : #else</span>
+<span id="L241" title="Line 241: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     241</span>                 :<span class="tlaCBC">           1941 :     return 0;</span></span>
+<span id="L242" title="Line 242: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     242</span>                 :                : #endif</span>
+<span id="L243" title="Line 243: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     243</span>                 :                : }</span>
+<span id="L244" title="Line 244: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     244</span>                 :                : </span>
+<span id="L245" title="Line 245: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     245</span>                 :                : /*</span>
+<span id="L246" title="Line 246: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     246</span>                 :                :  * Allocate shmem space for dynamic shared hash.</span>
+<span id="L247" title="Line 247: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     247</span>                 :                :  */</span>
+<span id="L248" title="Line 248: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     248</span>                 :                : void</span>
+<span id="L249" title="Line 249: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     249</span>                 :<span class="tlaCBC">           1045 : InjectionPointShmemInit(void)</span></span>
+<span id="L250" title="Line 250: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     250</span>                 :                : {</span>
+<span id="L251" title="Line 251: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     251</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L252" title="Line 252: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     252</span>                 :                :     bool        found;</span>
+<span id="L253" title="Line 253: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     253</span>                 :                : </span>
+<span id="L254" title="Line 254: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     254</span>                 :                :     ActiveInjectionPoints = ShmemInitStruct(&quot;InjectionPoint hash&quot;,</span>
+<span id="L255" title="Line 255: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     255</span>                 :                :                                             sizeof(InjectionPointsCtl),</span>
+<span id="L256" title="Line 256: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     256</span>                 :                :                                             &amp;found);</span>
+<span id="L257" title="Line 257: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     257</span>                 :                :     if (!IsUnderPostmaster)</span>
+<span id="L258" title="Line 258: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     258</span>                 :                :     {</span>
+<span id="L259" title="Line 259: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     259</span>                 :                :         Assert(!found);</span>
+<span id="L260" title="Line 260: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     260</span>                 :                :         pg_atomic_init_u32(&amp;ActiveInjectionPoints-&gt;max_inuse, 0);</span>
+<span id="L261" title="Line 261: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     261</span>                 :                :         for (int i = 0; i &lt; MAX_INJECTION_POINTS; i++)</span>
+<span id="L262" title="Line 262: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     262</span>                 :                :             pg_atomic_init_u64(&amp;ActiveInjectionPoints-&gt;entries[i].generation, 0);</span>
+<span id="L263" title="Line 263: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     263</span>                 :                :     }</span>
+<span id="L264" title="Line 264: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     264</span>                 :                :     else</span>
+<span id="L265" title="Line 265: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     265</span>                 :                :         Assert(found);</span>
+<span id="L266" title="Line 266: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     266</span>                 :                : #endif</span>
+<span id="L267" title="Line 267: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     267</span>                 :<span class="tlaCBC">           1045 : }</span></span>
+<span id="L268" title="Line 268: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     268</span>                 :                : </span>
+<span id="L269" title="Line 269: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     269</span>                 :                : /*</span>
+<span id="L270" title="Line 270: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     270</span>                 :                :  * Attach a new injection point.</span>
+<span id="L271" title="Line 271: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     271</span>                 :                :  */</span>
+<span id="L272" title="Line 272: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     272</span>                 :                : void</span>
+<span id="L273" title="Line 273: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz"><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">  <a href="#L553" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">582</a> </span><a href="#L536" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> </span> <span class="lineNum">     273</span>                 :<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 : InjectionPointAttach(const char *name,</span></span>
+<span id="L274" title="Line 274: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     274</span>                 :                :                      const char *library,</span>
+<span id="L275" title="Line 275: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     275</span>                 :                :                      const char *function,</span>
+<span id="L276" title="Line 276: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     276</span>                 :                :                      const void *private_data,</span>
+<span id="L277" title="Line 277: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     277</span>                 :                :                      int private_data_size)</span>
+<span id="L278" title="Line 278: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     278</span>                 :                : {</span>
+<span id="L279" title="Line 279: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     279</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L280" title="Line 280: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     280</span>                 :                :     InjectionPointEntry *entry;</span>
+<span id="L281" title="Line 281: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     281</span>                 :                :     uint64      generation;</span>
+<span id="L282" title="Line 282: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     282</span>                 :                :     uint32      max_inuse;</span>
+<span id="L283" title="Line 283: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     283</span>                 :                :     int         free_idx;</span>
+<span id="L284" title="Line 284: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     284</span>                 :                : </span>
+<span id="L285" title="Line 285: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     285</span>                 :                :     if (strlen(name) &gt;= INJ_NAME_MAXLEN)</span>
+<span id="L286" title="Line 286: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     286</span>                 :                :         elog(ERROR, &quot;injection point name %s too long (maximum of %u)&quot;,</span>
+<span id="L287" title="Line 287: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     287</span>                 :                :              name, INJ_NAME_MAXLEN);</span>
+<span id="L288" title="Line 288: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     288</span>                 :                :     if (strlen(library) &gt;= INJ_LIB_MAXLEN)</span>
+<span id="L289" title="Line 289: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     289</span>                 :                :         elog(ERROR, &quot;injection point library %s too long (maximum of %u)&quot;,</span>
+<span id="L290" title="Line 290: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     290</span>                 :                :              library, INJ_LIB_MAXLEN);</span>
+<span id="L291" title="Line 291: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     291</span>                 :                :     if (strlen(function) &gt;= INJ_FUNC_MAXLEN)</span>
+<span id="L292" title="Line 292: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     292</span>                 :                :         elog(ERROR, &quot;injection point function %s too long (maximum of %u)&quot;,</span>
+<span id="L293" title="Line 293: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     293</span>                 :                :              function, INJ_FUNC_MAXLEN);</span>
+<span id="L294" title="Line 294: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     294</span>                 :                :     if (private_data_size &gt;= INJ_PRIVATE_MAXLEN)</span>
+<span id="L295" title="Line 295: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     295</span>                 :                :         elog(ERROR, &quot;injection point data too long (maximum of %u)&quot;,</span>
+<span id="L296" title="Line 296: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     296</span>                 :                :              INJ_PRIVATE_MAXLEN);</span>
+<span id="L297" title="Line 297: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     297</span>                 :                : </span>
+<span id="L298" title="Line 298: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     298</span>                 :                :     /*</span>
+<span id="L299" title="Line 299: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     299</span>                 :                :      * Allocate and register a new injection point.  A new point should not</span>
+<span id="L300" title="Line 300: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     300</span>                 :                :      * exist.  For testing purposes this should be fine.</span>
+<span id="L301" title="Line 301: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     301</span>                 :                :      */</span>
+<span id="L302" title="Line 302: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     302</span>                 :                :     LWLockAcquire(InjectionPointLock, LW_EXCLUSIVE);</span>
+<span id="L303" title="Line 303: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     303</span>                 :                :     max_inuse = pg_atomic_read_u32(&amp;ActiveInjectionPoints-&gt;max_inuse);</span>
+<span id="L304" title="Line 304: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     304</span>                 :                :     free_idx = -1;</span>
+<span id="L305" title="Line 305: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     305</span>                 :                : </span>
+<span id="L306" title="Line 306: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     306</span>                 :                :     for (int idx = 0; idx &lt; max_inuse; idx++)</span>
+<span id="L307" title="Line 307: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     307</span>                 :                :     {</span>
+<span id="L308" title="Line 308: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     308</span>                 :                :         entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L309" title="Line 309: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     309</span>                 :                :         generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L310" title="Line 310: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     310</span>                 :                :         if (generation % 2 == 0)</span>
+<span id="L311" title="Line 311: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     311</span>                 :                :         {</span>
+<span id="L312" title="Line 312: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     312</span>                 :                :             /*</span>
+<span id="L313" title="Line 313: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     313</span>                 :                :              * Found a free slot where we can add the new entry, but keep</span>
+<span id="L314" title="Line 314: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     314</span>                 :                :              * going so that we will find out if the entry already exists.</span>
+<span id="L315" title="Line 315: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     315</span>                 :                :              */</span>
+<span id="L316" title="Line 316: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     316</span>                 :                :             if (free_idx == -1)</span>
+<span id="L317" title="Line 317: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     317</span>                 :                :                 free_idx = idx;</span>
+<span id="L318" title="Line 318: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     318</span>                 :                :         }</span>
+<span id="L319" title="Line 319: commit a36aa223ec44 on 2024-08-22 by noah@leadboat.com">                           <span class="lineNum">     319</span>                 :                :         else if (strcmp(entry-&gt;name, name) == 0)</span>
+<span id="L320" title="Line 320: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     320</span>                 :                :             elog(ERROR, &quot;injection point \&quot;%s\&quot; already defined&quot;, name);</span>
+<span id="L321" title="Line 321: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     321</span>                 :                :     }</span>
+<span id="L322" title="Line 322: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     322</span>                 :                :     if (free_idx == -1)</span>
+<span id="L323" title="Line 323: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     323</span>                 :                :     {</span>
+<span id="L324" title="Line 324: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     324</span>                 :                :         if (max_inuse == MAX_INJECTION_POINTS)</span>
+<span id="L325" title="Line 325: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     325</span>                 :                :             elog(ERROR, &quot;too many injection points&quot;);</span>
+<span id="L326" title="Line 326: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     326</span>                 :                :         free_idx = max_inuse;</span>
+<span id="L327" title="Line 327: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     327</span>                 :                :     }</span>
+<span id="L328" title="Line 328: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     328</span>                 :                :     entry = &amp;ActiveInjectionPoints-&gt;entries[free_idx];</span>
+<span id="L329" title="Line 329: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     329</span>                 :                :     generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L330" title="Line 330: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     330</span>                 :                :     Assert(generation % 2 == 0);</span>
+<span id="L331" title="Line 331: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     331</span>                 :                : </span>
+<span id="L332" title="Line 332: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     332</span>                 :                :     /* Save the entry */</span>
+<span id="L333" title="Line 333: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     333</span>                 :                :     strlcpy(entry-&gt;name, name, sizeof(entry-&gt;name));</span>
+<span id="L334" title="Line 334: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     334</span>                 :                :     entry-&gt;name[INJ_NAME_MAXLEN - 1] = '\0';</span>
+<span id="L335" title="Line 335: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     335</span>                 :                :     strlcpy(entry-&gt;library, library, sizeof(entry-&gt;library));</span>
+<span id="L336" title="Line 336: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     336</span>                 :                :     entry-&gt;library[INJ_LIB_MAXLEN - 1] = '\0';</span>
+<span id="L337" title="Line 337: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     337</span>                 :                :     strlcpy(entry-&gt;function, function, sizeof(entry-&gt;function));</span>
+<span id="L338" title="Line 338: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     338</span>                 :                :     entry-&gt;function[INJ_FUNC_MAXLEN - 1] = '\0';</span>
+<span id="L339" title="Line 339: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     339</span>                 :                :     if (private_data != NULL)</span>
+<span id="L340" title="Line 340: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     340</span>                 :                :         memcpy(entry-&gt;private_data, private_data, private_data_size);</span>
+<span id="L341" title="Line 341: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     341</span>                 :                : </span>
+<span id="L342" title="Line 342: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     342</span>                 :                :     pg_write_barrier();</span>
+<span id="L343" title="Line 343: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     343</span>                 :                :     pg_atomic_write_u64(&amp;entry-&gt;generation, generation + 1);</span>
+<span id="L344" title="Line 344: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     344</span>                 :                : </span>
+<span id="L345" title="Line 345: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     345</span>                 :                :     if (free_idx + 1 &gt; max_inuse)</span>
+<span id="L346" title="Line 346: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     346</span>                 :                :         pg_atomic_write_u32(&amp;ActiveInjectionPoints-&gt;max_inuse, free_idx + 1);</span>
+<span id="L347" title="Line 347: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     347</span>                 :                : </span>
+<span id="L348" title="Line 348: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     348</span>                 :                :     LWLockRelease(InjectionPointLock);</span>
+<span id="L349" title="Line 349: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     349</span>                 :                : </span>
+<span id="L350" title="Line 350: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     350</span>                 :                : #else</span>
+<span id="L351" title="Line 351: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz"><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     351</span>         [<span class="tlaUBC"> <a href="#L408" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L408" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;injection points are not supported by this build&quot;);</span></span>
+<span id="L352" title="Line 352: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     352</span>                 :                : #endif</span>
+<span id="L353" title="Line 353: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     353</span>                 :                : }</span>
+<span id="L354" title="Line 354: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     354</span>                 :                : </span>
+<span id="L355" title="Line 355: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     355</span>                 :                : /*</span>
+<span id="L356" title="Line 356: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     356</span>                 :                :  * Detach an existing injection point.</span>
+<span id="L357" title="Line 357: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     357</span>                 :                :  *</span>
+<span id="L358" title="Line 358: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     358</span>                 :                :  * Returns true if the injection point was detached, false otherwise.</span>
+<span id="L359" title="Line 359: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     359</span>                 :                :  */</span>
+<span id="L360" title="Line 360: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     360</span>                 :                : bool</span>
+<span id="L361" title="Line 361: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz"><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     361</span>                 :<span class="tlaUBC">              0 : InjectionPointDetach(const char *name)</span></span>
+<span id="L362" title="Line 362: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     362</span>                 :                : {</span>
+<span id="L363" title="Line 363: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     363</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L364" title="Line 364: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     364</span>                 :                :     bool        found = false;</span>
+<span id="L365" title="Line 365: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     365</span>                 :                :     int         idx;</span>
+<span id="L366" title="Line 366: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     366</span>                 :                :     int         max_inuse;</span>
+<span id="L367" title="Line 367: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     367</span>                 :                : </span>
+<span id="L368" title="Line 368: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     368</span>                 :                :     LWLockAcquire(InjectionPointLock, LW_EXCLUSIVE);</span>
+<span id="L369" title="Line 369: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     369</span>                 :                : </span>
+<span id="L370" title="Line 370: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     370</span>                 :                :     /* Find it in the shmem array, and mark the slot as unused */</span>
+<span id="L371" title="Line 371: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     371</span>                 :                :     max_inuse = (int) pg_atomic_read_u32(&amp;ActiveInjectionPoints-&gt;max_inuse);</span>
+<span id="L372" title="Line 372: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     372</span>                 :                :     for (idx = max_inuse - 1; idx &gt;= 0; --idx)</span>
+<span id="L373" title="Line 373: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     373</span>                 :                :     {</span>
+<span id="L374" title="Line 374: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     374</span>                 :                :         InjectionPointEntry *entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L375" title="Line 375: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     375</span>                 :                :         uint64      generation;</span>
+<span id="L376" title="Line 376: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     376</span>                 :                : </span>
+<span id="L377" title="Line 377: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     377</span>                 :                :         generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L378" title="Line 378: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     378</span>                 :                :         if (generation % 2 == 0)</span>
+<span id="L379" title="Line 379: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     379</span>                 :                :             continue;           /* empty slot */</span>
+<span id="L380" title="Line 380: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     380</span>                 :                : </span>
+<span id="L381" title="Line 381: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     381</span>                 :                :         if (strcmp(entry-&gt;name, name) == 0)</span>
+<span id="L382" title="Line 382: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     382</span>                 :                :         {</span>
+<span id="L383" title="Line 383: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     383</span>                 :                :             Assert(!found);</span>
+<span id="L384" title="Line 384: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     384</span>                 :                :             found = true;</span>
+<span id="L385" title="Line 385: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     385</span>                 :                :             pg_atomic_write_u64(&amp;entry-&gt;generation, generation + 1);</span>
+<span id="L386" title="Line 386: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     386</span>                 :                :             break;</span>
+<span id="L387" title="Line 387: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     387</span>                 :                :         }</span>
+<span id="L388" title="Line 388: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     388</span>                 :                :     }</span>
+<span id="L389" title="Line 389: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     389</span>                 :                : </span>
+<span id="L390" title="Line 390: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     390</span>                 :                :     /* If we just removed the highest-numbered entry, update 'max_inuse' */</span>
+<span id="L391" title="Line 391: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     391</span>                 :                :     if (found &amp;&amp; idx == max_inuse - 1)</span>
+<span id="L392" title="Line 392: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     392</span>                 :                :     {</span>
+<span id="L393" title="Line 393: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     393</span>                 :                :         for (; idx &gt;= 0; --idx)</span>
+<span id="L394" title="Line 394: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     394</span>                 :                :         {</span>
+<span id="L395" title="Line 395: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     395</span>                 :                :             InjectionPointEntry *entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L396" title="Line 396: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     396</span>                 :                :             uint64      generation;</span>
+<span id="L397" title="Line 397: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     397</span>                 :                : </span>
+<span id="L398" title="Line 398: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     398</span>                 :                :             generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L399" title="Line 399: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     399</span>                 :                :             if (generation % 2 != 0)</span>
+<span id="L400" title="Line 400: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     400</span>                 :                :                 break;</span>
+<span id="L401" title="Line 401: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     401</span>                 :                :         }</span>
+<span id="L402" title="Line 402: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     402</span>                 :                :         pg_atomic_write_u32(&amp;ActiveInjectionPoints-&gt;max_inuse, idx + 1);</span>
+<span id="L403" title="Line 403: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     403</span>                 :                :     }</span>
+<span id="L404" title="Line 404: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     404</span>                 :                :     LWLockRelease(InjectionPointLock);</span>
+<span id="L405" title="Line 405: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     405</span>                 :                : </span>
+<span id="L406" title="Line 406: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     406</span>                 :                :     return found;</span>
+<span id="L407" title="Line 407: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     407</span>                 :                : #else</span>
+<span id="L408" title="Line 408: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz"><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     408</span>         [<span class="tlaUBC"> <a href="#L536" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L536" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L409" title="Line 409: commit 33181b48fd0e on 2024-05-12 by michael@paquier.xyz">                           <span class="lineNum">     409</span>                 :                :     return true;                /* silence compiler */</span>
+<span id="L410" title="Line 410: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     410</span>                 :                : #endif</span>
+<span id="L411" title="Line 411: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     411</span>                 :                : }</span>
+<span id="L412" title="Line 412: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     412</span>                 :                : </span>
+<span id="L413" title="Line 413: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     413</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L414" title="Line 414: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     414</span>                 :                : /*</span>
+<span id="L415" title="Line 415: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     415</span>                 :                :  * Common workhorse of InjectionPointRun() and InjectionPointLoad()</span>
+<span id="L416" title="Line 416: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     416</span>                 :                :  *</span>
+<span id="L417" title="Line 417: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     417</span>                 :                :  * Checks if an injection point exists in shared memory, and update</span>
+<span id="L418" title="Line 418: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     418</span>                 :                :  * the local cache entry accordingly.</span>
+<span id="L419" title="Line 419: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     419</span>                 :                :  */</span>
+<span id="L420" title="Line 420: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     420</span>                 :                : static InjectionPointCacheEntry *</span>
+<span id="L421" title="Line 421: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     421</span>                 :                : InjectionPointCacheRefresh(const char *name)</span>
+<span id="L422" title="Line 422: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     422</span>                 :                : {</span>
+<span id="L423" title="Line 423: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     423</span>                 :                :     uint32      max_inuse;</span>
+<span id="L424" title="Line 424: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     424</span>                 :                :     int         namelen;</span>
+<span id="L425" title="Line 425: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     425</span>                 :                :     InjectionPointEntry local_copy;</span>
+<span id="L426" title="Line 426: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     426</span>                 :                :     InjectionPointCacheEntry *cached;</span>
+<span id="L427" title="Line 427: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     427</span>                 :                : </span>
+<span id="L428" title="Line 428: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     428</span>                 :                :     /*</span>
+<span id="L429" title="Line 429: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     429</span>                 :                :      * First read the number of in-use slots.  More entries can be added or</span>
+<span id="L430" title="Line 430: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     430</span>                 :                :      * existing ones can be removed while we're reading them.  If the entry</span>
+<span id="L431" title="Line 431: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     431</span>                 :                :      * we're looking for is concurrently added or removed, we might or might</span>
+<span id="L432" title="Line 432: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     432</span>                 :                :      * not see it.  That's OK.</span>
+<span id="L433" title="Line 433: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     433</span>                 :                :      */</span>
+<span id="L434" title="Line 434: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     434</span>                 :                :     max_inuse = pg_atomic_read_u32(&amp;ActiveInjectionPoints-&gt;max_inuse);</span>
+<span id="L435" title="Line 435: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     435</span>                 :                :     if (max_inuse == 0)</span>
+<span id="L436" title="Line 436: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     436</span>                 :                :     {</span>
+<span id="L437" title="Line 437: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     437</span>                 :                :         if (InjectionPointCache)</span>
+<span id="L438" title="Line 438: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     438</span>                 :                :         {</span>
+<span id="L439" title="Line 439: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     439</span>                 :                :             hash_destroy(InjectionPointCache);</span>
+<span id="L440" title="Line 440: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     440</span>                 :                :             InjectionPointCache = NULL;</span>
+<span id="L441" title="Line 441: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     441</span>                 :                :         }</span>
+<span id="L442" title="Line 442: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     442</span>                 :                :         return NULL;</span>
+<span id="L443" title="Line 443: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     443</span>                 :                :     }</span>
+<span id="L444" title="Line 444: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     444</span>                 :                : </span>
+<span id="L445" title="Line 445: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     445</span>                 :                :     /*</span>
+<span id="L446" title="Line 446: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     446</span>                 :                :      * If we have this entry in the local cache already, check if the cached</span>
+<span id="L447" title="Line 447: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     447</span>                 :                :      * entry is still valid.</span>
+<span id="L448" title="Line 448: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     448</span>                 :                :      */</span>
+<span id="L449" title="Line 449: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     449</span>                 :                :     cached = injection_point_cache_get(name);</span>
+<span id="L450" title="Line 450: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     450</span>                 :                :     if (cached)</span>
+<span id="L451" title="Line 451: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     451</span>                 :                :     {</span>
+<span id="L452" title="Line 452: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     452</span>                 :                :         int         idx = cached-&gt;slot_idx;</span>
+<span id="L453" title="Line 453: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     453</span>                 :                :         InjectionPointEntry *entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L454" title="Line 454: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     454</span>                 :                : </span>
+<span id="L455" title="Line 455: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     455</span>                 :                :         if (pg_atomic_read_u64(&amp;entry-&gt;generation) == cached-&gt;generation)</span>
+<span id="L456" title="Line 456: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     456</span>                 :                :         {</span>
+<span id="L457" title="Line 457: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     457</span>                 :                :             /* still good */</span>
+<span id="L458" title="Line 458: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     458</span>                 :                :             return cached;</span>
+<span id="L459" title="Line 459: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     459</span>                 :                :         }</span>
+<span id="L460" title="Line 460: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     460</span>                 :                :         injection_point_cache_remove(name);</span>
+<span id="L461" title="Line 461: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     461</span>                 :                :         cached = NULL;</span>
+<span id="L462" title="Line 462: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     462</span>                 :                :     }</span>
+<span id="L463" title="Line 463: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     463</span>                 :                : </span>
+<span id="L464" title="Line 464: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     464</span>                 :                :     /*</span>
+<span id="L465" title="Line 465: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     465</span>                 :                :      * Search the shared memory array.</span>
+<span id="L466" title="Line 466: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     466</span>                 :                :      *</span>
+<span id="L467" title="Line 467: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     467</span>                 :                :      * It's possible that the entry we're looking for is concurrently detached</span>
+<span id="L468" title="Line 468: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     468</span>                 :                :      * or attached.  Or detached *and* re-attached, to the same slot or a</span>
+<span id="L469" title="Line 469: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     469</span>                 :                :      * different slot.  Detach and re-attach is not an atomic operation, so</span>
+<span id="L470" title="Line 470: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     470</span>                 :                :      * it's OK for us to return the old value, NULL, or the new value in such</span>
+<span id="L471" title="Line 471: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     471</span>                 :                :      * cases.</span>
+<span id="L472" title="Line 472: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     472</span>                 :                :      */</span>
+<span id="L473" title="Line 473: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     473</span>                 :                :     namelen = strlen(name);</span>
+<span id="L474" title="Line 474: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     474</span>                 :                :     for (int idx = 0; idx &lt; max_inuse; idx++)</span>
+<span id="L475" title="Line 475: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     475</span>                 :                :     {</span>
+<span id="L476" title="Line 476: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     476</span>                 :                :         InjectionPointEntry *entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L477" title="Line 477: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     477</span>                 :                :         uint64      generation;</span>
+<span id="L478" title="Line 478: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     478</span>                 :                : </span>
+<span id="L479" title="Line 479: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     479</span>                 :                :         /*</span>
+<span id="L480" title="Line 480: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     480</span>                 :                :          * Read the generation number so that we can detect concurrent</span>
+<span id="L481" title="Line 481: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     481</span>                 :                :          * modifications.  The read barrier ensures that the generation number</span>
+<span id="L482" title="Line 482: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     482</span>                 :                :          * is loaded before any of the other fields.</span>
+<span id="L483" title="Line 483: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     483</span>                 :                :          */</span>
+<span id="L484" title="Line 484: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     484</span>                 :                :         generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L485" title="Line 485: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     485</span>                 :                :         if (generation % 2 == 0)</span>
+<span id="L486" title="Line 486: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     486</span>                 :                :             continue;           /* empty slot */</span>
+<span id="L487" title="Line 487: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     487</span>                 :                :         pg_read_barrier();</span>
+<span id="L488" title="Line 488: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     488</span>                 :                : </span>
+<span id="L489" title="Line 489: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     489</span>                 :                :         /* Is this the injection point we're looking for? */</span>
+<span id="L490" title="Line 490: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     490</span>                 :                :         if (memcmp(entry-&gt;name, name, namelen + 1) != 0)</span>
+<span id="L491" title="Line 491: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     491</span>                 :                :             continue;</span>
+<span id="L492" title="Line 492: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     492</span>                 :                : </span>
+<span id="L493" title="Line 493: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     493</span>                 :                :         /*</span>
+<span id="L494" title="Line 494: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     494</span>                 :                :          * The entry can change at any time, if the injection point is</span>
+<span id="L495" title="Line 495: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     495</span>                 :                :          * concurrently detached.  Copy it to local memory, and re-check the</span>
+<span id="L496" title="Line 496: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     496</span>                 :                :          * generation.  If the generation hasn't changed, we know our local</span>
+<span id="L497" title="Line 497: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     497</span>                 :                :          * copy is coherent.</span>
+<span id="L498" title="Line 498: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     498</span>                 :                :          */</span>
+<span id="L499" title="Line 499: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     499</span>                 :                :         memcpy(&amp;local_copy, entry, sizeof(InjectionPointEntry));</span>
+<span id="L500" title="Line 500: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     500</span>                 :                : </span>
+<span id="L501" title="Line 501: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     501</span>                 :                :         pg_read_barrier();</span>
+<span id="L502" title="Line 502: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     502</span>                 :                :         if (pg_atomic_read_u64(&amp;entry-&gt;generation) != generation)</span>
+<span id="L503" title="Line 503: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     503</span>                 :                :         {</span>
+<span id="L504" title="Line 504: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     504</span>                 :                :             /*</span>
+<span id="L505" title="Line 505: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     505</span>                 :                :              * The entry was concurrently detached.</span>
+<span id="L506" title="Line 506: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     506</span>                 :                :              *</span>
+<span id="L507" title="Line 507: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     507</span>                 :                :              * Continue the search, because if the generation number changed,</span>
+<span id="L508" title="Line 508: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     508</span>                 :                :              * we cannot trust the result of the name comparison we did above.</span>
+<span id="L509" title="Line 509: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     509</span>                 :                :              * It's theoretically possible that it falsely matched a mixed-up</span>
+<span id="L510" title="Line 510: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     510</span>                 :                :              * state of the old and new name, if the slot was recycled with a</span>
+<span id="L511" title="Line 511: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     511</span>                 :                :              * different name.</span>
+<span id="L512" title="Line 512: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     512</span>                 :                :              */</span>
+<span id="L513" title="Line 513: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     513</span>                 :                :             continue;</span>
+<span id="L514" title="Line 514: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     514</span>                 :                :         }</span>
+<span id="L515" title="Line 515: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     515</span>                 :                : </span>
+<span id="L516" title="Line 516: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     516</span>                 :                :         /* Success! Load it into the cache and return it */</span>
+<span id="L517" title="Line 517: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     517</span>                 :                :         return injection_point_cache_load(&amp;local_copy, idx, generation);</span>
+<span id="L518" title="Line 518: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     518</span>                 :                :     }</span>
+<span id="L519" title="Line 519: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     519</span>                 :                :     return NULL;</span>
+<span id="L520" title="Line 520: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     520</span>                 :                : }</span>
+<span id="L521" title="Line 521: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     521</span>                 :                : #endif</span>
+<span id="L522" title="Line 522: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     522</span>                 :                : </span>
+<span id="L523" title="Line 523: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     523</span>                 :                : /*</span>
+<span id="L524" title="Line 524: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     524</span>                 :                :  * Load an injection point into the local cache.</span>
+<span id="L525" title="Line 525: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     525</span>                 :                :  *</span>
+<span id="L526" title="Line 526: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     526</span>                 :                :  * This is useful to be able to load an injection point before running it,</span>
+<span id="L527" title="Line 527: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     527</span>                 :                :  * especially if the injection point is called in a code path where memory</span>
+<span id="L528" title="Line 528: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     528</span>                 :                :  * allocations cannot happen, like critical sections.</span>
+<span id="L529" title="Line 529: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     529</span>                 :                :  */</span>
+<span id="L530" title="Line 530: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     530</span>                 :                : void</span>
+<span id="L531" title="Line 531: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 407 days ago (bin 4: (360..) days)" class="tlaUBC">  407 <a href="#L578" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     531</span>                 :<span class="tlaUBC">              0 : InjectionPointLoad(const char *name)</span></span>
+<span id="L532" title="Line 532: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     532</span>                 :                : {</span>
+<span id="L533" title="Line 533: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     533</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L534" title="Line 534: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     534</span>                 :                :     InjectionPointCacheRefresh(name);</span>
+<span id="L535" title="Line 535: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     535</span>                 :                : #else</span>
+<span id="L536" title="Line 536: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz"><span title="michael@paquier.xyz 417 days ago (bin 4: (360..) days)" class="tlaUBC">  417 </span><a href="#top" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 417 days ago (bin 4: (360..) days)" class="tlaUBC"> </span> <span class="lineNum">     536</span>         [<span class="tlaUBC"> <a href="#L553" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L553" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L537" title="Line 537: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     537</span>                 :                : #endif</span>
+<span id="L538" title="Line 538: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     538</span>                 :                : }</span>
+<span id="L539" title="Line 539: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     539</span>                 :                : </span>
+<span id="L540" title="Line 540: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     540</span>                 :                : /*</span>
+<span id="L541" title="Line 541: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     541</span>                 :                :  * Execute an injection point, if defined.</span>
+<span id="L542" title="Line 542: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     542</span>                 :                :  */</span>
+<span id="L543" title="Line 543: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     543</span>                 :                : void</span>
+<span id="L544" title="Line 544: commit 371f2db8b05e on 2025-05-10 by michael@paquier.xyz"><span title="michael@paquier.xyz 108 days ago (bin 3: (30,360] days)" class="tlaUBC">  <a href="#L561" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">108</a>                     </span> <span class="lineNum">     544</span>                 :<span class="tlaUBC">              0 : InjectionPointRun(const char *name, void *arg)</span></span>
+<span id="L545" title="Line 545: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     545</span>                 :                : {</span>
+<span id="L546" title="Line 546: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     546</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L547" title="Line 547: commit 4b211003ecc2 on 2024-07-05 by michael@paquier.xyz">                           <span class="lineNum">     547</span>                 :                :     InjectionPointCacheEntry *cache_entry;</span>
+<span id="L548" title="Line 548: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     548</span>                 :                : </span>
+<span id="L549" title="Line 549: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     549</span>                 :                :     cache_entry = InjectionPointCacheRefresh(name);</span>
+<span id="L550" title="Line 550: commit 86db52a5062a on 2024-07-15 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     550</span>                 :                :     if (cache_entry)</span>
+<span id="L551" title="Line 551: commit 371f2db8b05e on 2025-05-10 by michael@paquier.xyz">                           <span class="lineNum">     551</span>                 :                :         cache_entry-&gt;callback(name, cache_entry-&gt;private_data, arg);</span>
+<span id="L552" title="Line 552: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     552</span>                 :                : #else</span>
+<span id="L553" title="Line 553: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz"><span title="michael@paquier.xyz 582 days ago (bin 4: (360..) days)" class="tlaUBC">  <a href="#L570" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">582</a>                     </span> <span class="lineNum">     553</span>         [<span class="tlaUBC"> <a href="#L570" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L570" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L554" title="Line 554: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     554</span>                 :                : #endif</span>
+<span id="L555" title="Line 555: commit d86d20f0ba79 on 2024-01-22 by michael@paquier.xyz">                           <span class="lineNum">     555</span>                 :                : }</span>
+<span id="L556" title="Line 556: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     556</span>                 :                : </span>
+<span id="L557" title="Line 557: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     557</span>                 :                : /*</span>
+<span id="L558" title="Line 558: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     558</span>                 :                :  * Execute an injection point directly from the cache, if defined.</span>
+<span id="L559" title="Line 559: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     559</span>                 :                :  */</span>
+<span id="L560" title="Line 560: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     560</span>                 :                : void</span>
+<span id="L561" title="Line 561: commit 371f2db8b05e on 2025-05-10 by michael@paquier.xyz"><span title="michael@paquier.xyz 108 days ago (bin 3: (30,360] days)" class="tlaUBC">  <a href="#top" title="next UBC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">108</a>                     </span> <span class="lineNum">     561</span>                 :<span class="tlaUBC">              0 : InjectionPointCached(const char *name, void *arg)</span></span>
+<span id="L562" title="Line 562: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     562</span>                 :                : {</span>
+<span id="L563" title="Line 563: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     563</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L564" title="Line 564: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     564</span>                 :                :     InjectionPointCacheEntry *cache_entry;</span>
+<span id="L565" title="Line 565: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     565</span>                 :                : </span>
+<span id="L566" title="Line 566: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     566</span>                 :                :     cache_entry = injection_point_cache_get(name);</span>
+<span id="L567" title="Line 567: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     567</span>                 :                :     if (cache_entry)</span>
+<span id="L568" title="Line 568: commit 371f2db8b05e on 2025-05-10 by michael@paquier.xyz">                           <span class="lineNum">     568</span>                 :                :         cache_entry-&gt;callback(name, cache_entry-&gt;private_data, arg);</span>
+<span id="L569" title="Line 569: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     569</span>                 :                : #else</span>
+<span id="L570" title="Line 570: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz"><span title="michael@paquier.xyz 404 days ago (bin 4: (360..) days)" class="tlaUBC">  <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">404</a>                     </span> <span class="lineNum">     570</span>         [<span class="tlaUBC"> <a href="#L583" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L583" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L571" title="Line 571: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     571</span>                 :                : #endif</span>
+<span id="L572" title="Line 572: commit a0a5869a8598 on 2024-07-18 by michael@paquier.xyz">                           <span class="lineNum">     572</span>                 :                : }</span>
+<span id="L573" title="Line 573: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     573</span>                 :                : </span>
+<span id="L574" title="Line 574: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     574</span>                 :                : /*</span>
+<span id="L575" title="Line 575: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     575</span>                 :                :  * Test if an injection point is defined.</span>
+<span id="L576" title="Line 576: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     576</span>                 :                :  */</span>
+<span id="L577" title="Line 577: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     577</span>                 :                : bool</span>
+<span id="L578" title="Line 578: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 396 days ago (bin 4: (360..) days)" class="tlaUBC">  396 <a href="#top" title="next UBC in &ldquo;heikki.linnakangas@iki.fi&rdquo; bin" class="tlaBgUBC">heikki.linnakangas@i</a></span> <span class="lineNum">     578</span>                 :<span class="tlaUBC">              0 : IsInjectionPointAttached(const char *name)</span></span>
+<span id="L579" title="Line 579: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     579</span>                 :                : {</span>
+<span id="L580" title="Line 580: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     580</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L581" title="Line 581: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     581</span>                 :                :     return InjectionPointCacheRefresh(name) != NULL;</span>
+<span id="L582" title="Line 582: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     582</span>                 :                : #else</span>
+<span id="L583" title="Line 583: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi"><span title="heikki.linnakangas@iki.fi 396 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     583</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L584" title="Line 584: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     584</span>                 :                :     return false;               /* silence compiler */</span>
+<span id="L585" title="Line 585: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     585</span>                 :                : #endif</span>
+<span id="L586" title="Line 586: commit 20e0e7da9bc0 on 2024-07-26 by heikki.linnakangas@iki.fi">                           <span class="lineNum">     586</span>                 :                : }</span>
+<span id="L587" title="Line 587: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     587</span>                 :                : </span>
+<span id="L588" title="Line 588: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     588</span>                 :                : /*</span>
+<span id="L589" title="Line 589: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     589</span>                 :                :  * Retrieve a list of all the injection points currently attached.</span>
+<span id="L590" title="Line 590: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     590</span>                 :                :  *</span>
+<span id="L591" title="Line 591: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     591</span>                 :                :  * This list is palloc'd in the current memory context.</span>
+<span id="L592" title="Line 592: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     592</span>                 :                :  */</span>
+<span id="L593" title="Line 593: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     593</span>                 :                : List *</span>
+<span id="L594" title="Line 594: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz"><span title="michael@paquier.xyz 54 days ago (bin 3: (30,360] days)" class="tlaUNC tlaBgUNC">   <a href="#top" title="next UNC in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUNC">54</a> </span><a href="#top" title="next UNC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUNC">michael@paquier.xyz</a><span title="michael@paquier.xyz 54 days ago (bin 3: (30,360] days)" class="tlaUNC tlaBgUNC"> </span> <span class="lineNum">     594</span>                 :<a href="#top" class="tlaBgUNC"  title="Next UNC group">UNC</a><span class="tlaUNC tlaBgUNC">           0 : InjectionPointList(void)</span></span>
+<span id="L595" title="Line 595: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     595</span>                 :                : {</span>
+<span id="L596" title="Line 596: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     596</span>                 :                : #ifdef USE_INJECTION_POINTS</span>
+<span id="L597" title="Line 597: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     597</span>                 :                :     List       *inj_points = NIL;</span>
+<span id="L598" title="Line 598: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     598</span>                 :                :     uint32      max_inuse;</span>
+<span id="L599" title="Line 599: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     599</span>                 :                : </span>
+<span id="L600" title="Line 600: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     600</span>                 :                :     LWLockAcquire(InjectionPointLock, LW_SHARED);</span>
+<span id="L601" title="Line 601: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     601</span>                 :                : </span>
+<span id="L602" title="Line 602: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     602</span>                 :                :     max_inuse = pg_atomic_read_u32(&amp;ActiveInjectionPoints-&gt;max_inuse);</span>
+<span id="L603" title="Line 603: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     603</span>                 :                : </span>
+<span id="L604" title="Line 604: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     604</span>                 :                :     for (uint32 idx = 0; idx &lt; max_inuse; idx++)</span>
+<span id="L605" title="Line 605: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     605</span>                 :                :     {</span>
+<span id="L606" title="Line 606: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     606</span>                 :                :         InjectionPointEntry *entry;</span>
+<span id="L607" title="Line 607: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     607</span>                 :                :         InjectionPointData *inj_point;</span>
+<span id="L608" title="Line 608: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     608</span>                 :                :         uint64      generation;</span>
+<span id="L609" title="Line 609: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     609</span>                 :                : </span>
+<span id="L610" title="Line 610: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     610</span>                 :                :         entry = &amp;ActiveInjectionPoints-&gt;entries[idx];</span>
+<span id="L611" title="Line 611: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     611</span>                 :                :         generation = pg_atomic_read_u64(&amp;entry-&gt;generation);</span>
+<span id="L612" title="Line 612: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     612</span>                 :                : </span>
+<span id="L613" title="Line 613: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     613</span>                 :                :         /* skip free slots */</span>
+<span id="L614" title="Line 614: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     614</span>                 :                :         if (generation % 2 == 0)</span>
+<span id="L615" title="Line 615: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     615</span>                 :                :             continue;</span>
+<span id="L616" title="Line 616: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     616</span>                 :                : </span>
+<span id="L617" title="Line 617: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     617</span>                 :                :         inj_point = (InjectionPointData *) palloc0(sizeof(InjectionPointData));</span>
+<span id="L618" title="Line 618: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     618</span>                 :                :         inj_point-&gt;name = pstrdup(entry-&gt;name);</span>
+<span id="L619" title="Line 619: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     619</span>                 :                :         inj_point-&gt;library = pstrdup(entry-&gt;library);</span>
+<span id="L620" title="Line 620: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     620</span>                 :                :         inj_point-&gt;function = pstrdup(entry-&gt;function);</span>
+<span id="L621" title="Line 621: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     621</span>                 :                :         inj_points = lappend(inj_points, inj_point);</span>
+<span id="L622" title="Line 622: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     622</span>                 :                :     }</span>
+<span id="L623" title="Line 623: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     623</span>                 :                : </span>
+<span id="L624" title="Line 624: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     624</span>                 :                :     LWLockRelease(InjectionPointLock);</span>
+<span id="L625" title="Line 625: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     625</span>                 :                : </span>
+<span id="L626" title="Line 626: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     626</span>                 :                :     return inj_points;</span>
+<span id="L627" title="Line 627: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     627</span>                 :                : </span>
+<span id="L628" title="Line 628: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     628</span>                 :                : #else</span>
+<span id="L629" title="Line 629: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz"><span title="michael@paquier.xyz 54 days ago (bin 3: (30,360] days)" class="tlaUNC">                          </span> <span class="lineNum">     629</span>         [<span class="tlaUNC"> <a href="#top" title="UNC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUNC"> <a href="#top" title="UNC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUNC">              0 :     elog(ERROR, &quot;Injection points are not supported by this build&quot;);</span></span>
+<span id="L630" title="Line 630: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     630</span>                 :                :     return NIL;                 /* keep compiler quiet */</span>
+<span id="L631" title="Line 631: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     631</span>                 :                : #endif</span>
+<span id="L632" title="Line 632: commit 7b2eb72b1b8c on 2025-07-03 by michael@paquier.xyz">                           <span class="lineNum">     632</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

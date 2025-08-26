@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/storage/lmgr/lmgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory storage">storage</a>/<a href="index.html" title="Click to go to directory lmgr">lmgr</a> - lmgr.c<span style="font-size: 80%;"> (<a href="lmgr.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">73.6&nbsp;%</td>
+            <td class="headerCovTableEntry">405</td>
+            <td class="headerCovTableEntry">298</td>
+            <td class="headerCovTableEntry">107</td>
+            <td class="headerCovTableEntry">298</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">91.7&nbsp;%</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">44</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">57.9&nbsp;%</td>
+            <td class="headerCovTableEntry">126</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry">73</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">78.6&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">11</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.4&nbsp;%</td>
+            <td class="headerCovTableEntry">391</td>
+            <td class="headerCovTableEntry">287</td>
+            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntry">287</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.3&nbsp;%</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">42</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">16.7&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">60.0&nbsp;%</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry">72</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="lmgr.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="lmgr.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="lmgr.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1247">DescribeLockTag</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38</td>
+              <td class=coverPerLo>40.7&nbsp;% (35 / 86)</td>
+              <td class=coverPerLo>38.5&nbsp;% (5 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L844">XactLockTableWaitErrorCb</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerLo>34.3&nbsp;% (12 / 35)</td>
+              <td class=coverPerLo>26.7&nbsp;% (4 / 15)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1030">ConditionalLockDatabaseObject</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L737">ConditionalXactLockTableWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L524">ConditionalLockPage</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L440">ConditionalLockRelationForExtension</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L365">LockHasWaitersRelation</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L661">XactLockTableWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">417</td>
+              <td class=coverPerHi>92.6&nbsp;% (25 / 27)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1110">ConditionalLockSharedObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1344">GetLockNameFromTagType</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L784">SpeculativeInsertionLockAcquire</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2064</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L909">WaitForLockersMultiple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1158</td>
+              <td class=coverPerHi>96.8&nbsp;% (30 / 31)</td>
+              <td class=coverPerHi>90.0&nbsp;% (27 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L332">CheckRelationLockedByMe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2175238</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L349">CheckRelationOidLockedByMe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12771</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L276">ConditionalLockRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">383</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L149">ConditionalLockRelationOid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1066</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L580">ConditionalLockTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1207">LockApplyTransactionForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">328</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L489">LockDatabaseFrozenIds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">919</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1006">LockDatabaseObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">155881</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L505">LockPage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L244">LockRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23781</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L422">LockRelationForExtension</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156791</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L183">LockRelationId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">107358</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L389">LockRelationIdForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14348</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L105">LockRelationOid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17821970</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1086">LockSharedObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24552</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1167">LockSharedObjectForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L560">LockTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">107533</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L457">RelationExtensionLockWaiterCount</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">64382</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L68">RelationInitLockInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2382124</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L86">SetLocktagRelationOid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18002765</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L810">SpeculativeInsertionLockRelease</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2061</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L826">SpeculativeInsertionWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1225">UnlockApplyTransactionForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">320</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1066">UnlockDatabaseObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">829</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L540">UnlockPage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L312">UnlockRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">175</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L472">UnlockRelationForExtension</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156791</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L212">UnlockRelationId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16093980</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L402">UnlockRelationIdForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14327</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L227">UnlockRelationOid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">166958</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1146">UnlockSharedObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">795</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L1185">UnlockSharedObjectForSession</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L599">UnlockTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">130604</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L987">WaitForLockers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">273</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L637">XactLockTableDelete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2776</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="lmgr.c.gcov.html#L620">XactLockTableInsert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132324</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

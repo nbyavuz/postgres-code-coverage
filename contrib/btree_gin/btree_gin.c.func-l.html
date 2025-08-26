@@ -1,0 +1,1425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - contrib/btree_gin/btree_gin.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory contrib">contrib</a>/<a href="index.html" title="Click to go to directory btree_gin">btree_gin</a> - btree_gin.c<span style="font-size: 80%;"> (<a href="btree_gin.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">97.3&nbsp;%</td>
+            <td class="headerCovTableEntry">261</td>
+            <td class="headerCovTableEntry">254</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">121</td>
+            <td class="headerCovTableEntry">130</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">49</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">218</td>
+            <td class="headerCovTableEntry">218</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">187</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">168</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">99.2&nbsp;%</td>
+            <td class="headerCovTableEntry">122</td>
+            <td class="headerCovTableEntry">121</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">119</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.7&nbsp;%</td>
+            <td class="headerCovTableEntry">139</td>
+            <td class="headerCovTableEntry">133</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">128</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">185</td>
+            <td class="headerCovTableEntry">185</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">184</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">81.8&nbsp;%</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">69.2&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="btree_gin.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="btree_gin.c.func-c.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="btree_gin.c.func-b.html"><img src="../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L147">gin_btree_compare_prefix</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1094</td>
+              <td class=coverPerHi>94.3&nbsp;% (33 / 35)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L64">gin_btree_extract_query</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">690</td>
+              <td class=coverPerHi>94.7&nbsp;% (36 / 38)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L932">cvt_text_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L863">gin_enum_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">200052</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L810">gin_numeric_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L17">Pg_magic_func</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L493">cvt_date_timestamp</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L528">cvt_date_timestamptz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L440">cvt_float4_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L405">cvt_float8_float4</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L337">cvt_int2_int4</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L372">cvt_int2_int8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L293">cvt_int4_int2</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L380">cvt_int4_int8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L303">cvt_int8_int2</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L345">cvt_int8_int4</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L715">cvt_name_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L602">cvt_timestamp_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L540">cvt_timestamp_timestamptz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L614">cvt_timestamptz_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L505">cvt_timestamptz_timestamp</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">20</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L234">gin_btree_consistent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">918</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L48">gin_btree_extract_value</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">100685</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L975">gin_extract_query_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">gin_extract_value_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">2</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">pg_finfo_gin_compare_prefix_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">pg_finfo_gin_extract_query_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">pg_finfo_gin_extract_value_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">gin_compare_prefix_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">13</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L975">gin_extract_query_bool</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">26</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L739">gin_extract_query_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">49</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">pg_finfo_gin_compare_prefix_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">pg_finfo_gin_extract_query_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">pg_finfo_gin_extract_value_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">gin_extract_value_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">8</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">gin_compare_prefix_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L739">gin_extract_query_bpchar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">17</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L634">gin_extract_query_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">280</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">pg_finfo_gin_compare_prefix_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">pg_finfo_gin_extract_query_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">pg_finfo_gin_extract_value_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">gin_extract_value_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">8</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">gin_extract_query_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">92</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L634">gin_compare_prefix_date</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">171</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L456">gin_extract_query_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">68</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">pg_finfo_gin_compare_prefix_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">pg_finfo_gin_extract_query_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">pg_finfo_gin_extract_value_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">gin_extract_value_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">gin_extract_query_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">21</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L456">gin_compare_prefix_float8</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">32</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L698">gin_extract_query_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">pg_finfo_gin_compare_prefix_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">pg_finfo_gin_extract_query_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">pg_finfo_gin_extract_value_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">gin_extract_value_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">gin_extract_query_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L698">gin_compare_prefix_inet</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L652">gin_extract_query_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">pg_finfo_gin_compare_prefix_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">pg_finfo_gin_extract_query_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">pg_finfo_gin_extract_value_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">gin_extract_value_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">8</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">gin_extract_query_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L652">gin_compare_prefix_interval</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">19</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L668">gin_extract_query_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">pg_finfo_gin_compare_prefix_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">pg_finfo_gin_extract_query_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">pg_finfo_gin_extract_value_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">gin_extract_value_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">gin_extract_query_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L668">gin_compare_prefix_macaddr</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L961">gin_extract_query_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">pg_finfo_gin_compare_prefix_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">pg_finfo_gin_extract_query_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">pg_finfo_gin_extract_value_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">gin_extract_value_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">gin_extract_query_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">28</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L961">gin_compare_prefix_name</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">37</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L484">gin_extract_query_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">pg_finfo_gin_compare_prefix_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">pg_finfo_gin_extract_query_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">pg_finfo_gin_extract_value_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">gin_extract_value_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">gin_extract_query_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L484">gin_compare_prefix_oid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L731">gin_extract_query_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">pg_finfo_gin_compare_prefix_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">4</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">pg_finfo_gin_extract_query_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">4</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">pg_finfo_gin_extract_value_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">4</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">gin_extract_value_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">12</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">gin_extract_query_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">31</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L731">gin_compare_prefix_text</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">47</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L574">gin_extract_query_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">pg_finfo_gin_compare_prefix_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">pg_finfo_gin_extract_query_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">pg_finfo_gin_extract_value_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">gin_extract_value_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">gin_extract_query_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L574">gin_compare_prefix_time</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L593">gin_extract_query_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">pg_finfo_gin_compare_prefix_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">pg_finfo_gin_extract_query_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">pg_finfo_gin_extract_value_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">gin_extract_value_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">gin_extract_query_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L593">gin_compare_prefix_timetz</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L921">gin_extract_query_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">45</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">pg_finfo_gin_compare_prefix_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">pg_finfo_gin_extract_query_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">pg_finfo_gin_extract_value_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">gin_extract_value_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">gin_compare_prefix_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L921">gin_extract_query_uuid</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L795">gin_extract_query_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">pg_finfo_gin_compare_prefix_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">pg_finfo_gin_extract_query_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">pg_finfo_gin_extract_value_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">3</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">gin_extract_value_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">6</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">gin_extract_query_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">10</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFnAlias"><a href="btree_gin.c.gcov.html#L795">gin_compare_prefix_varbit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnAliasHi">15</td>
+              <td class="coverFn"></td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L764">leftmostvalue_bit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L964">leftmostvalue_bool</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L742">leftmostvalue_char</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L596">leftmostvalue_date</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L890">leftmostvalue_enum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L399">leftmostvalue_float4</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L434">leftmostvalue_float8</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L687">leftmostvalue_inet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L271">leftmostvalue_int2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L331">leftmostvalue_int4</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L366">leftmostvalue_int8</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L637">leftmostvalue_interval</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L655">leftmostvalue_macaddr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L671">leftmostvalue_macaddr8</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L459">leftmostvalue_money</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L924">leftmostvalue_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L835">leftmostvalue_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L473">leftmostvalue_oid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L709">leftmostvalue_text</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L563">leftmostvalue_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L487">leftmostvalue_timestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L577">leftmostvalue_timetz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L904">leftmostvalue_uuid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L781">leftmostvalue_varbit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L232">pg_finfo_gin_btree_consistent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L860">pg_finfo_gin_enum_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#L807">pg_finfo_gin_numeric_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (1 / 1)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

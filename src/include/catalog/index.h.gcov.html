@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/catalog/index.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory catalog">catalog</a> - index.h<span style="font-size: 80%;"> (source / <a href="index.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"><a href="#L190" title="goto first CBC line">10</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"><a href="#L190" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">10</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :  * index.h</span>
+<span id="L4" title="Line 4: commit 3fdeb189e977 on 2006-05-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *    prototypes for catalog/index.c.</span>
+<span id="L5" title="Line 5: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       6</span>                 :  *</span>
+<span id="L7" title="Line 7: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L8" title="Line 8: commit 5c25d60244d3 on 2000-01-26 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L9" title="Line 9: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :  * src/include/catalog/index.h</span>
+<span id="L11" title="Line 11: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      11</span>                 :  *</span>
+<span id="L12" title="Line 12: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      12</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L13" title="Line 13: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      13</span>                 :  */</span>
+<span id="L14" title="Line 14: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      14</span>                 : #ifndef INDEX_H</span>
+<span id="L15" title="Line 15: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      15</span>                 : #define INDEX_H</span>
+<span id="L16" title="Line 16: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      16</span>                 : </span>
+<span id="L17" title="Line 17: commit bdc3d7fa2376 on 2015-03-25 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      17</span>                 : #include &quot;catalog/objectaddress.h&quot;</span>
+<span id="L18" title="Line 18: commit 773088809df9 on 1999-07-16 by bruce@momjian.us">                           <span class="lineNum">      18</span>                 : #include &quot;nodes/execnodes.h&quot;</span>
+<span id="L19" title="Line 19: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      19</span>                 : </span>
+<span id="L20" title="Line 20: commit fc8d970cbcdd on 2003-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 : </span>
+<span id="L21" title="Line 21: commit a35b6b6418ca on 2002-03-10 by bruce@momjian.us">                           <span class="lineNum">      21</span>                 : #define DEFAULT_INDEX_TYPE  &quot;btree&quot;</span>
+<span id="L22" title="Line 22: commit c8076f09d2eb on 2001-07-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 : </span>
+<span id="L23" title="Line 23: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 : /* Action code for index_set_state_flags */</span>
+<span id="L24" title="Line 24: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 : typedef enum</span>
+<span id="L25" title="Line 25: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span>                 : {</span>
+<span id="L26" title="Line 26: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :     INDEX_CREATE_SET_READY,</span>
+<span id="L27" title="Line 27: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 :     INDEX_CREATE_SET_VALID,</span>
+<span id="L28" title="Line 28: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :     INDEX_DROP_CLEAR_VALID,</span>
+<span id="L29" title="Line 29: commit 611806cd726f on 2023-10-26 by peter@eisentraut.org">                           <span class="lineNum">      29</span>                 :     INDEX_DROP_SET_DEAD,</span>
+<span id="L30" title="Line 30: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      30</span>                 : } IndexStateFlagsAction;</span>
+<span id="L31" title="Line 31: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 : </span>
+<span id="L32" title="Line 32: commit b5913f612079 on 2020-12-03 by michael@paquier.xyz">                           <span class="lineNum">      32</span>                 : /* options for REINDEX */</span>
+<span id="L33" title="Line 33: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      33</span>                 : typedef struct ReindexParams</span>
+<span id="L34" title="Line 34: commit b5913f612079 on 2020-12-03 by michael@paquier.xyz">                           <span class="lineNum">      34</span>                 : {</span>
+<span id="L35" title="Line 35: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      35</span>                 :     bits32      options;        /* bitmask of REINDEXOPT_* */</span>
+<span id="L36" title="Line 36: commit c5b286047cd6 on 2021-02-04 by michael@paquier.xyz">                           <span class="lineNum">      36</span>                 :     Oid         tablespaceOid;  /* New tablespace to move indexes to.</span>
+<span id="L37" title="Line 37: commit c5b286047cd6 on 2021-02-04 by michael@paquier.xyz">                           <span class="lineNum">      37</span>                 :                                  * InvalidOid to do nothing. */</span>
+<span id="L38" title="Line 38: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      38</span>                 : } ReindexParams;</span>
+<span id="L39" title="Line 39: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      39</span>                 : </span>
+<span id="L40" title="Line 40: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      40</span>                 : /* flag bits for ReindexParams-&gt;flags */</span>
+<span id="L41" title="Line 41: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      41</span>                 : #define REINDEXOPT_VERBOSE      0x01    /* print progress info */</span>
+<span id="L42" title="Line 42: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      42</span>                 : #define REINDEXOPT_REPORT_PROGRESS 0x02 /* report pgstat progress */</span>
+<span id="L43" title="Line 43: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      43</span>                 : #define REINDEXOPT_MISSING_OK   0x04    /* skip missing relations */</span>
+<span id="L44" title="Line 44: commit a3dc926009be on 2021-01-18 by michael@paquier.xyz">                           <span class="lineNum">      44</span>                 : #define REINDEXOPT_CONCURRENTLY 0x08    /* concurrent mode */</span>
+<span id="L45" title="Line 45: commit b5913f612079 on 2020-12-03 by michael@paquier.xyz">                           <span class="lineNum">      45</span>                 : </span>
+<span id="L46" title="Line 46: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      46</span>                 : /* state info for validate_index bulkdelete callback */</span>
+<span id="L47" title="Line 47: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      47</span>                 : typedef struct ValidateIndexState</span>
+<span id="L48" title="Line 48: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      48</span>                 : {</span>
+<span id="L49" title="Line 49: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      49</span>                 :     Tuplesortstate *tuplesort;  /* for sorting the index TIDs */</span>
+<span id="L50" title="Line 50: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      50</span>                 :     /* statistics (for debug purposes only): */</span>
+<span id="L51" title="Line 51: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      51</span>                 :     double      htups,</span>
+<span id="L52" title="Line 52: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      52</span>                 :                 itups,</span>
+<span id="L53" title="Line 53: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      53</span>                 :                 tups_inserted;</span>
+<span id="L54" title="Line 54: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">      54</span>                 : } ValidateIndexState;</span>
+<span id="L55" title="Line 55: commit c8076f09d2eb on 2001-07-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 : </span>
+<span id="L56" title="Line 56: commit 88452d5ba6b3 on 2011-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 : extern void index_check_primary_key(Relation heapRel,</span>
+<span id="L57" title="Line 57: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      57</span>                 :                                     const IndexInfo *indexInfo,</span>
+<span id="L58" title="Line 58: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :                                     bool is_alter_table,</span>
+<span id="L59" title="Line 59: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      59</span>                 :                                     const IndexStmt *stmt);</span>
+<span id="L60" title="Line 60: commit 88452d5ba6b3 on 2011-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 : </span>
+<span id="L61" title="Line 61: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      61</span>                 : #define INDEX_CREATE_IS_PRIMARY             (1 &lt;&lt; 0)</span>
+<span id="L62" title="Line 62: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      62</span>                 : #define INDEX_CREATE_ADD_CONSTRAINT         (1 &lt;&lt; 1)</span>
+<span id="L63" title="Line 63: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      63</span>                 : #define INDEX_CREATE_SKIP_BUILD             (1 &lt;&lt; 2)</span>
+<span id="L64" title="Line 64: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      64</span>                 : #define INDEX_CREATE_CONCURRENT             (1 &lt;&lt; 3)</span>
+<span id="L65" title="Line 65: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      65</span>                 : #define INDEX_CREATE_IF_NOT_EXISTS          (1 &lt;&lt; 4)</span>
+<span id="L66" title="Line 66: commit 8b08f7d4820f on 2018-01-19 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      66</span>                 : #define INDEX_CREATE_PARTITIONED            (1 &lt;&lt; 5)</span>
+<span id="L67" title="Line 67: commit 8b08f7d4820f on 2018-01-19 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      67</span>                 : #define INDEX_CREATE_INVALID                (1 &lt;&lt; 6)</span>
+<span id="L68" title="Line 68: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      68</span>                 : </span>
+<span id="L69" title="Line 69: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 : extern Oid  index_create(Relation heapRelation,</span>
+<span id="L70" title="Line 70: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :                          const char *indexRelationName,</span>
+<span id="L71" title="Line 71: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 :                          Oid indexRelationId,</span>
+<span id="L72" title="Line 72: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :                          Oid parentIndexRelid,</span>
+<span id="L73" title="Line 73: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 :                          Oid parentConstraintId,</span>
+<span id="L74" title="Line 74: commit b0a55e43299c on 2022-07-06 by rhaas@postgresql.org">                           <span class="lineNum">      74</span>                 :                          RelFileNumber relFileNumber,</span>
+<span id="L75" title="Line 75: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :                          IndexInfo *indexInfo,</span>
+<span id="L76" title="Line 76: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      76</span>                 :                          const List *indexColNames,</span>
+<span id="L77" title="Line 77: commit 23382b0f8b21 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      77</span>                 :                          Oid accessMethodId,</span>
+<span id="L78" title="Line 78: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                          Oid tableSpaceId,</span>
+<span id="L79" title="Line 79: commit 23382b0f8b21 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      79</span>                 :                          const Oid *collationIds,</span>
+<span id="L80" title="Line 80: commit 23382b0f8b21 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      80</span>                 :                          const Oid *opclassIds,</span>
+<span id="L81" title="Line 81: commit 784162357130 on 2023-10-03 by peter@eisentraut.org">                           <span class="lineNum">      81</span>                 :                          const Datum *opclassOptions,</span>
+<span id="L82" title="Line 82: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">      82</span>                 :                          const int16 *coloptions,</span>
+<span id="L83" title="Line 83: commit 6a004f1be87d on 2024-03-17 by peter@eisentraut.org">                           <span class="lineNum">      83</span>                 :                          const NullableDatum *stattargets,</span>
+<span id="L84" title="Line 84: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :                          Datum reloptions,</span>
+<span id="L85" title="Line 85: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :                          bits16 flags,</span>
+<span id="L86" title="Line 86: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :                          bits16 constr_flags,</span>
+<span id="L87" title="Line 87: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                          bool allow_system_table_mods,</span>
+<span id="L88" title="Line 88: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                          bool is_internal,</span>
+<span id="L89" title="Line 89: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 :                          Oid *constraintId);</span>
+<span id="L90" title="Line 90: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      90</span>                 : </span>
+<span id="L91" title="Line 91: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      91</span>                 : #define INDEX_CONSTR_CREATE_MARK_AS_PRIMARY (1 &lt;&lt; 0)</span>
+<span id="L92" title="Line 92: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      92</span>                 : #define INDEX_CONSTR_CREATE_DEFERRABLE      (1 &lt;&lt; 1)</span>
+<span id="L93" title="Line 93: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      93</span>                 : #define INDEX_CONSTR_CREATE_INIT_DEFERRED   (1 &lt;&lt; 2)</span>
+<span id="L94" title="Line 94: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      94</span>                 : #define INDEX_CONSTR_CREATE_UPDATE_INDEX    (1 &lt;&lt; 3)</span>
+<span id="L95" title="Line 95: commit a61f5ab98638 on 2017-11-14 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      95</span>                 : #define INDEX_CONSTR_CREATE_REMOVE_OLD_DEPS (1 &lt;&lt; 4)</span>
+<span id="L96" title="Line 96: commit fc0438b4e805 on 2024-09-17 by peter@eisentraut.org">                           <span class="lineNum">      96</span>                 : #define INDEX_CONSTR_CREATE_WITHOUT_OVERLAPS (1 &lt;&lt; 5)</span>
+<span id="L97" title="Line 97: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      97</span>                 : </span>
+<span id="L98" title="Line 98: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      98</span>                 : extern Oid  index_concurrently_create_copy(Relation heapRelation,</span>
+<span id="L99" title="Line 99: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 :                                            Oid oldIndexId,</span>
+<span id="L100" title="Line 100: commit c5b286047cd6 on 2021-02-04 by michael@paquier.xyz">                           <span class="lineNum">     100</span>                 :                                            Oid tablespaceOid,</span>
+<span id="L101" title="Line 101: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                                            const char *newName);</span>
+<span id="L102" title="Line 102: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     102</span>                 : </span>
+<span id="L103" title="Line 103: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     103</span>                 : extern void index_concurrently_build(Oid heapRelationId,</span>
+<span id="L104" title="Line 104: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     104</span>                 :                                      Oid indexRelationId);</span>
+<span id="L105" title="Line 105: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     105</span>                 : </span>
+<span id="L106" title="Line 106: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     106</span>                 : extern void index_concurrently_swap(Oid newIndexId,</span>
+<span id="L107" title="Line 107: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     107</span>                 :                                     Oid oldIndexId,</span>
+<span id="L108" title="Line 108: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     108</span>                 :                                     const char *oldName);</span>
+<span id="L109" title="Line 109: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     109</span>                 : </span>
+<span id="L110" title="Line 110: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     110</span>                 : extern void index_concurrently_set_dead(Oid heapId,</span>
+<span id="L111" title="Line 111: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 :                                         Oid indexId);</span>
+<span id="L112" title="Line 112: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     112</span>                 : </span>
+<span id="L113" title="Line 113: commit bdc3d7fa2376 on 2015-03-25 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     113</span>                 : extern ObjectAddress index_constraint_create(Relation heapRelation,</span>
+<span id="L114" title="Line 114: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 :                                              Oid indexRelationId,</span>
+<span id="L115" title="Line 115: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 :                                              Oid parentConstraintId,</span>
+<span id="L116" title="Line 116: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     116</span>                 :                                              const IndexInfo *indexInfo,</span>
+<span id="L117" title="Line 117: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     117</span>                 :                                              const char *constraintName,</span>
+<span id="L118" title="Line 118: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 :                                              char constraintType,</span>
+<span id="L119" title="Line 119: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     119</span>                 :                                              bits16 constr_flags,</span>
+<span id="L120" title="Line 120: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :                                              bool allow_system_table_mods,</span>
+<span id="L121" title="Line 121: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     121</span>                 :                                              bool is_internal);</span>
+<span id="L122" title="Line 122: commit 88452d5ba6b3 on 2011-01-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 : </span>
+<span id="L123" title="Line 123: commit 5dc92b844e68 on 2019-03-29 by peter@eisentraut.org">                           <span class="lineNum">     123</span>                 : extern void index_drop(Oid indexId, bool concurrent, bool concurrent_lock_mode);</span>
+<span id="L124" title="Line 124: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">     124</span>                 : </span>
+<span id="L125" title="Line 125: commit fc8d970cbcdd on 2003-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 : extern IndexInfo *BuildIndexInfo(Relation index);</span>
+<span id="L126" title="Line 126: commit 6bfe64032efd on 2000-07-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 : </span>
+<span id="L127" title="Line 127: commit c35b714caff0 on 2019-12-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     127</span>                 : extern IndexInfo *BuildDummyIndexInfo(Relation index);</span>
+<span id="L128" title="Line 128: commit c35b714caff0 on 2019-12-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 : </span>
+<span id="L129" title="Line 129: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     129</span>                 : extern bool CompareIndexInfo(const IndexInfo *info1, const IndexInfo *info2,</span>
+<span id="L130" title="Line 130: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     130</span>                 :                              const Oid *collations1, const Oid *collations2,</span>
+<span id="L131" title="Line 131: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     131</span>                 :                              const Oid *opfamilies1, const Oid *opfamilies2,</span>
+<span id="L132" title="Line 132: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     132</span>                 :                              const AttrMap *attmap);</span>
+<span id="L133" title="Line 133: commit 8b08f7d4820f on 2018-01-19 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     133</span>                 : </span>
+<span id="L134" title="Line 134: commit 168d5805e4c0 on 2015-05-08 by andres@anarazel.de">                           <span class="lineNum">     134</span>                 : extern void BuildSpeculativeIndexInfo(Relation index, IndexInfo *ii);</span>
+<span id="L135" title="Line 135: commit 168d5805e4c0 on 2015-05-08 by andres@anarazel.de">                           <span class="lineNum">     135</span>                 : </span>
+<span id="L136" title="Line 136: commit 6bfe64032efd on 2000-07-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 : extern void FormIndexDatum(IndexInfo *indexInfo,</span>
+<span id="L137" title="Line 137: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :                            TupleTableSlot *slot,</span>
+<span id="L138" title="Line 138: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 :                            EState *estate,</span>
+<span id="L139" title="Line 139: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 :                            Datum *values,</span>
+<span id="L140" title="Line 140: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 :                            bool *isnull);</span>
+<span id="L141" title="Line 141: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">     141</span>                 : </span>
+<span id="L142" title="Line 142: commit 3fdeb189e977 on 2006-05-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 : extern void index_build(Relation heapRelation,</span>
+<span id="L143" title="Line 143: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 :                         Relation indexRelation,</span>
+<span id="L144" title="Line 144: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :                         IndexInfo *indexInfo,</span>
+<span id="L145" title="Line 145: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 :                         bool isreindex,</span>
+<span id="L146" title="Line 146: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     146</span>                 :                         bool parallel);</span>
+<span id="L147" title="Line 147: commit c8076f09d2eb on 2001-07-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     147</span>                 : </span>
+<span id="L148" title="Line 148: commit e093dcdd2853 on 2006-08-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     148</span>                 : extern void validate_index(Oid heapId, Oid indexId, Snapshot snapshot);</span>
+<span id="L149" title="Line 149: commit e093dcdd2853 on 2006-08-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     149</span>                 : </span>
+<span id="L150" title="Line 150: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     150</span>                 : extern void index_set_state_flags(Oid indexId, IndexStateFlagsAction action);</span>
+<span id="L151" title="Line 151: commit 3c84046490be on 2012-11-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 : </span>
+<span id="L152" title="Line 152: commit d12bdba77b0f on 2020-04-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     152</span>                 : extern Oid  IndexGetRelation(Oid indexId, bool missing_ok);</span>
+<span id="L153" title="Line 153: commit d12bdba77b0f on 2020-04-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     153</span>                 : </span>
+<span id="L154" title="Line 154: commit f21848de2013 on 2023-12-04 by michael@paquier.xyz">                           <span class="lineNum">     154</span>                 : extern void reindex_index(const ReindexStmt *stmt, Oid indexId,</span>
+<span id="L155" title="Line 155: commit f21848de2013 on 2023-12-04 by michael@paquier.xyz">                           <span class="lineNum">     155</span>                 :                           bool skip_constraint_checks, char persistence,</span>
+<span id="L156" title="Line 156: commit f21848de2013 on 2023-12-04 by michael@paquier.xyz">                           <span class="lineNum">     156</span>                 :                           const ReindexParams *params);</span>
+<span id="L157" title="Line 157: commit 8ceb24568054 on 2011-01-20 by rhaas@postgresql.org">                           <span class="lineNum">     157</span>                 : </span>
+<span id="L158" title="Line 158: commit 2d3320d3d256 on 2011-04-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     158</span>                 : /* Flag bits for reindex_relation(): */</span>
+<span id="L159" title="Line 159: commit 85b506bbfc29 on 2014-11-15 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     159</span>                 : #define REINDEX_REL_PROCESS_TOAST           0x01</span>
+<span id="L160" title="Line 160: commit 85b506bbfc29 on 2014-11-15 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     160</span>                 : #define REINDEX_REL_SUPPRESS_INDEX_USE      0x02</span>
+<span id="L161" title="Line 161: commit 85b506bbfc29 on 2014-11-15 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     161</span>                 : #define REINDEX_REL_CHECK_CONSTRAINTS       0x04</span>
+<span id="L162" title="Line 162: commit 85b506bbfc29 on 2014-11-15 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     162</span>                 : #define REINDEX_REL_FORCE_INDEXES_UNLOGGED  0x08</span>
+<span id="L163" title="Line 163: commit 807b9e0dff66 on 2015-05-23 by bruce@momjian.us">                           <span class="lineNum">     163</span>                 : #define REINDEX_REL_FORCE_INDEXES_PERMANENT 0x10</span>
+<span id="L164" title="Line 164: commit 2d3320d3d256 on 2011-04-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     164</span>                 : </span>
+<span id="L165" title="Line 165: commit f21848de2013 on 2023-12-04 by michael@paquier.xyz">                           <span class="lineNum">     165</span>                 : extern bool reindex_relation(const ReindexStmt *stmt, Oid relid, int flags,</span>
+<span id="L166" title="Line 166: commit f21848de2013 on 2023-12-04 by michael@paquier.xyz">                           <span class="lineNum">     166</span>                 :                              const ReindexParams *params);</span>
+<span id="L167" title="Line 167: commit b9b8831ad60f on 2010-02-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 : </span>
+<span id="L168" title="Line 168: commit b9b8831ad60f on 2010-02-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>                 : extern bool ReindexIsProcessingHeap(Oid heapOid);</span>
+<span id="L169" title="Line 169: commit b9b8831ad60f on 2010-02-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     169</span>                 : extern bool ReindexIsProcessingIndex(Oid indexOid);</span>
+<span id="L170" title="Line 170: commit 6783b2372ef1 on 2001-10-28 by bruce@momjian.us">                           <span class="lineNum">     170</span>                 : </span>
+<span id="L171" title="Line 171: commit d12bdba77b0f on 2020-04-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     171</span>                 : extern void ResetReindexState(int nestLevel);</span>
+<span id="L172" title="Line 172: commit 29d58fd3adae on 2018-01-19 by rhaas@postgresql.org">                           <span class="lineNum">     172</span>                 : extern Size EstimateReindexStateSpace(void);</span>
+<span id="L173" title="Line 173: commit 29d58fd3adae on 2018-01-19 by rhaas@postgresql.org">                           <span class="lineNum">     173</span>                 : extern void SerializeReindexState(Size maxsize, char *start_address);</span>
+<span id="L174" title="Line 174: commit 11af63fb48d2 on 2023-08-23 by peter@eisentraut.org">                           <span class="lineNum">     174</span>                 : extern void RestoreReindexState(const void *reindexstate);</span>
+<span id="L175" title="Line 175: commit 29d58fd3adae on 2018-01-19 by rhaas@postgresql.org">                           <span class="lineNum">     175</span>                 : </span>
+<span id="L176" title="Line 176: commit bfcf1b34805f on 2022-09-19 by pg@bowt.ie">                           <span class="lineNum">     176</span>                 : extern void IndexSetParentIndex(Relation partitionIdx, Oid parentOid);</span>
+<span id="L177" title="Line 177: commit 8b08f7d4820f on 2018-01-19 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     177</span>                 : </span>
+<span id="L178" title="Line 178: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     178</span>                 : </span>
+<span id="L179" title="Line 179: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     179</span>                 : /*</span>
+<span id="L180" title="Line 180: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     180</span>                 :  * itemptr_encode - Encode ItemPointer as int64/int8</span>
+<span id="L181" title="Line 181: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     181</span>                 :  *</span>
+<span id="L182" title="Line 182: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     182</span>                 :  * This representation must produce values encoded as int64 that sort in the</span>
+<span id="L183" title="Line 183: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     183</span>                 :  * same order as their corresponding original TID values would (using the</span>
+<span id="L184" title="Line 184: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     184</span>                 :  * default int8 opclass to produce a result equivalent to the default TID</span>
+<span id="L185" title="Line 185: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     185</span>                 :  * opclass).</span>
+<span id="L186" title="Line 186: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     186</span>                 :  *</span>
+<span id="L187" title="Line 187: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     187</span>                 :  * As noted in validate_index(), this can be significantly faster.</span>
+<span id="L188" title="Line 188: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     188</span>                 :  */</span>
+<span id="L189" title="Line 189: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     189</span>                 : static inline int64</span>
+<span id="L190" title="Line 190: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">2344</a> <a href="#top" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     190</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      133814 : itemptr_encode(ItemPointer itemptr)</span></span>
+<span id="L191" title="Line 191: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     191</span>                 : {</span>
+<span id="L192" title="Line 192: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     192</span> <span class="tlaCBC">         133814 :     BlockNumber block = ItemPointerGetBlockNumber(itemptr);</span></span>
+<span id="L193" title="Line 193: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     193</span> <span class="tlaCBC">         133814 :     OffsetNumber offset = ItemPointerGetOffsetNumber(itemptr);</span></span>
+<span id="L194" title="Line 194: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     194</span>                 :     int64       encoded;</span>
+<span id="L195" title="Line 195: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     195</span>                 : </span>
+<span id="L196" title="Line 196: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     196</span>                 :     /*</span>
+<span id="L197" title="Line 197: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     197</span>                 :      * Use the 16 least significant bits for the offset.  32 adjacent bits are</span>
+<span id="L198" title="Line 198: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     198</span>                 :      * used for the block number.  Since remaining bits are unused, there</span>
+<span id="L199" title="Line 199: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     199</span>                 :      * cannot be negative encoded values (We assume a two's complement</span>
+<span id="L200" title="Line 200: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     200</span>                 :      * representation).</span>
+<span id="L201" title="Line 201: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     201</span>                 :      */</span>
+<span id="L202" title="Line 202: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     202</span> <span class="tlaCBC">         133814 :     encoded = ((uint64) block &lt;&lt; 16) | (uint16) offset;</span></span>
+<span id="L203" title="Line 203: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     203</span>                 : </span>
+<span id="L204" title="Line 204: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     204</span> <span class="tlaCBC">         133814 :     return encoded;</span></span>
+<span id="L205" title="Line 205: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     205</span>                 : }</span>
+<span id="L206" title="Line 206: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     206</span>                 : </span>
+<span id="L207" title="Line 207: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     207</span>                 : /*</span>
+<span id="L208" title="Line 208: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     208</span>                 :  * itemptr_decode - Decode int64/int8 representation back to ItemPointer</span>
+<span id="L209" title="Line 209: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     209</span>                 :  */</span>
+<span id="L210" title="Line 210: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     210</span>                 : static inline void</span>
+<span id="L211" title="Line 211: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     211</span> <span class="tlaCBC">         133701 : itemptr_decode(ItemPointer itemptr, int64 encoded)</span></span>
+<span id="L212" title="Line 212: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     212</span>                 : {</span>
+<span id="L213" title="Line 213: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     213</span> <span class="tlaCBC">         133701 :     BlockNumber block = (BlockNumber) (encoded &gt;&gt; 16);</span></span>
+<span id="L214" title="Line 214: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     214</span> <span class="tlaCBC">         133701 :     OffsetNumber offset = (OffsetNumber) (encoded &amp; 0xFFFF);</span></span>
+<span id="L215" title="Line 215: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     215</span>                 : </span>
+<span id="L216" title="Line 216: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     216</span> <span class="tlaCBC">         133701 :     ItemPointerSet(itemptr, block, offset);</span></span>
+<span id="L217" title="Line 217: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     217</span> <span class="tlaCBC">         133701 : }</span></span>
+<span id="L218" title="Line 218: commit 2a96909a4a8c on 2019-03-27 by andres@anarazel.de">                           <span class="lineNum">     218</span>                 : </span>
+<span id="L219" title="Line 219: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>                 : #endif                          /* INDEX_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

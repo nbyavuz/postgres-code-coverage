@@ -1,0 +1,669 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/cache/catcache.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory cache">cache</a> - catcache.c<span style="font-size: 80%;"> (<a href="catcache.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">702</td>
+            <td class="headerCovTableEntry">648</td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">647</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">94.6&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">72.5&nbsp;%</td>
+            <td class="headerCovTableEntry">393</td>
+            <td class="headerCovTableEntry">285</td>
+            <td class="headerCovTableEntry">108</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">285</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">93.2&nbsp;%</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">92.2&nbsp;%</td>
+            <td class="headerCovTableEntry">628</td>
+            <td class="headerCovTableEntry">579</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">579</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.2&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">47</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="8">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">77.8&nbsp;%</td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.7&nbsp;%</td>
+            <td class="headerCovTableEntry">339</td>
+            <td class="headerCovTableEntry">243</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">243</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="catcache.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="catcache.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="catcache.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2305">CatCacheCopyKeys</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1039318</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2280">CatCacheFreeKeys</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">322160</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L624">CatCacheInvalidate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11390956</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>90.6&nbsp;% (29 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L569">CatCacheRemoveCList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68162</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L527">CatCacheRemoveCTup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">786773</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L440">CatalogCacheCompareTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42971420</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L343">CatalogCacheComputeHashValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49990657</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>57.1&nbsp;% (4 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L385">CatalogCacheComputeTupleHashValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3452471</td>
+              <td class=coverPerHi>92.0&nbsp;% (23 / 25)</td>
+              <td class=coverPerLo>53.3&nbsp;% (8 / 15)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2132">CatalogCacheCreateEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3251673</td>
+              <td class=coverPerHi>94.9&nbsp;% (56 / 59)</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L833">CatalogCacheFlushCatalog</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">329</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1114">CatalogCacheInitializeCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">336940</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1063">ConditionalCatalogCacheInitializeCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49434777</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L707">CreateCacheMemoryContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14664</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L272">GetCCHashEqFuncs</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">534536</td>
+              <td class=coverPerHi>95.6&nbsp;% (43 / 45)</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1685">GetCatCacheHashValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">537816</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1274">IndexScanOK</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3031319</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L877">InitCatCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1246440</td>
+              <td class=coverPerHi>96.6&nbsp;% (28 / 29)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1223">InitCatCachePhase2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">143616</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2375">PrepareToInvalidateCacheTuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1516813</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L984">RehashCatCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3090</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1022">RehashCatCacheLists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">603</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1646">ReleaseCatCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41146381</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2092">ReleaseCatCacheList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1876794</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2098">ReleaseCatCacheListWithOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1876812</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1652">ReleaseCatCacheWithOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41151770</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2442">ResOwnerPrintCatCache</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2465">ResOwnerPrintCatCacheList</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2436">ResOwnerReleaseCatCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5389</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L2459">ResOwnerReleaseCatCacheList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L735">ResetCatalogCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">172706</td>
+              <td class=coverPerHi>95.5&nbsp;% (21 / 22)</td>
+              <td class=coverPerLo>73.3&nbsp;% (22 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L797">ResetCatalogCaches</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L803">ResetCatalogCachesExt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2027</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L172">ResourceOwnerForgetCatCacheListRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1876794</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L162">ResourceOwnerForgetCatCacheRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41146381</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L167">ResourceOwnerRememberCatCacheListRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1876812</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L157">ResourceOwnerRememberCatCacheRef</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">41151770</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1339">SearchCatCache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2703500</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1356">SearchCatCache1</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33785933</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1364">SearchCatCache2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2749528</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1372">SearchCatCache3</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2750183</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1380">SearchCatCache4</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2134415</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1390">SearchCatCacheInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44123559</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1718">SearchCatCacheList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1876812</td>
+              <td class=coverPerMed>86.1&nbsp;% (118 / 137)</td>
+              <td class=coverPerLo>62.5&nbsp;% (60 / 96)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L1498">SearchCatCacheMiss</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2872504</td>
+              <td class=coverPerHi>100.0&nbsp;% (34 / 34)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L189">chareqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2778764</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L195">charhashfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3172657</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L218">int2eqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4373306</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L224">int2hashfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5947003</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L230">int4eqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48493152</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L236">int4hashfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56881845</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L201">nameeqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1951815</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L210">namehashfast</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">4438339</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L259">oidvectoreqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1549</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L265">oidvectorhashfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">202359</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L242">texteqfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="catcache.c.gcov.html#L252">texthashfast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1883</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

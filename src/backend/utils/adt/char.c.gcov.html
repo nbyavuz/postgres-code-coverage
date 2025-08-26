@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/char.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - char.c<span style="font-size: 80%;"> (source / <a href="char.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">81.0&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry"><a href="#L94" title="goto first UBC line">16</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L41" title="goto first CBC line">68</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryLo">71.4&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">56.5&nbsp;%</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first UBC branch">20</a></td>
+            <td class="headerCovTableEntry"><a href="#L214" title="goto first GBC branch">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first CBC branch">23</a></td>
+            <td class="headerCovTableEntry"><a href="#L214" title="goto first EUB branch">12</a></td>
+            <td class="headerCovTableEntry"><a href="#L207" title="goto first ECB branch">12</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">81.0&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry"><a href="#L94" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">16</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L41" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">68</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.4&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">37.1&nbsp;%</td>
+            <td class="headerCovTableEntry">70</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">20</a></td>
+            <td class="headerCovTableEntry"><a href="#L214" title="goto first GBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgGBC">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">23</a></td>
+            <td class="headerCovTableEntry"><a href="#L214" title="goto first EUB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgEUB">12</a></td>
+            <td class="headerCovTableEntry"><a href="#L207" title="goto first ECB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgECB">12</a></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :                :  * char.c</span>
+<span id="L4" title="Line 4: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :                :  *    Functions for the built-in type &quot;char&quot; (not to be confused with</span>
+<span id="L5" title="Line 5: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       5</span>                 :                :  *    bpchar, which is the SQL CHAR(n) type).</span>
+<span id="L6" title="Line 6: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       6</span>                 :                :  *</span>
+<span id="L7" title="Line 7: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L8" title="Line 8: commit 5c25d60244d3 on 2000-01-26 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L9" title="Line 9: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       9</span>                 :                :  *</span>
+<span id="L10" title="Line 10: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      10</span>                 :                :  *</span>
+<span id="L11" title="Line 11: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      11</span>                 :                :  * IDENTIFICATION</span>
+<span id="L12" title="Line 12: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      12</span>                 :                :  *    src/backend/utils/adt/char.c</span>
+<span id="L13" title="Line 13: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      13</span>                 :                :  *</span>
+<span id="L14" title="Line 14: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      14</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L15" title="Line 15: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      15</span>                 :                :  */</span>
+<span id="L16" title="Line 16: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      16</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L17" title="Line 17: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :                : </span>
+<span id="L18" title="Line 18: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 :                : #include &lt;limits.h&gt;</span>
+<span id="L19" title="Line 19: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 :                : </span>
+<span id="L20" title="Line 20: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 :                : #include &quot;libpq/pqformat.h&quot;</span>
+<span id="L21" title="Line 21: commit dbbca2cf299b on 2024-03-04 by peter@eisentraut.org">                           <span class="lineNum">      21</span>                 :                : #include &quot;utils/fmgrprotos.h&quot;</span>
+<span id="L22" title="Line 22: commit d952373a987b on 2023-01-10 by peter@eisentraut.org">                           <span class="lineNum">      22</span>                 :                : #include &quot;varatt.h&quot;</span>
+<span id="L23" title="Line 23: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      23</span>                 :                : </span>
+<span id="L24" title="Line 24: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 :                : #define ISOCTAL(c)   (((c) &gt;= '0') &amp;&amp; ((c) &lt;= '7'))</span>
+<span id="L25" title="Line 25: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span>                 :                : #define TOOCTAL(c)   ((c) + '0')</span>
+<span id="L26" title="Line 26: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :                : #define FROMOCTAL(c) ((unsigned char) (c) - '0')</span>
+<span id="L27" title="Line 27: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 :                : </span>
+<span id="L28" title="Line 28: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :                : </span>
+<span id="L29" title="Line 29: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      29</span>                 :                : /*****************************************************************************</span>
+<span id="L30" title="Line 30: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      30</span>                 :                :  *   USER I/O ROUTINES                                                       *</span>
+<span id="L31" title="Line 31: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      31</span>                 :                :  *****************************************************************************/</span>
+<span id="L32" title="Line 32: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      32</span>                 :                : </span>
+<span id="L33" title="Line 33: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      33</span>                 :                : /*</span>
+<span id="L34" title="Line 34: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      34</span>                 :                :  *      charin          - converts &quot;x&quot; to 'x'</span>
+<span id="L35" title="Line 35: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :                :  *</span>
+<span id="L36" title="Line 36: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 :                :  * This accepts the formats charout produces.  If we have multibyte input</span>
+<span id="L37" title="Line 37: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 :                :  * that is not in the form '\ooo', then we take its first byte as the value</span>
+<span id="L38" title="Line 38: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :                :  * and silently discard the rest; this is a backwards-compatibility provision.</span>
+<span id="L39" title="Line 39: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      39</span>                 :                :  */</span>
+<span id="L40" title="Line 40: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :                : Datum</span>
+<span id="L41" title="Line 41: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> <a href="#L127" title="next CBC in &ldquo;(360..) days&rdquo; bin">9213</a> <a href="#L127" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      41</span>                 :<a href="#L127" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">      827832 : charin(PG_FUNCTION_ARGS)</span></span>
+<span id="L42" title="Line 42: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      42</span>                 :                : {</span>
+<span id="L43" title="Line 43: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :<span class="tlaCBC">         827832 :     char       *ch = PG_GETARG_CSTRING(0);</span></span>
+<span id="L44" title="Line 44: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :                : </span>
+<span id="L45" title="Line 45: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us"> 1120                      <span class="lineNum">      45</span>   [<span class="tlaCBC"> <a href="#L46" title="CBC: Branch 0 was taken 12 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L46" title="CBC: Branch 1 was taken 827820 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L46" title="CBC: Branch 2 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L46" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">         827832 :     if (strlen(ch) == 4 &amp;&amp; ch[0] == '\\' &amp;&amp;</span></span>
+<span id="L46" title="Line 46: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>   [<span class="tlaCBC"> <a href="#L69" title="CBC: Branch 0 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L194" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L69" title="CBC: Branch 2 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L194" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">             12 :         ISOCTAL(ch[1]) &amp;&amp; ISOCTAL(ch[2]) &amp;&amp; ISOCTAL(ch[3]))</span></span>
+                           <span class="lineNum">        </span> <span class="tlaCBC"> <a href="#L69" title="CBC: Branch 4 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L194" title="UBC: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L69" title="CBC: Branch 6 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L194" title="UBC: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L69" title="CBC: Branch 8 was taken 12 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>       <span class="tlaUBC"> <a href="#L194" title="UBC: Branch 9 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L69" title="CBC: Branch 10 was taken 12 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L194" title="UBC: Branch 11 was not taken" class="branchTla">-</a> </span>]
+<span id="L47" title="Line 47: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 :<span class="tlaCBC">             12 :         PG_RETURN_CHAR((FROMOCTAL(ch[1]) &lt;&lt; 6) +</span></span>
+<span id="L48" title="Line 48: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 :                :                        (FROMOCTAL(ch[2]) &lt;&lt; 3) +</span>
+<span id="L49" title="Line 49: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :                :                        FROMOCTAL(ch[3]));</span>
+<span id="L50" title="Line 50: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 :                :     /* This will do the right thing for a zero-length input string */</span>
+<span id="L51" title="Line 51: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> 9213                      <span class="lineNum">      51</span>                 :<span class="tlaCBC">         827820 :     PG_RETURN_CHAR(ch[0]);</span></span>
+<span id="L52" title="Line 52: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      52</span>                 :                : }</span>
+<span id="L53" title="Line 53: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      53</span>                 :                : </span>
+<span id="L54" title="Line 54: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      54</span>                 :                : /*</span>
+<span id="L55" title="Line 55: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      55</span>                 :                :  *      charout         - converts 'x' to &quot;x&quot;</span>
+<span id="L56" title="Line 56: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :                :  *</span>
+<span id="L57" title="Line 57: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :                :  * The possible output formats are:</span>
+<span id="L58" title="Line 58: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :                :  * 1. 0x00 is represented as an empty string.</span>
+<span id="L59" title="Line 59: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 :                :  * 2. 0x01..0x7F are represented as a single ASCII byte.</span>
+<span id="L60" title="Line 60: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :                :  * 3. 0x80..0xFF are represented as \ooo (backslash and 3 octal digits).</span>
+<span id="L61" title="Line 61: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      61</span>                 :                :  * Case 3 is meant to match the traditional &quot;escape&quot; format of bytea.</span>
+<span id="L62" title="Line 62: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      62</span>                 :                :  */</span>
+<span id="L63" title="Line 63: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 :                : Datum</span>
+<span id="L64" title="Line 64: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 :<span class="tlaCBC">        1653732 : charout(PG_FUNCTION_ARGS)</span></span>
+<span id="L65" title="Line 65: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      65</span>                 :                : {</span>
+<span id="L66" title="Line 66: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 :<span class="tlaCBC">        1653732 :     char        ch = PG_GETARG_CHAR(0);</span></span>
+<span id="L67" title="Line 67: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us"> 1120                      <span class="lineNum">      67</span>                 :<span class="tlaCBC">        1653732 :     char       *result = (char *) palloc(5);</span></span>
+<span id="L68" title="Line 68: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      68</span>                 :                : </span>
+<span id="L69" title="Line 69: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>         [<span class="tlaCBC"> <a href="#L214" title="CBC: Branch 0 was taken 6 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L214" title="CBC: Branch 1 was taken 1653726 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        1653732 :     if (IS_HIGHBIT_SET(ch))</span></span>
+<span id="L70" title="Line 70: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :                :     {</span>
+<span id="L71" title="Line 71: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 :<span class="tlaCBC">              6 :         result[0] = '\\';</span></span>
+<span id="L72" title="Line 72: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :<span class="tlaCBC">              6 :         result[1] = TOOCTAL(((unsigned char) ch) &gt;&gt; 6);</span></span>
+<span id="L73" title="Line 73: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 :<span class="tlaCBC">              6 :         result[2] = TOOCTAL((((unsigned char) ch) &gt;&gt; 3) &amp; 07);</span></span>
+<span id="L74" title="Line 74: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 :<span class="tlaCBC">              6 :         result[3] = TOOCTAL(((unsigned char) ch) &amp; 07);</span></span>
+<span id="L75" title="Line 75: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :<span class="tlaCBC">              6 :         result[4] = '\0';</span></span>
+<span id="L76" title="Line 76: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :                :     }</span>
+<span id="L77" title="Line 77: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 :                :     else</span>
+<span id="L78" title="Line 78: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                :     {</span>
+<span id="L79" title="Line 79: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :                :         /* This produces acceptable results for 0x00 as well */</span>
+<span id="L80" title="Line 80: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 :<span class="tlaCBC">        1653726 :         result[0] = ch;</span></span>
+<span id="L81" title="Line 81: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 :<span class="tlaCBC">        1653726 :         result[1] = '\0';</span></span>
+<span id="L82" title="Line 82: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 :                :     }</span>
+<span id="L83" title="Line 83: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> 9213                      <span class="lineNum">      83</span>                 :<span class="tlaCBC">        1653732 :     PG_RETURN_CSTRING(result);</span></span>
+<span id="L84" title="Line 84: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      84</span>                 :                : }</span>
+<span id="L85" title="Line 85: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      85</span>                 :                : </span>
+<span id="L86" title="Line 86: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :                : /*</span>
+<span id="L87" title="Line 87: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                :  *      charrecv            - converts external binary format to char</span>
+<span id="L88" title="Line 88: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                :  *</span>
+<span id="L89" title="Line 89: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 :                :  * The external representation is one byte, with no character set</span>
+<span id="L90" title="Line 90: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      90</span>                 :                :  * conversion.  This is somewhat dubious, perhaps, but in many</span>
+<span id="L91" title="Line 91: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 :                :  * cases people use char for a 1-byte binary type.</span>
+<span id="L92" title="Line 92: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :                :  */</span>
+<span id="L93" title="Line 93: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>                 :                : Datum</span>
+<span id="L94" title="Line 94: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L182" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">8142</a> </span><a href="#L182" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">      94</span>                 :<a href="#L182" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 : charrecv(PG_FUNCTION_ARGS)</span></span>
+<span id="L95" title="Line 95: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                : {</span>
+<span id="L96" title="Line 96: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">      96</span>                 :<span class="tlaUBC">              0 :     StringInfo  buf = (StringInfo) PG_GETARG_POINTER(0);</span></span>
+<span id="L97" title="Line 97: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 :                : </span>
+<span id="L98" title="Line 98: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">      98</span>                 :<span class="tlaUBC">              0 :     PG_RETURN_CHAR(pq_getmsgbyte(buf));</span></span>
+<span id="L99" title="Line 99: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 :                : }</span>
+<span id="L100" title="Line 100: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     100</span>                 :                : </span>
+<span id="L101" title="Line 101: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                : /*</span>
+<span id="L102" title="Line 102: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     102</span>                 :                :  *      charsend            - converts char to binary format</span>
+<span id="L103" title="Line 103: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                :  */</span>
+<span id="L104" title="Line 104: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     104</span>                 :                : Datum</span>
+<span id="L105" title="Line 105: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     105</span>                 :<span class="tlaUBC">              0 : charsend(PG_FUNCTION_ARGS)</span></span>
+<span id="L106" title="Line 106: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     106</span>                 :                : {</span>
+<span id="L107" title="Line 107: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     107</span>                 :<span class="tlaUBC">              0 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L108" title="Line 108: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     108</span>                 :                :     StringInfoData buf;</span>
+<span id="L109" title="Line 109: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     109</span>                 :                : </span>
+<span id="L110" title="Line 110: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     110</span>                 :<span class="tlaUBC">              0 :     pq_begintypsend(&amp;buf);</span></span>
+<span id="L111" title="Line 111: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     111</span>                 :<span class="tlaUBC">              0 :     pq_sendbyte(&amp;buf, arg1);</span></span>
+<span id="L112" title="Line 112: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8142 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     112</span>                 :<span class="tlaUBC">              0 :     PG_RETURN_BYTEA_P(pq_endtypsend(&amp;buf));</span></span>
+<span id="L113" title="Line 113: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     113</span>                 :                : }</span>
+<span id="L114" title="Line 114: commit 30f609484d02 on 2003-05-12 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 :                : </span>
+<span id="L115" title="Line 115: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 :                : /*****************************************************************************</span>
+<span id="L116" title="Line 116: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 :                :  *   PUBLIC ROUTINES                                                         *</span>
+<span id="L117" title="Line 117: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     117</span>                 :                :  *****************************************************************************/</span>
+<span id="L118" title="Line 118: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 :                : </span>
+<span id="L119" title="Line 119: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     119</span>                 :                : /*</span>
+<span id="L120" title="Line 120: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :                :  * NOTE: comparisons are done as though char is unsigned (uint8).</span>
+<span id="L121" title="Line 121: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     121</span>                 :                :  * Conversions to and from integer are done as though char is signed (int8).</span>
+<span id="L122" title="Line 122: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     122</span>                 :                :  *</span>
+<span id="L123" title="Line 123: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 :                :  * You wanted consistency?</span>
+<span id="L124" title="Line 124: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     124</span>                 :                :  */</span>
+<span id="L125" title="Line 125: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     125</span>                 :                : </span>
+<span id="L126" title="Line 126: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 :                : Datum</span>
+<span id="L127" title="Line 127: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> <a href="#L204" title="next CBC in &ldquo;(360..) days&rdquo; bin">9213</a> <a href="#L204" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     127</span>                 :<a href="#L204" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">     4382488 : chareq(PG_FUNCTION_ARGS)</span></span>
+<span id="L128" title="Line 128: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 :                : {</span>
+<span id="L129" title="Line 129: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span>                 :<span class="tlaCBC">        4382488 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L130" title="Line 130: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     130</span>                 :<span class="tlaCBC">        4382488 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L131" title="Line 131: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     131</span>                 :                : </span>
+<span id="L132" title="Line 132: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>                 :<span class="tlaCBC">        4382488 :     PG_RETURN_BOOL(arg1 == arg2);</span></span>
+<span id="L133" title="Line 133: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     133</span>                 :                : }</span>
+<span id="L134" title="Line 134: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     134</span>                 :                : </span>
+<span id="L135" title="Line 135: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     135</span>                 :                : Datum</span>
+<span id="L136" title="Line 136: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 :<span class="tlaCBC">        2106317 : charne(PG_FUNCTION_ARGS)</span></span>
+<span id="L137" title="Line 137: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     137</span>                 :                : {</span>
+<span id="L138" title="Line 138: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 :<span class="tlaCBC">        2106317 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L139" title="Line 139: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 :<span class="tlaCBC">        2106317 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L140" title="Line 140: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     140</span>                 :                : </span>
+<span id="L141" title="Line 141: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :<span class="tlaCBC">        2106317 :     PG_RETURN_BOOL(arg1 != arg2);</span></span>
+<span id="L142" title="Line 142: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     142</span>                 :                : }</span>
+<span id="L143" title="Line 143: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     143</span>                 :                : </span>
+<span id="L144" title="Line 144: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     144</span>                 :                : Datum</span>
+<span id="L145" title="Line 145: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 :<span class="tlaCBC">           1548 : charlt(PG_FUNCTION_ARGS)</span></span>
+<span id="L146" title="Line 146: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     146</span>                 :                : {</span>
+<span id="L147" title="Line 147: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     147</span>                 :<span class="tlaCBC">           1548 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L148" title="Line 148: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     148</span>                 :<span class="tlaCBC">           1548 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L149" title="Line 149: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     149</span>                 :                : </span>
+<span id="L150" title="Line 150: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     150</span>                 :<span class="tlaCBC">           1548 :     PG_RETURN_BOOL((uint8) arg1 &lt; (uint8) arg2);</span></span>
+<span id="L151" title="Line 151: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     151</span>                 :                : }</span>
+<span id="L152" title="Line 152: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     152</span>                 :                : </span>
+<span id="L153" title="Line 153: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     153</span>                 :                : Datum</span>
+<span id="L154" title="Line 154: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     154</span>                 :<span class="tlaCBC">           1212 : charle(PG_FUNCTION_ARGS)</span></span>
+<span id="L155" title="Line 155: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     155</span>                 :                : {</span>
+<span id="L156" title="Line 156: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     156</span>                 :<span class="tlaCBC">           1212 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L157" title="Line 157: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     157</span>                 :<span class="tlaCBC">           1212 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L158" title="Line 158: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     158</span>                 :                : </span>
+<span id="L159" title="Line 159: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     159</span>                 :<span class="tlaCBC">           1212 :     PG_RETURN_BOOL((uint8) arg1 &lt;= (uint8) arg2);</span></span>
+<span id="L160" title="Line 160: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     160</span>                 :                : }</span>
+<span id="L161" title="Line 161: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     161</span>                 :                : </span>
+<span id="L162" title="Line 162: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     162</span>                 :                : Datum</span>
+<span id="L163" title="Line 163: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     163</span>                 :<span class="tlaCBC">           1521 : chargt(PG_FUNCTION_ARGS)</span></span>
+<span id="L164" title="Line 164: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     164</span>                 :                : {</span>
+<span id="L165" title="Line 165: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     165</span>                 :<span class="tlaCBC">           1521 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L166" title="Line 166: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     166</span>                 :<span class="tlaCBC">           1521 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L167" title="Line 167: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 :                : </span>
+<span id="L168" title="Line 168: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     168</span>                 :<span class="tlaCBC">           1521 :     PG_RETURN_BOOL((uint8) arg1 &gt; (uint8) arg2);</span></span>
+<span id="L169" title="Line 169: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     169</span>                 :                : }</span>
+<span id="L170" title="Line 170: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     170</span>                 :                : </span>
+<span id="L171" title="Line 171: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     171</span>                 :                : Datum</span>
+<span id="L172" title="Line 172: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     172</span>                 :<span class="tlaCBC">           1065 : charge(PG_FUNCTION_ARGS)</span></span>
+<span id="L173" title="Line 173: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     173</span>                 :                : {</span>
+<span id="L174" title="Line 174: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     174</span>                 :<span class="tlaCBC">           1065 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L175" title="Line 175: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :<span class="tlaCBC">           1065 :     char        arg2 = PG_GETARG_CHAR(1);</span></span>
+<span id="L176" title="Line 176: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     176</span>                 :                : </span>
+<span id="L177" title="Line 177: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     177</span>                 :<span class="tlaCBC">           1065 :     PG_RETURN_BOOL((uint8) arg1 &gt;= (uint8) arg2);</span></span>
+<span id="L178" title="Line 178: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     178</span>                 :                : }</span>
+<span id="L179" title="Line 179: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     179</span>                 :                : </span>
+<span id="L180" title="Line 180: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     180</span>                 :                : </span>
+<span id="L181" title="Line 181: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     181</span>                 :                : Datum</span>
+<span id="L182" title="Line 182: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">7631</a> </span><a href="#top" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">     182</span>                 :<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 : chartoi4(PG_FUNCTION_ARGS)</span></span>
+<span id="L183" title="Line 183: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     183</span>                 :                : {</span>
+<span id="L184" title="Line 184: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 9213 days ago (bin 4: (360..) days)" class="tlaUBC"> 9213                     </span> <span class="lineNum">     184</span>                 :<span class="tlaUBC">              0 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L185" title="Line 185: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     185</span>                 :                : </span>
+<span id="L186" title="Line 186: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC"> 7631                     </span> <span class="lineNum">     186</span>                 :<span class="tlaUBC">              0 :     PG_RETURN_INT32((int32) ((int8) arg1));</span></span>
+<span id="L187" title="Line 187: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     187</span>                 :                : }</span>
+<span id="L188" title="Line 188: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     188</span>                 :                : </span>
+<span id="L189" title="Line 189: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     189</span>                 :                : Datum</span>
+<span id="L190" title="Line 190: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     190</span>                 :<span class="tlaUBC">              0 : i4tochar(PG_FUNCTION_ARGS)</span></span>
+<span id="L191" title="Line 191: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     191</span>                 :                : {</span>
+<span id="L192" title="Line 192: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     192</span>                 :<span class="tlaUBC">              0 :     int32       arg1 = PG_GETARG_INT32(0);</span></span>
+<span id="L193" title="Line 193: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     193</span>                 :                : </span>
+<span id="L194" title="Line 194: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     194</span>   [<span class="tlaUBC"> <a href="#L195" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L195" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L195" title="UBC: Branch 2 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L195" title="UBC: Branch 3 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :     if (arg1 &lt; SCHAR_MIN || arg1 &gt; SCHAR_MAX)</span></span>
+<span id="L195" title="Line 195: commit b6a1d25b0aa1 on 2003-07-27 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 8066 days ago (bin 4: (360..) days)" class="tlaUBC"> 8066                     </span> <span class="lineNum">     195</span>         [<span class="tlaUBC"> <a href="#L214" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L214" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :         ereport(ERROR,</span></span>
+<span id="L196" title="Line 196: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     196</span>                 :                :                 (errcode(ERRCODE_NUMERIC_VALUE_OUT_OF_RANGE),</span>
+<span id="L197" title="Line 197: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     197</span>                 :                :                  errmsg(&quot;\&quot;char\&quot; out of range&quot;)));</span>
+<span id="L198" title="Line 198: commit 31e69ccb210c on 2003-03-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     198</span>                 :                : </span>
+<span id="L199" title="Line 199: commit 6c61af665466 on 2004-10-04 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 7631 days ago (bin 4: (360..) days)" class="tlaUBC"> 7631                     </span> <span class="lineNum">     199</span>                 :<span class="tlaUBC">              0 :     PG_RETURN_CHAR((int8) arg1);</span></span>
+<span id="L200" title="Line 200: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     200</span>                 :                : }</span>
+<span id="L201" title="Line 201: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     201</span>                 :                : </span>
+<span id="L202" title="Line 202: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     202</span>                 :                : </span>
+<span id="L203" title="Line 203: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     203</span>                 :                : Datum</span>
+<span id="L204" title="Line 204: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">9213</a> <a href="#L207" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     204</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">        6898 : text_char(PG_FUNCTION_ARGS)</span></span>
+<span id="L205" title="Line 205: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     205</span>                 :                : {</span>
+<span id="L206" title="Line 206: commit 3a0d473192b2 on 2017-03-12 by noah@leadboat.com"> 3089 <a href="#top" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">     206</span>                 :<span class="tlaCBC">           6898 :     text       *arg1 = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L207" title="Line 207: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us"> 1120 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     207</span>         [<span class="tlaECB"> <a href="#L214" title="ECB: Branch 0 was taken 66 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#L214" title="ECB: Branch 1 was taken 6832 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           6898 :     char       *ch = VARDATA_ANY(arg1);</span></span>
+<span id="L208" title="Line 208: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     208</span>                 :                :     char        result;</span>
+<span id="L209" title="Line 209: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     209</span>                 :                : </span>
+<span id="L210" title="Line 210: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     210</span>                 :                :     /*</span>
+<span id="L211" title="Line 211: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     211</span>                 :                :      * Conversion rules are the same as in charin(), but here we need to</span>
+<span id="L212" title="Line 212: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     212</span>                 :                :      * handle the empty-string case honestly.</span>
+<span id="L213" title="Line 213: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     213</span>                 :                :      */</span>
+<span id="L214" title="Line 214: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     214</span>   [<span class="tlaGBC"> <a href="#L219" title="GBC: Branch 0 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L215" title="CBC: Branch 1 was taken 6895 times" class="branchTla">+</a> </span><span class="tlaGBC"> <a href="#L219" title="GBC: Branch 2 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L215" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">           6898 :     if (VARSIZE_ANY_EXHDR(arg1) == 4 &amp;&amp; ch[0] == '\\' &amp;&amp;</span></span>
+                           <span class="lineNum">        </span> <span class="tlaEUB"> <a href="#L219" title="EUB: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L219" title="EUB: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L219" title="EUB: Branch 6 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#L219" title="EUB: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#L219" title="ECB: Branch 8 was taken 66 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span> <span class="tlaECB"> <a href="#L219" title="ECB: Branch 9 was taken 6832 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#L219" title="EUB: Branch 10 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#L219" title="ECB: Branch 11 was taken 66 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#L219" title="ECB: Branch 12 was taken 3 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#L219" title="ECB: Branch 13 was taken 6829 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>          <span class="tlaECB"> <a href="#L219" title="ECB: Branch 14 was taken 3 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#L219" title="EUB: Branch 15 was not taken" class="branchTla">-</a> </span>]
+<span id="L215" title="Line 215: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     215</span>   [<span class="tlaCBC"> <a href="#L219" title="CBC: Branch 0 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L219" title="CBC: Branch 2 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">              3 :         ISOCTAL(ch[1]) &amp;&amp; ISOCTAL(ch[2]) &amp;&amp; ISOCTAL(ch[3]))</span></span>
+                           <span class="lineNum">        </span> <span class="tlaCBC"> <a href="#L219" title="CBC: Branch 4 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L219" title="CBC: Branch 6 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L219" title="CBC: Branch 8 was taken 3 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>       <span class="tlaUBC"> <a href="#top" title="UBC: Branch 9 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L219" title="CBC: Branch 10 was taken 3 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 11 was not taken" class="branchTla">-</a> </span>]
+<span id="L216" title="Line 216: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     216</span>                 :<span class="tlaCBC">              3 :         result = (FROMOCTAL(ch[1]) &lt;&lt; 6) +</span></span>
+<span id="L217" title="Line 217: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     217</span>                 :<span class="tlaCBC">              3 :             (FROMOCTAL(ch[2]) &lt;&lt; 3) +</span></span>
+<span id="L218" title="Line 218: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     218</span>                 :<span class="tlaCBC">              3 :             FROMOCTAL(ch[3]);</span></span>
+<span id="L219" title="Line 219: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     219</span>   [<span class="tlaGBC"> <a href="#top" title="GBC: Branch 0 was taken 6892 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L237" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">           6895 :     else if (VARSIZE_ANY_EXHDR(arg1) &gt; 0)</span></span>
+                           <span class="lineNum">        </span> <span class="tlaEUB"> <a href="#top" title="EUB: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 6 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 8 was taken 66 times" class="branchTla">+</a> </span> 
+                           <span class="lineNum">        </span>       <span class="tlaECB"> <a href="#top" title="ECB: Branch 9 was taken 6829 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 10 was taken 6892 times" class="branchTla">+</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 11 was taken 3 times" class="branchTla">+</a> </span>]
+<span id="L220" title="Line 220: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     220</span>                 :<span class="tlaCBC">           6892 :         result = ch[0];</span></span>
+<span id="L221" title="Line 221: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     221</span>                 :                :     else</span>
+<span id="L222" title="Line 222: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us"> 8856                      <span class="lineNum">     222</span>                 :<span class="tlaCBC">              3 :         result = '\0';</span></span>
+<span id="L223" title="Line 223: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     223</span>                 :                : </span>
+<span id="L224" title="Line 224: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     224</span>                 :<span class="tlaCBC">           6898 :     PG_RETURN_CHAR(result);</span></span>
+<span id="L225" title="Line 225: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     225</span>                 :                : }</span>
+<span id="L226" title="Line 226: commit 075cede74858 on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     226</span>                 :                : </span>
+<span id="L227" title="Line 227: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     227</span>                 :                : Datum</span>
+<span id="L228" title="Line 228: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> 9213                      <span class="lineNum">     228</span>                 :<span class="tlaCBC">          32518 : char_text(PG_FUNCTION_ARGS)</span></span>
+<span id="L229" title="Line 229: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     229</span>                 :                : {</span>
+<span id="L230" title="Line 230: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     230</span>                 :<span class="tlaCBC">          32518 :     char        arg1 = PG_GETARG_CHAR(0);</span></span>
+<span id="L231" title="Line 231: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us"> 1120                      <span class="lineNum">     231</span>                 :<span class="tlaCBC">          32518 :     text       *result = palloc(VARHDRSZ + 4);</span></span>
+<span id="L232" title="Line 232: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     232</span>                 :                : </span>
+<span id="L233" title="Line 233: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     233</span>                 :                :     /*</span>
+<span id="L234" title="Line 234: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     234</span>                 :                :      * Conversion rules are the same as in charout(), but here we need to be</span>
+<span id="L235" title="Line 235: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     235</span>                 :                :      * honest about converting 0x00 to an empty string.</span>
+<span id="L236" title="Line 236: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     236</span>                 :                :      */</span>
+<span id="L237" title="Line 237: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     237</span>         [<span class="tlaCBC"> <a href="#L245" title="CBC: Branch 0 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L245" title="CBC: Branch 1 was taken 32515 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          32518 :     if (IS_HIGHBIT_SET(arg1))</span></span>
+<span id="L238" title="Line 238: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     238</span>                 :                :     {</span>
+<span id="L239" title="Line 239: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     239</span>                 :<span class="tlaCBC">              3 :         SET_VARSIZE(result, VARHDRSZ + 4);</span></span>
+<span id="L240" title="Line 240: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     240</span>                 :<span class="tlaCBC">              3 :         (VARDATA(result))[0] = '\\';</span></span>
+<span id="L241" title="Line 241: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     241</span>                 :<span class="tlaCBC">              3 :         (VARDATA(result))[1] = TOOCTAL(((unsigned char) arg1) &gt;&gt; 6);</span></span>
+<span id="L242" title="Line 242: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     242</span>                 :<span class="tlaCBC">              3 :         (VARDATA(result))[2] = TOOCTAL((((unsigned char) arg1) &gt;&gt; 3) &amp; 07);</span></span>
+<span id="L243" title="Line 243: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     243</span>                 :<span class="tlaCBC">              3 :         (VARDATA(result))[3] = TOOCTAL(((unsigned char) arg1) &amp; 07);</span></span>
+<span id="L244" title="Line 244: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     244</span>                 :                :     }</span>
+<span id="L245" title="Line 245: commit ec62ce55a813 on 2022-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     245</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 32512 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          32515 :     else if (arg1 != '\0')</span></span>
+<span id="L246" title="Line 246: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     246</span>                 :                :     {</span>
+<span id="L247" title="Line 247: commit 234a02b2a888 on 2007-02-27 by tgl@sss.pgh.pa.us"> 6755                      <span class="lineNum">     247</span>                 :<span class="tlaCBC">          32512 :         SET_VARSIZE(result, VARHDRSZ + 1);</span></span>
+<span id="L248" title="Line 248: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us"> 8856                      <span class="lineNum">     248</span>                 :<span class="tlaCBC">          32512 :         *(VARDATA(result)) = arg1;</span></span>
+<span id="L249" title="Line 249: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     249</span>                 :                :     }</span>
+<span id="L250" title="Line 250: commit 8a3b80deb03b on 2001-05-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     250</span>                 :                :     else</span>
+<span id="L251" title="Line 251: commit 234a02b2a888 on 2007-02-27 by tgl@sss.pgh.pa.us"> 6755                      <span class="lineNum">     251</span>                 :<span class="tlaCBC">              3 :         SET_VARSIZE(result, VARHDRSZ);</span></span>
+<span id="L252" title="Line 252: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     252</span>                 :                : </span>
+<span id="L253" title="Line 253: commit 48165ec2262b on 2000-06-05 by tgl@sss.pgh.pa.us"> 9213                      <span class="lineNum">     253</span>                 :<span class="tlaCBC">          32518 :     PG_RETURN_TEXT_P(result);</span></span>
+<span id="L254" title="Line 254: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     254</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

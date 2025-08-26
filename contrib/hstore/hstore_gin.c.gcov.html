@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - contrib/hstore/hstore_gin.c</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="../index.html" title="Click to go to directory contrib">contrib</a>/<a href="index.html" title="Click to go to directory hstore">hstore</a> - hstore_gin.c<span style="font-size: 80%;"> (source / <a href="hstore_gin.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">94.1&nbsp;%</td>
+            <td class="headerCovTableEntry">85</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry"><a href="#L98" title="goto first UBC line">5</a></td>
+            <td class="headerCovTableEntry"><a href="#L130" title="goto first GNC line">1</a></td>
+            <td class="headerCovTableEntry"><a href="#L24" title="goto first CBC line">79</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry"><a href="#L37" title="goto first UBC branch">14</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L37" title="goto first CBC branch">42</a></td>
+            <td class="headerCovTableEntry"><a href="#L107" title="goto first EUB branch">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L107" title="goto first ECB branch">3</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L130" title="goto first GNC line in &ldquo;(7,30] days&rdquo; bin" class="tlaBgGNC">1</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.0&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">79</td>
+            <td class="headerCovTableEntry"><a href="#L98" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L24" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">79</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">61.8&nbsp;%</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry"><a href="#L37" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">14</a></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L37" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">42</a></td>
+            <td class="headerCovTableEntry"><a href="#L107" title="goto first EUB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgEUB">9</a></td>
+            <td class="headerCovTableEntry"><a href="#L107" title="goto first ECB branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgECB">3</a></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       1</span>                 :                : /*</span>
+<span id="L2" title="Line 2: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">       2</span>                 :                :  * contrib/hstore/hstore_gin.c</span>
+<span id="L3" title="Line 3: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       3</span>                 :                :  */</span>
+<span id="L4" title="Line 4: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       4</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L5" title="Line 5: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">       5</span>                 :                : </span>
+<span id="L6" title="Line 6: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">       6</span>                 :                : #include &quot;access/gin.h&quot;</span>
+<span id="L7" title="Line 7: commit 26df7066cc22 on 2015-05-15 by alvherre@alvh.no-ip.org">                           <span class="lineNum">       7</span>                 :                : #include &quot;access/stratnum.h&quot;</span>
+<span id="L8" title="Line 8: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       8</span>                 :                : #include &quot;catalog/pg_type.h&quot;</span>
+<span id="L9" title="Line 9: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">       9</span>                 :                : </span>
+<span id="L10" title="Line 10: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      10</span>                 :                : #include &quot;hstore.h&quot;</span>
+<span id="L11" title="Line 11: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      11</span>                 :                : </span>
+<span id="L12" title="Line 12: commit f8c4d7db6033 on 2008-05-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      12</span>                 :                : </span>
+<span id="L13" title="Line 13: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      13</span>                 :                : /*</span>
+<span id="L14" title="Line 14: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 :                :  * When using a GIN index for hstore, we choose to index both keys and values.</span>
+<span id="L15" title="Line 15: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      15</span>                 :                :  * The storage format is &quot;text&quot; values, with K, V, or N prepended to the string</span>
+<span id="L16" title="Line 16: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      16</span>                 :                :  * to indicate key, value, or null values.  (As of 9.1 it might be better to</span>
+<span id="L17" title="Line 17: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :                :  * store null values as nulls, but we'll keep it this way for on-disk</span>
+<span id="L18" title="Line 18: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 :                :  * compatibility.)</span>
+<span id="L19" title="Line 19: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 :                :  */</span>
+<span id="L20" title="Line 20: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      20</span>                 :                : #define KEYFLAG     'K'</span>
+<span id="L21" title="Line 21: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      21</span>                 :                : #define VALFLAG     'V'</span>
+<span id="L22" title="Line 22: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      22</span>                 :                : #define NULLFLAG    'N'</span>
+<span id="L23" title="Line 23: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      23</span>                 :                : </span>
+<span id="L24" title="Line 24: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> <a href="#L100" title="next CBC in &ldquo;(360..) days&rdquo; bin">6740</a> <a href="#L33" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">      24</span>                 :<a href="#L100" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           8 : PG_FUNCTION_INFO_V1(gin_extract_hstore);</span></span>
+<span id="L25" title="Line 25: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      25</span>                 :                : </span>
+<span id="L26" title="Line 26: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :                : /* Build an indexable text value */</span>
+<span id="L27" title="Line 27: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      27</span>                 :                : static text *</span>
+<span id="L28" title="Line 28: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L35" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      28</span>                 :<span class="tlaCBC">           9588 : makeitem(char *str, int len, char flag)</span></span>
+<span id="L29" title="Line 29: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      29</span>                 :                : {</span>
+<span id="L30" title="Line 30: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      30</span>                 :                :     text       *item;</span>
+<span id="L31" title="Line 31: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      31</span>                 :                : </span>
+<span id="L32" title="Line 32: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L37" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      32</span>                 :<span class="tlaCBC">           9588 :     item = (text *) palloc(VARHDRSZ + len + 1);</span></span>
+<span id="L33" title="Line 33: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L40" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">      33</span>                 :<span class="tlaCBC">           9588 :     SET_VARSIZE(item, VARHDRSZ + len + 1);</span></span>
+<span id="L34" title="Line 34: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      34</span>                 :                : </span>
+<span id="L35" title="Line 35: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L46" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      35</span>                 :<span class="tlaCBC">           9588 :     *VARDATA(item) = flag;</span></span>
+<span id="L36" title="Line 36: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 :                : </span>
+<span id="L37" title="Line 37: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L47" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      37</span>   [<span class="tlaCBC"> <a href="#L55" title="CBC: Branch 0 was taken 9585 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L55" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L55" title="CBC: Branch 2 was taken 9585 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L70" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">           9588 :     if (str &amp;&amp; len &gt; 0)</span></span>
+<span id="L38" title="Line 38: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      38</span>                 :<span class="tlaCBC">           9585 :         memcpy(VARDATA(item) + 1, str, len);</span></span>
+<span id="L39" title="Line 39: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      39</span>                 :                : </span>
+<span id="L40" title="Line 40: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L76" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">      40</span>                 :<span class="tlaCBC">           9588 :     return item;</span></span>
+<span id="L41" title="Line 41: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      41</span>                 :                : }</span>
+<span id="L42" title="Line 42: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      42</span>                 :                : </span>
+<span id="L43" title="Line 43: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      43</span>                 :                : Datum</span>
+<span id="L44" title="Line 44: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      44</span>                 :<span class="tlaCBC">           1007 : gin_extract_hstore(PG_FUNCTION_ARGS)</span></span>
+<span id="L45" title="Line 45: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      45</span>                 :                : {</span>
+<span id="L46" title="Line 46: commit 4bd1994650fd on 2017-09-18 by tgl@sss.pgh.pa.us"> 2899 <a href="#L54" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      46</span>                 :<span class="tlaCBC">           1007 :     HStore     *hs = PG_GETARG_HSTORE_P(0);</span></span>
+<span id="L47" title="Line 47: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L65" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      47</span>                 :<span class="tlaCBC">           1007 :     int32      *nentries = (int32 *) PG_GETARG_POINTER(1);</span></span>
+<span id="L48" title="Line 48: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">      48</span>                 :<span class="tlaCBC">           1007 :     Datum      *entries = NULL;</span></span>
+<span id="L49" title="Line 49: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us"> 5660                      <span class="lineNum">      49</span>                 :<span class="tlaCBC">           1007 :     HEntry     *hsent = ARRPTR(hs);</span></span>
+<span id="L50" title="Line 50: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">      50</span>                 :<span class="tlaCBC">           1007 :     char       *ptr = STRPTR(hs);</span></span>
+<span id="L51" title="Line 51: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">      51</span>                 :<span class="tlaCBC">           1007 :     int         count = HS_COUNT(hs);</span></span>
+<span id="L52" title="Line 52: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">      52</span>                 :                :     int         i;</span>
+<span id="L53" title="Line 53: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      53</span>                 :                : </span>
+<span id="L54" title="Line 54: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809 <a href="#L67" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      54</span>                 :<span class="tlaCBC">           1007 :     *nentries = 2 * count;</span></span>
+<span id="L55" title="Line 55: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>         [<span class="tlaCBC"> <a href="#L58" title="CBC: Branch 0 was taken 890 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L58" title="CBC: Branch 1 was taken 117 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           1007 :     if (count)</span></span>
+<span id="L56" title="Line 56: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :<span class="tlaCBC">            890 :         entries = (Datum *) palloc(sizeof(Datum) * 2 * count);</span></span>
+<span id="L57" title="Line 57: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      57</span>                 :                : </span>
+<span id="L58" title="Line 58: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>         [<span class="tlaCBC"> <a href="#L62" title="CBC: Branch 0 was taken 4789 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L62" title="CBC: Branch 1 was taken 1007 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           5796 :     for (i = 0; i &lt; count; ++i)</span></span>
+<span id="L59" title="Line 59: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      59</span>                 :                :     {</span>
+<span id="L60" title="Line 60: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 :                :         text       *item;</span>
+<span id="L61" title="Line 61: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      61</span>                 :                : </span>
+<span id="L62" title="Line 62: commit 68c1d7d42e55 on 2015-11-19 by tgl@sss.pgh.pa.us"> 3568                      <span class="lineNum">      62</span>         [<span class="tlaCBC"> <a href="#L63" title="CBC: Branch 0 was taken 3899 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L63" title="CBC: Branch 1 was taken 890 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4789 :         item = makeitem(HSTORE_KEY(hsent, ptr, i),</span></span>
+<span id="L63" title="Line 63: commit 68c1d7d42e55 on 2015-11-19 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>         [<span class="tlaCBC"> <a href="#L67" title="CBC: Branch 0 was taken 890 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L67" title="CBC: Branch 1 was taken 3899 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4789 :                         HSTORE_KEYLEN(hsent, i),</span></span>
+<span id="L64" title="Line 64: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      64</span>                 :                :                         KEYFLAG);</span>
+<span id="L65" title="Line 65: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us"> 5660 <a href="#L73" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      65</span>                 :<span class="tlaCBC">           4789 :         entries[2 * i] = PointerGetDatum(item);</span></span>
+<span id="L66" title="Line 66: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      66</span>                 :                : </span>
+<span id="L67" title="Line 67: commit 68c1d7d42e55 on 2015-11-19 by tgl@sss.pgh.pa.us"> 3568 <a href="#L84" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      67</span>         [<span class="tlaCBC"> <a href="#L70" title="CBC: Branch 0 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L70" title="CBC: Branch 1 was taken 4786 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4789 :         if (HSTORE_VALISNULL(hsent, i))</span></span>
+<span id="L68" title="Line 68: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">      68</span>                 :<span class="tlaCBC">              3 :             item = makeitem(NULL, 0, NULLFLAG);</span></span>
+<span id="L69" title="Line 69: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 :                :         else</span>
+<span id="L70" title="Line 70: commit 68c1d7d42e55 on 2015-11-19 by tgl@sss.pgh.pa.us"> 3568                      <span class="lineNum">      70</span>         [<span class="tlaCBC"> <a href="#L71" title="CBC: Branch 0 was taken 4786 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L71" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">           4786 :             item = makeitem(HSTORE_VAL(hsent, ptr, i),</span></span>
+<span id="L71" title="Line 71: commit 68c1d7d42e55 on 2015-11-19 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>         [<span class="tlaUBC"> <a href="#L97" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L89" title="CBC: Branch 1 was taken 4786 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4786 :                             HSTORE_VALLEN(hsent, i),</span></span>
+<span id="L72" title="Line 72: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :                :                             VALFLAG);</span>
+<span id="L73" title="Line 73: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us"> 5660 <a href="#L89" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      73</span>                 :<span class="tlaCBC">           4789 :         entries[2 * i + 1] = PointerGetDatum(item);</span></span>
+<span id="L74" title="Line 74: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      74</span>                 :                :     }</span>
+<span id="L75" title="Line 75: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      75</span>                 :                : </span>
+<span id="L76" title="Line 76: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L85" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">      76</span>                 :<span class="tlaCBC">           1007 :     PG_RETURN_POINTER(entries);</span></span>
+<span id="L77" title="Line 77: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      77</span>                 :                : }</span>
+<span id="L78" title="Line 78: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      78</span>                 :                : </span>
+<span id="L79" title="Line 79: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      79</span>                 :<span class="tlaCBC">              8 : PG_FUNCTION_INFO_V1(gin_extract_hstore_query);</span></span>
+<span id="L80" title="Line 80: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      80</span>                 :                : </span>
+<span id="L81" title="Line 81: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      81</span>                 :                : Datum</span>
+<span id="L82" title="Line 82: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      82</span>                 :<span class="tlaCBC">             12 : gin_extract_hstore_query(PG_FUNCTION_ARGS)</span></span>
+<span id="L83" title="Line 83: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      83</span>                 :                : {</span>
+<span id="L84" title="Line 84: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L86" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      84</span>                 :<span class="tlaCBC">             12 :     int32      *nentries = (int32 *) PG_GETARG_POINTER(1);</span></span>
+<span id="L85" title="Line 85: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L105" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">      85</span>                 :<span class="tlaCBC">             12 :     StrategyNumber strategy = PG_GETARG_UINT16(2);</span></span>
+<span id="L86" title="Line 86: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L93" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      86</span>                 :<span class="tlaCBC">             12 :     int32      *searchMode = (int32 *) PG_GETARG_POINTER(6);</span></span>
+<span id="L87" title="Line 87: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                :     Datum      *entries;</span>
+<span id="L88" title="Line 88: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      88</span>                 :                : </span>
+<span id="L89" title="Line 89: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L100" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      89</span>         [<span class="tlaCBC"> <a href="#L97" title="CBC: Branch 0 was taken 6 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L97" title="CBC: Branch 1 was taken 6 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             12 :     if (strategy == HStoreContainsStrategyNumber)</span></span>
+<span id="L90" title="Line 90: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      90</span>                 :                :     {</span>
+<span id="L91" title="Line 91: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 :                :         /* Query is an hstore, so just apply gin_extract_hstore... */</span>
+<span id="L92" title="Line 92: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :                :         entries = (Datum *)</span>
+<span id="L93" title="Line 93: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L102" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      93</span>                 :<span class="tlaCBC">              6 :             DatumGetPointer(DirectFunctionCall2(gin_extract_hstore,</span></span>
+<span id="L94" title="Line 94: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 :                :                                                 PG_GETARG_DATUM(0),</span>
+<span id="L95" title="Line 95: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                :                                                 PointerGetDatum(nentries)));</span>
+<span id="L96" title="Line 96: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      96</span>                 :                :         /* ... except that &quot;contains {}&quot; requires a full index scan */</span>
+<span id="L97" title="Line 97: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>         [<span class="tlaUBC"> <a href="#L110" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L100" title="CBC: Branch 1 was taken 6 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              6 :         if (entries == NULL)</span></span>
+<span id="L98" title="Line 98: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L129" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5343</a> </span><a href="#L129" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">      98</span>                 :<a href="#L129" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             *searchMode = GIN_SEARCH_MODE_ALL;</span></span>
+<span id="L99" title="Line 99: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">      99</span>                 :                :     }</span>
+<span id="L100" title="Line 100: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> <a href="#L131" title="next CBC in &ldquo;(360..) days&rdquo; bin">6494</a> <a href="#L106" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     100</span>         [<span class="tlaCBC"> <a href="#L110" title="CBC: Branch 0 was taken 2 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L110" title="CBC: Branch 1 was taken 4 times" class="branchTla">+</a> </span>]:<a href="#L131" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           6 :     else if (strategy == HStoreExistsStrategyNumber)</span></span>
+<span id="L101" title="Line 101: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     101</span>                 :                :     {</span>
+<span id="L102" title="Line 102: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L107" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     102</span>                 :<span class="tlaCBC">              2 :         text       *query = PG_GETARG_TEXT_PP(0);</span></span>
+<span id="L103" title="Line 103: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                :         text       *item;</span>
+<span id="L104" title="Line 104: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     104</span>                 :                : </span>
+<span id="L105" title="Line 105: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L108" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     105</span>                 :<span class="tlaCBC">              2 :         *nentries = 1;</span></span>
+<span id="L106" title="Line 106: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L113" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     106</span>                 :<span class="tlaCBC">              2 :         entries = (Datum *) palloc(sizeof(Datum));</span></span>
+<span id="L107" title="Line 107: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L110" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     107</span>   [<span class="tlaEUB"> <a href="#top" title="EUB: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 1 was taken 2 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 3 was not taken" class="branchTla">-</a> </span> :<span class="tlaCBC">              2 :         item = makeitem(VARDATA_ANY(query), VARSIZE_ANY_EXHDR(query), KEYFLAG);</span></span>
+                           <span class="lineNum">        </span> <span class="tlaEUB"> <a href="#top" title="EUB: Branch 4 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 5 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 6 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 7 was not taken" class="branchTla">-</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 8 was not taken" class="branchTla">-</a> </span> 
+                           <span class="lineNum">        </span>       <span class="tlaECB"> <a href="#top" title="ECB: Branch 9 was taken 2 times" class="branchTla">+</a> </span><span class="tlaEUB"> <a href="#top" title="EUB: Branch 10 was not taken" class="branchTla">-</a> </span><span class="tlaECB"> <a href="#top" title="ECB: Branch 11 was taken 2 times" class="branchTla">+</a> </span>]
+<span id="L108" title="Line 108: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L148" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     108</span>                 :<span class="tlaCBC">              2 :         entries[0] = PointerGetDatum(item);</span></span>
+<span id="L109" title="Line 109: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     109</span>                 :                :     }</span>
+<span id="L110" title="Line 110: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809 <a href="#L123" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     110</span>   [<span class="tlaCBC"> <a href="#L125" title="CBC: Branch 0 was taken 2 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L125" title="CBC: Branch 1 was taken 2 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L125" title="CBC: Branch 2 was taken 2 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L128" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              4 :     else if (strategy == HStoreExistsAnyStrategyNumber ||</span></span>
+<span id="L111" title="Line 111: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 :                :              strategy == HStoreExistsAllStrategyNumber)</span>
+<span id="L112" title="Line 112: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     112</span>                 :<span class="tlaCBC">              4 :     {</span></span>
+<span id="L113" title="Line 113: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us"> 5660 <a href="#L161" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     113</span>                 :<span class="tlaCBC">              4 :         ArrayType  *query = PG_GETARG_ARRAYTYPE_P(0);</span></span>
+<span id="L114" title="Line 114: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     114</span>                 :                :         Datum      *key_datums;</span>
+<span id="L115" title="Line 115: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     115</span>                 :                :         bool       *key_nulls;</span>
+<span id="L116" title="Line 116: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     116</span>                 :                :         int         key_count;</span>
+<span id="L117" title="Line 117: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     117</span>                 :                :         int         i,</span>
+<span id="L118" title="Line 118: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     118</span>                 :                :                     j;</span>
+<span id="L119" title="Line 119: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     119</span>                 :                :         text       *item;</span>
+<span id="L120" title="Line 120: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :                : </span>
+<span id="L121" title="Line 121: commit d746021de18b on 2022-07-01 by peter@eisentraut.org"> 1152 <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     121</span>                 :<span class="tlaCBC">              4 :         deconstruct_array_builtin(query, TEXTOID, &amp;key_datums, &amp;key_nulls, &amp;key_count);</span></span>
+<span id="L122" title="Line 122: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 :                : </span>
+<span id="L123" title="Line 123: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809 <a href="#L131" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     123</span>                 :<span class="tlaCBC">              4 :         entries = (Datum *) palloc(sizeof(Datum) * key_count);</span></span>
+<span id="L124" title="Line 124: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     124</span>                 :                : </span>
+<span id="L125" title="Line 125: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>         [<span class="tlaCBC"> <a href="#L128" title="CBC: Branch 0 was taken 8 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L128" title="CBC: Branch 1 was taken 4 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             12 :         for (i = 0, j = 0; i &lt; key_count; ++i)</span></span>
+<span id="L126" title="Line 126: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span>                 :                :         {</span>
+<span id="L127" title="Line 127: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     127</span>                 :                :             /* Nulls in the array are ignored, cf hstoreArrayToPairs */</span>
+<span id="L128" title="Line 128: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>         [<span class="tlaUBC"> <a href="#L136" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L136" title="CBC: Branch 1 was taken 8 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              8 :             if (key_nulls[i])</span></span>
+<span id="L129" title="Line 129: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5809 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L137" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5809</a> </span><a href="#L137" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5809 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNumWithDelete" title="removed line 130 from baseline version">     129</span>                 :<a href="#L137" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :                 continue;</span></span>
+<span id="L130" title="Line 130: commit 0f5ade7a367c on 2025-08-05 by peter@eisentraut.org">   <a href="#top" title="next GNC in &ldquo;(7,30] days&rdquo; bin">21</a> <a href="#top" title="next GNC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     130</span>                 :<a href="#top" class="tlaBgGNC"  title="Next GNC group">GNC</a><span class="tlaGNC tlaBgGNC">           8 :             item = makeitem(VARDATA(DatumGetPointer(key_datums[i])), VARSIZE(DatumGetPointer(key_datums[i])) - VARHDRSZ, KEYFLAG);</span></span>
+<span id="L131" title="Line 131: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> <a href="#L145" title="next CBC in &ldquo;(360..) days&rdquo; bin">5809</a> <a href="#L145" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     131</span>                 :<a href="#L145" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           8 :             entries[j++] = PointerGetDatum(item);</span></span>
+<span id="L132" title="Line 132: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>                 :                :         }</span>
+<span id="L133" title="Line 133: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     133</span>                 :                : </span>
+<span id="L134" title="Line 134: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">     134</span>                 :<span class="tlaCBC">              4 :         *nentries = j;</span></span>
+<span id="L135" title="Line 135: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     135</span>                 :                :         /* ExistsAll with no keys should match everything */</span>
+<span id="L136" title="Line 136: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>   [<span class="tlaUBC"> <a href="#L141" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L164" title="CBC: Branch 1 was taken 4 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L141" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaUBC"> <a href="#L141" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              4 :         if (j == 0 &amp;&amp; strategy == HStoreExistsAllStrategyNumber)</span></span>
+<span id="L137" title="Line 137: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L207" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5343</a> </span><a href="#L207" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">     137</span>                 :<a href="#L207" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             *searchMode = GIN_SEARCH_MODE_ALL;</span></span>
+<span id="L138" title="Line 138: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 :                :     }</span>
+<span id="L139" title="Line 139: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     139</span>                 :                :     else</span>
+<span id="L140" title="Line 140: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 :                :     {</span>
+<span id="L141" title="Line 141: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     141</span>         [<span class="tlaUBC"> <a href="#L193" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L193" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :         elog(ERROR, &quot;unrecognized strategy number: %d&quot;, strategy);</span></span>
+<span id="L142" title="Line 142: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 :                :         entries = NULL;         /* keep compiler quiet */</span>
+<span id="L143" title="Line 143: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 :                :     }</span>
+<span id="L144" title="Line 144: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     144</span>                 :                : </span>
+<span id="L145" title="Line 145: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> <a href="#L209" title="next CBC in &ldquo;(360..) days&rdquo; bin">5343</a> <a href="#L153" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     145</span>                 :<a href="#L209" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">          12 :     PG_RETURN_POINTER(entries);</span></span>
+<span id="L146" title="Line 146: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     146</span>                 :                : }</span>
+<span id="L147" title="Line 147: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     147</span>                 :                : </span>
+<span id="L148" title="Line 148: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L154" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     148</span>                 :<span class="tlaCBC">              8 : PG_FUNCTION_INFO_V1(gin_consistent_hstore);</span></span>
+<span id="L149" title="Line 149: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     149</span>                 :                : </span>
+<span id="L150" title="Line 150: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     150</span>                 :                : Datum</span>
+<span id="L151" title="Line 151: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     151</span>                 :<span class="tlaCBC">            955 : gin_consistent_hstore(PG_FUNCTION_ARGS)</span></span>
+<span id="L152" title="Line 152: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     152</span>                 :                : {</span>
+<span id="L153" title="Line 153: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us"> 6343 <a href="#L157" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     153</span>                 :<span class="tlaCBC">            955 :     bool       *check = (bool *) PG_GETARG_POINTER(0);</span></span>
+<span id="L154" title="Line 154: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L176" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     154</span>                 :<span class="tlaCBC">            955 :     StrategyNumber strategy = PG_GETARG_UINT16(1);</span></span>
+<span id="L155" title="Line 155: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     155</span>                 :                : </span>
+<span id="L156" title="Line 156: commit 4bd1994650fd on 2017-09-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     156</span>                 :                :     /* HStore      *query = PG_GETARG_HSTORE_P(2); */</span>
+<span id="L157" title="Line 157: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809 <a href="#L171" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     157</span>                 :<span class="tlaCBC">            955 :     int32       nkeys = PG_GETARG_INT32(3);</span></span>
+<span id="L158" title="Line 158: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">     158</span>                 :                : </span>
+<span id="L159" title="Line 159: commit 87b8db37740b on 2009-03-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     159</span>                 :                :     /* Pointer     *extra_data = (Pointer *) PG_GETARG_POINTER(4); */</span>
+<span id="L160" title="Line 160: commit 87b8db37740b on 2009-03-25 by tgl@sss.pgh.pa.us"> 5998                      <span class="lineNum">     160</span>                 :<span class="tlaCBC">            955 :     bool       *recheck = (bool *) PG_GETARG_POINTER(5);</span></span>
+<span id="L161" title="Line 161: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#L181" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     161</span>                 :<span class="tlaCBC">            955 :     bool        res = true;</span></span>
+<span id="L162" title="Line 162: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     162</span>                 :                :     int32       i;</span>
+<span id="L163" title="Line 163: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     163</span>                 :                : </span>
+<span id="L164" title="Line 164: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us">                           <span class="lineNum">     164</span>         [<span class="tlaCBC"> <a href="#L172" title="CBC: Branch 0 was taken 235 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L172" title="CBC: Branch 1 was taken 720 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            955 :     if (strategy == HStoreContainsStrategyNumber)</span></span>
+<span id="L165" title="Line 165: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     165</span>                 :                :     {</span>
+<span id="L166" title="Line 166: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     166</span>                 :                :         /*</span>
+<span id="L167" title="Line 167: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 :                :          * Index doesn't have information about correspondence of keys and</span>
+<span id="L168" title="Line 168: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">     168</span>                 :                :          * values, so we need recheck.  However, if not all the keys are</span>
+<span id="L169" title="Line 169: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     169</span>                 :                :          * present, we can fail at once.</span>
+<span id="L170" title="Line 170: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     170</span>                 :                :          */</span>
+<span id="L171" title="Line 171: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us"> 6343 <a href="#L177" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     171</span>                 :<span class="tlaCBC">            235 :         *recheck = true;</span></span>
+<span id="L172" title="Line 172: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">     172</span>         [<span class="tlaCBC"> <a href="#L174" title="CBC: Branch 0 was taken 339 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L174" title="CBC: Branch 1 was taken 36 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            375 :         for (i = 0; i &lt; nkeys; i++)</span></span>
+<span id="L173" title="Line 173: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     173</span>                 :                :         {</span>
+<span id="L174" title="Line 174: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     174</span>         [<span class="tlaCBC"> <a href="#L181" title="CBC: Branch 0 was taken 199 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L181" title="CBC: Branch 1 was taken 140 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            339 :             if (!check[i])</span></span>
+<span id="L175" title="Line 175: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     175</span>                 :                :             {</span>
+<span id="L176" title="Line 176: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L185" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     176</span>                 :<span class="tlaCBC">            199 :                 res = false;</span></span>
+<span id="L177" title="Line 177: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L184" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     177</span>                 :<span class="tlaCBC">            199 :                 break;</span></span>
+<span id="L178" title="Line 178: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     178</span>                 :                :             }</span>
+<span id="L179" title="Line 179: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     179</span>                 :                :         }</span>
+<span id="L180" title="Line 180: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     180</span>                 :                :     }</span>
+<span id="L181" title="Line 181: commit fdf5a5efb7b2 on 2007-11-15 by bruce@momjian.us"> 6494 <a href="#top" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">     181</span>         [<span class="tlaCBC"> <a href="#L187" title="CBC: Branch 0 was taken 194 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L187" title="CBC: Branch 1 was taken 526 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            720 :     else if (strategy == HStoreExistsStrategyNumber)</span></span>
+<span id="L182" title="Line 182: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     182</span>                 :                :     {</span>
+<span id="L183" title="Line 183: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     183</span>                 :                :         /* Existence of key is guaranteed in default search mode */</span>
+<span id="L184" title="Line 184: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343 <a href="#L187" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     184</span>                 :<span class="tlaCBC">            194 :         *recheck = false;</span></span>
+<span id="L185" title="Line 185: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> 6740 <a href="#L209" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     185</span>                 :<span class="tlaCBC">            194 :         res = true;</span></span>
+<span id="L186" title="Line 186: commit 9b5c8d45f62b on 2008-04-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     186</span>                 :                :     }</span>
+<span id="L187" title="Line 187: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     187</span>         [<span class="tlaCBC"> <a href="#L193" title="CBC: Branch 0 was taken 339 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L193" title="CBC: Branch 1 was taken 187 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            526 :     else if (strategy == HStoreExistsAnyStrategyNumber)</span></span>
+<span id="L188" title="Line 188: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     188</span>                 :                :     {</span>
+<span id="L189" title="Line 189: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     189</span>                 :                :         /* Existence of key is guaranteed in default search mode */</span>
+<span id="L190" title="Line 190: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">     190</span>                 :<span class="tlaCBC">            339 :         *recheck = false;</span></span>
+<span id="L191" title="Line 191: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809                      <span class="lineNum">     191</span>                 :<span class="tlaCBC">            339 :         res = true;</span></span>
+<span id="L192" title="Line 192: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     192</span>                 :                :     }</span>
+<span id="L193" title="Line 193: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     193</span>         [<span class="tlaCBC"> <a href="#L197" title="CBC: Branch 0 was taken 187 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L207" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">            187 :     else if (strategy == HStoreExistsAllStrategyNumber)</span></span>
+<span id="L194" title="Line 194: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     194</span>                 :                :     {</span>
+<span id="L195" title="Line 195: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     195</span>                 :                :         /* Testing for all the keys being present gives an exact result */</span>
+<span id="L196" title="Line 196: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">     196</span>                 :<span class="tlaCBC">            187 :         *recheck = false;</span></span>
+<span id="L197" title="Line 197: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     197</span>         [<span class="tlaCBC"> <a href="#L199" title="CBC: Branch 0 was taken 230 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L199" title="CBC: Branch 1 was taken 42 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            272 :         for (i = 0; i &lt; nkeys; i++)</span></span>
+<span id="L198" title="Line 198: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     198</span>                 :                :         {</span>
+<span id="L199" title="Line 199: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us"> 5809                      <span class="lineNum">     199</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 145 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 85 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            230 :             if (!check[i])</span></span>
+<span id="L200" title="Line 200: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     200</span>                 :                :             {</span>
+<span id="L201" title="Line 201: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     201</span>                 :<span class="tlaCBC">            145 :                 res = false;</span></span>
+<span id="L202" title="Line 202: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"> 5343                      <span class="lineNum">     202</span>                 :<span class="tlaCBC">            145 :                 break;</span></span>
+<span id="L203" title="Line 203: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     203</span>                 :                :             }</span>
+<span id="L204" title="Line 204: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     204</span>                 :                :         }</span>
+<span id="L205" title="Line 205: commit 172eacba4341 on 2009-09-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     205</span>                 :                :     }</span>
+<span id="L206" title="Line 206: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     206</span>                 :                :     else</span>
+<span id="L207" title="Line 207: commit ba398969cd1b on 2011-01-09 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5343</a> </span><a href="#top" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 5343 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">     207</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :         elog(ERROR, &quot;unrecognized strategy number: %d&quot;, strategy);</span></span>
+<span id="L208" title="Line 208: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     208</span>                 :                : </span>
+<span id="L209" title="Line 209: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">6740</a> <a href="#top" title="next CBC in &ldquo;teodor@sigaev.ru&rdquo; bin">teodor@sigaev.ru</a>     <span class="lineNum">     209</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">         955 :     PG_RETURN_BOOL(res);</span></span>
+<span id="L210" title="Line 210: commit 754148d81f91 on 2007-03-14 by teodor@sigaev.ru">                           <span class="lineNum">     210</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

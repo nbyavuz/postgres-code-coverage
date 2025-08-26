@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/numeric.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - numeric.h<span style="font-size: 80%;"> (source / <a href="numeric.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L61" title="goto first CBC line">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"><a href="#L61" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">6</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit d72f6c75038d on 2003-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit d72f6c75038d on 2003-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :  * numeric.h</span>
+<span id="L4" title="Line 4: commit d72f6c75038d on 2003-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *    Definitions for the exact numeric data type of Postgres</span>
+<span id="L5" title="Line 5: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit d72f6c75038d on 2003-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       6</span>                 :  * Original coding 1998, Jan Wieck.  Heavily revised 2003, Tom Lane.</span>
+<span id="L7" title="Line 7: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">       7</span>                 :  *</span>
+<span id="L8" title="Line 8: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :  * Copyright (c) 1998-2025, PostgreSQL Global Development Group</span>
+<span id="L9" title="Line 9: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :  * src/include/utils/numeric.h</span>
+<span id="L11" title="Line 11: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      11</span>                 :  *</span>
+<span id="L12" title="Line 12: commit d72f6c75038d on 2003-03-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L13" title="Line 13: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      13</span>                 :  */</span>
+<span id="L14" title="Line 14: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      14</span>                 : #ifndef _PG_NUMERIC_H_</span>
+<span id="L15" title="Line 15: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      15</span>                 : #define _PG_NUMERIC_H_</span>
+<span id="L16" title="Line 16: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      16</span>                 : </span>
+<span id="L17" title="Line 17: commit e6341323a8da on 2024-03-27 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      17</span>                 : #include &quot;common/pg_prng.h&quot;</span>
+<span id="L18" title="Line 18: commit b85a965f5fc7 on 2006-07-11 by bruce@momjian.us">                           <span class="lineNum">      18</span>                 : #include &quot;fmgr.h&quot;</span>
+<span id="L19" title="Line 19: commit b85a965f5fc7 on 2006-07-11 by bruce@momjian.us">                           <span class="lineNum">      19</span>                 : </span>
+<span id="L20" title="Line 20: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 : /*</span>
+<span id="L21" title="Line 21: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      21</span>                 :  * Limits on the precision and scale specifiable in a NUMERIC typmod.  The</span>
+<span id="L22" title="Line 22: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      22</span>                 :  * precision is strictly positive, but the scale may be positive or negative.</span>
+<span id="L23" title="Line 23: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      23</span>                 :  * A negative scale implies rounding before the decimal point.</span>
+<span id="L24" title="Line 24: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      24</span>                 :  *</span>
+<span id="L25" title="Line 25: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      25</span>                 :  * Note that the minimum display scale defined below is zero --- we always</span>
+<span id="L26" title="Line 26: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      26</span>                 :  * display all digits before the decimal point, even when the scale is</span>
+<span id="L27" title="Line 27: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      27</span>                 :  * negative.</span>
+<span id="L28" title="Line 28: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      28</span>                 :  *</span>
+<span id="L29" title="Line 29: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      29</span>                 :  * Note that the implementation limits on the precision and display scale of a</span>
+<span id="L30" title="Line 30: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      30</span>                 :  * numeric value are much larger --- beware of what you use these for!</span>
+<span id="L31" title="Line 31: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      31</span>                 :  */</span>
+<span id="L32" title="Line 32: commit b5626a2089f9 on 1999-01-05 by JanWieck@Yahoo.com">                           <span class="lineNum">      32</span>                 : #define NUMERIC_MAX_PRECISION       1000</span>
+<span id="L33" title="Line 33: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      33</span>                 : </span>
+<span id="L34" title="Line 34: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      34</span>                 : #define NUMERIC_MIN_SCALE           (-1000)</span>
+<span id="L35" title="Line 35: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      35</span>                 : #define NUMERIC_MAX_SCALE           1000</span>
+<span id="L36" title="Line 36: commit 085f931f5249 on 2021-07-26 by dean.a.rasheed@gmail.com">                           <span class="lineNum">      36</span>                 : </span>
+<span id="L37" title="Line 37: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 : /*</span>
+<span id="L38" title="Line 38: commit 3cb8c8da68c0 on 2000-01-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 :  * Internal limits on the scales chosen for calculation results</span>
+<span id="L39" title="Line 39: commit 3cb8c8da68c0 on 2000-01-15 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :  */</span>
+<span id="L40" title="Line 40: commit 07842084fe3e on 1999-05-25 by bruce@momjian.us">                           <span class="lineNum">      40</span>                 : #define NUMERIC_MAX_DISPLAY_SCALE   NUMERIC_MAX_PRECISION</span>
+<span id="L41" title="Line 41: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 : #define NUMERIC_MIN_DISPLAY_SCALE   0</span>
+<span id="L42" title="Line 42: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      42</span>                 : </span>
+<span id="L43" title="Line 43: commit 07842084fe3e on 1999-05-25 by bruce@momjian.us">                           <span class="lineNum">      43</span>                 : #define NUMERIC_MAX_RESULT_SCALE    (NUMERIC_MAX_PRECISION * 2)</span>
+<span id="L44" title="Line 44: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      44</span>                 : </span>
+<span id="L45" title="Line 45: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      45</span>                 : /*</span>
+<span id="L46" title="Line 46: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 :  * For inherently inexact calculations such as division and square root,</span>
+<span id="L47" title="Line 47: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 :  * we try to get at least this many significant digits; the idea is to</span>
+<span id="L48" title="Line 48: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 :  * deliver a result no worse than float8 would.</span>
+<span id="L49" title="Line 49: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :  */</span>
+<span id="L50" title="Line 50: commit b813d143aec2 on 2002-10-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 : #define NUMERIC_MIN_SIG_DIGITS      16</span>
+<span id="L51" title="Line 51: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      51</span>                 : </span>
+<span id="L52" title="Line 52: commit 8a4dc94ca0ef on 2010-07-30 by rhaas@postgresql.org">                           <span class="lineNum">      52</span>                 : /* The actual contents of Numeric are private to numeric.c */</span>
+<span id="L53" title="Line 53: commit 8a4dc94ca0ef on 2010-07-30 by rhaas@postgresql.org">                           <span class="lineNum">      53</span>                 : struct NumericData;</span>
+<span id="L54" title="Line 54: commit 8a4dc94ca0ef on 2010-07-30 by rhaas@postgresql.org">                           <span class="lineNum">      54</span>                 : typedef struct NumericData *Numeric;</span>
+<span id="L55" title="Line 55: commit 0e9d75c6ac97 on 1998-12-30 by JanWieck@Yahoo.com">                           <span class="lineNum">      55</span>                 : </span>
+<span id="L56" title="Line 56: commit f2d120532207 on 2000-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 : /*</span>
+<span id="L57" title="Line 57: commit f2d120532207 on 2000-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :  * fmgr interface macros</span>
+<span id="L58" title="Line 58: commit f2d120532207 on 2000-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :  */</span>
+<span id="L59" title="Line 59: commit f2d120532207 on 2000-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 : </span>
+<span id="L60" title="Line 60: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      60</span>                 : static inline Numeric</span>
+<span id="L61" title="Line 61: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1064</a> <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">      61</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">    23215061 : DatumGetNumeric(Datum X)</span></span>
+<span id="L62" title="Line 62: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      62</span>                 : {</span>
+<span id="L63" title="Line 63: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      63</span> <span class="tlaCBC">       23215061 :     return (Numeric) PG_DETOAST_DATUM(X);</span></span>
+<span id="L64" title="Line 64: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      64</span>                 : }</span>
+<span id="L65" title="Line 65: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      65</span>                 : </span>
+<span id="L66" title="Line 66: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      66</span>                 : static inline Numeric</span>
+<span id="L67" title="Line 67: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      67</span> <span class="tlaCBC">              9 : DatumGetNumericCopy(Datum X)</span></span>
+<span id="L68" title="Line 68: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      68</span>                 : {</span>
+<span id="L69" title="Line 69: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      69</span> <span class="tlaCBC">              9 :     return (Numeric) PG_DETOAST_DATUM_COPY(X);</span></span>
+<span id="L70" title="Line 70: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      70</span>                 : }</span>
+<span id="L71" title="Line 71: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      71</span>                 : </span>
+<span id="L72" title="Line 72: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      72</span>                 : static inline Datum</span>
+<span id="L73" title="Line 73: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      73</span> <span class="tlaCBC">        2102625 : NumericGetDatum(Numeric X)</span></span>
+<span id="L74" title="Line 74: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      74</span>                 : {</span>
+<span id="L75" title="Line 75: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      75</span> <span class="tlaCBC">        2102625 :     return PointerGetDatum(X);</span></span>
+<span id="L76" title="Line 76: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      76</span>                 : }</span>
+<span id="L77" title="Line 77: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      77</span>                 : </span>
+<span id="L78" title="Line 78: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      78</span>                 : #define PG_GETARG_NUMERIC(n)      DatumGetNumeric(PG_GETARG_DATUM(n))</span>
+<span id="L79" title="Line 79: commit bec98a31c55a on 2000-07-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 : #define PG_GETARG_NUMERIC_COPY(n) DatumGetNumericCopy(PG_GETARG_DATUM(n))</span>
+<span id="L80" title="Line 80: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      80</span>                 : #define PG_RETURN_NUMERIC(x)      return NumericGetDatum(x)</span>
+<span id="L81" title="Line 81: commit 6783b2372ef1 on 2001-10-28 by bruce@momjian.us">                           <span class="lineNum">      81</span>                 : </span>
+<span id="L82" title="Line 82: commit e61fd4ac7414 on 2009-08-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 : /*</span>
+<span id="L83" title="Line 83: commit e61fd4ac7414 on 2009-08-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 :  * Utility functions in numeric.c</span>
+<span id="L84" title="Line 84: commit e61fd4ac7414 on 2009-08-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :  */</span>
+<span id="L85" title="Line 85: commit 8a4dc94ca0ef on 2010-07-30 by rhaas@postgresql.org">                           <span class="lineNum">      85</span>                 : extern bool numeric_is_nan(Numeric num);</span>
+<span id="L86" title="Line 86: commit a57d312a7706 on 2020-07-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 : extern bool numeric_is_inf(Numeric num);</span>
+<span id="L87" title="Line 87: commit 905c020bef99 on 2022-05-12 by andres@anarazel.de">                           <span class="lineNum">      87</span>                 : extern int32 numeric_maximum_size(int32 typmod);</span>
+<span id="L88" title="Line 88: commit e61fd4ac7414 on 2009-08-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 : extern char *numeric_out_sci(Numeric num, int scale);</span>
+<span id="L89" title="Line 89: commit d9134d0a355c on 2014-03-23 by andrew@dunslane.net">                           <span class="lineNum">      89</span>                 : extern char *numeric_normalize(Numeric num);</span>
+<span id="L90" title="Line 90: commit e61fd4ac7414 on 2009-08-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 : </span>
+<span id="L91" title="Line 91: commit 0aa8f764088e on 2020-09-09 by peter@eisentraut.org">                           <span class="lineNum">      91</span>                 : extern Numeric int64_to_numeric(int64 val);</span>
+<span id="L92" title="Line 92: commit a2da77cdb466 on 2021-04-06 by peter@eisentraut.org">                           <span class="lineNum">      92</span>                 : extern Numeric int64_div_fast_to_numeric(int64 val1, int log10val2);</span>
+<span id="L93" title="Line 93: commit 0aa8f764088e on 2020-09-09 by peter@eisentraut.org">                           <span class="lineNum">      93</span>                 : </span>
+<span id="L94" title="Line 94: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">      94</span>                 : extern Numeric numeric_add_opt_error(Numeric num1, Numeric num2,</span>
+<span id="L95" title="Line 95: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                                      bool *have_error);</span>
+<span id="L96" title="Line 96: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">      96</span>                 : extern Numeric numeric_sub_opt_error(Numeric num1, Numeric num2,</span>
+<span id="L97" title="Line 97: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      97</span>                 :                                      bool *have_error);</span>
+<span id="L98" title="Line 98: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">      98</span>                 : extern Numeric numeric_mul_opt_error(Numeric num1, Numeric num2,</span>
+<span id="L99" title="Line 99: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      99</span>                 :                                      bool *have_error);</span>
+<span id="L100" title="Line 100: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">     100</span>                 : extern Numeric numeric_div_opt_error(Numeric num1, Numeric num2,</span>
+<span id="L101" title="Line 101: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                                      bool *have_error);</span>
+<span id="L102" title="Line 102: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">     102</span>                 : extern Numeric numeric_mod_opt_error(Numeric num1, Numeric num2,</span>
+<span id="L103" title="Line 103: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                                      bool *have_error);</span>
+<span id="L104" title="Line 104: commit a601366a460f on 2022-09-20 by pg@bowt.ie">                           <span class="lineNum">     104</span>                 : extern int32 numeric_int4_opt_error(Numeric num, bool *have_error);</span>
+<span id="L105" title="Line 105: commit c1b9e1e56d8c on 2024-01-03 by peter@eisentraut.org">                           <span class="lineNum">     105</span>                 : extern int64 numeric_int8_opt_error(Numeric num, bool *have_error);</span>
+<span id="L106" title="Line 106: commit 16d489b0fe05 on 2019-03-16 by akorotkov@postgresql.org">                           <span class="lineNum">     106</span>                 : </span>
+<span id="L107" title="Line 107: commit e6341323a8da on 2024-03-27 by dean.a.rasheed@gmail.com">                           <span class="lineNum">     107</span>                 : extern Numeric random_numeric(pg_prng_state *state,</span>
+<span id="L108" title="Line 108: commit e6341323a8da on 2024-03-27 by dean.a.rasheed@gmail.com">                           <span class="lineNum">     108</span>                 :                               Numeric rmin, Numeric rmax);</span>
+<span id="L109" title="Line 109: commit e6341323a8da on 2024-03-27 by dean.a.rasheed@gmail.com">                           <span class="lineNum">     109</span>                 : </span>
+<span id="L110" title="Line 110: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     110</span>                 : #endif                          /* _PG_NUMERIC_H_ */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

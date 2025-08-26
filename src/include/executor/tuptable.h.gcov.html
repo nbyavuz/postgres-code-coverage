@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/executor/tuptable.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - tuptable.h<span style="font-size: 80%;"> (source / <a href="tuptable.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry">48</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L359" title="goto first CBC line">48</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">70.8&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"><a href="#L387" title="goto first UBC branch">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L361" title="goto first CBC branch">17</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L498" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">3</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L359" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">45</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">11</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">70.8&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"><a href="#L387" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L361" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">17</a></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :                :  * tuptable.h</span>
+<span id="L4" title="Line 4: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">       4</span>                 :                :  *    tuple table support stuff</span>
+<span id="L5" title="Line 5: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       6</span>                 :                :  *</span>
+<span id="L7" title="Line 7: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L8" title="Line 8: commit 5c25d60244d3 on 2000-01-26 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L9" title="Line 9: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">       9</span>                 :                :  *</span>
+<span id="L10" title="Line 10: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :                :  * src/include/executor/tuptable.h</span>
+<span id="L11" title="Line 11: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      11</span>                 :                :  *</span>
+<span id="L12" title="Line 12: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      12</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L13" title="Line 13: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      13</span>                 :                :  */</span>
+<span id="L14" title="Line 14: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      14</span>                 :                : #ifndef TUPTABLE_H</span>
+<span id="L15" title="Line 15: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      15</span>                 :                : #define TUPTABLE_H</span>
+<span id="L16" title="Line 16: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      16</span>                 :                : </span>
+<span id="L17" title="Line 17: commit a9591ce66aa6 on 1999-07-15 by bruce@momjian.us">                           <span class="lineNum">      17</span>                 :                : #include &quot;access/htup.h&quot;</span>
+<span id="L18" title="Line 18: commit e0487223ecac on 2019-11-25 by akapila@postgresql.org">                           <span class="lineNum">      18</span>                 :                : #include &quot;access/htup_details.h&quot;</span>
+<span id="L19" title="Line 19: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">      19</span>                 :                : #include &quot;access/sysattr.h&quot;</span>
+<span id="L20" title="Line 20: commit c219d9b0a55b on 2012-08-30 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      20</span>                 :                : #include &quot;access/tupdesc.h&quot;</span>
+<span id="L21" title="Line 21: commit b844dd3f9e0c on 2006-07-13 by bruce@momjian.us">                           <span class="lineNum">      21</span>                 :                : #include &quot;storage/buf.h&quot;</span>
+<span id="L22" title="Line 22: commit a9b05bdc8330 on 2005-03-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 :                : </span>
+<span id="L23" title="Line 23: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 :                : /*----------</span>
+<span id="L24" title="Line 24: commit f92e8a4b5ee6 on 2009-09-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 :                :  * The executor stores tuples in a &quot;tuple table&quot; which is a List of</span>
+<span id="L25" title="Line 25: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      25</span>                 :                :  * independent TupleTableSlots.</span>
+<span id="L26" title="Line 26: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      26</span>                 :                :  *</span>
+<span id="L27" title="Line 27: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      27</span>                 :                :  * There's various different types of tuple table slots, each being able to</span>
+<span id="L28" title="Line 28: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      28</span>                 :                :  * store different types of tuples. Additional types of slots can be added</span>
+<span id="L29" title="Line 29: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      29</span>                 :                :  * without modifying core code. The type of a slot is determined by the</span>
+<span id="L30" title="Line 30: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      30</span>                 :                :  * TupleTableSlotOps* passed to the slot creation routine. The builtin types</span>
+<span id="L31" title="Line 31: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      31</span>                 :                :  * of slots are</span>
+<span id="L32" title="Line 32: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      32</span>                 :                :  *</span>
+<span id="L33" title="Line 33: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      33</span>                 :                :  * 1. physical tuple in a disk buffer page (TTSOpsBufferHeapTuple)</span>
+<span id="L34" title="Line 34: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      34</span>                 :                :  * 2. physical tuple constructed in palloc'ed memory (TTSOpsHeapTuple)</span>
+<span id="L35" title="Line 35: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      35</span>                 :                :  * 3. &quot;minimal&quot; physical tuple constructed in palloc'ed memory</span>
+<span id="L36" title="Line 36: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      36</span>                 :                :  *    (TTSOpsMinimalTuple)</span>
+<span id="L37" title="Line 37: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      37</span>                 :                :  * 4. &quot;virtual&quot; tuple consisting of Datum/isnull arrays (TTSOpsVirtual)</span>
+<span id="L38" title="Line 38: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      38</span>                 :                :  *</span>
+<span id="L39" title="Line 39: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :                :  *</span>
+<span id="L40" title="Line 40: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :                :  * The first two cases are similar in that they both deal with &quot;materialized&quot;</span>
+<span id="L41" title="Line 41: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 :                :  * tuples, but resource management is different.  For a tuple in a disk page</span>
+<span id="L42" title="Line 42: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 :                :  * we need to hold a pin on the buffer until the TupleTableSlot's reference</span>
+<span id="L43" title="Line 43: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :                :  * to the tuple is dropped; while for a palloc'd tuple we usually want the</span>
+<span id="L44" title="Line 44: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :                :  * tuple pfree'd when the TupleTableSlot's reference is dropped.</span>
+<span id="L45" title="Line 45: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      45</span>                 :                :  *</span>
+<span id="L46" title="Line 46: commit 3f50ba27cf41 on 2006-06-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 :                :  * A &quot;minimal&quot; tuple is handled similarly to a palloc'd regular tuple.</span>
+<span id="L47" title="Line 47: commit 3f50ba27cf41 on 2006-06-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 :                :  * At present, minimal tuples never are stored in buffers, so there is no</span>
+<span id="L48" title="Line 48: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      48</span>                 :                :  * parallel to case 1.  Note that a minimal tuple has no &quot;system columns&quot;.</span>
+<span id="L49" title="Line 49: commit 3f50ba27cf41 on 2006-06-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :                :  *</span>
+<span id="L50" title="Line 50: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      50</span>                 :                :  * A &quot;virtual&quot; tuple is an optimization used to minimize physical data copying</span>
+<span id="L51" title="Line 51: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      51</span>                 :                :  * in a nest of plan nodes.  Until materialized pass-by-reference Datums in</span>
+<span id="L52" title="Line 52: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      52</span>                 :                :  * the slot point to storage that is not directly associated with the</span>
+<span id="L53" title="Line 53: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      53</span>                 :                :  * TupleTableSlot; generally they will point to part of a tuple stored in a</span>
+<span id="L54" title="Line 54: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      54</span>                 :                :  * lower plan node's output TupleTableSlot, or to a function result</span>
+<span id="L55" title="Line 55: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :                :  * constructed in a plan node's per-tuple econtext.  It is the responsibility</span>
+<span id="L56" title="Line 56: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      56</span>                 :                :  * of the generating plan node to be sure these resources are not released for</span>
+<span id="L57" title="Line 57: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      57</span>                 :                :  * as long as the virtual tuple needs to be valid or is materialized.  Note</span>
+<span id="L58" title="Line 58: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      58</span>                 :                :  * also that a virtual tuple does not have any &quot;system columns&quot;.</span>
+<span id="L59" title="Line 59: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      59</span>                 :                :  *</span>
+<span id="L60" title="Line 60: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      60</span>                 :                :  * The Datum/isnull arrays of a TupleTableSlot serve double duty.  For virtual</span>
+<span id="L61" title="Line 61: commit b9768458154d on 2019-06-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">      61</span>                 :                :  * slots they are the authoritative data.  For the other builtin slots,</span>
+<span id="L62" title="Line 62: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      62</span>                 :                :  * the arrays contain data extracted from the tuple.  (In this state, any</span>
+<span id="L63" title="Line 63: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      63</span>                 :                :  * pass-by-reference Datums point into the physical tuple.)  The extracted</span>
+<span id="L64" title="Line 64: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      64</span>                 :                :  * information is built &quot;lazily&quot;, ie, only as needed.  This serves to avoid</span>
+<span id="L65" title="Line 65: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      65</span>                 :                :  * repeated extraction of data from the physical tuple.</span>
+<span id="L66" title="Line 66: commit 793d5662e88e on 2009-03-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 :                :  *</span>
+<span id="L67" title="Line 67: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      67</span>                 :                :  * A TupleTableSlot can also be &quot;empty&quot;, indicated by flag TTS_FLAG_EMPTY set</span>
+<span id="L68" title="Line 68: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      68</span>                 :                :  * in tts_flags, holding no valid data.  This is the only valid state for a</span>
+<span id="L69" title="Line 69: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      69</span>                 :                :  * freshly-created slot that has not yet had a tuple descriptor assigned to</span>
+<span id="L70" title="Line 70: commit 902ecd3bd4e7 on 2023-03-30 by drowley@postgresql.org">                           <span class="lineNum">      70</span>                 :                :  * it.  In this state, TTS_FLAG_SHOULDFREE should not be set in tts_flags and</span>
+<span id="L71" title="Line 71: commit 902ecd3bd4e7 on 2023-03-30 by drowley@postgresql.org">                           <span class="lineNum">      71</span>                 :                :  * tts_nvalid should be set to zero.</span>
+<span id="L72" title="Line 72: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 :                :  *</span>
+<span id="L73" title="Line 73: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      73</span>                 :                :  * The tupleDescriptor is simply referenced, not copied, by the TupleTableSlot</span>
+<span id="L74" title="Line 74: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 :                :  * code.  The caller of ExecSetSlotDescriptor() is responsible for providing</span>
+<span id="L75" title="Line 75: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :                :  * a descriptor that will live as long as the slot does.  (Typically, both</span>
+<span id="L76" title="Line 76: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :                :  * slots and descriptors are in per-query memory and are freed by memory</span>
+<span id="L77" title="Line 77: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 :                :  * context deallocation at query end; so it's not worth providing any extra</span>
+<span id="L78" title="Line 78: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                :  * mechanism to do more.  However, the slot will increment the tupdesc</span>
+<span id="L79" title="Line 79: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :                :  * reference count if a reference-counted tupdesc is supplied.)</span>
+<span id="L80" title="Line 80: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 :                :  *</span>
+<span id="L81" title="Line 81: commit 902ecd3bd4e7 on 2023-03-30 by drowley@postgresql.org">                           <span class="lineNum">      81</span>                 :                :  * When TTS_FLAG_SHOULDFREE is set in tts_flags, the physical tuple is &quot;owned&quot;</span>
+<span id="L82" title="Line 82: commit 902ecd3bd4e7 on 2023-03-30 by drowley@postgresql.org">                           <span class="lineNum">      82</span>                 :                :  * by the slot and should be freed when the slot's reference to the tuple is</span>
+<span id="L83" title="Line 83: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      83</span>                 :                :  * dropped.</span>
+<span id="L84" title="Line 84: commit 25cccc05aabf on 1999-02-23 by lockhart@fourpalms.org">                           <span class="lineNum">      84</span>                 :                :  *</span>
+<span id="L85" title="Line 85: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      85</span>                 :                :  * tts_values/tts_isnull are allocated either when the slot is created (when</span>
+<span id="L86" title="Line 86: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      86</span>                 :                :  * the descriptor is provided), or when a descriptor is assigned to the slot;</span>
+<span id="L87" title="Line 87: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      87</span>                 :                :  * they are of length equal to the descriptor's natts.</span>
+<span id="L88" title="Line 88: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                :  *</span>
+<span id="L89" title="Line 89: commit 341203020521 on 2019-06-17 by michael@paquier.xyz">                           <span class="lineNum">      89</span>                 :                :  * The TTS_FLAG_SLOW flag is saved state for</span>
+<span id="L90" title="Line 90: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      90</span>                 :                :  * slot_deform_heap_tuple, and should not be touched by any other code.</span>
+<span id="L91" title="Line 91: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      91</span>                 :                :  *----------</span>
+<span id="L92" title="Line 92: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">      92</span>                 :                :  */</span>
+<span id="L93" title="Line 93: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      93</span>                 :                : </span>
+<span id="L94" title="Line 94: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      94</span>                 :                : /* true = slot is empty */</span>
+<span id="L95" title="Line 95: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      95</span>                 :                : #define         TTS_FLAG_EMPTY          (1 &lt;&lt; 1)</span>
+<span id="L96" title="Line 96: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      96</span>                 :                : #define TTS_EMPTY(slot) (((slot)-&gt;tts_flags &amp; TTS_FLAG_EMPTY) != 0)</span>
+<span id="L97" title="Line 97: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      97</span>                 :                : </span>
+<span id="L98" title="Line 98: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">      98</span>                 :                : /* should pfree tuple &quot;owned&quot; by the slot? */</span>
+<span id="L99" title="Line 99: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">      99</span>                 :                : #define         TTS_FLAG_SHOULDFREE     (1 &lt;&lt; 2)</span>
+<span id="L100" title="Line 100: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     100</span>                 :                : #define TTS_SHOULDFREE(slot) (((slot)-&gt;tts_flags &amp; TTS_FLAG_SHOULDFREE) != 0)</span>
+<span id="L101" title="Line 101: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     101</span>                 :                : </span>
+<span id="L102" title="Line 102: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     102</span>                 :                : /* saved state for slot_deform_heap_tuple */</span>
+<span id="L103" title="Line 103: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     103</span>                 :                : #define         TTS_FLAG_SLOW       (1 &lt;&lt; 3)</span>
+<span id="L104" title="Line 104: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     104</span>                 :                : #define TTS_SLOW(slot) (((slot)-&gt;tts_flags &amp; TTS_FLAG_SLOW) != 0)</span>
+<span id="L105" title="Line 105: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     105</span>                 :                : </span>
+<span id="L106" title="Line 106: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     106</span>                 :                : /* fixed tuple descriptor */</span>
+<span id="L107" title="Line 107: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     107</span>                 :                : #define         TTS_FLAG_FIXED      (1 &lt;&lt; 4)</span>
+<span id="L108" title="Line 108: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     108</span>                 :                : #define TTS_FIXED(slot) (((slot)-&gt;tts_flags &amp; TTS_FLAG_FIXED) != 0)</span>
+<span id="L109" title="Line 109: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     109</span>                 :                : </span>
+<span id="L110" title="Line 110: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     110</span>                 :                : struct TupleTableSlotOps;</span>
+<span id="L111" title="Line 111: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     111</span>                 :                : typedef struct TupleTableSlotOps TupleTableSlotOps;</span>
+<span id="L112" title="Line 112: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     112</span>                 :                : </span>
+<span id="L113" title="Line 113: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     113</span>                 :                : /* base tuple table slot type */</span>
+<span id="L114" title="Line 114: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     114</span>                 :                : typedef struct TupleTableSlot</span>
+<span id="L115" title="Line 115: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">     115</span>                 :                : {</span>
+<span id="L116" title="Line 116: commit f92e8a4b5ee6 on 2009-09-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 :                :     NodeTag     type;</span>
+<span id="L117" title="Line 117: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     117</span>                 :                : #define FIELDNO_TUPLETABLESLOT_FLAGS 1</span>
+<span id="L118" title="Line 118: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     118</span>                 :                :     uint16      tts_flags;      /* Boolean states */</span>
+<span id="L119" title="Line 119: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     119</span>                 :                : #define FIELDNO_TUPLETABLESLOT_NVALID 2</span>
+<span id="L120" title="Line 120: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     120</span>                 :                :     AttrNumber  tts_nvalid;     /* # of valid values in tts_values */</span>
+<span id="L121" title="Line 121: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     121</span>                 :                :     const TupleTableSlotOps *const tts_ops; /* implementation of slot */</span>
+<span id="L122" title="Line 122: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     122</span>                 :                : #define FIELDNO_TUPLETABLESLOT_TUPLEDESCRIPTOR 4</span>
+<span id="L123" title="Line 123: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 :                :     TupleDesc   tts_tupleDescriptor;    /* slot's tuple descriptor */</span>
+<span id="L124" title="Line 124: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     124</span>                 :                : #define FIELDNO_TUPLETABLESLOT_VALUES 5</span>
+<span id="L125" title="Line 125: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 :                :     Datum      *tts_values;     /* current per-attribute values */</span>
+<span id="L126" title="Line 126: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     126</span>                 :                : #define FIELDNO_TUPLETABLESLOT_ISNULL 6</span>
+<span id="L127" title="Line 127: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     127</span>                 :                :     bool       *tts_isnull;     /* current per-attribute isnull flags */</span>
+<span id="L128" title="Line 128: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     128</span>                 :                :     MemoryContext tts_mcxt;     /* slot itself is in this context */</span>
+<span id="L129" title="Line 129: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span>                 :                :     ItemPointerData tts_tid;    /* stored tuple's tid */</span>
+<span id="L130" title="Line 130: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     130</span>                 :                :     Oid         tts_tableOid;   /* table oid of tuple */</span>
+<span id="L131" title="Line 131: commit 59f6a57e59fe on 1997-09-08 by bruce@momjian.us">                           <span class="lineNum">     131</span>                 :                : } TupleTableSlot;</span>
+<span id="L132" title="Line 132: commit ^d31084e9d11 on 1996-07-09 by scrappy@hub.org">                           <span class="lineNum">     132</span>                 :                : </span>
+<span id="L133" title="Line 133: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     133</span>                 :                : /* routines for a TupleTableSlot implementation */</span>
+<span id="L134" title="Line 134: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     134</span>                 :                : struct TupleTableSlotOps</span>
+<span id="L135" title="Line 135: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     135</span>                 :                : {</span>
+<span id="L136" title="Line 136: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     136</span>                 :                :     /* Minimum size of the slot */</span>
+<span id="L137" title="Line 137: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :                :     size_t      base_slot_size;</span>
+<span id="L138" title="Line 138: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     138</span>                 :                : </span>
+<span id="L139" title="Line 139: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     139</span>                 :                :     /* Initialization. */</span>
+<span id="L140" title="Line 140: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 :                :     void        (*init) (TupleTableSlot *slot);</span>
+<span id="L141" title="Line 141: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     141</span>                 :                : </span>
+<span id="L142" title="Line 142: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     142</span>                 :                :     /* Destruction. */</span>
+<span id="L143" title="Line 143: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 :                :     void        (*release) (TupleTableSlot *slot);</span>
+<span id="L144" title="Line 144: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     144</span>                 :                : </span>
+<span id="L145" title="Line 145: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     145</span>                 :                :     /*</span>
+<span id="L146" title="Line 146: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     146</span>                 :                :      * Clear the contents of the slot. Only the contents are expected to be</span>
+<span id="L147" title="Line 147: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     147</span>                 :                :      * cleared and not the tuple descriptor. Typically an implementation of</span>
+<span id="L148" title="Line 148: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     148</span>                 :                :      * this callback should free the memory allocated for the tuple contained</span>
+<span id="L149" title="Line 149: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     149</span>                 :                :      * in the slot.</span>
+<span id="L150" title="Line 150: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     150</span>                 :                :      */</span>
+<span id="L151" title="Line 151: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 :                :     void        (*clear) (TupleTableSlot *slot);</span>
+<span id="L152" title="Line 152: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     152</span>                 :                : </span>
+<span id="L153" title="Line 153: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     153</span>                 :                :     /*</span>
+<span id="L154" title="Line 154: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     154</span>                 :                :      * Fill up first natts entries of tts_values and tts_isnull arrays with</span>
+<span id="L155" title="Line 155: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     155</span>                 :                :      * values from the tuple contained in the slot. The function may be called</span>
+<span id="L156" title="Line 156: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     156</span>                 :                :      * with natts more than the number of attributes available in the tuple,</span>
+<span id="L157" title="Line 157: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     157</span>                 :                :      * in which case it should set tts_nvalid to the number of returned</span>
+<span id="L158" title="Line 158: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     158</span>                 :                :      * columns.</span>
+<span id="L159" title="Line 159: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     159</span>                 :                :      */</span>
+<span id="L160" title="Line 160: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     160</span>                 :                :     void        (*getsomeattrs) (TupleTableSlot *slot, int natts);</span>
+<span id="L161" title="Line 161: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     161</span>                 :                : </span>
+<span id="L162" title="Line 162: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     162</span>                 :                :     /*</span>
+<span id="L163" title="Line 163: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     163</span>                 :                :      * Returns value of the given system attribute as a datum and sets isnull</span>
+<span id="L164" title="Line 164: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     164</span>                 :                :      * to false, if it's not NULL. Throws an error if the slot type does not</span>
+<span id="L165" title="Line 165: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     165</span>                 :                :      * support system attributes.</span>
+<span id="L166" title="Line 166: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     166</span>                 :                :      */</span>
+<span id="L167" title="Line 167: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     167</span>                 :                :     Datum       (*getsysattr) (TupleTableSlot *slot, int attnum, bool *isnull);</span>
+<span id="L168" title="Line 168: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     168</span>                 :                : </span>
+<span id="L169" title="Line 169: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     169</span>                 :                :     /*</span>
+<span id="L170" title="Line 170: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     170</span>                 :                :      * Check if the tuple is created by the current transaction. Throws an</span>
+<span id="L171" title="Line 171: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     171</span>                 :                :      * error if the slot doesn't contain the storage tuple.</span>
+<span id="L172" title="Line 172: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     172</span>                 :                :      */</span>
+<span id="L173" title="Line 173: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     173</span>                 :                :     bool        (*is_current_xact_tuple) (TupleTableSlot *slot);</span>
+<span id="L174" title="Line 174: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     174</span>                 :                : </span>
+<span id="L175" title="Line 175: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     175</span>                 :                :     /*</span>
+<span id="L176" title="Line 176: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     176</span>                 :                :      * Make the contents of the slot solely depend on the slot, and not on</span>
+<span id="L177" title="Line 177: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     177</span>                 :                :      * underlying resources (like another memory context, buffers, etc).</span>
+<span id="L178" title="Line 178: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     178</span>                 :                :      */</span>
+<span id="L179" title="Line 179: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     179</span>                 :                :     void        (*materialize) (TupleTableSlot *slot);</span>
+<span id="L180" title="Line 180: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     180</span>                 :                : </span>
+<span id="L181" title="Line 181: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     181</span>                 :                :     /*</span>
+<span id="L182" title="Line 182: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     182</span>                 :                :      * Copy the contents of the source slot into the destination slot's own</span>
+<span id="L183" title="Line 183: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     183</span>                 :                :      * context. Invoked using callback of the destination slot.  'dstslot' and</span>
+<span id="L184" title="Line 184: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     184</span>                 :                :      * 'srcslot' can be assumed to have the same number of attributes.</span>
+<span id="L185" title="Line 185: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     185</span>                 :                :      */</span>
+<span id="L186" title="Line 186: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     186</span>                 :                :     void        (*copyslot) (TupleTableSlot *dstslot, TupleTableSlot *srcslot);</span>
+<span id="L187" title="Line 187: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     187</span>                 :                : </span>
+<span id="L188" title="Line 188: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     188</span>                 :                :     /*</span>
+<span id="L189" title="Line 189: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     189</span>                 :                :      * Return a heap tuple &quot;owned&quot; by the slot. It is slot's responsibility to</span>
+<span id="L190" title="Line 190: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     190</span>                 :                :      * free the memory consumed by the heap tuple. If the slot can not &quot;own&quot; a</span>
+<span id="L191" title="Line 191: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     191</span>                 :                :      * heap tuple, it should not implement this callback and should set it as</span>
+<span id="L192" title="Line 192: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     192</span>                 :                :      * NULL.</span>
+<span id="L193" title="Line 193: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     193</span>                 :                :      */</span>
+<span id="L194" title="Line 194: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     194</span>                 :                :     HeapTuple   (*get_heap_tuple) (TupleTableSlot *slot);</span>
+<span id="L195" title="Line 195: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     195</span>                 :                : </span>
+<span id="L196" title="Line 196: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     196</span>                 :                :     /*</span>
+<span id="L197" title="Line 197: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     197</span>                 :                :      * Return a minimal tuple &quot;owned&quot; by the slot. It is slot's responsibility</span>
+<span id="L198" title="Line 198: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     198</span>                 :                :      * to free the memory consumed by the minimal tuple. If the slot can not</span>
+<span id="L199" title="Line 199: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     199</span>                 :                :      * &quot;own&quot; a minimal tuple, it should not implement this callback and should</span>
+<span id="L200" title="Line 200: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     200</span>                 :                :      * set it as NULL.</span>
+<span id="L201" title="Line 201: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     201</span>                 :                :      */</span>
+<span id="L202" title="Line 202: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     202</span>                 :                :     MinimalTuple (*get_minimal_tuple) (TupleTableSlot *slot);</span>
+<span id="L203" title="Line 203: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     203</span>                 :                : </span>
+<span id="L204" title="Line 204: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     204</span>                 :                :     /*</span>
+<span id="L205" title="Line 205: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     205</span>                 :                :      * Return a copy of heap tuple representing the contents of the slot. The</span>
+<span id="L206" title="Line 206: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     206</span>                 :                :      * copy needs to be palloc'd in the current memory context. The slot</span>
+<span id="L207" title="Line 207: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     207</span>                 :                :      * itself is expected to remain unaffected. It is *not* expected to have</span>
+<span id="L208" title="Line 208: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     208</span>                 :                :      * meaningful &quot;system columns&quot; in the copy. The copy is not be &quot;owned&quot; by</span>
+<span id="L209" title="Line 209: commit 1fb6f62a8404 on 2019-06-03 by michael@paquier.xyz">                           <span class="lineNum">     209</span>                 :                :      * the slot i.e. the caller has to take responsibility to free memory</span>
+<span id="L210" title="Line 210: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     210</span>                 :                :      * consumed by the slot.</span>
+<span id="L211" title="Line 211: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     211</span>                 :                :      */</span>
+<span id="L212" title="Line 212: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     212</span>                 :                :     HeapTuple   (*copy_heap_tuple) (TupleTableSlot *slot);</span>
+<span id="L213" title="Line 213: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     213</span>                 :                : </span>
+<span id="L214" title="Line 214: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     214</span>                 :                :     /*</span>
+<span id="L215" title="Line 215: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     215</span>                 :                :      * Return a copy of minimal tuple representing the contents of the slot.</span>
+<span id="L216" title="Line 216: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     216</span>                 :                :      * The copy needs to be palloc'd in the current memory context. The slot</span>
+<span id="L217" title="Line 217: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     217</span>                 :                :      * itself is expected to remain unaffected. It is *not* expected to have</span>
+<span id="L218" title="Line 218: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     218</span>                 :                :      * meaningful &quot;system columns&quot; in the copy. The copy is not be &quot;owned&quot; by</span>
+<span id="L219" title="Line 219: commit 1fb6f62a8404 on 2019-06-03 by michael@paquier.xyz">                           <span class="lineNum">     219</span>                 :                :      * the slot i.e. the caller has to take responsibility to free memory</span>
+<span id="L220" title="Line 220: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     220</span>                 :                :      * consumed by the slot.</span>
+<span id="L221" title="Line 221: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     221</span>                 :                :      *</span>
+<span id="L222" title="Line 222: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     222</span>                 :                :      * The copy has &quot;extra&quot; bytes (maxaligned and zeroed) available before the</span>
+<span id="L223" title="Line 223: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     223</span>                 :                :      * tuple, which is useful so that some callers may store extra data along</span>
+<span id="L224" title="Line 224: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     224</span>                 :                :      * with the minimal tuple without the need for an additional allocation.</span>
+<span id="L225" title="Line 225: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     225</span>                 :                :      */</span>
+<span id="L226" title="Line 226: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     226</span>                 :                :     MinimalTuple (*copy_minimal_tuple) (TupleTableSlot *slot, Size extra);</span>
+<span id="L227" title="Line 227: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     227</span>                 :                : };</span>
+<span id="L228" title="Line 228: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     228</span>                 :                : </span>
+<span id="L229" title="Line 229: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     229</span>                 :                : /*</span>
+<span id="L230" title="Line 230: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     230</span>                 :                :  * Predefined TupleTableSlotOps for various types of TupleTableSlotOps. The</span>
+<span id="L231" title="Line 231: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     231</span>                 :                :  * same are used to identify the type of a given slot.</span>
+<span id="L232" title="Line 232: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     232</span>                 :                :  */</span>
+<span id="L233" title="Line 233: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     233</span>                 :                : extern PGDLLIMPORT const TupleTableSlotOps TTSOpsVirtual;</span>
+<span id="L234" title="Line 234: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     234</span>                 :                : extern PGDLLIMPORT const TupleTableSlotOps TTSOpsHeapTuple;</span>
+<span id="L235" title="Line 235: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     235</span>                 :                : extern PGDLLIMPORT const TupleTableSlotOps TTSOpsMinimalTuple;</span>
+<span id="L236" title="Line 236: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     236</span>                 :                : extern PGDLLIMPORT const TupleTableSlotOps TTSOpsBufferHeapTuple;</span>
+<span id="L237" title="Line 237: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     237</span>                 :                : </span>
+<span id="L238" title="Line 238: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     238</span>                 :                : #define TTS_IS_VIRTUAL(slot) ((slot)-&gt;tts_ops == &amp;TTSOpsVirtual)</span>
+<span id="L239" title="Line 239: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     239</span>                 :                : #define TTS_IS_HEAPTUPLE(slot) ((slot)-&gt;tts_ops == &amp;TTSOpsHeapTuple)</span>
+<span id="L240" title="Line 240: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     240</span>                 :                : #define TTS_IS_MINIMALTUPLE(slot) ((slot)-&gt;tts_ops == &amp;TTSOpsMinimalTuple)</span>
+<span id="L241" title="Line 241: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     241</span>                 :                : #define TTS_IS_BUFFERTUPLE(slot) ((slot)-&gt;tts_ops == &amp;TTSOpsBufferHeapTuple)</span>
+<span id="L242" title="Line 242: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     242</span>                 :                : </span>
+<span id="L243" title="Line 243: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     243</span>                 :                : </span>
+<span id="L244" title="Line 244: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     244</span>                 :                : /*</span>
+<span id="L245" title="Line 245: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     245</span>                 :                :  * Tuple table slot implementations.</span>
+<span id="L246" title="Line 246: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     246</span>                 :                :  */</span>
+<span id="L247" title="Line 247: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     247</span>                 :                : </span>
+<span id="L248" title="Line 248: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     248</span>                 :                : typedef struct VirtualTupleTableSlot</span>
+<span id="L249" title="Line 249: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     249</span>                 :                : {</span>
+<span id="L250" title="Line 250: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     250</span>                 :                :     pg_node_attr(abstract)</span>
+<span id="L251" title="Line 251: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     251</span>                 :                : </span>
+<span id="L252" title="Line 252: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     252</span>                 :                :     TupleTableSlot base;</span>
+<span id="L253" title="Line 253: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     253</span>                 :                : </span>
+<span id="L254" title="Line 254: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     254</span>                 :                :     char       *data;           /* data for materialized slots */</span>
+<span id="L255" title="Line 255: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     255</span>                 :                : } VirtualTupleTableSlot;</span>
+<span id="L256" title="Line 256: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     256</span>                 :                : </span>
+<span id="L257" title="Line 257: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     257</span>                 :                : typedef struct HeapTupleTableSlot</span>
+<span id="L258" title="Line 258: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     258</span>                 :                : {</span>
+<span id="L259" title="Line 259: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     259</span>                 :                :     pg_node_attr(abstract)</span>
+<span id="L260" title="Line 260: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     260</span>                 :                : </span>
+<span id="L261" title="Line 261: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     261</span>                 :                :     TupleTableSlot base;</span>
+<span id="L262" title="Line 262: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     262</span>                 :                : </span>
+<span id="L263" title="Line 263: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     263</span>                 :                : #define FIELDNO_HEAPTUPLETABLESLOT_TUPLE 1</span>
+<span id="L264" title="Line 264: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     264</span>                 :                :     HeapTuple   tuple;          /* physical tuple */</span>
+<span id="L265" title="Line 265: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     265</span>                 :                : #define FIELDNO_HEAPTUPLETABLESLOT_OFF 2</span>
+<span id="L266" title="Line 266: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     266</span>                 :                :     uint32      off;            /* saved state for slot_deform_heap_tuple */</span>
+<span id="L267" title="Line 267: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     267</span>                 :                :     HeapTupleData tupdata;      /* optional workspace for storing tuple */</span>
+<span id="L268" title="Line 268: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     268</span>                 :                : } HeapTupleTableSlot;</span>
+<span id="L269" title="Line 269: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     269</span>                 :                : </span>
+<span id="L270" title="Line 270: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     270</span>                 :                : /* heap tuple residing in a buffer */</span>
+<span id="L271" title="Line 271: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     271</span>                 :                : typedef struct BufferHeapTupleTableSlot</span>
+<span id="L272" title="Line 272: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     272</span>                 :                : {</span>
+<span id="L273" title="Line 273: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     273</span>                 :                :     pg_node_attr(abstract)</span>
+<span id="L274" title="Line 274: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     274</span>                 :                : </span>
+<span id="L275" title="Line 275: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     275</span>                 :                :     HeapTupleTableSlot base;</span>
+<span id="L276" title="Line 276: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     276</span>                 :                : </span>
+<span id="L277" title="Line 277: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     277</span>                 :                :     /*</span>
+<span id="L278" title="Line 278: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     278</span>                 :                :      * If buffer is not InvalidBuffer, then the slot is holding a pin on the</span>
+<span id="L279" title="Line 279: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     279</span>                 :                :      * indicated buffer page; drop the pin when we release the slot's</span>
+<span id="L280" title="Line 280: commit 22e44e8dbcfe on 2019-11-06 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     280</span>                 :                :      * reference to that buffer.  (TTS_FLAG_SHOULDFREE should not be set in</span>
+<span id="L281" title="Line 281: commit 902ecd3bd4e7 on 2023-03-30 by drowley@postgresql.org">                           <span class="lineNum">     281</span>                 :                :      * such a case, since presumably base.tuple is pointing into the buffer.)</span>
+<span id="L282" title="Line 282: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     282</span>                 :                :      */</span>
+<span id="L283" title="Line 283: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     283</span>                 :                :     Buffer      buffer;         /* tuple's buffer, or InvalidBuffer */</span>
+<span id="L284" title="Line 284: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     284</span>                 :                : } BufferHeapTupleTableSlot;</span>
+<span id="L285" title="Line 285: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     285</span>                 :                : </span>
+<span id="L286" title="Line 286: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     286</span>                 :                : typedef struct MinimalTupleTableSlot</span>
+<span id="L287" title="Line 287: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     287</span>                 :                : {</span>
+<span id="L288" title="Line 288: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     288</span>                 :                :     pg_node_attr(abstract)</span>
+<span id="L289" title="Line 289: commit 964d01ae90c3 on 2022-07-09 by peter@eisentraut.org">                           <span class="lineNum">     289</span>                 :                : </span>
+<span id="L290" title="Line 290: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     290</span>                 :                :     TupleTableSlot base;</span>
+<span id="L291" title="Line 291: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     291</span>                 :                : </span>
+<span id="L292" title="Line 292: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     292</span>                 :                :     /*</span>
+<span id="L293" title="Line 293: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     293</span>                 :                :      * In a minimal slot tuple points at minhdr and the fields of that struct</span>
+<span id="L294" title="Line 294: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     294</span>                 :                :      * are set correctly for access to the minimal tuple; in particular,</span>
+<span id="L295" title="Line 295: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     295</span>                 :                :      * minhdr.t_data points MINIMAL_TUPLE_OFFSET bytes before mintuple.  This</span>
+<span id="L296" title="Line 296: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     296</span>                 :                :      * allows column extraction to treat the case identically to regular</span>
+<span id="L297" title="Line 297: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     297</span>                 :                :      * physical tuples.</span>
+<span id="L298" title="Line 298: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     298</span>                 :                :      */</span>
+<span id="L299" title="Line 299: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     299</span>                 :                : #define FIELDNO_MINIMALTUPLETABLESLOT_TUPLE 1</span>
+<span id="L300" title="Line 300: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     300</span>                 :                :     HeapTuple   tuple;          /* tuple wrapper */</span>
+<span id="L301" title="Line 301: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     301</span>                 :                :     MinimalTuple mintuple;      /* minimal tuple, or NULL if none */</span>
+<span id="L302" title="Line 302: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     302</span>                 :                :     HeapTupleData minhdr;       /* workspace for minimal-tuple-only case */</span>
+<span id="L303" title="Line 303: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     303</span>                 :                : #define FIELDNO_MINIMALTUPLETABLESLOT_OFF 4</span>
+<span id="L304" title="Line 304: commit be76af171cdb on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     304</span>                 :                :     uint32      off;            /* saved state for slot_deform_heap_tuple */</span>
+<span id="L305" title="Line 305: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     305</span>                 :                : } MinimalTupleTableSlot;</span>
+<span id="L306" title="Line 306: commit 793d5662e88e on 2009-03-30 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     306</span>                 :                : </span>
+<span id="L307" title="Line 307: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     307</span>                 :                : /*</span>
+<span id="L308" title="Line 308: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     308</span>                 :                :  * TupIsNull -- is a TupleTableSlot empty?</span>
+<span id="L309" title="Line 309: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     309</span>                 :                :  */</span>
+<span id="L310" title="Line 310: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     310</span>                 :                : #define TupIsNull(slot) \</span>
+<span id="L311" title="Line 311: commit c5257345ef61 on 2018-10-15 by andres@anarazel.de">                           <span class="lineNum">     311</span>                 :                :     ((slot) == NULL || TTS_EMPTY(slot))</span>
+<span id="L312" title="Line 312: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     312</span>                 :                : </span>
+<span id="L313" title="Line 313: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     313</span>                 :                : /* in executor/execTuples.c */</span>
+<span id="L314" title="Line 314: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     314</span>                 :                : extern TupleTableSlot *MakeTupleTableSlot(TupleDesc tupleDesc,</span>
+<span id="L315" title="Line 315: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     315</span>                 :                :                                           const TupleTableSlotOps *tts_ops);</span>
+<span id="L316" title="Line 316: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     316</span>                 :                : extern TupleTableSlot *ExecAllocTableSlot(List **tupleTable, TupleDesc desc,</span>
+<span id="L317" title="Line 317: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     317</span>                 :                :                                           const TupleTableSlotOps *tts_ops);</span>
+<span id="L318" title="Line 318: commit f92e8a4b5ee6 on 2009-09-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     318</span>                 :                : extern void ExecResetTupleTable(List *tupleTable, bool shouldFree);</span>
+<span id="L319" title="Line 319: commit 1a0586de3657 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     319</span>                 :                : extern TupleTableSlot *MakeSingleTupleTableSlot(TupleDesc tupdesc,</span>
+<span id="L320" title="Line 320: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     320</span>                 :                :                                                 const TupleTableSlotOps *tts_ops);</span>
+<span id="L321" title="Line 321: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     321</span>                 :                : extern void ExecDropSingleTupleTableSlot(TupleTableSlot *slot);</span>
+<span id="L322" title="Line 322: commit 06e10abc0bb4 on 2006-06-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     322</span>                 :                : extern void ExecSetSlotDescriptor(TupleTableSlot *slot, TupleDesc tupdesc);</span>
+<span id="L323" title="Line 323: commit 29c94e03c7d0 on 2018-09-25 by andres@anarazel.de">                           <span class="lineNum">     323</span>                 :                : extern TupleTableSlot *ExecStoreHeapTuple(HeapTuple tuple,</span>
+<span id="L324" title="Line 324: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     324</span>                 :                :                                           TupleTableSlot *slot,</span>
+<span id="L325" title="Line 325: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     325</span>                 :                :                                           bool shouldFree);</span>
+<span id="L326" title="Line 326: commit 88e6ad3054dd on 2019-04-19 by andres@anarazel.de">                           <span class="lineNum">     326</span>                 :                : extern void ExecForceStoreHeapTuple(HeapTuple tuple,</span>
+<span id="L327" title="Line 327: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     327</span>                 :                :                                     TupleTableSlot *slot,</span>
+<span id="L328" title="Line 328: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     328</span>                 :                :                                     bool shouldFree);</span>
+<span id="L329" title="Line 329: commit 29c94e03c7d0 on 2018-09-25 by andres@anarazel.de">                           <span class="lineNum">     329</span>                 :                : extern TupleTableSlot *ExecStoreBufferHeapTuple(HeapTuple tuple,</span>
+<span id="L330" title="Line 330: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     330</span>                 :                :                                                 TupleTableSlot *slot,</span>
+<span id="L331" title="Line 331: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     331</span>                 :                :                                                 Buffer buffer);</span>
+<span id="L332" title="Line 332: commit 8aa02b52db11 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     332</span>                 :                : extern TupleTableSlot *ExecStorePinnedBufferHeapTuple(HeapTuple tuple,</span>
+<span id="L333" title="Line 333: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     333</span>                 :                :                                                       TupleTableSlot *slot,</span>
+<span id="L334" title="Line 334: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     334</span>                 :                :                                                       Buffer buffer);</span>
+<span id="L335" title="Line 335: commit 3f50ba27cf41 on 2006-06-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     335</span>                 :                : extern TupleTableSlot *ExecStoreMinimalTuple(MinimalTuple mtup,</span>
+<span id="L336" title="Line 336: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     336</span>                 :                :                                              TupleTableSlot *slot,</span>
+<span id="L337" title="Line 337: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     337</span>                 :                :                                              bool shouldFree);</span>
+<span id="L338" title="Line 338: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     338</span>                 :                : extern void ExecForceStoreMinimalTuple(MinimalTuple mtup, TupleTableSlot *slot,</span>
+<span id="L339" title="Line 339: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     339</span>                 :                :                                        bool shouldFree);</span>
+<span id="L340" title="Line 340: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     340</span>                 :                : extern TupleTableSlot *ExecStoreVirtualTuple(TupleTableSlot *slot);</span>
+<span id="L341" title="Line 341: commit f97aebd16298 on 2005-03-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     341</span>                 :                : extern TupleTableSlot *ExecStoreAllNullTuple(TupleTableSlot *slot);</span>
+<span id="L342" title="Line 342: commit ad0bda5d24ea on 2019-03-01 by andres@anarazel.de">                           <span class="lineNum">     342</span>                 :                : extern void ExecStoreHeapTupleDatum(Datum data, TupleTableSlot *slot);</span>
+<span id="L343" title="Line 343: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     343</span>                 :                : extern HeapTuple ExecFetchSlotHeapTuple(TupleTableSlot *slot, bool materialize, bool *shouldFree);</span>
+<span id="L344" title="Line 344: commit 763f2edd9209 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     344</span>                 :                : extern MinimalTuple ExecFetchSlotMinimalTuple(TupleTableSlot *slot,</span>
+<span id="L345" title="Line 345: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     345</span>                 :                :                                               bool *shouldFree);</span>
+<span id="L346" title="Line 346: commit 763f2edd9209 on 2018-11-15 by andres@anarazel.de">                           <span class="lineNum">     346</span>                 :                : extern Datum ExecFetchSlotHeapTupleDatum(TupleTableSlot *slot);</span>
+<span id="L347" title="Line 347: commit 9d906f1119de on 2018-10-14 by andres@anarazel.de">                           <span class="lineNum">     347</span>                 :                : extern void slot_getmissingattrs(TupleTableSlot *slot, int startAttNum,</span>
+<span id="L348" title="Line 348: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     348</span>                 :                :                                  int lastAttNum);</span>
+<span id="L349" title="Line 349: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     349</span>                 :                : extern void slot_getsomeattrs_int(TupleTableSlot *slot, int attnum);</span>
+<span id="L350" title="Line 350: commit a9b05bdc8330 on 2005-03-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     350</span>                 :                : </span>
+<span id="L351" title="Line 351: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     351</span>                 :                : </span>
+<span id="L352" title="Line 352: commit 14ea36520389 on 2018-09-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     352</span>                 :                : #ifndef FRONTEND</span>
+<span id="L353" title="Line 353: commit 14ea36520389 on 2018-09-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     353</span>                 :                : </span>
+<span id="L354" title="Line 354: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     354</span>                 :                : /*</span>
+<span id="L355" title="Line 355: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     355</span>                 :                :  * This function forces the entries of the slot's Datum/isnull arrays to be</span>
+<span id="L356" title="Line 356: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     356</span>                 :                :  * valid at least up through the attnum'th entry.</span>
+<span id="L357" title="Line 357: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     357</span>                 :                :  */</span>
+<span id="L358" title="Line 358: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     358</span>                 :                : static inline void</span>
+<span id="L359" title="Line 359: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de"> <a href="#L525" title="next CBC in &ldquo;(360..) days&rdquo; bin">2475</a> <a href="#L389" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     359</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">   129276615 : slot_getsomeattrs(TupleTableSlot *slot, int attnum)</span></span>
+<span id="L360" title="Line 360: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     360</span>                 :                : {</span>
+<span id="L361" title="Line 361: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     361</span>         [<span class="tlaCBC"> <a href="#L387" title="CBC: Branch 0 was taken 98477153 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L387" title="CBC: Branch 1 was taken 30799462 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">      129276615 :     if (slot-&gt;tts_nvalid &lt; attnum)</span></span>
+<span id="L362" title="Line 362: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     362</span>                 :<span class="tlaCBC">       98477153 :         slot_getsomeattrs_int(slot, attnum);</span></span>
+<span id="L363" title="Line 363: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     363</span>                 :<span class="tlaCBC">      129276615 : }</span></span>
+<span id="L364" title="Line 364: commit a7aa608e0f59 on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     364</span>                 :                : </span>
+<span id="L365" title="Line 365: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     365</span>                 :                : /*</span>
+<span id="L366" title="Line 366: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     366</span>                 :                :  * slot_getallattrs</span>
+<span id="L367" title="Line 367: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     367</span>                 :                :  *      This function forces all the entries of the slot's Datum/isnull</span>
+<span id="L368" title="Line 368: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     368</span>                 :                :  *      arrays to be valid.  The caller may then extract data directly</span>
+<span id="L369" title="Line 369: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     369</span>                 :                :  *      from those arrays instead of using slot_getattr.</span>
+<span id="L370" title="Line 370: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     370</span>                 :                :  */</span>
+<span id="L371" title="Line 371: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     371</span>                 :                : static inline void</span>
+<span id="L372" title="Line 372: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de"> 2560                      <span class="lineNum">     372</span>                 :<span class="tlaCBC">        8909925 : slot_getallattrs(TupleTableSlot *slot)</span></span>
+<span id="L373" title="Line 373: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     373</span>                 :                : {</span>
+<span id="L374" title="Line 374: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     374</span>                 :<span class="tlaCBC">        8909925 :     slot_getsomeattrs(slot, slot-&gt;tts_tupleDescriptor-&gt;natts);</span></span>
+<span id="L375" title="Line 375: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     375</span>                 :<span class="tlaCBC">        8909925 : }</span></span>
+<span id="L376" title="Line 376: commit 88ebd62fcc2e on 2018-08-23 by andres@anarazel.de">                           <span class="lineNum">     376</span>                 :                : </span>
+<span id="L377" title="Line 377: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     377</span>                 :                : </span>
+<span id="L378" title="Line 378: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     378</span>                 :                : /*</span>
+<span id="L379" title="Line 379: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     379</span>                 :                :  * slot_attisnull</span>
+<span id="L380" title="Line 380: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     380</span>                 :                :  *</span>
+<span id="L381" title="Line 381: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     381</span>                 :                :  * Detect whether an attribute of the slot is null, without actually fetching</span>
+<span id="L382" title="Line 382: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     382</span>                 :                :  * it.</span>
+<span id="L383" title="Line 383: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     383</span>                 :                :  */</span>
+<span id="L384" title="Line 384: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     384</span>                 :                : static inline bool</span>
+<span id="L385" title="Line 385: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475                      <span class="lineNum">     385</span>                 :<span class="tlaCBC">        5513217 : slot_attisnull(TupleTableSlot *slot, int attnum)</span></span>
+<span id="L386" title="Line 386: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     386</span>                 :                : {</span>
+<span id="L387" title="Line 387: commit b1099eca8f38 on 2022-10-28 by peter@eisentraut.org"> 1033 <a href="#L402" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     387</span>         [<span class="tlaUBC"> <a href="#L402" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L389" title="CBC: Branch 1 was taken 5513217 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        5513217 :     Assert(attnum &gt; 0);</span></span>
+<span id="L388" title="Line 388: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     388</span>                 :                : </span>
+<span id="L389" title="Line 389: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475 <a href="#L404" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     389</span>         [<span class="tlaCBC"> <a href="#L402" title="CBC: Branch 0 was taken 4142992 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L402" title="CBC: Branch 1 was taken 1370225 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        5513217 :     if (attnum &gt; slot-&gt;tts_nvalid)</span></span>
+<span id="L390" title="Line 390: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     390</span>                 :<span class="tlaCBC">        4142992 :         slot_getsomeattrs(slot, attnum);</span></span>
+<span id="L391" title="Line 391: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     391</span>                 :                : </span>
+<span id="L392" title="Line 392: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     392</span>                 :<span class="tlaCBC">        5513217 :     return slot-&gt;tts_isnull[attnum - 1];</span></span>
+<span id="L393" title="Line 393: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     393</span>                 :                : }</span>
+<span id="L394" title="Line 394: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     394</span>                 :                : </span>
+<span id="L395" title="Line 395: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     395</span>                 :                : /*</span>
+<span id="L396" title="Line 396: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     396</span>                 :                :  * slot_getattr - fetch one attribute of the slot's contents.</span>
+<span id="L397" title="Line 397: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     397</span>                 :                :  */</span>
+<span id="L398" title="Line 398: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     398</span>                 :                : static inline Datum</span>
+<span id="L399" title="Line 399: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     399</span>                 :<span class="tlaCBC">       33892138 : slot_getattr(TupleTableSlot *slot, int attnum,</span></span>
+<span id="L400" title="Line 400: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     400</span>                 :                :              bool *isnull)</span>
+<span id="L401" title="Line 401: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     401</span>                 :                : {</span>
+<span id="L402" title="Line 402: commit b1099eca8f38 on 2022-10-28 by peter@eisentraut.org"> 1033 <a href="#L528" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     402</span>         [<span class="tlaUBC"> <a href="#L422" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L404" title="CBC: Branch 1 was taken 33892138 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">       33892138 :     Assert(attnum &gt; 0);</span></span>
+<span id="L403" title="Line 403: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     403</span>                 :                : </span>
+<span id="L404" title="Line 404: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475 <a href="#L424" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     404</span>         [<span class="tlaCBC"> <a href="#L422" title="CBC: Branch 0 was taken 27051877 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L422" title="CBC: Branch 1 was taken 6840261 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">       33892138 :     if (attnum &gt; slot-&gt;tts_nvalid)</span></span>
+<span id="L405" title="Line 405: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     405</span>                 :<span class="tlaCBC">       27051877 :         slot_getsomeattrs(slot, attnum);</span></span>
+<span id="L406" title="Line 406: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     406</span>                 :                : </span>
+<span id="L407" title="Line 407: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     407</span>                 :<span class="tlaCBC">       33892138 :     *isnull = slot-&gt;tts_isnull[attnum - 1];</span></span>
+<span id="L408" title="Line 408: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     408</span>                 :                : </span>
+<span id="L409" title="Line 409: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     409</span>                 :<span class="tlaCBC">       33892138 :     return slot-&gt;tts_values[attnum - 1];</span></span>
+<span id="L410" title="Line 410: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     410</span>                 :                : }</span>
+<span id="L411" title="Line 411: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     411</span>                 :                : </span>
+<span id="L412" title="Line 412: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     412</span>                 :                : /*</span>
+<span id="L413" title="Line 413: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     413</span>                 :                :  * slot_getsysattr - fetch a system attribute of the slot's current tuple.</span>
+<span id="L414" title="Line 414: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     414</span>                 :                :  *</span>
+<span id="L415" title="Line 415: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     415</span>                 :                :  *  If the slot type does not contain system attributes, this will throw an</span>
+<span id="L416" title="Line 416: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     416</span>                 :                :  *  error.  Hence before calling this function, callers should make sure that</span>
+<span id="L417" title="Line 417: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     417</span>                 :                :  *  the slot type is the one that supports system attributes.</span>
+<span id="L418" title="Line 418: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     418</span>                 :                :  */</span>
+<span id="L419" title="Line 419: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     419</span>                 :                : static inline Datum</span>
+<span id="L420" title="Line 420: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     420</span>                 :<span class="tlaCBC">        3823551 : slot_getsysattr(TupleTableSlot *slot, int attnum, bool *isnull)</span></span>
+<span id="L421" title="Line 421: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     421</span>                 :                : {</span>
+<span id="L422" title="Line 422: commit 0245f8db36f3 on 2023-05-19 by tgl@sss.pgh.pa.us">  830 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     422</span>         [<span class="tlaUBC"> <a href="#L487" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L424" title="CBC: Branch 1 was taken 3823551 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        3823551 :     Assert(attnum &lt; 0);          /* caller error */</span></span>
+<span id="L423" title="Line 423: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     423</span>                 :                : </span>
+<span id="L424" title="Line 424: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de"> 2373 <a href="#L458" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     424</span>         [<span class="tlaCBC"> <a href="#L429" title="CBC: Branch 0 was taken 1523082 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L429" title="CBC: Branch 1 was taken 2300469 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        3823551 :     if (attnum == TableOidAttributeNumber)</span></span>
+<span id="L425" title="Line 425: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     425</span>                 :                :     {</span>
+<span id="L426" title="Line 426: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     426</span>                 :<span class="tlaCBC">        1523082 :         *isnull = false;</span></span>
+<span id="L427" title="Line 427: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     427</span>                 :<span class="tlaCBC">        1523082 :         return ObjectIdGetDatum(slot-&gt;tts_tableOid);</span></span>
+<span id="L428" title="Line 428: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     428</span>                 :                :     }</span>
+<span id="L429" title="Line 429: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     429</span>         [<span class="tlaCBC"> <a href="#L487" title="CBC: Branch 0 was taken 2227999 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L487" title="CBC: Branch 1 was taken 72470 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        2300469 :     else if (attnum == SelfItemPointerAttributeNumber)</span></span>
+<span id="L430" title="Line 430: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     430</span>                 :                :     {</span>
+<span id="L431" title="Line 431: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     431</span>                 :<span class="tlaCBC">        2227999 :         *isnull = false;</span></span>
+<span id="L432" title="Line 432: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     432</span>                 :<span class="tlaCBC">        2227999 :         return PointerGetDatum(&amp;slot-&gt;tts_tid);</span></span>
+<span id="L433" title="Line 433: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     433</span>                 :                :     }</span>
+<span id="L434" title="Line 434: commit b8d71745eac0 on 2019-02-26 by andres@anarazel.de">                           <span class="lineNum">     434</span>                 :                : </span>
+<span id="L435" title="Line 435: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     435</span>                 :                :     /* Fetch the system attribute from the underlying tuple. */</span>
+<span id="L436" title="Line 436: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475                      <span class="lineNum">     436</span>                 :<span class="tlaCBC">          72470 :     return slot-&gt;tts_ops-&gt;getsysattr(slot, attnum, isnull);</span></span>
+<span id="L437" title="Line 437: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     437</span>                 :                : }</span>
+<span id="L438" title="Line 438: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     438</span>                 :                : </span>
+<span id="L439" title="Line 439: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     439</span>                 :                : /*</span>
+<span id="L440" title="Line 440: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     440</span>                 :                :  * slot_is_current_xact_tuple - check if the slot's current tuple is created</span>
+<span id="L441" title="Line 441: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     441</span>                 :                :  *                              by the current transaction.</span>
+<span id="L442" title="Line 442: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     442</span>                 :                :  *</span>
+<span id="L443" title="Line 443: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     443</span>                 :                :  *  If the slot does not contain a storage tuple, this will throw an error.</span>
+<span id="L444" title="Line 444: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     444</span>                 :                :  *  Hence before calling this function, callers should make sure that the</span>
+<span id="L445" title="Line 445: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     445</span>                 :                :  *  slot type supports storage tuples and that there is currently one inside</span>
+<span id="L446" title="Line 446: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     446</span>                 :                :  *  the slot.</span>
+<span id="L447" title="Line 447: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     447</span>                 :                :  */</span>
+<span id="L448" title="Line 448: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     448</span>                 :                : static inline bool</span>
+<span id="L449" title="Line 449: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">  523 <a href="#top" title="next CBC in &ldquo;akorotkov@postgresql.org&rdquo; bin">akorotkov@postgresql</a> <span class="lineNum">     449</span>                 :<span class="tlaCBC">            462 : slot_is_current_xact_tuple(TupleTableSlot *slot)</span></span>
+<span id="L450" title="Line 450: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     450</span>                 :                : {</span>
+<span id="L451" title="Line 451: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     451</span>                 :<span class="tlaCBC">            462 :     return slot-&gt;tts_ops-&gt;is_current_xact_tuple(slot);</span></span>
+<span id="L452" title="Line 452: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     452</span>                 :                : }</span>
+<span id="L453" title="Line 453: commit 0997e0af273d on 2024-03-21 by akorotkov@postgresql.org">                           <span class="lineNum">     453</span>                 :                : </span>
+<span id="L454" title="Line 454: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     454</span>                 :                : /*</span>
+<span id="L455" title="Line 455: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     455</span>                 :                :  * ExecClearTuple - clear the slot's contents</span>
+<span id="L456" title="Line 456: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     456</span>                 :                :  */</span>
+<span id="L457" title="Line 457: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     457</span>                 :                : static inline TupleTableSlot *</span>
+<span id="L458" title="Line 458: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475 <a href="#L525" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     458</span>                 :<span class="tlaCBC">       76216621 : ExecClearTuple(TupleTableSlot *slot)</span></span>
+<span id="L459" title="Line 459: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     459</span>                 :                : {</span>
+<span id="L460" title="Line 460: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     460</span>                 :<span class="tlaCBC">       76216621 :     slot-&gt;tts_ops-&gt;clear(slot);</span></span>
+<span id="L461" title="Line 461: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     461</span>                 :                : </span>
+<span id="L462" title="Line 462: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     462</span>                 :<span class="tlaCBC">       76216621 :     return slot;</span></span>
+<span id="L463" title="Line 463: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     463</span>                 :                : }</span>
+<span id="L464" title="Line 464: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     464</span>                 :                : </span>
+<span id="L465" title="Line 465: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     465</span>                 :                : /* ExecMaterializeSlot - force a slot into the &quot;materialized&quot; state.</span>
+<span id="L466" title="Line 466: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     466</span>                 :                :  *</span>
+<span id="L467" title="Line 467: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     467</span>                 :                :  * This causes the slot's tuple to be a local copy not dependent on any</span>
+<span id="L468" title="Line 468: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     468</span>                 :                :  * external storage (i.e. pointing into a Buffer, or having allocations in</span>
+<span id="L469" title="Line 469: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     469</span>                 :                :  * another memory context).</span>
+<span id="L470" title="Line 470: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     470</span>                 :                :  *</span>
+<span id="L471" title="Line 471: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     471</span>                 :                :  * A typical use for this operation is to prepare a computed tuple for being</span>
+<span id="L472" title="Line 472: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     472</span>                 :                :  * stored on disk.  The original data may or may not be virtual, but in any</span>
+<span id="L473" title="Line 473: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     473</span>                 :                :  * case we need a private copy for heap_insert to scribble on.</span>
+<span id="L474" title="Line 474: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     474</span>                 :                :  */</span>
+<span id="L475" title="Line 475: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     475</span>                 :                : static inline void</span>
+<span id="L476" title="Line 476: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     476</span>                 :<span class="tlaCBC">        8087880 : ExecMaterializeSlot(TupleTableSlot *slot)</span></span>
+<span id="L477" title="Line 477: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     477</span>                 :                : {</span>
+<span id="L478" title="Line 478: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     478</span>                 :<span class="tlaCBC">        8087880 :     slot-&gt;tts_ops-&gt;materialize(slot);</span></span>
+<span id="L479" title="Line 479: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     479</span>                 :<span class="tlaCBC">        8087880 : }</span></span>
+<span id="L480" title="Line 480: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     480</span>                 :                : </span>
+<span id="L481" title="Line 481: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     481</span>                 :                : /*</span>
+<span id="L482" title="Line 482: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     482</span>                 :                :  * ExecCopySlotHeapTuple - return HeapTuple allocated in caller's context</span>
+<span id="L483" title="Line 483: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     483</span>                 :                :  */</span>
+<span id="L484" title="Line 484: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     484</span>                 :                : static inline HeapTuple</span>
+<span id="L485" title="Line 485: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     485</span>                 :<span class="tlaCBC">       11706711 : ExecCopySlotHeapTuple(TupleTableSlot *slot)</span></span>
+<span id="L486" title="Line 486: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     486</span>                 :                : {</span>
+<span id="L487" title="Line 487: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     487</span>         [<span class="tlaUBC"> <a href="#L527" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L527" title="CBC: Branch 1 was taken 11706711 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">       11706711 :     Assert(!TTS_EMPTY(slot));</span></span>
+<span id="L488" title="Line 488: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     488</span>                 :                : </span>
+<span id="L489" title="Line 489: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     489</span>                 :<span class="tlaCBC">       11706711 :     return slot-&gt;tts_ops-&gt;copy_heap_tuple(slot);</span></span>
+<span id="L490" title="Line 490: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     490</span>                 :                : }</span>
+<span id="L491" title="Line 491: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     491</span>                 :                : </span>
+<span id="L492" title="Line 492: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     492</span>                 :                : /*</span>
+<span id="L493" title="Line 493: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     493</span>                 :                :  * ExecCopySlotMinimalTuple - return MinimalTuple allocated in caller's context</span>
+<span id="L494" title="Line 494: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     494</span>                 :                :  */</span>
+<span id="L495" title="Line 495: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     495</span>                 :                : static inline MinimalTuple</span>
+<span id="L496" title="Line 496: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     496</span>                 :<span class="tlaCBC">        8119837 : ExecCopySlotMinimalTuple(TupleTableSlot *slot)</span></span>
+<span id="L497" title="Line 497: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     497</span>                 :                : {</span>
+<span id="L498" title="Line 498: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">155</a> <a href="#top" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">     498</span>                 :<span class="tlaCBC">        8119837 :     return slot-&gt;tts_ops-&gt;copy_minimal_tuple(slot, 0);</span></span>
+<span id="L499" title="Line 499: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     499</span>                 :                : }</span>
+<span id="L500" title="Line 500: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     500</span>                 :                : </span>
+<span id="L501" title="Line 501: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     501</span>                 :                : /*</span>
+<span id="L502" title="Line 502: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     502</span>                 :                :  * ExecCopySlotMinimalTupleExtra - return MinimalTuple allocated in caller's</span>
+<span id="L503" title="Line 503: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     503</span>                 :                :  * context, with extra bytes (maxaligned and zeroed) before the tuple for data</span>
+<span id="L504" title="Line 504: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     504</span>                 :                :  * the caller wishes to store along with the tuple (without requiring the</span>
+<span id="L505" title="Line 505: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     505</span>                 :                :  * caller to make an additional allocation).</span>
+<span id="L506" title="Line 506: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     506</span>                 :                :  */</span>
+<span id="L507" title="Line 507: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     507</span>                 :                : static inline MinimalTuple</span>
+<span id="L508" title="Line 508: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     508</span>                 :<span class="tlaCBC">         511123 : ExecCopySlotMinimalTupleExtra(TupleTableSlot *slot, Size extra)</span></span>
+<span id="L509" title="Line 509: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     509</span>                 :                : {</span>
+<span id="L510" title="Line 510: commit a0942f441ed6 on 2025-03-24 by jdavis@postgresql.org">                           <span class="lineNum">     510</span>                 :<span class="tlaCBC">         511123 :     return slot-&gt;tts_ops-&gt;copy_minimal_tuple(slot, extra);</span></span>
+<span id="L511" title="Line 511: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     511</span>                 :                : }</span>
+<span id="L512" title="Line 512: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     512</span>                 :                : </span>
+<span id="L513" title="Line 513: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     513</span>                 :                : /*</span>
+<span id="L514" title="Line 514: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     514</span>                 :                :  * ExecCopySlot - copy one slot's contents into another.</span>
+<span id="L515" title="Line 515: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     515</span>                 :                :  *</span>
+<span id="L516" title="Line 516: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     516</span>                 :                :  * If a source's system attributes are supposed to be accessed in the target</span>
+<span id="L517" title="Line 517: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     517</span>                 :                :  * slot, the target slot and source slot types need to match.</span>
+<span id="L518" title="Line 518: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     518</span>                 :                :  *</span>
+<span id="L519" title="Line 519: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     519</span>                 :                :  * Currently, 'dstslot' and 'srcslot' must have the same number of attributes.</span>
+<span id="L520" title="Line 520: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     520</span>                 :                :  * Future work could see this relaxed to allow the source to contain</span>
+<span id="L521" title="Line 521: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     521</span>                 :                :  * additional attributes and have the code here only copy over the leading</span>
+<span id="L522" title="Line 522: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     522</span>                 :                :  * attributes.</span>
+<span id="L523" title="Line 523: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     523</span>                 :                :  */</span>
+<span id="L524" title="Line 524: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     524</span>                 :                : static inline TupleTableSlot *</span>
+<span id="L525" title="Line 525: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">2475</a> <a href="#L532" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     525</span>                 :<span class="tlaCBC">        6489975 : ExecCopySlot(TupleTableSlot *dstslot, TupleTableSlot *srcslot)</span></span>
+<span id="L526" title="Line 526: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     526</span>                 :                : {</span>
+<span id="L527" title="Line 527: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     527</span>         [<span class="tlaUBC"> <a href="#L528" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L528" title="CBC: Branch 1 was taken 6489975 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        6489975 :     Assert(!TTS_EMPTY(srcslot));</span></span>
+<span id="L528" title="Line 528: commit b1099eca8f38 on 2022-10-28 by peter@eisentraut.org"> 1033 <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">     528</span>         [<span class="tlaUBC"> <a href="#L529" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L529" title="CBC: Branch 1 was taken 6489975 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        6489975 :     Assert(srcslot != dstslot);</span></span>
+<span id="L529" title="Line 529: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">  628 <a href="#top" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     529</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 6489975 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">        6489975 :     Assert(dstslot-&gt;tts_tupleDescriptor-&gt;natts ==</span></span>
+<span id="L530" title="Line 530: commit d16a0c1e2e38 on 2023-12-07 by drowley@postgresql.org">                           <span class="lineNum">     530</span>                 :                :            srcslot-&gt;tts_tupleDescriptor-&gt;natts);</span>
+<span id="L531" title="Line 531: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     531</span>                 :                : </span>
+<span id="L532" title="Line 532: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de"> 2475 <a href="#top" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">     532</span>                 :<span class="tlaCBC">        6489975 :     dstslot-&gt;tts_ops-&gt;copyslot(dstslot, srcslot);</span></span>
+<span id="L533" title="Line 533: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     533</span>                 :                : </span>
+<span id="L534" title="Line 534: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     534</span>                 :<span class="tlaCBC">        6489975 :     return dstslot;</span></span>
+<span id="L535" title="Line 535: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     535</span>                 :                : }</span>
+<span id="L536" title="Line 536: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     536</span>                 :                : </span>
+<span id="L537" title="Line 537: commit 4da597edf1ba on 2018-11-16 by andres@anarazel.de">                           <span class="lineNum">     537</span>                 :                : #endif                          /* FRONTEND */</span>
+<span id="L538" title="Line 538: commit 14ea36520389 on 2018-09-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     538</span>                 :                : </span>
+<span id="L539" title="Line 539: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     539</span>                 :                : #endif                          /* TUPTABLE_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

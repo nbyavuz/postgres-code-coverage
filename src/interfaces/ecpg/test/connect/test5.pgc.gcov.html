@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/interfaces/ecpg/test/connect/test5.pgc</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../../index.html" title="Click to go to directory src">src</a>/<a href="../../../index.html" title="Click to go to directory interfaces">interfaces</a>/<a href="../../index.html" title="Click to go to directory ecpg">ecpg</a>/<a href="../index.html" title="Click to go to directory test">test</a>/<a href="index.html" title="Click to go to directory connect">connect</a> - test5.pgc<span style="font-size: 80%;"> (source / <a href="test5.pgc.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry"><a href="#L13" title="goto first CBC line">37</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry">37</td>
+            <td class="headerCovTableEntry"><a href="#L13" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">37</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       1</span>                 : /*</span>
+<span id="L2" title="Line 2: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       2</span>                 :  * this file tests all sorts of connecting to one single database.</span>
+<span id="L3" title="Line 3: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       3</span>                 :  */</span>
+<span id="L4" title="Line 4: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       4</span>                 : </span>
+<span id="L5" title="Line 5: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       5</span>                 : #include &lt;stdlib.h&gt;</span>
+<span id="L6" title="Line 6: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       6</span>                 : #include &lt;string.h&gt;</span>
+<span id="L7" title="Line 7: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       7</span>                 : #include &lt;stdlib.h&gt;</span>
+<span id="L8" title="Line 8: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       8</span>                 : #include &lt;stdio.h&gt;</span>
+<span id="L9" title="Line 9: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">       9</span>                 : </span>
+<span id="L10" title="Line 10: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      10</span>                 : /* do not include regression.h */</span>
+<span id="L11" title="Line 11: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      11</span>                 : </span>
+<span id="L12" title="Line 12: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      12</span>                 : int</span>
+<span id="L13" title="Line 13: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">6939</a> <a href="#L21" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      13</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           1 : main(void)</span></span>
+<span id="L14" title="Line 14: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      14</span>                 : {</span>
+<span id="L15" title="Line 15: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      15</span>                 : exec sql begin declare section;</span>
+<span id="L16" title="Line 16: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      16</span>                 :     char db[200];</span>
+<span id="L17" title="Line 17: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      17</span>                 :     char id[200];</span>
+<span id="L18" title="Line 18: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L23" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      18</span> <span class="tlaCBC">              1 :     char *user=&quot;regress_ecpg_user1&quot;;</span></span>
+<span id="L19" title="Line 19: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      19</span>                 : exec sql end declare section;</span>
+<span id="L20" title="Line 20: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      20</span>                 : </span>
+<span id="L21" title="Line 21: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L27" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      21</span> <span class="tlaCBC">              1 :     ECPGdebug(1, stderr);</span></span>
+<span id="L22" title="Line 22: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      22</span>                 : </span>
+<span id="L23" title="Line 23: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L29" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      23</span> <span class="tlaCBC">              1 :     exec sql connect to ecpg2_regression as main;</span></span>
+<span id="L24" title="Line 24: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span> <span class="tlaCBC">              1 :     exec sql alter user regress_ecpg_user2 ENCRYPTED PASSWORD 'insecure';</span></span>
+<span id="L25" title="Line 25: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span> <span class="tlaCBC">              1 :     exec sql alter user regress_ecpg_user1 ENCRYPTED PASSWORD 'connectpw';</span></span>
+<span id="L26" title="Line 26: commit c82725edfa1a on 2014-06-19 by noah@leadboat.com"> 4086 <a href="#L73" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      26</span> <span class="tlaCBC">              1 :     exec sql commit;</span></span>
+<span id="L27" title="Line 27: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L30" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      27</span> <span class="tlaCBC">              1 :     exec sql disconnect;  /* &lt;-- &quot;main&quot; not specified */</span></span>
+<span id="L28" title="Line 28: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      28</span>                 : </span>
+<span id="L29" title="Line 29: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L34" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      29</span> <span class="tlaCBC">              1 :     strcpy(db, &quot;ecpg2_regression&quot;);</span></span>
+<span id="L30" title="Line 30: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L35" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      30</span> <span class="tlaCBC">              1 :     strcpy(id, &quot;main&quot;);</span></span>
+<span id="L31" title="Line 31: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      31</span> <span class="tlaCBC">              1 :     exec sql connect to :db as :id;</span></span>
+<span id="L32" title="Line 32: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      32</span> <span class="tlaCBC">              1 :     exec sql disconnect :id;</span></span>
+<span id="L33" title="Line 33: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      33</span>                 : </span>
+<span id="L34" title="Line 34: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L37" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      34</span> <span class="tlaCBC">              1 :     exec sql connect to ecpg2_regression as main;</span></span>
+<span id="L35" title="Line 35: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L38" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      35</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L36" title="Line 36: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      36</span>                 : </span>
+<span id="L37" title="Line 37: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L40" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      37</span> <span class="tlaCBC">              1 :     exec sql connect to &quot;ecpg2_regression&quot; as main;</span></span>
+<span id="L38" title="Line 38: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L41" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      38</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L39" title="Line 39: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      39</span>                 : </span>
+<span id="L40" title="Line 40: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L46" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      40</span> <span class="tlaCBC">              1 :     exec sql connect to 'ecpg2_regression' as main;</span></span>
+<span id="L41" title="Line 41: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L47" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      41</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L42" title="Line 42: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      42</span>                 : </span>
+<span id="L43" title="Line 43: commit 9bb5eecce645 on 2021-06-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :     /* exec sql connect to as main user regress_ecpg_user2/insecure;</span>
+<span id="L44" title="Line 44: commit 9bb5eecce645 on 2021-06-10 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :     exec sql disconnect main; */</span>
+<span id="L45" title="Line 45: commit b1710339ba2e on 2006-08-29 by meskes@postgresql.org">                           <span class="lineNum">      45</span>                 : </span>
+<span id="L46" title="Line 46: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L49" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      46</span> <span class="tlaCBC">              1 :     exec sql connect to ecpg2_regression as main user regress_ecpg_user1/connectpw;</span></span>
+<span id="L47" title="Line 47: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L50" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      47</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L48" title="Line 48: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      48</span>                 : </span>
+<span id="L49" title="Line 49: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L52" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      49</span> <span class="tlaCBC">              1 :     exec sql connect to unix:postgresql://localhost/ecpg2_regression as main user regress_ecpg_user1/connectpw;</span></span>
+<span id="L50" title="Line 50: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L53" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      50</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L51" title="Line 51: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      51</span>                 : </span>
+<span id="L52" title="Line 52: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L55" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      52</span> <span class="tlaCBC">              1 :     exec sql connect to &quot;unix:postgresql://localhost/ecpg2_regression&quot; as main user regress_ecpg_user1/connectpw;</span></span>
+<span id="L53" title="Line 53: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L56" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      53</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L54" title="Line 54: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      54</span>                 : </span>
+<span id="L55" title="Line 55: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L61" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      55</span> <span class="tlaCBC">              1 :     exec sql connect to 'unix:postgresql://localhost/ecpg2_regression' as main user :user USING &quot;connectpw&quot;;</span></span>
+<span id="L56" title="Line 56: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L59" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      56</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L57" title="Line 57: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      57</span>                 : </span>
+<span id="L58" title="Line 58: commit 27b62377b47f on 2023-03-09 by jdavis@postgresql.org">  901 <a href="#top" title="next CBC in &ldquo;jdavis@postgresql.org&rdquo; bin">jdavis@postgresql.or</a> <span class="lineNum">      58</span> <span class="tlaCBC">              1 :     exec sql connect to unix:postgresql://localhost/ecpg2_regression?connect_timeout=180&amp;client_encoding=sql_ascii as main user regress_ecpg_user1/connectpw;</span></span>
+<span id="L59" title="Line 59: commit 5e7710e725b1 on 2012-02-17 by meskes@postgresql.org"> 4939 <a href="#L62" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      59</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L60" title="Line 60: commit 5e7710e725b1 on 2012-02-17 by meskes@postgresql.org">                           <span class="lineNum">      60</span>                 : </span>
+<span id="L61" title="Line 61: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#L64" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      61</span> <span class="tlaCBC">              1 :     exec sql connect to &quot;unix:postgresql://200.46.204.71/ecpg2_regression&quot; as main user regress_ecpg_user1/connectpw;</span></span>
+<span id="L62" title="Line 62: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#L65" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      62</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L63" title="Line 63: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      63</span>                 : </span>
+<span id="L64" title="Line 64: commit 9bb5eecce645 on 2021-06-10 by tgl@sss.pgh.pa.us"> 1538 <a href="#L68" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      64</span> <span class="tlaCBC">              1 :     exec sql connect to &quot;unix:postgresql://localhost/?gssencmode=disable&quot; as main user regress_ecpg_user2 IDENTIFIED BY insecure;</span></span>
+<span id="L65" title="Line 65: commit b1710339ba2e on 2006-08-29 by meskes@postgresql.org"> 6937 <a href="#L70" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      65</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L66" title="Line 66: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      66</span>                 : </span>
+<span id="L67" title="Line 67: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      67</span>                 :     /* connect twice */</span>
+<span id="L68" title="Line 68: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us"> 3327 <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      68</span> <span class="tlaCBC">              1 :     exec sql connect to ecpg2_regression as main;</span></span>
+<span id="L69" title="Line 69: commit 18555b1323bd on 2016-07-17 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span> <span class="tlaCBC">              1 :     exec sql connect to ecpg2_regression as main;</span></span>
+<span id="L70" title="Line 70: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org"> 6939 <a href="#top" title="next CBC in &ldquo;meskes@postgresql.org&rdquo; bin">meskes@postgresql.or</a> <span class="lineNum">      70</span> <span class="tlaCBC">              1 :     exec sql disconnect main;</span></span>
+<span id="L71" title="Line 71: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      71</span>                 : </span>
+<span id="L72" title="Line 72: commit b1710339ba2e on 2006-08-29 by meskes@postgresql.org">                           <span class="lineNum">      72</span>                 :     /* not connected */</span>
+<span id="L73" title="Line 73: commit f2c71cb71fe1 on 2019-06-08 by noah@leadboat.com"> 2271 <a href="#top" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      73</span> <span class="tlaCBC">              1 :     exec sql disconnect nonexistent;</span></span>
+<span id="L74" title="Line 74: commit b1710339ba2e on 2006-08-29 by meskes@postgresql.org">                           <span class="lineNum">      74</span>                 : </span>
+<span id="L75" title="Line 75: commit 17273d059cd3 on 2017-08-17 by peter_e@gmx.net"> 2931 <a href="#top" title="next CBC in &ldquo;peter_e@gmx.net&rdquo; bin">peter_e@gmx.net</a>      <span class="lineNum">      75</span> <span class="tlaCBC">              1 :     return 0;</span></span>
+<span id="L76" title="Line 76: commit 99a5619e7b39 on 2006-08-27 by meskes@postgresql.org">                           <span class="lineNum">      76</span>                 : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

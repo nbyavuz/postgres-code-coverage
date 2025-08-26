@@ -1,0 +1,2025 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/numeric.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - numeric.c<span style="font-size: 80%;"> (<a href="numeric.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUIC" title="Uncovered Included Code (# => 0):
+Previously unused code is untested">UIC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGIC" title="Gained Included Coverage (# => 1):
+Previously unused code is tested now">GIC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">94.5&nbsp;%</td>
+            <td class="headerCovTableEntry">4052</td>
+            <td class="headerCovTableEntry">3828</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">223</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry">3754</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">106</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">99.5&nbsp;%</td>
+            <td class="headerCovTableEntry">211</td>
+            <td class="headerCovTableEntry">210</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">183</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">78.3&nbsp;%</td>
+            <td class="headerCovTableEntry">2533</td>
+            <td class="headerCovTableEntry">1984</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">528</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">1940</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="15">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">98.6&nbsp;%</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">92.7&nbsp;%</td>
+            <td class="headerCovTableEntry">179</td>
+            <td class="headerCovTableEntry">166</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">164</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">94.5&nbsp;%</td>
+            <td class="headerCovTableEntry">3799</td>
+            <td class="headerCovTableEntry">3589</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">210</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3589</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="15">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">99.5&nbsp;%</td>
+            <td class="headerCovTableEntry">205</td>
+            <td class="headerCovTableEntry">204</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">182</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="15">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">72.5&nbsp;%</td>
+            <td class="headerCovTableEntry">40</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="tlaUNC">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">87.3&nbsp;%</td>
+            <td class="headerCovTableEntry">110</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">89</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">76.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2447</td>
+            <td class="headerCovTableEntry">1859</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">1</td>
+            <td class="tlaUIC">8</td>
+            <td class="headerCovTableEntry">515</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1851</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="numeric.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="numeric.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="numeric.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6420">int8_sum</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4553">int2_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6555">int2_avg_accum_inv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11926">accum_sum_reset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6361">int2_sum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5141">numeric_avg_combine</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerMed>87.9&nbsp;% (29 / 33)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5265">numeric_avg_deserialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5213">numeric_avg_serialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5605">numeric_poly_combine</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5707">numeric_poly_deserialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5673">numeric_poly_serialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4670">numeric_float8_no_overflow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17</td>
+              <td class=coverPerLo>54.5&nbsp;% (6 / 11)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5932">int8_avg_accum_inv</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5049">numeric_combine</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>88.6&nbsp;% (31 / 35)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5379">numeric_deserialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5973">numeric_poly_avg</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5323">numeric_serialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L12203">accum_sum_copy</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6468">int2_avg_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3645">numeric_fac</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5766">int8_avg_combine</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              <td class=coverPerLo>57.1&nbsp;% (8 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5841">int8_avg_deserialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5810">int8_avg_serialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3458">numeric_inc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1497">numeric_sign</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L12220">accum_sum_combine</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6307">numeric_poly_var_pop</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L860">numeric_is_integral</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5514">makeInt128AggStateCurrentContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1150">numeric_send</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4208">numeric_min_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6324">numeric_poly_stddev_pop</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5999">numeric_avg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3769">numeric_exp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2798">hash_numeric_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              <td class=coverPerLo>56.2&nbsp;% (18 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4851">makeNumericAggStateCurrentContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5659">int128_deserialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5649">int128_serialize</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6212">numeric_stddev_pop</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7551">numericvar_deserialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7535">numericvar_serialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4562">numeric_int2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1065">numeric_recv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51</td>
+              <td class=coverPerLo>67.7&nbsp;% (21 / 31)</td>
+              <td class=coverPerLo>25.0&nbsp;% (7 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9935">floor_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4143">numeric_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6195">numeric_var_pop</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7962">numericvar_to_uint64</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerHi>92.9&nbsp;% (26 / 28)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4759">numeric_pg_lsn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1662">numeric_floor</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6273">numeric_poly_var_samp</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2216">numeric_abbrev_abort</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">72</td>
+              <td class=coverPerLo>23.5&nbsp;% (4 / 17)</td>
+              <td class=coverPerLo>4.5&nbsp;% (1 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3697">numeric_sqrt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">75</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7053">set_var_from_non_decimal_integer_str</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78</td>
+              <td class=coverPerMed>87.5&nbsp;% (70 / 80)</td>
+              <td class=coverPerMed>77.6&nbsp;% (45 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5877">int2_accum_inv</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5894">int4_accum_inv</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5911">int8_accum_inv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6290">numeric_poly_stddev_samp</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">82</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6178">numeric_stddev_samp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">87</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10508">exp_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6161">numeric_var_samp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5551">int2_accum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3836">numeric_ln</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9911">ceil_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10837">log_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3542">numeric_gcd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9958">gcd_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">111</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1634">numeric_ceil</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">111</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7458">get_str_from_var_sci</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">114</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5440">numeric_accum_inv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">114</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11264">power_ten_int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">114</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3585">numeric_lcm</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L979">numeric_out_sci</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">123</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L849">numeric_is_inf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4228">numeric_trim_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">162</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4936">do_numeric_discard</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">171</td>
+              <td class=coverPerHi>90.6&nbsp;% (29 / 32)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3885">numeric_log</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">171</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4157">get_min_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">186</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1356">numerictypmodout</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">188</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6229">numeric_poly_stddev_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">211</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8068">numericvar_to_double_no_overflow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">236</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2039">compute_bucket</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">240</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1822">generate_series_numeric_support</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">243</td>
+              <td class=coverPerHi>95.9&nbsp;% (47 / 49)</td>
+              <td class=coverPerHi>90.5&nbsp;% (38 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1449">numeric_uplus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">249</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1183">numeric_support</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">258</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4544">numeric_int8</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">261</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9631">div_var_int64</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">264</td>
+              <td class=coverPerHi>97.6&nbsp;% (41 / 42)</td>
+              <td class=coverPerMed>89.3&nbsp;% (25 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4494">numeric_int8_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">285</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1584">numeric_trunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">313</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5029">numeric_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">321</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7026">xdigit_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">354</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10637">estimate_ln_dweight</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">369</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1955">width_bucket_numeric</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">393</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerLo>73.7&nbsp;% (28 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3491">numeric_smaller</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">399</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10719">ln_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">417</td>
+              <td class=coverPerHi>97.7&nbsp;% (43 / 44)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1407">numeric_uminus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">442</td>
+              <td class=coverPerLo>70.6&nbsp;% (12 / 17)</td>
+              <td class=coverPerLo>40.0&nbsp;% (8 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5490">makeInt128AggState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">492</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6077">numeric_stddev_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">493</td>
+              <td class=coverPerHi>94.4&nbsp;% (34 / 36)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5949">numeric_poly_sum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">526</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4602">float8_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">537</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2113">numeric_sortsupport</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">574</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2583">in_range_numeric_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">576</td>
+              <td class=coverPerHi>98.1&nbsp;% (53 / 54)</td>
+              <td class=coverPerMed>79.3&nbsp;% (46 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3280">numeric_div_trunc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">609</td>
+              <td class=coverPerHi>94.4&nbsp;% (34 / 36)</td>
+              <td class=coverPerMed>85.7&nbsp;% (24 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11059">power_var_int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">618</td>
+              <td class=coverPerMed>86.5&nbsp;% (64 / 74)</td>
+              <td class=coverPerLo>66.7&nbsp;% (26 / 39)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10897">power_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">699</td>
+              <td class=coverPerHi>98.1&nbsp;% (53 / 54)</td>
+              <td class=coverPerMed>77.8&nbsp;% (28 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6583">int4_avg_accum_inv</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">726</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3956">numeric_power</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">822</td>
+              <td class=coverPerHi>100.0&nbsp;% (64 / 64)</td>
+              <td class=coverPerMed>89.4&nbsp;% (59 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L894">make_numeric_typmod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">939</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7803">apply_typmod_special</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">944</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1311">numerictypmodin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">960</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>70.8&nbsp;% (17 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4731">numeric_float4</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1228</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1465">numeric_sign_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1785</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6638">int2int4_sum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1917</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L10028">sqrt_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2097</td>
+              <td class=coverPerHi>97.4&nbsp;% (152 / 156)</td>
+              <td class=coverPerMed>87.8&nbsp;% (65 / 74)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6524">int4_avg_combine</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2227</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>35.0&nbsp;% (7 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9841">div_mod_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2259</td>
+              <td class=coverPerLo>56.5&nbsp;% (13 / 23)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2451">numeric_ne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2688</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4456">numeric_int4</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3042</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L940">numeric_maximum_size</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3524</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L838">numeric_is_nan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3733</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4406">numeric_int4_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3834</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1530">numeric_round</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3904</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4469">numericvar_to_int32</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4197</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8032">int128_to_numericvar</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">4398</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7840">numericvar_to_int64</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5151</td>
+              <td class=coverPerHi>100.0&nbsp;% (30 / 30)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6611">int8_avg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5387</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1233">numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5851</td>
+              <td class=coverPerMed>86.7&nbsp;% (26 / 30)</td>
+              <td class=coverPerLo>57.5&nbsp;% (23 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7231">set_var_from_num</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6464</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2481">numeric_ge</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7511</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2511">numeric_le</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8963</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3513">numeric_larger</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9315</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2364">numeric_abbrev_convert_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9509</td>
+              <td class=coverPerHi>92.0&nbsp;% (23 / 25)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2154">numeric_abbrev_convert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9584</td>
+              <td class=coverPerHi>95.7&nbsp;% (22 / 23)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1380">numeric_abs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9753</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4696">float4_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11185</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7574">duplicate_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14246</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4325">int64_div_fast_to_numeric</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">14694</td>
+              <td class=coverPerMed>86.4&nbsp;% (19 / 22)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11289">random_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16719</td>
+              <td class=coverPerHi>100.0&nbsp;% (57 / 57)</td>
+              <td class=coverPerHi>93.3&nbsp;% (28 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4249">random_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16731</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7279">set_var_from_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17589</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4486">int8_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18425</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1013">numeric_normalize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">19551</td>
+              <td class=coverPerLo>70.6&nbsp;% (12 / 17)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L929">numeric_typmod_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20744</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L914">numeric_typmod_precision</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24268</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2466">numeric_gt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27803</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6796">zero_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30913</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2946">numeric_sub</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37696</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2966">numeric_sub_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37771</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1690">generate_series_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60192</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L1696">generate_series_step_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60417</td>
+              <td class=coverPerHi>100.0&nbsp;% (45 / 45)</td>
+              <td class=coverPerMed>82.5&nbsp;% (33 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2496">numeric_lt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">68573</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3145">numeric_div</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74132</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3165">numeric_div_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74552</td>
+              <td class=coverPerMed>87.0&nbsp;% (40 / 46)</td>
+              <td class=coverPerMed>82.5&nbsp;% (33 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9743">select_div_scale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">74813</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L624">numeric_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81994</td>
+              <td class=coverPerHi>95.5&nbsp;% (64 / 67)</td>
+              <td class=coverPerHi>92.3&nbsp;% (48 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7718">apply_typmod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">83263</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8100">cmp_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">85114</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6034">numeric_sum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">85453</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4826">makeNumericAggState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">85570</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L12152">accum_sum_final</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">86307</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11990">accum_sum_carry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">86382</td>
+              <td class=coverPerHi>100.0&nbsp;% (29 / 29)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6823">set_var_from_str</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">92726</td>
+              <td class=coverPerHi>92.4&nbsp;% (85 / 92)</td>
+              <td class=coverPerMed>89.1&nbsp;% (49 / 55)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L903">is_valid_numeric_typmod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93498</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2305">numeric_cmp_abbrev</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93650</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5585">int8_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">120099</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5568">int4_accum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">121099</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11717">round_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">124341</td>
+              <td class=coverPerHi>100.0&nbsp;% (39 / 39)</td>
+              <td class=coverPerHi>91.7&nbsp;% (22 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2869">numeric_add</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">126092</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2888">numeric_add_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">126611</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5745">int8_avg_accum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">159460</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3369">numeric_mod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">206641</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3389">numeric_mod_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">206647</td>
+              <td class=coverPerMed>79.2&nbsp;% (19 / 24)</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9812">mod_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">206842</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11823">trunc_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">210398</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11550">add_abs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">222975</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3024">numeric_mul</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">244855</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L3044">numeric_mul_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">244873</td>
+              <td class=coverPerHi>91.8&nbsp;% (45 / 49)</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4637">numeric_float8</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">259976</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8275">sub_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">266296</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5528">do_int128_accum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">278741</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8974">div_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">285555</td>
+              <td class=coverPerHi>93.0&nbsp;% (160 / 172)</td>
+              <td class=coverPerMed>85.7&nbsp;% (84 / 98)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L9515">div_var_int</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292100</td>
+              <td class=coverPerHi>97.6&nbsp;% (41 / 42)</td>
+              <td class=coverPerMed>89.3&nbsp;% (25 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2718">hash_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">303772</td>
+              <td class=coverPerMed>83.3&nbsp;% (20 / 24)</td>
+              <td class=coverPerLo>59.4&nbsp;% (19 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8158">add_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">309056</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11635">sub_abs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">327238</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2436">numeric_eq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">341166</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11472">cmp_abs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">354747</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L803">numeric_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">425958</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7305">get_str_from_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">444065</td>
+              <td class=coverPerHi>100.0&nbsp;% (49 / 49)</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2420">numeric_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">464402</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8687">mul_var_short</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">579168</td>
+              <td class=coverPerHi>100.0&nbsp;% (131 / 131)</td>
+              <td class=coverPerMed>88.6&nbsp;% (31 / 35)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8396">mul_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">594853</td>
+              <td class=coverPerHi>100.0&nbsp;% (90 / 90)</td>
+              <td class=coverPerHi>95.0&nbsp;% (38 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4398">int4_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">777173</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4304">int64_to_numeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">933885</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L5121">numeric_avg_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">936404</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7915">int64_to_numericvar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">949699</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L4866">do_numeric_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1056776</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6764">alloc_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1088537</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7702">make_result</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1133714</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11942">accum_sum_add</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1177858</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L12063">accum_sum_rescale</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1177858</td>
+              <td class=coverPerHi>100.0&nbsp;% (33 / 33)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6496">int4_avg_accum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1310151</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11885">strip_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1642024</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6389">int4_sum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1849078</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7593">make_result_opt_error</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1904661</td>
+              <td class=coverPerHi>97.9&nbsp;% (46 / 47)</td>
+              <td class=coverPerMed>86.5&nbsp;% (45 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L6780">free_var</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2094200</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L7262">init_var_from_num</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2932672</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2283">numeric_fast_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8970015</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L2526">cmp_numerics</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9901891</td>
+              <td class=coverPerHi>95.8&nbsp;% (23 / 24)</td>
+              <td class=coverPerHi>92.9&nbsp;% (39 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L8115">cmp_var_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9977981</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#L11486">cmp_abs_common</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10000271</td>
+              <td class=coverPerHi>92.0&nbsp;% (23 / 25)</td>
+              <td class=coverPerHi>93.3&nbsp;% (28 / 30)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

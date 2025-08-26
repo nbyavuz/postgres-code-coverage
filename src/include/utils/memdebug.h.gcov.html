@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/memdebug.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - memdebug.h<span style="font-size: 80%;"> (source / <a href="memdebug.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"><a href="#L40" title="goto first CBC line">11</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"><a href="#L40" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">11</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       3</span>                 :  * memdebug.h</span>
+<span id="L4" title="Line 4: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       4</span>                 :  *    Memory debugging support.</span>
+<span id="L5" title="Line 5: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       6</span>                 :  * Currently, this file either wraps &lt;valgrind/memcheck.h&gt; or substitutes</span>
+<span id="L7" title="Line 7: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       7</span>                 :  * empty definitions for Valgrind client request macros we use.</span>
+<span id="L8" title="Line 8: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       8</span>                 :  *</span>
+<span id="L9" title="Line 9: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">       9</span>                 :  *</span>
+<span id="L10" title="Line 10: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">      10</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L11" title="Line 11: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      11</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L12" title="Line 12: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      12</span>                 :  *</span>
+<span id="L13" title="Line 13: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      13</span>                 :  * src/include/utils/memdebug.h</span>
+<span id="L14" title="Line 14: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      14</span>                 :  *</span>
+<span id="L15" title="Line 15: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      15</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L16" title="Line 16: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      16</span>                 :  */</span>
+<span id="L17" title="Line 17: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      17</span>                 : #ifndef MEMDEBUG_H</span>
+<span id="L18" title="Line 18: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      18</span>                 : #define MEMDEBUG_H</span>
+<span id="L19" title="Line 19: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      19</span>                 : </span>
+<span id="L20" title="Line 20: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      20</span>                 : #ifdef USE_VALGRIND</span>
+<span id="L21" title="Line 21: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      21</span>                 : #include &lt;valgrind/memcheck.h&gt;</span>
+<span id="L22" title="Line 22: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      22</span>                 : #else</span>
+<span id="L23" title="Line 23: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      23</span>                 : #define VALGRIND_CHECK_MEM_IS_DEFINED(addr, size)           do {} while (0)</span>
+<span id="L24" title="Line 24: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      24</span>                 : #define VALGRIND_CREATE_MEMPOOL(context, redzones, zeroed)  do {} while (0)</span>
+<span id="L25" title="Line 25: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      25</span>                 : #define VALGRIND_DESTROY_MEMPOOL(context)                   do {} while (0)</span>
+<span id="L26" title="Line 26: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      26</span>                 : #define VALGRIND_MAKE_MEM_DEFINED(addr, size)               do {} while (0)</span>
+<span id="L27" title="Line 27: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      27</span>                 : #define VALGRIND_MAKE_MEM_NOACCESS(addr, size)              do {} while (0)</span>
+<span id="L28" title="Line 28: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      28</span>                 : #define VALGRIND_MAKE_MEM_UNDEFINED(addr, size)             do {} while (0)</span>
+<span id="L29" title="Line 29: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      29</span>                 : #define VALGRIND_MEMPOOL_ALLOC(context, addr, size)         do {} while (0)</span>
+<span id="L30" title="Line 30: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      30</span>                 : #define VALGRIND_MEMPOOL_FREE(context, addr)                do {} while (0)</span>
+<span id="L31" title="Line 31: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      31</span>                 : #define VALGRIND_MEMPOOL_CHANGE(context, optr, nptr, size)  do {} while (0)</span>
+<span id="L32" title="Line 32: commit bb049a79d344 on 2025-08-02 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 : #define VALGRIND_MEMPOOL_TRIM(context, addr, size)          do {} while (0)</span>
+<span id="L33" title="Line 33: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      33</span>                 : #endif</span>
+<span id="L34" title="Line 34: commit 19085116eeec on 2013-06-26 by noah@leadboat.com">                           <span class="lineNum">      34</span>                 : </span>
+<span id="L35" title="Line 35: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      35</span>                 : </span>
+<span id="L36" title="Line 36: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      36</span>                 : #ifdef CLOBBER_FREED_MEMORY</span>
+<span id="L37" title="Line 37: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      37</span>                 : </span>
+<span id="L38" title="Line 38: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      38</span>                 : /* Wipe freed memory for debugging purposes */</span>
+<span id="L39" title="Line 39: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      39</span>                 : static inline void</span>
+<span id="L40" title="Line 40: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">3102</a> <a href="#top" title="next CBC in &ldquo;andres@anarazel.de&rdquo; bin">andres@anarazel.de</a>   <span class="lineNum">      40</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">   271406422 : wipe_mem(void *ptr, size_t size)</span></span>
+<span id="L41" title="Line 41: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      41</span>                 : {</span>
+<span id="L42" title="Line 42: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      42</span>                 :     VALGRIND_MAKE_MEM_UNDEFINED(ptr, size);</span>
+<span id="L43" title="Line 43: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      43</span> <span class="tlaCBC">      271406422 :     memset(ptr, 0x7F, size);</span></span>
+<span id="L44" title="Line 44: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      44</span>                 :     VALGRIND_MAKE_MEM_NOACCESS(ptr, size);</span>
+<span id="L45" title="Line 45: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      45</span> <span class="tlaCBC">      271406422 : }</span></span>
+<span id="L46" title="Line 46: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      46</span>                 : </span>
+<span id="L47" title="Line 47: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 : #endif                          /* CLOBBER_FREED_MEMORY */</span>
+<span id="L48" title="Line 48: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      48</span>                 : </span>
+<span id="L49" title="Line 49: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      49</span>                 : #ifdef MEMORY_CONTEXT_CHECKING</span>
+<span id="L50" title="Line 50: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      50</span>                 : </span>
+<span id="L51" title="Line 51: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      51</span>                 : static inline void</span>
+<span id="L52" title="Line 52: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      52</span> <span class="tlaCBC">      364838413 : set_sentinel(void *base, Size offset)</span></span>
+<span id="L53" title="Line 53: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      53</span>                 : {</span>
+<span id="L54" title="Line 54: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      54</span> <span class="tlaCBC">      364838413 :     char       *ptr = (char *) base + offset;</span></span>
+<span id="L55" title="Line 55: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      55</span>                 : </span>
+<span id="L56" title="Line 56: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      56</span>                 :     VALGRIND_MAKE_MEM_UNDEFINED(ptr, 1);</span>
+<span id="L57" title="Line 57: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      57</span> <span class="tlaCBC">      364838413 :     *ptr = 0x7E;</span></span>
+<span id="L58" title="Line 58: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      58</span>                 :     VALGRIND_MAKE_MEM_NOACCESS(ptr, 1);</span>
+<span id="L59" title="Line 59: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      59</span> <span class="tlaCBC">      364838413 : }</span></span>
+<span id="L60" title="Line 60: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      60</span>                 : </span>
+<span id="L61" title="Line 61: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      61</span>                 : static inline bool</span>
+<span id="L62" title="Line 62: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      62</span> <span class="tlaCBC">     1881505168 : sentinel_ok(const void *base, Size offset)</span></span>
+<span id="L63" title="Line 63: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      63</span>                 : {</span>
+<span id="L64" title="Line 64: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      64</span> <span class="tlaCBC">     1881505168 :     const char *ptr = (const char *) base + offset;</span></span>
+<span id="L65" title="Line 65: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      65</span>                 :     bool        ret;</span>
+<span id="L66" title="Line 66: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      66</span>                 : </span>
+<span id="L67" title="Line 67: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      67</span>                 :     VALGRIND_MAKE_MEM_DEFINED(ptr, 1);</span>
+<span id="L68" title="Line 68: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      68</span> <span class="tlaCBC">     1881505168 :     ret = *ptr == 0x7E;</span></span>
+<span id="L69" title="Line 69: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      69</span>                 :     VALGRIND_MAKE_MEM_NOACCESS(ptr, 1);</span>
+<span id="L70" title="Line 70: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      70</span>                 : </span>
+<span id="L71" title="Line 71: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      71</span> <span class="tlaCBC">     1881505168 :     return ret;</span></span>
+<span id="L72" title="Line 72: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      72</span>                 : }</span>
+<span id="L73" title="Line 73: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      73</span>                 : </span>
+<span id="L74" title="Line 74: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 : #endif                          /* MEMORY_CONTEXT_CHECKING */</span>
+<span id="L75" title="Line 75: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      75</span>                 : </span>
+<span id="L76" title="Line 76: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      76</span>                 : #ifdef RANDOMIZE_ALLOCATED_MEMORY</span>
+<span id="L77" title="Line 77: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      77</span>                 : </span>
+<span id="L78" title="Line 78: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      78</span>                 : void        randomize_mem(char *ptr, size_t size);</span>
+<span id="L79" title="Line 79: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      79</span>                 : </span>
+<span id="L80" title="Line 80: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 : #endif                          /* RANDOMIZE_ALLOCATED_MEMORY */</span>
+<span id="L81" title="Line 81: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      81</span>                 : </span>
+<span id="L82" title="Line 82: commit bfd12cccbd72 on 2017-02-27 by andres@anarazel.de">                           <span class="lineNum">      82</span>                 : </span>
+<span id="L83" title="Line 83: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 : #endif                          /* MEMDEBUG_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,1921 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/commands/tablecmds.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory commands">commands</a> - tablecmds.c<span style="font-size: 80%;"> (<a href="tablecmds.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">92.1&nbsp;%</td>
+            <td class="headerCovTableEntry">6903</td>
+            <td class="headerCovTableEntry">6361</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">542</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">6354</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">99.5&nbsp;%</td>
+            <td class="headerCovTableEntry">208</td>
+            <td class="headerCovTableEntry">207</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">202</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">71.6&nbsp;%</td>
+            <td class="headerCovTableEntry">5820</td>
+            <td class="headerCovTableEntry">4169</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1645</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">4153</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">96.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1099</td>
+            <td class="headerCovTableEntry">1058</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">1052</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.4&nbsp;%</td>
+            <td class="headerCovTableEntry">5803</td>
+            <td class="headerCovTableEntry">5302</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">501</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5302</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">99.4&nbsp;%</td>
+            <td class="headerCovTableEntry">179</td>
+            <td class="headerCovTableEntry">178</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">173</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">77.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1012</td>
+            <td class="headerCovTableEntry">784</td>
+            <td class="tlaUNC">6</td>
+            <td class="headerCovTableEntry">222</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">768</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">70.4&nbsp;%</td>
+            <td class="headerCovTableEntry">4810</td>
+            <td class="headerCovTableEntry">3385</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1423</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3385</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="tablecmds.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="tablecmds.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="tablecmds.c.func-b.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1499">DropErrorMsgWrongType</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18318">ATExecDropOf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>86.7&nbsp;% (13 / 15)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15877">TryReuseForeignKey</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              <td class=coverPerLo>45.0&nbsp;% (9 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13598">findFkeyCast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21373">ATExecDetachPartitionFinalize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16441">ATExecDropCluster</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L2449">storage_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              <td class=coverPerLo>40.0&nbsp;% (2 / 5)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9645">ATExecAddStatistics</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15369">RememberStatisticsForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16947">AlterTableMoveAll</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerMed>78.5&nbsp;% (51 / 65)</td>
+              <td class=coverPerLo>57.9&nbsp;% (44 / 76)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9013">ATExecSetOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16</td>
+              <td class=coverPerMed>88.9&nbsp;% (24 / 27)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16908">ATExecSetTableSpaceNoStorage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>43.8&nbsp;% (7 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11883">RemoveInheritedConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12774">AlterConstrDeferrabilityRecurse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12725">AlterConstrEnforceabilityRecurse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16487">ATExecSetAccessMethodNoStorage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerMed>86.2&nbsp;% (25 / 29)</td>
+              <td class=coverPerLo>53.3&nbsp;% (16 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17184">ATExecEnableDisableRule</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8764">ATExecDropExpression</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28</td>
+              <td class=coverPerHi>90.3&nbsp;% (28 / 31)</td>
+              <td class=coverPerLo>50.0&nbsp;% (13 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18623">ATExecGenericOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29</td>
+              <td class=coverPerMed>88.9&nbsp;% (24 / 27)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12577">ATExecAlterConstrInheritability</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>92.9&nbsp;% (26 / 28)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17109">index_copy_data</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">31</td>
+              <td class=coverPerLo>64.7&nbsp;% (11 / 17)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16409">ATExecClusterOn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18176">ATExecAddOf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>98.3&nbsp;% (57 / 58)</td>
+              <td class=coverPerLo>71.4&nbsp;% (30 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8450">ATExecDropIdentity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34</td>
+              <td class=coverPerHi>95.2&nbsp;% (40 / 42)</td>
+              <td class=coverPerLo>69.0&nbsp;% (29 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8333">ATExecSetIdentity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37</td>
+              <td class=coverPerMed>89.7&nbsp;% (35 / 39)</td>
+              <td class=coverPerLo>66.7&nbsp;% (36 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18704">ATExecSetCompression</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8198">ATExecCookedColumnDefault</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6583">alter_table_type_to_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerLo>19.5&nbsp;% (24 / 123)</td>
+              <td class=coverPerLo>18.0&nbsp;% (11 / 61)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4143">RenameConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerHi>95.7&nbsp;% (22 / 23)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8718">ATPrepDropExpression</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19091">AlterIndexNamespaces</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19136">AlterSeqNamespaces</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18977">AlterTableNamespaceInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4034">rename_constraint_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45</td>
+              <td class=coverPerHi>95.1&nbsp;% (39 / 41)</td>
+              <td class=coverPerMed>76.8&nbsp;% (43 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17431">constraints_equivalent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21865">verifyPartitionIndexNotNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17785">ATExecDropInherit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18781">ATPrepChangePersistence</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerHi>92.1&nbsp;% (35 / 38)</td>
+              <td class=coverPerMed>75.0&nbsp;% (30 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18906">AlterTableNamespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">52</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15848">TryReuseIndex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">52</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16453">ATPrepSetAccessMethod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13182">QueueNNConstraintValidation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerHi>94.1&nbsp;% (32 / 34)</td>
+              <td class=coverPerLo>65.4&nbsp;% (17 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13079">QueueCheckConstraintValidation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerHi>97.1&nbsp;% (33 / 34)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18594">ATExecForceNoForceRowSecurity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21408">DetachAddConstraintIfNeeded</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">70</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17827">MarkInheritDetached</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">73</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16577">ATPrepSetTableSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8227">ATExecAddIdentity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80</td>
+              <td class=coverPerHi>94.1&nbsp;% (32 / 34)</td>
+              <td class=coverPerLo>70.5&nbsp;% (31 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12520">ATExecAlterConstrDeferrability</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16815">ATExecSetTableSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12656">AlterConstrTriggerDeferrability</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11752">AttachPartitionForeignKey</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerHi>92.1&nbsp;% (35 / 38)</td>
+              <td class=coverPerLo>56.7&nbsp;% (17 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8868">ATExecSetStatistics</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">82</td>
+              <td class=coverPerMed>87.8&nbsp;% (43 / 49)</td>
+              <td class=coverPerLo>58.9&nbsp;% (33 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12374">ATExecAlterConstrEnforceability</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">84</td>
+              <td class=coverPerHi>100.0&nbsp;% (46 / 46)</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15917">ATExecAlterColumnGenericOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">86</td>
+              <td class=coverPerMed>89.7&nbsp;% (35 / 39)</td>
+              <td class=coverPerLo>50.0&nbsp;% (10 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19221">register_on_commit_action</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">88</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7130">check_of_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">91</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17403">decompile_conbin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">92</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19014">AlterRelationNamespaceInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">94</td>
+              <td class=coverPerMed>89.3&nbsp;% (25 / 28)</td>
+              <td class=coverPerLo>45.8&nbsp;% (11 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6878">ATTypedTableRecursion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3737">SetRelationTableSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8564">ATExecSetExpression</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>93.9&nbsp;% (46 / 49)</td>
+              <td class=coverPerLo>65.0&nbsp;% (26 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7081">find_typed_table_dependencies</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">108</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12033">GetForeignKeyActionTriggers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">111</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12303">ATExecAlterConstraintInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">114</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11965">DropForeignKeyConstraintTriggers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">117</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerMed>75.0&nbsp;% (27 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15318">RememberIndexForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">124</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9155">ATExecSetStorage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">130</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7729">ATExecDropNotNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">134</td>
+              <td class=coverPerMed>83.9&nbsp;% (26 / 31)</td>
+              <td class=coverPerLo>53.8&nbsp;% (14 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L22027">GetAttributeStorage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">137</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11656">tryAttachPartitionForeignKey</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">138</td>
+              <td class=coverPerMed>81.8&nbsp;% (27 / 33)</td>
+              <td class=coverPerLo>61.1&nbsp;% (22 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4550">AlterTableInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">139</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12160">ATExecAlterConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">144</td>
+              <td class=coverPerHi>95.5&nbsp;% (42 / 44)</td>
+              <td class=coverPerLo>72.0&nbsp;% (36 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3996">renameatt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">158</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9092">SetIndexStorageProperties</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">160</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21763">validatePartitionedIndex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">163</td>
+              <td class=coverPerHi>95.0&nbsp;% (38 / 40)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18564">ATExecSetRowSecurity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">168</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17166">ATExecEnableDisableTrigger</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">171</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21739">refuseDupeIndexAttach</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">172</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3403">MergeInheritedAttribute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">185</td>
+              <td class=coverPerMed>84.6&nbsp;% (22 / 26)</td>
+              <td class=coverPerLo>52.9&nbsp;% (18 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21577">ATExecAttachPartitionIdx</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190</td>
+              <td class=coverPerHi>96.1&nbsp;% (49 / 51)</td>
+              <td class=coverPerLo>73.5&nbsp;% (25 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3233">MergeChildAttribute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190</td>
+              <td class=coverPerHi>97.4&nbsp;% (38 / 39)</td>
+              <td class=coverPerMed>79.0&nbsp;% (49 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12816">AlterConstrUpdateConstraintEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">192</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12960">QueueFKConstraintValidation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">197</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerMed>83.3&nbsp;% (15 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21523">RangeVarCallbackForAttachIndex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">202</td>
+              <td class=coverPerMed>85.0&nbsp;% (17 / 20)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3976">RangeVarCallbackForRenameAttribute</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">205</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3680">CheckRelationTableSpaceMove</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">215</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>73.3&nbsp;% (22 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17223">ATExecAddInherit</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">221</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>61.8&nbsp;% (21 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15246">RememberClusterOnForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15231">RememberReplicaIdentityForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">228</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17201">ATPrepAddInherit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">230</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21039">DetachPartitionFinalize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerHi>98.2&nbsp;% (110 / 112)</td>
+              <td class=coverPerMed>82.5&nbsp;% (66 / 80)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21450">DropClonedTriggersFromPartition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18362">relation_mark_replica_identity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">232</td>
+              <td class=coverPerHi>93.9&nbsp;% (31 / 33)</td>
+              <td class=coverPerLo>73.1&nbsp;% (19 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16275">change_owner_fix_column_acls</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">243</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16340">change_owner_recurse_to_sequences</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">243</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18450">ATExecReplicaIdentity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">256</td>
+              <td class=coverPerHi>92.1&nbsp;% (35 / 38)</td>
+              <td class=coverPerLo>67.3&nbsp;% (35 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4193">RenameRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">256</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21940">ATDetachCheckNoForeignKeyRefs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">267</td>
+              <td class=coverPerHi>96.0&nbsp;% (24 / 25)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9540">verifyNotNullPKCompatible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">274</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3831">renameatt_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">276</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerMed>78.3&nbsp;% (36 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20860">ATExecDetachPartition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">289</td>
+              <td class=coverPerHi>90.7&nbsp;% (39 / 43)</td>
+              <td class=coverPerLo>54.2&nbsp;% (13 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15804">RebuildConstraintComment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">290</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8113">ATExecColumnDefault</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12870">ATExecValidateConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292</td>
+              <td class=coverPerHi>92.6&nbsp;% (25 / 27)</td>
+              <td class=coverPerLo>66.7&nbsp;% (16 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L18124">drop_parent_dependency</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">297</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4350">ResetRelRewrite</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">298</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17910">RemoveInheritance</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">303</td>
+              <td class=coverPerHi>97.5&nbsp;% (79 / 81)</td>
+              <td class=coverPerMed>83.8&nbsp;% (57 / 68)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3154">MergeCheckConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">329</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              <td class=coverPerLo>68.2&nbsp;% (15 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15262">RememberConstraintForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">349</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7900">ATExecSetNotNull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">353</td>
+              <td class=coverPerHi>93.3&nbsp;% (56 / 60)</td>
+              <td class=coverPerMed>75.0&nbsp;% (42 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13974">ATExecDropConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">406</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6848">ATCheckPartitionsNotInUse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">409</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L12094">GetForeignKeyCheckTriggers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">410</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15590">ATPostAlterTypeParse</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">417</td>
+              <td class=coverPerHi>95.4&nbsp;% (83 / 87)</td>
+              <td class=coverPerLo>72.4&nbsp;% (42 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16607">ATExecSetRelOptions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">480</td>
+              <td class=coverPerHi>90.2&nbsp;% (74 / 82)</td>
+              <td class=coverPerLo>69.8&nbsp;% (37 / 53)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21887">GetParentedForeignKeyRefs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">499</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3782">renameatt_check</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">505</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              <td class=coverPerLo>65.6&nbsp;% (21 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19454">RangeVarCallbackMaintainsTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">507</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L14641">ATColumnChangeRequiresRewrite</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">514</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L14688">ATExecAlterColumnType</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">537</td>
+              <td class=coverPerHi>91.6&nbsp;% (98 / 107)</td>
+              <td class=coverPerLo>46.7&nbsp;% (28 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1451">DropErrorMsgNonExistent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">542</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15005">RememberAllDependentForRebuilding</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">582</td>
+              <td class=coverPerLo>67.2&nbsp;% (41 / 61)</td>
+              <td class=coverPerLo>41.7&nbsp;% (25 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13656">validateForeignKeyConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">583</td>
+              <td class=coverPerHi>100.0&nbsp;% (38 / 38)</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L15398">ATPostAlterTypeCleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">588</td>
+              <td class=coverPerHi>96.8&nbsp;% (61 / 63)</td>
+              <td class=coverPerMed>85.9&nbsp;% (55 / 64)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13344">transformFkeyGetPrimaryKey</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">598</td>
+              <td class=coverPerHi>91.2&nbsp;% (31 / 34)</td>
+              <td class=coverPerLo>45.8&nbsp;% (11 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L14039">dropconstraint_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">603</td>
+              <td class=coverPerMed>88.3&nbsp;% (83 / 94)</td>
+              <td class=coverPerLo>67.9&nbsp;% (57 / 84)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L8076">NotNullImpliedByRelConstraints</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">619</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13447">transformFkeyCheckAttrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">641</td>
+              <td class=coverPerHi>91.7&nbsp;% (44 / 48)</td>
+              <td class=coverPerMed>77.6&nbsp;% (45 / 58)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L14335">ATPrepAlterColumnType</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">654</td>
+              <td class=coverPerHi>96.6&nbsp;% (85 / 88)</td>
+              <td class=coverPerMed>75.5&nbsp;% (83 / 110)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6803">ATSimpleRecursion</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">673</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9832">ChooseForeignKeyConstraintNameAddition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">706</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1973">ExecuteTruncateGuts</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">813</td>
+              <td class=coverPerHi>97.7&nbsp;% (128 / 131)</td>
+              <td class=coverPerMed>80.6&nbsp;% (100 / 124)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9582">ATExecAddIndex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">817</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1849">ExecuteTruncate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">822</td>
+              <td class=coverPerHi>100.0&nbsp;% (41 / 41)</td>
+              <td class=coverPerLo>68.3&nbsp;% (41 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9218">ATPrepDropColumn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">826</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4257">RenameRelationInternal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">838</td>
+              <td class=coverPerHi>96.3&nbsp;% (26 / 27)</td>
+              <td class=coverPerMed>75.0&nbsp;% (21 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19490">RangeVarCallbackForTruncate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1029</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20521">AttachPartitionEnsureIndexes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1065</td>
+              <td class=coverPerHi>95.4&nbsp;% (62 / 65)</td>
+              <td class=coverPerHi>91.7&nbsp;% (44 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L2408">truncate_check_perms</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1073</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7180">ATPrepAddColumn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1094</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9246">ATExecDropColumn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1098</td>
+              <td class=coverPerHi>96.6&nbsp;% (56 / 58)</td>
+              <td class=coverPerMed>75.0&nbsp;% (45 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L16034">ATExecChangeOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1112</td>
+              <td class=coverPerMed>83.1&nbsp;% (69 / 83)</td>
+              <td class=coverPerLo>63.3&nbsp;% (50 / 79)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20200">ATExecAttachPartition</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1197</td>
+              <td class=coverPerHi>97.5&nbsp;% (77 / 79)</td>
+              <td class=coverPerMed>76.9&nbsp;% (60 / 78)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13627">checkFkeyPermissions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1203</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17598">MergeConstraintsIntoExisting</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1256</td>
+              <td class=coverPerHi>95.3&nbsp;% (61 / 64)</td>
+              <td class=coverPerMed>75.0&nbsp;% (51 / 68)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20703">CloneRowTriggersToPartition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1266</td>
+              <td class=coverPerHi>96.7&nbsp;% (59 / 61)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L10608">validateFkOnDeleteSetColumns</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1269</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20127">QueuePartitionConstraintValidation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1282</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L10029">ATAddForeignKeyConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1306</td>
+              <td class=coverPerHi>92.3&nbsp;% (144 / 156)</td>
+              <td class=coverPerLo>64.7&nbsp;% (145 / 224)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17460">MergeAttributesIntoExisting</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1322</td>
+              <td class=coverPerHi>97.5&nbsp;% (39 / 40)</td>
+              <td class=coverPerMed>79.0&nbsp;% (49 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L17334">CreateInheritance</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1325</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11000">addFkRecurseReferencing</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1429</td>
+              <td class=coverPerHi>97.8&nbsp;% (45 / 46)</td>
+              <td class=coverPerMed>78.9&nbsp;% (30 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13954">createForeignKeyCheckTriggers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1450</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7204">ATExecAddColumn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1454</td>
+              <td class=coverPerHi>95.5&nbsp;% (127 / 133)</td>
+              <td class=coverPerLo>70.5&nbsp;% (79 / 112)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20009">PartConstraintImpliedByRelConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1597</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7633">check_for_column_name_collision</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1643</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L10862">addFkRecurseReferenced</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1662</td>
+              <td class=coverPerHi>96.3&nbsp;% (26 / 27)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13819">createForeignKeyActionTriggers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1665</td>
+              <td class=coverPerHi>95.6&nbsp;% (87 / 91)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7704">add_column_collation_dependency</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1850</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7686">add_column_datatype_dependency</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1850</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L2426">truncate_check_activity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1881</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L2360">truncate_check_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1974</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>70.8&nbsp;% (17 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L10684">addFkConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2008</td>
+              <td class=coverPerHi>97.3&nbsp;% (36 / 37)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L20064">ConstraintImpliedByRelConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2216</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6923">find_composite_type_dependencies</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2260</td>
+              <td class=coverPerHi>90.2&nbsp;% (37 / 41)</td>
+              <td class=coverPerLo>60.4&nbsp;% (29 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19745">ComputePartitionAttrs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2463</td>
+              <td class=coverPerHi>92.5&nbsp;% (62 / 67)</td>
+              <td class=coverPerLo>71.1&nbsp;% (54 / 76)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19687">transformPartitionSpec</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2478</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6113">ATRewriteTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2886</td>
+              <td class=coverPerHi>97.3&nbsp;% (145 / 149)</td>
+              <td class=coverPerMed>86.3&nbsp;% (126 / 146)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13756">CreateFKCheckTrigger</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2900</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L13289">transformColumnNameList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3239</td>
+              <td class=coverPerHi>95.0&nbsp;% (19 / 20)</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11208">CloneFkReferenced</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4804</td>
+              <td class=coverPerHi>96.9&nbsp;% (62 / 64)</td>
+              <td class=coverPerLo>70.8&nbsp;% (17 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11409">CloneFkReferencing</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4813</td>
+              <td class=coverPerHi>97.2&nbsp;% (70 / 72)</td>
+              <td class=coverPerMed>82.6&nbsp;% (38 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L11179">CloneForeignKeyConstraints</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4813</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9666">ATExecAddIndexConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5320</td>
+              <td class=coverPerHi>96.7&nbsp;% (29 / 30)</td>
+              <td class=coverPerLo>64.3&nbsp;% (18 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9874">ATAddCheckNNConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5535</td>
+              <td class=coverPerHi>100.0&nbsp;% (42 / 42)</td>
+              <td class=coverPerHi>92.9&nbsp;% (39 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3552">StoreCatalogInheritance1</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6138</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9758">ATExecAddConstraint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6379</td>
+              <td class=coverPerMed>85.7&nbsp;% (18 / 21)</td>
+              <td class=coverPerLo>46.2&nbsp;% (6 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3634">SetRelationHasSubclass</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7654</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19514">RangeVarCallbackOwnsRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7893</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L9461">ATPrepAddPrimaryKey</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7994</td>
+              <td class=coverPerHi>100.0&nbsp;% (27 / 27)</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1526">RemoveRelations</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8560</td>
+              <td class=coverPerHi>95.0&nbsp;% (57 / 60)</td>
+              <td class=coverPerLo>74.5&nbsp;% (35 / 47)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19419">AtEOSubXact_on_commit_actions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9097</td>
+              <td class=coverPerLo>27.3&nbsp;% (3 / 11)</td>
+              <td class=coverPerLo>12.5&nbsp;% (2 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1690">RangeVarCallbackForDropRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10804</td>
+              <td class=coverPerLo>69.8&nbsp;% (37 / 53)</td>
+              <td class=coverPerLo>72.0&nbsp;% (36 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3597">findAttrByName</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10846</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L5698">ATParseTransformCmd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11463</td>
+              <td class=coverPerMed>84.9&nbsp;% (45 / 53)</td>
+              <td class=coverPerLo>70.6&nbsp;% (24 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L7827">set_attnotnull</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12486</td>
+              <td class=coverPerHi>91.7&nbsp;% (22 / 24)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L5825">ATRewriteTables</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14489</td>
+              <td class=coverPerHi>95.8&nbsp;% (68 / 71)</td>
+              <td class=coverPerMed>82.8&nbsp;% (96 / 116)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L5289">ATRewriteCatalogs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15900</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>88.9&nbsp;% (32 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4521">AlterTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15973</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4462">AlterTableLookupRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16086</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4857">ATController</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16103</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4595">AlterTableGetLockLevel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16225</td>
+              <td class=coverPerHi>97.5&nbsp;% (78 / 80)</td>
+              <td class=coverPerMed>86.5&nbsp;% (32 / 37)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19546">RangeVarCallbackForAlterRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16784</td>
+              <td class=coverPerLo>73.3&nbsp;% (33 / 45)</td>
+              <td class=coverPerLo>58.5&nbsp;% (48 / 82)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4892">ATPrepCmd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17156</td>
+              <td class=coverPerHi>94.9&nbsp;% (205 / 216)</td>
+              <td class=coverPerMed>82.4&nbsp;% (70 / 85)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6726">ATSimplePermissions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18867</td>
+              <td class=coverPerHi>95.3&nbsp;% (41 / 43)</td>
+              <td class=coverPerLo>73.1&nbsp;% (19 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L6549">ATGetQueueEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20738</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19257">remove_on_commit_action</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22066</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L3508">StoreCatalogInheritance</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28678</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L2534">MergeAttributes</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">29128</td>
+              <td class=coverPerHi>93.5&nbsp;% (158 / 169)</td>
+              <td class=coverPerMed>77.6&nbsp;% (180 / 232)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L762">DefineRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29230</td>
+              <td class=coverPerHi>97.7&nbsp;% (167 / 171)</td>
+              <td class=coverPerMed>83.7&nbsp;% (128 / 153)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L5363">ATExecCmd</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29489</td>
+              <td class=coverPerHi>94.5&nbsp;% (224 / 237)</td>
+              <td class=coverPerMed>87.9&nbsp;% (80 / 91)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4436">CheckAlterTableIsSafe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30421</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L1368">BuildDescForRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30490</td>
+              <td class=coverPerHi>93.9&nbsp;% (31 / 33)</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L4403">CheckTableNotInUse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81870</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L21989">GetAttributeCompression</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">127682</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19280">PreCommit_on_commit_actions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291991</td>
+              <td class=coverPerHi>94.4&nbsp;% (34 / 36)</td>
+              <td class=coverPerMed>83.3&nbsp;% (30 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#L19387">AtEOXact_on_commit_actions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316464</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

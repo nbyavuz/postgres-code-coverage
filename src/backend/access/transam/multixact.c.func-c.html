@@ -1,0 +1,809 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/transam/multixact.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory transam">transam</a> - multixact.c<span style="font-size: 80%;"> (<a href="multixact.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGIC" title="Gained Included Coverage (# => 1):
+Previously unused code is tested now">GIC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">73.5&nbsp;%</td>
+            <td class="headerCovTableEntry">867</td>
+            <td class="headerCovTableEntry">637</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">225</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">614</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">56</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">82.1&nbsp;%</td>
+            <td class="headerCovTableEntry">67</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">8</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">47.9&nbsp;%</td>
+            <td class="headerCovTableEntry">459</td>
+            <td class="headerCovTableEntry">220</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">238</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">219</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryLo">60.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">85.7&nbsp;%</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.3&nbsp;%</td>
+            <td class="headerCovTableEntry">836</td>
+            <td class="headerCovTableEntry">613</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">223</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">612</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">80.6&nbsp;%</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="11">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">48.1&nbsp;%</td>
+            <td class="headerCovTableEntry">455</td>
+            <td class="headerCovTableEntry">219</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">236</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">219</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="multixact.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="multixact.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="multixact.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L172">MXOffsetToMemberSegment</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L118">MultiXactIdToOffsetSegment</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3242">MultiXactMemberPagePrecedes</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2993">PerformMembersTruncation</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3022">PerformOffsetsTruncation</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L214">PreviousMultiXactId</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2970">SlruScanDirCbFindEarliest</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3302">WriteMTruncateXlogRec</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 11)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3435">multixactmemberssyncfiletag</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3426">multixactoffsetssyncfiletag</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1765">mxid_to_string</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1742">mxstatus_to_string</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3327">multixact_redo</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerLo>63.6&nbsp;% (21 / 33)</td>
+              <td class=coverPerLo>50.0&nbsp;% (9 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1887">multixact_twophase_recover</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">8</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2819">find_multixact_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1923">multixact_twophase_postabort</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2045">MaybeExtendOffsetSlru</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2022">BootStrapMultiXact</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">50</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3047">TruncateMultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">98</td>
+              <td class=coverPerLo>27.7&nbsp;% (13 / 47)</td>
+              <td class=coverPerLo>13.3&nbsp;% (4 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L475">MultiXactIdExpand</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">106</td>
+              <td class=coverPerMed>78.6&nbsp;% (22 / 28)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2514">ExtendMultiXactMember</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">293</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2480">ExtendMultiXactOffset</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">293</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1020">GetNewMultiXactId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">293</td>
+              <td class=coverPerLo>44.6&nbsp;% (25 / 56)</td>
+              <td class=coverPerLo>21.2&nbsp;% (11 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L904">RecordNewMultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">295</td>
+              <td class=coverPerHi>97.6&nbsp;% (41 / 42)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1824">AtPrepare_MultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">298</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1697">mXactCachePut</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">531</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2771">MultiXactOffsetWouldWrap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">586</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>33.3&nbsp;% (4 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2438">MultiXactAdvanceNextMXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">665</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3288">MultiXactOffsetPrecedes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">665</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2463">MultiXactAdvanceOldest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">693</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2105">TrimMultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">849</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerLo>41.7&nbsp;% (10 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2080">StartupMultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">904</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L718">MultiXactIdSetOldestVisible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">925</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2644">SetOffsetVacuumLimit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">947</td>
+              <td class=coverPerMed>84.6&nbsp;% (33 / 39)</td>
+              <td class=coverPerLo>50.0&nbsp;% (13 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2255">MultiXactSetNextMXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">984</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L587">MultiXactIdIsRunning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1016</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L422">MultiXactIdCreate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1039</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1952">MultiXactShmemInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerLo>25.0&nbsp;% (4 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2011">check_multixact_member_buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2002">check_multixact_offset_buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L803">MultiXactIdCreateFromMembers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1146</td>
+              <td class=coverPerHi>95.5&nbsp;% (21 / 22)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1607">mXactCacheGetBySet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1146</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L199">MXOffsetToMemberOffset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1287</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L779">ReadMultiXactIdRange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1431</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2209">MultiXactGetCheckptMulti</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1493</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L189">MXOffsetToFlagsBitShift</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1569</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2231">CheckPointMultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1692</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L112">MultiXactIdToOffsetEntry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1718</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2289">SetMultiXactIdLimit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1901</td>
+              <td class=coverPerLo>68.4&nbsp;% (26 / 38)</td>
+              <td class=coverPerLo>40.6&nbsp;% (13 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1935">MultiXactShmemSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1941</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1577">mxactMemberComparator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1982</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L106">MultiXactIdToOffsetPage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2386</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L166">MXOffsetToMemberPage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3039</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1287">GetMultiXactIdMembers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3108</td>
+              <td class=coverPerMed>78.3&nbsp;% (72 / 92)</td>
+              <td class=coverPerLo>52.1&nbsp;% (25 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1650">mXactCacheGetById</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3108</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L179">MXOffsetToFlagsOffset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3705</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3276">MultiXactIdPrecedesOrEquals</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5690</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2864">GetMultiXactInfo</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">13353</td>
+              <td class=coverPerLo>70.6&nbsp;% (12 / 17)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2921">MultiXactMemberFreezeThreshold</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">13353</td>
+              <td class=coverPerLo>36.4&nbsp;% (4 / 11)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L759">ReadNextMultiXactId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29884</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3222">MultiXactOffsetPagePrecedes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40755</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L2591">GetOldestMultiXactId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46156</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L1796">AtEOXact_MultiXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">316001</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L3262">MultiXactIdPrecedes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">584977</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#L661">MultiXactIdSetOldestMember</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1798671</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/palloc.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - palloc.h<span style="font-size: 80%;"> (source / <a href="palloc.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L124" title="goto first CBC line">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L124" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit 6724a5078748 on 1999-02-13 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :  * palloc.h</span>
+<span id="L4" title="Line 4: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">       4</span>                 :  *    POSTGRES memory allocator definitions.</span>
+<span id="L5" title="Line 5: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       6</span>                 :  * This file contains the basic memory allocation interface that is</span>
+<span id="L7" title="Line 7: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       7</span>                 :  * needed by almost every backend module.  It is included directly by</span>
+<span id="L8" title="Line 8: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       8</span>                 :  * postgres.h, so the definitions here are automatically available</span>
+<span id="L9" title="Line 9: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">       9</span>                 :  * everywhere.  Keep it lean!</span>
+<span id="L10" title="Line 10: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      10</span>                 :  *</span>
+<span id="L11" title="Line 11: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      11</span>                 :  * Memory allocation occurs within &quot;contexts&quot;.  Every chunk obtained from</span>
+<span id="L12" title="Line 12: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 :  * palloc()/MemoryContextAlloc() is allocated within a specific context.</span>
+<span id="L13" title="Line 13: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      13</span>                 :  * The entire contents of a context can be freed easily and quickly by</span>
+<span id="L14" title="Line 14: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 :  * resetting or deleting the context --- this is both faster and less</span>
+<span id="L15" title="Line 15: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      15</span>                 :  * prone to memory-leakage bugs than releasing chunks individually.</span>
+<span id="L16" title="Line 16: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      16</span>                 :  * We organize contexts into context trees to allow fine-grain control</span>
+<span id="L17" title="Line 17: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :  * over chunk lifetime while preserving the certainty that we will free</span>
+<span id="L18" title="Line 18: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 :  * everything that should be freed.  See utils/mmgr/README for more info.</span>
+<span id="L19" title="Line 19: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      19</span>                 :  *</span>
+<span id="L20" title="Line 20: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      20</span>                 :  *</span>
+<span id="L21" title="Line 21: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">      21</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L22" title="Line 22: commit 5c25d60244d3 on 2000-01-26 by bruce@momjian.us">                           <span class="lineNum">      22</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L23" title="Line 23: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      23</span>                 :  *</span>
+<span id="L24" title="Line 24: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      24</span>                 :  * src/include/utils/palloc.h</span>
+<span id="L25" title="Line 25: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      25</span>                 :  *</span>
+<span id="L26" title="Line 26: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      26</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L27" title="Line 27: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      27</span>                 :  */</span>
+<span id="L28" title="Line 28: commit 1ccd423235a4 on 1997-09-07 by bruce@momjian.us">                           <span class="lineNum">      28</span>                 : #ifndef PALLOC_H</span>
+<span id="L29" title="Line 29: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      29</span>                 : #define PALLOC_H</span>
+<span id="L30" title="Line 30: commit 105409746499 on 1996-08-28 by scrappy@hub.org">                           <span class="lineNum">      30</span>                 : </span>
+<span id="L31" title="Line 31: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      31</span>                 : /*</span>
+<span id="L32" title="Line 32: commit 0a7832005792 on 2014-05-06 by bruce@momjian.us">                           <span class="lineNum">      32</span>                 :  * Type MemoryContextData is declared in nodes/memnodes.h.  Most users</span>
+<span id="L33" title="Line 33: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 :  * of memory allocation should just treat it as an abstract type, so we</span>
+<span id="L34" title="Line 34: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 :  * do not provide the struct contents here.</span>
+<span id="L35" title="Line 35: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :  */</span>
+<span id="L36" title="Line 36: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 : typedef struct MemoryContextData *MemoryContext;</span>
+<span id="L37" title="Line 37: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 : </span>
+<span id="L38" title="Line 38: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 : /*</span>
+<span id="L39" title="Line 39: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :  * A memory context can have callback functions registered on it.  Any such</span>
+<span id="L40" title="Line 40: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :  * function will be called once just before the context is next reset or</span>
+<span id="L41" title="Line 41: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 :  * deleted.  The MemoryContextCallback struct describing such a callback</span>
+<span id="L42" title="Line 42: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 :  * typically would be allocated within the context itself, thereby avoiding</span>
+<span id="L43" title="Line 43: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :  * any need to manage it explicitly (the reset/delete action will free it).</span>
+<span id="L44" title="Line 44: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      44</span>                 :  */</span>
+<span id="L45" title="Line 45: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      45</span>                 : typedef void (*MemoryContextCallbackFunction) (void *arg);</span>
+<span id="L46" title="Line 46: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      46</span>                 : </span>
+<span id="L47" title="Line 47: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      47</span>                 : typedef struct MemoryContextCallback</span>
+<span id="L48" title="Line 48: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      48</span>                 : {</span>
+<span id="L49" title="Line 49: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      49</span>                 :     MemoryContextCallbackFunction func; /* function to call */</span>
+<span id="L50" title="Line 50: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      50</span>                 :     void       *arg;            /* argument to pass it */</span>
+<span id="L51" title="Line 51: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      51</span>                 :     struct MemoryContextCallback *next; /* next in list of callbacks */</span>
+<span id="L52" title="Line 52: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      52</span>                 : } MemoryContextCallback;</span>
+<span id="L53" title="Line 53: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      53</span>                 : </span>
+<span id="L54" title="Line 54: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      54</span>                 : /*</span>
+<span id="L55" title="Line 55: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      55</span>                 :  * CurrentMemoryContext is the default allocation context for palloc().</span>
+<span id="L56" title="Line 56: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      56</span>                 :  * Avoid accessing it directly!  Instead, use MemoryContextSwitchTo()</span>
+<span id="L57" title="Line 57: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      57</span>                 :  * to change the setting.</span>
+<span id="L58" title="Line 58: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      58</span>                 :  */</span>
+<span id="L59" title="Line 59: commit 906b2e1b37d3 on 2007-07-25 by magnus@hagander.net">                           <span class="lineNum">      59</span>                 : extern PGDLLIMPORT MemoryContext CurrentMemoryContext;</span>
+<span id="L60" title="Line 60: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      60</span>                 : </span>
+<span id="L61" title="Line 61: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      61</span>                 : /*</span>
+<span id="L62" title="Line 62: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      62</span>                 :  * Flags for MemoryContextAllocExtended.</span>
+<span id="L63" title="Line 63: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      63</span>                 :  */</span>
+<span id="L64" title="Line 64: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      64</span>                 : #define MCXT_ALLOC_HUGE         0x01    /* allow huge allocation (&gt; 1 GB) */</span>
+<span id="L65" title="Line 65: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      65</span>                 : #define MCXT_ALLOC_NO_OOM       0x02    /* no failure if out-of-memory */</span>
+<span id="L66" title="Line 66: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      66</span>                 : #define MCXT_ALLOC_ZERO         0x04    /* zero allocated memory */</span>
+<span id="L67" title="Line 67: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      67</span>                 : </span>
+<span id="L68" title="Line 68: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      68</span>                 : /*</span>
+<span id="L69" title="Line 69: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 :  * Fundamental memory-allocation operations (more are in utils/memutils.h)</span>
+<span id="L70" title="Line 70: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 :  */</span>
+<span id="L71" title="Line 71: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 : extern void *MemoryContextAlloc(MemoryContext context, Size size);</span>
+<span id="L72" title="Line 72: commit 88177f77b17e on 2002-12-16 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      72</span>                 : extern void *MemoryContextAllocZero(MemoryContext context, Size size);</span>
+<span id="L73" title="Line 73: commit bd4e2fd97d3d on 2015-01-30 by rhaas@postgresql.org">                           <span class="lineNum">      73</span>                 : extern void *MemoryContextAllocExtended(MemoryContext context,</span>
+<span id="L74" title="Line 74: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 :                                         Size size, int flags);</span>
+<span id="L75" title="Line 75: commit 439f61757f05 on 2022-12-22 by drowley@postgresql.org">                           <span class="lineNum">      75</span>                 : extern void *MemoryContextAllocAligned(MemoryContext context,</span>
+<span id="L76" title="Line 76: commit 439f61757f05 on 2022-12-22 by drowley@postgresql.org">                           <span class="lineNum">      76</span>                 :                                        Size size, Size alignto, int flags);</span>
+<span id="L77" title="Line 77: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 : </span>
+<span id="L78" title="Line 78: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 : extern void *palloc(Size size);</span>
+<span id="L79" title="Line 79: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 : extern void *palloc0(Size size);</span>
+<span id="L80" title="Line 80: commit 8c8a886268df on 2015-04-03 by fujii@postgresql.org">                           <span class="lineNum">      80</span>                 : extern void *palloc_extended(Size size, int flags);</span>
+<span id="L81" title="Line 81: commit 439f61757f05 on 2022-12-22 by drowley@postgresql.org">                           <span class="lineNum">      81</span>                 : extern void *palloc_aligned(Size size, Size alignto, int flags);</span>
+<span id="L82" title="Line 82: commit 05cbd6cb22d2 on 2025-03-14 by peter@eisentraut.org">                           <span class="lineNum">      82</span>                 : pg_nodiscard extern void *repalloc(void *pointer, Size size);</span>
+<span id="L83" title="Line 83: commit 05cbd6cb22d2 on 2025-03-14 by peter@eisentraut.org">                           <span class="lineNum">      83</span>                 : pg_nodiscard extern void *repalloc_extended(void *pointer,</span>
+<span id="L84" title="Line 84: commit 9c911ec065df on 2022-10-14 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :                                             Size size, int flags);</span>
+<span id="L85" title="Line 85: commit 05cbd6cb22d2 on 2025-03-14 by peter@eisentraut.org">                           <span class="lineNum">      85</span>                 : pg_nodiscard extern void *repalloc0(void *pointer, Size oldsize, Size size);</span>
+<span id="L86" title="Line 86: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 : extern void pfree(void *pointer);</span>
+<span id="L87" title="Line 87: commit 263865a48973 on 2013-06-27 by noah@leadboat.com">                           <span class="lineNum">      87</span>                 : </span>
+<span id="L88" title="Line 88: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      88</span>                 : /*</span>
+<span id="L89" title="Line 89: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      89</span>                 :  * Variants with easier notation and more type safety</span>
+<span id="L90" title="Line 90: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      90</span>                 :  */</span>
+<span id="L91" title="Line 91: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      91</span>                 : </span>
+<span id="L92" title="Line 92: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      92</span>                 : /*</span>
+<span id="L93" title="Line 93: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      93</span>                 :  * Allocate space for one object of type &quot;type&quot;</span>
+<span id="L94" title="Line 94: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      94</span>                 :  */</span>
+<span id="L95" title="Line 95: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      95</span>                 : #define palloc_object(type) ((type *) palloc(sizeof(type)))</span>
+<span id="L96" title="Line 96: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      96</span>                 : #define palloc0_object(type) ((type *) palloc0(sizeof(type)))</span>
+<span id="L97" title="Line 97: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      97</span>                 : </span>
+<span id="L98" title="Line 98: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      98</span>                 : /*</span>
+<span id="L99" title="Line 99: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">      99</span>                 :  * Allocate space for &quot;count&quot; objects of type &quot;type&quot;</span>
+<span id="L100" title="Line 100: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     100</span>                 :  */</span>
+<span id="L101" title="Line 101: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     101</span>                 : #define palloc_array(type, count) ((type *) palloc(sizeof(type) * (count)))</span>
+<span id="L102" title="Line 102: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     102</span>                 : #define palloc0_array(type, count) ((type *) palloc0(sizeof(type) * (count)))</span>
+<span id="L103" title="Line 103: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     103</span>                 : </span>
+<span id="L104" title="Line 104: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     104</span>                 : /*</span>
+<span id="L105" title="Line 105: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     105</span>                 :  * Change size of allocation pointed to by &quot;pointer&quot; to have space for &quot;count&quot;</span>
+<span id="L106" title="Line 106: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     106</span>                 :  * objects of type &quot;type&quot;</span>
+<span id="L107" title="Line 107: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     107</span>                 :  */</span>
+<span id="L108" title="Line 108: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     108</span>                 : #define repalloc_array(pointer, type, count) ((type *) repalloc(pointer, sizeof(type) * (count)))</span>
+<span id="L109" title="Line 109: commit b4b7ce8061d3 on 2022-11-12 by peter@eisentraut.org">                           <span class="lineNum">     109</span>                 : #define repalloc0_array(pointer, type, oldcount, count) ((type *) repalloc0(pointer, sizeof(type) * (oldcount), sizeof(type) * (count)))</span>
+<span id="L110" title="Line 110: commit 2016055a92f2 on 2022-09-12 by peter@eisentraut.org">                           <span class="lineNum">     110</span>                 : </span>
+<span id="L111" title="Line 111: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     111</span>                 : /* Higher-limit allocators. */</span>
+<span id="L112" title="Line 112: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     112</span>                 : extern void *MemoryContextAllocHuge(MemoryContext context, Size size);</span>
+<span id="L113" title="Line 113: commit 05cbd6cb22d2 on 2025-03-14 by peter@eisentraut.org">                           <span class="lineNum">     113</span>                 : pg_nodiscard extern void *repalloc_huge(void *pointer, Size size);</span>
+<span id="L114" title="Line 114: commit 528c454b2ada on 2014-04-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 : </span>
+<span id="L115" title="Line 115: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 : /*</span>
+<span id="L116" title="Line 116: commit a9baeb361d63 on 2014-04-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     116</span>                 :  * Although this header file is nominally backend-only, certain frontend</span>
+<span id="L117" title="Line 117: commit a9baeb361d63 on 2014-04-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     117</span>                 :  * programs like pg_controldata include it via postgres.h.  For some compilers</span>
+<span id="L118" title="Line 118: commit a9baeb361d63 on 2014-04-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 :  * it's necessary to hide the inline definition of MemoryContextSwitchTo in</span>
+<span id="L119" title="Line 119: commit a9baeb361d63 on 2014-04-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     119</span>                 :  * this scenario; hence the #ifndef FRONTEND.</span>
+<span id="L120" title="Line 120: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :  */</span>
+<span id="L121" title="Line 121: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     121</span>                 : </span>
+<span id="L122" title="Line 122: commit a9baeb361d63 on 2014-04-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 : #ifndef FRONTEND</span>
+<span id="L123" title="Line 123: commit de6fd1c898f6 on 2015-08-05 by andres@anarazel.de">                           <span class="lineNum">     123</span>                 : static inline MemoryContext</span>
+<span id="L124" title="Line 124: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">7494</a> <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     124</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">   473856357 : MemoryContextSwitchTo(MemoryContext context)</span></span>
+<span id="L125" title="Line 125: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     125</span>                 : {</span>
+<span id="L126" title="Line 126: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     126</span> <span class="tlaCBC">      473856357 :     MemoryContext old = CurrentMemoryContext;</span></span>
+<span id="L127" title="Line 127: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">     127</span>                 : </span>
+<span id="L128" title="Line 128: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span> <span class="tlaCBC">      473856357 :     CurrentMemoryContext = context;</span></span>
+<span id="L129" title="Line 129: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     129</span> <span class="tlaCBC">      473856357 :     return old;</span></span>
+<span id="L130" title="Line 130: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     130</span>                 : }</span>
+<span id="L131" title="Line 131: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     131</span>                 : #endif                          /* FRONTEND */</span>
+<span id="L132" title="Line 132: commit a8593a34632a on 2005-02-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     132</span>                 : </span>
+<span id="L133" title="Line 133: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     133</span>                 : /* Registration of memory context reset/delete callbacks */</span>
+<span id="L134" title="Line 134: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     134</span>                 : extern void MemoryContextRegisterResetCallback(MemoryContext context,</span>
+<span id="L135" title="Line 135: commit 8255c7a5eeba on 2019-05-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     135</span>                 :                                                MemoryContextCallback *cb);</span>
+<span id="L136" title="Line 136: commit 7d8f59577924 on 2025-07-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     136</span>                 : extern void MemoryContextUnregisterResetCallback(MemoryContext context,</span>
+<span id="L137" title="Line 137: commit 7d8f59577924 on 2025-07-25 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     137</span>                 :                                                  MemoryContextCallback *cb);</span>
+<span id="L138" title="Line 138: commit 097fe194aa7c on 2015-03-01 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     138</span>                 : </span>
+<span id="L139" title="Line 139: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     139</span>                 : /*</span>
+<span id="L140" title="Line 140: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     140</span>                 :  * These are like standard strdup() except the copied string is</span>
+<span id="L141" title="Line 141: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     141</span>                 :  * allocated in a context, not with malloc().</span>
+<span id="L142" title="Line 142: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     142</span>                 :  */</span>
+<span id="L143" title="Line 143: commit 1aebc3618a0b on 2000-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     143</span>                 : extern char *MemoryContextStrdup(MemoryContext context, const char *string);</span>
+<span id="L144" title="Line 144: commit 8396447cdbdf on 2013-02-12 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     144</span>                 : extern char *pstrdup(const char *in);</span>
+<span id="L145" title="Line 145: commit 4a8d573cda5c on 2008-06-28 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     145</span>                 : extern char *pnstrdup(const char *in, Size len);</span>
+<span id="L146" title="Line 146: commit 09a89cb5fc29 on 2013-10-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     146</span>                 : </span>
+<span id="L147" title="Line 147: commit 2ed193c90467 on 2017-02-27 by peter_e@gmx.net">                           <span class="lineNum">     147</span>                 : extern char *pchomp(const char *in);</span>
+<span id="L148" title="Line 148: commit 2ed193c90467 on 2017-02-27 by peter_e@gmx.net">                           <span class="lineNum">     148</span>                 : </span>
+<span id="L149" title="Line 149: commit 3147acd63e01 on 2013-10-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     149</span>                 : /* sprintf into a palloc'd buffer --- these are in psprintf.c */</span>
+<span id="L150" title="Line 150: commit 785941cdc359 on 2015-03-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     150</span>                 : extern char *psprintf(const char *fmt,...) pg_attribute_printf(1, 2);</span>
+<span id="L151" title="Line 151: commit 785941cdc359 on 2015-03-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     151</span>                 : extern size_t pvsnprintf(char *buf, size_t len, const char *fmt, va_list args) pg_attribute_printf(3, 0);</span>
+<span id="L152" title="Line 152: commit 3147acd63e01 on 2013-10-24 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     152</span>                 : </span>
+<span id="L153" title="Line 153: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     153</span>                 : #endif                          /* PALLOC_H */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

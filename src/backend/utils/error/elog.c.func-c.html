@@ -1,0 +1,879 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/error/elog.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory error">error</a> - elog.c<span style="font-size: 80%;"> (<a href="elog.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUIC" title="Uncovered Included Code (# => 0):
+Previously unused code is untested">UIC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">1260</td>
+            <td class="headerCovTableEntry">840</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">414</td>
+            <td class="headerCovTableEntry">840</td>
+            <td class="headerCovTableEntry">5</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">92.4&nbsp;%</td>
+            <td class="headerCovTableEntry">79</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">47.6&nbsp;%</td>
+            <td class="headerCovTableEntry">901</td>
+            <td class="headerCovTableEntry">429</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">468</td>
+            <td class="headerCovTableEntry">429</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">38.7&nbsp;%</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">67.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1222</td>
+            <td class="headerCovTableEntry">828</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaUIC">1</td>
+            <td class="headerCovTableEntry">393</td>
+            <td class="headerCovTableEntry">828</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">78</td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="tlaUNC">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">22.2&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">48.4&nbsp;%</td>
+            <td class="headerCovTableEntry">879</td>
+            <td class="headerCovTableEntry">425</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">454</td>
+            <td class="headerCovTableEntry">425</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="elog.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="elog.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="elog.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1091">errbacktrace</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1362">errhint_plural</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 9)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2786">process_log_prefix_padding</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 15)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1115">set_backtrace</a></td>
+              <td class="tlaUNC">UNC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 11)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3783">write_stderr</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2373">write_syslog</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 43)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1901">ThrowErrorData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerLo>70.3&nbsp;% (26 / 37)</td>
+              <td class=coverPerLo>53.6&nbsp;% (15 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1274">errdetail_log_plural</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>33.3&nbsp;% (4 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2065">GetErrorContextStack</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1297">errdetail_plural</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>33.3&nbsp;% (4 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1660">format_elog_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1651">pre_format_elog_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1960">ReThrowError</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerMed>81.8&nbsp;% (27 / 33)</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2717">get_formatted_start_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">40</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L952">errcode_for_socket_access</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1341">errhint_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3471">write_pipe_chunks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerMed>78.3&nbsp;% (18 / 23)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L875">errcode_for_file_access</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerLo>40.0&nbsp;% (14 / 35)</td>
+              <td class=coverPerLo>28.6&nbsp;% (4 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1824">FreeErrorData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">71</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1618">getinternalerrposition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">130</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1505">internalerrquery</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">252</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1485">internalerrposition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">261</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1182">errmsg_plural</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">569</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>33.3&nbsp;% (4 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1253">errdetail_log</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">591</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2234">assign_backtrace_functions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2348">assign_syslog_facility</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerLo>42.9&nbsp;% (3 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2316">assign_syslog_ident</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2173">check_backtrace_functions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerLo>30.4&nbsp;% (7 / 23)</td>
+              <td class=coverPerLo>12.5&nbsp;% (2 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2307">assign_log_destination</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1084</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2243">check_log_destination</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1084</td>
+              <td class=coverPerLo>63.3&nbsp;% (19 / 30)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1232">errdetail_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1569</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1319">errhint</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2718</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1584">geterrcode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3014</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1752">CopyErrorData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3201</td>
+              <td class=coverPerHi>95.2&nbsp;% (40 / 42)</td>
+              <td class=coverPerLo>70.0&nbsp;% (28 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L680">errsave_finish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3636</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1469">errposition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5884</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1535">err_generic_string</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6242</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1571">set_errdata_field</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6242</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1601">geterrposition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7403</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1453">errhidecontext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12762</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2705">reset_formatted_start_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13799</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1205">errdetail</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13801</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2117">DebugFileOpen</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18694</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>5.6&nbsp;% (1 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1388">errcontext_msg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20523</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1414">set_errcontext_domain</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20523</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L325">errstart_cold</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21288</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1873">FlushErrorState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24908</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L628">errsave_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26018</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L852">errcode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27752</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1159">errmsg_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32173</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3534">send_message_to_frontend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33760</td>
+              <td class=coverPerMed>87.8&nbsp;% (65 / 74)</td>
+              <td class=coverPerLo>72.5&nbsp;% (29 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3211">unpack_sql_state</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43140</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2010">pg_re_throw</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54891</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1434">errhidestmt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">145688</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1069">errmsg</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">183891</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1836">FreeErrorDataContents</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">191333</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              <td class=coverPerHi>91.7&nbsp;% (22 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2589">write_console</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">202847</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3231">send_message_to_server_log</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">202867</td>
+              <td class=coverPerLo>68.8&nbsp;% (66 / 96)</td>
+              <td class=coverPerLo>65.2&nbsp;% (43 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2741">check_log_of_query</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">202907</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L1693">EmitErrorReport</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">213074</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L472">errfinish</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216242</td>
+              <td class=coverPerHi>92.3&nbsp;% (36 / 39)</td>
+              <td class=coverPerLo>71.4&nbsp;% (20 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L824">matches_backtrace_functions</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216242</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              <td class=coverPerLo>10.0&nbsp;% (1 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L777">set_stack_entry_domain</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216642</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L794">set_stack_entry_location</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216642</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L750">get_error_stack_entry</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">216698</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3712">error_severity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">236667</td>
+              <td class=coverPerMed>80.0&nbsp;% (24 / 30)</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2764">get_backend_type_for_log</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251253</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3764">append_with_tabs</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251300</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2817">log_line_prefix</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251390</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2826">log_status_format</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251390</td>
+              <td class=coverPerLo>22.7&nbsp;% (45 / 198)</td>
+              <td class=coverPerLo>16.9&nbsp;% (25 / 148)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L2667">get_formatted_log_time</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">251430</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L3522">err_sendstring</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">263916</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L304">err_gettext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">293170</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L292">in_error_recursion_trouble</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">779315</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L271">message_level_is_interesting</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">871618</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L341">errstart</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43739597</td>
+              <td class=coverPerMed>80.6&nbsp;% (29 / 36)</td>
+              <td class=coverPerMed>78.1&nbsp;% (25 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L243">should_output_to_client</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44610172</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L234">should_output_to_server</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44611215</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#L200">is_log_level_output</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44814122</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

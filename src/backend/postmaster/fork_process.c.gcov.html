@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/postmaster/fork_process.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory postmaster">postmaster</a> - fork_process.c<span style="font-size: 80%;"> (source / <a href="fork_process.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">61.1&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"><a href="#L99" title="goto first UBC line">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L33" title="goto first CBC line">11</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">37.5&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"><a href="#L93" title="goto first UBC branch">5</a></td>
+            <td class="headerCovTableEntry"><a href="#L67" title="goto first CBC branch">3</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L70" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">1</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">58.8&nbsp;%</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"><a href="#L99" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">7</a></td>
+            <td class="headerCovTableEntry"><a href="#L33" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">10</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">37.5&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"><a href="#L93" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">5</a></td>
+            <td class="headerCovTableEntry"><a href="#L67" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">3</a></td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">       1</span>                 :                : /*</span>
+<span id="L2" title="Line 2: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">       2</span>                 :                :  * fork_process.c</span>
+<span id="L3" title="Line 3: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">       3</span>                 :                :  *   A simple wrapper on top of fork(). This does not handle the</span>
+<span id="L4" title="Line 4: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">       4</span>                 :                :  *   EXEC_BACKEND case; it might be extended to do so, but it would be</span>
+<span id="L5" title="Line 5: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">       5</span>                 :                :  *   considerably more complex.</span>
+<span id="L6" title="Line 6: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">       6</span>                 :                :  *</span>
+<span id="L7" title="Line 7: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       7</span>                 :                :  * Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L8" title="Line 8: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">       8</span>                 :                :  *</span>
+<span id="L9" title="Line 9: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">       9</span>                 :                :  * IDENTIFICATION</span>
+<span id="L10" title="Line 10: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      10</span>                 :                :  *    src/backend/postmaster/fork_process.c</span>
+<span id="L11" title="Line 11: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      11</span>                 :                :  */</span>
+<span id="L12" title="Line 12: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      12</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L13" title="Line 13: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      13</span>                 :                : </span>
+<span id="L14" title="Line 14: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 :                : #include &lt;fcntl.h&gt;</span>
+<span id="L15" title="Line 15: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      15</span>                 :                : #include &lt;signal.h&gt;</span>
+<span id="L16" title="Line 16: commit db5ea2c5cb37 on 2005-03-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      16</span>                 :                : #include &lt;time.h&gt;</span>
+<span id="L17" title="Line 17: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      17</span>                 :                : #include &lt;sys/stat.h&gt;</span>
+<span id="L18" title="Line 18: commit db5ea2c5cb37 on 2005-03-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      18</span>                 :                : #include &lt;sys/time.h&gt;</span>
+<span id="L19" title="Line 19: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      19</span>                 :                : #include &lt;unistd.h&gt;</span>
+<span id="L20" title="Line 20: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      20</span>                 :                : </span>
+<span id="L21" title="Line 21: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      21</span>                 :                : #include &quot;libpq/pqsignal.h&quot;</span>
+<span id="L22" title="Line 22: commit 8b9cbf492275 on 2024-12-10 by noah@leadboat.com">                           <span class="lineNum">      22</span>                 :                : #include &quot;miscadmin.h&quot;</span>
+<span id="L23" title="Line 23: commit 14aec0350230 on 2019-11-12 by akapila@postgresql.org">                           <span class="lineNum">      23</span>                 :                : #include &quot;postmaster/fork_process.h&quot;</span>
+<span id="L24" title="Line 24: commit 14aec0350230 on 2019-11-12 by akapila@postgresql.org">                           <span class="lineNum">      24</span>                 :                : </span>
+<span id="L25" title="Line 25: commit 963ffe4cc4a6 on 2005-03-16 by neilc@samurai.com">                           <span class="lineNum">      25</span>                 :                : #ifndef WIN32</span>
+<span id="L26" title="Line 26: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      26</span>                 :                : /*</span>
+<span id="L27" title="Line 27: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      27</span>                 :                :  * Wrapper for fork(). Return values are the same as those for fork():</span>
+<span id="L28" title="Line 28: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      28</span>                 :                :  * -1 if the fork failed, 0 in the child process, and the PID of the</span>
+<span id="L29" title="Line 29: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      29</span>                 :                :  * child in the parent process.  Signals are blocked while forking, so</span>
+<span id="L30" title="Line 30: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      30</span>                 :                :  * the child must unblock.</span>
+<span id="L31" title="Line 31: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      31</span>                 :                :  */</span>
+<span id="L32" title="Line 32: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      32</span>                 :                : pid_t</span>
+<span id="L33" title="Line 33: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com"> <a href="#L91" title="next CBC in &ldquo;(360..) days&rdquo; bin">7474</a> <a href="#L66" title="next CBC in &ldquo;neilc@samurai.com&rdquo; bin">neilc@samurai.com</a>    <span class="lineNum">      33</span>                 :<a href="#L117" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       21464 : fork_process(void)</span></span>
+<span id="L34" title="Line 34: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      34</span>                 :                : {</span>
+<span id="L35" title="Line 35: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      35</span>                 :                :     pid_t       result;</span>
+<span id="L36" title="Line 36: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 :                :     const char *oomfilename;</span>
+<span id="L37" title="Line 37: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      37</span>                 :                :     sigset_t    save_mask;</span>
+<span id="L38" title="Line 38: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      38</span>                 :                : </span>
+<span id="L39" title="Line 39: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      39</span>                 :                : #ifdef LINUX_PROFILE</span>
+<span id="L40" title="Line 40: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      40</span>                 :                :     struct itimerval prof_itimer;</span>
+<span id="L41" title="Line 41: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      41</span>                 :                : #endif</span>
+<span id="L42" title="Line 42: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      42</span>                 :                : </span>
+<span id="L43" title="Line 43: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      43</span>                 :                :     /*</span>
+<span id="L44" title="Line 44: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      44</span>                 :                :      * Flush stdio channels just before fork, to avoid double-output problems.</span>
+<span id="L45" title="Line 45: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      45</span>                 :                :      */</span>
+<span id="L46" title="Line 46: commit 7fed801135ba on 2022-08-29 by tgl@sss.pgh.pa.us"> 1093 <a href="#L91" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      46</span>                 :<span class="tlaCBC">          21464 :     fflush(NULL);</span></span>
+<span id="L47" title="Line 47: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      47</span>                 :                : </span>
+<span id="L48" title="Line 48: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      48</span>                 :                : #ifdef LINUX_PROFILE</span>
+<span id="L49" title="Line 49: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      49</span>                 :                : </span>
+<span id="L50" title="Line 50: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      50</span>                 :                :     /*</span>
+<span id="L51" title="Line 51: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      51</span>                 :                :      * Linux's fork() resets the profiling timer in the child process. If we</span>
+<span id="L52" title="Line 52: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      52</span>                 :                :      * want to profile child processes then we need to save and restore the</span>
+<span id="L53" title="Line 53: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      53</span>                 :                :      * timer setting.  This is a waste of time if not profiling, however, so</span>
+<span id="L54" title="Line 54: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">      54</span>                 :                :      * only do it if commanded by specific -DLINUX_PROFILE switch.</span>
+<span id="L55" title="Line 55: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      55</span>                 :                :      */</span>
+<span id="L56" title="Line 56: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      56</span>                 :                :     getitimer(ITIMER_PROF, &amp;prof_itimer);</span>
+<span id="L57" title="Line 57: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      57</span>                 :                : #endif</span>
+<span id="L58" title="Line 58: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      58</span>                 :                : </span>
+<span id="L59" title="Line 59: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      59</span>                 :                :     /*</span>
+<span id="L60" title="Line 60: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      60</span>                 :                :      * We start postmaster children with signals blocked.  This allows them to</span>
+<span id="L61" title="Line 61: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      61</span>                 :                :      * install their own handlers before unblocking, to avoid races where they</span>
+<span id="L62" title="Line 62: commit 0245f8db36f3 on 2023-05-19 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      62</span>                 :                :      * might run the postmaster's handler and miss an important control</span>
+<span id="L63" title="Line 63: commit 0245f8db36f3 on 2023-05-19 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 :                :      * signal. With more analysis this could potentially be relaxed.</span>
+<span id="L64" title="Line 64: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">      64</span>                 :                :      */</span>
+<span id="L65" title="Line 65: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">  957 <a href="#L122" title="next CBC in &ldquo;tmunro@postgresql.org&rdquo; bin">tmunro@postgresql.or</a> <span class="lineNum">      65</span>                 :<span class="tlaCBC">          21464 :     sigprocmask(SIG_SETMASK, &amp;BlockSig, &amp;save_mask);</span></span>
+<span id="L66" title="Line 66: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com"> 7474 <a href="#L125" title="next CBC in &ldquo;neilc@samurai.com&rdquo; bin">neilc@samurai.com</a>    <span class="lineNum">      66</span>                 :<span class="tlaCBC">          21464 :     result = fork();</span></span>
+<span id="L67" title="Line 67: commit 44f90212236b on 2006-01-05 by bruce@momjian.us"> 7173 <a href="#top" title="next CBC in &ldquo;bruce@momjian.us&rdquo; bin">bruce@momjian.us</a>     <span class="lineNum">      67</span>         [<span class="tlaCBC"> <a href="#L93" title="CBC: Branch 0 was taken 18695 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L93" title="CBC: Branch 1 was taken 21464 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          40159 :     if (result == 0)</span></span>
+<span id="L68" title="Line 68: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      68</span>                 :                :     {</span>
+<span id="L69" title="Line 69: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      69</span>                 :                :         /* fork succeeded, in child */</span>
+<span id="L70" title="Line 70: commit 8b9cbf492275 on 2024-12-10 by noah@leadboat.com">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">259</a> <a href="#top" title="next CBC in &ldquo;noah@leadboat.com&rdquo; bin">noah@leadboat.com</a>    <span class="lineNum">      70</span>                 :<span class="tlaCBC">          18695 :         MyProcPid = getpid();</span></span>
+<span id="L71" title="Line 71: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      71</span>                 :                : #ifdef LINUX_PROFILE</span>
+<span id="L72" title="Line 72: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      72</span>                 :                :         setitimer(ITIMER_PROF, &amp;prof_itimer, NULL);</span>
+<span id="L73" title="Line 73: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      73</span>                 :                : #endif</span>
+<span id="L74" title="Line 74: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">      74</span>                 :                : </span>
+<span id="L75" title="Line 75: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 :                :         /*</span>
+<span id="L76" title="Line 76: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      76</span>                 :                :          * By default, Linux tends to kill the postmaster in out-of-memory</span>
+<span id="L77" title="Line 77: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 :                :          * situations, because it blames the postmaster for the sum of child</span>
+<span id="L78" title="Line 78: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                :          * process sizes *including shared memory*.  (This is unbelievably</span>
+<span id="L79" title="Line 79: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      79</span>                 :                :          * stupid, but the kernel hackers seem uninterested in improving it.)</span>
+<span id="L80" title="Line 80: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      80</span>                 :                :          * Therefore it's often a good idea to protect the postmaster by</span>
+<span id="L81" title="Line 81: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      81</span>                 :                :          * setting its OOM score adjustment negative (which has to be done in</span>
+<span id="L82" title="Line 82: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      82</span>                 :                :          * a root-owned startup script).  Since the adjustment is inherited by</span>
+<span id="L83" title="Line 83: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      83</span>                 :                :          * child processes, this would ordinarily mean that all the</span>
+<span id="L84" title="Line 84: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      84</span>                 :                :          * postmaster's children are equally protected against OOM kill, which</span>
+<span id="L85" title="Line 85: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 :                :          * is not such a good idea.  So we provide this code to allow the</span>
+<span id="L86" title="Line 86: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 :                :          * children to change their OOM score adjustments again.  Both the</span>
+<span id="L87" title="Line 87: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      87</span>                 :                :          * file name to write to and the value to write are controlled by</span>
+<span id="L88" title="Line 88: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      88</span>                 :                :          * environment variables, which can be set by the same startup script</span>
+<span id="L89" title="Line 89: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      89</span>                 :                :          * that did the original adjustment.</span>
+<span id="L90" title="Line 90: commit 93f4d7f80661 on 2012-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      90</span>                 :                :          */</span>
+<span id="L91" title="Line 91: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"> <a href="#L117" title="next CBC in &ldquo;(360..) days&rdquo; bin">4087</a> <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      91</span>                 :<span class="tlaCBC">          18695 :         oomfilename = getenv(&quot;PG_OOM_ADJUST_FILE&quot;);</span></span>
+<span id="L92" title="Line 92: commit 93f4d7f80661 on 2012-06-13 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      92</span>                 :                : </span>
+<span id="L93" title="Line 93: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      93</span>         [<span class="tlaUBC"> <a href="#L102" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#top" title="CBC: Branch 1 was taken 18695 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          18695 :         if (oomfilename != NULL)</span></span>
+<span id="L94" title="Line 94: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      94</span>                 :                :         {</span>
+<span id="L95" title="Line 95: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      95</span>                 :                :             /*</span>
+<span id="L96" title="Line 96: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">      96</span>                 :                :              * Use open() not stdio, to ensure we control the open flags. Some</span>
+<span id="L97" title="Line 97: commit 65e806cba1f0 on 2010-02-26 by bruce@momjian.us">                           <span class="lineNum">      97</span>                 :                :              * Linux security environments reject anything but O_WRONLY.</span>
+<span id="L98" title="Line 98: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      98</span>                 :                :              */</span>
+<span id="L99" title="Line 99: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">4087</a> </span><a href="#top" title="next UBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin" class="tlaBgUBC">tgl@sss.pgh.pa.us</a><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC">   </span> <span class="lineNum">      99</span>                 :<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             int         fd = open(oomfilename, O_WRONLY, 0);</span></span>
+<span id="L100" title="Line 100: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     100</span>                 :                : </span>
+<span id="L101" title="Line 101: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>                 :                :             /* We ignore all errors */</span>
+<span id="L102" title="Line 102: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5706 days ago (bin 4: (360..) days)" class="tlaUBC"> 5706                     </span> <span class="lineNum">     102</span>         [<span class="tlaUBC"> <a href="#L107" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L107" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :             if (fd &gt;= 0)</span></span>
+<span id="L103" title="Line 103: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     103</span>                 :                :             {</span>
+<span id="L104" title="Line 104: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC"> 4087                     </span> <span class="lineNum">     104</span>                 :<span class="tlaUBC">              0 :                 const char *oomvalue = getenv(&quot;PG_OOM_ADJUST_VALUE&quot;);</span></span>
+<span id="L105" title="Line 105: commit 27314d32a883 on 2012-05-27 by peter_e@gmx.net">                           <span class="lineNum">     105</span>                 :                :                 int         rc;</span>
+<span id="L106" title="Line 106: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     106</span>                 :                : </span>
+<span id="L107" title="Line 107: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     107</span>         [<span class="tlaUBC"> <a href="#top" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<span class="tlaUBC">              0 :                 if (oomvalue == NULL)   /* supply a useful default */</span></span>
+<span id="L108" title="Line 108: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     108</span>                 :<span class="tlaUBC">              0 :                     oomvalue = &quot;0&quot;;</span></span>
+<span id="L109" title="Line 109: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     109</span>                 :                : </span>
+<span id="L110" title="Line 110: commit df8b7bc9ffff on 2014-06-18 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 4087 days ago (bin 4: (360..) days)" class="tlaUBC">                          </span> <span class="lineNum">     110</span>                 :<span class="tlaUBC">              0 :                 rc = write(fd, oomvalue, strlen(oomvalue));</span></span>
+<span id="L111" title="Line 111: commit 27314d32a883 on 2012-05-27 by peter_e@gmx.net">                           <span class="lineNum">     111</span>                 :                :                 (void) rc;</span>
+<span id="L112" title="Line 112: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us"><span title="tgl@sss.pgh.pa.us 5706 days ago (bin 4: (360..) days)" class="tlaUBC"> 5706                     </span> <span class="lineNum">     112</span>                 :<span class="tlaUBC">              0 :                 close(fd);</span></span>
+<span id="L113" title="Line 113: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     113</span>                 :                :             }</span>
+<span id="L114" title="Line 114: commit d5e0029862be on 2010-01-11 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>                 :                :         }</span>
+<span id="L115" title="Line 115: commit 0d1ecd630019 on 2013-03-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     115</span>                 :                : </span>
+<span id="L116" title="Line 116: commit 5ee180a39470 on 2020-11-06 by magnus@hagander.net">                           <span class="lineNum">     116</span>                 :                :         /* do post-fork initialization for random number generation */</span>
+<span id="L117" title="Line 117: commit 5ee180a39470 on 2020-11-06 by magnus@hagander.net"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1754</a> <a href="#top" title="next CBC in &ldquo;magnus@hagander.net&rdquo; bin">magnus@hagander.net</a>  <span class="lineNum">     117</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       18695 :         pg_strong_random_init();</span></span>
+<span id="L118" title="Line 118: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">     118</span>                 :                :     }</span>
+<span id="L119" title="Line 119: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">     119</span>                 :                :     else</span>
+<span id="L120" title="Line 120: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">     120</span>                 :                :     {</span>
+<span id="L121" title="Line 121: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">     121</span>                 :                :         /* in parent, restore signal mask */</span>
+<span id="L122" title="Line 122: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">  957 <a href="#top" title="next CBC in &ldquo;tmunro@postgresql.org&rdquo; bin">tmunro@postgresql.or</a> <span class="lineNum">     122</span>                 :<span class="tlaCBC">          21464 :         sigprocmask(SIG_SETMASK, &amp;save_mask, NULL);</span></span>
+<span id="L123" title="Line 123: commit 7389aad63666 on 2023-01-12 by tmunro@postgresql.org">                           <span class="lineNum">     123</span>                 :                :     }</span>
+<span id="L124" title="Line 124: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">     124</span>                 :                : </span>
+<span id="L125" title="Line 125: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com"> 7474 <a href="#top" title="next CBC in &ldquo;neilc@samurai.com&rdquo; bin">neilc@samurai.com</a>    <span class="lineNum">     125</span>                 :<span class="tlaCBC">          40159 :     return result;</span></span>
+<span id="L126" title="Line 126: commit 164adc4d3924 on 2005-03-10 by neilc@samurai.com">                           <span class="lineNum">     126</span>                 :                : }</span>
+<span id="L127" title="Line 127: commit 1dc34982511d on 2005-10-15 by bruce@momjian.us">                           <span class="lineNum">     127</span>                 :                : </span>
+<span id="L128" title="Line 128: commit c7b8998ebbf3 on 2017-06-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     128</span>                 :                : #endif                          /* ! WIN32 */</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/multirangetypes.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - multirangetypes.c<span style="font-size: 80%;"> (<a href="multirangetypes.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">93.4&nbsp;%</td>
+            <td class="headerCovTableEntry">997</td>
+            <td class="headerCovTableEntry">931</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">921</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">10</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">97.8&nbsp;%</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">74.7&nbsp;%</td>
+            <td class="headerCovTableEntry">617</td>
+            <td class="headerCovTableEntry">461</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">153</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">461</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryMed">76.9&nbsp;%</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="tlaUNC">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">93.6&nbsp;%</td>
+            <td class="headerCovTableEntry">982</td>
+            <td class="headerCovTableEntry">919</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">919</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">97.8&nbsp;%</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="13">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.3&nbsp;%</td>
+            <td class="headerCovTableEntry">647</td>
+            <td class="headerCovTableEntry">461</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">3</td>
+            <td class="headerCovTableEntry">153</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">461</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="multirangetypes.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="multirangetypes.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="multirangetypes.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L335">multirange_recv</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 18)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L375">multirange_send</a></td>
+              <td class="tlaUNC">UNC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 14)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2856">hash_multirange_extended</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerMed>83.3&nbsp;% (25 / 30)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L940">multirange_constructor2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6903</td>
+              <td class=coverPerMed>80.8&nbsp;% (21 / 26)</td>
+              <td class=coverPerLo>40.9&nbsp;% (9 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L415">get_multirange_io_data</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2023</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              <td class=coverPerLo>31.2&nbsp;% (5 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L115">multirange_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">690</td>
+              <td class=coverPerHi>95.3&nbsp;% (82 / 86)</td>
+              <td class=coverPerMed>88.7&nbsp;% (63 / 71)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1411">multirange_agg_transfn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">225</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1022">multirange_constructor1</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4104</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1464">multirange_intersect_agg_transfn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1339">range_agg_transfn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">190</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2785">hash_multirange</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">168</td>
+              <td class=coverPerHi>96.4&nbsp;% (27 / 28)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2573">multirange_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">459</td>
+              <td class=coverPerHi>96.3&nbsp;% (26 / 27)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1058">multirange_constructor0</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">186</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1863">multirange_eq_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23907</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L672">multirange_get_bounds_offset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">801044</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L547">multirange_get_typcache</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">627422</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1371">range_agg_finalfn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">314</td>
+              <td class=coverPerHi>93.3&nbsp;% (14 / 15)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L595">write_multirange_data</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12467</td>
+              <td class=coverPerHi>94.4&nbsp;% (17 / 18)</td>
+              <td class=coverPerLo>59.1&nbsp;% (13 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1657">elem_contained_by_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">72</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L847">make_empty_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L645">make_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12467</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2532">multirange_adjacent_multirange</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22236</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2517">multirange_adjacent_range</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">22221</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2387">multirange_after_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28380</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2375">multirange_after_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">28374</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2350">multirange_before_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22383</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2422">multirange_before_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50763</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2338">multirange_before_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22380</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L897">multirange_bsearch_match</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">77450</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L476">multirange_canonicalize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12467</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2249">multirange_contained_by_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25404</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1757">multirange_contained_by_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">25245</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1644">multirange_contains_elem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11670</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1706">multirange_contains_elem_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11742</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2236">multirange_contains_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">78156</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2264">multirange_contains_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">103560</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1720">multirange_contains_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">44877</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1800">multirange_contains_range_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79531</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L825">multirange_deserialize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1921</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1673">multirange_elem_bsearch_comparison</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16212</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1555">multirange_empty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1900">multirange_eq</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23841</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2654">multirange_ge</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L743">multirange_get_bounds</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">799185</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerLo>58.8&nbsp;% (20 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L694">multirange_get_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1859</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerLo>60.5&nbsp;% (23 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L801">multirange_get_union_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11553</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2662">multirange_gt</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1229">multirange_intersect</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1259">multirange_intersect_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerMed>86.4&nbsp;% (19 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2646">multirange_le</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1506">multirange_lower</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">75</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1564">multirange_lower_inc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1602">multirange_lower_inf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2638">multirange_lt</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">84</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1113">multirange_minus</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1143">multirange_minus_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1922">multirange_ne</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1913">multirange_ne_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L297">multirange_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1333</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1959">multirange_overlaps_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23277</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2014">multirange_overlaps_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23277</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1947">multirange_overlaps_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">22695</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2131">multirange_overleft_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23646</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2106">multirange_overleft_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23643</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2213">multirange_overright_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30903</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2189">multirange_overright_range</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30900</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1773">multirange_range_contains_bsearch_comparison</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">58559</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1975">multirange_range_overlaps_bsearch_comparison</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">61385</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L568">multirange_size_estimate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12467</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1081">multirange_union</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2711">multirange_unnest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1529">multirange_upper</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1583">multirange_upper_inc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1621">multirange_upper_inf</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2505">range_adjacent_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18612</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2469">range_adjacent_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45914</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2363">range_after_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18618</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2444">range_after_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">79283</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2326">range_before_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18615</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2400">range_before_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54351</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L877">range_bounds_contains</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47139</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L857">range_bounds_overlaps</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29217</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1745">range_contained_by_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18810</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1732">range_contains_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">37245</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1828">range_contains_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">138359</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2673">range_merge_from_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1935">range_overlaps_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18672</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L1992">range_overlaps_multirange_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">50443</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2094">range_overleft_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18621</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2072">range_overleft_multirange_internal</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">36308</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2177">range_overright_multirange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18621</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="multirangetypes.c.gcov.html#L2156">range_overright_multirange_internal</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">59651</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

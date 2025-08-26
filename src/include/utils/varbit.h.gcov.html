@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/include/utils/varbit.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory include">include</a>/<a href="index.html" title="Click to go to directory utils">utils</a> - varbit.h<span style="font-size: 80%;"> (source / <a href="varbit.h.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first CBC line">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"><a href="#L45" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">4</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+            <td class="subTableHeader" colspan="5">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                  TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       1</span>                 : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       2</span>                 :  *</span>
+<span id="L3" title="Line 3: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       3</span>                 :  * varbit.h</span>
+<span id="L4" title="Line 4: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       4</span>                 :  *    Functions for the SQL datatypes BIT() and BIT VARYING().</span>
+<span id="L5" title="Line 5: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       5</span>                 :  *</span>
+<span id="L6" title="Line 6: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       6</span>                 :  * Code originally contributed by Adriaan Joubert.</span>
+<span id="L7" title="Line 7: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       7</span>                 :  *</span>
+<span id="L8" title="Line 8: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">       8</span>                 :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L9" title="Line 9: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">       9</span>                 :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L10" title="Line 10: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      10</span>                 :  *</span>
+<span id="L11" title="Line 11: commit 9f2e21138693 on 2010-09-20 by magnus@hagander.net">                           <span class="lineNum">      11</span>                 :  * src/include/utils/varbit.h</span>
+<span id="L12" title="Line 12: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      12</span>                 :  *</span>
+<span id="L13" title="Line 13: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      13</span>                 :  *-------------------------------------------------------------------------</span>
+<span id="L14" title="Line 14: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      14</span>                 :  */</span>
+<span id="L15" title="Line 15: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      15</span>                 : #ifndef VARBIT_H</span>
+<span id="L16" title="Line 16: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      16</span>                 : #define VARBIT_H</span>
+<span id="L17" title="Line 17: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      17</span>                 : </span>
+<span id="L18" title="Line 18: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      18</span>                 : #include &lt;limits.h&gt;</span>
+<span id="L19" title="Line 19: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      19</span>                 : </span>
+<span id="L20" title="Line 20: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      20</span>                 : #include &quot;fmgr.h&quot;</span>
+<span id="L21" title="Line 21: commit cb292206c5c1 on 2000-07-12 by peter_e@gmx.net">                           <span class="lineNum">      21</span>                 : </span>
+<span id="L22" title="Line 22: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      22</span>                 : /*</span>
+<span id="L23" title="Line 23: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      23</span>                 :  * Modeled on struct varlena from postgres.h, but data type is bits8.</span>
+<span id="L24" title="Line 24: commit 5ac0d93600c1 on 2019-09-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      24</span>                 :  *</span>
+<span id="L25" title="Line 25: commit 5ac0d93600c1 on 2019-09-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      25</span>                 :  * Caution: if bit_len is not a multiple of BITS_PER_BYTE, the low-order</span>
+<span id="L26" title="Line 26: commit 5ac0d93600c1 on 2019-09-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      26</span>                 :  * bits of the last byte of bit_dat[] are unused and MUST be zeroes.</span>
+<span id="L27" title="Line 27: commit 5ac0d93600c1 on 2019-09-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      27</span>                 :  * (This allows bit_cmp() to not bother masking the last byte.)</span>
+<span id="L28" title="Line 28: commit 5ac0d93600c1 on 2019-09-22 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      28</span>                 :  * Also, there should not be any excess bytes counted in the header length.</span>
+<span id="L29" title="Line 29: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      29</span>                 :  */</span>
+<span id="L30" title="Line 30: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      30</span>                 : typedef struct</span>
+<span id="L31" title="Line 31: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      31</span>                 : {</span>
+<span id="L32" title="Line 32: commit 234a02b2a888 on 2007-02-27 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      32</span>                 :     int32       vl_len_;        /* varlena header (do not touch directly!) */</span>
+<span id="L33" title="Line 33: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      33</span>                 :     int32       bit_len;        /* number of valid bits */</span>
+<span id="L34" title="Line 34: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      34</span>                 :     bits8       bit_dat[FLEXIBLE_ARRAY_MEMBER]; /* bit string, most sig. byte</span>
+<span id="L35" title="Line 35: commit 09d8d110a604 on 2015-02-20 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      35</span>                 :                                                  * first */</span>
+<span id="L36" title="Line 36: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      36</span>                 : } VarBit;</span>
+<span id="L37" title="Line 37: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      37</span>                 : </span>
+<span id="L38" title="Line 38: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      38</span>                 : /*</span>
+<span id="L39" title="Line 39: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      39</span>                 :  * fmgr interface macros</span>
+<span id="L40" title="Line 40: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      40</span>                 :  *</span>
+<span id="L41" title="Line 41: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      41</span>                 :  * BIT and BIT VARYING are toastable varlena types.  They are the same</span>
+<span id="L42" title="Line 42: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      42</span>                 :  * as far as representation goes, so we just have one set of macros.</span>
+<span id="L43" title="Line 43: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      43</span>                 :  */</span>
+<span id="L44" title="Line 44: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      44</span>                 : static inline VarBit *</span>
+<span id="L45" title="Line 45: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">1064</a> <a href="#top" title="next CBC in &ldquo;peter@eisentraut.org&rdquo; bin">peter@eisentraut.org</a> <span class="lineNum">      45</span> <a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       52140 : DatumGetVarBitP(Datum X)</span></span>
+<span id="L46" title="Line 46: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      46</span>                 : {</span>
+<span id="L47" title="Line 47: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      47</span> <span class="tlaCBC">          52140 :     return (VarBit *) PG_DETOAST_DATUM(X);</span></span>
+<span id="L48" title="Line 48: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      48</span>                 : }</span>
+<span id="L49" title="Line 49: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      49</span>                 : </span>
+<span id="L50" title="Line 50: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      50</span>                 : static inline VarBit *</span>
+<span id="L51" title="Line 51: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      51</span>                 : DatumGetVarBitPCopy(Datum X)</span>
+<span id="L52" title="Line 52: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      52</span>                 : {</span>
+<span id="L53" title="Line 53: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      53</span>                 :     return (VarBit *) PG_DETOAST_DATUM_COPY(X);</span>
+<span id="L54" title="Line 54: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      54</span>                 : }</span>
+<span id="L55" title="Line 55: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      55</span>                 : </span>
+<span id="L56" title="Line 56: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      56</span>                 : static inline Datum</span>
+<span id="L57" title="Line 57: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      57</span> <span class="tlaCBC">           8287 : VarBitPGetDatum(const VarBit *X)</span></span>
+<span id="L58" title="Line 58: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      58</span>                 : {</span>
+<span id="L59" title="Line 59: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      59</span> <span class="tlaCBC">           8287 :     return PointerGetDatum(X);</span></span>
+<span id="L60" title="Line 60: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      60</span>                 : }</span>
+<span id="L61" title="Line 61: commit c8b2ef05f481 on 2022-09-27 by peter@eisentraut.org">                           <span class="lineNum">      61</span>                 : </span>
+<span id="L62" title="Line 62: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      62</span>                 : #define PG_GETARG_VARBIT_P(n)      DatumGetVarBitP(PG_GETARG_DATUM(n))</span>
+<span id="L63" title="Line 63: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      63</span>                 : #define PG_GETARG_VARBIT_P_COPY(n) DatumGetVarBitPCopy(PG_GETARG_DATUM(n))</span>
+<span id="L64" title="Line 64: commit 9e1552607a9d on 2001-03-22 by bruce@momjian.us">                           <span class="lineNum">      64</span>                 : #define PG_RETURN_VARBIT_P(x)      return VarBitPGetDatum(x)</span>
+<span id="L65" title="Line 65: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      65</span>                 : </span>
+<span id="L66" title="Line 66: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      66</span>                 : /* Header overhead *in addition to* VARHDRSZ */</span>
+<span id="L67" title="Line 67: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      67</span>                 : #define VARBITHDRSZ         sizeof(int32)</span>
+<span id="L68" title="Line 68: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      68</span>                 : /* Number of bits in this bit string */</span>
+<span id="L69" title="Line 69: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      69</span>                 : #define VARBITLEN(PTR)      (((VarBit *) (PTR))-&gt;bit_len)</span>
+<span id="L70" title="Line 70: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      70</span>                 : /* Pointer to the first byte containing bit string data */</span>
+<span id="L71" title="Line 71: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      71</span>                 : #define VARBITS(PTR)        (((VarBit *) (PTR))-&gt;bit_dat)</span>
+<span id="L72" title="Line 72: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      72</span>                 : /* Number of bytes in the data section of a bit string */</span>
+<span id="L73" title="Line 73: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      73</span>                 : #define VARBITBYTES(PTR)    (VARSIZE(PTR) - VARHDRSZ - VARBITHDRSZ)</span>
+<span id="L74" title="Line 74: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      74</span>                 : /* Padding of the bit string at the end (in bits) */</span>
+<span id="L75" title="Line 75: commit d70bf0dd3554 on 2000-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      75</span>                 : #define VARBITPAD(PTR)      (VARBITBYTES(PTR)*BITS_PER_BYTE - VARBITLEN(PTR))</span>
+<span id="L76" title="Line 76: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      76</span>                 : /* Number of bytes needed to store a bit string of a given length */</span>
+<span id="L77" title="Line 77: commit d70bf0dd3554 on 2000-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      77</span>                 : #define VARBITTOTALLEN(BITLEN)  (((BITLEN) + BITS_PER_BYTE-1)/BITS_PER_BYTE + \</span>
+<span id="L78" title="Line 78: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      78</span>                 :                                  VARHDRSZ + VARBITHDRSZ)</span>
+<span id="L79" title="Line 79: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      79</span>                 : /*</span>
+<span id="L80" title="Line 80: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      80</span>                 :  * Maximum number of bits.  Several code sites assume no overflow from</span>
+<span id="L81" title="Line 81: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      81</span>                 :  * computing bitlen + X; VARBITTOTALLEN() has the largest such X.</span>
+<span id="L82" title="Line 82: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      82</span>                 :  */</span>
+<span id="L83" title="Line 83: commit 31400a673325 on 2014-02-17 by noah@leadboat.com">                           <span class="lineNum">      83</span>                 : #define VARBITMAXLEN        (INT_MAX - BITS_PER_BYTE + 1)</span>
+<span id="L84" title="Line 84: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      84</span>                 : /* pointer beyond the end of the bit string (like end() in STL containers) */</span>
+<span id="L85" title="Line 85: commit b503cbe3194f on 2000-08-21 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      85</span>                 : #define VARBITEND(PTR)      (((bits8 *) (PTR)) + VARSIZE(PTR))</span>
+<span id="L86" title="Line 86: commit d70bf0dd3554 on 2000-08-26 by tgl@sss.pgh.pa.us">                           <span class="lineNum">      86</span>                 : /* Mask that will cover exactly one byte, i.e. BITS_PER_BYTE bits */</span>
+<span id="L87" title="Line 87: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      87</span>                 : #define BITMASK 0xFF</span>
+<span id="L88" title="Line 88: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      88</span>                 : </span>
+<span id="L89" title="Line 89: commit 0337938fbfee on 2000-04-08 by lockhart@fourpalms.org">                           <span class="lineNum">      89</span>                 : #endif</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

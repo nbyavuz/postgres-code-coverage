@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/heap/vacuumlazy.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory heap">heap</a> - vacuumlazy.c<span style="font-size: 80%;"> (<a href="vacuumlazy.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">85.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1024</td>
+            <td class="headerCovTableEntry">879</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">143</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">844</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">16</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">66.9&nbsp;%</td>
+            <td class="headerCovTableEntry">664</td>
+            <td class="headerCovTableEntry">444</td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">204</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">416</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">72.9&nbsp;%</td>
+            <td class="headerCovTableEntry">207</td>
+            <td class="headerCovTableEntry">151</td>
+            <td class="tlaUNC">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">133</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">89.1&nbsp;%</td>
+            <td class="headerCovTableEntry">817</td>
+            <td class="headerCovTableEntry">728</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">89</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">711</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">53.8&nbsp;%</td>
+            <td class="headerCovTableEntry">132</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="tlaUNC">13</td>
+            <td class="tlaLBC">2</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">70.1&nbsp;%</td>
+            <td class="headerCovTableEntry">532</td>
+            <td class="headerCovTableEntry">373</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">1</td>
+            <td class="headerCovTableEntry">158</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">365</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="vacuumlazy.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="vacuumlazy.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="vacuumlazy.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L486">heap_vacuum_eager_scan_setup</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">13022</td>
+              <td class=coverPerLo>34.3&nbsp;% (12 / 35)</td>
+              <td class=coverPerLo>16.7&nbsp;% (4 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1942">lazy_scan_prune</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67956</td>
+              <td class=coverPerMed>76.4&nbsp;% (55 / 72)</td>
+              <td class=coverPerLo>64.9&nbsp;% (48 / 74)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1198">lazy_scan_heap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13022</td>
+              <td class=coverPerMed>85.3&nbsp;% (93 / 109)</td>
+              <td class=coverPerLo>69.4&nbsp;% (50 / 72)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1807">lazy_scan_new_or_empty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69313</td>
+              <td class=coverPerLo>51.7&nbsp;% (15 / 29)</td>
+              <td class=coverPerLo>33.3&nbsp;% (8 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2948">lazy_check_wraparound_failsafe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14896</td>
+              <td class=coverPerLo>23.5&nbsp;% (4 / 17)</td>
+              <td class=coverPerLo>33.3&nbsp;% (2 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2237">lazy_scan_noprune</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerMed>82.1&nbsp;% (55 / 67)</td>
+              <td class=coverPerLo>61.3&nbsp;% (19 / 31)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3754">vacuum_error_callback</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">17</td>
+              <td class=coverPerLo>61.3&nbsp;% (19 / 31)</td>
+              <td class=coverPerLo>29.2&nbsp;% (7 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3329">count_nondeletable_pages</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">175</td>
+              <td class=coverPerMed>88.1&nbsp;% (37 / 42)</td>
+              <td class=coverPerLo>70.0&nbsp;% (21 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1675">find_next_unskippable_block</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">60290</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3603">heap_page_is_all_visible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63277</td>
+              <td class=coverPerMed>89.6&nbsp;% (43 / 48)</td>
+              <td class=coverPerMed>80.6&nbsp;% (25 / 31)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2573">lazy_vacuum_all_indexes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">642</td>
+              <td class=coverPerMed>88.2&nbsp;% (30 / 34)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3198">lazy_truncate_heap</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177</td>
+              <td class=coverPerHi>93.3&nbsp;% (28 / 30)</td>
+              <td class=coverPerMed>77.3&nbsp;% (17 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1570">heap_vac_scan_next_block</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">82335</td>
+              <td class=coverPerHi>96.6&nbsp;% (28 / 29)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2448">lazy_vacuum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">651</td>
+              <td class=coverPerHi>95.5&nbsp;% (21 / 22)</td>
+              <td class=coverPerLo>60.0&nbsp;% (18 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L1917">cmpOffsetNumbers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3270626</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3536">dead_items_add</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14370</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3471">dead_items_alloc</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13022</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3578">dead_items_cleanup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13022</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3558">dead_items_reset</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">651</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3001">lazy_cleanup_all_indexes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11836</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3118">lazy_cleanup_one_index</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18423</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2836">lazy_vacuum_heap_page</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14304</td>
+              <td class=coverPerHi>100.0&nbsp;% (32 / 32)</td>
+              <td class=coverPerLo>70.0&nbsp;% (21 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2718">lazy_vacuum_heap_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">642</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3069">lazy_vacuum_one_index</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1227</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3837">restore_vacuum_error_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34596</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3178">should_attempt_truncation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13022</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3719">update_relstats_all_indexes</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12894</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L3818">update_vacuum_error_info</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">104086</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="vacuumlazy.c.gcov.html#L2680">vacuum_reap_lp_read_stream_next</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">14946</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

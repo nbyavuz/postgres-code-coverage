@@ -1,0 +1,504 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/common/attmap.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory common">common</a> - attmap.c<span style="font-size: 80%;"> (source / <a href="attmap.c.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">96.8&nbsp;%</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">91</td>
+            <td class="headerCovTableEntry"><a href="#L137" title="goto first UBC line">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L40" title="goto first CBC line">91</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">78.6&nbsp;%</td>
+            <td class="headerCovTableEntry">70</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntry"><a href="#L114" title="goto first UBC branch">15</a></td>
+            <td class="headerCovTableEntry"><a href="#L97" title="goto first CBC branch">55</a></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"><a href="#L99" title="goto first CBC line in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">10</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">96.4&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"><a href="#L137" title="goto first UBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">3</a></td>
+            <td class="headerCovTableEntry"><a href="#L40" title="goto first CBC line in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">81</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">6</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">64.3&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"><a href="#L114" title="goto first UBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgUBC">5</a></td>
+            <td class="headerCovTableEntry"><a href="#L101" title="goto first CBC branch in &ldquo;(30,360] days&rdquo; bin" class="tlaBgCBC">9</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.1&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntry"><a href="#L115" title="goto first UBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">10</a></td>
+            <td class="headerCovTableEntry"><a href="#L97" title="goto first CBC branch in &ldquo;(360..) days&rdquo; bin" class="tlaBgCBC">46</a></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading"> Age         Owner                    Branch data    TLA  Line data    Source code</pre>
+<pre class="source">
+<span id="L1" title="Line 1: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       1</span>                 :                : /*-------------------------------------------------------------------------</span>
+<span id="L2" title="Line 2: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       2</span>                 :                :  *</span>
+<span id="L3" title="Line 3: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       3</span>                 :                :  * attmap.c</span>
+<span id="L4" title="Line 4: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       4</span>                 :                :  *    Attribute mapping support.</span>
+<span id="L5" title="Line 5: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       5</span>                 :                :  *</span>
+<span id="L6" title="Line 6: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       6</span>                 :                :  * This file provides utility routines to build and manage attribute</span>
+<span id="L7" title="Line 7: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       7</span>                 :                :  * mappings by comparing input and output TupleDescs.  Such mappings</span>
+<span id="L8" title="Line 8: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       8</span>                 :                :  * are typically used by DDL operating on inheritance and partition trees</span>
+<span id="L9" title="Line 9: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">       9</span>                 :                :  * to do a conversion between rowtypes logically equivalent but with</span>
+<span id="L10" title="Line 10: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      10</span>                 :                :  * columns in a different order, taking into account dropped columns.</span>
+<span id="L11" title="Line 11: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      11</span>                 :                :  * They are also used by the tuple conversion routines in tupconvert.c.</span>
+<span id="L12" title="Line 12: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      12</span>                 :                :  *</span>
+<span id="L13" title="Line 13: commit 50e6eb731d98 on 2025-01-01 by bruce@momjian.us">                           <span class="lineNum">      13</span>                 :                :  * Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group</span>
+<span id="L14" title="Line 14: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      14</span>                 :                :  * Portions Copyright (c) 1994, Regents of the University of California</span>
+<span id="L15" title="Line 15: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      15</span>                 :                :  *</span>
+<span id="L16" title="Line 16: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      16</span>                 :                :  *</span>
+<span id="L17" title="Line 17: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      17</span>                 :                :  * IDENTIFICATION</span>
+<span id="L18" title="Line 18: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      18</span>                 :                :  *    src/backend/access/common/attmap.c</span>
+<span id="L19" title="Line 19: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      19</span>                 :                :  *</span>
+<span id="L20" title="Line 20: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      20</span>                 :                :  *-------------------------------------------------------------------------</span>
+<span id="L21" title="Line 21: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      21</span>                 :                :  */</span>
+<span id="L22" title="Line 22: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      22</span>                 :                : </span>
+<span id="L23" title="Line 23: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      23</span>                 :                : #include &quot;postgres.h&quot;</span>
+<span id="L24" title="Line 24: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      24</span>                 :                : </span>
+<span id="L25" title="Line 25: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      25</span>                 :                : #include &quot;access/attmap.h&quot;</span>
+<span id="L26" title="Line 26: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      26</span>                 :                : #include &quot;utils/builtins.h&quot;</span>
+<span id="L27" title="Line 27: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      27</span>                 :                : </span>
+<span id="L28" title="Line 28: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      28</span>                 :                : </span>
+<span id="L29" title="Line 29: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      29</span>                 :                : static bool check_attrmap_match(TupleDesc indesc,</span>
+<span id="L30" title="Line 30: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      30</span>                 :                :                                 TupleDesc outdesc,</span>
+<span id="L31" title="Line 31: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      31</span>                 :                :                                 AttrMap *attrMap);</span>
+<span id="L32" title="Line 32: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      32</span>                 :                : </span>
+<span id="L33" title="Line 33: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      33</span>                 :                : /*</span>
+<span id="L34" title="Line 34: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      34</span>                 :                :  * make_attrmap</span>
+<span id="L35" title="Line 35: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      35</span>                 :                :  *</span>
+<span id="L36" title="Line 36: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      36</span>                 :                :  * Utility routine to allocate an attribute map in the current memory</span>
+<span id="L37" title="Line 37: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      37</span>                 :                :  * context.</span>
+<span id="L38" title="Line 38: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      38</span>                 :                :  */</span>
+<span id="L39" title="Line 39: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      39</span>                 :                : AttrMap *</span>
+<span id="L40" title="Line 40: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L102" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L102" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">      40</span>                 :<a href="#L138" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       29441 : make_attrmap(int maplen)</span></span>
+<span id="L41" title="Line 41: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      41</span>                 :                : {</span>
+<span id="L42" title="Line 42: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      42</span>                 :                :     AttrMap    *res;</span>
+<span id="L43" title="Line 43: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      43</span>                 :                : </span>
+<span id="L44" title="Line 44: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      44</span>                 :<span class="tlaCBC">          29441 :     res = (AttrMap *) palloc0(sizeof(AttrMap));</span></span>
+<span id="L45" title="Line 45: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      45</span>                 :<span class="tlaCBC">          29441 :     res-&gt;maplen = maplen;</span></span>
+<span id="L46" title="Line 46: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      46</span>                 :<span class="tlaCBC">          29441 :     res-&gt;attnums = (AttrNumber *) palloc0(sizeof(AttrNumber) * maplen);</span></span>
+<span id="L47" title="Line 47: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      47</span>                 :<span class="tlaCBC">          29441 :     return res;</span></span>
+<span id="L48" title="Line 48: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      48</span>                 :                : }</span>
+<span id="L49" title="Line 49: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      49</span>                 :                : </span>
+<span id="L50" title="Line 50: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      50</span>                 :                : /*</span>
+<span id="L51" title="Line 51: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      51</span>                 :                :  * free_attrmap</span>
+<span id="L52" title="Line 52: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      52</span>                 :                :  *</span>
+<span id="L53" title="Line 53: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      53</span>                 :                :  * Utility routine to release an attribute map.</span>
+<span id="L54" title="Line 54: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      54</span>                 :                :  */</span>
+<span id="L55" title="Line 55: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      55</span>                 :                : void</span>
+<span id="L56" title="Line 56: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      56</span>                 :<span class="tlaCBC">          16060 : free_attrmap(AttrMap *map)</span></span>
+<span id="L57" title="Line 57: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      57</span>                 :                : {</span>
+<span id="L58" title="Line 58: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      58</span>                 :<span class="tlaCBC">          16060 :     pfree(map-&gt;attnums);</span></span>
+<span id="L59" title="Line 59: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      59</span>                 :<span class="tlaCBC">          16060 :     pfree(map);</span></span>
+<span id="L60" title="Line 60: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      60</span>                 :<span class="tlaCBC">          16060 : }</span></span>
+<span id="L61" title="Line 61: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      61</span>                 :                : </span>
+<span id="L62" title="Line 62: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      62</span>                 :                : /*</span>
+<span id="L63" title="Line 63: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      63</span>                 :                :  * build_attrmap_by_position</span>
+<span id="L64" title="Line 64: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      64</span>                 :                :  *</span>
+<span id="L65" title="Line 65: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      65</span>                 :                :  * Return a palloc'd bare attribute map for tuple conversion, matching input</span>
+<span id="L66" title="Line 66: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      66</span>                 :                :  * and output columns by position.  Dropped columns are ignored in both input</span>
+<span id="L67" title="Line 67: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      67</span>                 :                :  * and output, marked as 0.  This is normally a subroutine for</span>
+<span id="L68" title="Line 68: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      68</span>                 :                :  * convert_tuples_by_position in tupconvert.c, but it can be used standalone.</span>
+<span id="L69" title="Line 69: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      69</span>                 :                :  *</span>
+<span id="L70" title="Line 70: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      70</span>                 :                :  * Note: the errdetail messages speak of indesc as the &quot;returned&quot; rowtype,</span>
+<span id="L71" title="Line 71: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      71</span>                 :                :  * outdesc as the &quot;expected&quot; rowtype.  This is okay for current uses but</span>
+<span id="L72" title="Line 72: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      72</span>                 :                :  * might need generalization in future.</span>
+<span id="L73" title="Line 73: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      73</span>                 :                :  */</span>
+<span id="L74" title="Line 74: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      74</span>                 :                : AttrMap *</span>
+<span id="L75" title="Line 75: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      75</span>                 :<span class="tlaCBC">           4788 : build_attrmap_by_position(TupleDesc indesc,</span></span>
+<span id="L76" title="Line 76: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      76</span>                 :                :                           TupleDesc outdesc,</span>
+<span id="L77" title="Line 77: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      77</span>                 :                :                           const char *msg)</span>
+<span id="L78" title="Line 78: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      78</span>                 :                : {</span>
+<span id="L79" title="Line 79: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      79</span>                 :                :     AttrMap    *attrMap;</span>
+<span id="L80" title="Line 80: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      80</span>                 :                :     int         nincols;</span>
+<span id="L81" title="Line 81: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      81</span>                 :                :     int         noutcols;</span>
+<span id="L82" title="Line 82: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      82</span>                 :                :     int         n;</span>
+<span id="L83" title="Line 83: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      83</span>                 :                :     int         i;</span>
+<span id="L84" title="Line 84: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      84</span>                 :                :     int         j;</span>
+<span id="L85" title="Line 85: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      85</span>                 :                :     bool        same;</span>
+<span id="L86" title="Line 86: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      86</span>                 :                : </span>
+<span id="L87" title="Line 87: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      87</span>                 :                :     /*</span>
+<span id="L88" title="Line 88: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      88</span>                 :                :      * The length is computed as the number of attributes of the expected</span>
+<span id="L89" title="Line 89: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      89</span>                 :                :      * rowtype as it includes dropped attributes in its count.</span>
+<span id="L90" title="Line 90: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      90</span>                 :                :      */</span>
+<span id="L91" title="Line 91: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      91</span>                 :<span class="tlaCBC">           4788 :     n = outdesc-&gt;natts;</span></span>
+<span id="L92" title="Line 92: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      92</span>                 :<span class="tlaCBC">           4788 :     attrMap = make_attrmap(n);</span></span>
+<span id="L93" title="Line 93: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      93</span>                 :                : </span>
+<span id="L94" title="Line 94: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      94</span>                 :<span class="tlaCBC">           4788 :     j = 0;                      /* j is next physical input attribute */</span></span>
+<span id="L95" title="Line 95: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      95</span>                 :<span class="tlaCBC">           4788 :     nincols = noutcols = 0;     /* these count non-dropped attributes */</span></span>
+<span id="L96" title="Line 96: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      96</span>                 :<span class="tlaCBC">           4788 :     same = true;</span></span>
+<span id="L97" title="Line 97: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      97</span>         [<span class="tlaCBC"> <a href="#L101" title="CBC: Branch 0 was taken 12573 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L101" title="CBC: Branch 1 was taken 4778 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          17351 :     for (i = 0; i &lt; n; i++)</span></span>
+<span id="L98" title="Line 98: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">      98</span>                 :                :     {</span>
+<span id="L99" title="Line 99: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">  <a href="#L106" title="next CBC in &ldquo;(30,360] days&rdquo; bin">172</a> <a href="#L106" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">      99</span>                 :<span class="tlaCBC">          12573 :         Form_pg_attribute outatt = TupleDescAttr(outdesc, i);</span></span>
+<span id="L100" title="Line 100: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     100</span>                 :                : </span>
+<span id="L101" title="Line 101: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     101</span>         [<span class="tlaCBC"> <a href="#L104" title="CBC: Branch 0 was taken 76 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L104" title="CBC: Branch 1 was taken 12497 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          12573 :         if (outatt-&gt;attisdropped)</span></span>
+<span id="L102" title="Line 102: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L109" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L109" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     102</span>                 :<span class="tlaCBC">             76 :             continue;           /* attrMap-&gt;attnums[i] is already 0 */</span></span>
+<span id="L103" title="Line 103: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     103</span>                 :<span class="tlaCBC">          12497 :         noutcols++;</span></span>
+<span id="L104" title="Line 104: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     104</span>         [<span class="tlaCBC"> <a href="#L108" title="CBC: Branch 0 was taken 12502 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L108" title="CBC: Branch 1 was taken 4 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          12506 :         for (; j &lt; indesc-&gt;natts; j++)</span></span>
+<span id="L105" title="Line 105: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     105</span>                 :                :         {</span>
+<span id="L106" title="Line 106: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">  <a href="#L113" title="next CBC in &ldquo;(30,360] days&rdquo; bin">172</a> <a href="#L113" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     106</span>                 :<span class="tlaCBC">          12502 :             Form_pg_attribute inatt = TupleDescAttr(indesc, j);</span></span>
+<span id="L107" title="Line 107: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     107</span>                 :                : </span>
+<span id="L108" title="Line 108: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     108</span>         [<span class="tlaCBC"> <a href="#L113" title="CBC: Branch 0 was taken 9 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L113" title="CBC: Branch 1 was taken 12493 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          12502 :             if (inatt-&gt;attisdropped)</span></span>
+<span id="L109" title="Line 109: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L115" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L115" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     109</span>                 :<span class="tlaCBC">              9 :                 continue;</span></span>
+<span id="L110" title="Line 110: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     110</span>                 :<span class="tlaCBC">          12493 :             nincols++;</span></span>
+<span id="L111" title="Line 111: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     111</span>                 :                : </span>
+<span id="L112" title="Line 112: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     112</span>                 :                :             /* Found matching column, now check type */</span>
+<span id="L113" title="Line 113: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">  <a href="#L136" title="next CBC in &ldquo;(30,360] days&rdquo; bin">172</a> <a href="#top" title="next CBC in &ldquo;tgl@sss.pgh.pa.us&rdquo; bin">tgl@sss.pgh.pa.us</a>    <span class="lineNum">     113</span>         [<span class="tlaCBC"> <a href="#L114" title="CBC: Branch 0 was taken 12483 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L114" title="CBC: Branch 1 was taken 10 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          12493 :             if (outatt-&gt;atttypid != inatt-&gt;atttypid ||</span></span>
+<span id="L114" title="Line 114: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     114</span>   [<span class="tlaUBC"> <a href="#L115" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L115" title="CBC: Branch 1 was taken 12483 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L115" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaUBC"> <a href="#L115" title="UBC: Branch 3 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">          12483 :                 (outatt-&gt;atttypmod != inatt-&gt;atttypmod &amp;&amp; outatt-&gt;atttypmod &gt;= 0))</span></span>
+<span id="L115" title="Line 115: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L138" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L138" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     115</span>         [<span class="tlaCBC"> <a href="#L129" title="CBC: Branch 0 was taken 10 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L136" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">             10 :                 ereport(ERROR,</span></span>
+<span id="L116" title="Line 116: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     116</span>                 :                :                         (errcode(ERRCODE_DATATYPE_MISMATCH),</span>
+<span id="L117" title="Line 117: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     117</span>                 :                :                          errmsg_internal(&quot;%s&quot;, _(msg)),</span>
+<span id="L118" title="Line 118: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     118</span>                 :                :                          errdetail(&quot;Returned type %s does not match expected type %s in column \&quot;%s\&quot; (position %d).&quot;,</span>
+<span id="L119" title="Line 119: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     119</span>                 :                :                                    format_type_with_typemod(inatt-&gt;atttypid,</span>
+<span id="L120" title="Line 120: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     120</span>                 :                :                                                             inatt-&gt;atttypmod),</span>
+<span id="L121" title="Line 121: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     121</span>                 :                :                                    format_type_with_typemod(outatt-&gt;atttypid,</span>
+<span id="L122" title="Line 122: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     122</span>                 :                :                                                             outatt-&gt;atttypmod),</span>
+<span id="L123" title="Line 123: commit 34c3c5ce1c0b on 2025-03-07 by tgl@sss.pgh.pa.us">                           <span class="lineNum">     123</span>                 :                :                                    NameStr(outatt-&gt;attname),</span>
+<span id="L124" title="Line 124: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     124</span>                 :                :                                    noutcols)));</span>
+<span id="L125" title="Line 125: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     125</span>                 :<span class="tlaCBC">          12483 :             attrMap-&gt;attnums[i] = (AttrNumber) (j + 1);</span></span>
+<span id="L126" title="Line 126: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     126</span>                 :<span class="tlaCBC">          12483 :             j++;</span></span>
+<span id="L127" title="Line 127: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     127</span>                 :<span class="tlaCBC">          12483 :             break;</span></span>
+<span id="L128" title="Line 128: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     128</span>                 :                :         }</span>
+<span id="L129" title="Line 129: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     129</span>         [<span class="tlaCBC"> <a href="#L134" title="CBC: Branch 0 was taken 4 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L134" title="CBC: Branch 1 was taken 12483 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          12487 :         if (attrMap-&gt;attnums[i] == 0)</span></span>
+<span id="L130" title="Line 130: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     130</span>                 :<span class="tlaCBC">              4 :             same = false;       /* we'll complain below */</span></span>
+<span id="L131" title="Line 131: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     131</span>                 :                :     }</span>
+<span id="L132" title="Line 132: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     132</span>                 :                : </span>
+<span id="L133" title="Line 133: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     133</span>                 :                :     /* Check for unused input columns */</span>
+<span id="L134" title="Line 134: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     134</span>         [<span class="tlaCBC"> <a href="#L136" title="CBC: Branch 0 was taken 3 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L136" title="CBC: Branch 1 was taken 4778 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4781 :     for (; j &lt; indesc-&gt;natts; j++)</span></span>
+<span id="L135" title="Line 135: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     135</span>                 :                :     {</span>
+<span id="L136" title="Line 136: commit 5983a4cffc31 on 2024-12-20 by drowley@postgresql.org">  <a href="#L300" title="next CBC in &ldquo;(30,360] days&rdquo; bin">249</a> <a href="#L300" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     136</span>         [<span class="tlaUBC"> <a href="#L144" title="UBC: Branch 0 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L143" title="CBC: Branch 1 was taken 3 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">              3 :         if (TupleDescCompactAttr(indesc, j)-&gt;attisdropped)</span></span>
+<span id="L137" title="Line 137: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L229" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">2078</a> </span><a href="#L229" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> </span> <span class="lineNum">     137</span>                 :<a href="#L229" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             continue;</span></span>
+<span id="L138" title="Line 138: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L236" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L236" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     138</span>                 :<a href="#L236" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">           3 :         nincols++;</span></span>
+<span id="L139" title="Line 139: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     139</span>                 :<span class="tlaCBC">              3 :         same = false;           /* we'll complain below */</span></span>
+<span id="L140" title="Line 140: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     140</span>                 :                :     }</span>
+<span id="L141" title="Line 141: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     141</span>                 :                : </span>
+<span id="L142" title="Line 142: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     142</span>                 :                :     /* Report column count mismatch using the non-dropped-column counts */</span>
+<span id="L143" title="Line 143: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     143</span>         [<span class="tlaCBC"> <a href="#L144" title="CBC: Branch 0 was taken 7 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L144" title="CBC: Branch 1 was taken 4771 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4778 :     if (!same)</span></span>
+<span id="L144" title="Line 144: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     144</span>         [<span class="tlaCBC"> <a href="#L152" title="CBC: Branch 0 was taken 7 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L228" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">              7 :         ereport(ERROR,</span></span>
+<span id="L145" title="Line 145: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     145</span>                 :                :                 (errcode(ERRCODE_DATATYPE_MISMATCH),</span>
+<span id="L146" title="Line 146: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     146</span>                 :                :                  errmsg_internal(&quot;%s&quot;, _(msg)),</span>
+<span id="L147" title="Line 147: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     147</span>                 :                :                  errdetail(&quot;Number of returned columns (%d) does not match &quot;</span>
+<span id="L148" title="Line 148: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     148</span>                 :                :                            &quot;expected column count (%d).&quot;,</span>
+<span id="L149" title="Line 149: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     149</span>                 :                :                            nincols, noutcols)));</span>
+<span id="L150" title="Line 150: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     150</span>                 :                : </span>
+<span id="L151" title="Line 151: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     151</span>                 :                :     /* Check if the map has a one-to-one match */</span>
+<span id="L152" title="Line 152: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     152</span>         [<span class="tlaCBC"> <a href="#L189" title="CBC: Branch 0 was taken 4723 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L189" title="CBC: Branch 1 was taken 48 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           4771 :     if (check_attrmap_match(indesc, outdesc, attrMap))</span></span>
+<span id="L153" title="Line 153: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     153</span>                 :                :     {</span>
+<span id="L154" title="Line 154: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     154</span>                 :                :         /* Runtime conversion is not needed */</span>
+<span id="L155" title="Line 155: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     155</span>                 :<span class="tlaCBC">           4723 :         free_attrmap(attrMap);</span></span>
+<span id="L156" title="Line 156: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     156</span>                 :<span class="tlaCBC">           4723 :         return NULL;</span></span>
+<span id="L157" title="Line 157: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     157</span>                 :                :     }</span>
+<span id="L158" title="Line 158: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     158</span>                 :                : </span>
+<span id="L159" title="Line 159: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     159</span>                 :<span class="tlaCBC">             48 :     return attrMap;</span></span>
+<span id="L160" title="Line 160: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     160</span>                 :                : }</span>
+<span id="L161" title="Line 161: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     161</span>                 :                : </span>
+<span id="L162" title="Line 162: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     162</span>                 :                : /*</span>
+<span id="L163" title="Line 163: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     163</span>                 :                :  * build_attrmap_by_name</span>
+<span id="L164" title="Line 164: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     164</span>                 :                :  *</span>
+<span id="L165" title="Line 165: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     165</span>                 :                :  * Return a palloc'd bare attribute map for tuple conversion, matching input</span>
+<span id="L166" title="Line 166: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     166</span>                 :                :  * and output columns by name.  (Dropped columns are ignored in both input and</span>
+<span id="L167" title="Line 167: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     167</span>                 :                :  * output.)  This is normally a subroutine for convert_tuples_by_name in</span>
+<span id="L168" title="Line 168: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     168</span>                 :                :  * tupconvert.c, but can be used standalone.</span>
+<span id="L169" title="Line 169: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     169</span>                 :                :  *</span>
+<span id="L170" title="Line 170: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     170</span>                 :                :  * If 'missing_ok' is true, a column from 'outdesc' not being present in</span>
+<span id="L171" title="Line 171: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     171</span>                 :                :  * 'indesc' is not flagged as an error; AttrMap.attnums[] entry for such an</span>
+<span id="L172" title="Line 172: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     172</span>                 :                :  * outdesc column will be 0 in that case.</span>
+<span id="L173" title="Line 173: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     173</span>                 :                :  */</span>
+<span id="L174" title="Line 174: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     174</span>                 :                : AttrMap *</span>
+<span id="L175" title="Line 175: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     175</span>                 :<span class="tlaCBC">          18892 : build_attrmap_by_name(TupleDesc indesc,</span></span>
+<span id="L176" title="Line 176: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     176</span>                 :                :                       TupleDesc outdesc,</span>
+<span id="L177" title="Line 177: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     177</span>                 :                :                       bool missing_ok)</span>
+<span id="L178" title="Line 178: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     178</span>                 :                : {</span>
+<span id="L179" title="Line 179: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     179</span>                 :                :     AttrMap    *attrMap;</span>
+<span id="L180" title="Line 180: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     180</span>                 :                :     int         outnatts;</span>
+<span id="L181" title="Line 181: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     181</span>                 :                :     int         innatts;</span>
+<span id="L182" title="Line 182: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     182</span>                 :                :     int         i;</span>
+<span id="L183" title="Line 183: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     183</span>                 :<span class="tlaCBC">          18892 :     int         nextindesc = -1;</span></span>
+<span id="L184" title="Line 184: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     184</span>                 :                : </span>
+<span id="L185" title="Line 185: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     185</span>                 :<span class="tlaCBC">          18892 :     outnatts = outdesc-&gt;natts;</span></span>
+<span id="L186" title="Line 186: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     186</span>                 :<span class="tlaCBC">          18892 :     innatts = indesc-&gt;natts;</span></span>
+<span id="L187" title="Line 187: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     187</span>                 :                : </span>
+<span id="L188" title="Line 188: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     188</span>                 :<span class="tlaCBC">          18892 :     attrMap = make_attrmap(outnatts);</span></span>
+<span id="L189" title="Line 189: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     189</span>         [<span class="tlaCBC"> <a href="#L197" title="CBC: Branch 0 was taken 45410 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L197" title="CBC: Branch 1 was taken 18892 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          64302 :     for (i = 0; i &lt; outnatts; i++)</span></span>
+<span id="L190" title="Line 190: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     190</span>                 :                :     {</span>
+<span id="L191" title="Line 191: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     191</span>                 :<span class="tlaCBC">          45410 :         Form_pg_attribute outatt = TupleDescAttr(outdesc, i);</span></span>
+<span id="L192" title="Line 192: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     192</span>                 :                :         char       *attname;</span>
+<span id="L193" title="Line 193: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     193</span>                 :                :         Oid         atttypid;</span>
+<span id="L194" title="Line 194: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     194</span>                 :                :         int32       atttypmod;</span>
+<span id="L195" title="Line 195: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     195</span>                 :                :         int         j;</span>
+<span id="L196" title="Line 196: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     196</span>                 :                : </span>
+<span id="L197" title="Line 197: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     197</span>         [<span class="tlaCBC"> <a href="#L214" title="CBC: Branch 0 was taken 2145 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L214" title="CBC: Branch 1 was taken 43265 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          45410 :         if (outatt-&gt;attisdropped)</span></span>
+<span id="L198" title="Line 198: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     198</span>                 :<span class="tlaCBC">           2145 :             continue;           /* attrMap-&gt;attnums[i] is already 0 */</span></span>
+<span id="L199" title="Line 199: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     199</span>                 :<span class="tlaCBC">          43265 :         attname = NameStr(outatt-&gt;attname);</span></span>
+<span id="L200" title="Line 200: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     200</span>                 :<span class="tlaCBC">          43265 :         atttypid = outatt-&gt;atttypid;</span></span>
+<span id="L201" title="Line 201: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     201</span>                 :<span class="tlaCBC">          43265 :         atttypmod = outatt-&gt;atttypmod;</span></span>
+<span id="L202" title="Line 202: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     202</span>                 :                : </span>
+<span id="L203" title="Line 203: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     203</span>                 :                :         /*</span>
+<span id="L204" title="Line 204: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     204</span>                 :                :          * Now search for an attribute with the same name in the indesc. It</span>
+<span id="L205" title="Line 205: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     205</span>                 :                :          * seems likely that a partitioned table will have the attributes in</span>
+<span id="L206" title="Line 206: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     206</span>                 :                :          * the same order as the partition, so the search below is optimized</span>
+<span id="L207" title="Line 207: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     207</span>                 :                :          * for that case.  It is possible that columns are dropped in one of</span>
+<span id="L208" title="Line 208: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     208</span>                 :                :          * the relations, but not the other, so we use the 'nextindesc'</span>
+<span id="L209" title="Line 209: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     209</span>                 :                :          * counter to track the starting point of the search.  If the inner</span>
+<span id="L210" title="Line 210: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     210</span>                 :                :          * loop encounters dropped columns then it will have to skip over</span>
+<span id="L211" title="Line 211: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     211</span>                 :                :          * them, but it should leave 'nextindesc' at the correct position for</span>
+<span id="L212" title="Line 212: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     212</span>                 :                :          * the next outer loop.</span>
+<span id="L213" title="Line 213: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     213</span>                 :                :          */</span>
+<span id="L214" title="Line 214: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     214</span>         [<span class="tlaCBC"> <a href="#L219" title="CBC: Branch 0 was taken 53601 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L219" title="CBC: Branch 1 was taken 115 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          53716 :         for (j = 0; j &lt; innatts; j++)</span></span>
+<span id="L215" title="Line 215: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     215</span>                 :                :         {</span>
+<span id="L216" title="Line 216: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     216</span>                 :                :             Form_pg_attribute inatt;</span>
+<span id="L217" title="Line 217: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     217</span>                 :                : </span>
+<span id="L218" title="Line 218: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     218</span>                 :<span class="tlaCBC">          53601 :             nextindesc++;</span></span>
+<span id="L219" title="Line 219: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     219</span>         [<span class="tlaCBC"> <a href="#L223" title="CBC: Branch 0 was taken 3487 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L223" title="CBC: Branch 1 was taken 50114 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          53601 :             if (nextindesc &gt;= innatts)</span></span>
+<span id="L220" title="Line 220: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     220</span>                 :<span class="tlaCBC">           3487 :                 nextindesc = 0;</span></span>
+<span id="L221" title="Line 221: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     221</span>                 :                : </span>
+<span id="L222" title="Line 222: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     222</span>                 :<span class="tlaCBC">          53601 :             inatt = TupleDescAttr(indesc, nextindesc);</span></span>
+<span id="L223" title="Line 223: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     223</span>         [<span class="tlaCBC"> <a href="#L225" title="CBC: Branch 0 was taken 1841 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L225" title="CBC: Branch 1 was taken 51760 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          53601 :             if (inatt-&gt;attisdropped)</span></span>
+<span id="L224" title="Line 224: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     224</span>                 :<span class="tlaCBC">           1841 :                 continue;</span></span>
+<span id="L225" title="Line 225: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     225</span>         [<span class="tlaCBC"> <a href="#L228" title="CBC: Branch 0 was taken 43150 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L228" title="CBC: Branch 1 was taken 8610 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          51760 :             if (strcmp(attname, NameStr(inatt-&gt;attname)) == 0)</span></span>
+<span id="L226" title="Line 226: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     226</span>                 :                :             {</span>
+<span id="L227" title="Line 227: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     227</span>                 :                :                 /* Found it, check type */</span>
+<span id="L228" title="Line 228: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     228</span>   [<span class="tlaCBC"> <a href="#L240" title="CBC: Branch 0 was taken 43150 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L229" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span><span class="tlaUBC"> <a href="#L229" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L240" title="CBC: Branch 3 was taken 43150 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          43150 :                 if (atttypid != inatt-&gt;atttypid || atttypmod != inatt-&gt;atttypmod)</span></span>
+<span id="L229" title="Line 229: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#L241" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">2078</a> </span><a href="#L241" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> </span> <span class="lineNum">     229</span>         [<span class="tlaUBC"> <a href="#L240" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L240" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#L241" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :                     ereport(ERROR,</span></span>
+<span id="L230" title="Line 230: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     230</span>                 :                :                             (errcode(ERRCODE_DATATYPE_MISMATCH),</span>
+<span id="L231" title="Line 231: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     231</span>                 :                :                              errmsg(&quot;could not convert row type&quot;),</span>
+<span id="L232" title="Line 232: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     232</span>                 :                :                              errdetail(&quot;Attribute \&quot;%s\&quot; of type %s does not match corresponding attribute of type %s.&quot;,</span>
+<span id="L233" title="Line 233: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     233</span>                 :                :                                        attname,</span>
+<span id="L234" title="Line 234: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     234</span>                 :                :                                        format_type_be(outdesc-&gt;tdtypeid),</span>
+<span id="L235" title="Line 235: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     235</span>                 :                :                                        format_type_be(indesc-&gt;tdtypeid))));</span>
+<span id="L236" title="Line 236: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L249" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L249" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     236</span>                 :<a href="#L249" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       43150 :                 attrMap-&gt;attnums[i] = inatt-&gt;attnum;</span></span>
+<span id="L237" title="Line 237: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     237</span>                 :<span class="tlaCBC">          43150 :                 break;</span></span>
+<span id="L238" title="Line 238: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     238</span>                 :                :             }</span>
+<span id="L239" title="Line 239: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     239</span>                 :                :         }</span>
+<span id="L240" title="Line 240: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org"> 1001 <a href="#L268" title="next CBC in &ldquo;alvherre@alvh.no-ip.org&rdquo; bin">alvherre@alvh.no-ip.</a> <span class="lineNum">     240</span>   [<span class="tlaCBC"> <a href="#L271" title="CBC: Branch 0 was taken 115 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L271" title="CBC: Branch 1 was taken 43150 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L241" title="UBC: Branch 2 was not taken" class="branchTla">-</a> </span><span class="tlaCBC"> <a href="#L271" title="CBC: Branch 3 was taken 115 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          43265 :         if (attrMap-&gt;attnums[i] == 0 &amp;&amp; !missing_ok)</span></span>
+<span id="L241" title="Line 241: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> <a href="#top" title="next UBC in &ldquo;(360..) days&rdquo; bin" class="tlaBgUBC">2078</a> </span><a href="#top" title="next UBC in &ldquo;michael@paquier.xyz&rdquo; bin" class="tlaBgUBC">michael@paquier.xyz</a><span title="michael@paquier.xyz 2078 days ago (bin 4: (360..) days)" class="tlaUBC tlaBgUBC"> </span> <span class="lineNum">     241</span>         [<span class="tlaUBC"> <a href="#L321" title="UBC: Branch 0 was not executed" class="branchTla">#</a> </span><span class="tlaUBC"> <a href="#L321" title="UBC: Branch 1 was not executed" class="branchTla">#</a> </span>]:<a href="#top" class="tlaBgUBC"  title="Next UBC group">UBC</a><span class="tlaUBC tlaBgUBC">           0 :             ereport(ERROR,</span></span>
+<span id="L242" title="Line 242: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     242</span>                 :                :                     (errcode(ERRCODE_DATATYPE_MISMATCH),</span>
+<span id="L243" title="Line 243: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     243</span>                 :                :                      errmsg(&quot;could not convert row type&quot;),</span>
+<span id="L244" title="Line 244: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     244</span>                 :                :                      errdetail(&quot;Attribute \&quot;%s\&quot; of type %s does not exist in type %s.&quot;,</span>
+<span id="L245" title="Line 245: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     245</span>                 :                :                                attname,</span>
+<span id="L246" title="Line 246: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     246</span>                 :                :                                format_type_be(outdesc-&gt;tdtypeid),</span>
+<span id="L247" title="Line 247: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     247</span>                 :                :                                format_type_be(indesc-&gt;tdtypeid))));</span>
+<span id="L248" title="Line 248: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     248</span>                 :                :     }</span>
+<span id="L249" title="Line 249: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L306" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L271" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     249</span>                 :<a href="#top" class="tlaBgCBC"  title="Next CBC group">CBC</a><span class="tlaCBC tlaBgCBC">       18892 :     return attrMap;</span></span>
+<span id="L250" title="Line 250: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     250</span>                 :                : }</span>
+<span id="L251" title="Line 251: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     251</span>                 :                : </span>
+<span id="L252" title="Line 252: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     252</span>                 :                : /*</span>
+<span id="L253" title="Line 253: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     253</span>                 :                :  * build_attrmap_by_name_if_req</span>
+<span id="L254" title="Line 254: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     254</span>                 :                :  *</span>
+<span id="L255" title="Line 255: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     255</span>                 :                :  * Returns mapping created by build_attrmap_by_name, or NULL if no</span>
+<span id="L256" title="Line 256: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     256</span>                 :                :  * conversion is required.  This is a convenience routine for</span>
+<span id="L257" title="Line 257: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     257</span>                 :                :  * convert_tuples_by_name() in tupconvert.c and other functions, but it</span>
+<span id="L258" title="Line 258: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     258</span>                 :                :  * can be used standalone.</span>
+<span id="L259" title="Line 259: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     259</span>                 :                :  */</span>
+<span id="L260" title="Line 260: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     260</span>                 :                : AttrMap *</span>
+<span id="L261" title="Line 261: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     261</span>                 :<span class="tlaCBC">           6856 : build_attrmap_by_name_if_req(TupleDesc indesc,</span></span>
+<span id="L262" title="Line 262: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     262</span>                 :                :                              TupleDesc outdesc,</span>
+<span id="L263" title="Line 263: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org">                           <span class="lineNum">     263</span>                 :                :                              bool missing_ok)</span>
+<span id="L264" title="Line 264: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     264</span>                 :                : {</span>
+<span id="L265" title="Line 265: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     265</span>                 :                :     AttrMap    *attrMap;</span>
+<span id="L266" title="Line 266: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     266</span>                 :                : </span>
+<span id="L267" title="Line 267: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     267</span>                 :                :     /* Verify compatibility and prepare attribute-number map */</span>
+<span id="L268" title="Line 268: commit ad86d159b6ab on 2022-11-29 by alvherre@alvh.no-ip.org"> 1001 <a href="#top" title="next CBC in &ldquo;alvherre@alvh.no-ip.org&rdquo; bin">alvherre@alvh.no-ip.</a> <span class="lineNum">     268</span>                 :<span class="tlaCBC">           6856 :     attrMap = build_attrmap_by_name(indesc, outdesc, missing_ok);</span></span>
+<span id="L269" title="Line 269: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     269</span>                 :                : </span>
+<span id="L270" title="Line 270: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     270</span>                 :                :     /* Check if the map has a one-to-one match */</span>
+<span id="L271" title="Line 271: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> 2078 <a href="#L309" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     271</span>         [<span class="tlaCBC"> <a href="#L295" title="CBC: Branch 0 was taken 5272 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L295" title="CBC: Branch 1 was taken 1584 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">           6856 :     if (check_attrmap_match(indesc, outdesc, attrMap))</span></span>
+<span id="L272" title="Line 272: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     272</span>                 :                :     {</span>
+<span id="L273" title="Line 273: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     273</span>                 :                :         /* Runtime conversion is not needed */</span>
+<span id="L274" title="Line 274: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     274</span>                 :<span class="tlaCBC">           5272 :         free_attrmap(attrMap);</span></span>
+<span id="L275" title="Line 275: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     275</span>                 :<span class="tlaCBC">           5272 :         return NULL;</span></span>
+<span id="L276" title="Line 276: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     276</span>                 :                :     }</span>
+<span id="L277" title="Line 277: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     277</span>                 :                : </span>
+<span id="L278" title="Line 278: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     278</span>                 :<span class="tlaCBC">           1584 :     return attrMap;</span></span>
+<span id="L279" title="Line 279: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     279</span>                 :                : }</span>
+<span id="L280" title="Line 280: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     280</span>                 :                : </span>
+<span id="L281" title="Line 281: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     281</span>                 :                : /*</span>
+<span id="L282" title="Line 282: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     282</span>                 :                :  * check_attrmap_match</span>
+<span id="L283" title="Line 283: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     283</span>                 :                :  *</span>
+<span id="L284" title="Line 284: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     284</span>                 :                :  * Check to see if the map is a one-to-one match, in which case we need</span>
+<span id="L285" title="Line 285: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     285</span>                 :                :  * not to do a tuple conversion, and the attribute map is not necessary.</span>
+<span id="L286" title="Line 286: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     286</span>                 :                :  */</span>
+<span id="L287" title="Line 287: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     287</span>                 :                : static bool</span>
+<span id="L288" title="Line 288: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     288</span>                 :<span class="tlaCBC">          11627 : check_attrmap_match(TupleDesc indesc,</span></span>
+<span id="L289" title="Line 289: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     289</span>                 :                :                     TupleDesc outdesc,</span>
+<span id="L290" title="Line 290: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     290</span>                 :                :                     AttrMap *attrMap)</span>
+<span id="L291" title="Line 291: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     291</span>                 :                : {</span>
+<span id="L292" title="Line 292: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     292</span>                 :                :     int         i;</span>
+<span id="L293" title="Line 293: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     293</span>                 :                : </span>
+<span id="L294" title="Line 294: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     294</span>                 :                :     /* no match if attribute numbers are not the same */</span>
+<span id="L295" title="Line 295: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     295</span>         [<span class="tlaCBC"> <a href="#L298" title="CBC: Branch 0 was taken 729 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L298" title="CBC: Branch 1 was taken 10898 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          11627 :     if (indesc-&gt;natts != outdesc-&gt;natts)</span></span>
+<span id="L296" title="Line 296: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     296</span>                 :<span class="tlaCBC">            729 :         return false;</span></span>
+<span id="L297" title="Line 297: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     297</span>                 :                : </span>
+<span id="L298" title="Line 298: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     298</span>         [<span class="tlaCBC"> <a href="#L306" title="CBC: Branch 0 was taken 25980 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L306" title="CBC: Branch 1 was taken 9995 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          35975 :     for (i = 0; i &lt; attrMap-&gt;maplen; i++)</span></span>
+<span id="L299" title="Line 299: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     299</span>                 :                :     {</span>
+<span id="L300" title="Line 300: commit 5983a4cffc31 on 2024-12-20 by drowley@postgresql.org">  <a href="#L312" title="next CBC in &ldquo;(30,360] days&rdquo; bin">249</a> <a href="#L312" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     300</span>                 :<span class="tlaCBC">          25980 :         CompactAttribute *inatt = TupleDescCompactAttr(indesc, i);</span></span>
+<span id="L301" title="Line 301: commit 5983a4cffc31 on 2024-12-20 by drowley@postgresql.org">                           <span class="lineNum">     301</span>                 :                :         CompactAttribute *outatt;</span>
+<span id="L302" title="Line 302: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     302</span>                 :                : </span>
+<span id="L303" title="Line 303: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     303</span>                 :                :         /*</span>
+<span id="L304" title="Line 304: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     304</span>                 :                :          * If the input column has a missing attribute, we need a conversion.</span>
+<span id="L305" title="Line 305: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     305</span>                 :                :          */</span>
+<span id="L306" title="Line 306: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org"> <a href="#L319" title="next CBC in &ldquo;(360..) days&rdquo; bin">2029</a> <a href="#top" title="next CBC in &ldquo;rhodiumtoad@postgresql.org&rdquo; bin">rhodiumtoad@postgres</a> <span class="lineNum">     306</span>         [<span class="tlaCBC"> <a href="#L309" title="CBC: Branch 0 was taken 25 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L309" title="CBC: Branch 1 was taken 25955 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          25980 :         if (inatt-&gt;atthasmissing)</span></span>
+<span id="L307" title="Line 307: commit bf6cc19e347d on 2020-02-05 by rhodiumtoad@postgresql.org">                           <span class="lineNum">     307</span>                 :<span class="tlaCBC">             25 :             return false;</span></span>
+<span id="L308" title="Line 308: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     308</span>                 :                : </span>
+<span id="L309" title="Line 309: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> 2078 <a href="#L319" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     309</span>         [<span class="tlaCBC"> <a href="#L319" title="CBC: Branch 0 was taken 25047 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L319" title="CBC: Branch 1 was taken 908 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">          25955 :         if (attrMap-&gt;attnums[i] == (i + 1))</span></span>
+<span id="L310" title="Line 310: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     310</span>                 :<span class="tlaCBC">          25047 :             continue;</span></span>
+<span id="L311" title="Line 311: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     311</span>                 :                : </span>
+<span id="L312" title="Line 312: commit 5983a4cffc31 on 2024-12-20 by drowley@postgresql.org">  <a href="#L322" title="next CBC in &ldquo;(30,360] days&rdquo; bin">249</a> <a href="#L322" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     312</span>                 :<span class="tlaCBC">            908 :         outatt = TupleDescCompactAttr(outdesc, i);</span></span>
+<span id="L313" title="Line 313: commit 5983a4cffc31 on 2024-12-20 by drowley@postgresql.org">                           <span class="lineNum">     313</span>                 :                : </span>
+<span id="L314" title="Line 314: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     314</span>                 :                :         /*</span>
+<span id="L315" title="Line 315: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     315</span>                 :                :          * If it's a dropped column and the corresponding input column is also</span>
+<span id="L316" title="Line 316: commit db448ce5ad36 on 2024-12-21 by drowley@postgresql.org">                           <span class="lineNum">     316</span>                 :                :          * dropped, we don't need a conversion.  However, attlen and</span>
+<span id="L317" title="Line 317: commit db448ce5ad36 on 2024-12-21 by drowley@postgresql.org">                           <span class="lineNum">     317</span>                 :                :          * attalignby must agree.</span>
+<span id="L318" title="Line 318: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     318</span>                 :                :          */</span>
+<span id="L319" title="Line 319: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#L323" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#L323" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     319</span>         [<span class="tlaCBC"> <a href="#L320" title="CBC: Branch 0 was taken 46 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L320" title="CBC: Branch 1 was taken 862 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">            908 :         if (attrMap-&gt;attnums[i] == 0 &amp;&amp;</span></span>
+<span id="L320" title="Line 320: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     320</span>         [<span class="tlaCBC"> <a href="#L321" title="CBC: Branch 0 was taken 30 times" class="branchTla">+</a> </span><span class="tlaCBC"> <a href="#L321" title="CBC: Branch 1 was taken 16 times" class="branchTla">+</a> </span>]:<span class="tlaCBC">             46 :             inatt-&gt;attisdropped &amp;&amp;</span></span>
+<span id="L321" title="Line 321: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     321</span>         [<span class="tlaCBC"> <a href="#L322" title="CBC: Branch 0 was taken 30 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#L322" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">             30 :             inatt-&gt;attlen == outatt-&gt;attlen &amp;&amp;</span></span>
+<span id="L322" title="Line 322: commit db448ce5ad36 on 2024-12-21 by drowley@postgresql.org">  <a href="#top" title="next CBC in &ldquo;(30,360] days&rdquo; bin">248</a> <a href="#top" title="next CBC in &ldquo;drowley@postgresql.org&rdquo; bin">drowley@postgresql.o</a> <span class="lineNum">     322</span>         [<span class="tlaCBC"> <a href="#top" title="CBC: Branch 0 was taken 30 times" class="branchTla">+</a> </span><span class="tlaUBC"> <a href="#top" title="UBC: Branch 1 was not taken" class="branchTla">-</a> </span>]:<span class="tlaCBC">             30 :             inatt-&gt;attalignby == outatt-&gt;attalignby)</span></span>
+<span id="L323" title="Line 323: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz"> <a href="#top" title="next CBC in &ldquo;(360..) days&rdquo; bin">2078</a> <a href="#top" title="next CBC in &ldquo;michael@paquier.xyz&rdquo; bin">michael@paquier.xyz</a>  <span class="lineNum">     323</span>                 :<span class="tlaCBC">             30 :             continue;</span></span>
+<span id="L324" title="Line 324: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     324</span>                 :                : </span>
+<span id="L325" title="Line 325: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     325</span>                 :<span class="tlaCBC">            878 :         return false;</span></span>
+<span id="L326" title="Line 326: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     326</span>                 :                :     }</span>
+<span id="L327" title="Line 327: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     327</span>                 :                : </span>
+<span id="L328" title="Line 328: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     328</span>                 :<span class="tlaCBC">           9995 :     return true;</span></span>
+<span id="L329" title="Line 329: commit e1551f96e643 on 2019-12-18 by michael@paquier.xyz">                           <span class="lineNum">     329</span>                 :                : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

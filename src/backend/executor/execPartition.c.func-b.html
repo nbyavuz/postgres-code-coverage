@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/executor/execPartition.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../index.html" title="Click to go to directory src">src</a>/<a href="../index.html" title="Click to go to directory backend">backend</a>/<a href="index.html" title="Click to go to directory executor">executor</a> - execPartition.c<span style="font-size: 80%;"> (<a href="execPartition.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">96.6&nbsp;%</td>
+            <td class="headerCovTableEntry">686</td>
+            <td class="headerCovTableEntry">663</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntry">663</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">18</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">80.8&nbsp;%</td>
+            <td class="headerCovTableEntry">474</td>
+            <td class="headerCovTableEntry">383</td>
+            <td class="headerCovTableEntry">91</td>
+            <td class="headerCovTableEntry">383</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">98.7&nbsp;%</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry">75</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">75</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">96.4&nbsp;%</td>
+            <td class="headerCovTableEntry">610</td>
+            <td class="headerCovTableEntry">588</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">588</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">14</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">83.9&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">47</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">47</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">80.4&nbsp;%</td>
+            <td class="headerCovTableEntry">418</td>
+            <td class="headerCovTableEntry">336</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry">336</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="execPartition.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="execPartition.c.func-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="execPartition.c.func-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L496">ExecInitPartitionInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3166</td>
+              <td class=coverPerHi>97.9&nbsp;% (139 / 142)</td>
+              <td class=coverPerMed>75.4&nbsp;% (86 / 114)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1295">FormPartitionKeyDatum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">562988</td>
+              <td class=coverPerMed>89.5&nbsp;% (17 / 19)</td>
+              <td class=coverPerLo>58.3&nbsp;% (14 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L263">ExecFindPartition</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">506757</td>
+              <td class=coverPerHi>100.0&nbsp;% (64 / 64)</td>
+              <td class=coverPerMed>82.0&nbsp;% (41 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1967">CreatePartitionPruneState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">399</td>
+              <td class=coverPerHi>96.7&nbsp;% (87 / 90)</td>
+              <td class=coverPerMed>86.5&nbsp;% (45 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1717">adjust_partition_colnos_using_map</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>56.2&nbsp;% (9 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1873">ExecInitPartitionExecPruning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">399</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L987">ExecInitRoutingInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3413</td>
+              <td class=coverPerHi>100.0&nbsp;% (39 / 39)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L2334">InitExecPartitionPruneContexts</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">197</td>
+              <td class=coverPerHi>100.0&nbsp;% (50 / 50)</td>
+              <td class=coverPerMed>85.3&nbsp;% (29 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1392">get_partition_for_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">562967</td>
+              <td class=coverPerHi>96.9&nbsp;% (63 / 65)</td>
+              <td class=coverPerMed>87.5&nbsp;% (35 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1612">ExecBuildSlotPartitionKeyDescription</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">77</td>
+              <td class=coverPerMed>86.7&nbsp;% (26 / 30)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L2491">ExecFindMatchingSubPlans</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1946</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1095">ExecInitPartitionDispatchInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3091</td>
+              <td class=coverPerMed>85.7&nbsp;% (42 / 49)</td>
+              <td class=coverPerMed>88.9&nbsp;% (16 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L2232">InitPartitionPruneContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">528</td>
+              <td class=coverPerHi>100.0&nbsp;% (35 / 35)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1234">ExecCleanupTupleRouting</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2116</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1700">adjust_partition_colnos</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">38</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L1817">ExecDoInitialPruning</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">281088</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L2564">find_matching_subplans_recurse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2174</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="execPartition.c.gcov.html#L216">ExecSetupPartitionTupleRouting</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2509</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

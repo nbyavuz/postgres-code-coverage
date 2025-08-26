@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/storage/lmgr/predicate.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory storage">storage</a>/<a href="index.html" title="Click to go to directory lmgr">lmgr</a> - predicate.c<span style="font-size: 80%;"> (<a href="predicate.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadLBC" title="Lost Baseline Coverage (1 => 0):
+Unchanged code is no longer tested">LBC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadDUB" title="Deleted Uncovered Baseline (0 => -):
+Previously untested code has been deleted">DUB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">73.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1462</td>
+            <td class="headerCovTableEntry">1067</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">362</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">1060</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">3</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">90.3&nbsp;%</td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="headerCovTableEntry">65</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">55.8&nbsp;%</td>
+            <td class="headerCovTableEntry">1104</td>
+            <td class="headerCovTableEntry">616</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">475</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">613</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">68.8&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="tlaUNC">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">73.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1446</td>
+            <td class="headerCovTableEntry">1056</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">31</td>
+            <td class="headerCovTableEntry">359</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1052</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.3&nbsp;%</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">56.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1100</td>
+            <td class="headerCovTableEntry">616</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="tlaLBC">13</td>
+            <td class="headerCovTableEntry">471</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">613</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="predicate.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="predicate.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="predicate.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4788">AtPrepare_PredicateLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">298</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L5054">AttachSerializableXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1371</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2324">CheckAndPromotePredicateLockRequest</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4210</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4334">CheckForSerializableConflictIn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16419301</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4021">CheckForSerializableConflictOut</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">566</td>
+              <td class=coverPerLo>63.5&nbsp;% (33 / 52)</td>
+              <td class=coverPerLo>42.6&nbsp;% (23 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3989">CheckForSerializableConflictOutNeeded</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32669253</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1039">CheckPointPredicate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1692</td>
+              <td class=coverPerLo>33.3&nbsp;% (5 / 15)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4417">CheckTableForSerializableConflictIn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23511</td>
+              <td class=coverPerLo>72.4&nbsp;% (21 / 29)</td>
+              <td class=coverPerLo>50.0&nbsp;% (12 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4164">CheckTargetForConflictsIn</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7478</td>
+              <td class=coverPerHi>96.6&nbsp;% (56 / 58)</td>
+              <td class=coverPerLo>70.5&nbsp;% (31 / 44)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3695">ClearOldPredicateLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">855</td>
+              <td class=coverPerLo>54.2&nbsp;% (26 / 48)</td>
+              <td class=coverPerLo>54.2&nbsp;% (13 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2109">CoarserLockCovers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26031</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1938">CreateLocalPredicateLockHash</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1543</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L580">CreatePredXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2686</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2451">CreatePredicateLock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4210</td>
+              <td class=coverPerHi>92.3&nbsp;% (24 / 26)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2389">DecrementParentLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1380</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>64.3&nbsp;% (9 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2212">DeleteChildTargetLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2344</td>
+              <td class=coverPerHi>100.0&nbsp;% (27 / 27)</td>
+              <td class=coverPerMed>76.9&nbsp;% (20 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2667">DeleteLockTarget</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2935">DropAllPredicateLocksFromTable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16659</td>
+              <td class=coverPerLo>47.8&nbsp;% (32 / 67)</td>
+              <td class=coverPerLo>28.3&nbsp;% (17 / 60)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4499">FlagRWConflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">860</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L697">FlagSxactUnsafe</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerLo>58.3&nbsp;% (7 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2070">GetParentPredicateLockTag</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45149</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1443">GetPredicateLockStatusData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">227</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1556">GetSafeSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerLo>68.8&nbsp;% (11 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1626">GetSafeSnapshotBlockingPids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">788</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1680">GetSerializableTransactionSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1640</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1762">GetSerializableTransactionSnapshotInt</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1641</td>
+              <td class=coverPerMed>83.8&nbsp;% (57 / 68)</td>
+              <td class=coverPerLo>60.0&nbsp;% (30 / 50)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2287">MaxPredicateChildLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5384</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4534">OnConflict_CheckForSerializationFailure</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">860</td>
+              <td class=coverPerHi>91.3&nbsp;% (42 / 46)</td>
+              <td class=coverPerLo>69.7&nbsp;% (46 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2006">PageIsPredicateLocked</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4857">PostPrepare_PredicateLocks</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">298</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L4701">PreCommit_CheckForSerializationFailure</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">292073</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerLo>73.5&nbsp;% (25 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2515">PredicateLockAcquire</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">26231</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2043">PredicateLockExists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">77190</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2597">PredicateLockPage</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8682184</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3227">PredicateLockPageCombine</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2749</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3142">PredicateLockPageSplit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29890</td>
+              <td class=coverPerLo>27.8&nbsp;% (5 / 18)</td>
+              <td class=coverPerLo>18.8&nbsp;% (3 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2574">PredicateLockRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">349988</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1143">PredicateLockShmemInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (77 / 77)</td>
+              <td class=coverPerLo>59.1&nbsp;% (13 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1355">PredicateLockShmemSize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1941</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2619">PredicateLockTID</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15119327</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L496">PredicateLockingNeededForRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">154293</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L608">RWConflictExists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2648</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1957">RegisterPredicateLockingXid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">128901</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3833">ReleaseOneSerializableXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1540</td>
+              <td class=coverPerLo>62.3&nbsp;% (38 / 61)</td>
+              <td class=coverPerLo>50.0&nbsp;% (26 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L594">ReleasePredXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1641</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3310">ReleasePredicateLocks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">317988</td>
+              <td class=coverPerHi>97.5&nbsp;% (117 / 120)</td>
+              <td class=coverPerMed>82.2&nbsp;% (125 / 152)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3677">ReleasePredicateLocksLocal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5648</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L689">ReleaseRWConflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">913</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2138">RemoveScratchTarget</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2181">RemoveTargetIfNoLongerUsed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4204</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2159">RestoreScratchTarget</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">35</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L856">SerialAdd</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 33)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L947">SerialGetMinConflictCommitSeqNo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerLo>50.0&nbsp;% (8 / 16)</td>
+              <td class=coverPerLo>20.0&nbsp;% (2 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L804">SerialInit</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerLo>50.0&nbsp;% (2 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L729">SerialPagePrecedesLogically</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42845</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L745">SerialPagePrecedesLogicallyUnitTests</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1045</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L988">SerialSetActiveSerXmin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1690</td>
+              <td class=coverPerLo>64.7&nbsp;% (11 / 17)</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L514">SerializationNeededForRead</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56821318</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L558">SerializationNeededForWrite</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16419413</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3249">SetNewSxactGlobalXmin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">855</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L664">SetPossibleUnsafeConflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">133</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L641">SetRWConflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">780</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1720">SetSerializableTransactionSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13</td>
+              <td class=coverPerLo>57.1&nbsp;% (4 / 7)</td>
+              <td class=coverPerLo>20.0&nbsp;% (2 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L5045">ShareSerializableXact</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">456</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1501">SummarizeOldestCommittedSxact</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 11)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3121">TransferPredicateLocksToHeapRelation</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">16659</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L2728">TransferPredicateLocksToNewTarget</a></td>
+              <td class="tlaLBC">LBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 71)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 46)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L3970">XidIsConcurrent</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">532</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L845">check_serial_buffers</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1083</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="predicate.c.gcov.html#L1417">predicatelock_hash</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/jsonpath_exec.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - jsonpath_exec.c<span style="font-size: 80%;"> (<a href="jsonpath_exec.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1667</td>
+            <td class="headerCovTableEntry">1539</td>
+            <td class="headerCovTableEntry">128</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1537</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">95.3&nbsp;%</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryMed">76.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1249</td>
+            <td class="headerCovTableEntry">955</td>
+            <td class="headerCovTableEntry">294</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">955</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1660</td>
+            <td class="headerCovTableEntry">1532</td>
+            <td class="headerCovTableEntry">128</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1532</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">95.3&nbsp;%</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="10">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">75.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1259</td>
+            <td class="headerCovTableEntry">955</td>
+            <td class="headerCovTableEntry">294</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">955</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="jsonpath_exec.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="jsonpath_exec.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="jsonpath_exec.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L743">executeItemOptUnwrapTarget</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">301708</td>
+              <td class=coverPerHi>96.8&nbsp;% (390 / 403)</td>
+              <td class=coverPerMed>80.2&nbsp;% (345 / 430)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2336">executeDateTimeMethod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4242</td>
+              <td class=coverPerHi>90.5&nbsp;% (171 / 189)</td>
+              <td class=coverPerLo>62.6&nbsp;% (92 / 147)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3720">compareDatetime</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1812</td>
+              <td class=coverPerMed>84.3&nbsp;% (70 / 83)</td>
+              <td class=coverPerLo>55.8&nbsp;% (24 / 43)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3271">compareStrings</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1728</td>
+              <td class=coverPerLo>22.2&nbsp;% (4 / 18)</td>
+              <td class=coverPerLo>11.1&nbsp;% (2 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3046">JsonItemFromDatum</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">1296</td>
+              <td class=coverPerLo>46.3&nbsp;% (25 / 54)</td>
+              <td class=coverPerLo>33.3&nbsp;% (6 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4002">JsonPathValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1118</td>
+              <td class=coverPerHi>90.6&nbsp;% (29 / 32)</td>
+              <td class=coverPerLo>73.7&nbsp;% (28 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2173">executeUnaryArithmExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93</td>
+              <td class=coverPerMed>88.9&nbsp;% (24 / 27)</td>
+              <td class=coverPerLo>73.1&nbsp;% (19 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4087">GetJsonTableExecContext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3640</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3908">JsonPathQuery</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1230</td>
+              <td class=coverPerHi>96.9&nbsp;% (31 / 32)</td>
+              <td class=coverPerMed>83.3&nbsp;% (30 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3338">compareItems</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10845</td>
+              <td class=coverPerHi>92.9&nbsp;% (52 / 56)</td>
+              <td class=coverPerMed>83.3&nbsp;% (30 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1774">executeBoolItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">89277</td>
+              <td class=coverPerHi>94.7&nbsp;% (54 / 57)</td>
+              <td class=coverPerMed>81.8&nbsp;% (27 / 33)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2817">executeKeyValueMethod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">42</td>
+              <td class=coverPerHi>98.0&nbsp;% (49 / 50)</td>
+              <td class=coverPerMed>78.6&nbsp;% (22 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2102">executeBinaryArithmExpr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">327</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerMed>82.1&nbsp;% (23 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1671">executeItemUnwrapTargetArray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1511</td>
+              <td class=coverPerLo>60.0&nbsp;% (3 / 5)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4108">JsonTableInitOpaque</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">263</td>
+              <td class=coverPerHi>100.0&nbsp;% (26 / 26)</td>
+              <td class=coverPerMed>77.8&nbsp;% (14 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3611">JsonbType</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">142546</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2295">executeNumericItemMethod</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">129</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3138">getJsonPathVariable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3930</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4290">JsonTablePlanNextRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2096</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4379">JsonTableResetNestedPlan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">305</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1931">executeAnyItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1820</td>
+              <td class=coverPerHi>97.1&nbsp;% (34 / 35)</td>
+              <td class=coverPerHi>92.9&nbsp;% (39 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3456">getArrayIndex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">258</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2955">getJsonPathItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30432</td>
+              <td class=coverPerHi>91.3&nbsp;% (21 / 23)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2988">GetJsonPathVar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1305</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3222">JsonbArraySize</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">273</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L452">jsonb_path_match_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48957</td>
+              <td class=coverPerHi>100.0&nbsp;% (22 / 22)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3885">JsonPathExists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4190">JsonTableInitPlan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">514</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4250">JsonTableResetRowPattern</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">499</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3530">JsonValueListIsEmpty</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3663">checkTimezoneIsUsedForCast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">675</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3200">countVariablesFromJsonb</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">96243</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1722">executeItemOptUnwrapResult</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99777</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L675">executeJsonPath</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99381</td>
+              <td class=coverPerHi>100.0&nbsp;% (25 / 25)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2264">executeLikeRegex</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">198</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1691">executeNextItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">219668</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2240">executeStartsWith</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">87</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3635">getScalar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5625</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L395">jsonb_path_exists_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43032</td>
+              <td class=coverPerHi>100.0&nbsp;% (15 / 15)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4451">JsonTableGetValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2342</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4408">JsonTablePlanJoinNextRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">459</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4317">JsonTablePlanScanNextRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1637</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3510">JsonValueListAppend</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">138435</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3542">JsonValueListGetList</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1368</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3536">JsonValueListHead</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">53951</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3551">JsonValueListInitIterator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">103690</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3524">JsonValueListLength</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54305</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3577">JsonValueListNext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">163037</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2927">appendBoolResult</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">51087</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3250">binaryCompareStrings</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1728</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L2022">executePredicate</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29823</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerHi>100.0&nbsp;% (28 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3170">getJsonPathVariableFromJsonb</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2625</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L620">jsonb_path_query_first_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2187</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L522">jsonb_path_query_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3708</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3491">setBaseObject</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">109350</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3646">wrapItemsInArray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">219</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3033">CountJsonPathVars</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3138</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4173">JsonTableDestroyOpaque</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">263</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4435">JsonTableFetchRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">775</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L4237">JsonTableSetDocument</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">260</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3503">JsonValueListClear</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">508</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3598">JsonbInitBinary</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99153</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3128">JsonbValueInitNumericDatum</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1245</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3675">castTimeToTimeTz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">126</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3687">cmpDateToTimestamp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">93</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3696">cmpDateToTimestampTz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3707">cmpTimestampToTimestampTz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">126</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3434">compareNumeric</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1968</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3442">copyJsonbValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">61204</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L3239">executeComparison</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10845</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L731">executeItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">297616</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1757">executeItemOptUnwrapResultNoThrow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99033</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L1910">executeNestedBoolItem</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11274</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L423">jsonb_path_exists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L440">jsonb_path_exists_opr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">43005</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L429">jsonb_path_exists_tz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L493">jsonb_path_match</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L510">jsonb_path_match_opr</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48894</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L499">jsonb_path_match_tz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L570">jsonb_path_query</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2955</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L603">jsonb_path_query_array</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L587">jsonb_path_query_array_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">33</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L609">jsonb_path_query_array_tz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L639">jsonb_path_query_first</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2187</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L645">jsonb_path_query_first_tz</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#L576">jsonb_path_query_tz</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">753</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

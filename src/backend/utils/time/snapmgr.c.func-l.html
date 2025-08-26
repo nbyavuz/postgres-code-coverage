@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/time/snapmgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory time">time</a> - snapmgr.c<span style="font-size: 80%;"> (<a href="snapmgr.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">87.4&nbsp;%</td>
+            <td class="headerCovTableEntry">564</td>
+            <td class="headerCovTableEntry">493</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry">493</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">49</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">55.3&nbsp;%</td>
+            <td class="headerCovTableEntry">434</td>
+            <td class="headerCovTableEntry">240</td>
+            <td class="headerCovTableEntry">194</td>
+            <td class="headerCovTableEntry">240</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">87.7&nbsp;%</td>
+            <td class="headerCovTableEntry">560</td>
+            <td class="headerCovTableEntry">491</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntry">491</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">49</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="6">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">55.6&nbsp;%</td>
+            <td class="headerCovTableEntry">432</td>
+            <td class="headerCovTableEntry">240</td>
+            <td class="headerCovTableEntry">192</td>
+            <td class="headerCovTableEntry">240</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="snapmgr.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="snapmgr.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="snapmgr.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1383">ImportSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">24</td>
+              <td class=coverPerLo>72.6&nbsp;% (45 / 62)</td>
+              <td class=coverPerLo>34.2&nbsp;% (26 / 76)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1111">ExportSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerMed>80.8&nbsp;% (42 / 52)</td>
+              <td class=coverPerLo>33.3&nbsp;% (12 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1732">SerializeSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1088</td>
+              <td class=coverPerMed>76.2&nbsp;% (16 / 21)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1789">RestoreSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3387</td>
+              <td class=coverPerMed>87.1&nbsp;% (27 / 31)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L507">SetTransactionSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1583</td>
+              <td class=coverPerMed>88.9&nbsp;% (32 / 36)</td>
+              <td class=coverPerLo>56.7&nbsp;% (17 / 30)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1012">AtEOXact_Snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">318657</td>
+              <td class=coverPerMed>89.7&nbsp;% (26 / 29)</td>
+              <td class=coverPerLo>61.8&nbsp;% (21 / 34)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1583">DeleteAllExportedSnapshotFiles</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">204</td>
+              <td class=coverPerLo>72.7&nbsp;% (8 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1708">EstimateSnapshotSpace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1255</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L269">GetTransactionSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">834747</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              <td class=coverPerLo>60.0&nbsp;% (12 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1303">parseIntFromText</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">126</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1353">parseVxidFromText</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1328">parseXidFromText</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerMed>76.9&nbsp;% (10 / 13)</td>
+              <td class=coverPerLo>25.0&nbsp;% (3 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1622">ThereAreNoPriorRegisteredSnapshots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerLo>60.0&nbsp;% (3 / 5)</td>
+              <td class=coverPerLo>16.7&nbsp;% (1 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1868">XidInMVCCSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">69791918</td>
+              <td class=coverPerHi>90.5&nbsp;% (19 / 21)</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L957">AtSubCommit_Snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4444</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerMed>75.0&nbsp;% (3 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L351">GetLatestSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">76257</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1640">HaveRegisteredOrActiveSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4817239</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L833">RegisterSnapshotOnOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6851940</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L875">UnregisterSnapshotFromOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6822593</td>
+              <td class=coverPerMed>80.0&nbsp;% (4 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L740">UpdateActiveSnapshotCommandId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">55112</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerLo>50.0&nbsp;% (6 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L808">ActiveSnapshotSet</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">682226</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L978">AtSubAbort_Snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4673</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L604">CopySnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7154284</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L660">FreeSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7130230</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L796">GetActiveSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1229053</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L382">GetCatalogSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6239539</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L404">GetNonHistoricCatalogSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6225975</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1688">HistoricSnapshotActive</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8997116</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1694">HistoricSnapshotGetTupleCids</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">803</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L452">InvalidateCatalogSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">13859499</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L473">InvalidateCatalogSnapshotConditionally</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">387112</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L771">PopActiveSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1034388</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L678">PushActiveSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">915792</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L692">PushActiveSnapshotWithLevel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1061696</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerMed>75.0&nbsp;% (9 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L728">PushCopiedSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57028</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L820">RegisterSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7422380</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1967">ResOwnerReleaseSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">29347</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L237">ResourceOwnerForgetSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6822593</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L232">ResourceOwnerRememberSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6851940</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1852">RestoreTransactionSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1565</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1665">SetupHistoricSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4556</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L933">SnapshotResetXmin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8436376</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L486">SnapshotSetCommandId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">595511</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1681">TeardownHistoricSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4549</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L862">UnregisterSnapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7343206</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L885">UnregisterSnapshotNoOwner</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6851940</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1570">XactHasExportedSnapshots</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">314</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L1288">pg_export_snapshot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="snapmgr.c.gcov.html#L906">xmin_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6562374</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/utils/adt/xml.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory utils">utils</a>/<a href="index.html" title="Click to go to directory adt">adt</a> - xml.c<span style="font-size: 80%;"> (<a href="xml.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+            <td width="5%" class="headerCovTableHeadEUB" title="Excluded Uncovered Baseline (0 => #):
+Previously untested code is unused now">EUB</td>
+            <td width="5%" class="headerCovTableHeadECB" title="Excluded Covered Baseline (1 => #):
+Previously tested code is unused now">ECB</td>
+            <td width="5%" class="headerCovTableHeadDCB" title="Deleted Covered Baseline (1 => -):
+Previously tested code has been deleted">DCB</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryMed">82.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1767</td>
+            <td class="headerCovTableEntry">1454</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">301</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">1426</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">87.6&nbsp;%</td>
+            <td class="headerCovTableEntry">105</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">60.3&nbsp;%</td>
+            <td class="headerCovTableEntry">1399</td>
+            <td class="headerCovTableEntry">844</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">536</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">827</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">67.1&nbsp;%</td>
+            <td class="headerCovTableEntry">79</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="tlaUNC">12</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">82.9&nbsp;%</td>
+            <td class="headerCovTableEntry">1677</td>
+            <td class="headerCovTableEntry">1390</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">287</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1388</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryMed">87.6&nbsp;%</td>
+            <td class="headerCovTableEntry">105</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">13</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="12">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(7,30] days:</td>
+            <td class="headerCovTableEntryHi">90.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="tlaUNC">19</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">57.5&nbsp;%</td>
+            <td class="headerCovTableEntry">1403</td>
+            <td class="headerCovTableEntry">807</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">526</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">807</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="xml.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="xml.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><a href="xml.c.func-b.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></a></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2879">database_get_xml_visible_schemas</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2886">database_get_xml_visible_tables</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3436">database_to_xml</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3503">database_to_xml_and_xmlschema</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3393">database_to_xml_internal</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 17)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3491">database_to_xmlschema</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3448">database_to_xmlschema_internal</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 16)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3731">map_sql_catalog_to_xmlschema_types</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 17)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L249">xmlChar_to_encoding</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 5)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L369">xml_recv</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 20)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L436">xml_send</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L666">xmltotext</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1156">xmlvalidate</a></td>
+              <td class="tlaUBC">UBC</td>
+              <td class="coverFnLo">0</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              <td class=coverPerLo>0.0&nbsp;% (0 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2313">errdetail_for_xml_code</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerLo>25.0&nbsp;% (6 / 24)</td>
+              <td class=coverPerLo>14.3&nbsp;% (1 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3182">query_to_xml_and_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3102">query_to_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3365">schema_to_xml_and_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2936">query_to_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L657">texttoxml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2950">cursor_to_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>95.2&nbsp;% (20 / 21)</td>
+              <td class=coverPerLo>70.0&nbsp;% (7 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3131">cursor_to_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerMed>85.7&nbsp;% (12 / 14)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3261">schema_to_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3352">schema_to_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4679">xml_is_well_formed_content</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4666">xml_is_well_formed_document</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">6</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2059">xml_ereport</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>60.0&nbsp;% (6 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4833">XmlTableSetNamespace</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3658">map_sql_schema_to_xmlschema_types</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3218">schema_to_xml_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3307">schema_to_xmlschema_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2041">xmlPgEntityLoader</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2766">_SPI_strdup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3161">table_to_xml_and_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1166">xml_is_document</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3083">table_to_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L525">xmltext</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">15</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2823">query_to_oid_list</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>90.9&nbsp;% (10 / 11)</td>
+              <td class=coverPerLo>50.0&nbsp;% (4 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2852">schema_get_xml_visible_tables</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2922">table_to_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L489">xmlcomment</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">21</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1100">xmlroot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1048">xmlpi</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">36</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L472">cstring_to_xmltype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3553">map_sql_table_to_xmlschema</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">39</td>
+              <td class=coverPerHi>97.4&nbsp;% (38 / 39)</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4653">xml_is_well_formed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">45</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3893">map_sql_typecoll_to_xmlschema_types</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (18 / 18)</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2905">table_to_xml_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3300">xsd_schema_element_end</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3283">xsd_schema_element_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3038">query_to_xml_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4635">wellformed_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">57</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1377">pg_xml_error_occurred</a></td>
+              <td class="tlaGBC">GBC</td>
+              <td class="coverFnHi">58</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4565">xpath</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">63</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2473">map_xml_name_to_sql_identifier</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">64</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>62.5&nbsp;% (10 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L457">appendStringInfoText</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">66</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1030">xmlparse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">71</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L676">xmltotext_with_options</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerLo>70.5&nbsp;% (55 / 78)</td>
+              <td class=coverPerLo>61.0&nbsp;% (50 / 82)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4193">xml_xmlnodetoxmltype</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">96</td>
+              <td class=coverPerMed>84.6&nbsp;% (33 / 39)</td>
+              <td class=coverPerLo>58.3&nbsp;% (21 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4588">xmlexists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1412">xml_pnstrdup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2096">xml_errsave</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">102</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (5 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4611">xpath_exists</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">117</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3031">xmldata_root_element_end</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">119</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3004">xmldata_root_element_start</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">119</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4859">XmlTableSetRowFilter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">129</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L5123">XmlTableDestroyOpaque</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132</td>
+              <td class=coverPerHi>100.0&nbsp;% (21 / 21)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4728">XmlTableInitOpaque</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              <td class=coverPerLo>40.0&nbsp;% (4 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4776">XmlTableSetDocument</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">132</td>
+              <td class=coverPerLo>69.2&nbsp;% (18 / 26)</td>
+              <td class=coverPerLo>37.5&nbsp;% (6 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4123">SPI_sql_row_to_xmlelement</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">156</td>
+              <td class=coverPerHi>100.0&nbsp;% (23 / 23)</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2125">xml_errorHandler</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">175</td>
+              <td class=coverPerHi>90.0&nbsp;% (54 / 60)</td>
+              <td class=coverPerLo>54.8&nbsp;% (23 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3522">map_multipart_sql_identifier_to_xml_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">192</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4290">xml_xpathobjtoxmlarray</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">270</td>
+              <td class=coverPerMed>88.6&nbsp;% (31 / 35)</td>
+              <td class=coverPerLo>68.4&nbsp;% (13 / 19)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3948">map_sql_type_to_xmlschema_type</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">273</td>
+              <td class=coverPerMed>80.9&nbsp;% (55 / 68)</td>
+              <td class=coverPerLo>68.6&nbsp;% (24 / 35)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2361">appendStringInfoLineSeparator</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">275</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4368">xpath_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">279</td>
+              <td class=coverPerMed>87.7&nbsp;% (71 / 81)</td>
+              <td class=coverPerLo>57.1&nbsp;% (40 / 70)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4891">XmlTableSetColumnFilter</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">387</td>
+              <td class=coverPerMed>81.8&nbsp;% (9 / 11)</td>
+              <td class=coverPerLo>41.7&nbsp;% (5 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L3788">map_sql_type_to_xml_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">405</td>
+              <td class=coverPerMed>82.9&nbsp;% (63 / 76)</td>
+              <td class=coverPerLo>69.4&nbsp;% (25 / 36)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2350">chopStringInfoNewlines</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">414</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L271">xml_in</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">428</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1709">xml_doctype_in_content</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">487</td>
+              <td class=coverPerMed>88.0&nbsp;% (22 / 25)</td>
+              <td class=coverPerMed>79.2&nbsp;% (19 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1785">xml_parse</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">640</td>
+              <td class=coverPerHi>95.7&nbsp;% (67 / 70)</td>
+              <td class=coverPerMed>82.1&nbsp;% (46 / 56)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1970">xml_text2xmlChar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">715</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1424">pg_xmlCharStrndup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1212</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2392">is_valid_xml_namefirst</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1819</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class=coverPerLo>40.0&nbsp;% (16 / 40)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2417">map_sql_identifier_to_xml_name</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1826</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              <td class=coverPerMed>81.2&nbsp;% (26 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2401">is_valid_xml_namechar</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7321</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (32 / 64)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2373">sqlchar_to_unicode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9140</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              <td class=coverPerLo>50.0&nbsp;% (1 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L639">xmlconcat2</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11149</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L573">xmlconcat</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11161</td>
+              <td class=coverPerHi>93.1&nbsp;% (27 / 29)</td>
+              <td class=coverPerMed>79.2&nbsp;% (19 / 24)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L892">xmlelement</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">11227</td>
+              <td class=coverPerMed>77.0&nbsp;% (47 / 61)</td>
+              <td class=coverPerLo>68.6&nbsp;% (48 / 70)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L465">stringinfo_to_xmltype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11286</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L480">xmlBuffer_to_xmltype</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11335</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4926">XmlTableFetchRow</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11518</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L354">xml_out</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11685</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L310">xml_out_internal</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11817</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1643">print_xml_decl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">11850</td>
+              <td class=coverPerHi>94.1&nbsp;% (16 / 17)</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1329">pg_xml_done</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12379</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerLo>30.0&nbsp;% (3 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1248">pg_xml_init</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12379</td>
+              <td class=coverPerHi>93.8&nbsp;% (15 / 16)</td>
+              <td class=coverPerLo>25.0&nbsp;% (1 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1470">parse_xml_decl</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">34989</td>
+              <td class=coverPerMed>86.5&nbsp;% (77 / 89)</td>
+              <td class=coverPerLo>48.6&nbsp;% (101 / 208)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1202">pg_xml_init_library</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">47368</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2734">escape_xml</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56422</td>
+              <td class=coverPerLo>70.0&nbsp;% (14 / 20)</td>
+              <td class=coverPerLo>66.7&nbsp;% (6 / 9)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L1441">xml_pstrdup_and_free</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">56429</td>
+              <td class=coverPerMed>77.8&nbsp;% (7 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L2515">map_sql_value_to_xml_value</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67476</td>
+              <td class=coverPerMed>83.1&nbsp;% (69 / 83)</td>
+              <td class=coverPerLo>56.5&nbsp;% (35 / 62)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4971">XmlTableGetValue</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">67845</td>
+              <td class=coverPerHi>94.4&nbsp;% (51 / 54)</td>
+              <td class=coverPerLo>70.4&nbsp;% (38 / 54)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#L4702">GetXmlTableBuilderPrivateData</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80149</td>
+              <td class=coverPerLo>71.4&nbsp;% (5 / 7)</td>
+              <td class=coverPerLo>25.0&nbsp;% (2 / 8)</td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f - src/backend/access/heap/heapam.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - differential code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../../index.html" title="Click to go to top-level">top level</a> - <a href="../../../index.html" title="Click to go to directory src">src</a>/<a href="../../index.html" title="Click to go to directory backend">backend</a>/<a href="../index.html" title="Click to go to directory access">access</a>/<a href="index.html" title="Click to go to directory heap">heap</a> - heapam.c<span style="font-size: 80%;"> (<a href="heapam.c.gcov.html" title="Click to go to source detail">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code (not including EUB, ECB, DUB, DCB categories)">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only (CBC + GBC + GNC + GIC)">Hit</td>
+            <td width="5%" class="headerCovTableHeadUNC" title="Uncovered New Code (+ => 0):
+Newly added code is not tested">UNC</td>
+            <td width="5%" class="headerCovTableHeadUBC" title="Uncovered Baseline Code (0 => 0):
+Unchanged code was untested before, is untested now">UBC</td>
+            <td width="5%" class="headerCovTableHeadGBC" title="Gained Baseline Coverage (0 => 1):
+Unchanged code is tested now">GBC</td>
+            <td width="5%" class="headerCovTableHeadGNC" title="Gained New Coverage (+ => 1):
+Newly added code is tested">GNC</td>
+            <td width="5%" class="headerCovTableHeadCBC" title="Covered Baseline Code (1 => 1):
+Unchanged code was tested before and is still tested">CBC</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current:</td>
+            <td class="headerValue">Differential Code coverage report between 8951941fb8a4d7f239760d7a4cd8fcaeecde13e2 and 5f6f951f88e53630b3ebe9bde762a9612ca6202f</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">91.3&nbsp;%</td>
+            <td class="headerCovTableEntry">2905</td>
+            <td class="headerCovTableEntry">2652</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">252</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">2649</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Current Date:</td>
+            <td class="headerValue">2025-08-26 13:23:18 +0300</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">83</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline:</td>
+            <td class="headerValue">lcov-20250826-141335-baseline</td>
+            <td></td>
+            <td class="headerItem">Branches:</td>
+            <td class="headerCovTableEntryLo">71.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2319</td>
+            <td class="headerCovTableEntry">1647</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">652</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">1636</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Baseline Date:</td>
+            <td class="headerValue">2025-08-26 13:23:53 +0300</td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Line coverage date bins:</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:&nbsp&nbsp&nbsp&nbsp
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+            <br>Branches:
+            <span class="coverLegendCov">+</span> taken
+            <span class="coverLegendNoCov">-</span> not taken
+            <span class="coverLegendNoCov">#</span> not executed
+</td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="tlaUNC">1</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryMed">89.6&nbsp;%</td>
+            <td class="headerCovTableEntry">221</td>
+            <td class="headerCovTableEntry">198</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">198</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">91.5&nbsp;%</td>
+            <td class="headerCovTableEntry">2680</td>
+            <td class="headerCovTableEntry">2451</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">229</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">2451</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Function coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">75</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="subTableHeader" colspan="9">Branch coverage date bins:</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(1,7] days:</td>
+            <td class="headerCovTableEntryLo">28.6&nbsp;%</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="tlaUNC">20</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(30,360] days:</td>
+            <td class="headerCovTableEntryLo">68.9&nbsp;%</td>
+            <td class="headerCovTableEntry">103</td>
+            <td class="headerCovTableEntry">71</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">71</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="headerItem">(360..) days:</td>
+            <td class="headerCovTableEntryLo">71.7&nbsp;%</td>
+            <td class="headerCovTableEntry">2188</td>
+            <td class="headerCovTableEntry">1568</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">620</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry"></td>
+            <td class="headerCovTableEntry">1565</td>
+          </tr>
+                  <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <center>
+          <table cellpadding=1 cellspacing=1 border=0>
+            <tr><td><br></td></tr>
+            <tr>
+              <td class="tableHead">Function Name <span  title="Click to sort table by function name" class="tableHeadSort"><a href="heapam.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Click to sort table by function name" border=0></a></span></td>
+              <td width="10%" class="tableHead">TLA</td>
+              <td class="tableHead">Hit count <span  title="Click to sort table by function hit count" class="tableHeadSort"><a href="heapam.c.func-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function hit count" title="Click to sort table by function hit count" border=0></a></span></td>
+              <td class="tableHead">Lines <span  title="Click to sort table by unexercised lines in function" class="tableHeadSort"><a href="heapam.c.func-l.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by unexercised lines in function" title="Click to sort table by unexercised lines in function" border=0></a></span></td>
+              <td class="tableHead">Branches <span  title="Click to sort table by unexercised branches in function" class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by unexercised branches in function" title="Click to sort table by unexercised branches in function" border=0></span></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L3248">heap_update</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">302581</td>
+              <td class=coverPerHi>90.2&nbsp;% (285 / 316)</td>
+              <td class=coverPerLo>74.2&nbsp;% (178 / 240)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6706">FreezeMultiXactId</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7</td>
+              <td class=coverPerLo>57.6&nbsp;% (57 / 99)</td>
+              <td class=coverPerLo>36.6&nbsp;% (30 / 82)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7056">heap_prepare_freeze_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4481322</td>
+              <td class=coverPerMed>81.2&nbsp;% (69 / 85)</td>
+              <td class=coverPerLo>58.5&nbsp;% (62 / 106)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2779">heap_delete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1417057</td>
+              <td class=coverPerHi>94.7&nbsp;% (144 / 152)</td>
+              <td class=coverPerLo>72.0&nbsp;% (108 / 150)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4581">heap_lock_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">84900</td>
+              <td class=coverPerHi>94.3&nbsp;% (217 / 230)</td>
+              <td class=coverPerMed>80.7&nbsp;% (167 / 207)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L5700">heap_lock_updated_tuple_rec</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">81</td>
+              <td class=coverPerMed>76.1&nbsp;% (89 / 117)</td>
+              <td class=coverPerLo>55.3&nbsp;% (42 / 76)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2357">heap_multi_insert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">347979</td>
+              <td class=coverPerHi>100.0&nbsp;% (117 / 117)</td>
+              <td class=coverPerMed>78.3&nbsp;% (94 / 120)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6177">heap_abort_speculative</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10</td>
+              <td class=coverPerHi>94.0&nbsp;% (47 / 50)</td>
+              <td class=coverPerLo>47.6&nbsp;% (20 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1098">heap_beginscan</a></td>
+              <td class="tlaGNC">GNC</td>
+              <td class="coverFnHi">358560</td>
+              <td class=coverPerHi>97.6&nbsp;% (40 / 41)</td>
+              <td class=coverPerLo>59.6&nbsp;% (31 / 52)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2086">heap_insert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">8390691</td>
+              <td class=coverPerHi>100.0&nbsp;% (64 / 64)</td>
+              <td class=coverPerLo>71.2&nbsp;% (47 / 66)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7867">heap_tuple_should_freeze</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2019764</td>
+              <td class=coverPerMed>77.6&nbsp;% (38 / 49)</td>
+              <td class=coverPerLo>62.5&nbsp;% (30 / 48)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8806">log_heap_visible</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">49121</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>42.9&nbsp;% (12 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L5328">compute_new_xmax_infomask</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1951615</td>
+              <td class=coverPerMed>86.5&nbsp;% (83 / 96)</td>
+              <td class=coverPerMed>76.3&nbsp;% (45 / 59)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1344">heap_getnext</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9046201</td>
+              <td class=coverPerMed>86.7&nbsp;% (13 / 15)</td>
+              <td class=coverPerLo>40.9&nbsp;% (9 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8120">heap_index_delete_tuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5469</td>
+              <td class=coverPerHi>96.9&nbsp;% (93 / 96)</td>
+              <td class=coverPerMed>81.9&nbsp;% (59 / 72)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8060">index_delete_check_htid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">530857</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              <td class=coverPerLo>40.9&nbsp;% (9 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8840">log_heap_update</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">291053</td>
+              <td class=coverPerHi>100.0&nbsp;% (95 / 95)</td>
+              <td class=coverPerMed>86.0&nbsp;% (74 / 86)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L3202">simple_heap_delete</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">607631</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              <td class=coverPerLo>7.7&nbsp;% (1 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4492">simple_heap_update</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">109111</td>
+              <td class=coverPerLo>42.9&nbsp;% (6 / 14)</td>
+              <td class=coverPerLo>7.7&nbsp;% (1 / 13)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6492">heap_inplace_update_and_unlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">62782</td>
+              <td class=coverPerHi>98.1&nbsp;% (52 / 53)</td>
+              <td class=coverPerLo>64.3&nbsp;% (18 / 28)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6090">heap_finish_speculative</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2056</td>
+              <td class=coverPerHi>96.2&nbsp;% (25 / 26)</td>
+              <td class=coverPerLo>55.0&nbsp;% (11 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L9247">HeapCheckForSerializableConflictOut</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">30062718</td>
+              <td class=coverPerHi>91.2&nbsp;% (31 / 34)</td>
+              <td class=coverPerLo>70.4&nbsp;% (19 / 27)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4230">check_lock_if_inplace_updateable_rel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">302581</td>
+              <td class=coverPerMed>83.3&nbsp;% (25 / 30)</td>
+              <td class=coverPerLo>61.9&nbsp;% (13 / 21)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1723">heap_hot_search_buffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20839998</td>
+              <td class=coverPerHi>96.2&nbsp;% (51 / 53)</td>
+              <td class=coverPerMed>81.0&nbsp;% (34 / 42)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7329">heap_pre_freeze_checks</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20842</td>
+              <td class=coverPerMed>88.2&nbsp;% (15 / 17)</td>
+              <td class=coverPerLo>55.6&nbsp;% (10 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L810">heapgettup_advance_block</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2590517</td>
+              <td class=coverPerLo>69.6&nbsp;% (16 / 23)</td>
+              <td class=coverPerLo>63.6&nbsp;% (14 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L9143">ExtractReplicaIdentity</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1719398</td>
+              <td class=coverPerHi>100.0&nbsp;% (31 / 31)</td>
+              <td class=coverPerMed>78.1&nbsp;% (25 / 32)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1496">heap_getnextslot_tidrange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3843</td>
+              <td class=coverPerMed>87.5&nbsp;% (21 / 24)</td>
+              <td class=coverPerLo>61.1&nbsp;% (11 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6356">heap_inplace_lock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90756</td>
+              <td class=coverPerHi>95.2&nbsp;% (40 / 42)</td>
+              <td class=coverPerLo>73.1&nbsp;% (19 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1875">heap_get_latest_tid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">150</td>
+              <td class=coverPerMed>85.0&nbsp;% (34 / 40)</td>
+              <td class=coverPerLo>72.7&nbsp;% (16 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1252">heap_rescan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">611349</td>
+              <td class=coverPerHi>90.0&nbsp;% (18 / 20)</td>
+              <td class=coverPerLo>66.7&nbsp;% (12 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4402">HeapDetermineColumnsInfo</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">302581</td>
+              <td class=coverPerMed>84.0&nbsp;% (21 / 25)</td>
+              <td class=coverPerMed>75.0&nbsp;% (15 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4533">get_mxact_status_for_lock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1217</td>
+              <td class=coverPerMed>85.7&nbsp;% (6 / 7)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L894">heapgettup</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7851682</td>
+              <td class=coverPerHi>92.1&nbsp;% (35 / 38)</td>
+              <td class=coverPerLo>72.2&nbsp;% (13 / 18)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L764">heapgettup_continue_page</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">7831567</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              <td class=coverPerLo>37.5&nbsp;% (3 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7697">Do_MultiXactIdWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">58</td>
+              <td class=coverPerHi>100.0&nbsp;% (27 / 27)</td>
+              <td class=coverPerMed>80.0&nbsp;% (16 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7975">HeapTupleHeaderAdvanceConflictHorizon</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1521540</td>
+              <td class=coverPerMed>84.6&nbsp;% (11 / 13)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7529">MultiXactIdGetUpdateXid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">524</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2277">heap_prepare_insert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">9948050</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerMed>75.0&nbsp;% (12 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7812">heap_tuple_needs_eventual_freeze</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2216059</td>
+              <td class=coverPerMed>81.2&nbsp;% (13 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (8 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1004">heapgettup_pagemode</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">48070135</td>
+              <td class=coverPerHi>97.4&nbsp;% (38 / 39)</td>
+              <td class=coverPerMed>81.8&nbsp;% (18 / 22)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L9062">log_heap_new_cid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">23803</td>
+              <td class=coverPerHi>100.0&nbsp;% (24 / 24)</td>
+              <td class=coverPerLo>71.4&nbsp;% (10 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7597">DoesMultiXactIdConflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">99</td>
+              <td class=coverPerHi>96.4&nbsp;% (27 / 28)</td>
+              <td class=coverPerMed>88.5&nbsp;% (23 / 26)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7448">GetMultiXactIdHintBits</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1199</td>
+              <td class=coverPerHi>100.0&nbsp;% (36 / 36)</td>
+              <td class=coverPerMed>85.7&nbsp;% (18 / 21)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8561">bottomup_nblocksfavorable</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1908</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8677">bottomup_sort_and_shrink</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1908</td>
+              <td class=coverPerHi>100.0&nbsp;% (44 / 44)</td>
+              <td class=coverPerMed>85.0&nbsp;% (17 / 20)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4313">check_inplace_rel_lock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">89791</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L550">heap_prepare_pagescan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2579353</td>
+              <td class=coverPerHi>95.5&nbsp;% (21 / 22)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L478">heap_setscanlimits</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2794</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerLo>62.5&nbsp;% (5 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L686">heapgettup_initial_block</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">948708</td>
+              <td class=coverPerHi>92.3&nbsp;% (12 / 13)</td>
+              <td class=coverPerMed>78.6&nbsp;% (11 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L733">heapgettup_start_page</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">94207</td>
+              <td class=coverPerMed>88.9&nbsp;% (8 / 9)</td>
+              <td class=coverPerLo>50.0&nbsp;% (3 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1997">UpdateXmaxHintBits</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177</td>
+              <td class=coverPerHi>100.0&nbsp;% (9 / 9)</td>
+              <td class=coverPerMed>80.0&nbsp;% (8 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L308">bitmapheap_stream_read_next</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">208700</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L5279">heap_acquire_tuplock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">265</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerMed>83.3&nbsp;% (10 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L4351">heap_attr_equals</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">728876</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              <td class=coverPerMed>75.0&nbsp;% (6 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L245">heap_scan_stream_read_next_parallel</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">100862</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerLo>66.7&nbsp;% (4 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L5609">test_lockmode_for_conflict</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">32</td>
+              <td class=coverPerHi>90.9&nbsp;% (20 / 22)</td>
+              <td class=coverPerMed>87.5&nbsp;% (14 / 16)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L218">AssertHasSnapshotForToast</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">10458308</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerMed>83.3&nbsp;% (5 / 6)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8604">bottomup_sort_and_shrink_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">200696</td>
+              <td class=coverPerHi>94.7&nbsp;% (18 / 19)</td>
+              <td class=coverPerHi>92.9&nbsp;% (13 / 14)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1603">heap_fetch</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">177718</td>
+              <td class=coverPerHi>100.0&nbsp;% (37 / 37)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L641">heap_fetch_next_buffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3465992</td>
+              <td class=coverPerHi>100.0&nbsp;% (14 / 14)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1393">heap_getnextslot</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">46871680</td>
+              <td class=coverPerHi>100.0&nbsp;% (11 / 11)</td>
+              <td class=coverPerHi>90.0&nbsp;% (9 / 10)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8429">index_delete_sort_cmp</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">12269182</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              <td class=coverPerMed>87.5&nbsp;% (7 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L348">initscan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">969909</td>
+              <td class=coverPerHi>97.8&nbsp;% (44 / 45)</td>
+              <td class=coverPerHi>97.4&nbsp;% (37 / 38)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L500">page_collect_tuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2579353</td>
+              <td class=coverPerHi>100.0&nbsp;% (20 / 20)</td>
+              <td class=coverPerHi>91.7&nbsp;% (11 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2036">FreeBulkInsertState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2181</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2048">ReleaseBulkInsertStatePin</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">80758</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1305">heap_endscan</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">356233</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (12 / 12)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7382">heap_freeze_prepared_tuples</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">20842</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7404">heap_freeze_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">364286</td>
+              <td class=coverPerHi>100.0&nbsp;% (16 / 16)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6045">heap_lock_updated_tuple</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">90</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2325">heap_multi_insert_pages</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">354625</td>
+              <td class=coverPerHi>100.0&nbsp;% (10 / 10)</td>
+              <td class=coverPerHi>100.0&nbsp;% (4 / 4)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L283">heap_scan_stream_read_next_serial</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">3539225</td>
+              <td class=coverPerHi>100.0&nbsp;% (7 / 7)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L1423">heap_set_tidrange</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">956</td>
+              <td class=coverPerHi>100.0&nbsp;% (19 / 19)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8015">index_delete_prefetch_buffer</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">18439</td>
+              <td class=coverPerHi>100.0&nbsp;% (17 / 17)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L8465">index_delete_sort</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5469</td>
+              <td class=coverPerHi>100.0&nbsp;% (13 / 13)</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2756">xmax_infomask_changed</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">5331</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7797">ConditionalMultiXactIdWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">4</td>
+              <td class=coverPerHi>100.0&nbsp;% (2 / 2)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2019">GetBulkInsertState</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">2324</td>
+              <td class=coverPerHi>100.0&nbsp;% (8 / 8)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7581">HeapTupleGetUpdateXid</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">515</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L7775">MultiXactIdWait</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">54</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2734">compute_infobits</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">1867161</td>
+              <td class=coverPerHi>100.0&nbsp;% (6 / 6)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L6645">heap_inplace_unlock</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">27907</td>
+              <td class=coverPerHi>100.0&nbsp;% (5 / 5)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+            <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#L2721">simple_heap_insert</a></td>
+              <td class="tlaCBC">CBC</td>
+              <td class="coverFnHi">928286</td>
+              <td class=coverPerHi>100.0&nbsp;% (3 / 3)</td>
+              <td class="coverFn"></td>
+              
+            </tr>
+          </table>
+          <br>
+          </center>
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3.2-beta</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>
