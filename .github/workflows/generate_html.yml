@@ -1,0 +1,31 @@
+name: Generate and Deploy HTML
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # Run daily at midnight UTC
+  workflow_dispatch:      # Allow manual runs
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout source branch
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Run your bash script that generates lcov-html/index.html
+      - name: Run generation script
+        run: |
+          chmod +x code_coverage.sh
+          ./code_coverage.sh true 4
+        timeout-minutes: 60
+
+      # Deploy lcov-html folder to github-html branch
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: github-html
+          publish_dir: ./lcov-html
