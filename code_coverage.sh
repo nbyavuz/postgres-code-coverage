@@ -2,6 +2,7 @@
 
 set -ex
 
+INSTALL_PACKAGES="${1:-false}"
 CURRENT_DIR=$(pwd)
 # Maybe only +%Y%m%d as this script will run daily.
 DATE=$(date +%Y%m%d-%H%M%S)
@@ -14,7 +15,7 @@ LCOV_DIR=${CURRENT_DIR}/lcov
 LCOV_INSTALL_PREFIX=${CURRENT_DIR}/lcov_install
 LCOV_BIN_DIR=${LCOV_INSTALL_PREFIX}/bin
 LCOV_OUTPUT_DIR=${CURRENT_DIR}/lcov-outputs
-LCOV_HTML_OUTPUT_DIR=${CURRENT_DIR}/lcov-html-outputs
+LCOV_HTML_OUTPUT_DIR=${CURRENT_DIR}/lcov-html
 
 MESON_DIR=${CURRENT_DIR}/meson
 MESON_BINARY=${MESON_DIR}/meson.py
@@ -43,9 +44,86 @@ clear_dirs()
 
 install_packages()
 {
-    printf "Installing required packages like make, gcc...\n"
-    apt update && \
-    apt install build-essential git -y
+    export DEBIAN_FRONTEND=noninteractive
+
+    printf "Installing required packages.\n"
+
+    apt update
+
+    apt -y install --no-install-recommends \
+        procps \
+        \
+        build-essential \
+        gdb \
+        git \
+        make \
+        meson \
+        perl \
+        pkg-config \
+        \
+        bison \
+        ccache \
+        clang \
+        '?name(clang-16)' \
+        flex \
+        g++ \
+        gcc \
+        gettext \
+        python3-pip \
+        \
+        libio-pty-perl \
+        libipc-run-perl \
+        python3-setuptools \
+        \
+        libcurl4-openssl-dev \
+        libicu-dev \
+        libkrb5-*-heimdal \
+        libkrb5-dev \
+        libldap2-dev \
+        liblz4-dev \
+        libnuma-dev \
+        libossp-uuid-dev \
+        libpam-dev \
+        libperl-dev \
+        libpython3-dev \
+        libreadline-dev \
+        libselinux*-dev \
+        libssl-dev \
+        libsystemd-dev \
+        liburing-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        libzstd-dev \
+        '?name(llvm-16-dev)' \
+        llvm-dev \
+        systemtap-sdt-dev \
+        tcl-dev \
+        uuid-dev \
+        \
+        docbook-xml \
+        docbook-xsl \
+        fop \
+        libxml2-utils \
+        pandoc \
+        wget \
+        xsltproc \
+        \
+        lcov \
+        \
+        krb5-admin-server \
+        krb5-kdc \
+        krb5-user \
+        ldap-utils \
+        locales-all \
+        lz4 \
+        slapd \
+        zstd \
+        \
+        g++-mingw-w64-x86-64-win32 \
+        gcc-mingw-w64-x86-64-win32 \
+        libz-mingw-w64-dev \
+        mingw-w64-tools
+
     printf "Done.\n\n"
 }
 
@@ -101,7 +179,7 @@ build_postgres_meson()
         -Db_coverage=true
         -Dcassert=true
         -Dtap_tests=enabled
-        -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound"
+        -DPG_TEST_EXTRA="kerberos ldap ssl load_balance libpq_encryption wal_consistency_checking xid_wraparound oauth"
         --buildtype=debug
     )
 
@@ -150,7 +228,7 @@ run_lcov()
 run_genhtml()
 {
     GENHTML_OPTIONS=(
-        --ignore-errors "inconsistent,range"
+        --ignore-errors "inconsistent,range,path"
         --parallel 16
         --legend
         --num-spaces 4
@@ -160,13 +238,13 @@ run_genhtml()
         --branch-coverage
         --rc branch_coverage=1
         --date-bins 1,7,30,360
-        --title "Differential Code coverage report between ${BASELINE_COMMIT_HASH} and ${CURRENT_COMMIT_HASH}"
+        --title "${BASELINE_COMMIT_HASH} vs ${CURRENT_COMMIT_HASH}"
         --current-date "${CURRENT_COMMIT_DATE}"
         --baseline-date "${BASELINE_COMMIT_DATE}"
         --annotate-script ${LCOV_DIR}/scripts/gitblame
         --baseline-file ${BASELINE_COVERAGE_FILE}
         --diff-file ${UNIVERSAL_DIFF_FILE}
-        --output-directory ${LCOV_HTML_OUTPUT_DIR}/lcov-html-${DATE}
+        --output-directory ${LCOV_HTML_OUTPUT_DIR}
         ${CURRENT_COVERAGE_FILE}
         # genhtml: ERROR: unexpected branch TLA UNC for count 0
         # --show-details
@@ -194,8 +272,10 @@ get_current_coverage_file()
     printf "Current coverage file is generated now.\n\n"
 }
 
+if [ "${INSTALL_PACKAGES}" = "true" ]; then
+    install_packages
+fi
 
-# install_packages
 clear_dirs
 install_lcov
 install_postgres
